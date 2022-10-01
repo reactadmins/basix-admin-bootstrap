@@ -1,0 +1,42 @@
+.menu-item:hover .menu-hover {
+  color: #fff;
+}
+.menu-icon-active:hover {
+  color: #fff;
+}
+.badge-primary {
+  background-color: #28a745;
+}
+.badge-danger {
+  background-color: #dc3545;
+}
+.badge-warning {
+  color: #111;
+  background-color: #ffc107;
+}
+.badge-info {
+  background-color: #17a2b8;
+}
+.menu-icon {
+  color: #8b939b;
+}
+.menu-icon-active {
+  font-size: 20px;
+}
+.menu-title-text {
+  font-size: 14px;
+  color: #8b939b;
+}
+.menu-title {
+  font-size: 14px;
+  color: #41434d;
+}
+
+@media (max-width: 991px) {
+  .menu-item {
+    flex-direction: column;
+  }
+  i {
+    font-size: 20px;
+  }
+}

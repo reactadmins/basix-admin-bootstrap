@@ -1,0 +1,32 @@
+.toggle-container {
+  background-color: #262832;
+}
+.toggle-btn {
+  color: #878787;
+  background-color: #262832;
+}
+.toggle-menu-icon::before {
+  position: absolute;
+  content: "\f0a4";
+  font-family: Fontawesome;
+  top: -16px;
+  right: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #dc3545;
+}
+
+/* responsive */
+@media (max-width: 991px) {
+  .toggle-btn {
+    display: none;
+  }
+  .toggle-container {
+    justify-content: center !important;
+  }
+}

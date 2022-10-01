@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  .left-panel {
+    min-height: 100vh;
+    background-color: #292b35;
+    .isopen {
+      width: 280px;
+    }
+    .isactive {
+      width: 70px;
+    }
+  }
+}
+
+/* responsive  */
+@media (max-width: 1024px) {
+  .wrapper {
+    .left-panel {
+      .isopen {
+        width: 60px;
+      }
+    }
+  }
+}
