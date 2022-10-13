@@ -1,3 +1,4 @@
+import { EntypoSprite } from "@entypo-icons/react";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
@@ -14,6 +15,10 @@ import Error500 from "./pages/Error500/Error500";
 import FlotChart from "./pages/FlotChart/FlotChart";
 import GoogleMaps from "./pages/GoogleMaps/GoogleMaps";
 import Grids from "./pages/Grids/Grids";
+import Brandico from "./pages/Icons/Icon/Brandico";
+import Entypo from "./pages/Icons/Icon/Entypo";
+import FontAwesome from "./pages/Icons/Icon/FontAwesome";
+import Fontelico from "./pages/Icons/Icon/Fontelico";
 import Icons from "./pages/Icons/Icons";
 import LeafletMaps from "./pages/LeafletMaps/LeafletMaps";
 import Login from "./pages/Login/Login";
@@ -28,6 +33,7 @@ import Widgets from "./pages/Widgets/Widgets";
 function App() {
   return (
     <>
+      <EntypoSprite />
       <Routes>
         <Route path="/" element={<BasixAdmin></BasixAdmin>}>
           <Route path="/" element={<Dashboard />}></Route>
@@ -44,6 +50,11 @@ function App() {
           <Route path="/Tables" element={<Tables />}></Route>
           <Route path="/basicform" element={<BasicForm />}></Route>
           <Route path="/icons" element={<Icons />}></Route>
+          <Route path="/brandico" element={<Brandico />}></Route>
+          <Route path="/entypo" element={<Entypo />}></Route>
+          <Route path="/fontawesome" element={<FontAwesome />}></Route>
+          <Route path="/fontelico" element={<Fontelico />}></Route>
+
           <Route path="/widgets" element={<Widgets />}></Route>
           <Route path="/chartjS" element={<ChartJS />}></Route>
           <Route path="/flotchart" element={<FlotChart />}></Route>
