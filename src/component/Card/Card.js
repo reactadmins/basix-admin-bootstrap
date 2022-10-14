@@ -1,10 +1,10 @@
 import React from "react";
 
 const Card = ({
-  cardHeader,
-  cardBody,
-  cardBodyBg,
-  cardFooter,
+  cardHeader = "",
+  cardBody = "",
+  cardBodyBg = "",
+  cardFooter = "",
   userInfo = "",
 }) => {
   return (
