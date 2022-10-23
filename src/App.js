@@ -5,7 +5,9 @@ import "./App.scss";
 import BasixAdmin from "./component/BasixAdmin/BasixAdmin";
 import Alerts from "./pages/Alerts/Alerts";
 import Badges from "./pages/Badges/Badges";
+import AdvancedForm from "./pages/BasicForm/AdvancedForm";
 import BasicForm from "./pages/BasicForm/BasicForm";
+import FormWizard from "./pages/BasicForm/FormWizard";
 import Button from "./pages/Button/Button";
 import Cards from "./pages/Cards/Cards";
 import ChartJS from "./pages/ChartJS/ChartJS";
@@ -47,14 +49,16 @@ function App() {
           <Route path="/modals" element={<Modals />}></Route>
           <Route path="/grids" element={<Grids />}></Route>
           <Route path="/typography" element={<Typography />}></Route>
-          <Route path="/Tables" element={<Tables />}></Route>
-          <Route path="/basicform" element={<BasicForm />}></Route>
+          <Route path="/tables" element={<Tables />}></Route>
+          <Route path="/basic-form" element={<BasicForm />}></Route>
+          <Route path="/advanced-form" element={<AdvancedForm />}></Route>
+          <Route path="/form-wizard" element={<FormWizard />}></Route>
+
           <Route path="/icons" element={<Icons />}></Route>
           <Route path="/brandico" element={<Brandico />}></Route>
           <Route path="/entypo" element={<Entypo />}></Route>
           <Route path="/fontawesome" element={<FontAwesome />}></Route>
           <Route path="/fontelico" element={<Fontelico />}></Route>
-
           <Route path="/widgets" element={<Widgets />}></Route>
           <Route path="/chartjS" element={<ChartJS />}></Route>
           <Route path="/flotchart" element={<FlotChart />}></Route>

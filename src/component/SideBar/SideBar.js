@@ -170,12 +170,32 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <>
                   <li className={`${isOpen ? "pt-lg-4" : ""} pb-3`}>
                     <Menu
-                      to="basicform"
+                      to="basic-form"
                       icon="menu-icon fa fa-pencil-square"
                       title="Basic Form"
                       displayStyle={"gap-4"}
                       badge="New"
                       badge_bg={"badge-warning"}
+                      isOpen={isOpen}
+                    />
+                  </li>
+                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                    <Menu
+                      to="advanced-form"
+                      icon="menu-icon fa fa-pencil-square"
+                      title="Advanced Form"
+                      displayStyle={"gap-4"}
+                      isOpen={isOpen}
+                    />
+                  </li>
+                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                    <Menu
+                      to="form-wizard"
+                      icon="menu-icon fa fa-pencil-square"
+                      title="Form Wizard"
+                      displayStyle={"gap-4"}
+                      badge="New"
+                      badge_bg={"badge-danger"}
                       isOpen={isOpen}
                     />
                   </li>

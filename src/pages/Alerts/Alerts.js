@@ -99,8 +99,7 @@ const Alerts = () => {
                   className="alert alert-warning alert-dismissible fade show"
                   role="alert"
                 >
-                  <span className="badge  badge-warning">Success</span>
-                  {"  "}
+                  <span className="badge  badge-warning mx-1">Success</span>
                   You successfully read this important alert.
                   <button
                     type="button"
@@ -113,8 +112,7 @@ const Alerts = () => {
                   className="alert alert-danger alert-dismissible fade show"
                   role="alert"
                 >
-                  <span className="badge  badge-danger">Success</span>
-                  {"  "}
+                  <span className="badge  badge-danger mx-1">Success</span>
                   You successfully read this important alert.
                   <button
                     type="button"
@@ -127,8 +125,7 @@ const Alerts = () => {
                   className="alert alert-info alert-dismissible fade show"
                   role="alert"
                 >
-                  <span className="badge  badge-info">Success</span>
-                  {"  "}
+                  <span className="badge  badge-info mx-1">Success</span>
                   You successfully read this important alert.
                   <button
                     type="button"
@@ -152,57 +149,57 @@ const Alerts = () => {
             cardBody={
               <>
                 <div className="alert alert-primary" role="alert">
-                  This is a primary alert with{" "}
-                  <a href="#" className="alert-link">
+                  This is a primary alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-secondary" role="alert">
-                  This is a secondary alert with{" "}
-                  <a href="#" className="alert-link">
+                  This is a secondary alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-success" role="alert">
-                  This is a success alert with{" "}
-                  <a href="#" className="alert-link">
+                  This is a success alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-danger" role="alert">
-                  AThis is a danger alert with{" "}
-                  <a href="#" className="alert-link">
+                  AThis is a danger alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-warning" role="alert">
-                  This is a warning alert with{" "}
-                  <a href="#" className="alert-link">
+                  This is a warning alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-info" role="alert">
-                  This is a info alert with{" "}
-                  <a href="#" className="alert-link">
+                  This is a info alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-light" role="alert">
-                  This is a light alert with{" "}
-                  <a href="#" className="alert-link">
+                  This is a light alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.
                 </div>
                 <div className="alert alert-dark" role="alert">
-                  AThis is a dark alert with{" "}
-                  <a href="#" className="alert-link">
+                  AThis is a dark alert with
+                  <a href="#" className="alert-link mx-1">
                     an example link
                   </a>
                   . Give it a click if you like.

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../component/Card/Card";
-import "./BasicForm.scss";
+import "./form.scss";
 
 const BasicForm = () => {
   return (

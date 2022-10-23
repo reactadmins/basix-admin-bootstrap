@@ -5,9 +5,9 @@ import "./Menu.scss";
 const Menu = ({
   to,
   displayStyle,
-  icon,
+  icon = "",
   title,
-  badge,
+  badge = "",
   badge_bg = "",
   isOpen,
 }) => {
