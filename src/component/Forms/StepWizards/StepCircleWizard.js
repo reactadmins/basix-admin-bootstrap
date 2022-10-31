@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Card from "../../../component/Card/Card";
-import AdditionalInfo from "../forms/AdditionalInfo";
-import Personaldetails from "../forms/Personaldetails";
+import Card from "../../Card/Card";
+import AdditionalInfo from "../AdditionalInfo";
+import Personaldetails from "../Personaldetails";
 import "./StepWizards.scss";
 
 const StepCircleWizard = () => {

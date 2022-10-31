@@ -7,6 +7,7 @@ const AdminMessage = ({
   coun_bg,
   rightPosition,
   notification,
+  message_counter,
 }) => {
   const [message, setMessage] = useState(false);
 
@@ -23,14 +24,18 @@ const AdminMessage = ({
   return (
     <div ref={dropRef} className="position-relative">
       <div className="navbar-container d-flex">
-        <div>
+        <div className="position-relative">
           <button
             onClick={() => setMessage(!message)}
             className="border-0 bg-white"
           >
             <i className={icon}></i>
           </button>
-          <span className={coun_bg}>{count}</span>
+          <div className={`${coun_bg} ${message_counter}`}>
+            <span className="text-white" style={{ fontSize: "11px" }}>
+              {count}
+            </span>
+          </div>
         </div>
 
         <div

@@ -2,8 +2,8 @@ import React from "react";
 import ProfileImg from "../../images/admin.jpg";
 import placeholder from "../../images/placeholder.png";
 import Card from "../../component/Card/Card";
-import NotificationCart from "./component/NotificationCart";
-import ProfileCard from "./component/ProfileCard";
+import NotificationCart from "../../component/Card/NotificationCart";
+import ProfileCard from "../../component/Card/ProfileCard";
 import "./Cards.scss";
 
 const Cards = () => {

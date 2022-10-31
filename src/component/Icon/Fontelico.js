@@ -1,11 +1,11 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "../../../component/Card/Card";
-import IconHooks from "../../../hooks/IconHooks";
-import "./iconStyle.scss";
-const Brandico = () => {
-  const [items] = IconHooks("brandico.json");
+import Card from "../../component/Card/Card";
+import IconHooks from "../../hooks/IconHooks";
+
+const Fontelico = () => {
+  const [items] = IconHooks("fontelico.json");
   return (
     <div className="container-fluid overflow-hidden p-0">
       <div className="row bg-white px-3 py-4 align-items-center border">
@@ -52,7 +52,7 @@ const Brandico = () => {
                     <div className="icon-wrapper">
                       <Icon
                         style={{ fontSize: "30px", cursor: "pointer" }}
-                        icon={`brandico:${icons}`}
+                        icon={`fontelico:${icons}`}
                       />
                       <span className="mt-2">{icons}</span>
                     </div>
@@ -67,4 +67,4 @@ const Brandico = () => {
   );
 };
 
-export default Brandico;
+export default Fontelico;

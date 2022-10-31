@@ -1,10 +1,10 @@
 import React from "react";
 import { BarChart, Bar } from "recharts";
-import img1 from "../../../images/avatar/1.jpg";
-import img2 from "../../../images/avatar/2.jpg";
-import img3 from "../../../images/avatar/3.jpg";
-import img4 from "../../../images/avatar/4.jpg";
-import img5 from "../../../images/avatar/6.jpg";
+import img1 from "../../images/avatar/1.jpg";
+import img2 from "../../images/avatar/2.jpg";
+import img3 from "../../images/avatar/3.jpg";
+import img4 from "../../images/avatar/4.jpg";
+import img5 from "../../images/avatar/6.jpg";
 
 const Month = () => {
   const data = [

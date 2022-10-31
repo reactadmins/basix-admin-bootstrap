@@ -1,17 +1,12 @@
-import React, { useState } from "react";
-import Card from "../../component/Card/Card";
-import RealTime from "../../component/Chart/RealTime";
-import FirstCounter from "../Widgets/components/FirstCounter";
-import Day from "./component/Day";
-import Month from "./component/Month";
-import SocialMediaCounter from "./component/SocialMediaCounter";
-import Timeline from "./component/Timeline";
-import Year from "./component/Year";
+import React from "react";
+import FirstCounter from "../../component/Counter/FirstCounter";
+import SocialMediaCounter from "../../component/Counter/SocialMediaCounter";
+import Stats from "../../component/Stats/Stats";
+import Timeline from "../../component/Timeline/Timeline";
+
 import "./dashboard.scss";
 
 const Dashboard = () => {
-  const [date, setDate] = useState("day");
-
   return (
     <div className="container-fluid p-0 p-0">
       <div className="row">
@@ -65,7 +60,7 @@ const Dashboard = () => {
             icon="fa-solid fa-cart-shopping"
           ></FirstCounter>
         </div>
-        <div className="col-md-12 col-lg-4 col-xl-4 mb-4">
+        {/* <div className="col-md-12 col-lg-4 col-xl-4 mb-4">
           <Card
             cardHeader={
               <div className="d-flex justify-content-between">
@@ -98,30 +93,9 @@ const Dashboard = () => {
         </div>
         <div className="col-12 col-md-12 col-lg-8 col-xl-8 mb-4">
           <h1>Hello 2</h1>
-        </div>
+        </div> */}
         <div className="col-12 col-md-12 col-lg-8 col-xl-8 mb-4">
-          <div
-            className="col-12 border border-1 tablist"
-            style={{ backgroundColor: "#FAFAFA" }}
-          >
-            <div className="position-relative overflow-hidden w-100">
-              <ul className=" nav nav-tabs">
-                {["day", "month", "year"].map((el) => (
-                  <li
-                    className={`${
-                      date === el ? "active" : ""
-                    } tab text-uppercase`}
-                    onClick={() => setDate(el)}
-                  >
-                    {el}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>{date === "day" && <Day />}</div>
-            <div>{date === "month" && <Month />}</div>
-            <div>{date === "year" && <Year />}</div>
-          </div>
+          <Stats></Stats>
           <div className="row mt-4">
             <div className="col-md-4 col-lg-4 col-xl-4 ">
               <SocialMediaCounter

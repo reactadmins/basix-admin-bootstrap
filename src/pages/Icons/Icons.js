@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../component/Card/Card";
-import Iconviewer from "../../component/Iconviewer/Iconviewer";
+import Iconviewer from "../../component/Icon/Iconviewer/Iconviewer";
 
 const Icons = () => {
   const [entypo, setEntypo] = useState([]);
@@ -24,7 +24,8 @@ const Icons = () => {
   const fontAwesomeIcons = fontAwesome?.lists?.applications?.icons.slice(0, 18);
 
   return (
-    <>
+    <div>
+      <span class="glyphicon glyphicon-envelope">ccc</span>
       <Card
         cardHeader={
           <>
@@ -101,31 +102,12 @@ const Icons = () => {
                     pageName="/fontelico"
                   />
                 </div>
-                <div className="col-md-12 col-lg-6 col-xl-6">
-                  <Iconviewer
-                    iconList="glyphicons.json"
-                    iconName="glyphicon  glyphicon"
-                    pageName="/fontelico"
-                  />
-                  <Icon
-                    style={{ fontSize: ".85rem", cursor: "pointer" }}
-                    icon="glyphicon:search"
-                  />
-                </div>
-                <div className="col-md-12 col-lg-6 col-xl-6">
-                  <Iconviewer
-                    iconList="glyphicons.json"
-                    iconName="glyphicon  glyphicon"
-                    pageName="/fontelico"
-                  />
-                  <Icon icon="Maki maki:aboveground-rail" />
-                </div>
               </div>
             </div>
           </>
         }
       ></Card>
-    </>
+    </div>
   );
 };
 

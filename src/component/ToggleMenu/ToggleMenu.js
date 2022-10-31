@@ -17,34 +17,18 @@ const ToggleMenu = ({ icon, title, isOpen, submenu }) => {
   return (
     <>
       <div ref={dropRef} className="dropdown">
-        {isOpen ? (
-          <div>
-            <button
-              type="button"
-              onClick={() => setToggleMenu(!toggleMenu)}
-              className={`d-lg-flex gap-lg-5 align-items-center border-0 w-100  toggle-menu ${
-                toggleMenu ? "" : "show-icon"
-              }`}
-            >
-              <i className={`menu-hover ${icon}`}></i>{" "}
-              <span className="d-none d-lg-block toggle-menu-title">
-                {title}
-              </span>
-            </button>
-          </div>
-        ) : (
-          <div>
-            <button
-              type="button"
-              onClick={() => setToggleMenu(!toggleMenu)}
-              className={`border-0 w-100 toggle-active-menu
+        <div>
+          <button
+            type="button"
+            onClick={() => setToggleMenu(!toggleMenu)}
+            className={`d-flex gap-5 align-items-center border-0 w-100  toggle-menu ${
+              toggleMenu ? "" : "show-icon"
             }`}
-            >
-              <i className={`menu-hover menu-icon-active ${icon}`}></i>
-            </button>
-          </div>
-        )}
-
+          >
+            <i className={`menu-hover ${icon}`}></i>{" "}
+            <span className=" toggle-menu-title">{title}</span>
+          </button>
+        </div>
         <ul
           className={`${
             toggleMenu ? "open" : "toggl-active"

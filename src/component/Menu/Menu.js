@@ -13,31 +13,16 @@ const Menu = ({
 }) => {
   return (
     <>
-      {isOpen ? (
-        <Link
-          to={to}
-          className={`d-flex justify-content-between align-items-center text-decoration-none menu-item`}
-        >
-          <div className={`d-flex align-items-center ${displayStyle}`}>
-            <i className={`${icon} menu-icon menu-hover`}></i>
-            <span className="menu-title-text d-none d-lg-block menu-hover">
-              {title}
-            </span>
-          </div>
-          {badge && (
-            <span className={`badge ${badge_bg} d-none d-lg-block`}>
-              {badge}
-            </span>
-          )}
-        </Link>
-      ) : (
-        <Link
-          to={to}
-          className="d-flex justify-content-center text-decoration-none"
-        >
-          <i className={`${icon} menu-icon-active `}></i>
-        </Link>
-      )}
+      <Link
+        to={to}
+        className={`d-flex justify-content-between align-items-center text-decoration-none menu-item`}
+      >
+        <div className={`d-flex align-items-center ${displayStyle}`}>
+          <i className={`${icon} menu-icon menu-hover`}></i>
+          <span className="menu-title-text menu-hover">{title}</span>
+        </div>
+        {badge && <span className={`badge ${badge_bg} `}>{badge}</span>}
+      </Link>
     </>
   );
 };

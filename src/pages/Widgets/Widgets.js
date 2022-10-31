@@ -1,14 +1,14 @@
 import React from "react";
-import FirstCounter from "./components/FirstCounter";
-import SecondCounter from "./components/SecondCounter";
-import ThirdCounter from "./components/ThirdCounter";
-import FourthCounter from "./components/FourthCounter";
-import ClearFix from "./components/ClearFix";
-import SocialBox from "./components/SocialBox";
-import CardGroup from "./components/CardGroup";
-import ProfileCard from "../Cards/component/ProfileCard";
+import FirstCounter from "../../component/Counter/FirstCounter";
+import SecondCounter from "../../component/Counter/SecondCounter";
+import ThirdCounter from "../../component/Counter/ThirdCounter";
+import FourthCounter from "../../component/Counter/FourthCounter";
+import ClearFix from "../../component/Counter/ClearFix";
+import SocialBox from "../../component/Counter/SocialBox";
+import CardGroup from "../../component/Card/CardGroup";
+import NotificationCart from "../../component/Card/NotificationCart";
+import ProfileCard from "../../component/Card/ProfileCard";
 import ProfileImg from "../../images/admin.jpg";
-import NotificationCart from "../Cards/component/NotificationCart";
 import Card from "../../component/Card/Card";
 
 const Widgets = () => {

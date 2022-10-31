@@ -15,13 +15,11 @@ const SideBar = ({ isOpen, setIsOpen }) => {
             : "justify-content-center px-lg-0 "
         }`}
       >
-        <a href=" ">
-          <img
-            src={isOpen ? logo : logo2}
-            alt="basix-admin"
-            className="d-none d-lg-block"
-          />
-          <img src={logo2} alt="basix-admin" className="d-lg-none" />
+        <a href=" " className="logo">
+          <img src={logo} alt="basix-admin" />
+        </a>
+        <a href=" " className="mini-logo">
+          <img src={logo2} alt="basix-admin" />
         </a>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -36,7 +34,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
       </div>
       <div>
         <ul className="list-group">
-          <li className="px-0 px-lg-3 py-3">
+          <li className="px-3 py-3">
             <Menu
               to="dashboard"
               icon="menu-icon fa fa-dashboard"
@@ -47,23 +45,17 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               isOpen={isOpen}
             />
           </li>
-          {isOpen ? (
-            <li className="px-0 px-lg-3 py-2 d-none d-lg-block">
-              <span className="menu-title d-none d-lg-block text-uppercase fw-bold">
-                UI elements
-              </span>
-            </li>
-          ) : (
-            <></>
-          )}
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-3 py-2 menu-title">
+            <span className="text-uppercase fw-bold">UI elements</span>
+          </li>
+          <li className="px-3 py-2">
             <ToggleMenu
               icon={"fa fa-puzzle-piece"}
               title={"Components"}
               isOpen={isOpen}
               submenu={
                 <>
-                  <li className={`${isOpen ? "pt-lg-4" : ""} pb-3`}>
+                  <li className="pt-4 pb-3">
                     <Menu
                       to="button"
                       icon="menu-icon fa fa-puzzle-piece"
@@ -74,7 +66,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="badges"
                       icon="menu-icon fa fa fa-id-badge"
@@ -83,7 +75,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="socialbuttons"
                       icon="menu-icon fa fa-share-square"
@@ -94,7 +86,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="cards"
                       icon="menu-icon fa fa-id-card"
@@ -103,7 +95,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="alerts"
                       icon="menu-icon fa fa-exclamation-triangle"
@@ -112,7 +104,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="progressbars"
                       icon="menu-icon fa fa-spinner"
@@ -121,7 +113,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="modals"
                       icon="menu-icon fa fa-fire"
@@ -130,7 +122,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="grids"
                       icon="menu-icon fa fa-th"
@@ -139,7 +131,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="typography"
                       icon="menu-icon fa fa-file-word"
@@ -152,7 +144,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               }
             ></ToggleMenu>
           </li>
-          <li className="px-0 px-lg-3 py-3">
+          <li className="px-3 py-3">
             <Menu
               to="tables"
               icon="menu-icon fa fa-table"
@@ -161,14 +153,14 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               isOpen={isOpen}
             />
           </li>
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-3 py-2">
             <ToggleMenu
               icon={"fa fa-pencil-square"}
               title={"Forms"}
               isOpen={isOpen}
               submenu={
                 <>
-                  <li className={`${isOpen ? "pt-lg-4" : ""} pb-3`}>
+                  <li className="pt-4 pb-3">
                     <Menu
                       to="basic-form"
                       icon="menu-icon fa fa-pencil-square"
@@ -179,7 +171,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="advanced-form"
                       icon="menu-icon fa fa-pencil-square"
@@ -188,7 +180,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="form-wizard"
                       icon="menu-icon fa fa-pencil-square"
@@ -203,7 +195,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               }
             ></ToggleMenu>
           </li>
-          <li className="px-0 px-lg-3 py-3">
+          <li className="px-3 py-3">
             <Menu
               to="icons"
               icon="menu-icon fa fa-star"
@@ -212,7 +204,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               isOpen={isOpen}
             />
           </li>
-          <li className="px-0 px-lg-3 py-3">
+          <li className="px-3 py-3">
             <Menu
               to="widgets"
               icon="menu-icon fa fa-calculator"
@@ -223,14 +215,14 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               isOpen={isOpen}
             />
           </li>
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-3 py-2">
             <ToggleMenu
               icon={"fa fa-pie-chart"}
               title={"Charts"}
               isOpen={isOpen}
               submenu={
                 <>
-                  <li className={`${isOpen ? "pt-lg-4" : ""} pb-3`}>
+                  <li className="pt-4 pb-3">
                     <Menu
                       to="chartjs"
                       icon="menu-icon fa fa-line-chart"
@@ -239,7 +231,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="flotchart"
                       icon="menu-icon fa fa-line-chart"
@@ -252,14 +244,14 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               }
             ></ToggleMenu>
           </li>
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-3 py-2">
             <ToggleMenu
               icon={"fa-solid fa-location-dot"}
               title={"Maps"}
               isOpen={isOpen}
               submenu={
                 <>
-                  <li className={`${isOpen ? "pt-lg-4" : ""} pb-3`}>
+                  <li className="pt-4 pb-3">
                     <Menu
                       to="googlemaps"
                       icon="menu-icon fa fa-map"
@@ -268,7 +260,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="leafletmaps"
                       icon="menu-icon fa fa-street-view"
@@ -281,23 +273,17 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               }
             ></ToggleMenu>
           </li>
-          {isOpen ? (
-            <li className="px-0 px-lg-3 py-3 d-none d-lg-block">
-              <span className="menu-title d-none d-lg-block text-uppercase fw-bold">
-                Extras
-              </span>
-            </li>
-          ) : (
-            <></>
-          )}
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-0 px-lg-3 py-3 menu-title">
+            <span className="text-uppercase fw-bold">Extras</span>
+          </li>
+          <li className="px-3 py-2">
             <ToggleMenu
               icon={"fa fa-paperclip"}
               title={"Pages"}
               isOpen={isOpen}
               submenu={
                 <>
-                  <li className={`${isOpen ? "pt-lg-4" : ""} pb-3`}>
+                  <li className="pt-4 pb-3">
                     <Menu
                       to="login"
                       icon="menu-icon fa fa fa-sign-in"
@@ -306,7 +292,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="register"
                       icon="menu-icon fa-solid fa-user-plus"
@@ -315,7 +301,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="error404"
                       icon="menu-icon fa-solid fa-triangle-exclamation"
@@ -324,7 +310,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                       isOpen={isOpen}
                     />
                   </li>
-                  <li className={`${isOpen ? "pt-lg-0" : ""} pb-3`}>
+                  <li className="pb-3">
                     <Menu
                       to="error500"
                       icon="menu-icon fa-solid fa-triangle-exclamation"
@@ -337,7 +323,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               }
             ></ToggleMenu>
           </li>
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-3 py-2">
             <Menu
               to="/"
               icon="menu-icon fa-solid fa-file-lines"
@@ -346,7 +332,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               isOpen={isOpen}
             />
           </li>
-          <li className="px-0 px-lg-3 py-2">
+          <li className="px-3 py-2">
             <Menu
               to="/"
               icon="menu-icon fa-solid fa-shopping-cart"

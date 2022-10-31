@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import IconHooks from "../../hooks/IconHooks";
+import IconHooks from "../../../hooks/IconHooks";
 
 const Iconviewer = ({ iconList, iconName, pageName }) => {
   const [items] = IconHooks(`${iconList}`);

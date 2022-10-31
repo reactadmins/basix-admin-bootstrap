@@ -9,8 +9,8 @@ import img2 from "../../images/avatar/2.jpg";
 import img3 from "../../images/avatar/3.jpg";
 import img4 from "../../images/avatar/4.jpg";
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+const NavBar = ({ isOpen, setIsOpen }) => {
+  const [isOpenSearch, setIsOpenSearch] = useState(true);
   const [isUser, setIsUser] = useState(true);
 
   let dropRef = useRef();
@@ -25,23 +25,33 @@ const NavBar = () => {
 
   return (
     <>
-      {isOpen ? (
-        <div className="px-3 px-lg-5 bg-white">
-          <div className="d-flex justify-content-between align-items-center w-100 py-4">
-            <div className="d-flex gap-3 position-relative">
-              <div className="navbar-container d-flex ">
+      {isOpenSearch ? (
+        <div className="bg-white header">
+          <div className="d-flex justify-content-between align-items-center w-100">
+            <div className="d-flex gap-4 position-relative">
+              <div className="navbar-container show-menutoggle">
                 <button
+                  className="border-0 bg-white"
                   onClick={() => setIsOpen(!isOpen)}
+                >
+                  <i className="fa-solid fa-bars-progress"></i>
+                </button>
+              </div>
+              <div className="navbar-container ">
+                <button
+                  onClick={() => setIsOpenSearch(!isOpenSearch)}
                   className="border-0 bg-white"
                 >
                   <i className="fa fa-search"></i>
                 </button>
               </div>
+
               <AdminMessage
                 icon={"fa fa-bell"}
                 count={4}
                 coun_bg="bg-danger"
                 rightPosition={"admin-notification"}
+                message_counter="notification-count"
                 notification={
                   <>
                     <Notification
@@ -69,9 +79,10 @@ const NavBar = () => {
               />
               <AdminMessage
                 icon={"fa-solid fa-envelope"}
-                count={4}
+                count={9}
                 coun_bg="bg-primary"
                 rightPosition={"admin-mail"}
+                message_counter="message-count"
                 notification={
                   <>
                     <p className="m-0 py-1 px-3 text-secondary">
@@ -115,7 +126,12 @@ const NavBar = () => {
                 onClick={() => setIsUser(!isUser)}
                 className="border-0 bg-white user-btn"
               >
-                <img src={admin} alt="admin" className="user-avatar" />
+                <img
+                  src={admin}
+                  alt="admin"
+                  className="user-avatar rounded-circle"
+                  style={{ width: "35px" }}
+                />
               </button>
               <div
                 className={`${
@@ -142,16 +158,18 @@ const NavBar = () => {
           </div>
         </div>
       ) : (
-        <div className={`bg-white ${isOpen ? "" : "search-container"}`}>
-          <div className={`navbar-container w-100`}>
-            <div className="d-flex justify-content-between align-item-center py-2 search-memu">
-              <input placeholder="Search ..." className="w-75 border-0" />
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="border-0 bg-white"
-              >
-                <i className="fa fa-close"></i>
-              </button>
+        <div className={` ${isOpenSearch ? "" : "search-container"}`}>
+          <div className={`navbar-container`}>
+            <div className="Search-wrapper">
+              <div className="d-flex justify-content-between align-item-center py-2 search-memu">
+                <input placeholder="Search ..." className="w-75 border-0" />
+                <button
+                  onClick={() => setIsOpenSearch(!isOpenSearch)}
+                  className="border-0"
+                >
+                  <i className="fa fa-close"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>

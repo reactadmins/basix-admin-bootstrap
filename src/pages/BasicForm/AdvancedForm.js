@@ -1,8 +1,8 @@
 import React from "react";
 
 import Card from "../../component/Card/Card";
-import MaskedInput from "./forms/MaskedInput";
-import MultipleTagSelect from "./forms/MultipleTagSelect";
+import MaskedInput from "../../component/Forms/MaskedInput";
+import MultipleTagSelect from "../../component/Forms/MultipleTagSelect";
 
 const AdvancedForm = () => {
   return (
@@ -56,7 +56,7 @@ const AdvancedForm = () => {
           }
         ></Card>
       </div>
-      <div className="col-sm-12 col-md-12 col-lg-6 col-xl-5 mt-4">
+      <div className="col-sm-12 col-md-12 col-lg-6 col-xl-5 mb-4">
         <Card
           cardHeader={
             <>

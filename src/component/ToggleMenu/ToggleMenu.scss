@@ -48,17 +48,3 @@
   padding: 10px 0 10px 0px;
   z-index: 999;
 }
-@media (max-width: 991px) {
-  .toggle-menu::after {
-    display: none;
-  }
-  .active {
-    position: absolute;
-    width: 170px;
-    top: 11px;
-    right: -170px;
-    align-items: center;
-    background: #292b35;
-    padding: 10px 0 10px 0px;
-  }
-}

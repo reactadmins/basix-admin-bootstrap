@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "../../../component/Card/Card";
-import img1 from "../../../images/avatar/1.jpg";
-import img2 from "../../../images/avatar/2.jpg";
-import img3 from "../../../images/avatar/3.jpg";
-import img4 from "../../../images/avatar/4.jpg";
+import Card from "../Card/Card";
+import img1 from "../../images/avatar/1.jpg";
+import img2 from "../../images/avatar/2.jpg";
+import img3 from "../../images/avatar/3.jpg";
+import img4 from "../../images/avatar/4.jpg";
 
 const Timeline = () => {
   return (

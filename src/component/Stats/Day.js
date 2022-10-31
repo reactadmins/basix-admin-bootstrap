@@ -1,12 +1,12 @@
 import React from "react";
 import { BarChart, Bar } from "recharts";
-import img1 from "../../../images/avatar/1.jpg";
-import img2 from "../../../images/avatar/2.jpg";
-import img3 from "../../../images/avatar/3.jpg";
-import img4 from "../../../images/avatar/4.jpg";
-import img5 from "../../../images/avatar/6.jpg";
+import img1 from "../../images/avatar/1.jpg";
+import img2 from "../../images/avatar/2.jpg";
+import img3 from "../../images/avatar/3.jpg";
+import img4 from "../../images/avatar/4.jpg";
+import img5 from "../../images/avatar/6.jpg";
 
-const Year = () => {
+const Day = () => {
   const data = [
     {
       name: "Page A",
@@ -51,6 +51,7 @@ const Year = () => {
       amt: 2100,
     },
   ];
+
   return (
     <div className="table-stats p-3">
       <table class="table">
@@ -224,4 +225,4 @@ const Year = () => {
   );
 };
 
-export default Year;
+export default Day;

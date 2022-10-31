@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Card from "../../../component/Card/Card";
-import AdditionalInfo from "../forms/AdditionalInfo";
-import LoggedIn from "../forms/LoggedIn";
-import Personaldetails from "../forms/Personaldetails";
+import AdditionalInfo from "../AdditionalInfo";
+import Personaldetails from "../Personaldetails";
 import "./StepWizards.scss";
 
-const StepTabWizard = () => {
+const StepSquarWizard = () => {
   const [stepCounter, setStepCounter] = useState(1);
 
   const arrayList = [
@@ -16,18 +15,13 @@ const StepTabWizard = () => {
     },
     {
       id: 2,
-      icon: "fa-solid fa-user",
-      name: "Is Logged In?",
-    },
-    {
-      id: 3,
       icon: "fa-solid fa-gear",
       name: "Additional Info",
     },
     {
-      id: 4,
-      icon: "fa-solid fa-map",
-      name: "Final step",
+      id: 3,
+      icon: "fa-solid fa-check",
+      name: "Last step",
     },
   ];
 
@@ -41,62 +35,58 @@ const StepTabWizard = () => {
       <Card
         cardHeader={
           <>
-            <strong className="fs-6">
-              Tab Wizard: Custom button and title text
-            </strong>
+            <strong className="fs-6">Square Wizard</strong>
           </>
         }
         cardBodyBg="bg-white"
         cardBody={
-          <div className="wizard-wrapper position-relative px-3">
+          <div className="wizard-wrapper position-relative mt-5 px-3">
             <div className="row">
-              <div className="text-center" style={{ padding: "15px" }}>
-                <h3
-                  className="m-0"
-                  style={{
-                    fontSize: "1.1rem",
-                    color: "#252422",
-                    fontWeight: "300",
-                  }}
-                >
-                  Awesome Wizard
-                </h3>
-                <p
-                  style={{
-                    fontSize: "14px",
-                    color: "#9a9a9a",
-                    fontWeight: "400",
-                  }}
-                >
-                  Split a complicated flow in multiple steps
-                </p>
-              </div>
+              <div
+                className="position-absolute"
+                style={{
+                  width: `${
+                    stepCounter === 1
+                      ? "19%"
+                      : stepCounter === 2
+                      ? "50%"
+                      : stepCounter === 3
+                      ? "85%"
+                      : ""
+                  } `,
+                  height: "4px",
+                  top: "35px",
+                  backgroundColor: "rgb(52, 152, 219)",
+                }}
+              ></div>
               {arrayList.map((items, index) => (
-                <div className="col-3 text-center p-0">
-                  <div
-                    className="step-block"
-                    style={{
-                      backgroundColor: `${
-                        stepCounter === index + 1
-                          ? "rgb(230, 126, 34)"
-                          : "#F3F2EE"
-                      }`,
-                      padding: "8px",
-                      color: `${
-                        stepCounter === index + 1
-                          ? "#fff"
-                          : "rgb(204, 204, 204)"
-                      }`,
-                    }}
-                  >
+                <div className="col-4 text-center p-0">
+                  <div className="step-block">
                     <div
                       className="step-wrapper"
                       onClick={() => updateStep(index + 1)}
                     >
-                      <div className="mx-auto position-relative">
+                      <div
+                        className="wizard-icon mx-auto position-relative"
+                        style={{
+                          border: `${
+                            stepCounter >= index + 1
+                              ? "3px solid rgb(52, 152, 219)"
+                              : ""
+                          }`,
+                          backgroundColor: `${
+                            stepCounter === index + 1
+                              ? "rgb(52, 152, 219)"
+                              : "#fff"
+                          }`,
+                          color: `${
+                            stepCounter === index + 1 ? "#fff" : "#cccccc"
+                          }`,
+                        }}
+                      >
                         <i
                           className={`${items.icon}`}
-                          style={{ fontSize: "23px" }}
+                          style={{ fontSize: "24px" }}
                         ></i>
                       </div>
                     </div>
@@ -105,7 +95,7 @@ const StepTabWizard = () => {
                     style={{
                       color: `${
                         stepCounter === index + 1
-                          ? "rgb(230, 126, 34)"
+                          ? "rgb(52, 152, 219)"
                           : "rgba(0, 0, 0, 0.2)"
                       }`,
                       fontSize: "17px",
@@ -118,9 +108,8 @@ const StepTabWizard = () => {
             </div>
             <div className="step-content">
               {stepCounter === 1 && <Personaldetails />}
-              {stepCounter === 2 && <LoggedIn />}
-              {stepCounter === 3 && <AdditionalInfo />}
-              {stepCounter === 4 && (
+              {stepCounter === 2 && <AdditionalInfo />}
+              {stepCounter === 3 && (
                 <div>Congratulations This is the Final Step</div>
               )}
             </div>
@@ -132,9 +121,9 @@ const StepTabWizard = () => {
                     fontSize: "14px",
                     fontWeight: "600",
                     padding: "8px 12px",
-                    backgroundColor: "rgb(230, 126, 34)",
+                    backgroundColor: "rgb(52, 152, 219)",
                     color: "#fff",
-                    border: "rgb(230, 126, 34)",
+                    border: "rgb(52, 152, 219)",
                     borderRadius: "4px",
                   }}
                   onClick={() => updateStep(stepCounter - 1)}
@@ -151,11 +140,11 @@ const StepTabWizard = () => {
                   padding: "8px 12px",
                   backgroundColor: `${
                     stepCounter < arrayList.length
-                      ? "rgb(230, 126, 34)"
-                      : "rgb(67, 160, 71)"
-                  } `,
+                      ? "rgb(52, 152, 219)"
+                      : "#43a047"
+                  }`,
                   color: "#fff",
-                  border: "rgb(230, 126, 34)",
+                  border: "rgb(52, 152, 219)",
                   borderRadius: "4px",
                 }}
                 onClick={() => updateStep(stepCounter + 1)}
@@ -170,4 +159,4 @@ const StepTabWizard = () => {
   );
 };
 
-export default StepTabWizard;
+export default StepSquarWizard;

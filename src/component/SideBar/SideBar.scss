@@ -17,12 +17,17 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  z-index: 999;
   color: #fff;
   background-color: #dc3545;
 }
 
+.menu-title {
+  font-size: 14px;
+  color: #41434d;
+}
 /* responsive */
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .toggle-btn {
     display: none;
   }

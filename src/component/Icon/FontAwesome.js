@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "../../../component/Card/Card";
-import IconHooks from "../../../hooks/IconHooks";
+import Card from "../../component/Card/Card";
+import IconHooks from "../../hooks/IconHooks";
 
 const FontAwesome = () => {
   const [items] = IconHooks("font-awesome.json");

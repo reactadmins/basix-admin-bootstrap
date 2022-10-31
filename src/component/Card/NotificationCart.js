@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImg from "../../../images/admin.jpg";
+import ProfileImg from "../../images/admin.jpg";
 import "./notificationcart.scss";
 
 const NotificationCart = () => {

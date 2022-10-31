@@ -11,13 +11,13 @@ const BasixAdmin = () => {
     <div className="wrapper">
       <div className="d-flex">
         <div className="left-panel">
-          <div className={`${isOpen ? "isopen" : "isactive"}`}>
+          <div className={`${isOpen ? "isopen" : "isactive"} `}>
             <SideBar isOpen={isOpen} setIsOpen={setIsOpen}></SideBar>
           </div>
         </div>
         <div className="w-100">
           <div>
-            <NavBar></NavBar>
+            <NavBar isOpen={isOpen} setIsOpen={setIsOpen}></NavBar>
           </div>
           <div className="px-3 px-lg-4 py-4">
             <Outlet />
