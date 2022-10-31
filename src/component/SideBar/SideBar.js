@@ -233,9 +233,9 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="flotchart"
+                      to="recharts"
                       icon="menu-icon fa fa-line-chart"
-                      title="Flot Chart"
+                      title="Recharts"
                       displayStyle={"gap-4"}
                       isOpen={isOpen}
                     />

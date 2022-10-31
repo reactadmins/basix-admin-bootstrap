@@ -60,40 +60,6 @@ const Dashboard = () => {
             icon="fa-solid fa-cart-shopping"
           ></FirstCounter>
         </div>
-        {/* <div className="col-md-12 col-lg-4 col-xl-4 mb-4">
-          <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong style={{ fontSize: ".875em" }}>Real Time </strong>
-                </div>
-                <div className="d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog" style={{ fontSize: "12px" }}></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i
-                      className="fa fa-angle-down"
-                      style={{ fontSize: "12px" }}
-                    ></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times" style={{ fontSize: "12px" }}></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="bg-white"
-            cardBody={
-              <>
-                <RealTime />
-              </>
-            }
-          ></Card>
-        </div>
-        <div className="col-12 col-md-12 col-lg-8 col-xl-8 mb-4">
-          <h1>Hello 2</h1>
-        </div> */}
         <div className="col-12 col-md-12 col-lg-8 col-xl-8 mb-4">
           <Stats></Stats>
           <div className="row mt-4">

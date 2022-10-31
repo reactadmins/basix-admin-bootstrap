@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "../../component/Card/Card";
-import LineChart from "../../component/Chart/chart js/LineChart";
-import BarChart from "../../component/Chart/chart js/BarChart";
-import DoughnutChart from "../../component/Chart/chart js/DoughnutChart";
-import RadarChart from "../../component/Chart/chart js/RadarChart";
-import PieChart from "../../component/Chart/chart js/PieChart";
-import PolarAreaChart from "../../component/Chart/chart js/PolarAreaChart";
-const ChartJS = () => {
+import RechartAreaChart from "../../component/Chart/recharts/RechartAreaChart";
+import RechartBarChart from "../../component/Chart/recharts/RechartBarChart";
+import RechartLineChart from "../../component/Chart/recharts/RechartLineChart";
+import RechartPieChart from "../../component/Chart/recharts/RechartPieChart";
+import RechartRadialBarChart from "../../component/Chart/recharts/RechartRadialBarChart";
+import RechartScatterChart from "../../component/Chart/recharts/RechartScatterChart";
+
+const Recharts = () => {
   return (
     <div className="container-fluid p-0">
       <div className="row g-4">
@@ -20,7 +21,22 @@ const ChartJS = () => {
             cardBodyBg="bg-white"
             cardBody={
               <>
-                <LineChart></LineChart>
+                <RechartLineChart></RechartLineChart>
+              </>
+            }
+          ></Card>
+        </div>
+        <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+          <Card
+            cardHeader={
+              <>
+                <strong className="fs-6">Area Chart</strong>
+              </>
+            }
+            cardBodyBg="bg-white"
+            cardBody={
+              <>
+                <RechartAreaChart></RechartAreaChart>
               </>
             }
           ></Card>
@@ -35,37 +51,7 @@ const ChartJS = () => {
             cardBodyBg="bg-white"
             cardBody={
               <>
-                <BarChart></BarChart>
-              </>
-            }
-          ></Card>
-        </div>
-        <div className="col-12 col-md-6 col-lg-6 col-xl-6">
-          <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Doughnut Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
-            cardBody={
-              <>
-                <DoughnutChart></DoughnutChart>
-              </>
-            }
-          ></Card>
-        </div>
-        <div className="col-12 col-md-6 col-lg-6 col-xl-6">
-          <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Radar Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
-            cardBody={
-              <>
-                <RadarChart></RadarChart>
+                <RechartBarChart></RechartBarChart>
               </>
             }
           ></Card>
@@ -80,7 +66,7 @@ const ChartJS = () => {
             cardBodyBg="bg-white"
             cardBody={
               <>
-                <PieChart></PieChart>
+                <RechartPieChart></RechartPieChart>
               </>
             }
           ></Card>
@@ -89,13 +75,28 @@ const ChartJS = () => {
           <Card
             cardHeader={
               <>
-                <strong className="fs-6">Polar Area Chart</strong>
+                <strong className="fs-6">Radial Bar Chart</strong>
               </>
             }
             cardBodyBg="bg-white"
             cardBody={
               <>
-                <PolarAreaChart></PolarAreaChart>
+                <RechartRadialBarChart></RechartRadialBarChart>
+              </>
+            }
+          ></Card>
+        </div>
+        <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+          <Card
+            cardHeader={
+              <>
+                <strong className="fs-6">Scatter Chart</strong>
+              </>
+            }
+            cardBodyBg="bg-white"
+            cardBody={
+              <>
+                <RechartScatterChart></RechartScatterChart>
               </>
             }
           ></Card>
@@ -105,4 +106,4 @@ const ChartJS = () => {
   );
 };
 
-export default ChartJS;
+export default Recharts;

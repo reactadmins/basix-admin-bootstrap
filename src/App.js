@@ -5,16 +5,16 @@ import "./App.scss";
 import BasixAdmin from "./component/BasixAdmin/BasixAdmin";
 import Alerts from "./pages/Alerts/Alerts";
 import Badges from "./pages/Badges/Badges";
-import AdvancedForm from "./pages/BasicForm/AdvancedForm";
+import AdvancedForm from "./pages/AdvancedForm/AdvancedForm";
 import BasicForm from "./pages/BasicForm/BasicForm";
-import FormWizard from "./pages/BasicForm/FormWizard";
+import FormWizard from "./pages/AdvancedForm/AdvancedForm";
 import Button from "./pages/Button/Button";
 import Cards from "./pages/Cards/Cards";
 import ChartJS from "./pages/ChartJS/ChartJS";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Error404 from "./pages/Error404/Error404";
 import Error500 from "./pages/Error500/Error500";
-import FlotChart from "./pages/FlotChart/FlotChart";
+import Recharts from "./pages/Recharts/Recharts";
 import GoogleMaps from "./pages/GoogleMaps/GoogleMaps";
 import Grids from "./pages/Grids/Grids";
 import Brandico from "./component/Icon/Brandico";
@@ -53,7 +53,6 @@ function App() {
           <Route path="/basic-form" element={<BasicForm />}></Route>
           <Route path="/advanced-form" element={<AdvancedForm />}></Route>
           <Route path="/form-wizard" element={<FormWizard />}></Route>
-
           <Route path="/icons" element={<Icons />}></Route>
           <Route path="/brandico" element={<Brandico />}></Route>
           <Route path="/entypo" element={<Entypo />}></Route>
@@ -61,7 +60,7 @@ function App() {
           <Route path="/fontelico" element={<Fontelico />}></Route>
           <Route path="/widgets" element={<Widgets />}></Route>
           <Route path="/chartjS" element={<ChartJS />}></Route>
-          <Route path="/flotchart" element={<FlotChart />}></Route>
+          <Route path="/recharts" element={<Recharts />}></Route>
           <Route path="/googlemaps" element={<GoogleMaps />}></Route>
           <Route path="/leafletmaps" element={<LeafletMaps />}></Route>
         </Route>
