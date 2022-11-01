@@ -53,9 +53,9 @@ const BarChart = () => {
     ],
   };
   return (
-    <>
+    <div className="d-flex justify-content-center align-items-center overflow-hidden">
       <Bar options={options} data={data} />
-    </>
+    </div>
   );
 };
 

@@ -31,6 +31,7 @@ import SocialButtons from "./pages/SocialButtons/SocialButtons";
 import Tables from "./pages/Tables/Tables";
 import Typography from "./pages/Typography/Typography";
 import Widgets from "./pages/Widgets/Widgets";
+import ApexCharts from "./pages/ApexCharts/ApexCharts";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
           <Route path="/fontelico" element={<Fontelico />}></Route>
           <Route path="/widgets" element={<Widgets />}></Route>
           <Route path="/chartjS" element={<ChartJS />}></Route>
+          <Route path="/apexcharts" element={<ApexCharts />}></Route>
           <Route path="/recharts" element={<Recharts />}></Route>
           <Route path="/googlemaps" element={<GoogleMaps />}></Route>
           <Route path="/leafletmaps" element={<LeafletMaps />}></Route>

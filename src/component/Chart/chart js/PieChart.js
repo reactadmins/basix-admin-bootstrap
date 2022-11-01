@@ -27,8 +27,10 @@ const PieChart = () => {
     ],
   };
   return (
-    <div style={{ width: "450px" }} className="mx-auto">
-      <Pie data={data} />
+    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+      <div style={{ width: "80%" }}>
+        <Pie data={data} />
+      </div>
     </div>
   );
 };

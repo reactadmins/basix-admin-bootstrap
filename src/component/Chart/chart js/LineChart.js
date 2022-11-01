@@ -59,9 +59,9 @@ const LineChart = () => {
     ],
   };
   return (
-    <>
+    <div className="d-flex justify-content-center align-items-center overflow-hidden">
       <Line options={options} data={data} />
-    </>
+    </div>
   );
 };
 

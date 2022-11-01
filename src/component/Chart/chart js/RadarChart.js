@@ -48,8 +48,10 @@ const RadarChart = () => {
     ],
   };
   return (
-    <div style={{ width: "450px" }} className="mx-auto">
-      <Radar data={data} />
+    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+      <div style={{ width: "80%" }}>
+        <Radar data={data} />
+      </div>
     </div>
   );
 };

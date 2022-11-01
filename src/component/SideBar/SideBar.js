@@ -233,6 +233,15 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li className="pb-3">
                     <Menu
+                      to="apexcharts"
+                      icon="menu-icon fa fa-line-chart"
+                      title="Apex Charts"
+                      displayStyle={"gap-4"}
+                      isOpen={isOpen}
+                    />
+                  </li>
+                  <li className="pb-3">
+                    <Menu
                       to="recharts"
                       icon="menu-icon fa fa-line-chart"
                       title="Recharts"
