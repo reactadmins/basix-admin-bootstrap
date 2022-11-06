@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -56,7 +57,7 @@ const data = [
 
 const RechartBarChart = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+    <ResponsiveContainer width="100%" height={300}>
       <BarChart
         width={500}
         height={300}
@@ -77,7 +78,7 @@ const RechartBarChart = () => {
         <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
         <Bar dataKey="uv" fill="#ffc658" />
       </BarChart>
-    </div>
+    </ResponsiveContainer>
   );
 };
 

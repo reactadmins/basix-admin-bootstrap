@@ -6,6 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -70,7 +71,7 @@ const gradientOffset = () => {
 const off = gradientOffset();
 const RechartAreaChart = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+    <ResponsiveContainer width="100%" height={300}>
       <AreaChart
         width={600}
         height={300}
@@ -99,7 +100,7 @@ const RechartAreaChart = () => {
           fill="url(#splitColor)"
         />
       </AreaChart>
-    </div>
+    </ResponsiveContainer>
   );
 };
 

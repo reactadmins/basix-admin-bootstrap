@@ -9,21 +9,6 @@ $vimeobg: #1ab7ea;
 $pinterestbg: #cb2027;
 $instagrambg: #bc2a8d;
 
-.card-actions {
-  a {
-    position: relative;
-  }
-  a::after {
-    position: absolute;
-    top: 0;
-    left: -8px;
-    content: "";
-    width: 0.5px;
-    height: 23px;
-    background-color: #c4c8cc;
-  }
-}
-
 .social__button {
   position: relative;
   display: flex;

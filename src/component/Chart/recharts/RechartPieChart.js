@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie } from "recharts";
+import { PieChart, Pie, ResponsiveContainer } from "recharts";
 
 const data01 = [
   { name: "Group A", value: 400 },
@@ -23,7 +23,7 @@ const data02 = [
 
 const RechartPieChart = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+    <ResponsiveContainer width="100%" height={300}>
       <PieChart width={400} height={300}>
         <Pie
           data={data01}
@@ -44,7 +44,7 @@ const RechartPieChart = () => {
           label
         />
       </PieChart>
-    </div>
+    </ResponsiveContainer>
   );
 };
 

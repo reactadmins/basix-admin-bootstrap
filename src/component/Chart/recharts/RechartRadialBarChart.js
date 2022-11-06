@@ -1,5 +1,10 @@
 import React from "react";
-import { RadialBarChart, RadialBar, Legend } from "recharts";
+import {
+  RadialBarChart,
+  RadialBar,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const data = [
   {
@@ -54,7 +59,7 @@ const style = {
 
 const RechartRadialBarChart = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+    <ResponsiveContainer width="100%" height={300}>
       <RadialBarChart
         width={500}
         height={300}
@@ -81,7 +86,7 @@ const RechartRadialBarChart = () => {
           wrapperStyle={style}
         />
       </RadialBarChart>
-    </div>
+    </ResponsiveContainer>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import FirstCounter from "../../component/Counter/FirstCounter";
+import FirstCounter from "../../component/Counter/FirstCounter/FirstCounter";
 import SecondCounter from "../../component/Counter/SecondCounter";
 import ThirdCounter from "../../component/Counter/ThirdCounter";
 import FourthCounter from "../../component/Counter/FourthCounter";
@@ -17,7 +17,7 @@ const Widgets = () => {
       <div className="row gy-4 gx-4">
         <div className="col-md-6 col-lg-3 col-xl-3 ">
           <FirstCounter
-            counterBg="revenue-bg"
+            conuterClassNmae="revenue"
             count={23569}
             dolar="$"
             count_name="Revenue"

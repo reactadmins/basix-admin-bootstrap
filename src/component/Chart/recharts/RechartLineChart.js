@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -56,7 +57,7 @@ const data = [
 
 const RechartLineChart = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+    <ResponsiveContainer width="100%" height={300}>
       <LineChart width={500} height={300} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />
@@ -71,7 +72,7 @@ const RechartLineChart = () => {
         />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
       </LineChart>
-    </div>
+    </ResponsiveContainer>
   );
 };
 

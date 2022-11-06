@@ -2,7 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 const SocialMediaCounter = ({ icon, iconBg = "", count }) => {
   return (
-    <div className="d-flex gap-4 align-items-center bg-white border">
+    <div className="d-flex gap-3 align-items-center bg-white border overflow-hidden">
       <div
         style={{ width: "90px", backgroundColor: `${iconBg}`, padding: "24px" }}
       >

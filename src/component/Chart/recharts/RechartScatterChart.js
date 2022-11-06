@@ -6,6 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 const data01 = [
@@ -33,7 +34,7 @@ const data02 = [
 
 const RechartScatterChart = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center overflow-hidden">
+    <ResponsiveContainer width="100%" height={300}>
       <ScatterChart
         width={500}
         height={300}
@@ -67,7 +68,7 @@ const RechartScatterChart = () => {
         <Scatter yAxisId="left" name="A school" data={data01} fill="#8884d8" />
         <Scatter yAxisId="right" name="A school" data={data02} fill="#82ca9d" />
       </ScatterChart>
-    </div>
+    </ResponsiveContainer>
   );
 };
 

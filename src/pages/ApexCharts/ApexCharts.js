@@ -15,7 +15,7 @@ const ApexCharts = () => {
           <Card
             cardHeader={
               <>
-                <strong className="fs-6">Area Chart</strong>
+                <strong className="fs-6">Stacked Columns</strong>
               </>
             }
             cardBodyBg="bg-white"

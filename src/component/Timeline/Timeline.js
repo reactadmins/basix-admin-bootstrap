@@ -7,7 +7,7 @@ import img4 from "../../images/avatar/4.jpg";
 
 const Timeline = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Card
         cardHeader={
           <div className="d-flex justify-content-between">

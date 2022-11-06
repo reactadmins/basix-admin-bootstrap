@@ -5,46 +5,70 @@ const LineChart = () => {
   const [state, setState] = useState({
     series: [
       {
-        name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+        name: "PRODUCT A",
+        data: [13, 23, 20, 8, 13, 27],
+      },
+      {
+        name: "PRODUCT B",
+        data: [13, 23, 20, 8, 13, 27],
       },
     ],
     options: {
       chart: {
+        type: "bar",
         height: 350,
-        type: "line",
+        stacked: true,
+        toolbar: {
+          show: true,
+        },
         zoom: {
-          enabled: false,
+          enabled: true,
         },
       },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: "straight",
-      },
-      title: {
-        text: "Product Trends by Month",
-        align: "left",
-      },
-      grid: {
-        row: {
-          colors: ["#f3f3f3", "transparent"],
-          opacity: 0.5,
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: "bottom",
+              offsetX: -10,
+              offsetY: 0,
+            },
+          },
+        },
+      ],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          borderRadius: 10,
+          dataLabels: {
+            total: {
+              enabled: false,
+              style: {
+                fontSize: "13px",
+                fontWeight: 900,
+              },
+            },
+          },
         },
       },
       xaxis: {
+        type: "datetime",
         categories: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
+          "01/01/2011 GMT",
+          "01/02/2011 GMT",
+          "01/03/2011 GMT",
+          "01/04/2011 GMT",
+          "01/05/2011 GMT",
+          "01/06/2011 GMT",
         ],
+      },
+      legend: {
+        position: "top",
+        offsetY: 20,
+      },
+      fill: {
+        opacity: 1,
       },
     },
   });
@@ -53,7 +77,7 @@ const LineChart = () => {
       <ReactApexChart
         options={state.options}
         series={state.series}
-        type="line"
+        type="bar"
         height={300}
         style={{ width: "100%" }}
       />
