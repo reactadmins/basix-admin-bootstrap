@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const PieChart = () => {
+const DeviceViewGraph = () => {
   const [state, setState] = useState({
-    series: [44, 55, 41, 17, 15],
+    series: [44, 55, 41],
     options: {
       chart: {
         type: "donut",
       },
-      labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      labels: ["Desktop visits", "Tab visits", "Mobile visits"],
       responsive: [
         {
           breakpoint: 480,
@@ -25,16 +25,17 @@ const PieChart = () => {
     },
   });
   return (
-    <div>
+    <div
+      className="d-flex justify-content-center align-items-center bg-white rounded-2"
+      style={{ height: "150px" }}
+    >
       <ReactApexChart
         options={state.options}
         series={state.series}
         type="donut"
-        height={300}
-        style={{ width: "100%" }}
       />
     </div>
   );
 };
 
-export default PieChart;
+export default DeviceViewGraph;

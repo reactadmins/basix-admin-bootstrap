@@ -6,6 +6,7 @@
     background-color: #292b35;
     .isopen {
       width: 280px;
+      transition: 0.1s;
       .toggle-container {
         .mini-logo {
           display: none;
@@ -19,6 +20,7 @@
     }
     .isactive {
       width: 70px;
+      transition: 0.1s;
       .toggle-container {
         .logo {
           display: none;

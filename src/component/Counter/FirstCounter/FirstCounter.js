@@ -20,7 +20,7 @@ const FirstCounter = ({
           <div className="counter">
             <div style={{ fontSize: "1.75rem", fontWeight: "400" }}>
               {dolar && <span className="mx-1">{dolar}</span>}
-              <CountUp end={count} duration={3}></CountUp>
+              <CountUp end={count} duration={4}></CountUp>
               {percentage && <span>{percentage}</span>}
             </div>
             <p>{count_name}</p>

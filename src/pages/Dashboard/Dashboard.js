@@ -10,8 +10,11 @@ import EarningStats from "../../component/Chart/recharts/EarningStats";
 import TrafficChart from "../../component/Chart/recharts/TrafficChart";
 import FirstCounter from "../../component/Counter/FirstCounter/FirstCounter";
 import SocialMediaCounter from "../../component/Counter/SocialMediaCounter";
+import DeviceViewGraph from "../../component/DeviceViewGraph/DeviceViewGraph";
+import MonthlyDataUpdate from "../../component/MonthlyDataUpdate/MonthlyDataUpdate";
 import Stats from "../../component/Stats/Stats";
 import Timeline from "../../component/Timeline/Timeline";
+import UsetDataCount from "../../component/UsetDataCount/UsetDataCount";
 import Weather from "../../component/Weather/Weather";
 
 import "./dashboard.scss";
@@ -551,10 +554,22 @@ const Dashboard = () => {
         <div className="col-md-12 col-lg-6 col-xl-6 mb-4">
           <div className="row">
             <div className="col-md-6">
-              <Weather></Weather>
+              <div className="mb-4 mb-md-0">
+                <Weather></Weather>
+              </div>
             </div>
             <div className="col-md-6">
-              <h1>jsdaflkj</h1>
+              <UsetDataCount></UsetDataCount>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-md-6 p-lg-0">
+              <div className="mb-4 mb-md-0">
+                <MonthlyDataUpdate></MonthlyDataUpdate>
+              </div>
+            </div>
+            <div className="col-md-6 p-lg-0">
+              <DeviceViewGraph></DeviceViewGraph>
             </div>
           </div>
         </div>
