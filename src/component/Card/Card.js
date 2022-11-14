@@ -2,7 +2,6 @@ import React from "react";
 
 const Card = ({
   cardStyle = "",
-  cardHeader = "",
   cardHeaderStyle = "",
   cardHeaderBg = "",
   cardBody = "",
@@ -11,17 +10,44 @@ const Card = ({
   cardFooter = "",
   cardFooterStyle = "",
   cardFooterBg = "",
+  iconName = {},
+  iconColor = "",
+  headerTitle = "",
+  headerTitleColot = "",
 }) => {
   return (
-    <div className={`card ${cardStyle}`}>
-      {cardHeader && (
-        <div
-          className={`card-header ${cardHeaderStyle}`}
-          style={{ backgroundColor: `${cardHeaderBg}` }}
-        >
-          {cardHeader}
+    <div className={`card rounded-0 ${cardStyle}`}>
+      <div
+        className={`card-header ${cardHeaderStyle}`}
+        style={{ backgroundColor: `${cardHeaderBg}`, padding: "12px 16px" }}
+      >
+        <div className="d-flex justify-content-between align-items-center">
+          <div>
+            <strong
+              style={{
+                fontSize: ".875em",
+                fontWeight: "600",
+                color: `${headerTitleColot}`,
+              }}
+            >
+              {headerTitle}
+            </strong>
+          </div>
+          <div className="card-actions d-flex gap-3">
+            {iconName?.icons?.map((icon) => (
+              <>
+                <a
+                  href="#"
+                  type="button"
+                  style={{ fontSize: "11px", color: `${iconColor}` }}
+                >
+                  <i className={icon}></i>
+                </a>
+              </>
+            ))}
+          </div>
         </div>
-      )}
+      </div>
       <div
         className={`card-body ${cardBodyStyle}`}
         style={{ backgroundColor: `${cardBodyBg}` }}
@@ -31,7 +57,7 @@ const Card = ({
       {cardFooter && (
         <div
           className={`card-footer ${cardFooterStyle}`}
-          style={{ backgroundColor: `${cardFooterBg}` }}
+          style={{ backgroundColor: `${cardFooterBg}`, padding: "12px 16px" }}
         >
           {cardFooter}
         </div>

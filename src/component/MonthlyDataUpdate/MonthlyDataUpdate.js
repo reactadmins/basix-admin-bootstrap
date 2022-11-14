@@ -4,7 +4,7 @@ import { Line, LineChart, ResponsiveContainer } from "recharts";
 const MonthlyDataUpdate = () => {
   return (
     <div
-      className="rounded-2"
+      className="rounded-0"
       style={{ padding: "20px", backgroundColor: "#42a5f5" }}
     >
       <h5

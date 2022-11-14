@@ -9,28 +9,17 @@ const Timeline = () => {
   return (
     <div className="overflow-hidden">
       <Card
-        cardHeader={
-          <div className="d-flex justify-content-between">
-            <div>
-              <strong className="fs-6">Timeline </strong>
-            </div>
-            <div className="card-actions d-flex gap-3">
-              <a href="#" type="button" className="text-secondary">
-                <i className="fa fa-cog"></i>
-              </a>
-              <a href="#" type="button" className="text-secondary">
-                <i className="fa fa-angle-down"></i>
-              </a>
-              <a href="#" type="button" className="text-secondary">
-                <i className="fa fa-times"></i>
-              </a>
-            </div>
-          </div>
-        }
+        iconName={{
+          icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+        }}
+        iconColor="#868e96"
+        cardHeaderBg="#fafafa"
+        headerTitle="Timeline"
+        headerTitleColot="#343a40"
         cardBodyBg="bg-light"
         cardBody={
-          <div className="timeline w-100">
-            <div className="d-flex gap-2 mb-2">
+          <div className="timeline w-100" style={{ padding: "5px" }}>
+            <div className="d-flex gap-2 mt-xl-3 mb-3">
               <div>
                 <i
                   className="fa-regular fa-file text-white rounded-circle text-center "
@@ -43,7 +32,7 @@ const Timeline = () => {
                   }}
                 ></i>
               </div>
-              <div className="border-bottom">
+              <div className="border-bottom w-100">
                 <span style={{ fontSize: "14px", color: "#868e96" }}>
                   <a href="#" className="text-decoration-none mx-1 text-dark">
                     Anthony Marshal
@@ -62,7 +51,42 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            <div className="d-flex gap-2 mb-2">
+            {/* <div className="d-flex gap-2 mb-2">
+              <div>
+                <i
+                  className="fa-solid fa-envelope text-white rounded-circle text-center "
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    fontSize: "12px",
+                    lineHeight: "30px",
+                    backgroundColor: "#42a5f5",
+                  }}
+                ></i>
+              </div>
+              <div className="border-bottom w-100">
+                <span
+                  className="d-flex justify-content-between"
+                  style={{ fontSize: "14px", color: "#868e96" }}
+                >
+                  <a href="#" className="text-decoration-none mx-1 text-dark">
+                    Maria Monica
+                  </a>
+                  <span>Just now</span>
+                </span>
+                <span
+                  className="d-block"
+                  style={{
+                    fontSize: "12px",
+                    margin: "5px 0 15px 0",
+                    color: "#868e96",
+                  }}
+                >
+                  5 Minutes ago
+                </span>
+              </div>
+            </div> */}
+            <div className="d-flex gap-2 mb-3">
               <div>
                 <i
                   className="fa-solid fa-check text-white rounded-circle text-center "
@@ -75,7 +99,7 @@ const Timeline = () => {
                   }}
                 ></i>
               </div>
-              <div className="border-bottom">
+              <div className="border-bottom w-100">
                 <span style={{ fontSize: "14px", color: "#868e96" }}>
                   <a href="#" className="text-decoration-none mx-1 text-dark">
                     Maria Monica
@@ -94,7 +118,7 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            <div className="d-flex gap-2 mb-2">
+            <div className="d-flex gap-2 mb-3">
               <div>
                 <i
                   className="fa-solid fa-image text-white rounded-circle text-center "
@@ -107,7 +131,7 @@ const Timeline = () => {
                   }}
                 ></i>
               </div>
-              <div className="border-bottom">
+              <div className="border-bottom w-100">
                 <span style={{ fontSize: "14px", color: "#868e96" }}>
                   <a href="#" className="text-decoration-none mx-1 text-dark">
                     Patricia Watkins
@@ -135,7 +159,7 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            <div className="d-flex gap-2 mb-2">
+            <div className="d-flex gap-2 mb-xl-4">
               <div>
                 <i
                   className="fa-solid fa-user text-white rounded-circle text-center "

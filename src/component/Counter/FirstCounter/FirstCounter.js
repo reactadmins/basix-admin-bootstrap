@@ -8,13 +8,13 @@ const FirstCounter = ({
   percentage = "",
   count_name = "",
   icon = "",
-  conuterClassNmae = "",
+  conuterBg = "",
 }) => {
   return (
-    <div className="card border-0 overflow-hidden counter-wrapper">
+    <div className="card border-0 rounded-0  overflow-hidden counter-wrapper">
       <div
-        className={`card-body rounded-2 counter-bg ${conuterClassNmae}`}
-        style={{ padding: "20px" }}
+        className="card-body counter-bg "
+        style={{ padding: "20px", backgroundColor: `${conuterBg}` }}
       >
         <div className="d-flex justify-content-between align-items-center">
           <div className="counter">

@@ -1,23 +1,24 @@
 import React from "react";
 import Card from "../Card/Card";
 import userImg from "../../images/admin.jpg";
+import "./userdatacount.scss";
 
 const UsetDataCount = () => {
   return (
     <>
       <Card
         cardStyle="border-0"
-        cardHeaderStyle="border-0"
-        cardHeaderBg="#5c6bc0"
-        cardHeader={
-          <div className="d-flex justify-content-end align-items-center py-1">
-            <i className="fa fa-ellipsis-v text-white"></i>
-          </div>
-        }
+        cardHeaderStyle="border-0 rounded-0"
+        iconName={{
+          icons: ["fa fa-ellipsis-v"],
+        }}
+        iconColor="#fff"
+        cardHeaderBg="rgb(92, 107, 192)"
+        headerTitleColot="#fff"
         cardBodyBg="bg-white"
         cardBodyStyle="p-0"
         cardBody={
-          <div className="weather-wrapper position-relative">
+          <div className="user-data-count-wrapper position-relative">
             <div
               className="p-4 pt-0"
               style={{ backgroundColor: "#5c6bc0", height: "108px" }}
@@ -30,15 +31,10 @@ const UsetDataCount = () => {
               </h5>
             </div>
             <div
-              className="d-flex justify-content-center align-items-center"
+              className="d-flex justify-content-center align-items-center user-data-count-img"
               style={{ marginTop: "-70px", marginBottom: "35px" }}
             >
-              <img
-                className="rounded-circle"
-                src={userImg}
-                alt="user img"
-                style={{ width: "140px" }}
-              />
+              <img className="rounded-circle" src={userImg} alt="user img" />
             </div>
           </div>
         }

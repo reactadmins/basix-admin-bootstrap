@@ -14,7 +14,7 @@ import DeviceViewGraph from "../../component/DeviceViewGraph/DeviceViewGraph";
 import MonthlyDataUpdate from "../../component/MonthlyDataUpdate/MonthlyDataUpdate";
 import Stats from "../../component/Stats/Stats";
 import Timeline from "../../component/Timeline/Timeline";
-import UsetDataCount from "../../component/UsetDataCount/UsetDataCount";
+import UserDataCount from "../../component/UserDataCount/UserDataCount";
 import Weather from "../../component/Weather/Weather";
 
 import "./dashboard.scss";
@@ -41,15 +41,15 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-3 col-xl-3 mb-4">
           <FirstCounter
-            conuterClassNmae="revenue"
+            conuterBg="#5c6bc0"
             count={23569}
             dolar="$"
             count_name="Revenue"
             icon={
               <>
                 <i
-                  class="fa-solid fa-cart-shopping"
-                  style={{ color: "#ADB5DF", fontSize: "3.68em" }}
+                  className="fa-solid fa-cart-shopping"
+                  style={{ color: "#fff", fontSize: "3.68em" }}
                 ></i>
               </>
             }
@@ -57,7 +57,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-3  col-xl-3 mb-4">
           <FirstCounter
-            conuterClassNmae="sales-increase"
+            conuterBg="#66bb6a"
             count={85}
             percentage="%"
             count_name="Sales Increase"
@@ -117,7 +117,7 @@ const Dashboard = () => {
                     },
                   ]}
                 >
-                  <Bar dataKey="uv" fill="#84C988" />
+                  <Bar dataKey="uv" fill="#fff" />
                 </BarChart>
               </>
             }
@@ -125,14 +125,14 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-3 col-xl-3 mb-4">
           <FirstCounter
-            conuterClassNmae="total-clients"
+            conuterBg="#ffa726"
             count={6596}
             count_name="Total Clients"
             icon={
               <>
                 <i
-                  class="fa-solid fa-user-group"
-                  style={{ color: "#FFD392", fontSize: "3.68em" }}
+                  className="fa-solid fa-user-group"
+                  style={{ color: "#fff", fontSize: "3.68em" }}
                 ></i>
               </>
             }
@@ -140,7 +140,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-3 col-xl-3">
           <FirstCounter
-            conuterClassNmae="new-users"
+            conuterBg="#42a5f5"
             count={1490}
             count_name="New Users"
             icon={
@@ -188,39 +188,13 @@ const Dashboard = () => {
         </div>
         <div className="col-md-12 col-lg-4 col-xl-4 mb-4">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Timeseries</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-secondary"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-secondary"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-secondary"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#fafafa"
+            headerTitle="Timeseries"
+            headerTitleColot="#343a40"
             cardBodyBg="bg-white"
             cardBody={
               <>
@@ -231,39 +205,13 @@ const Dashboard = () => {
         </div>
         <div className="col-md-12 col-lg-8 col-xl-8 mb-4">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Traffic </strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-secondary"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-secondary"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-secondary"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#fafafa"
+            headerTitle="Traffic"
+            headerTitleColot="#343a40"
             cardBodyBg="bg-white"
             cardBody={
               <>
@@ -285,7 +233,7 @@ const Dashboard = () => {
                       29.703 Users (40%)
                     </h4>
                     <div
-                      class="progress"
+                      className="progress"
                       style={{ backgroundColor: "#e9ecef", height: "5px" }}
                     >
                       <div
@@ -309,7 +257,7 @@ const Dashboard = () => {
                       29.703 Users (40%)
                     </h4>
                     <div
-                      class="progress"
+                      className="progress"
                       style={{ backgroundColor: "#e9ecef", height: "5px" }}
                     >
                       <div
@@ -333,7 +281,7 @@ const Dashboard = () => {
                       29.703 Users (40%)
                     </h4>
                     <div
-                      class="progress"
+                      className="progress"
                       style={{ backgroundColor: "#e9ecef", height: "5px" }}
                     >
                       <div
@@ -354,39 +302,12 @@ const Dashboard = () => {
         <div className="col-md-12 col-lg-6 col-xl-6 mb-4">
           <Card
             cardStyle="border-0"
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6 text-white">Earning Stats</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-white"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-white"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a
-                    href="#"
-                    type="button"
-                    className="text-white"
-                    style={{ fontSize: "12px" }}
-                  >
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#fff"
+            headerTitle="Earning Stats"
+            headerTitleColot="#fff"
             cardHeaderStyle="border-0 py-2"
             cardHeaderBg="#ef5350"
             cardBodyBg="#ef5350"
@@ -429,23 +350,13 @@ const Dashboard = () => {
             <div className="col-md-6">
               <div className="mb-4 mb-md-0">
                 <Card
-                  cardHeader={
-                    <div className="d-flex justify-content-between">
-                      <div>
-                        <strong className="fs-6">Download</strong>
-                      </div>
-                      <div className="card-actions d-flex gap-3">
-                        <a
-                          href="#"
-                          type="button"
-                          className="text-secondary"
-                          style={{ fontSize: "12px" }}
-                        >
-                          <i className="fa fa-ellipsis-v"></i>
-                        </a>
-                      </div>
-                    </div>
-                  }
+                  iconName={{
+                    icons: ["fa fa-ellipsis-v"],
+                  }}
+                  iconColor="#868e96"
+                  cardHeaderBg="#fafafa"
+                  headerTitle="Download"
+                  headerTitleColot="#343a40"
                   cardBodyBg="bg-white"
                   cardBody={
                     <>
@@ -457,23 +368,13 @@ const Dashboard = () => {
             </div>
             <div className="col-md-6">
               <Card
-                cardHeader={
-                  <div className="d-flex justify-content-between">
-                    <div>
-                      <strong className="fs-6">Revenue</strong>
-                    </div>
-                    <div className="card-actions d-flex gap-3">
-                      <a
-                        href="#"
-                        type="button"
-                        className="text-secondary"
-                        style={{ fontSize: "12px" }}
-                      >
-                        <i className="fa fa-ellipsis-v"></i>
-                      </a>
-                    </div>
-                  </div>
-                }
+                iconName={{
+                  icons: ["fa fa-ellipsis-v"],
+                }}
+                iconColor="#868e96"
+                cardHeaderBg="#fafafa"
+                headerTitle="Revenue"
+                headerTitleColot="#343a40"
                 cardBodyBg="bg-white"
                 cardBody={
                   <>
@@ -515,11 +416,13 @@ const Dashboard = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6 mb-4">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Analytics Stats</strong>
-              </>
-            }
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#fafafa"
+            headerTitle="Revenue"
+            headerTitleColot="#343a40"
             cardBodyBg="bg-white"
             cardBody={
               <>
@@ -528,7 +431,7 @@ const Dashboard = () => {
             }
             cardFooterStyle="border-0 bg-white"
             cardFooter={
-              <div className="row" style={{ padding: "48px 45px 24px 48px" }}>
+              <div className="row" style={{ padding: "35px 30px 24px 30px" }}>
                 <div className="col-4">
                   <CartDataCount
                     chadtColor="bounce-rate"
@@ -559,10 +462,13 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <UsetDataCount></UsetDataCount>
+              <UserDataCount></UserDataCount>
             </div>
           </div>
-          <div className="row mt-4">
+          <div
+            className="row mt-4"
+            style={{ marginLeft: "0px", marginRight: "0px" }}
+          >
             <div className="col-md-6 p-lg-0">
               <div className="mb-4 mb-md-0">
                 <MonthlyDataUpdate></MonthlyDataUpdate>

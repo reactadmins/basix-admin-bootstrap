@@ -87,7 +87,7 @@ const data = [
 const TrafficChart = () => {
   return (
     <>
-      <ResponsiveContainer width="100%" height={350}>
+      <ResponsiveContainer width="100%" height={345}>
         <AreaChart
           width={1000}
           height={400}

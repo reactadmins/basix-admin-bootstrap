@@ -91,6 +91,20 @@
     padding: 1em 1.875em 1em 2.5em;
     .show-menutoggle {
       display: block;
+      .hamburger {
+        width: 25px;
+        height: 3px;
+        background-color: red;
+      }
+      .hamburger::before {
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+      }
     }
   }
   .search-container {

@@ -23,12 +23,14 @@ const DownloadChart = () => {
     },
   });
   return (
-    <ReactApexChart
-      options={state.options}
-      series={state.series}
-      type="radialBar"
-      height={258}
-    />
+    <div style={{ height: "229px" }}>
+      <ReactApexChart
+        options={state.options}
+        series={state.series}
+        type="radialBar"
+        height={250}
+      />
+    </div>
   );
 };
 

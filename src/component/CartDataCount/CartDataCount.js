@@ -5,8 +5,8 @@ import "./cartdatacount.scss";
 const CartDataCount = ({ chadtColor = "", countName = "" }) => {
   return (
     <div className="cart-data-count">
-      <div className={`d-flex justify-content-between ${chadtColor}`}>
-        <div>
+      <div className={`d-flex gap-1 ${chadtColor}`}>
+        <div className="d-flex">
           <i
             className="fa fa-caret-up"
             style={{ color: "#4dbd74", fontSize: "14px" }}

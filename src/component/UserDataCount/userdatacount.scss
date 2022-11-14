@@ -1,0 +1,27 @@
+.user-data-count-wrapper {
+  .user-data-count-img {
+    img {
+      width: 144px;
+    }
+  }
+}
+/* responsive  */
+@media (max-width: 768px) {
+  .user-data-count-wrapper {
+    .user-data-count-img {
+      img {
+        width: 144px !important;
+      }
+    }
+  }
+}
+/* responsive  */
+@media (max-width: 1024px) {
+  .user-data-count-wrapper {
+    .user-data-count-img {
+      img {
+        width: 77px;
+      }
+    }
+  }
+}

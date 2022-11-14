@@ -6,14 +6,14 @@ const Weather = () => {
     <>
       <Card
         cardStyle="border-0"
-        cardHeaderStyle="border-0"
-        cardHeaderBg="#ffa726"
-        cardHeader={
-          <div className="d-flex justify-content-between align-items-center">
-            <strong className="fs-6 text-white">Weather</strong>
-            <i className="fa fa-ellipsis-v text-white"></i>
-          </div>
-        }
+        cardHeaderStyle="border-0 rounded-0"
+        iconName={{
+          icons: ["fa fa-ellipsis-v"],
+        }}
+        iconColor="#fff"
+        cardHeaderBg="rgb(255, 167, 38)"
+        headerTitle="Revenue"
+        headerTitleColot="#fff"
         cardBodyBg="bg-white"
         cardBodyStyle="p-0"
         cardBody={

@@ -26,8 +26,8 @@ const DeviceViewGraph = () => {
   });
   return (
     <div
-      className="d-flex justify-content-center align-items-center bg-white rounded-2"
-      style={{ height: "150px" }}
+      className="d-flex justify-content-center align-items-center bg-white rounded-0"
+      style={{ height: "147px" }}
     >
       <ReactApexChart
         options={state.options}
