@@ -7,16 +7,21 @@ const Badges = () => {
       <div className="row g-4">
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Badges"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Badges </strong>
-                <small>
-                  Use <code>{`.badge`}</code> class within{" "}
-                  <code>{`<span>`}</code> elements to create badges:
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use <code>.badge</code> class within <code>{`<span>`} </code>
+                  elements to create badges:
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <>
                 <a
@@ -44,11 +49,9 @@ const Badges = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Badges in Buttons</strong>
-              </>
-            }
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Badges in Buttons"
+            headerTitleColot="#343a40"
             cardBodyBg="bg-light"
             cardBody={
               <>
@@ -79,11 +82,9 @@ const Badges = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Labels</strong>
-              </>
-            }
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Labels"
+            headerTitleColot="#343a40"
             cardBodyBg="bg-light"
             cardBody={
               <>
@@ -127,11 +128,9 @@ const Badges = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Labels</strong>
-              </>
-            }
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Labels"
+            headerTitleColot="#343a40"
             cardBodyBg="bg-light"
             cardBody={
               <>

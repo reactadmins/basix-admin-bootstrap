@@ -14,6 +14,7 @@ const Card = ({
   iconColor = "",
   headerTitle = "",
   headerTitleColot = "",
+  titleCode = "",
 }) => {
   return (
     <div className={`card rounded-0 ${cardStyle}`}>
@@ -32,6 +33,7 @@ const Card = ({
             >
               {headerTitle}
             </strong>
+            {titleCode}
           </div>
           <div className="card-actions d-flex gap-3">
             {iconName?.icons?.map((icon) => (

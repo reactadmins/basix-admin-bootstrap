@@ -8,26 +8,24 @@ const SocialButtons = () => {
       <div className="row g-4">
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Social Buttons </strong>
-                  <small>(Rounded)</small>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Social Buttons"
+            headerTitleColot="#343a40"
+            titleCode={
+              <>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  (Rounded)
+                </small>
+              </>
             }
-            cardBodyBg="social-buttons"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100">
                 <a href="#" className="social__button mail">
@@ -51,26 +49,24 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Social Buttons </strong>
-                  <small>(Square)</small>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Social Buttons"
+            headerTitleColot="#343a40"
+            titleCode={
+              <>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  (Square)
+                </small>
+              </>
             }
-            cardBodyBg="social-buttons"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2">
                 <a
@@ -127,25 +123,14 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Aeneas Effect</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="social-buttons"
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Aeneas Effect"
+            headerTitleColot="#343a40"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2 social_buttons__effect aeneas">
                 <a href="#" className="text-decoration-none facebook">
@@ -178,25 +163,14 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Jaques Effect</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="social-buttons"
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Jaques Effect"
+            headerTitleColot="#343a40"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2 social_buttons__effect jaques">
                 <a href="#" className="text-decoration-none facebook">
@@ -229,25 +203,14 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Egeon Effect</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="social-buttons"
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Egeon Effect"
+            headerTitleColot="#343a40"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2 social_buttons__effect egeon">
                 <a href="#" className="text-decoration-none facebook">
@@ -280,25 +243,14 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Claudio Effect</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="social-buttons"
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Claudio Effect"
+            headerTitleColot="#343a40"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2 social_buttons__effect claudio">
                 <a href="#" className="text-decoration-none facebook">
@@ -331,25 +283,14 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Laertes Effect</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="social-buttons"
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Claudio Effect"
+            headerTitleColot="#343a40"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2 social_buttons__effect laertes">
                 <a href="#" className="text-decoration-none facebook">
@@ -382,25 +323,14 @@ const SocialButtons = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <div className="d-flex justify-content-between">
-                <div>
-                  <strong className="fs-6">Jinae Effect</strong>
-                </div>
-                <div className="card-actions d-flex gap-3">
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-cog"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-angle-down"></i>
-                  </a>
-                  <a href="#" type="button" className="text-secondary">
-                    <i className="fa fa-times"></i>
-                  </a>
-                </div>
-              </div>
-            }
-            cardBodyBg="social-buttons"
+            iconName={{
+              icons: ["fa fa-cog", "fa fa-angle-down", "fa fa-times"],
+            }}
+            iconColor="#868e96"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Jinae Effect"
+            headerTitleColot="#343a40"
+            cardBodyBg="#ddd"
             cardBody={
               <div className="d-flex justify-content-center gap-3 w-100 py-2 social_buttons__effect jinae">
                 <a href="#" className="text-decoration-none facebook">

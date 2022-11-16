@@ -1,0 +1,29 @@
+.twt-mark {
+  position: relative;
+  .twt-overlay::before {
+    position: absolute;
+    content: "\f099";
+    font: normal normal normal 100px/1 FontAwesome;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: hsla(0, 0%, 100%, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.weather-category {
+  position: relative;
+}
+.weather-category::after {
+  position: absolute;
+  content: " ";
+  top: -3px;
+  left: -25px;
+  width: 1.2px;
+  height: 40px;
+  background-color: #e6e6e6;
+}

@@ -7,17 +7,23 @@ const Button = () => {
       <div className="row g-4">
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Badges"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Badges </strong>
-                <small>
-                  Use this class <code>{`<a>`}</code>, <code>{`<button>`}</code>{" "}
-                  {" or "}
-                  <code>{`<input>`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>{`<a>`}</code>,{" "}
+                  <code>{`<button>`} </code>
+                  or
+                  <code> {`<input>`}</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-primary">
@@ -53,17 +59,23 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Outline Buttons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Outline Buttons </strong>
-                <small>
-                  Use this class <code>{`<a>`}</code>, <code>{`<button>`}</code>{" "}
-                  {" or "}
-                  <code>{`<input>`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>{`<a>`}</code>,{" "}
+                  <code>{`<button>`} </code>
+                  or
+                  <code> {`<input>`}</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-outline-primary">
@@ -96,17 +108,21 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Button tags"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Button tags </strong>
-                <small>
-                  Use this class <code>{`.btn`}</code>
-                  {" or "}
-                  <code>{`<button>`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn </code> or
+                  <code> {`<button>`}</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <a href="#" role="button" type="button" class="btn btn-primary">
@@ -128,17 +144,21 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Button tags"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Button tags </strong>
-                <small>
-                  Use this class <code>{`.btn`}</code>
-                  {" or "}
-                  <code>{`<button>`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn </code> or
+                  <code> {`<button>`}</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <a
@@ -173,15 +193,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Disabled state"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Disabled state </strong>
-                <small>
-                  Use this class <code>{`disabled="disabled"`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>disabled="disabled"</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button
@@ -237,15 +262,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Disabled state"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Disabled state </strong>
-                <small>
-                  Use this class <code>{`disabled="disabled"`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>disabled="disabled"</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button
@@ -317,15 +347,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Button with Icons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Button with Icons </strong>
-                <small>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
                   Use <code>{`<i>`}</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-primary">
@@ -352,15 +387,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Button with Icons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Button with Icons </strong>
-                <small>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
                   Use <code>{`<i>`}</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-outline-primary">
@@ -387,15 +427,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Small Button"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Small Button </strong>
-                <small>
-                  Use this class <code>{`.btn-sm `}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-sm</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-primary btn-sm">
@@ -422,15 +467,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Small Button"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Small Button </strong>
-                <small>
-                  Use this class <code>{`.btn-sm `}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-sm</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-outline-primary btn-sm">
@@ -457,11 +507,17 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Small Button with Icons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Small Button with Icons </strong>
-                <small>
-                  Use this class <code>{`.btn-sm `}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-sm</code>
                 </small>
               </>
             }
@@ -492,15 +548,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Small Button with Icons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Small Button with Icons </strong>
-                <small>
-                  Use this class <code>{`.btn-sm `}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-sm</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-outline-primary btn-sm">
@@ -528,15 +589,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Large Button"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Large Button </strong>
-                <small>
-                  Use this class <code>{`.btn-lg `}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-lg</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-primary btn-lg">
@@ -563,15 +629,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Large Button"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Large Button </strong>
-                <small>
-                  Use this class <code>{`.btn-lg `}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-lg</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-outline-primary btn-lg">
@@ -598,15 +669,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Large Active Button"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Large Button </strong>
-                <small>
-                  Use this class <code>{`.btn-lg .active`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-lg .active</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-primary btn-lg active">
@@ -636,15 +712,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Large Disabled Button"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Large Button </strong>
-                <small>
-                  Use this class <code>{`.btn-lg .active`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-lg .active</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-wrap gap-2">
                 <button
@@ -690,15 +771,20 @@ const Button = () => {
 
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Block Level Buttons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Block Level Buttons </strong>
-                <small>
-                  Use this class <code>{`.btn-block`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-block</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-column gap-2 w-100">
                 <button type="button" class="btn btn-primary btn-lg btn-block">
@@ -731,15 +817,20 @@ const Button = () => {
         </div>
         <div className="col-md-12 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Block Level Buttons"
+            headerTitleColot="#343a40"
+            cardBodyBg="bg-light"
+            titleCode={
               <>
-                <strong className="fs-6">Block Level Buttons </strong>
-                <small>
-                  Use this class <code>{`.btn-block`}</code>
+                <small
+                  className="mx-2"
+                  style={{ fontSize: "80%", fontWeight: "400" }}
+                >
+                  Use this class <code>.btn-block</code>
                 </small>
               </>
             }
-            cardBodyBg="bg-light"
             cardBody={
               <div className="d-flex flex-column gap-2 w-100">
                 <button

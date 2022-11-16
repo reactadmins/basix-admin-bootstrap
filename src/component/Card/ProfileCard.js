@@ -9,9 +9,11 @@ const ProfileCard = ({
   return (
     <div className="card">
       {cardHeader && (
-        <div className="card-header">
-          <i className={`${icon} mx-2`}></i>
-          <strong className="fs-6">{cardHeader}</strong>
+        <div className="card-header" style={{ padding: "12px 20px" }}>
+          {icon && <i className={`${icon}`} style={{ marginRight: "6px" }}></i>}
+          <strong style={{ fontSize: " 0.975em", fontWeight: "700" }}>
+            {cardHeader}
+          </strong>
         </div>
       )}
       <div className="card-body">
@@ -44,7 +46,7 @@ const ProfileCard = ({
         </div>
       </div>
       {cardFooter && (
-        <div className="card-footer">
+        <div className="card-footer" style={{ padding: "12px 20px" }}>
           <strong className="card-title">{cardFooter}</strong>
         </div>
       )}
