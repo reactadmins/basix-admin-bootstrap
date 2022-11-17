@@ -12,12 +12,8 @@ const ChartJS = () => {
       <div className="row g-4">
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Line Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Line Chart"
             cardBody={
               <>
                 <LineChart></LineChart>
@@ -27,12 +23,8 @@ const ChartJS = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Bar Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Bar Chart"
             cardBody={
               <>
                 <BarChart></BarChart>
@@ -42,12 +34,8 @@ const ChartJS = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Doughnut Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Doughnut Chart"
             cardBody={
               <>
                 <DoughnutChart></DoughnutChart>
@@ -57,12 +45,8 @@ const ChartJS = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Radar Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Radar Chart"
             cardBody={
               <>
                 <RadarChart></RadarChart>
@@ -72,12 +56,8 @@ const ChartJS = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Pie Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Pie Chart"
             cardBody={
               <>
                 <PieChart></PieChart>
@@ -87,12 +67,8 @@ const ChartJS = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Polar Area Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Polar Area Chart"
             cardBody={
               <>
                 <PolarAreaChart></PolarAreaChart>

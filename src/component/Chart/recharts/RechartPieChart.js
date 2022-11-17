@@ -24,26 +24,28 @@ const data02 = [
 const RechartPieChart = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
-      <PieChart width={400} height={300}>
-        <Pie
-          data={data01}
-          dataKey="value"
-          cx={200}
-          cy={200}
-          outerRadius={60}
-          fill="#8884d8"
-        />
-        <Pie
-          data={data02}
-          dataKey="value"
-          cx={200}
-          cy={200}
-          innerRadius={70}
-          outerRadius={90}
-          fill="#82ca9d"
-          label
-        />
-      </PieChart>
+      <div className="d-flex justify-content-center align-items-center">
+        <PieChart width={400} height={300}>
+          <Pie
+            data={data01}
+            dataKey="value"
+            cx={200}
+            cy={200}
+            outerRadius={60}
+            fill="#8884d8"
+          />
+          <Pie
+            data={data02}
+            dataKey="value"
+            cx={200}
+            cy={200}
+            innerRadius={70}
+            outerRadius={90}
+            fill="#82ca9d"
+            label
+          />
+        </PieChart>
+      </div>
     </ResponsiveContainer>
   );
 };

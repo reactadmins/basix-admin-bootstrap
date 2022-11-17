@@ -13,12 +13,8 @@ const Recharts = () => {
       <div className="row g-4">
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Line Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Line Chart"
             cardBody={
               <>
                 <RechartLineChart></RechartLineChart>
@@ -28,12 +24,8 @@ const Recharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Area Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Area Chart"
             cardBody={
               <>
                 <RechartAreaChart></RechartAreaChart>
@@ -43,12 +35,8 @@ const Recharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Bar Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Bar Chart"
             cardBody={
               <>
                 <RechartBarChart></RechartBarChart>
@@ -58,12 +46,8 @@ const Recharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Pie Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Pie Chart"
             cardBody={
               <>
                 <RechartPieChart></RechartPieChart>
@@ -73,12 +57,8 @@ const Recharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Radial Bar Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Radial Bar Chart"
             cardBody={
               <>
                 <RechartRadialBarChart></RechartRadialBarChart>
@@ -88,12 +68,8 @@ const Recharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Scatter Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Scatter Chart"
             cardBody={
               <>
                 <RechartScatterChart></RechartScatterChart>

@@ -398,26 +398,32 @@ const Dashboard = () => {
         <div className="col-12 col-md-12 col-lg-8 col-xl-8 mb-4">
           <Stats></Stats>
           <div className="row mt-4">
-            <div className="col-md-4 col-lg-4 col-xl-4 ">
-              <SocialMediaCounter
-                icon="fa-brands fa-twitter"
-                iconBg="#1da1f2"
-                count="1875980"
-              />
+            <div className="col-md-4 col-lg-4 col-xl-4">
+              <div className="mb-4 mb-md-0">
+                <SocialMediaCounter
+                  icon="fa-brands fa-twitter"
+                  iconBg="#1da1f2"
+                  count="1875980"
+                />
+              </div>
             </div>
             <div className="col-md-4 col-lg-4 col-xl-4 ">
-              <SocialMediaCounter
-                icon="fa-brands fa-facebook-f"
-                iconBg="#3B5998"
-                count="1875980"
-              />
+              <div className="mb-4 mb-md-0">
+                <SocialMediaCounter
+                  icon="fa-brands fa-facebook-f"
+                  iconBg="#3B5998"
+                  count="1875980"
+                />
+              </div>
             </div>
             <div className="col-md-4 col-lg-4 col-xl-4 ">
-              <SocialMediaCounter
-                icon="fa-brands fa-instagram"
-                iconBg="#833AB4"
-                count="1875980"
-              />
+              <div className="mb-4 mb-md-0">
+                <SocialMediaCounter
+                  icon="fa-brands fa-instagram"
+                  iconBg="#833AB4"
+                  count="1875980"
+                />
+              </div>
             </div>
           </div>
         </div>

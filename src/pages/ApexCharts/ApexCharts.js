@@ -13,12 +13,8 @@ const ApexCharts = () => {
       <div className="row g-4">
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Stacked Columns</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Stacked Columns"
             cardBody={
               <>
                 <LineChart></LineChart>
@@ -28,12 +24,8 @@ const ApexCharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Area Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Area Chart"
             cardBody={
               <>
                 <AreaChart></AreaChart>
@@ -43,12 +35,8 @@ const ApexCharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Column Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Column Chart"
             cardBody={
               <>
                 <ColumnChart></ColumnChart>
@@ -58,12 +46,8 @@ const ApexCharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Candlestick Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Candlestick Chart"
             cardBody={
               <>
                 <CandlestickChart></CandlestickChart>
@@ -73,12 +57,8 @@ const ApexCharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Pie Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Pie Chart"
             cardBody={
               <>
                 <PieChart></PieChart>
@@ -88,12 +68,8 @@ const ApexCharts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Bubble Chart</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Bubble Chart"
             cardBody={
               <>
                 <BubbleChart></BubbleChart>
