@@ -37,7 +37,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.applications?.name}
@@ -66,7 +66,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.accessibilityicons?.name}
@@ -95,7 +95,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">{items?.lists?.handicons?.name}</strong>
             </>
@@ -122,7 +122,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.transportationicons?.name}
@@ -151,7 +151,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.gendericons?.name}
@@ -180,7 +180,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">{items?.lists?.fileicons?.name}</strong>
             </>
@@ -207,7 +207,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.spinnericons?.name}
@@ -236,7 +236,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.formcontrolicons?.name}
@@ -265,7 +265,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.paymenticons?.name}
@@ -294,7 +294,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">{items?.lists?.charticons?.name}</strong>
             </>
@@ -321,7 +321,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.currencyicons?.name}
@@ -350,7 +350,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.texteditoricons?.name}
@@ -379,7 +379,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.directionalicons?.name}
@@ -408,7 +408,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.videoplayericons?.name}
@@ -437,36 +437,7 @@ const FontAwesome = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
-            <>
-              <strong className="fs-6">
-                {items?.lists?.brandiconsicons?.name}
-              </strong>
-            </>
-          }
-          cardBodyBg="bg-white"
-          cardBody={
-            <>
-              <div className="row  m-0">
-                {items?.lists?.brandiconsicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
-                    <div className="icon-wrapper">
-                      <i
-                        style={{ fontSize: "30px" }}
-                        className={`fa fa-${icons}`}
-                      ></i>
-                      <span className="mt-2">{icons}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          }
-        ></Card>
-      </div>
-      <div className="mt-4">
-        <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.medicalicons?.name}

@@ -25,14 +25,9 @@ const Icons = () => {
 
   return (
     <div>
-      <span class="glyphicon glyphicon-envelope">ccc</span>
       <Card
-        cardHeader={
-          <>
-            <strong className="fs-6">Icons</strong>
-          </>
-        }
-        cardBodyBg="bg-white"
+        cardHeaderBg="#fafafa"
+        headerTitle="Icons"
         cardBody={
           <>
             <div className="container-fluid p-0">

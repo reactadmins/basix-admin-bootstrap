@@ -41,12 +41,11 @@ const Entypo = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">{items?.lists?.mainicons?.name}</strong>
             </>
           }
-          cardBodyBg="bg-white"
           cardBody={
             <>
               <div className="row  m-0">
@@ -65,14 +64,13 @@ const Entypo = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">
                 {items?.lists?.socialicons?.name}
               </strong>
             </>
           }
-          cardBodyBg="bg-white"
           cardBody={
             <>
               <div className="row  m-0">

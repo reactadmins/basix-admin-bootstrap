@@ -38,7 +38,7 @@ const Brandico = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
+          titleCode={
             <>
               <strong className="fs-6">Icons</strong>
             </>
