@@ -30,12 +30,8 @@ const StepCircleWizard = () => {
   return (
     <div className="col-12 mb-4">
       <Card
-        cardHeader={
-          <>
-            <strong className="fs-6">Basic Wizard - Circle</strong>
-          </>
-        }
-        cardBodyBg="bg-white"
+        cardHeaderBg="#f7f7f7"
+        headerTitle="Basic Wizard - Circle"
         cardBody={
           <div className="wizard-wrapper position-relative mt-5 px-3">
             <div className="row">

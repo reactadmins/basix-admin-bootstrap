@@ -7,7 +7,7 @@ import Alerts from "./pages/Alerts/Alerts";
 import Badges from "./pages/Badges/Badges";
 import AdvancedForm from "./pages/AdvancedForm/AdvancedForm";
 import BasicForm from "./pages/BasicForm/BasicForm";
-import FormWizard from "./pages/AdvancedForm/AdvancedForm";
+import FormWizard from "./pages/FormWizard/FormWizard";
 import Button from "./pages/Button/Button";
 import Cards from "./pages/Cards/Cards";
 import ChartJS from "./pages/ChartJS/ChartJS";

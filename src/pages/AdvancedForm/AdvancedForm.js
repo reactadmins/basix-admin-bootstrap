@@ -9,17 +9,13 @@ const AdvancedForm = () => {
     <div className="row gx-4">
       <div className="col-sm-12 col-md-12 col-lg-6 col-xl-7">
         <Card
-          cardHeader={
+          cardHeaderBg="#fafafa"
+          headerTitle="Masked Input"
+          titleCode={
             <>
-              <strong className="fs-6">
-                Masked Input{" "}
-                <small style={{ fontSize: "80%", fontWeight: "400" }}>
-                  React Text Mask
-                </small>
-              </strong>
+              <small className="mx-1">React Text Mask</small>
             </>
           }
-          cardBodyBg="bg-white"
           cardBody={
             <>
               <MaskedInput
@@ -58,12 +54,8 @@ const AdvancedForm = () => {
       </div>
       <div className="col-sm-12 col-md-12 col-lg-6 col-xl-5 mb-4">
         <Card
-          cardHeader={
-            <>
-              <strong className="fs-6">React-Select</strong>
-            </>
-          }
-          cardBodyBg="bg-white"
+          cardHeaderBg="#fafafa"
+          headerTitle="Vue-Select"
           cardBody={
             <>
               <MultipleTagSelect />

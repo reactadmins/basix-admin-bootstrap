@@ -39,14 +39,8 @@ const StepTabWizard = () => {
   return (
     <div className="col-12 mb-4">
       <Card
-        cardHeader={
-          <>
-            <strong className="fs-6">
-              Tab Wizard: Custom button and title text
-            </strong>
-          </>
-        }
-        cardBodyBg="bg-white"
+        cardHeaderBg="#f7f7f7"
+        headerTitle="Tab Wizard: Custom button and title text"
         cardBody={
           <div className="wizard-wrapper position-relative px-3">
             <div className="row">
