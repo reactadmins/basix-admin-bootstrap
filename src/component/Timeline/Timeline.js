@@ -15,6 +15,8 @@ const Timeline = () => {
         iconColor="#868e96"
         cardHeaderBg="#fafafa"
         headerTitle="Timeline"
+        titleFontSize=".875em"
+        titlefontWeight="600"
         headerTitleColot="#343a40"
         cardBodyBg="bg-light"
         cardBody={

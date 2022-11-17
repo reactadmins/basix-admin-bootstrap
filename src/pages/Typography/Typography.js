@@ -5,12 +5,8 @@ const Typography = () => {
   return (
     <div className="container-fluid p-0">
       <Card
-        cardHeader={
-          <>
-            <strong className="fs-6">Typography </strong>
-          </>
-        }
-        cardBodyBg="bg-light"
+        cardHeaderBg="#fafafa"
+        headerTitle="Typography"
         cardBody={
           <>
             <div>

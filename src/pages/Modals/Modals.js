@@ -6,13 +6,9 @@ const Modals = () => {
   return (
     <div>
       <Card
-        cardHeader={
-          <>
-            <i className="fa-solid fa-bars"></i>
-            <strong className="fs-6 mx-2">Modals</strong>
-          </>
-        }
-        cardBodyBg="bg-white"
+        cardHeaderBg="#fafafa"
+        cardHeaderIcon="fa-sharp fa-solid fa-bars"
+        headerTitle="Modals"
         cardBody={
           <>
             <Modal

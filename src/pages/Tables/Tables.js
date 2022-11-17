@@ -7,12 +7,8 @@ const Tables = () => {
     <div className="container-fluid p-0">
       <div>
         <Card
-          cardHeader={
-            <>
-              <strong className="fs-6">Basic Table</strong>
-            </>
-          }
-          cardBodyBg="bg-light"
+          cardHeaderBg="#f7f7f7"
+          headerTitle="Basic Table"
           cardBody={
             <>
               <div className="table-responsive">
@@ -83,12 +79,8 @@ const Tables = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
-            <>
-              <strong className="fs-6">Colors, Icons, Labels</strong>
-            </>
-          }
-          cardBodyBg="bg-light"
+          cardHeaderBg="#f7f7f7"
+          headerTitle="Colors, Icons, Labels"
           cardBody={
             <>
               <div className="table-responsive">
@@ -189,12 +181,8 @@ const Tables = () => {
       </div>
       <div className="mt-4">
         <Card
-          cardHeader={
-            <>
-              <strong className="fs-6">Search & Pagination</strong>
-            </>
-          }
-          cardBodyBg="bg-light"
+          cardHeaderBg="#f7f7f7"
+          headerTitle="Search & Pagination"
           cardBody={
             <>
               <div className="table-responsive">

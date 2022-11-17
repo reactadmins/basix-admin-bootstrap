@@ -194,6 +194,8 @@ const Dashboard = () => {
             iconColor="#868e96"
             cardHeaderBg="#fafafa"
             headerTitle="Timeseries"
+            titleFontSize=".875em"
+            titlefontWeight="600"
             headerTitleColot="#343a40"
             cardBodyBg="bg-white"
             cardBody={
@@ -211,6 +213,8 @@ const Dashboard = () => {
             iconColor="#868e96"
             cardHeaderBg="#fafafa"
             headerTitle="Traffic"
+            titleFontSize=".875em"
+            titlefontWeight="600"
             headerTitleColot="#343a40"
             cardBodyBg="bg-white"
             cardBody={
@@ -307,6 +311,8 @@ const Dashboard = () => {
             }}
             iconColor="#fff"
             headerTitle="Earning Stats"
+            titleFontSize=".875em"
+            titlefontWeight="600"
             headerTitleColot="#fff"
             cardHeaderStyle="border-0 py-2"
             cardHeaderBg="#ef5350"
@@ -356,6 +362,8 @@ const Dashboard = () => {
                   iconColor="#868e96"
                   cardHeaderBg="#fafafa"
                   headerTitle="Download"
+                  titleFontSize=".875em"
+                  titlefontWeight="600"
                   headerTitleColot="#343a40"
                   cardBodyBg="bg-white"
                   cardBody={
@@ -374,6 +382,8 @@ const Dashboard = () => {
                 iconColor="#868e96"
                 cardHeaderBg="#fafafa"
                 headerTitle="Revenue"
+                titleFontSize=".875em"
+                titlefontWeight="600"
                 headerTitleColot="#343a40"
                 cardBodyBg="bg-white"
                 cardBody={
@@ -422,6 +432,8 @@ const Dashboard = () => {
             iconColor="#868e96"
             cardHeaderBg="#fafafa"
             headerTitle="Revenue"
+            titleFontSize=".875em"
+            titlefontWeight="600"
             headerTitleColot="#343a40"
             cardBodyBg="bg-white"
             cardBody={

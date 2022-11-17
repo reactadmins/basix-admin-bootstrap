@@ -14,7 +14,10 @@ const Card = ({
   iconColor = "",
   headerTitle = "",
   headerTitleColot = "",
+  titleFontSize = "",
+  titlefontWeight = "",
   titleCode = "",
+  cardHeaderIcon = "",
 }) => {
   return (
     <div className={`card rounded-0 ${cardStyle}`}>
@@ -24,10 +27,16 @@ const Card = ({
       >
         <div className="d-flex justify-content-between align-items-center">
           <div>
+            {cardHeaderIcon && (
+              <i
+                className={`${cardHeaderIcon}`}
+                style={{ marginRight: "4px", fontSize: "14px" }}
+              ></i>
+            )}
             <strong
               style={{
-                fontSize: ".875em",
-                fontWeight: "600",
+                fontSize: `${titleFontSize}`,
+                fontWeight: `${titlefontWeight}`,
                 color: `${headerTitleColot}`,
               }}
             >

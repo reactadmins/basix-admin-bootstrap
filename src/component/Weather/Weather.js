@@ -13,6 +13,8 @@ const Weather = () => {
         iconColor="#fff"
         cardHeaderBg="rgb(255, 167, 38)"
         headerTitle="Revenue"
+        titleFontSize=".875em"
+        titlefontWeight="600"
         headerTitleColot="#fff"
         cardBodyBg="bg-white"
         cardBodyStyle="p-0"

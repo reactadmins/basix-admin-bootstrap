@@ -8,12 +8,9 @@ const ProgressBars = () => {
       <div className="row g-4">
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Background</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Background"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div className="py-4">
@@ -44,12 +41,9 @@ const ProgressBars = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Animated Background</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Animated Background"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div className="py-4">
@@ -84,12 +78,9 @@ const ProgressBars = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Labels</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Labels"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div className="py-4">
@@ -124,12 +115,9 @@ const ProgressBars = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Animated Labels</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Animated Labels"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div className="py-4">
@@ -153,6 +141,76 @@ const ProgressBars = () => {
                   ></ProgressBar>
                   <ProgressBar
                     progressBg="bg-danger"
+                    progressWidth={{ width: "100%" }}
+                    currentValue="100"
+                    title="100"
+                  ></ProgressBar>
+                </div>
+              </>
+            }
+          ></Card>
+        </div>
+        <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+          <Card
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Progress Striped"
+            headerTitleColot="#343a40"
+            cardBody={
+              <>
+                <div className="py-4">
+                  <ProgressBar
+                    progressBg="bg-success progress-bar-striped"
+                    progressWidth={{ minWidth: "25%" }}
+                    currentValue="25"
+                  ></ProgressBar>
+                  <ProgressBar
+                    progressBg="bg-info progress-bar-striped"
+                    progressWidth={{ minWidth: "50%" }}
+                    currentValue="50"
+                  ></ProgressBar>
+                  <ProgressBar
+                    progressBg="bg-warning progress-bar-striped"
+                    progressWidth={{ minWidth: "75%" }}
+                    currentValue="75"
+                  ></ProgressBar>
+                  <ProgressBar
+                    progressBg="bg-danger progress-bar-striped"
+                    progressWidth={{ minWidth: "100%" }}
+                    currentValue="100"
+                  ></ProgressBar>
+                </div>
+              </>
+            }
+          ></Card>
+        </div>
+        <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+          <Card
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Animated Progress Striped"
+            headerTitleColot="#343a40"
+            cardBody={
+              <>
+                <div className="py-4">
+                  <ProgressBar
+                    progressBg="bg-success progress-bar-striped"
+                    progressWidth={{ width: "25%" }}
+                    currentValue="25"
+                    title="25"
+                  ></ProgressBar>
+                  <ProgressBar
+                    progressBg="bg-info progress-bar-striped"
+                    progressWidth={{ width: "50%" }}
+                    currentValue="50"
+                    title="50"
+                  ></ProgressBar>
+                  <ProgressBar
+                    progressBg="bg-warning progress-bar-striped"
+                    progressWidth={{ width: "75%" }}
+                    currentValue="75"
+                    title="75"
+                  ></ProgressBar>
+                  <ProgressBar
+                    progressBg="bg-danger progress-bar-striped"
                     progressWidth={{ width: "100%" }}
                     currentValue="100"
                     title="100"

@@ -7,12 +7,9 @@ const Alerts = () => {
       <div className="row g-4">
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6"> Alerts</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Alerts"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div className="alert alert-primary" role="alert">
@@ -45,12 +42,9 @@ const Alerts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Dismissing Alerts</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Dismissing Alerts"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div
@@ -140,12 +134,9 @@ const Alerts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Link Color Alerts</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Link Color Alerts"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div className="alert alert-primary" role="alert">
@@ -210,12 +201,9 @@ const Alerts = () => {
         </div>
         <div className="col-12 col-md-6 col-lg-6 col-xl-6">
           <Card
-            cardHeader={
-              <>
-                <strong className="fs-6">Contents</strong>
-              </>
-            }
-            cardBodyBg="bg-white"
+            cardHeaderBg="#f7f7f7"
+            headerTitle="Contents"
+            headerTitleColot="#343a40"
             cardBody={
               <>
                 <div role="alert" className="alert alert-success">
