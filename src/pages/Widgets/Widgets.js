@@ -9,44 +9,158 @@ import CardGroup from "../../component/Card/CardGroup";
 import NotificationCart from "../../component/Card/NotificationCart";
 import ProfileCard from "../../component/Card/ProfileCard";
 import ProfileImg from "../../images/admin.jpg";
-import Card from "../../component/Card/Card";
+import OverlayCard from "../../component/Card/OverlayCard/OverlayCard";
+import { BarChart, LineChart, Bar, Line } from "recharts";
 
 const Widgets = () => {
   return (
     <div className="container-fluid p-0 p-0">
       <div className="row gy-4 gx-4">
-        <div className="col-md-6 col-lg-3 col-xl-3 ">
+        <div className="col-md-6 col-lg-3 col-xl-3">
           <FirstCounter
-            conuterClassNmae="revenue"
+            conuterBg="#5c6bc0"
             count={23569}
             dolar="$"
             count_name="Revenue"
-            icon="fa-solid fa-cart-shopping"
+            icon={
+              <>
+                <i
+                  className="fa-solid fa-cart-shopping"
+                  style={{ color: "#fff", fontSize: "3.68em" }}
+                ></i>
+              </>
+            }
           ></FirstCounter>
         </div>
-        <div className="col-md-6 col-lg-3  col-xl-3 ">
+        <div className="col-md-6 col-lg-3  col-xl-3">
           <FirstCounter
-            counterBg="sales-increase-bg"
+            conuterBg="#66bb6a"
             count={85}
             percentage="%"
             count_name="Sales Increase"
-            icon="fa-solid fa-cart-shopping"
-          ></FirstCounter>
-        </div>
-        <div className="col-md-6 col-lg-3 col-xl-3 ">
-          <FirstCounter
-            counterBg="total-clients-bg"
-            count={6596}
-            count_name="Total Clients"
-            icon="fa-solid fa-user-group"
+            icon={
+              <>
+                <BarChart
+                  width={100}
+                  height={80}
+                  data={[
+                    {
+                      name: "Page A",
+                      uv: 2000,
+                      pv: 2400,
+                      amt: 2400,
+                    },
+                    {
+                      name: "Page B",
+                      uv: 6000,
+                      pv: 1398,
+                      amt: 2210,
+                    },
+                    {
+                      name: "Page C",
+                      uv: 4000,
+                      pv: 9800,
+                      amt: 2290,
+                    },
+                    {
+                      name: "Page D",
+                      uv: 8000,
+                      pv: 3908,
+                      amt: 2000,
+                    },
+                    {
+                      name: "Page E",
+                      uv: 4000,
+                      pv: 4800,
+                      amt: 2181,
+                    },
+                    {
+                      name: "Page F",
+                      uv: 6000,
+                      pv: 3800,
+                      amt: 2500,
+                    },
+                    {
+                      name: "Page G",
+                      uv: 2000,
+                      pv: 4300,
+                      amt: 2100,
+                    },
+                    {
+                      name: "Page G",
+                      uv: 5000,
+                      pv: 4300,
+                      amt: 2100,
+                    },
+                  ]}
+                >
+                  <Bar dataKey="uv" fill="#fff" />
+                </BarChart>
+              </>
+            }
           ></FirstCounter>
         </div>
         <div className="col-md-6 col-lg-3 col-xl-3">
           <FirstCounter
-            counterBg="users-bg"
+            conuterBg="#ffa726"
+            count={6596}
+            count_name="Total Clients"
+            icon={
+              <>
+                <i
+                  className="fa-solid fa-user-group"
+                  style={{ color: "#fff", fontSize: "3.68em" }}
+                ></i>
+              </>
+            }
+          ></FirstCounter>
+        </div>
+        <div className="col-md-6 col-lg-3 col-xl-3">
+          <FirstCounter
+            conuterBg="#42a5f5"
             count={1490}
             count_name="New Users"
-            icon="fa-solid fa-cart-shopping"
+            icon={
+              <>
+                <LineChart
+                  width={100}
+                  height={70}
+                  data={[
+                    {
+                      name: "Page A",
+                      uv: 400,
+                      pv: 400,
+                      amt: 2400,
+                    },
+                    {
+                      name: "Page B",
+                      uv: 30,
+                      pv: 25000,
+                      amt: 2210,
+                    },
+                    {
+                      name: "Page C",
+                      uv: 10,
+                      pv: 10500,
+                      amt: 2290,
+                    },
+                    {
+                      name: "Page D",
+                      uv: 20,
+                      pv: 50000,
+                      amt: 2000,
+                    },
+                  ]}
+                >
+                  <Line
+                    type="monotone"
+                    dataKey="pv"
+                    stroke="#fff"
+                    strokeWidth={2}
+                  />
+                </LineChart>
+              </>
+            }
           ></FirstCounter>
         </div>
         <div className="col-md-6 col-lg-3 col-xl-3 ">
@@ -67,7 +181,7 @@ const Widgets = () => {
         </div>
         <div className="col-md-6 col-lg-3 col-xl-3 ">
           <SecondCounter
-            icon="fa-sharp fa-solid fa-grid-2 text-warning "
+            icon="fa-solid fa-table-cells-large text-warning "
             countName="Active Projects"
             count="770"
             borderColor="border-warning"
@@ -114,7 +228,7 @@ const Widgets = () => {
                 style={{ width: "65px", height: "65px" }}
               >
                 <i
-                  className="fa-solid fa-router text-secondary"
+                  className="fa-solid fa-wave-square text-secondary"
                   style={{ fontSize: "35px" }}
                 ></i>
               </div>
@@ -617,63 +731,7 @@ const Widgets = () => {
           <ProfileCard cardHeader="Profile Card" cardImg={ProfileImg} />
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-4">
-          <Card
-            cardHeader={
-              <div className="wtt-mark rounded-top">
-                <i className="fa-brands fa-twitter d-flex justify-content-end p-2 text-light fs-5"></i>
-                <div className="d-flex gap-4 align-items-center rounded-top px-3">
-                  <img
-                    src={ProfileImg}
-                    alt=""
-                    className="w-25 rounded-circle"
-                  />
-                  <div>
-                    <h1 className="text-light display-6 m-0">Jim Doe</h1>
-                    <p className="text-light m-0">Project Manager</p>
-                  </div>
-                </div>
-              </div>
-            }
-            userInfo="p-0"
-            cardBodyBg="bg-white p-0"
-            cardBody={
-              <>
-                <div className="py-3 d-flex">
-                  <div className="weather-category">
-                    <span>750</span>
-                    <span className="d-block">Tweets</span>
-                  </div>
-                  <div className="weather-category">
-                    <span>865</span>
-                    <span className="d-block">Following</span>
-                  </div>
-                  <div className="weather-category">
-                    <span>3645</span>
-                    <span className="d-block">Followers</span>
-                  </div>
-                </div>
-                <div className="px-3 py-3">
-                  <textarea
-                    placeholder="Write your Tweet and Enter"
-                    rows="1"
-                    className="w-100 form-control"
-                  ></textarea>
-                  <div className="mt-2 d-flex justify-content-between">
-                    <div>
-                      <a href="#" className="text-secondary">
-                        <i className="fa-solid fa-camera"></i>
-                      </a>{" "}
-                      <a href="#" className="text-secondary">
-                        <i className="fa-solid fa-location-dot"></i>
-                      </a>{" "}
-                      <span className="text-secondary">New Castle, UK</span>
-                    </div>
-                    <span className="text-secondary">32</span>
-                  </div>
-                </div>
-              </>
-            }
-          ></Card>
+          <OverlayCard></OverlayCard>
         </div>
       </div>
     </div>
