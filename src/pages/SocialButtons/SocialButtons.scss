@@ -50,6 +50,7 @@ $instagrambg: #bc2a8d;
     z-index: 5555;
   }
 }
+
 .mail {
   i {
     color: $mailbg;
@@ -105,13 +106,34 @@ $instagrambg: #bc2a8d;
 .codepen:hover::after {
   background-color: #212121;
 }
-
-.social__square_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
+.social-square {
+  .social__square_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #212121;
+    transition: all 1ms;
+    a {
+      color: #212121;
+    }
+    &:hover {
+      border: 1px solid #212121 !important;
+      a {
+        color: #212121 !important;
+      }
+    }
+  }
+  &:hover {
+    .social__square_button {
+      transition: all 1ms;
+      border: 1px solid #837e78;
+      a {
+        color: #837e78;
+      }
+    }
+  }
 }
 
 .social_buttons__effect {

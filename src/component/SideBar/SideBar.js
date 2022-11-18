@@ -28,7 +28,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           {isOpen ? (
             <i className="fa-solid fa-bars-progress"></i>
           ) : (
-            <span className="position-relative toggle-menu-icon"></span>
+            <span className="toggle-menu-icon"></span>
           )}
         </button>
       </div>

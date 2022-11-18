@@ -68,55 +68,47 @@ const SocialButtons = () => {
             }
             cardBodyBg="#ddd"
             cardBody={
-              <div className="d-flex justify-content-center gap-3 w-100 py-2">
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-facebook-f fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-twitter fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-instagram fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-vimeo-v fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-behance fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-dribbble fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-github fs-4 text-dark"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-decoration-none border border-dark social__square_button"
-                >
-                  <i className="fa-brands fa-pied-piper fs-4 text-dark"></i>
-                </a>
+              <div className="d-flex justify-content-center gap-3 w-100 py-2 social-square">
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-facebook-f fs-4"></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-twitter fs-4 "></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-instagram fs-4 "></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-vimeo-v fs-4 "></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-behance fs-4 "></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-dribbble fs-4"></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-github fs-4 "></i>
+                  </a>
+                </div>
+                <div className="social__square_button">
+                  <a href="#" className="text-decoration-none">
+                    <i className="fa-brands fa-pied-piper fs-4"></i>
+                  </a>
+                </div>
               </div>
             }
           ></Card>
