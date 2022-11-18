@@ -1,7 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./ToggleMenu.scss";
 
-const ToggleMenu = ({ icon, title, isOpen, submenu }) => {
+const ToggleMenu = ({
+  linkTo = "",
+  icon = "",
+  title = "",
+  badge = "",
+  badge_bg = "",
+  sowMenu = "",
+}) => {
   const [toggleMenu, setToggleMenu] = useState(true);
 
   let dropRef = useRef();
@@ -15,29 +23,94 @@ const ToggleMenu = ({ icon, title, isOpen, submenu }) => {
   }, []);
 
   return (
-    <>
-      <div ref={dropRef} className="dropdown">
-        <div>
-          <button
-            type="button"
+    <div ref={dropRef}>
+      {linkTo && (
+        <Link to={linkTo} className="toggle-menu text-decoration-none">
+          <div
+            className="d-flex justify-content-between align-items-center menu-item"
             onClick={() => setToggleMenu(!toggleMenu)}
-            className={`d-flex gap-5 align-items-center border-0 w-100  toggle-menu ${
-              toggleMenu ? "" : "show-icon"
-            }`}
           >
-            <i className={`menu-hover ${icon}`}></i>{" "}
-            <span className=" toggle-menu-title">{title}</span>
-          </button>
+            <div className="d-flex align-items-center">
+              <i className={`${icon} menu-icon menu-gap`}></i>
+              <span className="menu-title-text">{title}</span>
+            </div>
+
+            {sowMenu ? (
+              <i
+                style={{ fontSize: "13px" }}
+                className={`${
+                  toggleMenu
+                    ? "fa-solid fa-chevron-right"
+                    : "fa-solid fa-angle-down"
+                }`}
+              ></i>
+            ) : (
+              <span
+                className={`badge ${badge_bg}`}
+                style={{ padding: "6px 10px" }}
+              >
+                {badge}
+              </span>
+            )}
+          </div>
+          {sowMenu && (
+            <div className={` ${toggleMenu ? "show-none" : "show-active"} `}>
+              <ul
+                className="d-flex flex-column"
+                style={{ paddingLeft: "40px" }}
+              >
+                {sowMenu}
+              </ul>
+            </div>
+          )}
+        </Link>
+      )}
+      {!linkTo && (
+        <div className="toggle-menu text-decoration-none">
+          <div
+            className="d-flex justify-content-between align-items-center menu-item"
+            onClick={() => setToggleMenu(!toggleMenu)}
+          >
+            <div className="d-flex align-items-center">
+              <i className={`${icon} menu-icon menu-gap`}></i>
+              <span className="menu-title-text ">{title}</span>
+            </div>
+
+            {sowMenu ? (
+              <i
+                style={{ fontSize: "13px" }}
+                className={`arrow ${
+                  toggleMenu
+                    ? "fa-solid fa-chevron-right"
+                    : "fa-solid fa-angle-down"
+                }`}
+              ></i>
+            ) : (
+              <span
+                className={`badge ${badge_bg}`}
+                style={{ padding: "6px 10px" }}
+              >
+                {badge}
+              </span>
+            )}
+          </div>
+          {sowMenu && (
+            <div
+              className={`sub-menu ${
+                toggleMenu ? "show-none" : "show-active"
+              } `}
+            >
+              <ul
+                className="d-flex flex-column"
+                style={{ paddingLeft: "40px" }}
+              >
+                {sowMenu}
+              </ul>
+            </div>
+          )}
         </div>
-        <ul
-          className={`${
-            toggleMenu ? "open" : "toggl-active"
-          }  d-flex flex-column  ${isOpen ? "" : "show-mwnu"}`}
-        >
-          {submenu}
-        </ul>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 

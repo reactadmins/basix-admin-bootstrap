@@ -14,12 +14,8 @@ const GoogleMaps = () => {
   };
   return (
     <Card
-      cardHeader={
-        <>
-          <strong className="fs-6">Google Maps </strong>
-        </>
-      }
-      cardBodyBg="bg-light"
+      cardHeaderBg="#f7f7f7"
+      headerTitle="Google Maps"
       cardBody={
         <>
           <LoadScript>

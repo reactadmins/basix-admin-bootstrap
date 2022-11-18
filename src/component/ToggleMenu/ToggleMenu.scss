@@ -1,50 +1,33 @@
 .toggle-menu {
-  position: relative;
-  color: #8b939b;
-  background-color: #292b35;
+  .menu-item {
+    font-size: 14px;
+    color: #8b939b;
+    div {
+      .menu-icon {
+        width: 55px;
+      }
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .show-none {
+    display: none;
+  }
+  .show-active {
+    display: block;
+  }
 }
-.toggle-menu::after {
-  position: absolute;
-  content: "\F105";
-  font-family: Fontawesome;
-  font-size: 16px;
-  top: 0;
-  right: 0;
-  text-align: right;
+.badge-primary {
+  background-color: #28a745;
 }
-.show-icon::after {
-  content: "\F107";
+.badge-danger {
+  background-color: #dc3545;
 }
-.toggle-menu:hover {
-  color: #fff;
+.badge-warning {
+  color: #111;
+  background-color: #ffc107;
 }
-.toggle-active-menu {
-  font-size: 20px;
-  color: #8b939b;
-  background-color: #292b35;
-}
-.toggle-active-menu:hover {
-  color: #fff;
-}
-.toggle-menu-title {
-  font-size: 14px;
-}
-.open {
-  display: none !important;
-}
-.toggl-active {
-  display: block;
-  padding: 0 0 0 35px;
-  color: #fff;
-  list-style: none;
-}
-.show-mwnu {
-  position: absolute;
-  width: 170px;
-  top: 11px;
-  right: -186px;
-  align-items: center;
-  background: #292b35;
-  padding: 10px 0 10px 0px;
-  z-index: 999;
+.badge-info {
+  background-color: #17a2b8;
 }

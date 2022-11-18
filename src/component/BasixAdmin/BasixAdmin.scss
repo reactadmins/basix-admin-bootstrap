@@ -34,8 +34,15 @@
           display: flex;
           justify-content: center;
           .menu-item {
+            text-align: center;
             span {
               display: none;
+            }
+            .arrow {
+              display: none;
+            }
+            .menu-icon {
+              width: auto;
             }
           }
           .dropdown {
@@ -49,6 +56,23 @@
         }
         .menu-title {
           display: none !important;
+        }
+      }
+      .sub-menu {
+        position: absolute;
+        content: "";
+        left: 70px;
+        z-index: 555;
+        width: 80px;
+        background-color: #292b35;
+        padding-bottom: 25px;
+        ul {
+          padding-left: 0px !important;
+          li {
+            span {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -80,6 +104,10 @@
             .menu-item {
               span {
                 display: block;
+              }
+              .menu-gap {
+                width: 55px;
+                text-align: initial;
               }
             }
             .dropdown {
@@ -130,6 +158,13 @@
               span {
                 display: none;
               }
+              .arrow {
+                display: none;
+              }
+              .menu-icon {
+                width: auto;
+                text-align: center;
+              }
             }
             .dropdown {
               .toggl-active {
@@ -155,6 +190,23 @@
           }
           .menu-title {
             display: none !important;
+          }
+        }
+        .sub-menu {
+          position: absolute;
+          content: "";
+          left: 60px;
+          z-index: 555;
+          width: 80px;
+          background-color: #292b35;
+          padding-bottom: 25px;
+          ul {
+            padding-left: 0px !important;
+            li {
+              span {
+                display: none;
+              }
+            }
           }
         }
       }

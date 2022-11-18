@@ -53,41 +53,6 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            {/* <div className="d-flex gap-2 mb-2">
-              <div>
-                <i
-                  className="fa-solid fa-envelope text-white rounded-circle text-center "
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    fontSize: "12px",
-                    lineHeight: "30px",
-                    backgroundColor: "#42a5f5",
-                  }}
-                ></i>
-              </div>
-              <div className="border-bottom w-100">
-                <span
-                  className="d-flex justify-content-between"
-                  style={{ fontSize: "14px", color: "#868e96" }}
-                >
-                  <a href="#" className="text-decoration-none mx-1 text-dark">
-                    Maria Monica
-                  </a>
-                  <span>Just now</span>
-                </span>
-                <span
-                  className="d-block"
-                  style={{
-                    fontSize: "12px",
-                    margin: "5px 0 15px 0",
-                    color: "#868e96",
-                  }}
-                >
-                  5 Minutes ago
-                </span>
-              </div>
-            </div> */}
             <div className="d-flex gap-2 mb-3">
               <div>
                 <i
@@ -161,7 +126,7 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            <div className="d-flex gap-2 mb-xl-4">
+            <div className="d-flex gap-2">
               <div>
                 <i
                   className="fa-solid fa-user text-white rounded-circle text-center "

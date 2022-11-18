@@ -11,12 +11,8 @@ const LeafletMaps = () => {
   });
   return (
     <Card
-      cardHeader={
-        <>
-          <strong className="fs-6">Leaflet Maps</strong>
-        </>
-      }
-      cardBodyBg="bg-light"
+      cardHeaderBg="#f7f7f7"
+      headerTitle="Leaflet Maps"
       cardBody={
         <>
           <MapContainer
