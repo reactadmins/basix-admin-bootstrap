@@ -1,4 +1,4 @@
-.error404-wrapper {
+.error500-wrapper {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -65,7 +65,7 @@
 }
 /* responsive  */
 @media (max-width: 425px) {
-  .error404-wrapper {
+  .error500-wrapper {
     .error-container {
       width: 100%;
     }

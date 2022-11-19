@@ -1,11 +1,14 @@
 .login-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  .from-container {
+    width: 50%;
+  }
   .logo-container {
     position: relative;
+    width: 50%;
     background-color: #333;
     overflow: hidden;
     .oblique {
@@ -22,6 +25,17 @@
       align-items: center;
       height: 100%;
       position: relative;
+    }
+  }
+}
+/* responsive  */
+@media (max-width: 425px) {
+  .login-wrapper {
+    .from-container {
+      width: 100%;
+    }
+    .logo-container {
+      display: none;
     }
   }
 }
