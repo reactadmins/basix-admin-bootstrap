@@ -23,6 +23,25 @@ const NavBar = ({ isOpen, setIsOpen }) => {
     });
   }, []);
 
+  // useEffect(() => {
+  //   document.addEventListener("keypress", (e) => {
+  //     if (e.key === "Escape") {
+  //       setIsOpenSearch(true);
+  //     }
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    document.addEventListener("keypress", closeSs);
+  }, []);
+
+  const closeSs = (e) => {
+    // setIsOpenSearch(true);
+    // if (e.key === "Escape") {
+    //   console.log(e.key);
+    // }
+  };
+
   return (
     <>
       {isOpenSearch ? (
@@ -164,8 +183,9 @@ const NavBar = ({ isOpen, setIsOpen }) => {
               <div className="d-flex justify-content-between align-item-center py-2 search-memu">
                 <input placeholder="Search ..." className="w-75 border-0" />
                 <button
-                  onClick={() => setIsOpenSearch(!isOpenSearch)}
+                  onClick={closeSs}
                   className="border-0"
+                  id="#SearchClose"
                 >
                   <i className="fa fa-close"></i>
                 </button>

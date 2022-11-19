@@ -1,139 +1,107 @@
 import React, { useState } from "react";
 import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
+import "./register.scss";
 
 const Register = () => {
-  const [errorPass, setErrorPass] = useState("");
-
-  const handelSignUp = (event) => {
-    event.preventDefault();
-    const password = event.target.password.value;
-    const cPassword = event.target.cPassword.value;
-    if (password === cPassword) {
-      event.target.reset();
-    } else {
-      setErrorPass("your password and confirm password not marce");
-    }
-  };
-
   return (
     <div className="container-fluid p-0">
-      <div className="login-wrapper">
-        <div className="position-relative d-flex flex-column justify-content-center align-items-center h-100">
-          <div className="mb-5">
-            <img src={logo} alt="logo" style={{ width: "200px" }} />
+      <div className="register-wrapper">
+        <div className="from-container d-flex justify-content-center align-items-center bg-white h-100">
+          <div className="col-md-10 col-lg-8 col-xl-5">
+            <div class="card rounded-0">
+              <div
+                className="card-header"
+                style={{ backgroundColor: "#f7f7f7", padding: "12px 20px" }}
+              >
+                <strong>reate New Account</strong>
+              </div>
+              <div className="card-body" style={{ padding: "20px" }}>
+                <form>
+                  <div className="input-group mb-3">
+                    <span
+                      className="input-group-text rounded-star"
+                      htmlFor="email"
+                    >
+                      <i className="fa fa-envelope"></i>
+                    </span>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span
+                      className="input-group-text rounded-star"
+                      htmlFor="password"
+                    >
+                      <i className="fa fa-asterisk"></i>
+                    </span>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="password"
+                      placeholder="password"
+                      required
+                    />
+                  </div>
+                  <div className="form-check mb-3">
+                    <input
+                      type="checkbox"
+                      id="check"
+                      className="form-check-input"
+                    />
+                    <label for="check">
+                      <span className="form-check-label">
+                        I agree to{" "}
+                        <a
+                          href=" "
+                          className="text-decoration-none"
+                          style={{ color: "#878787" }}
+                        >
+                          Terms of Use.
+                        </a>
+                      </span>
+                    </label>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <button
+                      type="submit"
+                      className="border-0 text-white"
+                      style={{
+                        padding: "6px 12px",
+                        fontWeight: "400",
+                        backgroundColor: "#28a745",
+                      }}
+                    >
+                      Log In
+                    </button>
+                    <Link
+                      to=""
+                      className="border-0 text-white text-decoration-none"
+                      style={{
+                        padding: "6px 12px",
+                        fontWeight: "400",
+                        backgroundColor: "#007bff",
+                      }}
+                    >
+                      Create Account
+                    </Link>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 col-xl-3 bg-white px-4 py-5 rounded-2">
-            <h3 className="fs-1 fw-bolder text-center py-3">Sign Up</h3>
-            <form onSubmit={handelSignUp}>
-              <div className="form-group mb-2">
-                <label htmlFor="userName" className="mb-1 text-secondary">
-                  Enter Your Name
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="userName"
-                  aria-describedby="emailHelp"
-                  placeholder="Name"
-                  required
-                />
-              </div>
-              <div className="form-group mb-2">
-                <label htmlFor="userEmail" className="mb-1 text-secondary">
-                  Enter Your Email
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="userEmail"
-                  aria-describedby="emailHelp"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div className="form-group mb-2">
-                <label htmlFor="userPassword" className="mb-1 text-secondary">
-                  Enter Your Password
-                </label>
-                <input
-                  type="Password"
-                  name="password"
-                  className="form-control"
-                  id="userPassword"
-                  aria-describedby="emailHelp"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-              <div className="form-group mb-4">
-                <label
-                  htmlFor="userConfirmpassword"
-                  className="mb-1 text-secondary"
-                >
-                  Confirm password
-                </label>
-                <input
-                  type="Password"
-                  name="cPassword"
-                  className="form-control"
-                  id="userConfirmpassword"
-                  aria-describedby="emailHelp"
-                  placeholder="Confirm password"
-                  required
-                />
-                <span className="text-danger">{errorPass}</span>
-              </div>
-              <button type="submit" className="btn btn-primary w-100">
-                Login
-              </button>
-            </form>
-            <div className="mt-3">
-              <span className="text-secondary">Have an Account? </span>
-              <Link to="/login" className="text-decoration-none">
-                Sing Up
-              </Link>
-            </div>
-            <div className="sign-sosiale-media mt-4">
-              <span className="text-center d-block text-secondary">
-                Or Sign Up Using
-              </span>
-              <div className="w-100 d-flex justify-content-center gap-3 mt-3">
-                <a
-                  href="#"
-                  className="d-flex justify-content-center align-items-center rounded-circle text-decoration-none"
-                  style={{
-                    width: "42px",
-                    height: "42px",
-                    backgroundColor: "#3b5998",
-                  }}
-                >
-                  <i className="fa-brands fa-facebook-f fs-5 text-white"></i>
-                </a>
-                <a
-                  href="#"
-                  className="d-flex justify-content-center align-items-center rounded-circle text-decoration-none"
-                  style={{
-                    width: "42px",
-                    height: "42px",
-                    backgroundColor: "#00aced",
-                  }}
-                >
-                  <i className="fa-brands fa-twitter fs-5 text-white"></i>
-                </a>
-                <a
-                  href="#"
-                  className="d-flex justify-content-center align-items-center rounded-circle text-decoration-none"
-                  style={{
-                    width: "42px",
-                    height: "42px",
-                    backgroundColor: "#dd4b39",
-                  }}
-                >
-                  <i className="fa-brands fa-google fs-5 text-white"></i>
-                </a>
-              </div>
-            </div>
+        </div>
+        <div className="logo-container h-100">
+          <div className="oblique"></div>
+          <div className="logo">
+            <a href="" className="">
+              <img src={logo} alt="logo" />
+            </a>
           </div>
         </div>
       </div>
