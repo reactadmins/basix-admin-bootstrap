@@ -69,6 +69,9 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                     />
                   </li>
                   <li className="pb-3">
+                    <Menu to="tabs" icon="menu-icon fa fa-bars" title="Tabs" />
+                  </li>
+                  <li className="pb-3">
                     <Menu
                       to="socialbuttons"
                       icon="menu-icon fa fa-share-square"

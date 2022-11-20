@@ -2,7 +2,6 @@ import React from "react";
 import "./ProgressBar.scss";
 
 const ProgressBar = ({ progressBg, progressWidth, currentValue, title }) => {
-  console.log(progressWidth);
   return (
     <div className="progress mb-2">
       <div

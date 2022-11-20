@@ -5,6 +5,7 @@ import "./App.scss";
 import BasixAdmin from "./component/BasixAdmin/BasixAdmin";
 import Alerts from "./pages/Alerts/Alerts";
 import Badges from "./pages/Badges/Badges";
+import Tabs from "./pages/Tabs/Tabs";
 import AdvancedForm from "./pages/AdvancedForm/AdvancedForm";
 import BasicForm from "./pages/BasicForm/BasicForm";
 import FormWizard from "./pages/FormWizard/FormWizard";
@@ -43,6 +44,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/button" element={<Button />}></Route>
           <Route path="/badges" element={<Badges />}></Route>
+          <Route path="/tabs" element={<Tabs />}></Route>
           <Route path="/socialbuttons" element={<SocialButtons />}></Route>
           <Route path="/cards" element={<Cards />}></Route>
           <Route path="/alerts" element={<Alerts />}></Route>

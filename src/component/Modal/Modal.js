@@ -16,7 +16,7 @@ const Modal = ({ label, modalId, title, modalBody, modalSize }) => {
       <div
         className="modal fade"
         id={`${modalId}`}
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >

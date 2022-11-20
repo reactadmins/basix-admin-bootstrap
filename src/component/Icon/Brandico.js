@@ -6,6 +6,7 @@ import IconHooks from "../../hooks/IconHooks";
 import "./iconStyle.scss";
 const Brandico = () => {
   const [items] = IconHooks("brandico.json");
+
   return (
     <div className="container-fluid overflow-hidden p-0">
       <div className="row bg-white px-3 py-4 align-items-center border">

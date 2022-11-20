@@ -53,7 +53,7 @@ const StepCircleWizard = () => {
                 }}
               ></div>
               {arrayList.map((items, index) => (
-                <div className="col-4 text-center p-0">
+                <div className="col-4 text-center p-0" key={items.id}>
                   <div className="step-block">
                     <div
                       className="step-wrapper"

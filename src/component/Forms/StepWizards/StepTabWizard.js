@@ -66,7 +66,7 @@ const StepTabWizard = () => {
                 </p>
               </div>
               {arrayList.map((items, index) => (
-                <div className="col-3 text-center p-0">
+                <div className="col-3 text-center p-0" key={items.id}>
                   <div
                     className="step-block"
                     style={{

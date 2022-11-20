@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Day from "./Day";
 import Month from "./Month";
 import Year from "./Year";
+import "./stats.scss";
 
 const Stats = () => {
   const [date, setDate] = useState("day");
@@ -12,10 +13,11 @@ const Stats = () => {
     >
       <div className="position-relative overflow-hidden w-100">
         <ul className=" nav nav-tabs">
-          {["day", "month", "year"].map((el) => (
+          {["day", "month", "year"].map((el, index) => (
             <li
               className={`${date === el ? "active" : ""} tab text-uppercase`}
               onClick={() => setDate(el)}
+              key={index}
             >
               {el}
             </li>

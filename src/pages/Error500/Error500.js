@@ -10,11 +10,9 @@ const Error500 = () => {
           <div className="error-container bg-white h-100">
             <div className="">
               <div style={{ marginLeft: "20px" }}>
-                <h1 className="error-code">404</h1>
+                <h1 className="error-code">500</h1>
                 <h5 className="error-title">Oops! You're lost.</h5>
-                <p className="error-description">
-                  The page you are looking <br /> for was not found.
-                </p>
+                <p className="error-description">Houston, we have a problem!</p>
               </div>
               <div class="input-group">
                 <button type="button" className="error-search-btn">

@@ -26,31 +26,31 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary">
+                <button type="button" className="btn btn-primary">
                   Primary
                 </button>
-                <button type="button" class="btn btn-secondary">
+                <button type="button" className="btn btn-secondary">
                   Secondary
                 </button>
-                <button type="button" class="btn btn-success">
+                <button type="button" className="btn btn-success">
                   Success
                 </button>
-                <button type="button" class="btn btn-danger">
+                <button type="button" className="btn btn-danger">
                   Danger
                 </button>
-                <button type="button" class="btn btn-warning">
+                <button type="button" className="btn btn-warning">
                   Warning
                 </button>
-                <button type="button" class="btn btn-info">
+                <button type="button" className="btn btn-info">
                   Info
                 </button>
-                <button type="button" class="btn btn-light">
+                <button type="button" className="btn btn-light">
                   Light
                 </button>
-                <button type="button" class="btn btn-dark">
+                <button type="button" className="btn btn-dark">
                   Dark
                 </button>
-                <button type="button" class="btn btn-link">
+                <button type="button" className="btn btn-link">
                   Link
                 </button>
               </div>
@@ -78,28 +78,31 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-outline-primary">
+                <button type="button" className="btn btn-outline-primary">
                   Primary
                 </button>
-                <button type="button" class="btn btn-outline-secondary">
+                <button type="button" className="btn btn-outline-secondary">
                   Secondary
                 </button>
-                <button type="button" class="btn btn-outline-success">
+                <button type="button" className="btn btn-outline-success">
                   Success
                 </button>
-                <button type="button" class="btn btn-outline-danger">
+                <button type="button" className="btn btn-outline-danger">
                   Danger
                 </button>
-                <button type="button" class="btn btn-outline-warning">
+                <button type="button" className="btn btn-outline-warning">
                   Warning
                 </button>
-                <button type="button" class="btn btn-outline-info">
+                <button type="button" className="btn btn-outline-info">
                   Info
                 </button>
-                <button type="button" class="btn btn-outline-light text-dark">
+                <button
+                  type="button"
+                  className="btn btn-outline-light text-dark"
+                >
                   Light
                 </button>
-                <button type="button" class="btn btn-outline-dark">
+                <button type="button" className="btn btn-outline-dark">
                   Dark
                 </button>
               </div>
@@ -125,10 +128,15 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <a href="#" role="button" type="button" class="btn btn-primary">
+                <a
+                  href="#"
+                  role="button"
+                  type="button"
+                  className="btn btn-primary"
+                >
                   Link
                 </a>
-                <button type="submit" class="btn btn-danger">
+                <button type="submit" className="btn btn-danger">
                   Button
                 </button>
                 <input type="button" value="Input" className="btn btn-info" />
@@ -165,11 +173,11 @@ const Button = () => {
                   href="#"
                   role="button"
                   type="button"
-                  class="btn btn-outline-primary"
+                  className="btn btn-outline-primary"
                 >
                   Link
                 </a>
-                <button type="submit" class="btn btn-outline-danger">
+                <button type="submit" className="btn btn-outline-danger">
                   Button
                 </button>
                 <input
@@ -212,48 +220,64 @@ const Button = () => {
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                 >
                   Primary
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-secondary"
+                  className="btn btn-secondary"
                 >
                   Secondary
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-success"
+                  className="btn btn-success"
                 >
                   Success
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-danger"
+                  className="btn btn-danger"
                 >
                   Danger
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-warning"
+                  className="btn btn-warning"
                 >
                   Warning
                 </button>
-                <button type="button" disabled="disabled" class="btn btn-info">
+                <button
+                  type="button"
+                  disabled="disabled"
+                  className="btn btn-info"
+                >
                   Info
                 </button>
-                <button type="button" disabled="disabled" class="btn btn-light">
+                <button
+                  type="button"
+                  disabled="disabled"
+                  className="btn btn-light"
+                >
                   Light
                 </button>
-                <button type="button" disabled="disabled" class="btn btn-dark">
+                <button
+                  type="button"
+                  disabled="disabled"
+                  className="btn btn-dark"
+                >
                   Dark
                 </button>
-                <button type="button" disabled="disabled" class="btn btn-link">
+                <button
+                  type="button"
+                  disabled="disabled"
+                  className="btn btn-link"
+                >
                   Link
                 </button>
               </div>
@@ -281,63 +305,63 @@ const Button = () => {
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-primary"
+                  className="btn btn-outline-primary"
                 >
                   Primary
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-secondary"
+                  className="btn btn-outline-secondary"
                 >
                   Secondary
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-success"
+                  className="btn btn-outline-success"
                 >
                   Success
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-danger"
+                  className="btn btn-outline-danger"
                 >
                   Danger
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-warning"
+                  className="btn btn-outline-warning"
                 >
                   Warning
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-info"
+                  className="btn btn-outline-info"
                 >
                   Info
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-light text-dark"
+                  className="btn btn-outline-light text-dark"
                 >
                   Light
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-dark"
+                  className="btn btn-outline-dark"
                 >
                   Dark
                 </button>
                 <button
                   type="button"
                   disabled="disabled"
-                  class="btn btn-outline-link"
+                  className="btn btn-outline-link"
                 >
                   Link
                 </button>
@@ -363,22 +387,22 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary">
+                <button type="button" className="btn btn-primary">
                   <i className="fa fa-star"></i> Primary
                 </button>
-                <button type="button" class="btn btn-secondary">
-                  <i class="fa fa-lightbulb"></i> Secondary
+                <button type="button" className="btn btn-secondary">
+                  <i className="fa fa-lightbulb"></i> Secondary
                 </button>
-                <button type="button" class="btn btn-success">
-                  <i class="fa fa-magic"></i> Success
+                <button type="button" className="btn btn-success">
+                  <i className="fa fa-magic"></i> Success
                 </button>
-                <button type="button" class="btn btn-warning">
+                <button type="button" className="btn btn-warning">
                   <i className="fa-solid fa-triangle-exclamation"></i> Warning
                 </button>
-                <button type="button" class="btn btn-danger">
-                  <i class="fa fa-rss"></i> Danger
+                <button type="button" className="btn btn-danger">
+                  <i className="fa fa-rss"></i> Danger
                 </button>
-                <button type="button" class="btn btn-link">
+                <button type="button" className="btn btn-link">
                   <i className="fa fa-link"></i> Link
                 </button>
               </div>
@@ -403,22 +427,22 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-outline-primary">
+                <button type="button" className="btn btn-outline-primary">
                   <i className="fa fa-star"></i> Primary
                 </button>
-                <button type="button" class="btn btn-outline-secondary">
-                  <i class="fa fa-lightbulb"></i> Secondary
+                <button type="button" className="btn btn-outline-secondary">
+                  <i className="fa fa-lightbulb"></i> Secondary
                 </button>
-                <button type="button" class="btn btn-outline-success">
-                  <i class="fa fa-magic"></i> Success
+                <button type="button" className="btn btn-outline-success">
+                  <i className="fa fa-magic"></i> Success
                 </button>
-                <button type="button" class="btn btn-outline-warning">
+                <button type="button" className="btn btn-outline-warning">
                   <i className="fa-solid fa-triangle-exclamation"></i> Warning
                 </button>
-                <button type="button" class="btn btn-outline-danger">
-                  <i class="fa fa-rss"></i> Danger
+                <button type="button" className="btn btn-outline-danger">
+                  <i className="fa fa-rss"></i> Danger
                 </button>
-                <button type="button" class="btn btn-outline-link">
+                <button type="button" className="btn btn-outline-link">
                   <i className="fa fa-link"></i> Link
                 </button>
               </div>
@@ -443,22 +467,22 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary btn-sm">
+                <button type="button" className="btn btn-primary btn-sm">
                   Primary
                 </button>
-                <button type="button" class="btn btn-secondary btn-sm">
+                <button type="button" className="btn btn-secondary btn-sm">
                   Secondary
                 </button>
-                <button type="button" class="btn btn-success btn-sm">
+                <button type="button" className="btn btn-success btn-sm">
                   Success
                 </button>
-                <button type="button" class="btn btn-warning btn-sm">
+                <button type="button" className="btn btn-warning btn-sm">
                   Warning
                 </button>
-                <button type="button" class="btn btn-danger btn-sm">
+                <button type="button" className="btn btn-danger btn-sm">
                   Danger
                 </button>
-                <button type="button" class="btn btn-link btn-sm">
+                <button type="button" className="btn btn-link btn-sm">
                   Link
                 </button>
               </div>
@@ -483,22 +507,34 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-outline-primary btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary btn-sm"
+                >
                   Primary
                 </button>
-                <button type="button" class="btn btn-outline-secondary btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary btn-sm"
+                >
                   Secondary
                 </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-outline-success btn-sm"
+                >
                   Success
                 </button>
-                <button type="button" class="btn btn-outline-warning btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-outline-warning btn-sm"
+                >
                   Warning
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm">
+                <button type="button" className="btn btn-outline-danger btn-sm">
                   Danger
                 </button>
-                <button type="button" class="btn btn-outline-link btn-sm">
+                <button type="button" className="btn btn-outline-link btn-sm">
                   Link
                 </button>
               </div>
@@ -523,23 +559,23 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary btn-sm">
+                <button type="button" className="btn btn-primary btn-sm">
                   <i className="fa fa-star"></i> Primary
                 </button>
-                <button type="button" class="btn btn-secondary btn-sm">
-                  <i class="fa fa-lightbulb"></i> Secondary
+                <button type="button" className="btn btn-secondary btn-sm">
+                  <i className="fa fa-lightbulb"></i> Secondary
                 </button>
-                <button type="button" class="btn btn-success btn-sm">
-                  <i class="fa fa-magic"></i> Success
+                <button type="button" className="btn btn-success btn-sm">
+                  <i className="fa fa-magic"></i> Success
                 </button>
-                <button type="button" class="btn btn-warning btn-sm">
+                <button type="button" className="btn btn-warning btn-sm">
                   <i className="fa-solid fa-triangle-exclamation"></i>
                   Warning
                 </button>
-                <button type="button" class="btn btn-danger btn-sm">
-                  <i class="fa fa-rss"></i> Danger
+                <button type="button" className="btn btn-danger btn-sm">
+                  <i className="fa fa-rss"></i> Danger
                 </button>
-                <button type="button" class="btn btn-link btn-sm">
+                <button type="button" className="btn btn-link btn-sm">
                   <i className="fa fa-link"></i> Link
                 </button>
               </div>
@@ -564,23 +600,35 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-outline-primary btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary btn-sm"
+                >
                   <i className="fa fa-star"></i> Primary
                 </button>
-                <button type="button" class="btn btn-outline-secondary btn-sm">
-                  <i class="fa fa-lightbulb"></i> Secondary
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary btn-sm"
+                >
+                  <i className="fa fa-lightbulb"></i> Secondary
                 </button>
-                <button type="button" class="btn btn-outline-success btn-sm">
-                  <i class="fa fa-magic"></i> Success
+                <button
+                  type="button"
+                  className="btn btn-outline-success btn-sm"
+                >
+                  <i className="fa fa-magic"></i> Success
                 </button>
-                <button type="button" class="btn btn-outline-warning btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-outline-warning btn-sm"
+                >
                   <i className="fa-solid fa-triangle-exclamation"></i>
                   Warning
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-sm">
-                  <i class="fa fa-rss"></i> Danger
+                <button type="button" className="btn btn-outline-danger btn-sm">
+                  <i className="fa fa-rss"></i> Danger
                 </button>
-                <button type="button" class="btn btn-outline-link btn-sm">
+                <button type="button" className="btn btn-outline-link btn-sm">
                   <i className="fa fa-link"></i> Link
                 </button>
               </div>
@@ -605,22 +653,22 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary btn-lg">
+                <button type="button" className="btn btn-primary btn-lg">
                   Primary
                 </button>
-                <button type="button" class="btn btn-secondary btn-lg">
+                <button type="button" className="btn btn-secondary btn-lg">
                   Secondary
                 </button>
-                <button type="button" class="btn btn-success btn-lg">
+                <button type="button" className="btn btn-success btn-lg">
                   Success
                 </button>
-                <button type="button" class="btn btn-warning btn-lg">
+                <button type="button" className="btn btn-warning btn-lg">
                   Warning
                 </button>
-                <button type="button" class="btn btn-danger btn-lg">
+                <button type="button" className="btn btn-danger btn-lg">
                   Danger
                 </button>
-                <button type="button" class="btn btn-link btn-lg">
+                <button type="button" className="btn btn-link btn-lg">
                   Link
                 </button>
               </div>
@@ -645,22 +693,34 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-outline-primary btn-lg">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary btn-lg"
+                >
                   Primary
                 </button>
-                <button type="button" class="btn btn-outline-secondary btn-lg">
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary btn-lg"
+                >
                   Secondary
                 </button>
-                <button type="button" class="btn btn-outline-success btn-lg">
+                <button
+                  type="button"
+                  className="btn btn-outline-success btn-lg"
+                >
                   Success
                 </button>
-                <button type="button" class="btn btn-outline-warning btn-lg">
+                <button
+                  type="button"
+                  className="btn btn-outline-warning btn-lg"
+                >
                   Warning
                 </button>
-                <button type="button" class="btn btn-outline-danger btn-lg">
+                <button type="button" className="btn btn-outline-danger btn-lg">
                   Danger
                 </button>
-                <button type="button" class="btn btn-outline-link btn-lg">
+                <button type="button" className="btn btn-outline-link btn-lg">
                   Link
                 </button>
               </div>
@@ -685,24 +745,27 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary btn-lg active">
+                <button type="button" className="btn btn-primary btn-lg active">
                   Primary
                 </button>
-                <button type="button" class="btn btn-secondary btn-lg active">
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-lg active"
+                >
                   Secondary
                 </button>
-                <button type="button" class="btn btn-success btn-lg active">
+                <button type="button" className="btn btn-success btn-lg active">
                   Success
                 </button>
-                <button type="button" class="btn btn-warning btn-lg active">
+                <button type="button" className="btn btn-warning btn-lg active">
                   Warning
                 </button>
-                <button type="button" class="btn btn-danger btn-lg active">
+                <button type="button" className="btn btn-danger btn-lg active">
                   Danger
                 </button>
                 <button
                   type="button"
-                  class="btn btn-link btn-lg active text-primary"
+                  className="btn btn-link btn-lg active text-primary"
                 >
                   Link
                 </button>
@@ -730,37 +793,37 @@ const Button = () => {
               <div className="d-flex flex-wrap gap-2">
                 <button
                   type="button"
-                  class="btn btn-outline-primary btn-lg active"
+                  className="btn btn-outline-primary btn-lg active"
                 >
                   Primary
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-secondary btn-lg active"
+                  className="btn btn-outline-secondary btn-lg active"
                 >
                   Secondary
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-success btn-lg active"
+                  className="btn btn-outline-success btn-lg active"
                 >
                   Success
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-warning btn-lg active"
+                  className="btn btn-outline-warning btn-lg active"
                 >
                   Warning
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-danger btn-lg active"
+                  className="btn btn-outline-danger btn-lg active"
                 >
                   Danger
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-link btn-lg active text-primary"
+                  className="btn btn-outline-link btn-lg active text-primary"
                 >
                   Link
                 </button>
@@ -787,27 +850,39 @@ const Button = () => {
             }
             cardBody={
               <div className="d-flex flex-column gap-2 w-100">
-                <button type="button" class="btn btn-primary btn-lg btn-block">
+                <button
+                  type="button"
+                  className="btn btn-primary btn-lg btn-block"
+                >
                   Primary
                 </button>
                 <button
                   type="button"
-                  class="btn btn-secondary btn-lg btn-block"
+                  className="btn btn-secondary btn-lg btn-block"
                 >
                   Secondary
                 </button>
-                <button type="button" class="btn btn-success btn-lg btn-block">
+                <button
+                  type="button"
+                  className="btn btn-success btn-lg btn-block"
+                >
                   Success
                 </button>
-                <button type="button" class="btn btn-warning btn-lg btn-block">
+                <button
+                  type="button"
+                  className="btn btn-warning btn-lg btn-block"
+                >
                   Warning
                 </button>
-                <button type="button" class="btn btn-danger btn-lg btn-block">
+                <button
+                  type="button"
+                  className="btn btn-danger btn-lg btn-block"
+                >
                   Danger
                 </button>
                 <button
                   type="button"
-                  class="btn btn-link btn-lg btn-block text-primary"
+                  className="btn btn-link btn-lg btn-block text-primary"
                 >
                   Link
                 </button>
@@ -835,37 +910,37 @@ const Button = () => {
               <div className="d-flex flex-column gap-2 w-100">
                 <button
                   type="button"
-                  class="btn btn-outline-primary btn-lg btn-block"
+                  className="btn btn-outline-primary btn-lg btn-block"
                 >
                   Primary
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-secondary btn-lg btn-block"
+                  className="btn btn-outline-secondary btn-lg btn-block"
                 >
                   Secondary
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-success btn-lg btn-block"
+                  className="btn btn-outline-success btn-lg btn-block"
                 >
                   Success
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-warning btn-lg btn-block"
+                  className="btn btn-outline-warning btn-lg btn-block"
                 >
                   Warning
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-danger btn-lg btn-block"
+                  className="btn btn-outline-danger btn-lg btn-block"
                 >
                   Danger
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-link btn-lg btn-block text-primary"
+                  className="btn btn-outline-link btn-lg btn-block text-primary"
                 >
                   Link
                 </button>

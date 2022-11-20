@@ -2,6 +2,7 @@ import React from "react";
 import { BarChart, LineChart, Bar, Line } from "recharts";
 import Card from "../../component/Card/Card";
 import CartDataCount from "../../component/CartDataCount/CartDataCount";
+import DeviceViewGraph from "../../component/Chart/apexchart/DeviceViewGraph";
 import DownloadChart from "../../component/Chart/apexchart/DownloadChart";
 import RevenueChart from "../../component/Chart/apexchart/RevenueChart";
 import Timeseries from "../../component/Chart/apexchart/Timeseries";
@@ -10,18 +11,15 @@ import EarningStats from "../../component/Chart/recharts/EarningStats";
 import TrafficChart from "../../component/Chart/recharts/TrafficChart";
 import FirstCounter from "../../component/Counter/FirstCounter/FirstCounter";
 import SocialMediaCounter from "../../component/Counter/SocialMediaCounter";
-import DeviceViewGraph from "../../component/DeviceViewGraph/DeviceViewGraph";
 import MonthlyDataUpdate from "../../component/MonthlyDataUpdate/MonthlyDataUpdate";
 import Stats from "../../component/Stats/Stats";
 import Timeline from "../../component/Timeline/Timeline";
 import UserDataCount from "../../component/UserDataCount/UserDataCount";
 import Weather from "../../component/Weather/Weather";
 
-import "./dashboard.scss";
-
 const Dashboard = () => {
   return (
-    <div className="container-fluid p-0 p-0">
+    <div className="container-fluid p-0">
       <div className="row">
         <div>
           <div

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 const Card = ({
   cardStyle = "",
@@ -45,8 +45,8 @@ const Card = ({
             {titleCode}
           </div>
           <div className="card-actions d-flex gap-3">
-            {iconName?.icons?.map((icon) => (
-              <>
+            {iconName?.icons?.map((icon, index) => (
+              <Fragment key={index}>
                 <a
                   href="#"
                   type="button"
@@ -54,7 +54,7 @@ const Card = ({
                 >
                   <i className={icon}></i>
                 </a>
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

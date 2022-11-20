@@ -53,7 +53,7 @@ const Year = () => {
   ];
   return (
     <div className="table-stats p-3 overflow-scroll">
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">User</th>

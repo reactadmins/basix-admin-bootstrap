@@ -1,0 +1,37 @@
+.tablist-wrapper {
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  .title-container {
+    .title-list {
+      .tab-title {
+        line-height: 1.42857;
+        padding: 10px 15px;
+        color: #b5bcc2;
+        cursor: pointer;
+        span {
+          font-size: 15px;
+          font-weight: 300;
+        }
+        i {
+          font-size: 14px;
+        }
+      }
+      .active {
+        line-height: 1.42857;
+        padding: 10px 15px;
+        color: #494949;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        background-color: #ddd;
+        cursor: default;
+        span {
+          font-size: 15px;
+          font-weight: 300;
+        }
+        i {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

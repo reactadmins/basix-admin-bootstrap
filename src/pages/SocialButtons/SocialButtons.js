@@ -32,16 +32,16 @@ const SocialButtons = () => {
                   <i className="fa fa-envelope"></i>
                 </a>
                 <a href="#" className="social__button facebook ">
-                  <i class="fa-brands fa-facebook-f"></i>
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
                 <a href="#" className="social__button linkedin">
-                  <i class="fa-brands fa-linkedin-in"></i>
+                  <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a href="#" className="social__button github">
-                  <i class="fa-brands fa-github"></i>
+                  <i className="fa-brands fa-github"></i>
                 </a>
                 <a href="#" className="social__button codepen">
-                  <i class="fa-brands fa-codepen"></i>
+                  <i className="fa-brands fa-codepen"></i>
                 </a>
               </div>
             }
