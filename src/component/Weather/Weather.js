@@ -19,7 +19,7 @@ const Weather = () => {
         cardBodyBg="bg-white"
         cardBodyStyle="p-0"
         cardBody={
-          <div className="weather-wrapper">
+          <div className="weather-wrapper overflow-hidden">
             <div
               className="d-flex justify-content-between p-4 p-lg-2 p-xl-4"
               style={{ backgroundColor: "#ffa726" }}
@@ -75,7 +75,7 @@ const Weather = () => {
         }
         cardFooterStyle="bg-white p-lg-2"
         cardFooter={
-          <div className="d-flex justify-content-between align-items-center">
+          <div className="d-flex justify-content-between align-items-center overflow-hidden">
             <div className="text-center" style={{ width: "33%" }}>
               <span
                 className="text-uppercase"

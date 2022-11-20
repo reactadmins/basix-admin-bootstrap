@@ -12,7 +12,7 @@
     content: "\f0a4";
     font-family: Fontawesome;
     top: -16px;
-    right: -45px;
+    right: -70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,5 +36,7 @@
   }
   .toggle-container {
     justify-content: center !important;
+    flex-direction: column;
+    padding: 18px 16px !important;
   }
 }

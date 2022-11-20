@@ -1,5 +1,8 @@
 .header {
   padding: 1.3em 1.875em 1.3em 2.5em;
+  .menu-active {
+    padding-left: 45px;
+  }
   .show-menutoggle {
     display: none;
   }
@@ -89,6 +92,9 @@
 @media (max-width: 1024px) {
   .header {
     padding: 1em 1.875em 1em 2.5em;
+    .menu-active {
+      padding-left: 0px;
+    }
     .show-menutoggle {
       display: block;
       .hamburger {
@@ -116,15 +122,6 @@
       .Search-wrapper {
         width: 91%;
       }
-    }
-  }
-}
-/* responsive  */
-@media (max-width: 320px) {
-  .search-container {
-    .navbar-container {
-      width: 100%;
-      height: 64px;
     }
   }
 }

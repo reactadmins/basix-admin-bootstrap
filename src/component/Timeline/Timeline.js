@@ -126,7 +126,7 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            <div className="d-flex gap-2 ">
+            <div className="d-flex gap-2 mb-3">
               <div>
                 <i
                   className="fa-solid fa-user text-white rounded-circle text-center "
@@ -152,7 +152,7 @@ const Timeline = () => {
                   <img src={img3} alt="img" style={{ height: "40px" }} />
                 </div>
                 <span
-                  className="d-block"
+                  className="d-block mb-2"
                   style={{
                     fontSize: "12px",
                     margin: "5px 0 15px 0",

@@ -27,14 +27,24 @@ const NavBar = ({ isOpen, setIsOpen }) => {
     <>
       {isOpenSearch ? (
         <div className="bg-white header">
-          <div className="d-flex justify-content-between align-items-center w-100">
+          <div
+            className={`d-flex justify-content-between align-items-center w-100 ${
+              isOpen ? "" : "menu-active"
+            }`}
+          >
             <div className="d-flex gap-4 position-relative">
               <div className="navbar-container show-menutoggle">
                 <button
                   className="border-0 bg-white"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <i className="fa-solid fa-bars-progress"></i>
+                  <i
+                    className={`${
+                      !isOpen
+                        ? "fa-sharp fa-solid fa-xmark fw-bold"
+                        : "fa-solid fa-bars-progress"
+                    }`}
+                  ></i>
                 </button>
               </div>
               <div className="navbar-container ">

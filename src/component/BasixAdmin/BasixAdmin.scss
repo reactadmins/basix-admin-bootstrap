@@ -213,3 +213,17 @@
     }
   }
 }
+/* responsive  */
+@media (max-width: 768px) {
+  .wrapper {
+    .left-panel {
+      .isopen {
+        width: 0px;
+        transition: 0.1s;
+        .menu-bar {
+          display: none;
+        }
+      }
+    }
+  }
+}

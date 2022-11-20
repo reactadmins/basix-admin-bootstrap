@@ -18,7 +18,7 @@ const UsetDataCount = () => {
         cardBodyBg="bg-white"
         cardBodyStyle="p-0"
         cardBody={
-          <div className="user-data-count-wrapper position-relative">
+          <div className="user-data-count-wrapper position-relative overflow-hidden">
             <div
               className="p-4 pt-0"
               style={{ backgroundColor: "#5c6bc0", height: "108px" }}
@@ -40,7 +40,7 @@ const UsetDataCount = () => {
         }
         cardFooterStyle="bg-white p-lg-2"
         cardFooter={
-          <div className="d-flex justify-content-between align-items-center">
+          <div className="d-flex justify-content-between align-items-center overflow-hidden">
             <div className="text-center" style={{ width: "33%" }}>
               <i
                 className="fa-solid fa-thumbs-up"
