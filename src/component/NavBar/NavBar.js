@@ -38,13 +38,13 @@ const NavBar = ({ isOpen, setIsOpen }) => {
                   className="border-0 bg-white"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <i
-                    className={`${
-                      !isOpen
-                        ? "fa-sharp fa-solid fa-xmark fw-bold"
-                        : "fa-solid fa-bars-progress"
-                    }`}
-                  ></i>
+                  {!isOpen ? (
+                    <div className="close-btn">
+                      <i className="fa-sharp fa-solid fa-xmark"></i>
+                    </div>
+                  ) : (
+                    <i className="fa-solid fa-bars-progress"></i>
+                  )}
                 </button>
               </div>
               <div className="navbar-container ">

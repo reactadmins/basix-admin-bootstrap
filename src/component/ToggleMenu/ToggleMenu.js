@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import "./ToggleMenu.scss";
 
 const ToggleMenu = ({
-  linkTo = "",
+  to = "",
   icon = "",
   title = "",
   badge = "",
   badge_bg = "",
   sowMenu = "",
+  isOpen = "",
 }) => {
   const [toggleMenu, setToggleMenu] = useState(true);
 
@@ -24,8 +25,13 @@ const ToggleMenu = ({
 
   return (
     <div ref={dropRef}>
-      {linkTo && (
-        <Link to={linkTo} className="toggle-menu text-decoration-none">
+      {to && (
+        <Link
+          to={to}
+          className={`toggle-menu text-decoration-none ${
+            isOpen ? "toggle-isopen" : "toggle-isactive"
+          }`}
+        >
           <div
             className="d-flex justify-content-between align-items-center menu-item"
             onClick={() => setToggleMenu(!toggleMenu)}
@@ -54,7 +60,11 @@ const ToggleMenu = ({
             )}
           </div>
           {sowMenu && (
-            <div className={` ${toggleMenu ? "show-none" : "show-active"} `}>
+            <div
+              className={`${
+                toggleMenu ? "show-menu-isopen" : "show-menu-isactive"
+              }`}
+            >
               <ul
                 className="d-flex flex-column"
                 style={{ paddingLeft: "40px" }}
@@ -65,8 +75,12 @@ const ToggleMenu = ({
           )}
         </Link>
       )}
-      {!linkTo && (
-        <div className="toggle-menu text-decoration-none">
+      {!to && (
+        <div
+          className={`toggle-menu text-decoration-none pe-auto ${
+            isOpen ? "toggle-isopen" : "toggle-isactive"
+          }`}
+        >
           <div
             className="d-flex justify-content-between align-items-center menu-item"
             onClick={() => setToggleMenu(!toggleMenu)}
@@ -96,9 +110,9 @@ const ToggleMenu = ({
           </div>
           {sowMenu && (
             <div
-              className={`sub-menu ${
-                toggleMenu ? "show-none" : "show-active"
-              } `}
+              className={`${
+                toggleMenu ? "show-menu-isopen" : "show-menu-isactive"
+              }`}
             >
               <ul
                 className="d-flex flex-column"

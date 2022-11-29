@@ -1,0 +1,146 @@
+.sidebar-wrapper {
+  .list-group {
+    li {
+      a {
+        &:hover {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+  .sidebar-container {
+    background-color: #262832;
+    .sidebar-btn {
+      background-color: #262832;
+      i {
+        color: #8b939b;
+      }
+    }
+    .sidebar-menu-icon {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "\f0a4";
+        font-family: Fontawesome;
+        top: -16px;
+        right: -70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        z-index: 999;
+        color: #fff;
+        background-color: #dc3545;
+      }
+    }
+  }
+  .menu-title {
+    color: #41434d;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.sidebar-isopen {
+  .logo {
+    display: block;
+  }
+  .mini-logo {
+    display: none;
+  }
+}
+.sidebar-isactive {
+  .logo {
+    display: none;
+  }
+  .mini-logo {
+    display: block;
+  }
+  .list-group {
+    .menu-title {
+      display: none;
+    }
+  }
+}
+//  responsive
+@media (max-width: 1024px) {
+  .sidebar-wrapper {
+    .sidebar-btn {
+      display: none;
+    }
+    .sidebar-container {
+      justify-content: center !important;
+      flex-direction: column;
+      padding: 18px 16px !important;
+    }
+  }
+  .sidebar-isopen {
+    .sidebar-container {
+      .logo {
+        display: none;
+      }
+      .mini-logo {
+        display: block;
+      }
+    }
+    .list-group {
+      .toggle-menu {
+        .menu-item {
+          flex-direction: column;
+          text-align: center;
+          i {
+            font-size: 20px;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .menu-title {
+        display: none;
+      }
+    }
+    .arrow {
+      display: none !important;
+    }
+  }
+  .sidebar-isactive {
+    .sidebar-container {
+      .logo {
+        display: block;
+      }
+      .mini-logo {
+        display: none;
+      }
+    }
+  }
+  .list-group {
+    .toggle-menu {
+      .menu-item {
+        flex-direction: unset;
+        text-align: unset;
+        i {
+          font-size: 14px;
+        }
+        span {
+          display: block;
+        }
+        .badge {
+          display: none;
+        }
+      }
+    }
+  }
+  .arrow {
+    display: block !important;
+  }
+}
+// Tab responsive
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    .sidebar-container {
+      padding: 23px 16px !important;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .toggle-menu {
+  cursor: pointer;
   .menu-item {
     font-size: 14px;
     color: #8b939b;
@@ -11,11 +12,38 @@
       color: #fff;
     }
   }
-  .show-none {
+
+  .show-menu-isopen {
     display: none;
   }
-  .show-active {
+  .show-menu-isactive {
     display: block;
+  }
+}
+.toggle-isactive {
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+    i {
+      font-size: 20px;
+    }
+    span {
+      display: none;
+    }
+  }
+  .arrow {
+    display: none;
+  }
+  .show-menu-isactive {
+    position: absolute;
+    left: 68px;
+    z-index: 5555;
+    padding-bottom: 25px;
+    padding-right: 40px;
+    background-color: #292b35;
+    span {
+      display: none;
+    }
   }
 }
 .badge-primary {
@@ -30,4 +58,40 @@
 }
 .badge-info {
   background-color: #17a2b8;
+}
+/* responsive  */
+@media (max-width: 1024px) {
+  .toggle-isactive {
+    .show-menu-isactive {
+      position: relative;
+      left: 0;
+      z-index: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+      background-color: #292b35;
+      span {
+        display: none;
+      }
+    }
+  }
+  .toggle-isopen {
+    .show-menu-isactive {
+      position: absolute;
+      left: 60px;
+      z-index: 5555;
+      padding-bottom: 25px;
+      padding-right: 40px;
+      background-color: #292b35;
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+// Tab responsive
+@media (max-width: 768px) {
+  .toggle-isopen {
+    display: none;
+  }
 }

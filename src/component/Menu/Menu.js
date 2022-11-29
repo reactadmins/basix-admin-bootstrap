@@ -8,6 +8,7 @@ const Menu = ({
   title = "",
   badge_bg = "",
   badge = "",
+  isOpen = "",
 }) => {
   return (
     <Link

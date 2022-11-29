@@ -126,7 +126,7 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            <div className="d-flex gap-2 mb-3">
+            <div className="d-flex gap-2 mb-4">
               <div>
                 <i
                   className="fa-solid fa-user text-white rounded-circle text-center "

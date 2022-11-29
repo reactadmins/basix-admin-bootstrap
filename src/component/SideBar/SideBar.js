@@ -3,16 +3,21 @@ import ToggleMenu from "../../component/ToggleMenu/ToggleMenu";
 import Menu from "../../component/Menu/Menu";
 import logo from "../../images/logo.png";
 import logo2 from "../../images/logo2.png";
-import "./SideBar.scss";
+import "./module.SideBar.scss";
+import { Link } from "react-router-dom";
 
 const SideBar = ({ isOpen, setIsOpen }) => {
   return (
-    <div className="menu-bar">
+    <div
+      className={`sidebar-wrapper ${
+        isOpen ? "sidebar-isopen" : "sidebar-isactive"
+      }`}
+    >
       <div
-        className={`toggle-container d-flex align-item-center py-4 px-0 ${
+        className={`sidebar-container d-flex align-item-center py-4 px-0 ${
           isOpen
             ? "justify-content-between px-lg-3"
-            : "justify-content-center px-lg-0 "
+            : "justify-content-center px-lg-0"
         }`}
       >
         <a href=" " className="logo">
@@ -23,12 +28,12 @@ const SideBar = ({ isOpen, setIsOpen }) => {
         </a>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="border-0 toggle-btn"
+          className="border-0 sidebar-btn"
         >
           {isOpen ? (
             <i className="fa-solid fa-bars-progress"></i>
           ) : (
-            <span className="toggle-menu-icon"></span>
+            <span className="sidebar-menu-icon"></span>
           )}
         </button>
       </div>
@@ -36,7 +41,8 @@ const SideBar = ({ isOpen, setIsOpen }) => {
         <ul className="list-group">
           <li className="px-3 py-3">
             <ToggleMenu
-              linkTo="dashboard"
+              isOpen={isOpen}
+              to="dashboard"
               icon="menu-icon fa fa-dashboard"
               title="Dashboard"
               badge="New"
@@ -48,6 +54,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
+              isOpen={isOpen}
               icon="fa fa-puzzle-piece"
               title="Components"
               sowMenu={
@@ -124,13 +131,15 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
-              linkTo="tables"
+              isOpen={isOpen}
+              to="tables"
               icon="menu-icon fa fa-table"
               title="Tables"
             />
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
+              isOpen={isOpen}
               icon="fa fa-pencil-square"
               title="Forms"
               sowMenu={
@@ -166,14 +175,16 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
-              linkTo="icons"
+              isOpen={isOpen}
+              to="icons"
               icon="menu-icon fa fa-star"
               title="Icons"
             />
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
-              linkTo="widgets"
+              isOpen={isOpen}
+              to="widgets"
               icon="menu-icon fa fa-calculator"
               title="Widgets"
               badge="60+"
@@ -182,6 +193,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
+              isOpen={isOpen}
               icon="fa fa-pie-chart"
               title="Charts"
               sowMenu={
@@ -213,6 +225,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
+              isOpen={isOpen}
               icon="fa-solid fa-location-dot"
               title="Maps"
               sowMenu={
@@ -240,6 +253,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </li>
           <li className="px-3 py-3">
             <ToggleMenu
+              isOpen={isOpen}
               icon={"fa fa-paperclip"}
               title={"Pages"}
               sowMenu={
@@ -277,16 +291,32 @@ const SideBar = ({ isOpen, setIsOpen }) => {
             />
           </li>
           <li className="px-3 py-3">
-            <ToggleMenu
-              icon="menu-icon fa-solid fa-file-lines"
-              title="Documentation"
-            />
+            <a
+              href="https://docs.vuejsadmin.com/docs/basix-admin-free-vuejs-admin-template/"
+              target={"_blank"}
+              className="text-decoration-none"
+              style={{ fontSize: "14px", color: "#8b939b" }}
+            >
+              <i
+                className="fa-solid fa-file-lines"
+                style={{ width: "55px" }}
+              ></i>
+              <span>Documentation</span>
+            </a>
           </li>
           <li className="px-3 py-3">
-            <ToggleMenu
-              icon="menu-icon fa-solid fa-shopping-cart"
-              title="Purchase"
-            />
+            <a
+              href="https://themeforest.net/item/basix-admin-vuejs-bootstrap-admin-dashboard-template/20838455"
+              target={"_blank"}
+              className="text-decoration-none"
+              style={{ fontSize: "14px", color: "#8b939b" }}
+            >
+              <i
+                className="fa-solid fa-shopping-cart"
+                style={{ width: "55px" }}
+              ></i>
+              <span>Purchase</span>
+            </a>
           </li>
         </ul>
       </div>

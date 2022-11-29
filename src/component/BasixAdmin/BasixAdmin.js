@@ -8,7 +8,7 @@ const BasixAdmin = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="wrapper overflow-hidden">
+    <div className="dashboard-wrapper overflow-hidden">
       <div className="d-flex">
         <div className="left-panel">
           <div className={`${isOpen ? "isopen" : "isactive"} `}>
