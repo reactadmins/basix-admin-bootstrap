@@ -4,7 +4,6 @@ import Menu from "../../component/Menu/Menu";
 import logo from "../../images/logo.png";
 import logo2 from "../../images/logo2.png";
 import "./module.SideBar.scss";
-import { Link } from "react-router-dom";
 
 const SideBar = ({ isOpen, setIsOpen }) => {
   return (
@@ -61,7 +60,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <>
                   <li className="pt-4 pb-3">
                     <Menu
-                      to="button"
+                      to="/components/button"
                       icon="fa fa-puzzle-piece"
                       title="Button"
                       badge_bg="badge-danger"
@@ -70,17 +69,21 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="badges"
+                      to="/components/badges"
                       icon="menu-icon fa fa fa-id-badge"
                       title="Badges"
                     />
                   </li>
                   <li className="pb-3">
-                    <Menu to="tabs" icon="menu-icon fa fa-bars" title="Tabs" />
+                    <Menu
+                      to="/components/tabs"
+                      icon="menu-icon fa fa-bars"
+                      title="Tabs"
+                    />
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="socialbuttons"
+                      to="/components/socialbuttons"
                       icon="menu-icon fa fa-share-square"
                       title="Social Buttons"
                       badge_bg="badge-primary"
@@ -89,38 +92,42 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="cards"
+                      to="/components/cards"
                       icon="menu-icon fa fa-id-card"
                       title="Cards"
                     />
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="alerts"
+                      to="/components/alerts"
                       icon="menu-icon fa fa-exclamation-triangle"
                       title="Alerts"
                     />
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="progressbars"
+                      to="/components/progressbars"
                       icon="menu-icon fa fa-spinner"
                       title="Progress Bars"
                     />
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="modals"
+                      to="/components/modals"
                       icon="menu-icon fa fa-fire"
                       title="Modals"
                     />
                   </li>
                   <li className="pb-3">
-                    <Menu to="grids" icon="menu-icon fa fa-th" title="Grids" />
+                    <Menu
+                      to="/components/grids"
+                      icon="menu-icon fa fa-th"
+                      title="Grids"
+                    />
                   </li>
                   <li>
                     <Menu
-                      to="typography"
+                      to="/components/typography"
                       icon="menu-icon fa fa-file-word"
                       title="Typography"
                     />
@@ -146,7 +153,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <>
                   <li className="pt-4 pb-3">
                     <Menu
-                      to="basic-form"
+                      to="/forms/basic-form"
                       icon="menu-icon fa fa-pencil-square"
                       title="Basic Form"
                       badge="New"
@@ -155,14 +162,14 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="advanced-form"
+                      to="/forms/advanced-form"
                       icon="menu-icon fa fa-pencil-square"
                       title="Advanced Form"
                     />
                   </li>
                   <li>
                     <Menu
-                      to="form-wizard"
+                      to="/forms/form-wizard"
                       icon="menu-icon fa fa-pencil-square"
                       title="Form Wizard"
                       badge="New"
@@ -200,21 +207,21 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <>
                   <li className="pt-4 pb-3">
                     <Menu
-                      to="chartjs"
+                      to="/charts/chart-js"
                       icon="menu-icon fa fa-line-chart"
                       title="Chart JS"
                     />
                   </li>
                   <li className="pb-3">
                     <Menu
-                      to="apexcharts"
+                      to="/charts/apexcharts"
                       icon="menu-icon fa fa-line-chart"
                       title="Apex Charts"
                     />
                   </li>
                   <li>
                     <Menu
-                      to="recharts"
+                      to="/charts/recharts"
                       icon="menu-icon fa fa-line-chart"
                       title="Recharts"
                     />
@@ -232,14 +239,14 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <>
                   <li className="pt-4 pb-3">
                     <Menu
-                      to="googlemaps"
+                      to="/maps/google-map"
                       icon="menu-icon fa fa-map"
                       title="Google Maps"
                     />
                   </li>
                   <li>
                     <Menu
-                      to="leafletmaps"
+                      to="/maps/leaflet-map"
                       icon="menu-icon fa fa-street-view"
                       title="Leaflet Maps"
                     />

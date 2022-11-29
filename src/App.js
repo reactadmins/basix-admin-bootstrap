@@ -42,31 +42,37 @@ function App() {
         <Route path="/" element={<BasixAdmin></BasixAdmin>}>
           <Route path="/" element={<Dashboard />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
-          <Route path="/button" element={<Button />}></Route>
-          <Route path="/badges" element={<Badges />}></Route>
-          <Route path="/tabs" element={<Tabs />}></Route>
-          <Route path="/socialbuttons" element={<SocialButtons />}></Route>
-          <Route path="/cards" element={<Cards />}></Route>
-          <Route path="/alerts" element={<Alerts />}></Route>
-          <Route path="/progressbars" element={<ProgressBars />}></Route>
-          <Route path="/modals" element={<Modals />}></Route>
-          <Route path="/grids" element={<Grids />}></Route>
-          <Route path="/typography" element={<Typography />}></Route>
+          <Route path="/components/button" element={<Button />}></Route>
+          <Route path="/components/badges" element={<Badges />}></Route>
+          <Route path="/components/tabs" element={<Tabs />}></Route>
+          <Route
+            path="/components/socialbuttons"
+            element={<SocialButtons />}
+          ></Route>
+          <Route path="/components/cards" element={<Cards />}></Route>
+          <Route path="/components/alerts" element={<Alerts />}></Route>
+          <Route
+            path="/components/progressbars"
+            element={<ProgressBars />}
+          ></Route>
+          <Route path="/components/modals" element={<Modals />}></Route>
+          <Route path="/components/grids" element={<Grids />}></Route>
+          <Route path="/components/typography" element={<Typography />}></Route>
           <Route path="/tables" element={<Tables />}></Route>
-          <Route path="/basic-form" element={<BasicForm />}></Route>
-          <Route path="/advanced-form" element={<AdvancedForm />}></Route>
-          <Route path="/form-wizard" element={<FormWizard />}></Route>
+          <Route path="/forms/basic-form" element={<BasicForm />}></Route>
+          <Route path="/forms/advanced-form" element={<AdvancedForm />}></Route>
+          <Route path="/forms/form-wizard" element={<FormWizard />}></Route>
           <Route path="/icons" element={<Icons />}></Route>
           <Route path="/brandico" element={<Brandico />}></Route>
           <Route path="/entypo" element={<Entypo />}></Route>
           <Route path="/fontawesome" element={<FontAwesome />}></Route>
           <Route path="/fontelico" element={<Fontelico />}></Route>
           <Route path="/widgets" element={<Widgets />}></Route>
-          <Route path="/chartjS" element={<ChartJS />}></Route>
-          <Route path="/apexcharts" element={<ApexCharts />}></Route>
-          <Route path="/recharts" element={<Recharts />}></Route>
-          <Route path="/googlemaps" element={<GoogleMaps />}></Route>
-          <Route path="/leafletmaps" element={<LeafletMaps />}></Route>
+          <Route path="/charts/chart-js" element={<ChartJS />}></Route>
+          <Route path="/charts/apexcharts" element={<ApexCharts />}></Route>
+          <Route path="/charts/recharts" element={<Recharts />}></Route>
+          <Route path="/maps/google-map" element={<GoogleMaps />}></Route>
+          <Route path="/maps/leaflet-map" element={<LeafletMaps />}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
