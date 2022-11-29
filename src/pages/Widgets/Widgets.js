@@ -325,7 +325,7 @@ const Widgets = () => {
                     fontWeight: "700",
                   }}
                 >
-                  View More <i class="fa-sharp fa-solid fa-angle-right"></i>
+                  View More <i className="fa-sharp fa-solid fa-angle-right"></i>
                 </a>
               </div>
             }
@@ -350,7 +350,7 @@ const Widgets = () => {
                     fontWeight: "700",
                   }}
                 >
-                  View More <i class="fa-sharp fa-solid fa-angle-right"></i>
+                  View More <i className="fa-sharp fa-solid fa-angle-right"></i>
                 </a>
               </div>
             }
@@ -375,7 +375,7 @@ const Widgets = () => {
                     fontWeight: "700",
                   }}
                 >
-                  View More <i class="fa-sharp fa-solid fa-angle-right"></i>
+                  View More <i className="fa-sharp fa-solid fa-angle-right"></i>
                 </a>
               </div>
             }
@@ -400,7 +400,7 @@ const Widgets = () => {
                     fontWeight: "700",
                   }}
                 >
-                  View More <i class="fa-sharp fa-solid fa-angle-right"></i>
+                  View More <i className="fa-sharp fa-solid fa-angle-right"></i>
                 </a>
               </div>
             }

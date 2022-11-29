@@ -7,7 +7,6 @@ const ThirdCounter = ({
   countName = "",
   count = "",
 }) => {
-  console.log("dolar", dolar);
   return (
     <div className="card rounded-0">
       <div className="card-body bg-white d-flex gap-4 align-items-center">

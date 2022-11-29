@@ -7,7 +7,6 @@ import IconHooks from "../../hooks/IconHooks";
 
 const Entypo = () => {
   const [items] = IconHooks("entypo.json");
-  console.log("Entypo", items?.lists?.mainicons?.icons);
 
   return (
     <div className="container-fluid overflow-hidden p-0">
@@ -49,8 +48,11 @@ const Entypo = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.mainicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.mainicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <EntypoIcon size={30} color="black" icon={`${icons}`} />
                       <span className="mt-2">{icons}</span>
@@ -74,8 +76,11 @@ const Entypo = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.socialicons?.icons.map((icon) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.socialicons?.icons.map((icon, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <EntypoIcon size={30} color="black" icon={`${icon}`} />
                       <span className="mt-2">{icon}</span>

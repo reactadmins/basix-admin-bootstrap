@@ -48,8 +48,11 @@ const Brandico = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <Icon
                         style={{ fontSize: "30px", cursor: "pointer" }}

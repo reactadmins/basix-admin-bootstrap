@@ -188,22 +188,22 @@ const Tables = () => {
               <div className="table-responsive">
                 <div className="d-flex justify-content-between mb-3">
                   <div className="form-group">
-                    <form class="d-flex">
+                    <form className="d-flex">
                       <input
-                        class="form-control me-2"
+                        className="form-control me-2"
                         type="search"
                         placeholder="Search Name"
                         aria-label="Search"
                         required
                       />
-                      <button class="btn btn-outline-success" type="submit">
+                      <button className="btn btn-outline-success" type="submit">
                         <i className="fa fa fa-search"></i>
                       </button>
                     </form>
                   </div>
-                  <div class="dropdown">
+                  <div className="dropdown">
                     <button
-                      class="btn btn-primary dropdown-toggle"
+                      className="btn btn-primary dropdown-toggle"
                       type="button"
                     >
                       6 per page

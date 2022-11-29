@@ -16,7 +16,7 @@ const Error404 = () => {
                   The page you are looking <br /> for was not found.
                 </p>
               </div>
-              <div class="input-group">
+              <div className="input-group">
                 <button type="button" className="error-search-btn">
                   <i className="fa fa-search"></i>
                 </button>

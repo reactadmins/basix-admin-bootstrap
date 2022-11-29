@@ -13,8 +13,8 @@ const Iconviewer = ({ iconList, iconName, pageName }) => {
       style={{ backgroundColor: "#EEEEEE", padding: "30px" }}
     >
       <div className="row gy-5">
-        {showIcons?.map((icon) => (
-          <div className="col-2 p-0">
+        {showIcons?.map((icon, index) => (
+          <div className="col-2 p-0" key={index}>
             <div className="d-flex justify-content-center align-items-center">
               <Icon
                 style={{ fontSize: ".85rem", cursor: "pointer" }}

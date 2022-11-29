@@ -14,7 +14,7 @@ const Error500 = () => {
                 <h5 className="error-title">Oops! You're lost.</h5>
                 <p className="error-description">Houston, we have a problem!</p>
               </div>
-              <div class="input-group">
+              <div className="input-group">
                 <button type="button" className="error-search-btn">
                   <i className="fa fa-search"></i>
                 </button>

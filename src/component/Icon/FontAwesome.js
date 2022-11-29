@@ -48,8 +48,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.applications?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.applications?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -77,8 +80,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.accessibilityicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.accessibilityicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -104,8 +110,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.handicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.handicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -133,17 +142,22 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.transportationicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
-                    <div className="icon-wrapper">
-                      <i
-                        style={{ fontSize: "30px" }}
-                        className={`fa fa-${icons}`}
-                      ></i>
-                      <span className="mt-2">{icons}</span>
+                {items?.lists?.transportationicons?.icons.map(
+                  (icons, index) => (
+                    <div
+                      className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                      key={index}
+                    >
+                      <div className="icon-wrapper">
+                        <i
+                          style={{ fontSize: "30px" }}
+                          className={`fa fa-${icons}`}
+                        ></i>
+                        <span className="mt-2">{icons}</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
             </>
           }
@@ -162,8 +176,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.gendericons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.gendericons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -189,8 +206,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.fileicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.fileicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -218,8 +238,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.spinnericons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.spinnericons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -247,8 +270,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.formcontrolicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.formcontrolicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -276,8 +302,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.paymenticons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.paymenticons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -303,8 +332,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.charticons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.charticons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -332,8 +364,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.currencyicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.currencyicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -361,8 +396,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.texteditoricons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.texteditoricons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -390,8 +428,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.directionalicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.directionalicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -419,8 +460,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.videoplayericons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.videoplayericons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}
@@ -448,8 +492,11 @@ const FontAwesome = () => {
           cardBody={
             <>
               <div className="row  m-0">
-                {items?.lists?.medicalicons?.icons.map((icons) => (
-                  <div className="col-6 col-md-4 col-lg-3 col-xl-2 m-0">
+                {items?.lists?.medicalicons?.icons.map((icons, index) => (
+                  <div
+                    className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    key={index}
+                  >
                     <div className="icon-wrapper">
                       <i
                         style={{ fontSize: "30px" }}

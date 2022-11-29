@@ -9,7 +9,7 @@ const Login = () => {
       <div className="login-wrapper">
         <div className="from-container d-flex justify-content-center align-items-center bg-white h-100">
           <div className="col-md-10 col-lg-8 col-xl-5">
-            <div class="card rounded-0">
+            <div className="card rounded-0">
               <div
                 className="card-header"
                 style={{ backgroundColor: "#f7f7f7", padding: "12px 20px" }}

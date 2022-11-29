@@ -7,7 +7,6 @@ const FourthCounter = ({
   percentage = "",
   dolar = "",
 }) => {
-  console.log("bg", dolar);
   return (
     <div className="card rounded-0">
       <div

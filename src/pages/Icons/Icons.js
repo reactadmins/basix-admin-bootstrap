@@ -45,8 +45,8 @@ const Icons = () => {
                     style={{ backgroundColor: "#EEEEEE", padding: "30px" }}
                   >
                     <div className="row gy-5">
-                      {entypoIcons?.map((icon) => (
-                        <div className="col-2 p-0">
+                      {entypoIcons?.map((icon, index) => (
+                        <div className="col-2 p-0" key={index}>
                           <div className="d-flex justify-content-center align-items-center">
                             <Icon
                               style={{ fontSize: ".85rem", cursor: "pointer" }}
@@ -72,8 +72,8 @@ const Icons = () => {
                     style={{ backgroundColor: "#EEEEEE", padding: "30px" }}
                   >
                     <div className="row gy-5">
-                      {fontAwesomeIcons?.map((icon) => (
-                        <div className="col-2 p-0">
+                      {fontAwesomeIcons?.map((icon, index) => (
+                        <div className="col-2 p-0" key={index}>
                           <div className="d-flex justify-content-center align-items-center">
                             <i className={`fas fa-${icon}`}></i>
                           </div>
