@@ -297,7 +297,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               }
             />
           </li>
-          <li className="px-3 py-3">
+          <li className="px-3 py-3 dashboard-info">
             <a
               href="https://docs.vuejsadmin.com/docs/basix-admin-free-vuejs-admin-template/"
               target={"_blank"}
@@ -311,7 +311,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               <span>Documentation</span>
             </a>
           </li>
-          <li className="px-3 py-3">
+          <li className="px-3 py-3 dashboard-info">
             <a
               href="https://themeforest.net/item/basix-admin-vuejs-bootstrap-admin-dashboard-template/20838455"
               target={"_blank"}
