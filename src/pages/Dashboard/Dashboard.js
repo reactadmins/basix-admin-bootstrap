@@ -28,7 +28,7 @@ const Dashboard = () => {
                         <button style={{ fontSize: "13px" }} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-3 col-xl-3 mb-4">
+                {/* <div className="col-md-6 col-lg-3 col-xl-3 mb-4">
                     <StatsCard
                         conuterBg="#5c6bc0"
                         count={23569}
@@ -157,7 +157,154 @@ const Dashboard = () => {
                                 </LineChart>
                             </>
                         }></StatsCard>
+                </div> */}
+
+                {/* Start first counter  */}
+                <div className="row gx-4 mb-3">
+                    <div className="col-md-6 col-lg-3 col-xl-3">
+                        <div>
+                            <StatsCard
+                                alignItem="d-flex justify-content-between align-items-center"
+                                cardBody="card-body counter-bg "
+                                conuterBg="#5c6bc0"
+                                padding="20px"
+                                count={23569}
+                                dolar="$"
+                                count_name="Revenue"
+                                icon={
+                                    <>
+                                        <i className="fa-solid fa-cart-shopping" style={{ color: "#fff", fontSize: "3.68em" }}></i>
+                                    </>
+                                }></StatsCard>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3  col-xl-3">
+                        <StatsCard
+                            alignItem="d-flex justify-content-between align-items-center"
+                            cardBody="card-body counter-bg "
+                            conuterBg="#66bb6a"
+                            count={85}
+                            percentage="%"
+                            count_name="Sales Increase"
+                            icon={
+                                <>
+                                    <BarChart
+                                        width={100}
+                                        height={80}
+                                        data={[
+                                            {
+                                                name: "Page A",
+                                                uv: 2000,
+                                                pv: 2400,
+                                                amt: 2400,
+                                            },
+                                            {
+                                                name: "Page B",
+                                                uv: 6000,
+                                                pv: 1398,
+                                                amt: 2210,
+                                            },
+                                            {
+                                                name: "Page C",
+                                                uv: 4000,
+                                                pv: 9800,
+                                                amt: 2290,
+                                            },
+                                            {
+                                                name: "Page D",
+                                                uv: 8000,
+                                                pv: 3908,
+                                                amt: 2000,
+                                            },
+                                            {
+                                                name: "Page E",
+                                                uv: 4000,
+                                                pv: 4800,
+                                                amt: 2181,
+                                            },
+                                            {
+                                                name: "Page F",
+                                                uv: 6000,
+                                                pv: 3800,
+                                                amt: 2500,
+                                            },
+                                            {
+                                                name: "Page G",
+                                                uv: 2000,
+                                                pv: 4300,
+                                                amt: 2100,
+                                            },
+                                            {
+                                                name: "Page G",
+                                                uv: 5000,
+                                                pv: 4300,
+                                                amt: 2100,
+                                            },
+                                        ]}>
+                                        <Bar dataKey="uv" fill="#fff" />
+                                    </BarChart>
+                                </>
+                            }></StatsCard>
+                    </div>
+                    <div className="col-md-6 col-lg-3 col-xl-3">
+                        <StatsCard
+                            alignItem="d-flex justify-content-between align-items-center"
+                            cardBody="card-body counter-bg "
+                            conuterBg="#ffa726"
+                            count={6596}
+                            count_name="Total Clients"
+                            icon={
+                                <>
+                                    <i className="fa-solid fa-user-group" style={{ color: "#fff", fontSize: "3.68em" }}></i>
+                                </>
+                            }></StatsCard>
+                    </div>
+                    <div className="col-md-6 col-lg-3 col-xl-3">
+                        <StatsCard
+                            alignItem="d-flex justify-content-between align-items-center"
+                            cardBody="card-body counter-bg "
+                            conuterBg="#42a5f5"
+                            count={1490}
+                            count_name="New Users"
+                            icon={
+                                <>
+                                    <LineChart
+                                        width={100}
+                                        height={70}
+                                        data={[
+                                            {
+                                                name: "Page A",
+                                                uv: 400,
+                                                pv: 400,
+                                                amt: 2400,
+                                            },
+                                            {
+                                                name: "Page B",
+                                                uv: 30,
+                                                pv: 25000,
+                                                amt: 2210,
+                                            },
+                                            {
+                                                name: "Page C",
+                                                uv: 10,
+                                                pv: 10500,
+                                                amt: 2290,
+                                            },
+                                            {
+                                                name: "Page D",
+                                                uv: 20,
+                                                pv: 50000,
+                                                amt: 2000,
+                                            },
+                                        ]}>
+                                        <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} />
+                                    </LineChart>
+                                </>
+                            }></StatsCard>
+                    </div>
                 </div>
+                {/* End first counter  */}
+
                 <div className="col-md-12 col-lg-4 col-xl-4 mb-4">
                     <Card
                         iconName={{

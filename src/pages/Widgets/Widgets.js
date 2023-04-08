@@ -15,19 +15,26 @@ const Widgets = () => {
         <div className="container-fluid p-0 p-0">
             <div className="row gy-4 gx-4">
                 <div className="col-md-6 col-lg-3 col-xl-3">
-                    <StatsCard
-                        conuterBg="#5c6bc0"
-                        count={23569}
-                        dolar="$"
-                        count_name="Revenue"
-                        icon={
-                            <>
-                                <i className="fa-solid fa-cart-shopping" style={{ color: "#fff", fontSize: "3.68em" }}></i>
-                            </>
-                        }></StatsCard>
+                    <div>
+                        <StatsCard
+                            alignItem="d-flex justify-content-between align-items-center"
+                            cardBody="card-body counter-bg "
+                            conuterBg="#5c6bc0"
+                            padding="20px"
+                            count={23569}
+                            dolar="$"
+                            count_name="Revenue"
+                            icon={
+                                <>
+                                    <i className="fa-solid fa-cart-shopping" style={{ color: "#fff", fontSize: "3.68em" }}></i>
+                                </>
+                            }></StatsCard>
+                    </div>
                 </div>
                 <div className="col-md-6 col-lg-3  col-xl-3">
                     <StatsCard
+                        alignItem="d-flex justify-content-between align-items-center"
+                        cardBody="card-body counter-bg "
                         conuterBg="#66bb6a"
                         count={85}
                         percentage="%"
@@ -94,6 +101,8 @@ const Widgets = () => {
                 </div>
                 <div className="col-md-6 col-lg-3 col-xl-3">
                     <StatsCard
+                        alignItem="d-flex justify-content-between align-items-center"
+                        cardBody="card-body counter-bg "
                         conuterBg="#ffa726"
                         count={6596}
                         count_name="Total Clients"
@@ -105,6 +114,8 @@ const Widgets = () => {
                 </div>
                 <div className="col-md-6 col-lg-3 col-xl-3">
                     <StatsCard
+                        alignItem="d-flex justify-content-between align-items-center"
+                        cardBody="card-body counter-bg "
                         conuterBg="#42a5f5"
                         count={1490}
                         count_name="New Users"
@@ -148,10 +159,166 @@ const Widgets = () => {
 
                 {/* Start second counter */}
 
-                <div className="col-md-6 col-lg-3 col-xl-3 ">
-                    <StatsCard icon="fa-sharp fa-solid fa-dollar-sign text-success " count_name="Total Profit" count="1012" borderColor="border-success" />
+                <div className="col-md-6 col-lg-3 col-xl-3">
+                    <StatsCard
+                        alignItem="d-flex flex-row-reverse justify-content-between align-items-center"
+                        innerAlign="d-flex flex-column-reverse"
+                        conuterBg="#FFFFF"
+                        borderColor="border border-3 border-success rounded-circle d-flex justify-content-center align-items-center"
+                        width="65px"
+                        height="65px"
+                        padding="10px"
+                        count={23569}
+                        dolar="$"
+                        count_name="Revenue"
+                        icon={
+                            <>
+                                <i className="fa-sharp fa-solid fa-dollar-sign text-success" style={{ fontSize: "24px", color: "#373757" }}></i>
+                            </>
+                        }></StatsCard>
                 </div>
-                <div className="col-md-6 col-lg-3 col-xl-3 ">
+                <div className="col-md-6 col-lg-3  col-xl-3">
+                    <StatsCard
+                        alignItem="d-flex justify-content-between align-items-center"
+                        cardBody="card-body counter-bg "
+                        conuterBg="#66bb6a"
+                        count={85}
+                        percentage="%"
+                        count_name="Sales Increase"
+                        icon={
+                            <>
+                                <BarChart
+                                    width={100}
+                                    height={80}
+                                    data={[
+                                        {
+                                            name: "Page A",
+                                            uv: 2000,
+                                            pv: 2400,
+                                            amt: 2400,
+                                        },
+                                        {
+                                            name: "Page B",
+                                            uv: 6000,
+                                            pv: 1398,
+                                            amt: 2210,
+                                        },
+                                        {
+                                            name: "Page C",
+                                            uv: 4000,
+                                            pv: 9800,
+                                            amt: 2290,
+                                        },
+                                        {
+                                            name: "Page D",
+                                            uv: 8000,
+                                            pv: 3908,
+                                            amt: 2000,
+                                        },
+                                        {
+                                            name: "Page E",
+                                            uv: 4000,
+                                            pv: 4800,
+                                            amt: 2181,
+                                        },
+                                        {
+                                            name: "Page F",
+                                            uv: 6000,
+                                            pv: 3800,
+                                            amt: 2500,
+                                        },
+                                        {
+                                            name: "Page G",
+                                            uv: 2000,
+                                            pv: 4300,
+                                            amt: 2100,
+                                        },
+                                        {
+                                            name: "Page G",
+                                            uv: 5000,
+                                            pv: 4300,
+                                            amt: 2100,
+                                        },
+                                    ]}>
+                                    <Bar dataKey="uv" fill="#fff" />
+                                </BarChart>
+                            </>
+                        }></StatsCard>
+                </div>
+                <div className="col-md-6 col-lg-3 col-xl-3">
+                    <StatsCard
+                        alignItem="d-flex justify-content-between align-items-center"
+                        cardBody="card-body counter-bg "
+                        conuterBg="#ffa726"
+                        count={6596}
+                        count_name="Total Clients"
+                        icon={
+                            <>
+                                <i className="fa-solid fa-user-group" style={{ color: "#fff", fontSize: "3.68em" }}></i>
+                            </>
+                        }></StatsCard>
+                </div>
+                <div className="col-md-6 col-lg-3 col-xl-3">
+                    <StatsCard
+                        alignItem="d-flex justify-content-between align-items-center"
+                        cardBody="card-body counter-bg "
+                        conuterBg="#42a5f5"
+                        count={1490}
+                        count_name="New Users"
+                        icon={
+                            <>
+                                <LineChart
+                                    width={100}
+                                    height={70}
+                                    data={[
+                                        {
+                                            name: "Page A",
+                                            uv: 400,
+                                            pv: 400,
+                                            amt: 2400,
+                                        },
+                                        {
+                                            name: "Page B",
+                                            uv: 30,
+                                            pv: 25000,
+                                            amt: 2210,
+                                        },
+                                        {
+                                            name: "Page C",
+                                            uv: 10,
+                                            pv: 10500,
+                                            amt: 2290,
+                                        },
+                                        {
+                                            name: "Page D",
+                                            uv: 20,
+                                            pv: 50000,
+                                            amt: 2000,
+                                        },
+                                    ]}>
+                                    <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} />
+                                </LineChart>
+                            </>
+                        }></StatsCard>
+                </div>
+
+                {/* <div className="col-md-6 col-lg-3 col-xl-3  ">
+                    <StatsCard
+                        // icon="fa-sharp fa-solid fa-dollar-sign text-success "
+                        icon={
+                            <>
+                                <i className="fa-sharp fa-solid fa-dollar-sign text-success " style={{ color: "#fff", fontSize: "30px" }}></i>
+                            </>
+                        }
+                        iconDesign="border border-3 rounded-circle d-flex justify-content-center align-items-center"
+                        alignItem="d-flex flex-row-reverse justify-content-between align-items-center"
+                        innerAlign="counter d-flex flex-column-reverse"
+                        count_name="Total Profit"
+                        count="1012"
+                        borderColor="border-success"
+                    />
+                </div>
+                <div className="col-md-6 col-lg-3 col-xl-3  ">
                     <StatsCard icon="fa-sharp fa-solid fa-user text-primary " count_name="New Customer" count="961" borderColor="border-primary" />
                 </div>
                 <div className="col-md-6 col-lg-3 col-xl-3 ">
@@ -159,7 +326,7 @@ const Widgets = () => {
                 </div>
                 <div className="col-md-6 col-lg-3 col-xl-3 ">
                     <StatsCard icon="fa-sharp fa-solid fa-link text-danger " count_name="Referrals" count="2781" />
-                </div>
+                </div> */}
 
                 {/* End second counter  */}
 
@@ -199,6 +366,7 @@ const Widgets = () => {
                 <div className="col-md-6 col-lg-3 col-xl-3 ">
                     <StatsCard headingTag="h1" cardBg="#5c6bc0" count="89" percentage="%" />
                 </div>
+
                 <div className="col-md-6 col-lg-3 col-xl-3 ">
                     <StatsCard headingTag="h1" cardBg="#FFA726" count="12124" />
                 </div>
@@ -209,7 +377,7 @@ const Widgets = () => {
                     <StatsCard headingTag="h1" cardBg="#42A5F5" count="9811100" dolar="$" />
                 </div>
 
-                {/* End Four Counter  */}
+                {/* End Four Counter 
 
                 {/* Stat first ClearFix  */}
 
