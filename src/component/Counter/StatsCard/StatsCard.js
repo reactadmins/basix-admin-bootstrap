@@ -1,43 +1,61 @@
 import React from "react";
 import CountUp from "react-countup";
 import "./StatsCard.scss";
+import { Symbols } from "recharts";
 
 const StatsCard = ({
     dolar = "",
+    symbol = "",
     count = "",
     percentage = "",
-    color = "",
+    borderColor = "",
     count_name = "",
     icon = "",
-    iconDesign = "",
+    isProgress = "",
     conuterBg = "",
-    borderColor = "",
-    cardBg = "",
-    font = "",
+    iconBorder = "",
+    fontSize = "",
+    fontWeight = "",
     width = "",
     height = "height",
     padding = "",
     ViewMore = "",
     alignItem = "",
     innerAlign = "",
+    text = "",
     cardBody = "",
-    paddingBottom = "",
+    isCount = "",
 }) => {
     // const counterClass = `counter ${variant ? `counter-${variant}` : ""}`;
     return (
         <>
             <div className="card border-0 rounded-0 overflow-hidden counter-wrapper">
-                <div className={cardBody} style={{ padding: `${padding}`, backgroundColor: `${conuterBg}` }}>
+                <div className={`${cardBody} ${borderColor}`} style={{ padding: `${padding}`, backgroundColor: `${conuterBg}` }}>
                     <div className={alignItem}>
                         <div className={innerAlign}>
-                            <div style={{ fontSize: "1.75rem", fontWeight: "400" }}>
-                                {dolar && <span className="mx-1">{dolar}</span>}
-                                <CountUp end={count} duration={4}></CountUp>
+                            <div style={{ fontSize: `${fontSize}`, fontWeight: `${fontWeight}` }}>
+                                <span>{text}</span>
+
+                                {!isCount ? dolar && <span className="mx-1">{dolar}</span> : null}
+                                {!isCount ? <CountUp end={count} duration={4}></CountUp> : count}
+                                <span>{symbol}</span>
                                 {percentage && <span>{percentage}</span>}
                             </div>
-                            <p>{count_name}</p>
+                            <div>
+                                <p className="mb-0">{count_name}</p>
+                                {isProgress ? (
+                                    <>
+                                        <div className="bg-white my-2" style={{ width: "55px", height: "5px" }}>
+                                            {" "}
+                                        </div>
+                                        <span style={{ fontSize: "80%" }} name="">
+                                            Lorem ipsum dolor sit am
+                                        </span>
+                                    </>
+                                ) : null}
+                            </div>
                         </div>
-                        <div className={`${borderColor}`} style={{ width: `${width}`, height: `${height}`, padding: `${padding}` }}>
+                        <div className={`${iconBorder}`} style={{ width: `${width}`, height: `${height}`, padding: `${padding}` }}>
                             {icon}
                         </div>
                     </div>
@@ -61,7 +79,7 @@ export default StatsCard;
 //     count_name = "",
 //     icon = "",
 //     conuterBg = "",
-//     borderColor = "",
+//     iconBorder = "",
 //     cardBg = "",
 //     font = "",
 //     width = "",
@@ -91,7 +109,7 @@ export default StatsCard;
 //             ) : !cardBg ? (
 //                 <div className="card rounded-0">
 //                     <div className="card-body bg-white d-flex gap-4 align-items-center">
-//                         <div className={`border border-3 ${borderColor} rounded-circle d-flex justify-content-center align-items-center`} style={{ width: "65px", height: "65px" }}>
+//                         <div className={`border border-3 ${iconBorder} rounded-circle d-flex justify-content-center align-items-center`} style={{ width: "65px", height: "65px" }}>
 //                             <i className={`${icon}`} style={{ fontSize: "30px" }}></i>
 //                         </div>
 //                         <div>
