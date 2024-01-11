@@ -1,0 +1,245 @@
+@import "../../assets/scss/variable.scss";
+
+@mixin btnStyle {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    outline: none;
+    border-radius: 4px;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+.switch_wrapper {
+    .switch_btn {
+        position: fixed;
+        content: "";
+        top: 25%;
+        right: 0;
+        width: 64px;
+        background: var(--content-text-color);
+        z-index: 999999;
+        border-radius: 8px 0 0 8px;
+        text-align: center;
+        padding: 10px;
+        border: 0px;
+        i {
+            color: $white;
+            font-size: 1.5em;
+        }
+    }
+    .switch_menu {
+        background-color: #ffffff;
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12),
+            0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(350px);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100%;
+        max-width: 350px;
+        min-width: 350px;
+        width: 350px;
+        z-index: 99999999;
+
+        .bownload_btn {
+            @include btnStyle();
+            border: 1px solid #15b79e;
+            background-color: #15b79e;
+        }
+        .purchase_btn {
+            @include btnStyle();
+            border: 1px solid #7a5af8;
+            background-color: #7a5af8;
+        }
+        .documentatione_btn {
+            @include btnStyle();
+            border: 1px solid #d5d9eb;
+            color: #4e5ba6;
+            background-color: #d5d9eb;
+        }
+        .social_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 10px;
+                border-radius: 4px;
+                color: $white;
+                i {
+                    font-size: 18px;
+                }
+                span {
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-weight: 700;
+                }
+            }
+            .facebook_btn {
+                border: 1px solid #1570ef;
+                background-color: #1570ef;
+            }
+            .twitter_btn {
+                border: 1px solid #36bffa;
+                background-color: #36bffa;
+            }
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #a8a9ac;
+            border-radius: 20px;
+        }
+    }
+    .switch_contorl {
+        border-bottom: 1px solid var(--border-color);
+        .toggle_button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            span {
+                font-size: 14px;
+                color: var(--hedging-text-color);
+                font-weight: 700;
+                line-height: 20px;
+                user-select: none;
+            }
+            .switch {
+                position: relative;
+                display: block;
+                width: 36px;
+                height: 18px;
+                border: 0;
+                border-radius: 10px;
+                padding: 2px;
+                background-color: #a59e9e;
+                outline: none;
+                input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .slider {
+                    position: relative;
+                    content: "";
+                    cursor: pointer;
+                    display: block;
+                    top: -24px;
+                    left: 1px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 34px;
+                    background-color: $white;
+                    transition: 0.2s;
+                }
+            }
+            .active {
+                background-color: #7a5af8;
+                .slider {
+                    top: -24px;
+                    left: 18px;
+                }
+            }
+            .group_swatch {
+                border-radius: 20px;
+                background-color: #f8f9fc;
+                button {
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 18px;
+                    color: #475467;
+                    border: 1px solid transparent;
+                    transition: all 0.2s;
+                    padding: 6px 8px;
+                    border-radius: 20px;
+                }
+                &[data="true"] {
+                    & button:last-child {
+                        color: rgb(255, 255, 255);
+                        background-color: rgb(122, 90, 248);
+                        border-color: rgb(122, 90, 248);
+                        border-radius: 0 20px 20px 0;
+                    }
+                }
+                &[data="false"] {
+                    & button:first-child {
+                        color: rgb(255, 255, 255);
+                        background-color: rgb(122, 90, 248);
+                        border-color: rgb(122, 90, 248);
+                        border-radius: 20px 0 0 20px;
+                    }
+                }
+            }
+        }
+    }
+    .overlay_bg {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.5;
+        z-index: 999999;
+        background-color: #242222;
+    }
+    &[data="true"] {
+        .switch_btn {
+            left: 0;
+            right: auto;
+            border-radius: 0 8px 8px 0;
+        }
+        .switch_menu {
+            left: 0;
+            right: auto;
+        }
+        .switch_contorl {
+            .toggle_button {
+                .group_swatch {
+                    & button:first-child {
+                        border-radius: 20px 0 0 20px !important;
+                    }
+                    & button:last-child {
+                        border-radius: 0 20px 20px 0 !important;
+                    }
+                }
+                .active {
+                    background-color: #7a5af8;
+                    .slider {
+                        top: -24px;
+                        left: 18px;
+                    }
+                }
+            }
+            .group_swatch {
+                border-radius: 20px;
+                & button:first-child {
+                    padding-left: 16px;
+                    border-radius: 0 20px 20px 0 !important;
+                }
+                & button:last-child {
+                    padding-right: 16px;
+                    border-radius: 20px 0 0 20px !important;
+                }
+            }
+        }
+    }
+}

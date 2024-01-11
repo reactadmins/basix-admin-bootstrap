@@ -1,0 +1,40 @@
+.color_control_wrapper {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+    .title {
+        font-size: 14px;
+        color: var(--hedging-text-color);
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    .bg_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 12px;
+        button {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+        .active {
+            position: relative;
+            span {
+                &::after {
+                    position: absolute;
+                    content: "✓";
+                    top: 2px;
+                    left: 6px;
+                    font-family: Fontawesome;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

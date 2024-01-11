@@ -1,0 +1,64 @@
+.navbar_type_contorl {
+    border-bottom: 1px solid var(--border-color);
+    .title {
+        font-size: 14px;
+        color: var(--hedging-text-color);
+        font-weight: 700;
+        line-height: 20px;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    .navbar_setting_panel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 10px;
+        img {
+            width: 147px;
+        }
+        .navbar_setting_item {
+            div {
+                width: 13px;
+                height: 13px;
+                border-radius: 30px;
+                border: 1px solid rgb(141, 141, 141);
+            }
+            label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 8px;
+                .active-radio {
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 30px;
+                    border: 1px solid rgb(141, 141, 141);
+                }
+            }
+        }
+        .active {
+            img {
+                border: 1px solid #7a5af8;
+            }
+            label {
+                .active_radio {
+                    position: relative;
+                    border-color: #7a5af8;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 7px;
+                        height: 7px;
+                        margin: auto;
+                        border-radius: 30px;
+                        background-color: #7a5af8;
+                    }
+                }
+            }
+        }
+    }
+}
