@@ -120,6 +120,12 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
     const offerEndDate = getStartOrEndOffer(offerData?.end_date);
     const currentDate = new Date().getTime();
 
+    const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=https://reactadmin.com`;
+
+    const twitterURL = `http://twitter.com/share?text=${encodeURIComponent(
+        "Tweet_Title"
+    )}&url=https://reactadmin.com&hashtags=admin,template,dashboard`;
+
     // GET Google Sheet Data
     const getSheetData = async () => {
         const sheet_id = "1VLpfKspHHNM6JIFOQtohqDRyHR85J3KR5RLF4jqlz0Q";
@@ -281,23 +287,32 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                     <SidebarBgControl />
 
                     <div className="py-3">
-                        <a href="#" className={switcherStyle.bownload_btn}>
+                        <a href="#" target="_blank" className={switcherStyle.bownload_btn}>
                             Download Free
                         </a>
-                        <a href="#" className={`${switcherStyle.purchase_btn} mt-2`}>
+                        <a
+                            href="#"
+                            target="_blank"
+                            className={`${switcherStyle.purchase_btn} mt-2`}>
                             Purchase Now
                         </a>
-                        <a href="#" className={`${switcherStyle.documentatione_btn} mt-2`}>
+                        <a
+                            href="#"
+                            target="_blank"
+                            className={`${switcherStyle.documentatione_btn} mt-2`}>
                             Documentation
                         </a>
                     </div>
                     <div className={`${switcherStyle.social_btn} mt-3`}>
-                        <a href="#" className={switcherStyle.facebook_btn}>
-                            <i className="fa-brands fa-facebook"></i>
+                        <a
+                            href={facebookURL}
+                            target="_blank"
+                            className={switcherStyle.facebook_btn}>
+                            <i className="fa-brands fa-facebook" />
                             <span>Share</span>
                         </a>
-                        <a href="#" className={switcherStyle.twitter_btn}>
-                            <i className="fa-brands fa-twitter"></i>
+                        <a href={twitterURL} target="_blank" className={switcherStyle.twitter_btn}>
+                            <i className="fa-brands fa-twitter" />
                             <span>Tweet</span>
                         </a>
                     </div>
