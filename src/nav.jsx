@@ -206,6 +206,7 @@ export const navItems = [
     {
         name: "Purchase",
         url: "https://vuejsadmin.com",
+        target: "_blank",
         icon: "fa fa-shopping-cart",
     },
 ];
@@ -353,7 +354,7 @@ export const miniNav = [
     },
     {
         name: "Purchase",
-        url: "https://vuejsadmin.com",
+        url: "https://reactadmin.com",
         icon: "fa fa-shopping-cart",
     },
 ];

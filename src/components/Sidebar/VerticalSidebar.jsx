@@ -72,6 +72,7 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                         {isEmpty(item?.children) ? (
                                             <Link
                                                 to={item?.path}
+                                                {...(item?.target && { target: "_blank" })}
                                                 onClick={() =>
                                                     setNavIsOpen(navIsOpen === index ? null : index)
                                                 }
