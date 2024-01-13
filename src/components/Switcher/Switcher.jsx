@@ -194,6 +194,7 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
             } else {
                 localStorage.removeItem(`${product_slug}_offer_data`);
                 getSheetData();
+                setIsOpenOffer(true);
             }
         } else {
             getSheetData();
