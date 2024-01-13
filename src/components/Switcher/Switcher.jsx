@@ -109,7 +109,10 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
     ];
 
     const [offerData, setOfferData] = useState({});
-    const [isOpenOffer, setIsOpenOffer] = useState(true);
+    const [isOpenOffer, setIsOpenOffer] = useState(false);
+
+    const day1 = 8.64e7;
+    const day3 = 259200000;
 
     const product_slug = "basix_admin";
 
@@ -126,7 +129,6 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
         await fetch(url)
             .then((res) => res.text())
             .then((data) => {
-                console.log("data", data);
                 const dataArr = data.split("\n");
                 const firstRow = dataArr?.[0]?.split(",");
 
@@ -148,38 +150,38 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                 const checkCounterTime = new Date(mainObj.counter_time).getTime();
 
                 if (mainObj.counter_time && checkCounterTime < currentDate) {
-                    mainObj.counter_time = checkCounterTime + 259200000;
+                    mainObj.counter_time = checkCounterTime + day3;
                 }
 
                 if (!mainObj.counter_time) {
-                    mainObj.counter_time = currentDate + 259200000;
+                    mainObj.counter_time = currentDate + day3;
                 }
 
                 setOfferData(mainObj);
 
                 const obj = {
                     data: mainObj,
-                    exp_t: currentDate + 8.64e7,
+                    exp_t: currentDate + day1,
                 };
 
                 localStorage.setItem(`${product_slug}_offer_data`, JSON.stringify(obj));
+
+                // offerStartDate < currentDate && currentDate < offerEndDate && isOpenOffer
+                // if (mainObj?.start_date < currentDate && currentDate < mainObj?.end_date) {
+                //     setIsOpenOffer(true);
+                // }
             });
     };
 
     // Close Offer
     const handleCloseOffer = () => {
         setIsOpenOffer(false);
-        localStorage.setItem(`${product_slug}_sl`, currentDate + 8.64e7);
+        localStorage.setItem(`${product_slug}_sl`, currentDate + day1);
     };
 
     useEffect(() => {
         const savedOfferData = localStorage.getItem(`${product_slug}_offer_data`);
         const isShowOffer = localStorage.getItem(`${product_slug}_sl`);
-
-        // Manage Show/Hide Offer Notice
-        if (isShowOffer && +isShowOffer > currentDate) {
-            setIsOpenOffer(false);
-        }
 
         // Manage Google Sheet Data
         if (savedOfferData) {
@@ -188,13 +190,19 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
 
             if (Object.keys(offerData).length > 0 && currentTime < offerData?.exp_t) {
                 setOfferData(offerData?.data);
-                // setIsOpenOffer(true);
+                setIsOpenOffer(true);
             } else {
                 localStorage.removeItem(`${product_slug}_offer_data`);
                 getSheetData();
             }
         } else {
             getSheetData();
+            setIsOpenOffer(true);
+        }
+
+        // Manage Show/Hide Offer Notice
+        if (isShowOffer && +isShowOffer > currentDate) {
+            setIsOpenOffer(false);
         }
     }, []);
 
