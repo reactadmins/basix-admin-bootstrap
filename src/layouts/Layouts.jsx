@@ -1,10 +1,7 @@
 import Combo from "../components/LayoutsType/Combo";
 import DualNav from "../components/LayoutsType/DualNav";
-// import DualNav from "../components/LayoutsType/DualNav";
 import Horizontal from "../components/LayoutsType/Horizontal";
 import Vertical from "../components/LayoutsType/Vertical";
-// import Horizontal from "../components/LayoutsType/Horizontal";
-// import Vertical from "../components/layoutsType/Vertical";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
 
 const Layouts = ({ setSidebarMini, sidebarMini }) => {
