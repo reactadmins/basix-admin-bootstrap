@@ -335,7 +335,10 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                                 <span>Tweet</span>
                             </a>
                             <div className={switcherStyle.github_btn_wrapper}>
-                                <a href="#" className={switcherStyle.github_btn}>
+                                <a
+                                    href="https://github.com/reactadmins/bootstrap-basix-admin"
+                                    target="_blank"
+                                    className={switcherStyle.github_btn}>
                                     <i className="fa-brands fa-github" />
                                     <span>Star</span>
                                 </a>
