@@ -110,6 +110,7 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
 
     const [offerData, setOfferData] = useState({});
     const [isOpenOffer, setIsOpenOffer] = useState(false);
+    const [githubStart, setGithubStart] = useState(0);
 
     const day1 = 8.64e7;
     const day3 = 259200000;
@@ -185,7 +186,21 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
         localStorage.setItem(`${product_slug}_sl`, currentDate + day1);
     };
 
+    // Get Github Star Count
+    const getGithubStarCount = async () => {
+        const res = await fetch("https://api.github.com/repos/reactadmins/bootstrap-basix-admin");
+        const data = await res.json();
+        if (data?.stargazers_count) {
+            setGithubStart(data?.stargazers_count);
+        } else {
+            setGithubStart(0);
+        }
+    };
+
     useEffect(() => {
+        // call github start count
+        getGithubStarCount();
+
         const savedOfferData = localStorage.getItem(`${product_slug}_offer_data`);
         const isShowOffer = localStorage.getItem(`${product_slug}_sl`);
 
@@ -303,18 +318,32 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                             Documentation
                         </a>
                     </div>
-                    <div className={`${switcherStyle.social_btn} mt-3`}>
-                        <a
-                            href={facebookURL}
-                            target="_blank"
-                            className={switcherStyle.facebook_btn}>
-                            <i className="fa-brands fa-facebook" />
-                            <span>Share</span>
-                        </a>
-                        <a href={twitterURL} target="_blank" className={switcherStyle.twitter_btn}>
-                            <i className="fa-brands fa-twitter" />
-                            <span>Tweet</span>
-                        </a>
+                    <div className={switcherStyle.social_btn_wrapper}>
+                        <div className={`${switcherStyle.social_btns} mt-3`}>
+                            <a
+                                href={facebookURL}
+                                target="_blank"
+                                className={switcherStyle.facebook_btn}>
+                                <i className="fa-brands fa-facebook" />
+                                <span>Share</span>
+                            </a>
+                            <a
+                                href={twitterURL}
+                                target="_blank"
+                                className={switcherStyle.twitter_btn}>
+                                <i className="fa-brands fa-twitter" />
+                                <span>Tweet</span>
+                            </a>
+                            <div className={switcherStyle.github_btn_wrapper}>
+                                <a href="#" className={switcherStyle.github_btn}>
+                                    <i className="fa-brands fa-github" />
+                                    <span>Star</span>
+                                </a>
+                                <span className={switcherStyle.github_star_count}>
+                                    {githubStart}
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
