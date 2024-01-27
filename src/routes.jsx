@@ -28,6 +28,7 @@ import FontAwesome from "./components/Icon/FontAwesome";
 import Fontelico from "./components/Icon/Fontelico";
 import Page404 from "./views/Error404";
 import Page500 from "./views/Error500";
+import { createBrowserRouter } from "react-router-dom";
 
 const routes = [
     {
