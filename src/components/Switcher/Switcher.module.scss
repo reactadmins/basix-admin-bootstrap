@@ -67,34 +67,73 @@
             color: #4e5ba6;
             background-color: #d5d9eb;
         }
-        .social_btn {
+        .social_btn_wrapper {
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 10px;
-            a {
-                display: flex;
+            justify-content: center;
+            .social_btns {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
                 align-items: center;
-                gap: 8px;
-                padding: 6px 10px;
-                border-radius: 4px;
-                color: $white;
-                i {
-                    font-size: 18px;
+                gap: 10px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 6px 10px;
+                    border-radius: 4px;
+                    color: $white;
+                    i {
+                        font-size: 18px;
+                    }
+                    span {
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 700;
+                    }
                 }
-                span {
-                    font-size: 12px;
-                    line-height: 16px;
-                    font-weight: 700;
+                .facebook_btn {
+                    border: 1px solid #1570ef;
+                    background-color: #1570ef;
                 }
-            }
-            .facebook_btn {
-                border: 1px solid #1570ef;
-                background-color: #1570ef;
-            }
-            .twitter_btn {
-                border: 1px solid #36bffa;
-                background-color: #36bffa;
+                .twitter_btn {
+                    border: 1px solid #36bffa;
+                    background-color: #36bffa;
+                }
+                .github_btn_wrapper {
+                    grid-column: span 2 / span 2;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    .github_btn {
+                        border: 1px solid #101113;
+                        background-color: #21262d;
+                        width: fit-content;
+                    }
+                    .github_star_count {
+                        font-size: 12px;
+                        font-weight: 500;
+                        background: #21262d;
+                        border: 1px solid #101113;
+                        padding: 6px 10px;
+                        border-radius: 4px;
+                        color: $white;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-top: 5px solid transparent;
+                            border-right: 5px solid #21262d;
+                            border-bottom: 5px solid transparent;
+                            top: 10px;
+                            right: 100%;
+                        }
+                    }
+                }
             }
         }
         &::-webkit-scrollbar {

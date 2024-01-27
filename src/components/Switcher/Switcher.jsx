@@ -109,13 +109,23 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
     ];
 
     const [offerData, setOfferData] = useState({});
-    const [isOpenOffer, setIsOpenOffer] = useState(true);
+    const [isOpenOffer, setIsOpenOffer] = useState(false);
+    const [githubStart, setGithubStart] = useState(0);
+
+    const day1 = 8.64e7;
+    const day3 = 259200000;
 
     const product_slug = "basix_admin";
 
     const offerStartDate = getStartOrEndOffer(offerData?.start_date);
     const offerEndDate = getStartOrEndOffer(offerData?.end_date);
     const currentDate = new Date().getTime();
+
+    const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=https://reactadmin.com`;
+
+    const twitterURL = `http://twitter.com/share?text=${encodeURIComponent(
+        "Tweet_Title"
+    )}&url=https://reactadmin.com&hashtags=admin,template,dashboard`;
 
     // GET Google Sheet Data
     const getSheetData = async () => {
@@ -126,7 +136,6 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
         await fetch(url)
             .then((res) => res.text())
             .then((data) => {
-                console.log("data", data);
                 const dataArr = data.split("\n");
                 const firstRow = dataArr?.[0]?.split(",");
 
@@ -148,38 +157,52 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                 const checkCounterTime = new Date(mainObj.counter_time).getTime();
 
                 if (mainObj.counter_time && checkCounterTime < currentDate) {
-                    mainObj.counter_time = checkCounterTime + 259200000;
+                    mainObj.counter_time = checkCounterTime + day3;
                 }
 
                 if (!mainObj.counter_time) {
-                    mainObj.counter_time = currentDate + 259200000;
+                    mainObj.counter_time = currentDate + day3;
                 }
 
                 setOfferData(mainObj);
 
                 const obj = {
                     data: mainObj,
-                    exp_t: currentDate + 8.64e7,
+                    exp_t: currentDate + day1,
                 };
 
                 localStorage.setItem(`${product_slug}_offer_data`, JSON.stringify(obj));
+
+                // offerStartDate < currentDate && currentDate < offerEndDate && isOpenOffer
+                // if (mainObj?.start_date < currentDate && currentDate < mainObj?.end_date) {
+                //     setIsOpenOffer(true);
+                // }
             });
     };
 
     // Close Offer
     const handleCloseOffer = () => {
         setIsOpenOffer(false);
-        localStorage.setItem(`${product_slug}_sl`, currentDate + 8.64e7);
+        localStorage.setItem(`${product_slug}_sl`, currentDate + day1);
+    };
+
+    // Get Github Star Count
+    const getGithubStarCount = async () => {
+        const res = await fetch("https://api.github.com/repos/reactadmins/bootstrap-basix-admin");
+        const data = await res.json();
+        if (data?.stargazers_count) {
+            setGithubStart(data?.stargazers_count);
+        } else {
+            setGithubStart(0);
+        }
     };
 
     useEffect(() => {
+        // call github start count
+        getGithubStarCount();
+
         const savedOfferData = localStorage.getItem(`${product_slug}_offer_data`);
         const isShowOffer = localStorage.getItem(`${product_slug}_sl`);
-
-        // Manage Show/Hide Offer Notice
-        if (isShowOffer && +isShowOffer > currentDate) {
-            setIsOpenOffer(false);
-        }
 
         // Manage Google Sheet Data
         if (savedOfferData) {
@@ -188,13 +211,20 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
 
             if (Object.keys(offerData).length > 0 && currentTime < offerData?.exp_t) {
                 setOfferData(offerData?.data);
-                // setIsOpenOffer(true);
+                setIsOpenOffer(true);
             } else {
                 localStorage.removeItem(`${product_slug}_offer_data`);
                 getSheetData();
+                setIsOpenOffer(true);
             }
         } else {
             getSheetData();
+            setIsOpenOffer(true);
+        }
+
+        // Manage Show/Hide Offer Notice
+        if (isShowOffer && +isShowOffer > currentDate) {
+            setIsOpenOffer(false);
         }
     }, []);
 
@@ -272,25 +302,51 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                     <SidebarBgControl />
 
                     <div className="py-3">
-                        <a href="#" className={switcherStyle.bownload_btn}>
+                        <a href="#" target="_blank" className={switcherStyle.bownload_btn}>
                             Download Free
                         </a>
-                        <a href="#" className={`${switcherStyle.purchase_btn} mt-2`}>
+                        <a
+                            href="#"
+                            target="_blank"
+                            className={`${switcherStyle.purchase_btn} mt-2`}>
                             Purchase Now
                         </a>
-                        <a href="#" className={`${switcherStyle.documentatione_btn} mt-2`}>
+                        <a
+                            href="#"
+                            target="_blank"
+                            className={`${switcherStyle.documentatione_btn} mt-2`}>
                             Documentation
                         </a>
                     </div>
-                    <div className={`${switcherStyle.social_btn} mt-3`}>
-                        <a href="#" className={switcherStyle.facebook_btn}>
-                            <i className="fa-brands fa-facebook"></i>
-                            <span>Share</span>
-                        </a>
-                        <a href="#" className={switcherStyle.twitter_btn}>
-                            <i className="fa-brands fa-twitter"></i>
-                            <span>Tweet</span>
-                        </a>
+                    <div className={switcherStyle.social_btn_wrapper}>
+                        <div className={`${switcherStyle.social_btns} mt-3`}>
+                            <a
+                                href={facebookURL}
+                                target="_blank"
+                                className={switcherStyle.facebook_btn}>
+                                <i className="fa-brands fa-facebook" />
+                                <span>Share</span>
+                            </a>
+                            <a
+                                href={twitterURL}
+                                target="_blank"
+                                className={switcherStyle.twitter_btn}>
+                                <i className="fa-brands fa-twitter" />
+                                <span>Tweet</span>
+                            </a>
+                            <div className={switcherStyle.github_btn_wrapper}>
+                                <a
+                                    href="https://github.com/reactadmins/bootstrap-basix-admin"
+                                    target="_blank"
+                                    className={switcherStyle.github_btn}>
+                                    <i className="fa-brands fa-github" />
+                                    <span>Star</span>
+                                </a>
+                                <span className={switcherStyle.github_star_count}>
+                                    {githubStart}
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -8,8 +8,7 @@ import sidebarStyle from "../../assets/scss/variation/sidebar/ComboSidebar.modul
 const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);
     const [selectSize, setSelectSize] = useState();
-    const { sidebarBgImg, sidebarBgColor, isThemeDirection, isDark } =
-        useDashboardDataContext();
+    const { sidebarBgImg, sidebarBgColor, isThemeDirection, isDark } = useDashboardDataContext();
 
     useEffect(() => {
         window.onresize = function () {
@@ -26,9 +25,9 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
 
     return (
         <div
-            className={`${sidebarStyle.sidebar_nav_wrapper} ${
-                sidebarStyle[sidebarBgColor]
-            } ${sidebarMini ? sidebarStyle.sidebar_mini : ""}`}
+            className={`${sidebarStyle.sidebar_nav_wrapper} ${sidebarStyle[sidebarBgColor]} ${
+                sidebarMini ? sidebarStyle.sidebar_mini : ""
+            }`}
             style={{
                 backgroundImage: `url(${sidebarBgImg ? sidebarBgImg : ""})`,
                 backgroundRepeat: "no-repeat",
@@ -36,8 +35,7 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
                 backgroundPosition: "top",
             }}
             data={!isThemeDirection ? "false" : "true"}
-            dark-mode={isDark ? "true" : "false"}
-        >
+            dark-mode={isDark ? "true" : "false"}>
             <div className={sidebarStyle.navbar}>
                 <div className={sidebarStyle.main_menu}>
                     <ul className={sidebarStyle.navbar_nav}>
@@ -48,33 +46,26 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
                                     item.title
                                         ? `d-flex align-items-center text-uppercase ${sidebarStyle.menu_title}`
                                         : ""
-                                }`}
-                            >
+                                }`}>
                                 {(item?.path && (
                                     <Fragment>
                                         {isEmpty(item?.children) ? (
                                             <Link
                                                 to={item?.path}
+                                                {...(item?.target && { target: "_blank" })}
                                                 onClick={() =>
-                                                    setNavIsOpen(
-                                                        navIsOpen === index
-                                                            ? null
-                                                            : index
-                                                    )
+                                                    setNavIsOpen(navIsOpen === index ? null : index)
                                                 }
-                                                className="d-flex justify-content-between align-items-center"
-                                            >
+                                                className="d-flex justify-content-between align-items-center">
                                                 <div className="d-flex align-items-center">
                                                     <i
-                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}
-                                                    ></i>
+                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}></i>
                                                     <span>{item.name}</span>
                                                 </div>
 
                                                 {item?.badge && (
                                                     <span
-                                                        className={`badge bg-${item?.badge?.variant}`}
-                                                    >
+                                                        className={`badge bg-${item?.badge?.variant}`}>
                                                         {item?.badge?.text}
                                                     </span>
                                                 )}
@@ -82,18 +73,12 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
                                         ) : (
                                             <a
                                                 onClick={() =>
-                                                    setNavIsOpen(
-                                                        navIsOpen === index
-                                                            ? null
-                                                            : index
-                                                    )
+                                                    setNavIsOpen(navIsOpen === index ? null : index)
                                                 }
-                                                className="d-flex justify-content-between align-items-center user-select-none"
-                                            >
+                                                className="d-flex justify-content-between align-items-center user-select-none">
                                                 <div className="d-flex align-items-center">
                                                     <i
-                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}
-                                                    ></i>
+                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}></i>
                                                     <span>{item.name}</span>
                                                 </div>
                                                 {item?.children && (
@@ -102,10 +87,7 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
                                                             navIsOpen === index
                                                                 ? "fa-solid fa-angle-down"
                                                                 : "fa-solid fa-chevron-right"
-                                                        } ${
-                                                            sidebarStyle.arrow
-                                                        }`}
-                                                    ></i>
+                                                        } ${sidebarStyle.arrow}`}></i>
                                                 )}
                                             </a>
                                         )}
@@ -115,11 +97,9 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
                                         <a
                                             href={item?.url}
                                             target="_blank"
-                                            className="d-flex align-items-center"
-                                        >
+                                            className="d-flex align-items-center">
                                             <i
-                                                className={`${item.icon} ${sidebarStyle.menu_icon}`}
-                                            ></i>
+                                                className={`${item.icon} ${sidebarStyle.menu_icon}`}></i>
                                             <span>{item.name}</span>
                                         </a>
                                     ))}
@@ -127,43 +107,25 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
                                 {navIsOpen === index &&
                                     (item?.children ? (
                                         <ul className={sidebarStyle.sub_menu}>
-                                            {item?.children?.map(
-                                                (childItem, index) => (
-                                                    <li
-                                                        key={index}
-                                                        className={
-                                                            sidebarStyle.nav_item
-                                                        }
-                                                    >
-                                                        <Link
-                                                            to={childItem?.path}
-                                                            className="d-flex justify-content-between align-items-center"
-                                                        >
-                                                            <div className="d-flex align-items-center">
-                                                                <i
-                                                                    className={`${childItem.icon} ${sidebarStyle.menu_icon}`}
-                                                                ></i>
-                                                                <span>
-                                                                    {
-                                                                        childItem.name
-                                                                    }
-                                                                </span>
-                                                            </div>
-                                                            {childItem.badge && (
-                                                                <span
-                                                                    className={`badge bg-${childItem?.badge?.variant}`}
-                                                                >
-                                                                    {
-                                                                        childItem
-                                                                            .badge
-                                                                            .text
-                                                                    }
-                                                                </span>
-                                                            )}
-                                                        </Link>
-                                                    </li>
-                                                )
-                                            )}
+                                            {item?.children?.map((childItem, index) => (
+                                                <li key={index} className={sidebarStyle.nav_item}>
+                                                    <Link
+                                                        to={childItem?.path}
+                                                        className="d-flex justify-content-between align-items-center">
+                                                        <div className="d-flex align-items-center">
+                                                            <i
+                                                                className={`${childItem.icon} ${sidebarStyle.menu_icon}`}></i>
+                                                            <span>{childItem.name}</span>
+                                                        </div>
+                                                        {childItem.badge && (
+                                                            <span
+                                                                className={`badge bg-${childItem?.badge?.variant}`}>
+                                                                {childItem.badge.text}
+                                                            </span>
+                                                        )}
+                                                    </Link>
+                                                </li>
+                                            ))}
                                         </ul>
                                     ) : null)}
                             </li>
@@ -174,17 +136,11 @@ const ComboSidebar = ({ setSidebarMini, sidebarMini }) => {
             {sidebarBgImg?.length === 0 ? null : (
                 <div id="overlayBg" className={sidebarStyle.overlay_bg}></div>
             )}
-            <button
-                className={sidebarStyle.arrow_btn}
-                onClick={() => setSidebarMini(!sidebarMini)}
-            >
+            <button className={sidebarStyle.arrow_btn} onClick={() => setSidebarMini(!sidebarMini)}>
                 <i
                     className={`${
-                        !sidebarMini
-                            ? "fa-solid fa-chevron-left"
-                            : "fa-solid fa-chevron-right"
-                    }`}
-                ></i>
+                        !sidebarMini ? "fa-solid fa-chevron-left" : "fa-solid fa-chevron-right"
+                    }`}></i>
             </button>
         </div>
     );
