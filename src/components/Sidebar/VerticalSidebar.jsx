@@ -11,13 +11,14 @@ import sidebarStyle from "../../assets/scss/variation/sidebar/VerticalSidebar.mo
 
 const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);
-    const { sidebarBgImg, sidebarBgColor, isThemeDirection, isDark } = useDashboardDataContext();
+    const { sidebarBgImg, sidebarBgColor, isThemeDirection, isDark } =
+        useDashboardDataContext();
 
     return (
         <div
-            className={`${sidebarStyle.sidebar_nav_wrapper} ${sidebarStyle[sidebarBgColor]} ${
-                sidebarMini ? sidebarStyle.sidebar_mini : ""
-            }`}
+            className={`${sidebarStyle.sidebar_nav_wrapper} ${
+                sidebarStyle[sidebarBgColor]
+            } ${sidebarMini ? sidebarStyle.sidebar_mini : ""}`}
             style={{
                 backgroundImage: `url(${sidebarBgImg ? sidebarBgImg : ""})`,
                 backgroundRepeat: "no-repeat",
@@ -25,36 +26,51 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                 backgroundPosition: "top",
             }}
             data={!isThemeDirection ? "false" : "true"}
-            dark-mode={isDark ? "true" : "false"}>
+            dark-mode={isDark ? "true" : "false"}
+        >
             <div className={sidebarStyle.navbar}>
                 <div
-                    className={`${sidebarStyle.navbar_header} d-flex align-items-center justify-content-between`}>
+                    className={`${sidebarStyle.navbar_header} d-flex align-items-center justify-content-between`}
+                >
                     {!isDark ? (
-                        <a href="/" className={sidebarStyle.logo}>
+                        <Link to="/" className={sidebarStyle.logo}>
                             {sidebarMini ? (
                                 <img
                                     src={
-                                        sidebarBgColor === "bg_white" ? black_mini_logo : mini_logo
+                                        sidebarBgColor === "bg_white"
+                                            ? black_mini_logo
+                                            : mini_logo
                                     }
                                     alt="basix-admin"
                                 />
                             ) : (
                                 <img
-                                    src={sidebarBgColor === "bg_white" ? black_logo : logo}
+                                    src={
+                                        sidebarBgColor === "bg_white"
+                                            ? black_logo
+                                            : logo
+                                    }
                                     alt="basix-admin"
                                 />
                             )}
-                        </a>
+                        </Link>
                     ) : (
-                        <a href="/" className={sidebarStyle.logo}>
-                            <img src={sidebarMini ? mini_logo : logo} alt="basix-admin" />
-                        </a>
+                        <Link to="/" className={sidebarStyle.logo}>
+                            <img
+                                src={sidebarMini ? mini_logo : logo}
+                                alt="basix-admin"
+                            />
+                        </Link>
                     )}
 
                     <button
                         className={sidebarStyle.menu_toggle}
-                        onClick={() => setSidebarMini(!sidebarMini)}>
-                        <i className="fa-solid fa-bars-progress" aria-hidden="true"></i>
+                        onClick={() => setSidebarMini(!sidebarMini)}
+                    >
+                        <i
+                            className="fa-solid fa-bars-progress"
+                            aria-hidden="true"
+                        ></i>
                     </button>
                 </div>
                 <div className={sidebarStyle.main_menu}>
@@ -66,26 +82,36 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                     item.title
                                         ? `d-flex align-items-center text-uppercase ${sidebarStyle.menu_title}`
                                         : ""
-                                }`}>
+                                }`}
+                            >
                                 {(item?.path && (
                                     <Fragment>
                                         {isEmpty(item?.children) ? (
                                             <Link
                                                 to={item?.path}
-                                                {...(item?.target && { target: "_blank" })}
+                                                {...(item?.target && {
+                                                    target: "_blank",
+                                                })}
                                                 onClick={() =>
-                                                    setNavIsOpen(navIsOpen === index ? null : index)
+                                                    setNavIsOpen(
+                                                        navIsOpen === index
+                                                            ? null
+                                                            : index
+                                                    )
                                                 }
-                                                className="d-flex justify-content-between align-items-center">
+                                                className="d-flex justify-content-between align-items-center"
+                                            >
                                                 <div className="d-flex align-items-center">
                                                     <i
-                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}></i>
+                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}
+                                                    ></i>
                                                     <span>{item.name}</span>
                                                 </div>
 
                                                 {item?.badge && (
                                                     <span
-                                                        className={`badge bg-${item?.badge?.variant}`}>
+                                                        className={`badge bg-${item?.badge?.variant}`}
+                                                    >
                                                         {item?.badge?.text}
                                                     </span>
                                                 )}
@@ -93,12 +119,18 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                         ) : (
                                             <a
                                                 onClick={() =>
-                                                    setNavIsOpen(navIsOpen === index ? null : index)
+                                                    setNavIsOpen(
+                                                        navIsOpen === index
+                                                            ? null
+                                                            : index
+                                                    )
                                                 }
-                                                className="d-flex justify-content-between align-items-center user-select-none">
+                                                className="d-flex justify-content-between align-items-center user-select-none"
+                                            >
                                                 <div className="d-flex align-items-center">
                                                     <i
-                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}></i>
+                                                        className={`${item.icon} ${sidebarStyle.menu_icon}`}
+                                                    ></i>
                                                     <span>{item.name}</span>
                                                 </div>
                                                 {item?.children && (
@@ -107,7 +139,10 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                                             navIsOpen === index
                                                                 ? "fa-solid fa-angle-down"
                                                                 : "fa-solid fa-chevron-right"
-                                                        } ${sidebarStyle.arrow}`}></i>
+                                                        } ${
+                                                            sidebarStyle.arrow
+                                                        }`}
+                                                    ></i>
                                                 )}
                                             </a>
                                         )}
@@ -117,9 +152,11 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                         <a
                                             href={item?.url}
                                             target="_blank"
-                                            className="d-flex align-items-center">
+                                            className="d-flex align-items-center"
+                                        >
                                             <i
-                                                className={`${item.icon} ${sidebarStyle.menu_icon}`}></i>
+                                                className={`${item.icon} ${sidebarStyle.menu_icon}`}
+                                            ></i>
                                             <span>{item.name}</span>
                                         </a>
                                     ))}
@@ -127,25 +164,43 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                 {navIsOpen === index &&
                                     (item?.children ? (
                                         <ul className={sidebarStyle.sub_menu}>
-                                            {item?.children?.map((childItem, index) => (
-                                                <li key={index} className={sidebarStyle.nav_item}>
-                                                    <Link
-                                                        to={childItem?.path}
-                                                        className="d-flex justify-content-between align-items-center">
-                                                        <div className="d-flex align-items-center">
-                                                            <i
-                                                                className={`${childItem.icon} ${sidebarStyle.menu_icon}`}></i>
-                                                            <span>{childItem.name}</span>
-                                                        </div>
-                                                        {childItem.badge && (
-                                                            <span
-                                                                className={`badge bg-${childItem?.badge?.variant}`}>
-                                                                {childItem.badge.text}
-                                                            </span>
-                                                        )}
-                                                    </Link>
-                                                </li>
-                                            ))}
+                                            {item?.children?.map(
+                                                (childItem, index) => (
+                                                    <li
+                                                        key={index}
+                                                        className={
+                                                            sidebarStyle.nav_item
+                                                        }
+                                                    >
+                                                        <Link
+                                                            to={childItem?.path}
+                                                            className="d-flex justify-content-between align-items-center"
+                                                        >
+                                                            <div className="d-flex align-items-center">
+                                                                <i
+                                                                    className={`${childItem.icon} ${sidebarStyle.menu_icon}`}
+                                                                ></i>
+                                                                <span>
+                                                                    {
+                                                                        childItem.name
+                                                                    }
+                                                                </span>
+                                                            </div>
+                                                            {childItem.badge && (
+                                                                <span
+                                                                    className={`badge bg-${childItem?.badge?.variant}`}
+                                                                >
+                                                                    {
+                                                                        childItem
+                                                                            .badge
+                                                                            .text
+                                                                    }
+                                                                </span>
+                                                            )}
+                                                        </Link>
+                                                    </li>
+                                                )
+                                            )}
                                         </ul>
                                     ) : null)}
                             </li>
@@ -153,7 +208,9 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                     </ul>
                 </div>
             </div>
-            {sidebarBgImg?.length === 0 ? null : <div className={sidebarStyle.overlay_bg}></div>}
+            {sidebarBgImg?.length === 0 ? null : (
+                <div className={sidebarStyle.overlay_bg}></div>
+            )}
         </div>
     );
 };

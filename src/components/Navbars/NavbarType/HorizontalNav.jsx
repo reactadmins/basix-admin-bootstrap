@@ -57,7 +57,7 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini }) => {
                                     <i className="fa-solid fa-bars"></i>
                                 </button>
 
-                                <a href="/" className={navbarStyle.logo}>
+                                <Link to="/" className={navbarStyle.logo}>
                                     {!isDark ? (
                                         <img
                                             src={
@@ -70,7 +70,7 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini }) => {
                                     ) : (
                                         <img src={logo} alt="basix-admin" />
                                     )}
-                                </a>
+                                </Link>
                             </div>
                         </Nav>
                         <Nav
