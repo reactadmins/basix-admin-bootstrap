@@ -37,14 +37,6 @@ const Alerts = () => {
                                     title="This is a primary alert—check it out!"
                                     alertBg="info"
                                 />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="light"
-                                />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="dark"
-                                />
                             </Fragment>
                         }
                     />
@@ -244,18 +236,17 @@ const Alerts = () => {
                                     alertContent={
                                         <Fragment>
                                             <p>
-                                                Aww yeah, you successfully read
-                                                this important alert message.
-                                                This example text is going to
-                                                run a bit longer so that you can
-                                                see how spacing within an alert
-                                                works with this kind of content.
+                                                You successfully read this
+                                                important alert message. This
+                                                example text is going to run a
+                                                bit longer so that you can see
+                                                alert content.
                                             </p>
                                             <hr />
                                             <p>
                                                 Whenever you need to, be sure to
-                                                use margin utilities to keep
-                                                things nice and tidy.
+                                                use margin utilities nice and
+                                                tidy.
                                             </p>
                                         </Fragment>
                                     }
@@ -267,18 +258,17 @@ const Alerts = () => {
                                     alertContent={
                                         <Fragment>
                                             <p>
-                                                Aww yeah, you successfully read
-                                                this important alert message.
-                                                This example text is going to
-                                                run a bit longer so that you can
-                                                see how spacing within an alert
-                                                works with this kind of content.
+                                                You successfully read this
+                                                important alert message. This
+                                                example text is going to run a
+                                                bit longer so that you can see
+                                                how alert content.
                                             </p>
                                             <hr />
                                             <p>
                                                 Whenever you need to, be sure to
-                                                use margin utilities to keep
-                                                things nice and tidy.
+                                                use margin utilities nice and
+                                                tidy.
                                             </p>
                                         </Fragment>
                                     }
@@ -290,18 +280,18 @@ const Alerts = () => {
                                     alertContent={
                                         <Fragment>
                                             <p>
-                                                Aww yeah, you successfully read
-                                                this important alert message.
-                                                This example text is going to
-                                                run a bit longer so that you can
-                                                see how spacing within an alert
-                                                works with this kind of content.
+                                                You successfully read this
+                                                important alert message. This
+                                                example text is going to run a
+                                                bit longer so that you can see
+                                                how spacing within an alert
+                                                content.
                                             </p>
                                             <hr />
                                             <p>
                                                 Whenever you need to, be sure to
-                                                use margin utilities to keep
-                                                things nice and tidy.
+                                                use margin utilities nice and
+                                                tidy.
                                             </p>
                                         </Fragment>
                                     }

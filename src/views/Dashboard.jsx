@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
 import StatsCard from "../components/Dashboard/StatsCard";
-import Timeseries from "../components/Dashboard/Timeseries";
+import RealTime from "../components/Dashboard/RealTime";
 import Traffic from "../components/Dashboard/Traffic";
 import Earning from "../components/Dashboard/Earning";
 import Download from "../components/Dashboard/Download";
@@ -181,16 +181,16 @@ const Dashboard = () => {
             </Row>
             {/* end revenue section */}
 
-            {/* start timeseries and traffic  section */}
+            {/* start realTime and traffic  section */}
             <Row className="gy-4 gx-4 mb-4">
-                <Col md={12} lg={4} xl={4}>
-                    <Timeseries />
+                <Col md={12} lg={4} xl={5}>
+                    <RealTime />
                 </Col>
-                <Col md={12} lg={8} xl={8}>
+                <Col md={12} lg={8} xl={7}>
                     <Traffic />
                 </Col>
             </Row>
-            {/* end timeseries and traffic  section */}
+            {/* end realTime and traffic  section */}
 
             {/* start earning and download  revenue section */}
             <Row className="gy-4 gx-4 mb-4">
