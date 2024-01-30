@@ -86,12 +86,12 @@ const SocialButtons = () => {
                                 <li
                                     className={socialButtonsStyle.social_button}
                                 >
-                                    <li
+                                    <a
                                         href="#"
                                         className="text-decoration-none"
                                     >
                                         <i className="fa-brands fa-instagram"></i>
-                                    </li>
+                                    </a>
                                 </li>
                                 <li
                                     className={socialButtonsStyle.social_button}
