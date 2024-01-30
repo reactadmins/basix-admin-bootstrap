@@ -113,13 +113,13 @@ const Badges = () => {
                                             7
                                         </Badge>
                                     </Button>
-                                    <Button variant="info">
+                                    <Button variant="info text-white">
                                         Info
                                         <Badge className="badge bg-light text-dark mx-1">
                                             7
                                         </Badge>
                                     </Button>
-                                    <Button variant="warning">
+                                    <Button variant="warning text-white">
                                         Warning
                                         <Badge className="badge bg-light text-dark mx-1">
                                             7
@@ -280,7 +280,7 @@ const Badges = () => {
                                     <Badge bg="secondary">Secondary</Badge>
                                     <Badge bg="success">Success</Badge>
                                     <Badge bg="danger">Danger</Badge>
-                                    <Badge bg="warning" text="dark">
+                                    <Badge bg="warning" text="white">
                                         Warning
                                     </Badge>
                                     <Badge bg="info">Info</Badge>
