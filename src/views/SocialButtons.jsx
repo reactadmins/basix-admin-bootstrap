@@ -15,7 +15,7 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 ${socialButtonsStyle.rounded_button}`}
+                                className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.rounded_button}`}
                             >
                                 <a
                                     href="#"
@@ -60,108 +60,90 @@ const SocialButtons = () => {
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                         bodyBg="#ddd"
                         CardBody={
-                            <div className="py-2">
-                                <ul
-                                    className={`d-flex justify-content-center gap-3 ${socialButtonsStyle.social_square_button}`}
+                            <ul
+                                className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.social_square_button}`}
+                            >
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
+                                    >
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
+                                    >
+                                        <i className="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
                                 >
                                     <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
+                                        href="#"
+                                        className="text-decoration-none"
                                     >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-facebook-f fs-4"></i>
-                                        </a>
+                                        <i className="fa-brands fa-instagram"></i>
                                     </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
                                     >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-twitter fs-4 "></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
+                                        <i className="fa-brands fa-vimeo-v"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
                                     >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-instagram fs-4 "></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
+                                        <i className="fa-brands fa-behance"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
                                     >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-vimeo-v fs-4 "></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
+                                        <i className="fa-brands fa-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
                                     >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-behance fs-4 "></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
+                                        <i className="fa-brands fa-github"></i>
+                                    </a>
+                                </li>
+                                <li
+                                    className={socialButtonsStyle.social_button}
+                                >
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none"
                                     >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-dribbble fs-4"></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
-                                    >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-github fs-4 "></i>
-                                        </a>
-                                    </li>
-                                    <li
-                                        className={
-                                            socialButtonsStyle.social_button
-                                        }
-                                    >
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none"
-                                        >
-                                            <i className="fa-brands fa-pied-piper fs-4"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                        <i className="fa-brands fa-pied-piper"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         }
                     />
                 </Col>
