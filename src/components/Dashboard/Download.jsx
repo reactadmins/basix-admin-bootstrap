@@ -11,15 +11,14 @@ const Download = () => {
                 type: "radialBar",
             },
             plotOptions: {
-                color: "red",
                 radialBar: {
                     hollow: {
                         size: "60%",
-                        background: "#fff",
+                        background: "transparent",
                     },
                 },
             },
-            labels: ["Cricket"],
+            labels: ["Cricket", "ract"],
         },
     });
     return (

@@ -4,7 +4,7 @@ const AnalyticsInfo = ({ count = "", title = "" }) => {
     return (
         <div className="analytics-wrapper">
             <span
-                className="text-uppercase text-center d-block"
+                className="text-uppercase d-block"
                 style={{
                     color: "var(--content-text-color)",
                     fontSize: "14px",

@@ -183,10 +183,10 @@ const Dashboard = () => {
 
             {/* start realTime and traffic  section */}
             <Row className="gy-4 gx-4 mb-4">
-                <Col md={12} lg={4} xl={5}>
+                <Col md={12} lg={5} xl={5}>
                     <RealTime />
                 </Col>
-                <Col md={12} lg={8} xl={7}>
+                <Col md={12} lg={7} xl={7}>
                     <Traffic />
                 </Col>
             </Row>

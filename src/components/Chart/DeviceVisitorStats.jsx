@@ -30,7 +30,7 @@ const DeviceVisitorStats = () => {
         <div
             className="d-flex justify-content-center align-items-center rounded-0"
             style={{
-                height: "147px",
+                height: "143px",
                 backgroundColor: `${
                     isDark ? "var(--bg-content)" : "var(--bg-content)"
                 }`,
