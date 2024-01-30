@@ -34,13 +34,7 @@ const CardContent = ({
                                 icons ? "justify-content-between" : " "
                             }`}
                         >
-                            <strong
-                                className={cardContentStyle.card_title}
-                                style={{
-                                    fontSize: `${icons ? "0.875em" : "1rem"}`,
-                                    fontWeight: `${icons ? "600" : "700"}`,
-                                }}
-                            >
+                            <strong className={cardContentStyle.card_title}>
                                 {title}
                             </strong>
                             {titleCode}

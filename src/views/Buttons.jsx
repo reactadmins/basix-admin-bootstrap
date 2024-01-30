@@ -54,11 +54,14 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning"
+                                    className="btn btn-warning text-white"
                                 >
                                     Warning
                                 </button>
-                                <button type="button" className="btn btn-info">
+                                <button
+                                    type="button"
+                                    className="btn btn-info text-white"
+                                >
                                     Info
                                 </button>
                                 <button type="button" className="btn btn-light">
@@ -313,14 +316,14 @@ const Buttons = () => {
                                 <button
                                     type="button"
                                     disabled="disabled"
-                                    className="btn btn-warning"
+                                    className="btn btn-warning text-white"
                                 >
                                     Warning
                                 </button>
                                 <button
                                     type="button"
                                     disabled="disabled"
-                                    className="btn btn-info"
+                                    className="btn btn-info text-white"
                                 >
                                     Info
                                 </button>
@@ -481,9 +484,9 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning"
+                                    className="btn btn-warning text-white"
                                 >
-                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
+                                    <i className="fa-solid fa-triangle-exclamation"></i>
                                     Warning
                                 </button>
                                 <button
@@ -602,7 +605,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-sm"
+                                    className="btn btn-warning btn-sm text-white"
                                 >
                                     Warning
                                 </button>
@@ -724,7 +727,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-sm"
+                                    className="btn btn-warning btn-sm text-white"
                                 >
                                     <i className="fa-solid fa-triangle-exclamation"></i>
                                     Warning
@@ -848,7 +851,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-lg"
+                                    className="btn btn-warning btn-lg text-white"
                                 >
                                     Warning
                                 </button>
@@ -969,7 +972,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-lg active"
+                                    className="btn btn-warning btn-lg active text-white"
                                 >
                                     Warning
                                 </button>
@@ -1027,7 +1030,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-outline-warning btn-lg active"
+                                    className="btn btn-outline-warning btn-lg active text-white"
                                 >
                                     Warning
                                 </button>
@@ -1090,7 +1093,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-lg btn-block"
+                                    className="btn btn-warning btn-lg btn-block text-white"
                                 >
                                     Warning
                                 </button>
