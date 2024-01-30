@@ -4,7 +4,12 @@ import TabTwo from "./TabPage/TabTwo";
 import TabThree from "./TabPage/TabThree";
 import tabsStyle from "../../assets/scss/Tabs.module.scss";
 
-const Tab = ({ tabData = {}, tabDirection = "top" }) => {
+const Tab = ({
+    tabData = {},
+    tabDirection = "top",
+    tabActiveBg,
+    tabActiveTextColor,
+}) => {
     const [date, setDate] = useState(1);
     return (
         <div
@@ -19,6 +24,14 @@ const Tab = ({ tabData = {}, tabDirection = "top" }) => {
                                     ? tabsStyle.active_tab
                                     : tabsStyle.inactive_tab
                             }`}
+                            style={{
+                                color: `${
+                                    date === tab.id ? tabActiveTextColor : ""
+                                }`,
+                                background: `${
+                                    date === tab.id ? tabActiveBg : ""
+                                }`,
+                            }}
                             onClick={() => setDate(tab.id)}
                             key={index}
                         >

@@ -7,6 +7,8 @@ const Tabs = () => {
             <Row className="gy-4 gx-4">
                 <Col md={6}>
                     <Tab
+                        tabActiveBg="#292b35"
+                        tabActiveTextColor="#fff"
                         tabData={[
                             {
                                 id: 1,
@@ -25,6 +27,8 @@ const Tabs = () => {
                 </Col>
                 <Col md={6}>
                     <Tab
+                        tabActiveBg="#292b35"
+                        tabActiveTextColor="#fff"
                         tabDirection="left"
                         tabData={[
                             {
@@ -44,6 +48,8 @@ const Tabs = () => {
                 </Col>
                 <Col md={6}>
                     <Tab
+                        tabActiveBg="#292b35"
+                        tabActiveTextColor="#fff"
                         tabDirection="right"
                         tabData={[
                             {
@@ -66,6 +72,8 @@ const Tabs = () => {
                 </Col>
                 <Col md={6}>
                     <Tab
+                        tabActiveBg="#292b35"
+                        tabActiveTextColor="#fff"
                         tabDirection="bottom"
                         tabData={[
                             {
