@@ -139,6 +139,7 @@ const Earning = () => {
                                     width={580}
                                     height={300}
                                     data={earning}
+                                    style={{ top: "5px" }}
                                 >
                                     <Bar dataKey="uv" fill="#F58F8D" />
                                 </BarChart>
