@@ -66,7 +66,7 @@ const OverlayCard = () => {
                             rows="1"
                             className="w-100 form-control"
                         ></textarea>
-                        <div className="mt-2 d-flex justify-content-between">
+                        <div className="mt-4 d-flex justify-content-between">
                             <div>
                                 <a href="#">
                                     <i className="fa-solid fa-camera"></i>

@@ -45,7 +45,7 @@ const Cards = () => {
                         title="Kanye West"
                         userInfo={
                             <p
-                                className="text-center fs-6 px-3"
+                                className="text-center fs-6 px-3 py-3"
                                 style={{ color: "var(--content-text-color)" }}
                             >
                                 Just got a pretty neat project via @ooomf - Give
