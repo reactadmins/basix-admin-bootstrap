@@ -26,8 +26,8 @@ const ProfileCard = ({
                         alt="Card image"
                         className="rounded-circle inline-blocks"
                         style={{
-                            width: `${type == "info" ? "156px" : ""}`,
-                            padding: "22px 0",
+                            width: "156px",
+                            padding: "18px 0",
                         }}
                     />
 

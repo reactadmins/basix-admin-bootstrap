@@ -703,7 +703,26 @@ const Widgets = () => {
                     <NotificationStatsCart />
                 </Col>
                 <Col sm={12} md={6} lg={4}>
-                    <ProfileCard headerTitle="Profile Card" headerIcon="" />
+                    <ProfileCard
+                        type="info"
+                        title="Kanye West"
+                        userInfo={
+                            <p
+                                className="text-center fs-6 px-3 py-3"
+                                style={{ color: "var(--content-text-color)" }}
+                            >
+                                Just got a pretty neat project via @ooomf - Give
+                                it a try
+                                <a
+                                    href="#"
+                                    className="text-decoration-none mx-1"
+                                    style={{ color: "var(--link-color)" }}
+                                >
+                                    http://t.co/e02DwGEeOJ
+                                </a>
+                            </p>
+                        }
+                    />
                 </Col>
                 <Col sm={12} md={6} lg={4}>
                     <OverlayCard />
