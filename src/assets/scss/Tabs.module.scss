@@ -1,63 +1,77 @@
+@import "./variable.scss";
+
 .tablist_container {
-    display: flex;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-content);
-    .tab_title {
-        .title_list {
-            .inactive_tab {
-                line-height: 1.42857;
-                padding: 10px 20px;
-                color: var(--content-text-color);
-                cursor: pointer;
-                span {
-                    font-size: 15px;
-                    font-weight: 300;
+    h5 {
+        font-size: 0.875em;
+        font-weight: 600;
+        color: var(--hedging-text-color) !important;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    .tablist_wrapper {
+        display: flex;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-content);
+        .tab_title {
+            .title_list {
+                .inactive_tab {
+                    line-height: 1.42857;
+                    padding: 10px 20px;
+                    color: var(--content-text-color);
+                    cursor: pointer;
+                    span {
+                        font-size: 15px;
+                        font-weight: 300;
+                    }
+                    i {
+                        font-size: 14px;
+                    }
                 }
-                i {
-                    font-size: 14px;
+                .active_tab {
+                    line-height: 1.42857;
+                    padding: 10px 20px;
+                    cursor: default;
+                    span {
+                        font-size: 15px;
+                        font-weight: 300;
+                    }
+                    i {
+                        font-size: 14px;
+                    }
                 }
             }
-            .active_tab {
-                line-height: 1.42857;
-                padding: 10px 20px;
-                cursor: default;
-                span {
-                    font-size: 15px;
-                    font-weight: 300;
-                }
-                i {
-                    font-size: 14px;
-                }
+        }
+    }
+    .top {
+        flex-direction: column;
+        .tab_title {
+            border-bottom: 1px solid var(--border-color);
+            .title_list {
+                display: flex;
             }
         }
     }
-}
-.top {
-    flex-direction: column;
-    .tab_title {
-        border-bottom: 1px solid var(--border-color);
-        .title_list {
-            display: flex;
+    .bottom {
+        flex-direction: column-reverse;
+        .tab_title {
+            border-top: 1px solid var(--border-color);
+            .title_list {
+                display: flex;
+            }
         }
     }
-}
-.bottom {
-    flex-direction: column-reverse;
-    .tab_title {
-        border-top: 1px solid var(--border-color);
-        .title_list {
-            display: flex;
+    .left {
+        .tab_title {
+            border-right: 1px solid var(--border-color);
+        }
+        .inactive_tab {
+            padding: 10px 56px !important;
         }
     }
-}
-.left {
-    .tab_title {
-        border-right: 1px solid var(--border-color);
-    }
-}
-.right {
-    flex-direction: row-reverse;
-    .tab_title {
-        border-left: 1px solid var(--border-color);
+    .right {
+        flex-direction: row-reverse;
+        .tab_title {
+            border-left: 1px solid var(--border-color);
+        }
     }
 }

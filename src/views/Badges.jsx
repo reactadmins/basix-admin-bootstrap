@@ -11,138 +11,6 @@ const Badges = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
                     <CardContent
-                        title="Badges"
-                        titleCode={
-                            <>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use <code>.badge</code> class within
-                                    <code>{`<span>`} </code>
-                                    elements to create badges:
-                                </small>
-                            </>
-                        }
-                        CardBody={
-                            <>
-                                <a
-                                    href="#"
-                                    className="d-block fs-6 text-decoration-none"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    News
-                                    <Badge className="badge bg-primary mx-1">
-                                        5
-                                    </Badge>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="d-block fs-6 text-decoration-none"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Comments
-                                    <Badge className="badge bg-warning mx-1">
-                                        10
-                                    </Badge>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="d-block fs-6 text-decoration-none"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Updates
-                                    <Badge className="badge bg-success mx-1">
-                                        2
-                                    </Badge>
-                                </a>
-                            </>
-                        }
-                    />
-                </Col>
-                <Col md={6}>
-                    <CardContent
-                        title="Badges in Buttons"
-                        CardBody={
-                            <>
-                                <p
-                                    className="mb-1"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Use <code>{`.badge`}</code> class within
-                                    <code>{`<span>`}</code> elements to create
-                                    badges:
-                                </p>
-                                <div className="d-flex flex-wrap gap-2">
-                                    <Button variant="primary">
-                                        Primary
-                                        <Badge className="badge bg-light text-dark mx-1">
-                                            7
-                                        </Badge>
-                                    </Button>
-                                    <Button variant="success">
-                                        Success
-                                        <Badge className="badge bg-light text-dark mx-1">
-                                            7
-                                        </Badge>
-                                    </Button>
-                                    <Button variant="info text-white">
-                                        Info
-                                        <Badge className="badge bg-light text-dark mx-1">
-                                            7
-                                        </Badge>
-                                    </Button>
-                                    <Button variant="warning text-white">
-                                        Warning
-                                        <Badge className="badge bg-light text-dark mx-1">
-                                            7
-                                        </Badge>
-                                    </Button>
-                                    <Button variant="danger">
-                                        Danger
-                                        <Badge className="badge bg-light text-dark mx-1">
-                                            7
-                                        </Badge>
-                                    </Button>
-                                </div>
-                            </>
-                        }
-                    />
-                </Col>
-            </Row>
-            {/* end badges & badges buttons section*/}
-
-            {/* start labels section*/}
-            <Row className="gy-4 gx-4 mb-4">
-                <Col md={6}>
-                    <CardContent
                         title="Labels"
                         CardBody={
                             <>
@@ -257,41 +125,172 @@ const Badges = () => {
                     />
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Labels"
-                        CardBody={
-                            <>
-                                <p
-                                    className="mb-1"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Use <code>{`.badge`}</code> class within
-                                    <code>{`<span>`}</code> elements to create
-                                    badges:
-                                </p>
-                                <div className="d-flex flex-wrap gap-2">
-                                    <Badge bg="primary">Primary</Badge>
-                                    <Badge bg="secondary">Secondary</Badge>
-                                    <Badge bg="success">Success</Badge>
-                                    <Badge bg="danger">Danger</Badge>
-                                    <Badge bg="warning" text="white">
-                                        Warning
-                                    </Badge>
-                                    <Badge bg="info">Info</Badge>
-                                    <Badge bg="light" text="dark">
-                                        Light
-                                    </Badge>
-                                    <Badge bg="dark">Dark</Badge>
-                                </div>
-                            </>
-                        }
-                    />
+                    <div className="mb-4">
+                        <CardContent
+                            title="Badges"
+                            titleCode={
+                                <>
+                                    <small
+                                        className="mx-2"
+                                        style={{
+                                            fontSize: "80%",
+                                            fontWeight: "400",
+                                        }}
+                                    >
+                                        Use <code>.badge</code> class within
+                                        <code>{`<span>`} </code>
+                                        elements to create badges:
+                                    </small>
+                                </>
+                            }
+                            CardBody={
+                                <>
+                                    <a
+                                        href="#"
+                                        className="d-block fs-6 text-decoration-none"
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var(--content-text-color)"
+                                                    : "var(--content-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        News
+                                        <Badge className="badge bg-primary mx-1">
+                                            5
+                                        </Badge>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="d-block fs-6 text-decoration-none"
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var(--content-text-color)"
+                                                    : "var(--content-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Comments
+                                        <Badge className="badge bg-warning mx-1">
+                                            10
+                                        </Badge>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="d-block fs-6 text-decoration-none"
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var(--content-text-color)"
+                                                    : "var(--content-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Updates
+                                        <Badge className="badge bg-success mx-1">
+                                            2
+                                        </Badge>
+                                    </a>
+                                </>
+                            }
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <CardContent
+                            title="Badges in Buttons"
+                            CardBody={
+                                <>
+                                    <p
+                                        className="mb-1"
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var(--content-text-color)"
+                                                    : "var(--content-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Use <code>{`.badge`}</code> class within
+                                        <code>{`<span>`}</code> elements to
+                                        create badges:
+                                    </p>
+                                    <div className="d-flex flex-wrap gap-2">
+                                        <Button variant="primary">
+                                            Primary
+                                            <Badge className="badge bg-light text-dark mx-1">
+                                                7
+                                            </Badge>
+                                        </Button>
+                                        <Button variant="success">
+                                            Success
+                                            <Badge className="badge bg-light text-dark mx-1">
+                                                7
+                                            </Badge>
+                                        </Button>
+                                        <Button variant="info text-dark">
+                                            Info
+                                            <Badge className="badge bg-light text-dark mx-1">
+                                                7
+                                            </Badge>
+                                        </Button>
+                                        <Button variant="warning text-dark">
+                                            Warning
+                                            <Badge className="badge bg-light text-dark mx-1">
+                                                7
+                                            </Badge>
+                                        </Button>
+                                        <Button variant="danger">
+                                            Danger
+                                            <Badge className="badge bg-light text-dark mx-1">
+                                                7
+                                            </Badge>
+                                        </Button>
+                                    </div>
+                                </>
+                            }
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <CardContent
+                            title="Labels"
+                            CardBody={
+                                <>
+                                    <p
+                                        className="mb-1"
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var(--content-text-color)"
+                                                    : "var(--content-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Use <code>{`.badge`}</code> class within
+                                        <code>{`<span>`}</code> elements to
+                                        create badges:
+                                    </p>
+                                    <div className="d-flex flex-wrap gap-2">
+                                        <Badge bg="primary">Primary</Badge>
+                                        <Badge bg="secondary">Secondary</Badge>
+                                        <Badge bg="success">Success</Badge>
+                                        <Badge bg="danger">Danger</Badge>
+                                        <Badge bg="warning" text="dark">
+                                            Warning
+                                        </Badge>
+                                        <Badge bg="info" text="dark">
+                                            Info
+                                        </Badge>
+                                        <Badge bg="light" text="dark">
+                                            Light
+                                        </Badge>
+                                        <Badge bg="dark">Dark</Badge>
+                                    </div>
+                                </>
+                            }
+                        />
+                    </div>
                 </Col>
             </Row>
             {/* end badges & badges buttons section*/}

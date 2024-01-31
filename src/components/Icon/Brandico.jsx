@@ -7,6 +7,13 @@ import iconStyle from "../../assets/scss/IconStyle.module.scss";
 
 const Brandico = () => {
     const [search, setSearch] = useState("");
+    const [copy, setCopy] = useState("copy");
+
+    const handelCopy = (e) => {
+        console.log(typeof e);
+        navigator.clipboard.writeText(e);
+        setCopy("copyed");
+    };
 
     return (
         <div
@@ -69,6 +76,14 @@ const Brandico = () => {
                                             <span className="mt-2 d-block">
                                                 {icons}
                                             </span>
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    handelCopy(icons)
+                                                }
+                                            >
+                                                <i className="fa-regular fa-copy"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 ))}

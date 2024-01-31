@@ -54,24 +54,15 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning text-white"
+                                    className="btn btn-warning text-dark"
                                 >
                                     Warning
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-info text-white"
+                                    className="btn btn-info text-dark"
                                 >
                                     Info
-                                </button>
-                                <button type="button" className="btn btn-light">
-                                    Light
-                                </button>
-                                <button type="button" className="btn btn-dark">
-                                    Dark
-                                </button>
-                                <button type="button" className="btn btn-link">
-                                    Link
                                 </button>
                             </div>
                         }
@@ -133,18 +124,6 @@ const Buttons = () => {
                                     className="btn btn-outline-info"
                                 >
                                     Info
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-light text-dark"
-                                >
-                                    Light
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-dark"
-                                >
-                                    Dark
                                 </button>
                             </div>
                         }
@@ -316,37 +295,16 @@ const Buttons = () => {
                                 <button
                                     type="button"
                                     disabled="disabled"
-                                    className="btn btn-warning text-white"
+                                    className="btn btn-warning text-dark"
                                 >
                                     Warning
                                 </button>
                                 <button
                                     type="button"
                                     disabled="disabled"
-                                    className="btn btn-info text-white"
+                                    className="btn btn-info text-dark"
                                 >
                                     Info
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-light"
-                                >
-                                    Light
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-dark"
-                                >
-                                    Dark
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-link"
-                                >
-                                    Link
                                 </button>
                             </div>
                         }
@@ -415,27 +373,6 @@ const Buttons = () => {
                                 >
                                     Info
                                 </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-light text-dark"
-                                >
-                                    Light
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-dark"
-                                >
-                                    Dark
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-link"
-                                >
-                                    Link
-                                </button>
                             </div>
                         }
                     />
@@ -484,7 +421,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning text-white"
+                                    className="btn btn-warning text-dark"
                                 >
                                     <i className="fa-solid fa-triangle-exclamation"></i>
                                     Warning
@@ -494,9 +431,6 @@ const Buttons = () => {
                                     className="btn btn-danger"
                                 >
                                     <i className="fa fa-rss"></i> Danger
-                                </button>
-                                <button type="button" className="btn btn-link">
-                                    <i className="fa fa-link"></i> Link
                                 </button>
                             </div>
                         }
@@ -552,12 +486,6 @@ const Buttons = () => {
                                 >
                                     <i className="fa fa-rss"></i> Danger
                                 </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link"
-                                >
-                                    <i className="fa fa-link"></i> Link
-                                </button>
                             </div>
                         }
                     />
@@ -605,7 +533,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-sm text-white"
+                                    className="btn btn-warning btn-sm text-dark"
                                 >
                                     Warning
                                 </button>
@@ -727,7 +655,7 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-sm text-white"
+                                    className="btn btn-warning btn-sm text-dark"
                                 >
                                     <i className="fa-solid fa-triangle-exclamation"></i>
                                     Warning
@@ -851,21 +779,9 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-lg text-white"
+                                    className="btn btn-warning btn-lg text-dark"
                                 >
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-lg"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-lg"
-                                >
-                                    Link
                                 </button>
                             </div>
                         }
@@ -912,18 +828,6 @@ const Buttons = () => {
                                     className="btn btn-outline-warning btn-lg"
                                 >
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-lg"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-lg"
-                                >
-                                    Link
                                 </button>
                             </div>
                         }
@@ -972,21 +876,9 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-warning btn-lg active text-white"
+                                    className="btn btn-warning btn-lg active text-dark"
                                 >
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-lg active"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-lg active text-primary"
-                                >
-                                    Link
                                 </button>
                             </div>
                         }
@@ -1030,21 +922,9 @@ const Buttons = () => {
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn btn-outline-warning btn-lg active text-white"
+                                    className="btn btn-outline-warning btn-lg active text-dark"
                                 >
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-lg active"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-lg active text-primary"
-                                >
-                                    Link
                                 </button>
                             </div>
                         }

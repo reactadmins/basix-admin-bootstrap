@@ -156,7 +156,7 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-            <h5 className="heading-title mb-3 mt-4">Desktop Grid</h5>
+            <h5 className="heading-title mb-3 mt-5">Desktop Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col col-lg-12">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -279,7 +279,7 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-            <h5 className="heading-title mt-4 mb-3">
+            <h5 className="heading-title mt-5 mb-3">
                 Mobile, Tablet, and Desktop
             </h5>
             <div className="row gy-4 gx-4 mb-4">
@@ -367,7 +367,7 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-            <h5 className="heading-title mb-3 mt-4">Offset Grid</h5>
+            <h5 className="heading-title mb-3 mt-5">Offset Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-6 col-sm-6 ms-auto">
                     <section className={`${gridsStyle.card} card border-0`}>

@@ -5,6 +5,7 @@ import TabThree from "./TabPage/TabThree";
 import tabsStyle from "../../assets/scss/Tabs.module.scss";
 
 const Tab = ({
+    title = "",
     tabData = {},
     tabDirection = "top",
     tabActiveBg,
@@ -12,40 +13,48 @@ const Tab = ({
 }) => {
     const [date, setDate] = useState(1);
     return (
-        <div
-            className={`${tabsStyle.tablist_container} ${tabsStyle[tabDirection]}`}
-        >
-            <div className={tabsStyle.tab_title}>
-                <ul className={tabsStyle.title_list}>
-                    {tabData?.map((tab, index) => (
-                        <li
-                            className={`${
-                                date === tab.id
-                                    ? tabsStyle.active_tab
-                                    : tabsStyle.inactive_tab
-                            }`}
-                            style={{
-                                color: `${
-                                    date === tab.id ? tabActiveTextColor : ""
-                                }`,
-                                background: `${
-                                    date === tab.id ? tabActiveBg : ""
-                                }`,
-                            }}
-                            onClick={() => setDate(tab.id)}
-                            key={index}
-                        >
-                            <div className="d-flex justify-content-center align-items-center gap-2">
-                                {tab.icon && <i className={`${tab.icon}`}></i>}
-                                {tab.title && <span>{tab.title}</span>}
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+        <div className={tabsStyle.tablist_container}>
+            {title ? <h5>{title}</h5> : null}
+
+            <div
+                className={`${tabsStyle.tablist_wrapper} ${tabsStyle[tabDirection]}`}
+            >
+                <div className={tabsStyle.tab_title}>
+                    <ul className={tabsStyle.title_list}>
+                        {tabData?.map((tab, index) => (
+                            <li
+                                className={`${
+                                    date === tab.id
+                                        ? tabsStyle.active_tab
+                                        : tabsStyle.inactive_tab
+                                }`}
+                                style={{
+                                    color: `${
+                                        date === tab.id
+                                            ? tabActiveTextColor
+                                            : ""
+                                    }`,
+                                    background: `${
+                                        date === tab.id ? tabActiveBg : ""
+                                    }`,
+                                }}
+                                onClick={() => setDate(tab.id)}
+                                key={index}
+                            >
+                                <div className="d-flex justify-content-center align-items-center gap-2">
+                                    {tab.icon && (
+                                        <i className={`${tab.icon}`}></i>
+                                    )}
+                                    {tab.title && <span>{tab.title}</span>}
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                {date === 1 && <TabOne />}
+                {date === 2 && <TabTwo />}
+                {date === 3 && <TabThree />}
             </div>
-            {date === 1 && <TabOne />}
-            {date === 2 && <TabTwo />}
-            {date === 3 && <TabThree />}
         </div>
     );
 };
