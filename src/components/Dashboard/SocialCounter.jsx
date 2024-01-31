@@ -112,7 +112,6 @@ const SocialCounter = ({
                                     {socialUser.usre}
                                 </span>
                                 <span
-                                    span
                                     className="d-block text-uppercase position-relative"
                                     style={{ fontSize: "14px", top: "-3px" }}
                                 >
