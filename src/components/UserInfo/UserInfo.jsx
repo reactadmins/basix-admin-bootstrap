@@ -21,7 +21,7 @@ const UserInfo = ({
             }}
         >
             <Card.Body>
-                <div className="text-end mt-2 mb-3">
+                <div className="text-end mb-3">
                     <i
                         className={`${icon}`}
                         style={{
