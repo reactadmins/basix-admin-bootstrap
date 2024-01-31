@@ -6,7 +6,7 @@ const Modals = () => {
     return (
         <Container fluid className="p-0">
             <Row>
-                <Col Col sm={12} md={12} lg={12} xl={7}>
+                <Col sm={12} md={12} lg={12} xl={7}>
                     <CardContent
                         title="Modals"
                         CardBody={

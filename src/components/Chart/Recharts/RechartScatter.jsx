@@ -69,7 +69,7 @@ const RechartScatter = () => {
                                 <YAxis
                                     yAxisId="right"
                                     type="number"
-                                    dataKey="y"
+                                    dataKey="z"
                                     name="weight"
                                     unit="kg"
                                     orientation="right"
