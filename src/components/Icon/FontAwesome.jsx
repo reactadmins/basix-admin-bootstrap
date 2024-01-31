@@ -4,9 +4,11 @@ import fontAwesome from "../data/font-awesome.json";
 import CardContent from "../Card/CardContent";
 import { Col, Row } from "react-bootstrap";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
+import CopyButton from "./CopyButton";
 
 const FontAwesome = () => {
     const [search, setSearch] = useState("");
+    const [copy, setCopy] = useState();
 
     return (
         <div
@@ -77,6 +79,12 @@ const FontAwesome = () => {
                                                     <span className="mt-2 d-block">
                                                         {item}
                                                     </span>
+                                                    <CopyButton
+                                                        copy={copy}
+                                                        setCopy={setCopy}
+                                                        iconsName={item}
+                                                        copyId={index}
+                                                    />
                                                 </div>
                                             </Col>
                                         );

@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import fontelico from "../data/fontelico.json";
 import CardContent from "../Card/CardContent";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
+import CopyButton from "./CopyButton";
 
 const Fontelico = () => {
     const [search, setSearch] = useState("");
+    const [copy, setCopy] = useState();
 
     return (
         <div
@@ -69,6 +71,12 @@ const Fontelico = () => {
                                             <span className="mt-2 d-block">
                                                 {icons}
                                             </span>
+                                            <CopyButton
+                                                copy={copy}
+                                                setCopy={setCopy}
+                                                iconsName={icons}
+                                                copyId={index}
+                                            />
                                         </div>
                                     </div>
                                 ))}

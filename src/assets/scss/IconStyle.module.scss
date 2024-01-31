@@ -25,14 +25,14 @@
                 }
             }
             button {
-                border: 1px solid #198754;
+                border: 1px solid #666666;
                 border-left: 0px;
-                background-color: #198754;
+                background-color: #666666;
                 border-radius: 0 4px 4px 0;
                 color: #fff;
                 &:active {
-                    border-color: #198754;
-                    background-color: #198754;
+                    border-color: #666666;
+                    background-color: #666666;
                     color: #fff;
                 }
             }
@@ -72,6 +72,9 @@
             }
             button {
                 display: block;
+                i {
+                    font-size: 14px;
+                }
             }
         }
     }

@@ -144,7 +144,7 @@ const Badges = () => {
                                 </>
                             }
                             CardBody={
-                                <>
+                                <div className="d-flex gap-2">
                                     <a
                                         href="#"
                                         className="d-block fs-6 text-decoration-none"
@@ -193,7 +193,7 @@ const Badges = () => {
                                             2
                                         </Badge>
                                     </a>
-                                </>
+                                </div>
                             }
                         />
                     </div>

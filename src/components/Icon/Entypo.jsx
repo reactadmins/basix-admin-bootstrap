@@ -5,9 +5,11 @@ import entypo from "../data/entypo.json";
 import CardContent from "../Card/CardContent";
 import { Icon } from "@iconify/react";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
+import CopyButton from "./CopyButton";
 
 const Entypo = () => {
     const [search, setSearch] = useState("");
+    const [copy, setCopy] = useState();
 
     return (
         <div
@@ -70,6 +72,12 @@ const Entypo = () => {
                                             <span className="mt-2 d-block">
                                                 {icons}
                                             </span>
+                                            <CopyButton
+                                                copy={copy}
+                                                setCopy={setCopy}
+                                                iconsName={icons}
+                                                copyId={index}
+                                            />
                                         </div>
                                     </div>
                                 ))}
@@ -102,6 +110,12 @@ const Entypo = () => {
                                             <span className="mt-2 d-block">
                                                 {icons}
                                             </span>
+                                            <CopyButton
+                                                copy={copy}
+                                                setCopy={setCopy}
+                                                iconsName={icons}
+                                                copyId={index}
+                                            />
                                         </div>
                                     </div>
                                 ))}
