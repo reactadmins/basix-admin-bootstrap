@@ -1,14 +1,33 @@
 @import "../scss/variable.scss";
 
 .table_wrapper {
-    input[placeholder="Search"] {
-        color: var(--hedging-text-color);
-        border-color: var(--border-color);
-        background-color: var(--bg-content);
-        &::placeholder {
+    .search_wrapper {
+        input[placeholder="Search"] {
             color: var(--hedging-text-color);
+            border-color: var(--border-color);
+            background-color: var(--bg-content);
+            border-radius: 4px 0 0 4px;
+            &:focus {
+                box-shadow: none;
+            }
+            &::placeholder {
+                color: var(--hedging-text-color);
+            }
+        }
+        button {
+            border: 1px solid #198754;
+            border-left: 0px;
+            background-color: #198754;
+            border-radius: 0 4px 4px 0;
+            color: #fff;
+            &:active {
+                border-color: #198754;
+                background-color: #198754;
+                color: #fff;
+            }
         }
     }
+
     .show_entries {
         select {
             option {
@@ -16,14 +35,22 @@
                 border-bottom: 1px solid var(--border-color);
                 background-color: var(--bg-content);
             }
+            &:focus-visible {
+                box-shadow: none;
+            }
         }
     }
     .table {
         .thead {
             tr {
                 td {
+                    font-size: 16px;
+                    font-weight: 600;
                     padding: 0.75rem;
                     border-bottom: 0px;
+                    &:last-child {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -34,6 +61,9 @@
                     padding: 0.75rem;
                     border-top: 1px solid #dee2e6;
                     border-bottom: 0px;
+                    &:last-child {
+                        text-align: center;
+                    }
                 }
                 &:nth-child(even) {
                     background-color: #fff;

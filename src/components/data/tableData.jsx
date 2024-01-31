@@ -23,11 +23,7 @@ const tableData = [
         city: "Manchester",
         score: 57,
         tableBg: "table-danger",
-        statusIcon: "fa fa-exclamation-triangle",
-        badge: {
-            status: "danger",
-            badgeBg: "bg-danger",
-        },
+        statusIcon: "fa-solid fa-skull-crossbones text-danger",
     },
     {
         name: "Lendley Wintz",
@@ -35,11 +31,7 @@ const tableData = [
         city: "Wien",
         score: 113,
         tableBg: "table-success",
-        statusIcon: "fa fa-check",
-        badge: {
-            status: "success",
-            badgeBg: "bg-success",
-        },
+        statusIcon: "fa fa-check text-success",
     },
     {
         name: "Barbara Noz",
@@ -47,10 +39,7 @@ const tableData = [
         city: "Brussels",
         score: 68,
         tableBg: "table-warning",
-        badge: {
-            status: "warning",
-            badgeBg: "bg-warning",
-        },
+        statusIcon: "fa fa-exclamation-triangle  text-warning",
     },
     {
         name: "Matthew McCormick",
@@ -64,10 +53,7 @@ const tableData = [
         city: "Washington",
         score: 280,
         tableBg: "table-info",
-        badge: {
-            status: "info",
-            badgeBg: "bg-info",
-        },
+        statusIcon: "fa-solid fa-circle-exclamation text-info",
     },
     {
         name: "Matthew McCormick",

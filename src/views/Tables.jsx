@@ -10,6 +10,7 @@ const Tables = () => {
                 <Col sm={12}>
                     <CardContent
                         title="Basic Table"
+                        cardPadding="0 16px 16px 16px"
                         CardBody={
                             <>
                                 <Table />
@@ -20,6 +21,7 @@ const Tables = () => {
                 <Col sm={12}>
                     <CardContent
                         title="Colors, Icons, Labels"
+                        cardPadding="0 16px 16px 16px"
                         CardBody={
                             <>
                                 <Table isVariants={true} />
@@ -30,6 +32,7 @@ const Tables = () => {
                 <Col sm={12}>
                     <CardContent
                         title="Search & Pagination"
+                        cardPadding="0 16px 16px 16px"
                         CardBody={
                             <>
                                 <Table isSearch={true} />

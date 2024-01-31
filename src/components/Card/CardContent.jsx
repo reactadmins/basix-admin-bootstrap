@@ -11,6 +11,7 @@ const CardContent = ({
     CardBody = "",
     bodyHeight = "",
     CardFooter = "",
+    cardPadding = "",
 }) => {
     const [isOpen, setIsOpen] = useState();
     const [hiddenContent, setHiddenContent] = useState();
@@ -95,7 +96,7 @@ const CardContent = ({
                     </CardHeader>
                     <Card.Body
                         className={cardContentStyle.card_body}
-                        style={{ height: bodyHeight }}
+                        style={{ height: bodyHeight, padding: cardPadding }}
                     >
                         {CardBody}
                     </Card.Body>

@@ -15,18 +15,17 @@ const Table = ({ isSearch = false, isVariants = false }) => {
         >
             {isSearch ? (
                 <div className="d-flex justify-content-between align-items-center mt-2 mb-4">
-                    <div className="d-flex align-items-center">
+                    <div
+                        className={`d-flex align-items-center ${tablesStyle.search_wrapper}`}
+                    >
                         <input
-                            className="form-control me-2"
+                            className="form-control"
                             type="search"
                             placeholder="Search"
                             aria-label="Search"
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <button
-                            className="btn btn-outline-success"
-                            type="submit"
-                        >
+                        <button className="btn" type="submit">
                             <i className="fa fa fa-search"></i>
                         </button>
                     </div>
@@ -48,12 +47,11 @@ const Table = ({ isSearch = false, isVariants = false }) => {
             <table className={`table ${tablesStyle.table}`}>
                 <thead className={`text-primary thead ${tablesStyle.thead}`}>
                     <tr>
-                        {isVariants ? <td></td> : null}
                         <td>Name</td>
                         <td>Email</td>
                         <td>City</td>
                         <td className="text-center">Score</td>
-                        {isVariants ? <td></td> : null}
+                        {isVariants ? <td>Status</td> : null}
                     </tr>
                 </thead>
                 <tbody className={`tbody ${tablesStyle.tbody}`}>
@@ -81,17 +79,6 @@ const Table = ({ isSearch = false, isVariants = false }) => {
                                         : ""
                                 }`}
                             >
-                                {isVariants ? (
-                                    <td>
-                                        {item?.badge?.status ? (
-                                            <span
-                                                className={`badge text-uppercase ${item?.badge?.badgeBg}`}
-                                            >
-                                                {item?.badge?.status}
-                                            </span>
-                                        ) : null}
-                                    </td>
-                                ) : null}
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
                                 <td>{item.city}</td>
