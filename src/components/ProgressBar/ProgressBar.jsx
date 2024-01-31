@@ -23,6 +23,7 @@ const ProgressBar = ({
                     backgroundColor: `${strokeColor}`,
                     width: `${percent}%`,
                     height: "100%",
+                    alignItems: "center",
                 }}
                 aria-valuenow="0"
                 aria-valuemin="0"
