@@ -24,24 +24,19 @@ const FontAwesome = () => {
                             <i className="fa-regular fa-hand-point-left fs-4 text-secondary"></i>
                         </Link>
                         <div className="col-md-4">
-                            <div className="form-group ">
-                                <form action="" className="d-flex gap-2">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="SearchIcon"
-                                        placeholder="Search Icon"
-                                        onChange={(e) =>
-                                            setSearch(e.target.value)
-                                        }
-                                    />
-                                    <button
-                                        type="submit"
-                                        className="btn btn-success"
-                                    >
-                                        <i className="fa fa fa-search"></i>
-                                    </button>
-                                </form>
+                            <div
+                                className={`d-flex ${iconStyle.search_wrapper}`}
+                            >
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="SearchIcon"
+                                    placeholder="Search Icon"
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+                                <button type="submit" className="btn">
+                                    <i className="fa fa fa-search"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
