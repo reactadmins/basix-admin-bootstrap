@@ -9,7 +9,7 @@ import Switcher from "./components/Switcher/Switcher.jsx";
 function App() {
     const [sidebarMini, setSidebarMini] = useState(false);
     return (
-        <div className="admin-container position-relative">
+        <div className="admin-container position-relative overflow-hidden">
             <DashboardDataProvider>
                 <EntypoSprite />
                 <Routes>

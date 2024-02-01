@@ -139,22 +139,31 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                 const dataArr = data.split("\n");
                 const firstRow = dataArr?.[0]?.split(",");
 
-                const sheetData = dataArr.slice(1, dataArr.length).reduce((acc, current) => {
-                    const rowDataArr = current.split(",");
-                    const rowData = {};
-                    for (let i = 0; i < firstRow?.length; i++) {
-                        Object.assign(rowData, { [firstRow[i]]: rowDataArr[i] });
-                    }
-                    if (rowDataArr?.[1]) {
-                        Object.assign(acc, { ...acc, [rowDataArr?.[1]]: rowData });
-                    }
-                    return acc;
-                }, {});
+                const sheetData = dataArr
+                    .slice(1, dataArr.length)
+                    .reduce((acc, current) => {
+                        const rowDataArr = current.split(",");
+                        const rowData = {};
+                        for (let i = 0; i < firstRow?.length; i++) {
+                            Object.assign(rowData, {
+                                [firstRow[i]]: rowDataArr[i],
+                            });
+                        }
+                        if (rowDataArr?.[1]) {
+                            Object.assign(acc, {
+                                ...acc,
+                                [rowDataArr?.[1]]: rowData,
+                            });
+                        }
+                        return acc;
+                    }, {});
 
                 //counter_time
 
                 const mainObj = sheetData[product_slug];
-                const checkCounterTime = new Date(mainObj.counter_time).getTime();
+                const checkCounterTime = new Date(
+                    mainObj.counter_time
+                ).getTime();
 
                 if (mainObj.counter_time && checkCounterTime < currentDate) {
                     mainObj.counter_time = checkCounterTime + day3;
@@ -171,7 +180,10 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                     exp_t: currentDate + day1,
                 };
 
-                localStorage.setItem(`${product_slug}_offer_data`, JSON.stringify(obj));
+                localStorage.setItem(
+                    `${product_slug}_offer_data`,
+                    JSON.stringify(obj)
+                );
 
                 // offerStartDate < currentDate && currentDate < offerEndDate && isOpenOffer
                 // if (mainObj?.start_date < currentDate && currentDate < mainObj?.end_date) {
@@ -188,7 +200,9 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
 
     // Get Github Star Count
     const getGithubStarCount = async () => {
-        const res = await fetch("https://api.github.com/repos/reactadmins/bootstrap-basix-admin");
+        const res = await fetch(
+            "https://api.github.com/repos/reactadmins/bootstrap-basix-admin"
+        );
         const data = await res.json();
         if (data?.stargazers_count) {
             setGithubStart(data?.stargazers_count);
@@ -201,7 +215,9 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
         // call github start count
         getGithubStarCount();
 
-        const savedOfferData = localStorage.getItem(`${product_slug}_offer_data`);
+        const savedOfferData = localStorage.getItem(
+            `${product_slug}_offer_data`
+        );
         const isShowOffer = localStorage.getItem(`${product_slug}_sl`);
 
         // Manage Google Sheet Data
@@ -209,7 +225,10 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
             const offerData = JSON.parse(savedOfferData);
             const currentTime = new Date().getTime();
 
-            if (Object.keys(offerData).length > 0 && currentTime < offerData?.exp_t) {
+            if (
+                Object.keys(offerData).length > 0 &&
+                currentTime < offerData?.exp_t
+            ) {
                 setOfferData(offerData?.data);
                 setIsOpenOffer(true);
             } else {
@@ -238,25 +257,47 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
     }, [isSwitcher]);
 
     return (
-        <div className={switcherStyle.switch_wrapper} data={!isThemeDirection ? "false" : "true"}>
+        <div
+            className={switcherStyle.switch_wrapper}
+            data={!isThemeDirection ? "false" : "true"}
+        >
             <button
                 type="button"
                 className={switcherStyle.switch_btn}
-                onClick={() => setIsSwitcher(!isSwitcher)}>
+                onClick={() => setIsSwitcher(!isSwitcher)}
+            >
                 <i className="fa-solid fa-gear"></i>
             </button>
 
-            {offerStartDate < currentDate && currentDate < offerEndDate && isOpenOffer ? (
-                <OfferNotice offerData={offerData} onCloseOffer={handleCloseOffer} />
+            {offerStartDate < currentDate &&
+            currentDate < offerEndDate &&
+            isOpenOffer ? (
+                <OfferNotice
+                    offerData={offerData}
+                    onCloseOffer={handleCloseOffer}
+                />
             ) : null}
 
             <div
                 className={`${switcherStyle.switch_menu}`}
                 style={
-                    !isSwitcher
-                        ? { transform: "translateX(0)" }
-                        : { transform: "translateX(350px)" }
-                }>
+                    !isThemeDirection
+                        ? {
+                              transform: `${
+                                  !isSwitcher
+                                      ? "translateX(0)"
+                                      : "translateX(350px"
+                              }`,
+                          }
+                        : {
+                              transform: `${
+                                  !isSwitcher
+                                      ? "translateX(0)"
+                                      : "translateX(-350px"
+                              }`,
+                          }
+                }
+            >
                 <div className="px-3 py-4">
                     <SwitchControl
                         title="Layouts Theme"
@@ -302,19 +343,25 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                     <SidebarBgControl />
 
                     <div className="py-3">
-                        <a href="#" target="_blank" className={switcherStyle.bownload_btn}>
+                        <a
+                            href="#"
+                            target="_blank"
+                            className={switcherStyle.bownload_btn}
+                        >
                             Download Free
                         </a>
                         <a
                             href="#"
                             target="_blank"
-                            className={`${switcherStyle.purchase_btn} mt-2`}>
+                            className={`${switcherStyle.purchase_btn} mt-2`}
+                        >
                             Purchase Now
                         </a>
                         <a
                             href="#"
                             target="_blank"
-                            className={`${switcherStyle.documentatione_btn} mt-2`}>
+                            className={`${switcherStyle.documentatione_btn} mt-2`}
+                        >
                             Documentation
                         </a>
                     </div>
@@ -323,14 +370,16 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                             <a
                                 href={facebookURL}
                                 target="_blank"
-                                className={switcherStyle.facebook_btn}>
+                                className={switcherStyle.facebook_btn}
+                            >
                                 <i className="fa-brands fa-facebook" />
                                 <span>Share</span>
                             </a>
                             <a
                                 href={twitterURL}
                                 target="_blank"
-                                className={switcherStyle.twitter_btn}>
+                                className={switcherStyle.twitter_btn}
+                            >
                                 <i className="fa-brands fa-twitter" />
                                 <span>Tweet</span>
                             </a>
@@ -338,11 +387,14 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
                                 <a
                                     href="https://github.com/reactadmins/bootstrap-basix-admin"
                                     target="_blank"
-                                    className={switcherStyle.github_btn}>
+                                    className={switcherStyle.github_btn}
+                                >
                                     <i className="fa-brands fa-github" />
                                     <span>Star</span>
                                 </a>
-                                <span className={switcherStyle.github_star_count}>
+                                <span
+                                    className={switcherStyle.github_star_count}
+                                >
                                     {githubStart}
                                 </span>
                             </div>
@@ -354,7 +406,8 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
             {!isSwitcher ? (
                 <div
                     className={switcherStyle.overlay_bg}
-                    onClick={() => setIsSwitcher(!isSwitcher)}></div>
+                    onClick={() => setIsSwitcher(!isSwitcher)}
+                ></div>
             ) : null}
         </div>
     );
