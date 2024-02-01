@@ -50,7 +50,8 @@ export const DashboardDataProvider = ({ children }) => {
                 setIsThemeDirection,
                 activeVariation,
                 setActiveVariation,
-            }}>
+            }}
+        >
             {children}
         </DashboardDataCreateContext.Provider>
     );
