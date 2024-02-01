@@ -307,3 +307,13 @@
         }
     }
 }
+@media only screen and (max-width: 1024px) {
+    .sidebar_nav_wrapper {
+        .main_menu {
+            overflow: scroll !important;
+            // &:hover {
+            //     overflow: scroll;
+            // }
+        }
+    }
+}
