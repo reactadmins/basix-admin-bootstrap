@@ -1,10 +1,10 @@
 import "leaflet/dist/leaflet.css";
 import CardContent from "../components/Card/CardContent";
-import PopupWithMarker from "../components/Maps/LeafletMaps/PopupWithMarker";
+import Voyager from "../components/Maps/LeafletMaps/Voyager";
 import { Col, Container, Row } from "react-bootstrap";
-import VectorLayers from "../components/Maps/LeafletMaps/VectorLayers";
-import LayersControlMaps from "../components/Maps/LeafletMaps/LayersControlMaps";
-import LeafletSVGOverlay from "../components/Maps/LeafletMaps/LeafletSVGOverlay";
+import StreetMap from "../components/Maps/LeafletMaps/StreetMap";
+import WorldImagery from "../components/Maps/LeafletMaps/WorldImagery";
+import DarkMatter from "../components/Maps/LeafletMaps/DarkMatter";
 
 const LeafletMaps = () => {
     return (
@@ -12,40 +12,40 @@ const LeafletMaps = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col col={6} lg={6} xl={6}>
                     <CardContent
-                        title="Popup with Marker"
+                        title="Voyager"
                         CardBody={
                             <>
-                                <PopupWithMarker />
+                                <Voyager />
                             </>
                         }
                     />
                 </Col>
                 <Col col={6} lg={6} xl={6}>
                     <CardContent
-                        title="Vector layers"
+                        title="Street Map"
                         CardBody={
                             <>
-                                <VectorLayers />
+                                <StreetMap />
                             </>
                         }
                     />
                 </Col>
                 <Col col={6} lg={6} xl={6}>
                     <CardContent
-                        title="Layers control Maps"
+                        title="WorldImagery"
                         CardBody={
                             <>
-                                <LayersControlMaps />
+                                <WorldImagery />
                             </>
                         }
                     />
                 </Col>
                 <Col col={6} lg={6} xl={6}>
                     <CardContent
-                        title="Leaflet SVG Overlay"
+                        title="Dark Matter"
                         CardBody={
                             <>
-                                <LeafletSVGOverlay />
+                                <DarkMatter />
                             </>
                         }
                     />
