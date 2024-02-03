@@ -9,12 +9,6 @@ const StackedForm = () => {
                     <>
                         <form>
                             <div className="form-group">
-                                <label
-                                    htmlFor="n-email"
-                                    className="d-block mb-1 form-control-label"
-                                >
-                                    Email
-                                </label>
                                 <input
                                     id="n-email"
                                     type="email"
@@ -22,17 +16,8 @@ const StackedForm = () => {
                                     placeholder="Enter Email...."
                                     required
                                 />
-                                <small className="help-block form-text">
-                                    Please enter your email
-                                </small>
                             </div>
                             <div className="form-group mt-2">
-                                <label
-                                    htmlFor="n-password"
-                                    className="d-block mb-1 form-control-label"
-                                >
-                                    Password
-                                </label>
                                 <input
                                     id="n-password"
                                     type="password"
@@ -40,16 +25,13 @@ const StackedForm = () => {
                                     placeholder="Enter password...."
                                     required
                                 />
-                                <small className="help-block form-text">
-                                    Please enter your password
-                                </small>
                             </div>
                         </form>
                     </>
                 }
                 CardFooter={
                     <>
-                        <div className="d-flex gap-3">
+                        <div className="d-flex gap-3 py-1">
                             <button
                                 type="submit"
                                 className="btn btn-primary btn-sm"

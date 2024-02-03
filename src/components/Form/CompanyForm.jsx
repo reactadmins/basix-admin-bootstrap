@@ -93,6 +93,11 @@ const CompanyForm = () => {
                                 className="form-control"
                             />
                         </div>
+                        <div className="mt-3 mb-3">
+                            <button type="submit" className="btn btn-primary">
+                                submit
+                            </button>
+                        </div>
                     </form>
                 }
             />

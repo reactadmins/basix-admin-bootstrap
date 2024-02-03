@@ -7,7 +7,7 @@ const BasicElementForm = () => {
             <CardContent
                 title="Basic Element Form"
                 CardBody={
-                    <>
+                    <div className="overflow-hidden">
                         <form>
                             <div className="form-group mt-3">
                                 <Row>
@@ -545,20 +545,6 @@ const BasicElementForm = () => {
                                 </Row>
                             </div>
                         </form>
-                    </>
-                }
-                CardFooter={
-                    <div className="d-flex gap-3">
-                        <button
-                            type="submit"
-                            className="btn btn-primary btn-sm"
-                        >
-                            <i className="fa-regular fa-circle-check"></i>{" "}
-                            Submit
-                        </button>
-                        <button type="submit" className="btn btn-danger btn-sm">
-                            <i className="fa-solid fa-ban"></i> Submit
-                        </button>
                     </div>
                 }
             />

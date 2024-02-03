@@ -187,69 +187,70 @@ const BasicForm = () => {
                             />
                         </Col>
                         {/* end input grid section */}
+
+                        {/* start inline from section */}
+                        <Col sm={12}>
+                            <CardContent
+                                title="Inline Form"
+                                CardBody={
+                                    <>
+                                        <form className="d-flex gap-3">
+                                            <div className="form-group d-flex gap-2 align-items-center">
+                                                <label
+                                                    className="form-control-label"
+                                                    htmlFor="exampleInputName"
+                                                >
+                                                    Name
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    id="exampleInputName"
+                                                    placeholder="Jane Doe"
+                                                />
+                                            </div>
+                                            <div className="form-group d-flex gap-2 align-items-center">
+                                                <label
+                                                    className="pr-1 form-control-label"
+                                                    htmlFor="exampleInputEmail"
+                                                >
+                                                    Email
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    id="exampleInputEmail"
+                                                    placeholder="Jane Doe"
+                                                />
+                                            </div>
+                                        </form>
+                                    </>
+                                }
+                                CardFooter={
+                                    <>
+                                        <div className="d-flex gap-3">
+                                            <button
+                                                type="submit"
+                                                className="btn btn-primary btn-sm"
+                                            >
+                                                <i className="fa fa-user"></i>{" "}
+                                                Submit
+                                            </button>
+                                            <button
+                                                type="submit"
+                                                className="btn btn-danger btn-sm"
+                                            >
+                                                <i className="fa-solid fa-ban"></i>{" "}
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </>
+                                }
+                            />
+                        </Col>
+                        {/* end inline from section */}
                     </Row>
                 </Col>
-
-                {/* start inline from section */}
-                <Col md={12} lg={6}>
-                    <CardContent
-                        title="Inline Form"
-                        CardBody={
-                            <>
-                                <form className="d-flex gap-3">
-                                    <div className="form-group d-flex gap-2 align-items-center">
-                                        <label
-                                            className="form-control-label"
-                                            htmlFor="exampleInputName"
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="exampleInputName"
-                                            placeholder="Jane Doe"
-                                        />
-                                    </div>
-                                    <div className="form-group d-flex gap-2 align-items-center">
-                                        <label
-                                            className="pr-1 form-control-label"
-                                            htmlFor="exampleInputEmail"
-                                        >
-                                            Email
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="exampleInputEmail"
-                                            placeholder="Jane Doe"
-                                        />
-                                    </div>
-                                </form>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        <i className="fa fa-user"></i> Submit
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-danger btn-sm"
-                                    >
-                                        <i className="fa-solid fa-ban"></i>{" "}
-                                        Submit
-                                    </button>
-                                </div>
-                            </>
-                        }
-                    />
-                </Col>
-                {/* end inline from section */}
 
                 {/* start inline sizes section */}
                 <Col md={12} lg={6}>
@@ -367,7 +368,7 @@ const BasicForm = () => {
                                             className="is-valid  form-control"
                                         />
                                     </div>
-                                    <div className="form-group  mb-3">
+                                    <div className="form-group  mb-4">
                                         <label
                                             htmlFor="inputIsInvalid"
                                             className="form-control-label mb-1"
@@ -380,195 +381,28 @@ const BasicForm = () => {
                                             className="is-invalid  form-control"
                                         />
                                     </div>
+                                    <div className="form-check py-2">
+                                        <input
+                                            className="form-check-input is-invalid"
+                                            type="checkbox"
+                                            value=""
+                                            id="invalidCheck3"
+                                            aria-describedby="invalidCheck3Feedback"
+                                            required
+                                        />
+                                        <label
+                                            className="form-check-label"
+                                            for="invalidCheck3"
+                                        >
+                                            Agree to terms and conditions
+                                        </label>
+                                    </div>
                                 </form>
                             </>
                         }
                     />
                 </Col>
                 {/* end validation states form section */}
-
-                {/* start validation states section */}
-                <Col md={12} lg={6}>
-                    <CardContent
-                        title="Validation States"
-                        CardBody={
-                            <>
-                                <form>
-                                    <div className="form-group mb-3">
-                                        <label
-                                            htmlFor="inputIsSuccess"
-                                            className="form-control-label mb-1"
-                                        >
-                                            Input with success
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="inputIsSuccess"
-                                            className="form-control-success form-control"
-                                        />
-                                    </div>
-                                    <div className="form-group  mb-3">
-                                        <label
-                                            htmlFor="inputIsInWarning"
-                                            className="form-control-label mb-1"
-                                        >
-                                            Input with warning
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="inputIsInWarning"
-                                            className="form-control-warning form-control"
-                                        />
-                                    </div>
-                                    <div className="form-group  mb-3">
-                                        <label
-                                            htmlFor="inputIsInError"
-                                            className="form-control-label mb-1"
-                                        >
-                                            Input with error
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="inputIsInError"
-                                            className="form-control-danger  form-control"
-                                        />
-                                    </div>
-                                </form>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                {" "}
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        <i className="fa fa-user"></i> Submit
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-danger btn-sm"
-                                    >
-                                        <i className="fa-solid fa-ban"></i>{" "}
-                                        Submit
-                                    </button>
-                                </div>
-                            </>
-                        }
-                    />
-                </Col>
-                {/* end validation states section */}
-
-                {/* start icon text groups section */}
-                <Col md={12} lg={6}>
-                    <CardContent
-                        title="Icon/Text Groups"
-                        CardBody={
-                            <>
-                                <div className="input-group mb-3">
-                                    <span
-                                        className="input-group-text"
-                                        id="inputGroupPrepend2"
-                                        style={{
-                                            backgroundColor:
-                                                "var(--bg-content)",
-                                            borderColor: "var(--border-color)",
-                                            color: "var(  --hedging-text-color)",
-                                        }}
-                                    >
-                                        <i className="fa fa-user"></i>
-                                    </span>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="validationDefaultUsername"
-                                        aria-describedby="inputGroupPrepend2"
-                                        placeholder="Username"
-                                        required
-                                    />
-                                </div>
-                                <div className="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="validationDefaultEmail"
-                                        aria-describedby="inputGroupPrepend2"
-                                        placeholder="Email"
-                                        required
-                                    />
-                                    <span
-                                        className="input-group-text"
-                                        id="inputGroupPrepend2"
-                                        style={{
-                                            backgroundColor:
-                                                "var(--bg-content)",
-                                            borderColor: "var(--border-color)",
-                                            color: "var(  --hedging-text-color)",
-                                        }}
-                                    >
-                                        <i className="fa-solid fa-envelope"></i>
-                                    </span>
-                                </div>
-                                <div className="input-group mb-3">
-                                    <span
-                                        className="input-group-text"
-                                        id="inputGroupPrepend2"
-                                        style={{
-                                            backgroundColor:
-                                                "var(--bg-content)",
-                                            borderColor: "var(--border-color)",
-                                            color: "var(  --hedging-text-color)",
-                                        }}
-                                    >
-                                        <i className="fa fa-euro"></i>
-                                    </span>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="validationDefaultEuro"
-                                        aria-describedby="inputGroupPrepend2"
-                                        placeholder=".."
-                                        required
-                                    />
-                                    <span
-                                        className="input-group-text"
-                                        id="inputGroupPrepend2"
-                                        style={{
-                                            backgroundColor:
-                                                "var(--bg-content)",
-                                            borderColor: "var(--border-color)",
-                                            color: "var(  --hedging-text-color)",
-                                        }}
-                                    >
-                                        .00
-                                    </span>
-                                </div>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                {" "}
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        <i className="fa fa-user"></i> Submit
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-danger btn-sm"
-                                    >
-                                        <i className="fa-solid fa-ban"></i>{" "}
-                                        Submit
-                                    </button>
-                                </div>
-                            </>
-                        }
-                    />
-                </Col>
-                {/* end icon text groups section */}
 
                 {/* start buttons groups section */}
                 <Col md={12} lg={6}>
@@ -1188,12 +1022,6 @@ const BasicForm = () => {
                         cardTitle="Example Form"
                         isPrepend={true}
                         buttonBg="primary"
-                    />
-                </Col>
-                <Col md={12} lg={6}>
-                    <WidgetsForm
-                        cardTitle="Example Form"
-                        buttonBg="secondary"
                     />
                 </Col>
                 <Col md={12} lg={6}>
