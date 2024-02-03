@@ -392,7 +392,7 @@ const BasicForm = () => {
                                         />
                                         <label
                                             className="form-check-label"
-                                            for="invalidCheck3"
+                                            htmlFor="invalidCheck3"
                                         >
                                             Agree to terms and conditions
                                         </label>
@@ -840,30 +840,6 @@ const BasicForm = () => {
                                     >
                                         Action
                                     </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
                                 </div>
                             </>
                         }
@@ -979,30 +955,6 @@ const BasicForm = () => {
                         CardFooter={
                             <>
                                 <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
                                     <button
                                         type="submit"
                                         className="btn btn-primary btn-sm"
