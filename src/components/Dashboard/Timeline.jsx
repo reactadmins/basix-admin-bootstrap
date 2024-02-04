@@ -16,157 +16,129 @@ const Timeline = () => {
                     <div
                         className={`${timelineStyle.timeline_container} w-100`}
                     >
-                        <ul>
-                            <li className="d-flex gap-2 mt-xl-3 mb-2">
-                                <div className={timelineStyle.icon_wrapper}>
-                                    <i
-                                        className="fa-regular fa-file text-white rounded-circle text-center "
-                                        style={{
-                                            backgroundColor: "#5c6bc0",
-                                        }}
-                                    ></i>
+                        <div
+                            className={`media d-flex gap-2 mb-3 ${timelineStyle.media}`}
+                        >
+                            <div className={timelineStyle.icon_wrapper}>
+                                <i
+                                    className="fa-regular fa-file text-white rounded-circle text-center "
+                                    style={{
+                                        backgroundColor: "#5c6bc0",
+                                    }}
+                                ></i>
+                            </div>
+                            <div
+                                className={`media-body ${timelineStyle.media_body}`}
+                            >
+                                <h5 className="mt-0">
+                                    <a href="#">Anthony Marshal</a> added a new
+                                    file in the project folder
+                                </h5>
+                                <span className="d-block">5 Minutes ago</span>
+                            </div>
+                        </div>
+                        <div
+                            className={`media d-flex gap-2 mb-3 ${timelineStyle.media}`}
+                        >
+                            <div className={timelineStyle.icon_wrapper}>
+                                <i
+                                    className="fa-solid fa-check text-white rounded-circle text-center "
+                                    style={{
+                                        backgroundColor: "#4dbd74",
+                                    }}
+                                ></i>
+                            </div>
+                            <div
+                                className={`media-body ${timelineStyle.media_body}`}
+                            >
+                                <h5 className="mt-0">
+                                    <a href="#">Maria Monica</a> added a new
+                                    file in the project folder
+                                </h5>
+                                <span className="d-block">5 Minutes ago</span>
+                            </div>
+                        </div>
+                        <div
+                            className={`media d-flex gap-2 mb-3 ${timelineStyle.media}`}
+                        >
+                            <div className={timelineStyle.icon_wrapper}>
+                                <i
+                                    className="fa-solid fa-image text-white rounded-circle text-center "
+                                    style={{
+                                        backgroundColor: "#ffa726",
+                                    }}
+                                ></i>
+                            </div>
+                            <div
+                                className={`media-body ${timelineStyle.media_body}`}
+                            >
+                                <h5 className="mt-0">
+                                    <a href="#">Patricia Watkins</a> added 4
+                                    more photos to the album
+                                </h5>
+                                <div className="d-flex gap-2 my-3">
+                                    <img
+                                        src={user1}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
+                                    <img
+                                        src={user2}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
+                                    <img
+                                        src={user3}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
+                                    <img
+                                        src={user4}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
                                 </div>
-                                <div
-                                    className={`${timelineStyle.user_content} w-100`}
-                                >
-                                    <h2>
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none mx-1"
-                                        >
-                                            Anthony Marshal
-                                        </a>
-                                        added a new file in the project folder
-                                    </h2>
-                                    <span className="d-block">
-                                        5 Minutes ago
-                                    </span>
+                                <span className="d-block">5 Minutes ago</span>
+                            </div>
+                        </div>
+                        <div
+                            className={`media d-flex gap-2 mb-3 ${timelineStyle.media}`}
+                        >
+                            <div className={timelineStyle.icon_wrapper}>
+                                <i
+                                    className="fa-solid fa-user text-white rounded-circle text-center "
+                                    style={{
+                                        backgroundColor: "#ef5350",
+                                    }}
+                                ></i>
+                            </div>
+                            <div
+                                className={`media-body ${timelineStyle.media_body}`}
+                            >
+                                <h5 className="mt-0">
+                                    <a href="#">Tiffany Scott</a> added 3
+                                    friends
+                                </h5>
+                                <div className="d-flex gap-2 my-3">
+                                    <img
+                                        src={user1}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
+                                    <img
+                                        src={user2}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
+                                    <img
+                                        src={user3}
+                                        alt="img"
+                                        style={{ height: "40px" }}
+                                    />
                                 </div>
-                            </li>
-                            <li className="d-flex gap-2 mb-2">
-                                <div className={timelineStyle.icon_wrapper}>
-                                    <i
-                                        className="fa-solid fa-check text-white rounded-circle text-center "
-                                        style={{
-                                            backgroundColor: "#4dbd74",
-                                        }}
-                                    ></i>
-                                </div>
-                                <div
-                                    className={`${timelineStyle.user_content} w-100`}
-                                >
-                                    <h2>
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none mx-1"
-                                        >
-                                            Maria Monica
-                                        </a>
-                                        added a new file in the project folder
-                                    </h2>
-                                    <span className="d-block">
-                                        5 Minutes ago
-                                    </span>
-                                </div>
-                            </li>
-                            <li className="d-flex gap-2 mb-2">
-                                <div className={timelineStyle.icon_wrapper}>
-                                    <i
-                                        className="fa-solid fa-image text-white rounded-circle text-center "
-                                        style={{
-                                            backgroundColor: "#ffa726",
-                                        }}
-                                    ></i>
-                                </div>
-                                <div
-                                    className={`${timelineStyle.user_content} w-100`}
-                                >
-                                    <h2>
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none mx-1"
-                                        >
-                                            Patricia Watkins
-                                        </a>
-                                        added 4 more photos to the album
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none mx-1"
-                                        >
-                                            WordPress Meetup
-                                        </a>
-                                    </h2>
-                                    <div className="d-flex gap-2 my-3">
-                                        <img
-                                            src={user1}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                        <img
-                                            src={user2}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                        <img
-                                            src={user3}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                        <img
-                                            src={user4}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                    </div>
-                                    <span className="d-block">
-                                        5 Minutes ago
-                                    </span>
-                                </div>
-                            </li>
-                            <li className="d-flex gap-2">
-                                <div className={timelineStyle.icon_wrapper}>
-                                    <i
-                                        className="fa-solid fa-user text-white rounded-circle text-center "
-                                        style={{
-                                            backgroundColor: "#ef5350",
-                                        }}
-                                    ></i>
-                                </div>
-                                <div
-                                    className={`${timelineStyle.user_content} w-100 border-bottom-0`}
-                                >
-                                    <h2>
-                                        <a
-                                            href="#"
-                                            className="text-decoration-none mx-1"
-                                        >
-                                            Tiffany Scott
-                                        </a>
-                                        added 3 friends
-                                    </h2>
-                                    <div className="d-flex gap-2 my-3">
-                                        <img
-                                            src={user1}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                        <img
-                                            src={user2}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                        <img
-                                            src={user3}
-                                            alt="img"
-                                            style={{ height: "40px" }}
-                                        />
-                                    </div>
-                                    <span className="d-block mb-1">
-                                        5 Minutes ago
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
+                                <span className="d-block">5 Minutes ago</span>
+                            </div>
+                        </div>
                     </div>
                 }
             />

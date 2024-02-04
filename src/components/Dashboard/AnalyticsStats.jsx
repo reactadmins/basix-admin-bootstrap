@@ -39,19 +39,19 @@ const AnalyticsStats = () => {
         labels,
         datasets: [
             {
-                label: "Dataset 1",
+                label: "Bounce Rate",
                 data: [2700, 7000, 3500, 6900, 2600, 6500, 2200],
                 borderColor: "#2B45D4",
                 backgroundColor: "#2B45D4",
             },
             {
-                label: "Dataset 2",
+                label: "Pageviews",
                 data: [5000, 2700, 8500, 5500, 4500, 4900, 3000],
                 borderColor: "#299FFF",
                 backgroundColor: "#299FFF",
             },
             {
-                label: "Dataset 3",
+                label: "New Users",
                 data: [5500, 2900, 7000, 3500, 5000, 3300, 4800],
                 borderColor: "#43CB4C",
                 backgroundColor: "#43CB4C",
