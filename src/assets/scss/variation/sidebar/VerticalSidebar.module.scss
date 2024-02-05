@@ -307,13 +307,10 @@
         }
     }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
     .sidebar_nav_wrapper {
-        .main_menu {
-            overflow: scroll !important;
-            // &:hover {
-            //     overflow: scroll;
-            // }
+        &.sidebar_mini {
+            display: none;
         }
     }
 }

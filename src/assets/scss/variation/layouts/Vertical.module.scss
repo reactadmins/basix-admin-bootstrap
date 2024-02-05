@@ -28,9 +28,6 @@
 
 @media only screen and (max-width: 768px) {
     .layout_container {
-        .sidebar_nav {
-            display: none;
-        }
         .active_menu {
             position: absolute;
             content: "";
@@ -40,9 +37,6 @@
         }
         .right_panel {
             width: 100% !important;
-        }
-        .sidebar_mini {
-            width: calc(100% - 70px) !important;
         }
     }
 }

@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import __, { isEmpty } from "lodash";
 import { navItems } from "../../nav";
@@ -11,8 +11,22 @@ import sidebarStyle from "../../assets/scss/variation/sidebar/VerticalSidebar.mo
 
 const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);
+    const [selectSize, setSelectSize] = useState();
     const { sidebarBgImg, sidebarBgColor, isThemeDirection, isDark } =
         useDashboardDataContext();
+
+    useEffect(() => {
+        window.onresize = function () {
+            setSelectSize(window.screen.width);
+        };
+        if (selectSize === 1024) {
+            setSidebarMini(true);
+        } else if (selectSize === 768 || selectSize > 100) {
+            setSidebarMini(true);
+        } else {
+            setSidebarMini(false);
+        }
+    }, [selectSize, setSidebarMini]);
 
     return (
         <div
