@@ -121,7 +121,6 @@
                 a {
                     cursor: pointer;
                     font-size: 14px;
-                    color: #3c4858;
                     font-weight: 500;
                     div {
                         gap: 8px;
@@ -214,13 +213,10 @@
 
     .bg_white {
         background-color: $white;
-    }
-    .bg_black {
-        background-color: #263238;
         .nav {
             .nav_item {
                 a {
-                    color: $white !important;
+                    color: #3c4858;
                 }
                 .sub_menu {
                     .nav_item {
@@ -242,17 +238,44 @@
             }
         }
     }
+    .bg_black {
+        background-color: #263238;
+        .nav {
+            .nav_item {
+                a {
+                    color: $white;
+                }
+                .sub_menu {
+                    .nav_item {
+                        a {
+                            color: #3c4858;
+                        }
+                    }
+                }
+                &:hover {
+                    a {
+                        color: #3c4858;
+                    }
+                }
+                &:last-child {
+                    a {
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
     .bg_red {
         background-color: #f44336;
         .nav {
             .nav_item {
                 a {
-                    color: $white !important;
+                    color: $white;
                 }
                 .sub_menu {
                     .nav_item {
                         a {
-                            color: #3c4858 !important;
+                            color: #3c4858;
                         }
                     }
                 }
@@ -290,8 +313,22 @@
                     display: block;
                     width: 20px;
                     font-size: 24px;
+                    color: var(--hedging-text-color);
                 }
             }
+            .logo {
+                display: none;
+            }
+            .mini_logo {
+                display: block;
+            }
+            // .nav {
+            //     .nav_item {
+            //         a {
+            //             color: red !important;
+            //         }
+            //     }
+            // }
         }
         .duall_navbar {
             display: none;
@@ -311,18 +348,6 @@
             .nav {
                 align-items: flex-start;
                 flex-direction: column;
-            }
-        }
-    }
-}
-@media only screen and (max-width: 425px) {
-    .top_navbar {
-        .collapse {
-            .logo {
-                display: none;
-            }
-            .mini_logo {
-                display: block;
             }
         }
     }

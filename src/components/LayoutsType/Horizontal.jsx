@@ -7,11 +7,18 @@ const Horizontal = ({ setSidebarMini, sidebarMini }) => {
     const { navbarFixed, isThemeDirection } = useDashboardDataContext();
 
     return (
-        <div className={layoutStyle.layouts_container} data={!isThemeDirection ? "false" : "true"}>
-            <HorizontalNav setSidebarMini={setSidebarMini} sidebarMini={sidebarMini} />
+        <div
+            className={layoutStyle.layouts_container}
+            data={!isThemeDirection ? "false" : "true"}
+        >
+            <HorizontalNav
+                setSidebarMini={setSidebarMini}
+                sidebarMini={sidebarMini}
+            />
             <div
                 className={layoutStyle.content}
-                style={{ marginTop: `${navbarFixed ? "80px" : "0"}` }}>
+                style={{ marginTop: `${navbarFixed ? "80px" : "0"}` }}
+            >
                 <Outlet />
             </div>
         </div>

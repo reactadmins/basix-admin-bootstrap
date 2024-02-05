@@ -9,6 +9,9 @@
                 button {
                     display: none;
                 }
+                .mini_logo {
+                    display: none;
+                }
             }
             .social_item {
                 display: flex;
@@ -42,8 +45,8 @@
                     }
                     .count {
                         position: absolute;
-                        top: -4px;
-                        right: -14px;
+                        top: -8px;
+                        right: -18px;
                     }
                 }
             }
@@ -58,7 +61,6 @@
                     a {
                         cursor: pointer;
                         font-size: 14px;
-                        color: #3c4858;
                         font-weight: 500;
                         div {
                             gap: 8px;
@@ -75,7 +77,7 @@
                             content: "";
                             top: 55px;
                             left: -5px;
-                            padding: 10px 0;
+                            padding: 10px;
                             min-width: 13rem;
                             background-color: #ffff;
                             padding-top: 0.65rem;
@@ -83,9 +85,11 @@
                             border: 1px solid #eaecf0;
                             border-radius: 8px;
                             box-shadow: -8px 0px 16px -4px rgba(0, 0, 0, 0.1);
-                            z-index: 1;
+                            z-index: 999;
                             transition: all 0.9s;
-                            .nav-item {
+                            .sub_nav_item {
+                                position: relative;
+                                padding: 8px 10px;
                                 background-color: transparent;
                             }
                             &::before {
@@ -144,8 +148,38 @@
         height: 80px;
         z-index: 9999;
     }
+
     &.bg_white {
         background-color: $white;
+        .navbar {
+            .navbar_nav,
+            .combo_nav {
+                ul {
+                    .nav_item {
+                        a {
+                            color: #3c4858;
+                        }
+                        .sub_menu {
+                            .sub_nav_item {
+                                a {
+                                    color: #3c4858;
+                                }
+                            }
+                        }
+                        &:hover {
+                            a {
+                                color: #3c4858;
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     &.bg_black {
         background-color: #263238;
@@ -155,23 +189,23 @@
                 ul {
                     .nav_item {
                         a {
-                            color: #c8c9ce !important;
+                            color: $white;
                         }
                         .sub_menu {
-                            .nav_item {
+                            .sub_nav_item {
                                 a {
-                                    color: #3c4858 !important;
+                                    color: #3c4858;
                                 }
                             }
                         }
                         &:hover {
                             a {
-                                color: #3c4858 !important;
+                                color: #3c4858;
                             }
                         }
                         &:last-child {
                             a {
-                                color: #fff !important;
+                                color: #fff;
                             }
                         }
                     }
@@ -182,42 +216,56 @@
                     }
                 }
             }
+            .logo_container {
+                button {
+                    i {
+                        color: $white !important;
+                    }
+                }
+            }
         }
     }
     &.bg_red {
         background-color: #f44336;
         .navbar {
-            .navbar_nav {
-                ul {
+            .combo_nav {
+                .nav {
                     .nav_item {
                         a {
-                            color: $white !important;
-                        }
-                        .sub_menu {
-                            .nav_item {
-                                a {
-                                    color: #3c4858 !important;
-                                }
-                            }
+                            color: $white;
                         }
                         &:hover {
                             a {
-                                color: #3c4858 !important;
+                                color: #3c4858;
                             }
-                        }
-                        &:last-child {
-                            a {
-                                color: #fff !important;
+                            .sub_menu {
+                                .sub_nav_item {
+                                    a {
+                                        color: #3c4858;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                a {
+                                    color: $white;
+                                }
                             }
                         }
                     }
                 }
-                .social_item {
-                    button {
+            }
+            .logo_container {
+                button {
+                    i {
                         color: $white !important;
-                        .count.bg-danger {
-                            background-color: $success !important;
-                        }
+                    }
+                }
+            }
+            .social_item {
+                button {
+                    color: $white !important;
+                    .count.bg-danger {
+                        background-color: $success !important;
                     }
                 }
             }
@@ -233,16 +281,19 @@
             .sub_menu {
                 border-color: var(--border-color) !important;
                 background-color: var(--bg-content) !important;
+                .sub_nav_item {
+                    color: red !important;
+                }
                 &::after {
                     border-color: var(--border-color) !important;
                     background-color: var(--bg-content) !important;
                 }
             }
             &:hover {
+                background-color: var(--dark-hover-color) !important;
                 a {
                     color: var(--hedging-text-color) !important;
                 }
-                background-color: var(--dark-hover-color) !important;
             }
         }
         .logo_container {
@@ -270,10 +321,19 @@
                         display: block;
                         font-size: 24px;
                     }
+                    img {
+                        display: none;
+                        &.mini_logo {
+                            display: block !important;
+                        }
+                    }
                 }
             }
             .combo_nav {
                 display: none;
+                a {
+                    color: #3c4858 !important;
+                }
             }
             .toggle_menu {
                 position: absolute;
@@ -289,6 +349,18 @@
                 .nav {
                     align-items: flex-start;
                     flex-direction: column;
+                }
+            }
+        }
+        &.combo_top_nav {
+            .combo_nav {
+                display: none !important;
+            }
+        }
+        &[dark-mode="true"] {
+            .combo_nav {
+                a {
+                    color: $white !important;
                 }
             }
         }

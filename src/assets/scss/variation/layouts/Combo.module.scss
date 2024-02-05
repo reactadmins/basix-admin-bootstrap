@@ -4,6 +4,10 @@
     height: 100%;
     .sidebar_nav {
         float: left;
+        width: 280px;
+        &.active_menu {
+            width: 70px;
+        }
     }
     .right_panel {
         float: right;
@@ -11,10 +15,11 @@
         .content {
             padding: 24px;
         }
+        &.sidebar_mini {
+            width: calc(100% - 70px);
+        }
     }
-    &.sidebar_mini {
-        width: calc(100% - 70px);
-    }
+
     &[data="true"] {
         direction: rtl;
         .sidebar_nav {

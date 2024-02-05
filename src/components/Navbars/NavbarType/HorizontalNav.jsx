@@ -11,15 +11,18 @@ import SearchBar from "../../SearchBar/SearchBar";
 import { useDashboardDataContext } from "../../../context/dashboardDataContext";
 import navbarStyle from "../../../assets/scss/variation/topNav/HorizontalNav.module.scss";
 import logo from "../../../assets/image/logo.png";
+import mini_logo from "../../../assets/image/mini-logo.png";
 import black_logo from "../../../assets/image/black-logo.png";
+import black_mini_logo from "../../../assets/image/black-mini-logo.png";
 import profile from "../../../assets/image/admin.jpg";
 import DarkModeSwitch from "../../DarkModeSwitch/DarkModeSwitch";
 
-const HorizontalNav = ({ setSidebarMini, sidebarMini }) => {
+const HorizontalNav = ({ setSidebarMini, sidebarMini, navType = "" }) => {
     const [openNotification, setOpenNotification] = useState(true);
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
     const [isOpenSearch, setIsOpenSearch] = useState(true);
+
     const { topNavbarBgColor, navbarFixed, isDark, activeVariation } =
         useDashboardDataContext();
 
@@ -38,7 +41,7 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini }) => {
         <div
             className={`p-0 ${navbarStyle[topNavbarBgColor]} ${
                 navbarStyle.top_navbar
-            } ${
+            } ${navType ? navbarStyle[navType] : ""} ${
                 navbarFixed || activeVariation === "combo"
                     ? navbarStyle.top_fixed
                     : ""
@@ -50,25 +53,70 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini }) => {
                     <Navbar.Collapse className="justify-content-between">
                         <Nav className={navbarStyle.navbar_nav}>
                             <div className={navbarStyle.logo_container}>
-                                <button
-                                    type="button"
-                                    onClick={() => setSidebarMini(!sidebarMini)}
-                                >
-                                    <i className="fa-solid fa-bars"></i>
-                                </button>
+                                {navType === "combo_top_nav" ? (
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setSidebarMini(!sidebarMini)
+                                        }
+                                    >
+                                        {!sidebarMini ? (
+                                            <i className="fa-solid fa-xmark"></i>
+                                        ) : (
+                                            <i className="fa-solid fa-bars"></i>
+                                        )}
+                                    </button>
+                                ) : (
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setSidebarMini(!sidebarMini)
+                                        }
+                                    >
+                                        {!sidebarMini ? (
+                                            <i className="fa-solid fa-bars"></i>
+                                        ) : (
+                                            <i className="fa-solid fa-xmark"></i>
+                                        )}
+                                    </button>
+                                )}
 
                                 <Link to="/" className={navbarStyle.logo}>
                                     {!isDark ? (
-                                        <img
-                                            src={
-                                                topNavbarBgColor === "bg_white"
-                                                    ? black_logo
-                                                    : logo
-                                            }
-                                            alt="basix-admin"
-                                        />
+                                        <Fragment>
+                                            <img
+                                                className={
+                                                    navbarStyle.mini_logo
+                                                }
+                                                src={
+                                                    topNavbarBgColor ===
+                                                    "bg_white"
+                                                        ? black_mini_logo
+                                                        : mini_logo
+                                                }
+                                                alt="basix-admin"
+                                            />
+                                            <img
+                                                src={
+                                                    topNavbarBgColor ===
+                                                    "bg_white"
+                                                        ? black_logo
+                                                        : logo
+                                                }
+                                                alt="basix-admin"
+                                            />
+                                        </Fragment>
                                     ) : (
-                                        <img src={logo} alt="basix-admin" />
+                                        <Fragment>
+                                            <img src={logo} alt="basix-admin" />
+                                            <img
+                                                className={
+                                                    navbarStyle.mini_logo
+                                                }
+                                                src={mini_logo}
+                                                alt="basix-admin"
+                                            />
+                                        </Fragment>
                                     )}
                                 </Link>
                             </div>
@@ -139,7 +187,7 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini }) => {
                                                         <li
                                                             key={index}
                                                             className={
-                                                                navbarStyle.nav_item
+                                                                navbarStyle.sub_nav_item
                                                             }
                                                         >
                                                             <Link

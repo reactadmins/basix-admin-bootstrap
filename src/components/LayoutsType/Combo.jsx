@@ -8,20 +8,32 @@ const Combo = ({ setSidebarMini, sidebarMini }) => {
     const { isThemeDirection } = useDashboardDataContext();
 
     return (
-        <div className={layoutStyle.layouts_container} data={!isThemeDirection ? "false" : "true"}>
-            <HorizontalNav setSidebarMini={setSidebarMini} sidebarMini={sidebarMini} />
+        <div
+            className={layoutStyle.layouts_container}
+            data={!isThemeDirection ? "false" : "true"}
+        >
+            <HorizontalNav
+                setSidebarMini={setSidebarMini}
+                sidebarMini={sidebarMini}
+                navType="combo_top_nav"
+            />
             <div style={{ marginTop: "80px" }}>
                 <div
                     className={`${layoutStyle.sidebar_nav} ${
                         sidebarMini ? layoutStyle.active_menu : ""
-                    }`}>
-                    <ComboSidebar setSidebarMini={setSidebarMini} sidebarMini={sidebarMini} />
+                    }`}
+                >
+                    <ComboSidebar
+                        setSidebarMini={setSidebarMini}
+                        sidebarMini={sidebarMini}
+                    />
                 </div>
 
                 <div
                     className={`${layoutStyle.right_panel} ${
                         sidebarMini ? layoutStyle.sidebar_mini : ""
-                    }`}>
+                    }`}
+                >
                     <div className={layoutStyle.content}>
                         <Outlet />
                     </div>
