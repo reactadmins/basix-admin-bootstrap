@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
 import StatsCard from "../components/Dashboard/StatsCard";
-import RealTime from "../components/Dashboard/RealTime";
 import Traffic from "../components/Dashboard/Traffic";
 import Earning from "../components/Dashboard/Earning";
 import Download from "../components/Dashboard/Download";
@@ -15,6 +14,7 @@ import UserStats from "../components/Dashboard/UserStats";
 import MonthlyStats from "../components/Dashboard/MonthlyStats";
 import DeviceVisitorStats from "../components/Chart/DeviceVisitorStats";
 import Alert from "../components/Alert/Alert";
+import AreaChart from "../components/Dashboard/AreaChart";
 
 const Dashboard = () => {
     return (
@@ -181,16 +181,16 @@ const Dashboard = () => {
             </Row>
             {/* end revenue section */}
 
-            {/* start realTime and traffic  section */}
+            {/* start area chart and traffic  section */}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={12} lg={5} xl={5}>
-                    <RealTime />
+                    <AreaChart />
                 </Col>
                 <Col md={12} lg={7} xl={7}>
                     <Traffic />
                 </Col>
             </Row>
-            {/* end realTime and traffic  section */}
+            {/* end area chart and traffic  section */}
 
             {/* start earning and download  revenue section */}
             <Row className="gy-4 gx-4 mb-4">

@@ -76,7 +76,7 @@ const Timeline = () => {
                                     <a href="#">Patricia Watkins</a> added 4
                                     more photos to the album
                                 </h5>
-                                <div className="d-flex gap-2 my-3">
+                                <div className="d-flex gap-2 mt-3">
                                     <img
                                         src={user1}
                                         alt="img"
@@ -119,7 +119,7 @@ const Timeline = () => {
                                     <a href="#">Tiffany Scott</a> added 3
                                     friends
                                 </h5>
-                                <div className="d-flex gap-2 my-3">
+                                <div className="d-flex gap-2 mt-3">
                                     <img
                                         src={user1}
                                         alt="img"

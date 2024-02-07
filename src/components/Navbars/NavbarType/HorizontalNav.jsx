@@ -164,9 +164,9 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini, navType = "" }) => {
                                                 )}
                                             </Fragment>
                                         )) ||
-                                            (item?.url && (
+                                            (item.url && (
                                                 <a
-                                                    href={item?.url}
+                                                    href={item.url}
                                                     target="_blank"
                                                     className="d-flex align-items-center"
                                                 >
@@ -174,7 +174,9 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini, navType = "" }) => {
                                                         <i
                                                             className={`${item.icon} menu-icon`}
                                                         ></i>
-                                                        <span>{item.name}</span>
+                                                        <span>
+                                                            {item?.name}
+                                                        </span>
                                                     </div>
                                                 </a>
                                             ))}
