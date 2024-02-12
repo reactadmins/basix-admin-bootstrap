@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import CardContent from "../components/Card/CardContent";
-import { Button, Col, Row } from "react-bootstrap";
+import { Button, CardBody, Col, Row } from "react-bootstrap";
+import Card from "../components/Card/Card";
 
 const Buttons = () => {
     return (
@@ -8,25 +8,24 @@ const Buttons = () => {
             {/* start badges & outline buttons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Badges"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary">Primary</Button>
                                 <Button variant="secondary">Secondary</Button>
@@ -35,29 +34,28 @@ const Buttons = () => {
                                 <Button variant="warning">Warning</Button>
                                 <Button variant="dark">Dark</Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Outline Buttons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="outline-primary">
                                     Primary
@@ -74,8 +72,8 @@ const Buttons = () => {
                                 </Button>
                                 <Button variant="outline-dark">Dark</Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end badges & outline buttons section*/}
@@ -83,23 +81,22 @@ const Buttons = () => {
             {/* start button tags section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button tags"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn </code> or
-                                    <code> {`<button>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn </code> or
+                                <code> {`<button>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button href="#" variant="primary">
                                     Link
@@ -119,29 +116,28 @@ const Buttons = () => {
                                 />
                                 <Button as="input" type="reset" value="Reset" />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button tags"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button href="#" variant="outline-primary">
                                     Link
@@ -161,8 +157,8 @@ const Buttons = () => {
                                 />
                                 <Button as="input" type="reset" value="Reset" />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end button tagss section*/}
@@ -170,23 +166,22 @@ const Buttons = () => {
             {/* start disabled state button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Disabled state"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class{" "}
-                                    <code>disabled={"disabled"}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class{" "}
+                                <code>disabled={"disabled"}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary" disabled>
                                     Primary
@@ -207,29 +202,28 @@ const Buttons = () => {
                                     Dark
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Disabled state"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="outline-primary" disabled>
                                     Primary
@@ -250,8 +244,8 @@ const Buttons = () => {
                                     Dark
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end disabled state button  section*/}
@@ -259,22 +253,21 @@ const Buttons = () => {
             {/* start button with icons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use <code>{`<i>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use <code>{`<i>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary">
                                     <i className="fa fa-star"></i> Primary
@@ -294,26 +287,25 @@ const Buttons = () => {
                                     <i className="fa fa-rss"></i> Danger
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use <code>{`<i>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use <code>{`<i>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="outline-primary">
                                     <i className="fa fa-star"></i> Primary
@@ -333,8 +325,8 @@ const Buttons = () => {
                                     <i className="fa fa-rss"></i> Danger
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end button with icons section*/}
@@ -342,22 +334,21 @@ const Buttons = () => {
             {/* start small button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary" size="sm">
                                     Primary
@@ -378,26 +369,25 @@ const Buttons = () => {
                                     Link
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="outline-primary" size="sm">
                                     Primary
@@ -418,8 +408,8 @@ const Buttons = () => {
                                     Link
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end small button section*/}
@@ -427,22 +417,21 @@ const Buttons = () => {
             {/* start small button with icons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary" size="sm">
                                     <i className="fa fa-star"></i> Primary
@@ -465,26 +454,25 @@ const Buttons = () => {
                                     <i className="fa fa-link"></i> Link
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="outline-primary" size="sm">
                                     <i className="fa fa-star"></i> Primary
@@ -508,8 +496,8 @@ const Buttons = () => {
                                     <i className="fa fa-link"></i> Link
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end small button with icons section*/}
@@ -517,22 +505,21 @@ const Buttons = () => {
             {/* start large button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary" size="lg">
                                     Primary
@@ -547,26 +534,25 @@ const Buttons = () => {
                                     Warning
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="outline-primary" size="lg">
                                     Primary
@@ -581,8 +567,8 @@ const Buttons = () => {
                                     Warning
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end large button section*/}
@@ -590,22 +576,21 @@ const Buttons = () => {
             {/* start large active & disabled button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Active Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg .active</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg .active</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button variant="primary" size="lg" active>
                                     Primary
@@ -620,26 +605,25 @@ const Buttons = () => {
                                     Warning
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Disabled Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg .active</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg .active</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
                                 <Button
                                     variant="outline-primary"
@@ -670,8 +654,8 @@ const Buttons = () => {
                                     Warning
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end large active & disabled button section*/}
@@ -679,22 +663,21 @@ const Buttons = () => {
             {/* start block level buttons section*/}
             <Row className="gy-4 gx-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Block Level Buttons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-block</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-block</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-grid gap-2">
                                 <Button variant="primary" size="lg">
                                     Primary
@@ -715,26 +698,25 @@ const Buttons = () => {
                                     Link
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Block Level Buttons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-block</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-block</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-grid gap-2">
                                 <Button variant="outline-primary" size="lg">
                                     Primary
@@ -755,8 +737,8 @@ const Buttons = () => {
                                     Link
                                 </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end block level buttons section*/}

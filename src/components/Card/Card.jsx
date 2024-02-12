@@ -23,7 +23,7 @@ const Card = ({ title = "", subscript = "", icons = [], children = "" }) => {
                     >
                         <div
                             className={`d-flex align-items-center ${
-                                icons ? "justify-content-between" : " "
+                                icons > 0 ? "justify-content-between" : " "
                             }`}
                         >
                             <strong className={CardStyle.card_title}>
