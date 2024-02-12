@@ -23,6 +23,7 @@ const Dashboard = () => {
             <Alert
                 type="dismissible"
                 title="You successfully read this important alert message."
+                alertContent="Thi is contentn hrere"
                 badgeTitle="Success"
                 alertBg="success"
             />

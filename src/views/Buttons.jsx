@@ -19,8 +19,7 @@ const Buttons = () => {
                                         fontWeight: "400",
                                     }}
                                 >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
+                                    Use this class <code>{`<a>`}</code>, <code>{`<button>`} </code>
                                     or
                                     <code> {`<input>`}</code>
                                 </small>
@@ -50,8 +49,7 @@ const Buttons = () => {
                                         fontWeight: "400",
                                     }}
                                 >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
+                                    Use this class <code>{`<a>`}</code>, <code>{`<button>`} </code>
                                     or
                                     <code> {`<input>`}</code>
                                 </small>
@@ -59,19 +57,11 @@ const Buttons = () => {
                         }
                         CardBody={
                             <div className="d-flex flex-wrap gap-2">
-                                <Button variant="outline-primary">
-                                    Primary
-                                </Button>
-                                <Button variant="outline-secondary">
-                                    Secondary
-                                </Button>
-                                <Button variant="outline-success">
-                                    Success
-                                </Button>
+                                <Button variant="outline-primary">Primary</Button>
+                                <Button variant="outline-secondary">Secondary</Button>
+                                <Button variant="outline-success">Success</Button>
                                 <Button variant="outline-danger">Danger</Button>
-                                <Button variant="outline-warning">
-                                    Warning
-                                </Button>
+                                <Button variant="outline-warning">Warning</Button>
                                 <Button variant="outline-dark">Dark</Button>
                             </div>
                         }
@@ -107,16 +97,8 @@ const Buttons = () => {
                                 <Button type="submit" variant="danger">
                                     Button
                                 </Button>
-                                <Button
-                                    as="input"
-                                    type="button"
-                                    value="Input"
-                                />
-                                <Button
-                                    as="input"
-                                    type="submit"
-                                    value="Submit"
-                                />
+                                <Button as="input" type="button" value="Input" />
+                                <Button as="input" type="submit" value="Submit" />
                                 <Button as="input" type="reset" value="Reset" />
                             </div>
                         }
@@ -134,8 +116,7 @@ const Buttons = () => {
                                         fontWeight: "400",
                                     }}
                                 >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
+                                    Use this class <code>{`<a>`}</code>, <code>{`<button>`} </code>
                                     or
                                     <code> {`<input>`}</code>
                                 </small>
@@ -149,16 +130,8 @@ const Buttons = () => {
                                 <Button type="submit" variant="outline-danger">
                                     Button
                                 </Button>
-                                <Button
-                                    as="input"
-                                    type="button"
-                                    value="Input"
-                                />
-                                <Button
-                                    as="input"
-                                    type="submit"
-                                    value="Submit"
-                                />
+                                <Button as="input" type="button" value="Input" />
+                                <Button as="input" type="submit" value="Submit" />
                                 <Button as="input" type="reset" value="Reset" />
                             </div>
                         }
@@ -181,8 +154,7 @@ const Buttons = () => {
                                         fontWeight: "400",
                                     }}
                                 >
-                                    Use this class{" "}
-                                    <code>disabled={"disabled"}</code>
+                                    Use this class <code>disabled={"disabled"}</code>
                                 </small>
                             </Fragment>
                         }
@@ -222,8 +194,7 @@ const Buttons = () => {
                                         fontWeight: "400",
                                     }}
                                 >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
+                                    Use this class <code>{`<a>`}</code>, <code>{`<button>`} </code>
                                     or
                                     <code> {`<input>`}</code>
                                 </small>
@@ -280,15 +251,13 @@ const Buttons = () => {
                                     <i className="fa fa-star"></i> Primary
                                 </Button>
                                 <Button variant="secondary">
-                                    <i className="fa fa-lightbulb"></i>{" "}
-                                    Secondary
+                                    <i className="fa fa-lightbulb"></i> Secondary
                                 </Button>
                                 <Button variant="success">
                                     <i className="fa fa-magic"></i> Success
                                 </Button>
                                 <Button variant="warning">
-                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
-                                    Warning
+                                    <i className="fa-solid fa-triangle-exclamation"></i> Warning
                                 </Button>
                                 <Button variant="danger">
                                     <i className="fa fa-rss"></i> Danger
@@ -319,15 +288,13 @@ const Buttons = () => {
                                     <i className="fa fa-star"></i> Primary
                                 </Button>
                                 <Button variant="outline-secondary">
-                                    <i className="fa fa-lightbulb"></i>{" "}
-                                    Secondary
+                                    <i className="fa fa-lightbulb"></i> Secondary
                                 </Button>
                                 <Button variant="outline-success">
                                     <i className="fa fa-magic"></i> Success
                                 </Button>
                                 <Button variant="outline-warning">
-                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
-                                    Warning
+                                    <i className="fa-solid fa-triangle-exclamation"></i> Warning
                                 </Button>
                                 <Button variant="outline-danger">
                                     <i className="fa fa-rss"></i> Danger
@@ -448,15 +415,13 @@ const Buttons = () => {
                                     <i className="fa fa-star"></i> Primary
                                 </Button>
                                 <Button variant="secondary" size="sm">
-                                    <i className="fa fa-lightbulb"></i>{" "}
-                                    Secondary
+                                    <i className="fa fa-lightbulb"></i> Secondary
                                 </Button>
                                 <Button variant="success" size="sm">
                                     <i className="fa fa-magic"></i> Success
                                 </Button>
                                 <Button variant="warning" size="sm">
-                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
-                                    Warning
+                                    <i className="fa-solid fa-triangle-exclamation"></i> Warning
                                 </Button>
                                 <Button variant="danger" size="sm">
                                     <i className="fa fa-rss"></i> Danger
@@ -490,15 +455,13 @@ const Buttons = () => {
                                     <i className="fa fa-star"></i> Primary
                                 </Button>
                                 <Button variant="outline-secondary" size="sm">
-                                    <i className="fa fa-lightbulb"></i>{" "}
-                                    Secondary
+                                    <i className="fa fa-lightbulb"></i> Secondary
                                 </Button>
                                 <Button variant="outline-success" size="sm">
                                     <i className="fa fa-magic"></i> Success
                                 </Button>
                                 <Button variant="outline-warning" size="sm">
-                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
-                                    Warning
+                                    <i className="fa-solid fa-triangle-exclamation"></i> Warning
                                 </Button>
                                 <Button variant="outline-danger" size="sm">
                                     <i className="fa fa-rss"></i> Danger
@@ -641,32 +604,16 @@ const Buttons = () => {
                         }
                         CardBody={
                             <div className="d-flex flex-wrap gap-2">
-                                <Button
-                                    variant="outline-primary"
-                                    size="lg"
-                                    active
-                                >
+                                <Button variant="outline-primary" size="lg" active>
                                     Primary
                                 </Button>
-                                <Button
-                                    variant="outline-secondary"
-                                    size="lg"
-                                    active
-                                >
+                                <Button variant="outline-secondary" size="lg" active>
                                     Secondary
                                 </Button>
-                                <Button
-                                    variant="outline-success"
-                                    size="lg"
-                                    active
-                                >
+                                <Button variant="outline-success" size="lg" active>
                                     Success
                                 </Button>
-                                <Button
-                                    variant="outline-warning"
-                                    size="lg"
-                                    active
-                                >
+                                <Button variant="outline-warning" size="lg" active>
                                     Warning
                                 </Button>
                             </div>
