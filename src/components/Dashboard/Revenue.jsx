@@ -1,6 +1,8 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
+
 const Revenue = () => {
     const [state, setState] = useState({
         series: [67],
@@ -48,25 +50,21 @@ const Revenue = () => {
         },
     });
     return (
-        <Fragment>
-            <CardContent
-                title="Revenue"
-                icons={["fa fa-ellipsis-v"]}
-                CardBody={
-                    <div
-                        className="d-flex align-items-center"
-                        style={{ height: "258px" }}
-                    >
-                        <ReactApexChart
-                            options={state.options}
-                            series={state.series}
-                            type="radialBar"
-                            height={230}
-                        />
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card title="Revenue" icons={["fa fa-ellipsis-v"]}>
+            <CardBody>
+                <div
+                    className="d-flex align-items-center"
+                    style={{ height: "258px" }}
+                >
+                    <ReactApexChart
+                        options={state.options}
+                        series={state.series}
+                        type="radialBar"
+                        height={230}
+                    />
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 

@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import Card from "../Card/Card";
 import ReactApexChart from "react-apexcharts";
 import { CardBody } from "react-bootstrap";
@@ -23,23 +23,21 @@ const Download = () => {
         },
     });
     return (
-        <Fragment>
-            <Card title="Download" icons={["fa fa-ellipsis-v"]}>
-                <CardBody>
-                    <div
-                        className="d-flex align-items-center"
-                        style={{ height: "258px" }}
-                    >
-                        <ReactApexChart
-                            options={state.options}
-                            series={state.series}
-                            type="radialBar"
-                            height={250}
-                        />
-                    </div>
-                </CardBody>
-            </Card>
-        </Fragment>
+        <Card title="Download" icons={["fa fa-ellipsis-v"]}>
+            <CardBody>
+                <div
+                    className="d-flex align-items-center"
+                    style={{ height: "258px" }}
+                >
+                    <ReactApexChart
+                        options={state.options}
+                        series={state.series}
+                        type="radialBar"
+                        height={250}
+                    />
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 
