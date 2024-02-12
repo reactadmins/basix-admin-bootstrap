@@ -147,9 +147,9 @@ const Badges = () => {
                             }
                             CardBody={
                                 <div className="d-flex gap-2">
-                                    <a
+                                    <Button
                                         href="#"
-                                        className="d-block fs-6 text-decoration-none"
+                                        className="p-0 bg-transparent border-0"
                                         style={{
                                             color: `${
                                                 isDark
@@ -162,10 +162,10 @@ const Badges = () => {
                                         <Badge bg="primary" className="mx-1">
                                             5
                                         </Badge>
-                                    </a>
-                                    <a
+                                    </Button>
+                                    <Button
                                         href="#"
-                                        className="d-block fs-6 text-decoration-none"
+                                        className="p-0 bg-transparent border-0"
                                         style={{
                                             color: `${
                                                 isDark
@@ -178,10 +178,10 @@ const Badges = () => {
                                         <Badge bg="warning" className="mx-1">
                                             10
                                         </Badge>
-                                    </a>
-                                    <a
+                                    </Button>
+                                    <Button
                                         href="#"
-                                        className="d-block fs-6 text-decoration-none"
+                                        className="p-0 bg-transparent border-0"
                                         style={{
                                             color: `${
                                                 isDark
@@ -194,7 +194,7 @@ const Badges = () => {
                                         <Badge bg="success" className="mx-1">
                                             2
                                         </Badge>
-                                    </a>
+                                    </Button>
                                 </div>
                             }
                         />
