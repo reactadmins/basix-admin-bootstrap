@@ -1,6 +1,5 @@
-import { Card } from "react-bootstrap";
+import { Card, CardHeader } from "react-bootstrap";
 import MonthlyStatsChart from "../Chart/MonthlyStatsChart";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const MonthlyStats = () => {

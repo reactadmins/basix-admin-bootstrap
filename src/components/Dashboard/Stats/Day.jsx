@@ -1,3 +1,4 @@
+import { Table } from "react-bootstrap";
 import { BarChart, Bar } from "recharts";
 import user1 from "../../../assets/image/avatar/user-1.jpg";
 import user2 from "../../../assets/image/avatar/user-2.jpg";
@@ -53,7 +54,7 @@ const Day = () => {
     ];
     return (
         <div className={`${statsStyle.table_stats} p-3`}>
-            <table className="table">
+            <Table className="table">
                 <thead>
                     <tr>
                         <th scope="col">User</th>
@@ -259,7 +260,7 @@ const Day = () => {
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </Table>
         </div>
     );
 };

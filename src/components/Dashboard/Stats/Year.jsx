@@ -53,7 +53,7 @@ const Year = () => {
     ];
     return (
         <div className={`${statsStyle.table_stats} p-3`}>
-            <table className="table">
+            <Table className="table">
                 <thead>
                     <tr>
                         <th scope="col">User</th>
@@ -259,7 +259,7 @@ const Year = () => {
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </Table>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Day from "./Day.jsx";
 import Month from "./Month";
 import Year from "./Year";
@@ -28,9 +28,9 @@ const Stats = () => {
                     ))}
                 </ul>
             </div>
-            <div>{date === "day" && <Day />}</div>
-            <div>{date === "month" && <Month />}</div>
-            <div>{date === "year" && <Year />}</div>
+            <Fragment>{date === "day" && <Day />}</Fragment>
+            <Fragment>{date === "month" && <Month />}</Fragment>
+            <Fragment>{date === "year" && <Year />}</Fragment>
         </div>
     );
 };

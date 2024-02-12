@@ -5,6 +5,7 @@ import user3 from "../../../assets/image/avatar/user-3.jpg";
 import user4 from "../../../assets/image/avatar/user-4.jpg";
 import user5 from "../../../assets/image/avatar/user-5.jpg";
 import statsStyle from "../../../assets/scss/Stats.module.scss";
+import { Table } from "react-bootstrap";
 
 const Month = () => {
     const data = [
@@ -53,7 +54,7 @@ const Month = () => {
     ];
     return (
         <div className={`${statsStyle.table_stats} p-3`}>
-            <table className="table">
+            <Table className="table">
                 <thead>
                     <tr>
                         <th scope="col">User</th>
@@ -260,7 +261,7 @@ const Month = () => {
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </Table>
         </div>
     );
 };
