@@ -36,90 +36,92 @@ const Badges = () => {
                                     <code>{`<span>`}</code>, elements to create
                                     badges:
                                 </p>
-                                <h1
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Example heading
-                                    <Badge bg="secondary" className="mx-1">
-                                        New
-                                    </Badge>
-                                </h1>
-                                <h2
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Example heading
-                                    <Badge bg="secondary" className="mx-1">
-                                        New
-                                    </Badge>
-                                </h2>
-                                <h3
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Example heading
-                                    <Badge bg="secondary" className="mx-1">
-                                        New
-                                    </Badge>
-                                </h3>
-                                <h4
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Example heading
-                                    <Badge bg="secondary" className="mx-1">
-                                        New
-                                    </Badge>
-                                </h4>
-                                <h5
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Example heading
-                                    <Badge bg="secondary" className="mx-1">
-                                        New
-                                    </Badge>
-                                </h5>
-                                <h6
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Example heading
-                                    <Badge bg="secondary" className="mx-1">
-                                        New
-                                    </Badge>
-                                </h6>
+                                <div>
+                                    <h1
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var( --hedging-text-color)"
+                                                    : "var( --hedging-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Example heading
+                                        <Badge bg="secondary" className="mx-1">
+                                            New
+                                        </Badge>
+                                    </h1>
+                                    <h2
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var( --hedging-text-color)"
+                                                    : "var( --hedging-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Example heading
+                                        <Badge bg="secondary" className="mx-1">
+                                            New
+                                        </Badge>
+                                    </h2>
+                                    <h3
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var( --hedging-text-color)"
+                                                    : "var( --hedging-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Example heading
+                                        <Badge bg="secondary" className="mx-1">
+                                            New
+                                        </Badge>
+                                    </h3>
+                                    <h4
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var( --hedging-text-color)"
+                                                    : "var( --hedging-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Example heading
+                                        <Badge bg="secondary" className="mx-1">
+                                            New
+                                        </Badge>
+                                    </h4>
+                                    <h5
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var( --hedging-text-color)"
+                                                    : "var( --hedging-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Example heading
+                                        <Badge bg="secondary" className="mx-1">
+                                            New
+                                        </Badge>
+                                    </h5>
+                                    <h6
+                                        style={{
+                                            color: `${
+                                                isDark
+                                                    ? "var( --hedging-text-color)"
+                                                    : "var( --hedging-text-color)"
+                                            }`,
+                                        }}
+                                    >
+                                        Example heading
+                                        <Badge bg="secondary" className="mx-1">
+                                            New
+                                        </Badge>
+                                    </h6>
+                                </div>
                             </>
                         }
                     />
