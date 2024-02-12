@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 import user1 from "../../assets/image/avatar/user-1.jpg";
 import user2 from "../../assets/image/avatar/user-2.jpg";
 import user3 from "../../assets/image/avatar/user-3.jpg";
@@ -9,10 +10,8 @@ import timelineStyle from "../../assets/scss/Timeline.module.scss";
 const Timeline = () => {
     return (
         <Fragment>
-            <CardContent
-                title="Timeline"
-                icons={["fa fa-ellipsis-v"]}
-                CardBody={
+            <Card title="Timeline" icons={["fa fa-ellipsis-v"]}>
+                <CardBody>
                     <div
                         className={`${timelineStyle.timeline_container} w-100`}
                     >
@@ -140,8 +139,8 @@ const Timeline = () => {
                             </div>
                         </div>
                     </div>
-                }
-            />
+                </CardBody>
+            </Card>
         </Fragment>
     );
 };
