@@ -1,8 +1,9 @@
-import { Fragment, useState } from "react";
-import CardContent from "../Card/CardContent";
+import { useState } from "react";
+import Card from "../Card/Card";
 import ReactApexChart from "react-apexcharts";
+import { CardBody } from "react-bootstrap";
 
-const AreaChart = () => {
+const RealTime = () => {
     const [state, setState] = useState({
         series: [
             {
@@ -41,24 +42,23 @@ const AreaChart = () => {
         },
     });
     return (
-        <Fragment>
-            <CardContent
-                title="Real Time"
-                icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <ReactApexChart
-                            options={state.options}
-                            series={state.series}
-                            type="area"
-                            height={446}
-                            style={{ width: "100%" }}
-                        />
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card
+            title="Real Time"
+            icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
+        >
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <ReactApexChart
+                        options={state.options}
+                        series={state.series}
+                        type="area"
+                        height={446}
+                        style={{ width: "100%" }}
+                    />
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 
-export default AreaChart;
+export default RealTime;

@@ -13,9 +13,87 @@ import WeatherStats from "../components/Dashboard/WeatherStats";
 import UserStats from "../components/Dashboard/UserStats";
 import MonthlyStats from "../components/Dashboard/MonthlyStats";
 import DeviceVisitorStats from "../components/Chart/DeviceVisitorStats";
-import AreaChart from "../components/Dashboard/AreaChart";
+import RealTime from "../components/Dashboard/RealTime";
 
 const Dashboard = () => {
+    const barChartData = [
+        {
+            name: "Page A",
+            uv: 2000,
+            pv: 2400,
+            amt: 2400,
+        },
+        {
+            name: "Page B",
+            uv: 6000,
+            pv: 1398,
+            amt: 2210,
+        },
+        {
+            name: "Page C",
+            uv: 4000,
+            pv: 9800,
+            amt: 2290,
+        },
+        {
+            name: "Page D",
+            uv: 8000,
+            pv: 3908,
+            amt: 2000,
+        },
+        {
+            name: "Page E",
+            uv: 4000,
+            pv: 4800,
+            amt: 2181,
+        },
+        {
+            name: "Page F",
+            uv: 6000,
+            pv: 3800,
+            amt: 2500,
+        },
+        {
+            name: "Page G",
+            uv: 2000,
+            pv: 4300,
+            amt: 2100,
+        },
+        {
+            name: "Page G",
+            uv: 5000,
+            pv: 4300,
+            amt: 2100,
+        },
+    ];
+
+    const lineChartData = [
+        {
+            name: "Page A",
+            uv: 400,
+            pv: 400,
+            amt: 2400,
+        },
+        {
+            name: "Page B",
+            uv: 30,
+            pv: 25000,
+            amt: 2210,
+        },
+        {
+            name: "Page C",
+            uv: 10,
+            pv: 10500,
+            amt: 2290,
+        },
+        {
+            name: "Page D",
+            uv: 20,
+            pv: 50000,
+            amt: 2000,
+        },
+    ];
+
     return (
         <Container fluid className="p-0">
             {/* start alert section */}
@@ -54,56 +132,7 @@ const Dashboard = () => {
                                 <BarChart
                                     width={100}
                                     height={80}
-                                    data={[
-                                        {
-                                            name: "Page A",
-                                            uv: 2000,
-                                            pv: 2400,
-                                            amt: 2400,
-                                        },
-                                        {
-                                            name: "Page B",
-                                            uv: 6000,
-                                            pv: 1398,
-                                            amt: 2210,
-                                        },
-                                        {
-                                            name: "Page C",
-                                            uv: 4000,
-                                            pv: 9800,
-                                            amt: 2290,
-                                        },
-                                        {
-                                            name: "Page D",
-                                            uv: 8000,
-                                            pv: 3908,
-                                            amt: 2000,
-                                        },
-                                        {
-                                            name: "Page E",
-                                            uv: 4000,
-                                            pv: 4800,
-                                            amt: 2181,
-                                        },
-                                        {
-                                            name: "Page F",
-                                            uv: 6000,
-                                            pv: 3800,
-                                            amt: 2500,
-                                        },
-                                        {
-                                            name: "Page G",
-                                            uv: 2000,
-                                            pv: 4300,
-                                            amt: 2100,
-                                        },
-                                        {
-                                            name: "Page G",
-                                            uv: 5000,
-                                            pv: 4300,
-                                            amt: 2100,
-                                        },
-                                    ]}
+                                    data={barChartData}
                                 >
                                     <Bar dataKey="uv" fill="#fff" />
                                 </BarChart>
@@ -132,45 +161,18 @@ const Dashboard = () => {
                         title="New Users"
                         icon={
                             <>
-                                <>
-                                    <LineChart
-                                        width={100}
-                                        height={67}
-                                        data={[
-                                            {
-                                                name: "Page A",
-                                                uv: 400,
-                                                pv: 400,
-                                                amt: 2400,
-                                            },
-                                            {
-                                                name: "Page B",
-                                                uv: 30,
-                                                pv: 25000,
-                                                amt: 2210,
-                                            },
-                                            {
-                                                name: "Page C",
-                                                uv: 10,
-                                                pv: 10500,
-                                                amt: 2290,
-                                            },
-                                            {
-                                                name: "Page D",
-                                                uv: 20,
-                                                pv: 50000,
-                                                amt: 2000,
-                                            },
-                                        ]}
-                                    >
-                                        <Line
-                                            type="monotone"
-                                            dataKey="pv"
-                                            stroke="#fff"
-                                            strokeWidth={2}
-                                        />
-                                    </LineChart>
-                                </>
+                                <LineChart
+                                    width={100}
+                                    height={67}
+                                    data={lineChartData}
+                                >
+                                    <Line
+                                        type="monotone"
+                                        dataKey="pv"
+                                        stroke="#fff"
+                                        strokeWidth={2}
+                                    />
+                                </LineChart>
                             </>
                         }
                     />
@@ -181,7 +183,7 @@ const Dashboard = () => {
             {/* start area chart and traffic  section */}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={12} lg={5} xl={5}>
-                    <AreaChart />
+                    <RealTime />
                 </Col>
                 <Col md={12} lg={7} xl={7}>
                     <Traffic />
