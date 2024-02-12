@@ -159,7 +159,7 @@ const Badges = () => {
                                         }}
                                     >
                                         News
-                                        <Badge className="badge bg-primary mx-1">
+                                        <Badge bg="primary" className="mx-1">
                                             5
                                         </Badge>
                                     </a>
@@ -175,7 +175,7 @@ const Badges = () => {
                                         }}
                                     >
                                         Comments
-                                        <Badge className="badge bg-warning mx-1">
+                                        <Badge bg="warning" className="mx-1">
                                             10
                                         </Badge>
                                     </a>
@@ -191,7 +191,7 @@ const Badges = () => {
                                         }}
                                     >
                                         Updates
-                                        <Badge className="badge bg-success mx-1">
+                                        <Badge bg="success" className="mx-1">
                                             2
                                         </Badge>
                                     </a>
@@ -221,31 +221,51 @@ const Badges = () => {
                                     <div className="d-flex flex-wrap gap-2">
                                         <Button variant="primary">
                                             Primary
-                                            <Badge className="badge bg-light text-dark mx-1">
+                                            <Badge
+                                                bg="light"
+                                                text="dark"
+                                                className="mx-1"
+                                            >
                                                 7
                                             </Badge>
                                         </Button>
                                         <Button variant="success">
                                             Success
-                                            <Badge className="badge bg-light text-dark mx-1">
+                                            <Badge
+                                                bg="light"
+                                                text="dark"
+                                                className="mx-1"
+                                            >
                                                 7
                                             </Badge>
                                         </Button>
                                         <Button variant="info text-dark">
                                             Info
-                                            <Badge className="badge bg-light text-dark mx-1">
+                                            <Badge
+                                                bg="light"
+                                                text="dark"
+                                                className="mx-1"
+                                            >
                                                 7
                                             </Badge>
                                         </Button>
                                         <Button variant="warning text-dark">
                                             Warning
-                                            <Badge className="badge bg-light text-dark mx-1">
+                                            <Badge
+                                                bg="light"
+                                                text="dark"
+                                                className="mx-1"
+                                            >
                                                 7
                                             </Badge>
                                         </Button>
                                         <Button variant="danger">
                                             Danger
-                                            <Badge className="badge bg-light text-dark mx-1">
+                                            <Badge
+                                                bg="light"
+                                                text="dark"
+                                                className="mx-1"
+                                            >
                                                 7
                                             </Badge>
                                         </Button>
