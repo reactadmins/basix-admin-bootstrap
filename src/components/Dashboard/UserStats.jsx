@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
+import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
 import admin from "../../assets/image/admin.jpg";
 import userStatsStryle from "../../assets/scss/UserStats.module.scss";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
@@ -57,7 +56,7 @@ const UserStats = () => {
                     ""
                 )}
             </CardHeader>
-            <Card.Body className={`${userStatsStryle.card_body} p-0`}>
+            <CardBody className={`${userStatsStryle.card_body} p-0`}>
                 <div className={userStatsStryle.user_info}>
                     <h5 className="fs-6 fw-medium text-white text-center">
                         Martin Luther
@@ -68,8 +67,8 @@ const UserStats = () => {
                 >
                     <img className="rounded-circle" src={admin} alt="user" />
                 </div>
-            </Card.Body>
-            <Card.Footer className={`${userStatsStryle.card_footer} p-3 py-2`}>
+            </CardBody>
+            <CardFooter className={`${userStatsStryle.card_footer} p-3 py-2`}>
                 <div className="d-flex justify-content-between align-items-center">
                     <Stats icon="fa-solid fa-thumbs-up" counter={3548} />
                     <hr className="mx-3" />
@@ -77,7 +76,7 @@ const UserStats = () => {
                     <hr className="mx-3" />
                     <Stats icon="fa-solid fa-message" counter={3548} />
                 </div>
-            </Card.Footer>
+            </CardFooter>
         </Card>
     );
 };
