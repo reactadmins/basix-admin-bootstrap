@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
 import ReactApexChart from "react-apexcharts";
+import { CardBody } from "react-bootstrap";
 
 const Download = () => {
     const [state, setState] = useState({
@@ -23,10 +24,8 @@ const Download = () => {
     });
     return (
         <Fragment>
-            <CardContent
-                title="Download"
-                icons={["fa fa-ellipsis-v"]}
-                CardBody={
+            <Card title="Download" icons={["fa fa-ellipsis-v"]}>
+                <CardBody>
                     <div
                         className="d-flex align-items-center"
                         style={{ height: "258px" }}
@@ -38,8 +37,8 @@ const Download = () => {
                             height={250}
                         />
                     </div>
-                }
-            />
+                </CardBody>
+            </Card>
         </Fragment>
     );
 };
