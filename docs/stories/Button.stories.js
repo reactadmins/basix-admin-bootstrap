@@ -1,45 +1,58 @@
-import { Button } from './Button';
+import Button from "react-bootstrap/Button";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Button',
-  component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: "Components/Button",
+    component: Button,
+    tags: ["autodocs"],
+    args: {},
+    argTypes: {
+        variant: {
+            control: "select",
+            options: [
+                "primary",
+                "secondary",
+                "success",
+                "warning",
+                "danger",
+                "info",
+                "light",
+                "dark",
+            ],
+        },
+        size: {
+            control: "inline-radio",
+            options: ["sm", "md", "lg"],
+        },
+    },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
+export const Normal = {
+    args: {
+        variant: "primary",
+        children: "Primary",
+        active: false,
+        disabled: false,
+    },
 };
 
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
+export const Outline = {
+    args: {
+        variant: "outline-primary",
+        children: "Primary",
+    },
+    argTypes: {
+        variant: {
+            control: "select",
+            options: [
+                "outline-primary",
+                "outline-secondary",
+                "outline-success",
+                "outline-warning",
+                "outline-danger",
+                "outline-info",
+                "outline-light",
+                "outline-dark",
+            ],
+        },
+    },
 };

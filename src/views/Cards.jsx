@@ -12,16 +12,10 @@ const Cards = () => {
             <Row className="gy-4 gx-4">
                 {/* start profile card section */}
                 <Col md={6} lg={4}>
-                    <ProfileCard
-                        headerTitle="Profile Card"
-                        title="Steven Lee"
-                    />
+                    <ProfileCard headerTitle="Profile Card" title="Steven Lee" />
                 </Col>
                 <Col md={6} lg={4}>
-                    <ProfileCard
-                        footerTitle="Profile Card"
-                        title="Steven Lee"
-                    />
+                    <ProfileCard footerTitle="Profile Card" title="Steven Lee" />
                 </Col>
                 <Col md={6} lg={4}>
                     <ProfileCard
@@ -48,8 +42,7 @@ const Cards = () => {
                                 className="text-center fs-6 px-3 py-3"
                                 style={{ color: "var(--content-text-color)" }}
                             >
-                                Just got a pretty neat project via @ooomf - Give
-                                it a try
+                                Just got a pretty neat project via @ooomf - Give it a try
                                 <a
                                     href="#"
                                     className="text-decoration-none mx-1"
