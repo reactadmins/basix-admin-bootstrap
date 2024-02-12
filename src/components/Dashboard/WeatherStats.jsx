@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
+import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
 import weatherStyle from "../../assets/scss/WeatherStats.module.scss";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
@@ -64,7 +63,7 @@ const WeatherStats = () => {
                     ""
                 )}
             </CardHeader>
-            <Card.Body className={`${weatherStyle.card_body} p-0 border-0`}>
+            <CardBody className={`${weatherStyle.card_body} p-0 border-0`}>
                 <div
                     className={`${weatherStyle.weather_stats} p-4 pt-0 pb-2 d-flex justify-content-between align-items-center`}
                 >
@@ -94,8 +93,8 @@ const WeatherStats = () => {
                         <span className="d-block">°C</span>
                     </div>
                 </div>
-            </Card.Body>
-            <Card.Footer className={weatherStyle.card_footer}>
+            </CardBody>
+            <CardFooter className={weatherStyle.card_footer}>
                 <div className="d-flex justify-content-between align-items-center">
                     <Stats title="Feels" counter={23} Symbol="°" />
                     <hr className="mx-3" />
@@ -103,7 +102,7 @@ const WeatherStats = () => {
                     <hr className="mx-3" />
                     <Stats title="Wind" counter={4} Symbol=" km/h" />
                 </div>
-            </Card.Footer>
+            </CardFooter>
         </Card>
     );
 };
