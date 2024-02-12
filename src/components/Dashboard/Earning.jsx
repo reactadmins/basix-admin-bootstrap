@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
 import earningStyle from "../../assets/scss/Earning.module.scss";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
@@ -78,7 +78,7 @@ const Earning = () => {
                             }`,
                         }}
                     >
-                        <Card.Header
+                        <CardHeader
                             className={`${earningStyle.header} border-0`}
                         >
                             <div className="d-flex justify-content-between align-items-center">
@@ -132,8 +132,8 @@ const Earning = () => {
                                     )}
                                 </div>
                             </div>
-                        </Card.Header>
-                        <Card.Body className="bg-transparent pb-0">
+                        </CardHeader>
+                        <CardBody className="bg-transparent pb-0">
                             <ResponsiveContainer width="100%" height={210}>
                                 <BarChart
                                     width={580}
@@ -144,8 +144,8 @@ const Earning = () => {
                                     <Bar dataKey="uv" fill="#F58F8D" />
                                 </BarChart>
                             </ResponsiveContainer>
-                        </Card.Body>
-                        <Card.Footer
+                        </CardBody>
+                        <CardFooter
                             className={`${earningStyle.footer} border-0 rounded-0`}
                         >
                             <div className="d-flex justify-content-between align-items-center">
@@ -159,7 +159,7 @@ const Earning = () => {
                                     <span className="count">3265986</span>
                                 </h4>
                             </div>
-                        </Card.Footer>
+                        </CardFooter>
                     </Card>
                 </div>
             ) : (
