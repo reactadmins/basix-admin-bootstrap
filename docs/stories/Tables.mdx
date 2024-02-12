@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/blocks";
+import CodePreview from "../components/CodePreview";
+import { tableCode } from "../code/tableCode";
+import { Col, Row } from "react-bootstrap";
+
+<Meta title="Components/Tables" />
+
+<h1 className="title">Hell</h1>
+
+<Row className="gy-4 gx-4">
+    <Col sm={12}>dslfj</Col>
+    <Col sm={12}>dslfjl</Col>
+    <Col sm={12}>sdjfkl</Col>
+</Row>
+
+<CodePreview lang={"htmlbars"}>{tableCode}</CodePreview>
+
+```{
+"firstName": "John",
+"lastName": "Smith",
+"age": 25
+}
+<h1>asdf ads</h1>
+```
+
+<style>
+    {`
+     .title {
+         color: red;
+     }
+     `}
+</style>
