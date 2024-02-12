@@ -7,7 +7,7 @@ import { useDashboardDataContext } from "../../context/dashboardDataContext";
 const CardContent = ({
     title = "",
     titleCode = "",
-    icons = "",
+    icons = [],
     CardBody = "",
     bodyHeight = "",
     CardFooter = "",
@@ -27,19 +27,15 @@ const CardContent = ({
                         boxShadow: `${isDark ? "0 0 0 1px #ffffff25" : ""}`,
                     }}
                 >
-                    <CardHeader
-                        className={`${cardContentStyle.card_header} rounded-0`}
-                    >
+                    <CardHeader className={`${cardContentStyle.card_header} rounded-0`}>
                         <div
                             className={`d-flex align-items-center ${
                                 icons ? "justify-content-between" : " "
                             }`}
                         >
-                            <strong className={cardContentStyle.card_title}>
-                                {title}
-                            </strong>
+                            <strong className={cardContentStyle.card_title}>{title}</strong>
                             {titleCode}
-                            {icons && (
+                            {icons.length > 0 && (
                                 <div
                                     className={`d-flex align-items-center ${cardContentStyle.card_icon}`}
                                 >
@@ -51,16 +47,12 @@ const CardContent = ({
                                                 setIsOpen(
                                                     item === "fa fa-cog"
                                                         ? !isOpen
-                                                        : "" ||
-                                                          item ===
-                                                              "fa fa-ellipsis-v"
+                                                        : "" || item === "fa fa-ellipsis-v"
                                                         ? !isOpen
                                                         : ""
                                                 );
                                                 setHiddenContent(
-                                                    item === "fa fa-times"
-                                                        ? !hiddenContent
-                                                        : ""
+                                                    item === "fa fa-times" ? !hiddenContent : ""
                                                 );
                                             }}
                                             className={`${cardContentStyle.content_settings} border-0 bg-transparent`}
@@ -69,11 +61,7 @@ const CardContent = ({
                                         </button>
                                     ))}
                                     {isOpen ? (
-                                        <div
-                                            className={
-                                                cardContentStyle.card_setting
-                                            }
-                                        >
+                                        <div className={cardContentStyle.card_setting}>
                                             <button type="button">
                                                 <i className="fa-solid fa-gear"></i>
                                                 Edit

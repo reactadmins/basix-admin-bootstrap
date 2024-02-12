@@ -102,10 +102,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -117,10 +114,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -132,10 +126,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -147,10 +138,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -162,10 +150,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -177,10 +162,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -192,10 +174,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -207,10 +186,7 @@ const Alerts = () => {
                                     title={
                                         <Fragment>
                                             This is a primary alert with
-                                            <a
-                                                href="#"
-                                                className="alert-link mx-1"
-                                            >
+                                            <a href="#" className="alert-link mx-1">
                                                 an example link
                                             </a>
                                             . Give it a click if you like.
@@ -236,17 +212,14 @@ const Alerts = () => {
                                     alertContent={
                                         <Fragment>
                                             <p>
-                                                You successfully read this
-                                                important alert message. This
-                                                example text is going to run a
-                                                bit longer so that you can see
-                                                alert content.
+                                                You successfully read this important alert message.
+                                                This example text is going to run a bit longer so
+                                                that you can see alert content.
                                             </p>
                                             <hr />
                                             <p>
-                                                Whenever you need to, be sure to
-                                                use margin utilities nice and
-                                                tidy.
+                                                Whenever you need to, be sure to use margin
+                                                utilities nice and tidy.
                                             </p>
                                         </Fragment>
                                     }
@@ -258,17 +231,14 @@ const Alerts = () => {
                                     alertContent={
                                         <Fragment>
                                             <p>
-                                                You successfully read this
-                                                important alert message. This
-                                                example text is going to run a
-                                                bit longer so that you can see
-                                                how alert content.
+                                                You successfully read this important alert message.
+                                                This example text is going to run a bit longer so
+                                                that you can see how alert content.
                                             </p>
                                             <hr />
                                             <p>
-                                                Whenever you need to, be sure to
-                                                use margin utilities nice and
-                                                tidy.
+                                                Whenever you need to, be sure to use margin
+                                                utilities nice and tidy.
                                             </p>
                                         </Fragment>
                                     }
@@ -280,18 +250,15 @@ const Alerts = () => {
                                     alertContent={
                                         <Fragment>
                                             <p>
-                                                You successfully read this
-                                                important alert message. This
-                                                example text is going to run a
-                                                bit longer so that you can see
-                                                how spacing within an alert
+                                                You successfully read this important alert message.
+                                                This example text is going to run a bit longer so
+                                                that you can see how spacing within an alert
                                                 content.
                                             </p>
                                             <hr />
                                             <p>
-                                                Whenever you need to, be sure to
-                                                use margin utilities nice and
-                                                tidy.
+                                                Whenever you need to, be sure to use margin
+                                                utilities nice and tidy.
                                             </p>
                                         </Fragment>
                                     }
