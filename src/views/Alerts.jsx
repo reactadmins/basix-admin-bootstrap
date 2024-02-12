@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import CardContent from "../components/Card/CardContent";
-import { Col, Row } from "react-bootstrap";
-import Alert from "../components/Alert/Alert";
+import { Alert, Badge, Col, Row } from "react-bootstrap";
 
 const Alerts = () => {
     return (
@@ -13,30 +12,25 @@ const Alerts = () => {
                         title="Alerts"
                         CardBody={
                             <Fragment>
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="primary"
-                                />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="secondary"
-                                />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="success"
-                                />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="danger"
-                                />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="warning"
-                                />
-                                <Alert
-                                    title="This is a primary alert—check it out!"
-                                    alertBg="info"
-                                />
+                                <Alert variant="primary">
+                                    This is a primary alert—check it out!
+                                </Alert>
+
+                                <Alert variant="secondary">
+                                    This is a primary alert—check it out!
+                                </Alert>
+                                <Alert variant="success">
+                                    This is a primary alert—check it out!
+                                </Alert>
+                                <Alert variant="danger">
+                                    This is a primary alert—check it out!
+                                </Alert>
+                                <Alert variant="warning">
+                                    This is a primary alert—check it out!
+                                </Alert>
+                                <Alert variant="info">
+                                    This is a primary alert—check it out!
+                                </Alert>
                             </Fragment>
                         }
                     />
@@ -49,42 +43,30 @@ const Alerts = () => {
                         title="Dismissing Alerts"
                         CardBody={
                             <Fragment>
-                                <Alert
-                                    type="dismissible"
-                                    title="You successfully read this important alert."
-                                    badgeTitle="Success"
-                                    alertBg="success"
-                                />
-                                <Alert
-                                    type="dismissible"
-                                    title="You successfully read this important alert."
-                                    badgeTitle="Primary"
-                                    alertBg="primary"
-                                />
-                                <Alert
-                                    type="dismissible"
-                                    title="You successfully read this important alert."
-                                    badgeTitle="Secondary"
-                                    alertBg="secondary"
-                                />
-                                <Alert
-                                    type="dismissible"
-                                    title="You successfully read this important alert."
-                                    badgeTitle="Warning"
-                                    alertBg="warning"
-                                />
-                                <Alert
-                                    type="dismissible"
-                                    title="You successfully read this important alert."
-                                    badgeTitle="Danger"
-                                    alertBg="danger"
-                                />
-                                <Alert
-                                    type="dismissible"
-                                    title="You successfully read this important alert."
-                                    badgeTitle="Info"
-                                    alertBg="info"
-                                />
+                                <Alert variant="success" dismissible>
+                                    <Badge bg="success">Success</Badge> You
+                                    successfully read this important alert.
+                                </Alert>
+                                <Alert variant="primary" dismissible>
+                                    <Badge bg="primary">Primary</Badge> You
+                                    successfully read this important alert.
+                                </Alert>
+                                <Alert variant="secondary" dismissible>
+                                    <Badge bg="secondary">Secondary</Badge> You
+                                    successfully read this important alert.
+                                </Alert>
+                                <Alert variant="warning" dismissible>
+                                    <Badge bg="warning">Warning</Badge> You
+                                    successfully read this important alert.
+                                </Alert>
+                                <Alert variant="danger" dismissible>
+                                    <Badge bg="danger">Danger</Badge> You
+                                    successfully read this important alert.
+                                </Alert>
+                                <Alert variant="info" dismissible>
+                                    <Badge bg="info">Info</Badge> You
+                                    successfully read this important alert.
+                                </Alert>
                             </Fragment>
                         }
                     />
@@ -97,102 +79,62 @@ const Alerts = () => {
                         title="Link Color Alerts"
                         CardBody={
                             <Fragment>
-                                <Alert
-                                    alertBg="primary"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="secondary"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="success"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="danger"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="warning"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="info"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="light"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    alertBg="dark"
-                                    title={
-                                        <Fragment>
-                                            This is a primary alert with
-                                            <a href="#" className="alert-link mx-1">
-                                                an example link
-                                            </a>
-                                            . Give it a click if you like.
-                                        </Fragment>
-                                    }
-                                />
+                                <Alert variant="primary">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="secondary">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="success">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="danger">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="warning">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="info">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="light">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
+                                <Alert variant="dark">
+                                    This is a primary alert with
+                                    <Alert.Link href="#" className="mx-1">
+                                        an example link
+                                    </Alert.Link>
+                                    . Give it a click if you like.
+                                </Alert>
                             </Fragment>
                         }
                     />
@@ -205,64 +147,48 @@ const Alerts = () => {
                         title="Contents"
                         CardBody={
                             <Fragment>
-                                <Alert
-                                    type="content"
-                                    title="Well done!"
-                                    alertBg="success"
-                                    alertContent={
-                                        <Fragment>
-                                            <p>
-                                                You successfully read this important alert message.
-                                                This example text is going to run a bit longer so
-                                                that you can see alert content.
-                                            </p>
-                                            <hr />
-                                            <p>
-                                                Whenever you need to, be sure to use margin
-                                                utilities nice and tidy.
-                                            </p>
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    type="content"
-                                    title="Well done!"
-                                    alertBg="warning"
-                                    alertContent={
-                                        <Fragment>
-                                            <p>
-                                                You successfully read this important alert message.
-                                                This example text is going to run a bit longer so
-                                                that you can see how alert content.
-                                            </p>
-                                            <hr />
-                                            <p>
-                                                Whenever you need to, be sure to use margin
-                                                utilities nice and tidy.
-                                            </p>
-                                        </Fragment>
-                                    }
-                                />
-                                <Alert
-                                    type="content"
-                                    title="Well done!"
-                                    alertBg="danger"
-                                    alertContent={
-                                        <Fragment>
-                                            <p>
-                                                You successfully read this important alert message.
-                                                This example text is going to run a bit longer so
-                                                that you can see how spacing within an alert
-                                                content.
-                                            </p>
-                                            <hr />
-                                            <p>
-                                                Whenever you need to, be sure to use margin
-                                                utilities nice and tidy.
-                                            </p>
-                                        </Fragment>
-                                    }
-                                />
+                                <Alert variant="success">
+                                    <Alert.Heading>Well done!</Alert.Heading>
+                                    <p>
+                                        You successfully read this important
+                                        alert message. This example text is
+                                        going to run a bit longer so that you
+                                        can see alert content.
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        Whenever you need to, be sure to use
+                                        margin utilities nice and tidy.
+                                    </p>
+                                </Alert>
+                                <Alert variant="warning">
+                                    <Alert.Heading>Well done!</Alert.Heading>
+                                    <p>
+                                        You successfully read this important
+                                        alert message. This example text is
+                                        going to run a bit longer so that you
+                                        can see how alert content.
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        Whenever you need to, be sure to use
+                                        margin utilities nice and tidy.
+                                    </p>
+                                </Alert>
+                                <Alert variant="danger">
+                                    <Alert.Heading>Well done!</Alert.Heading>
+                                    <p>
+                                        You successfully read this important
+                                        alert message. This example text is
+                                        going to run a bit longer so that you
+                                        can see how alert content.
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        Whenever you need to, be sure to use
+                                        margin utilities nice and tidy.
+                                    </p>
+                                </Alert>
                             </Fragment>
                         }
                     />

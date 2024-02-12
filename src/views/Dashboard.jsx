@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Alert, Badge, Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
 import StatsCard from "../components/Dashboard/StatsCard";
 import Traffic from "../components/Dashboard/Traffic";
@@ -13,20 +13,16 @@ import WeatherStats from "../components/Dashboard/WeatherStats";
 import UserStats from "../components/Dashboard/UserStats";
 import MonthlyStats from "../components/Dashboard/MonthlyStats";
 import DeviceVisitorStats from "../components/Chart/DeviceVisitorStats";
-import Alert from "../components/Alert/Alert";
 import AreaChart from "../components/Dashboard/AreaChart";
 
 const Dashboard = () => {
     return (
         <Container fluid className="p-0">
             {/* start alert section */}
-            <Alert
-                type="dismissible"
-                title="You successfully read this important alert message."
-                alertContent="Thi is contentn hrere"
-                badgeTitle="Success"
-                alertBg="success"
-            />
+            <Alert variant="success" dismissible>
+                <Badge bg="success">Success</Badge> You successfully read this
+                important alert.
+            </Alert>
             {/* end alert section */}
 
             {/* start revenue section */}
