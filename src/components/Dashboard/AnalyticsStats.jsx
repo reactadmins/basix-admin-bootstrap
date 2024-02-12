@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import CardContent from "../Card/CardContent";
-import { Row, Col } from "react-bootstrap";
-import AnalyticsInfo from "../Chart/AnalyticsInfo";
+import Card from "../Card/Card";
+import { Row, Col, CardBody, CardFooter } from "react-bootstrap";
+import AnalyticsInfo from "./AnalyticsInfo";
 import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -13,6 +13,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
+
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -60,18 +61,19 @@ const AnalyticsStats = () => {
     };
     return (
         <Fragment>
-            <CardContent
+            <Card
                 title="Analytics Stats"
                 icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                CardBody={
+            >
+                <CardBody>
                     <div
                         className="d-flex justify-content-center"
                         style={{ width: "100%", height: "310px" }}
                     >
                         <Line options={options} data={data} />
                     </div>
-                }
-                CardFooter={
+                </CardBody>
+                <CardFooter>
                     <Row className="gy-4 m-0" style={{ padding: "16px 20px" }}>
                         <Col sm={12} md={4} className="m-0">
                             <AnalyticsInfo count={65.79} title="Bounce Rate" />
@@ -83,8 +85,8 @@ const AnalyticsStats = () => {
                             <AnalyticsInfo count={65.79} title="New Users" />
                         </Col>
                     </Row>
-                }
-            />
+                </CardFooter>
+            </Card>
         </Fragment>
     );
 };
