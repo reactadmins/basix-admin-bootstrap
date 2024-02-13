@@ -1,8 +1,7 @@
 import { useState } from "react";
-import tableData from "../data/tableData";
 import tablesStyle from "../../assets/scss/Tables.module.scss";
 
-const Table = ({ isSearch = false, isVariants = false }) => {
+const Table = ({ isSearch = false, isVariants = false, data = [] }) => {
     const [search, setSearch] = useState("");
     const [select, setSelect] = useState(10);
 
@@ -50,20 +49,14 @@ const Table = ({ isSearch = false, isVariants = false }) => {
                     </tr>
                 </thead>
                 <tbody className={`tbody ${tablesStyle.tbody}`}>
-                    {tableData
+                    {data
                         ?.slice(0, select)
                         .filter((item) => {
-                            return search.toLowerCase() === ""
+                            return search === ""
                                 ? item
-                                : item.name
-                                      .toLocaleLowerCase()
-                                      .includes(search) ||
-                                      item.email
-                                          .toLocaleLowerCase()
-                                          .includes(search) ||
-                                      item.city
-                                          .toLocaleLowerCase()
-                                          .includes(search);
+                                : item.name.includes(search) ||
+                                      item.email.includes(search) ||
+                                      item.city.includes(search);
                         })
                         .map((item, index) => (
                             <tr
