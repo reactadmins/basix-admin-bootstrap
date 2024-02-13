@@ -3,15 +3,14 @@ import CodePreview from "../components/CodePreview";
 import { tableCode } from "../code/tableCode";
 import { Col, Row } from "react-bootstrap";
 
+import CardContent from "../../src/components/Card/CardContent";
+import Table from "../../src/components/Table/Table";
+
 <Meta title="Components/Tables" />
 
-<h1 className="title">Hell</h1>
+<h2>Tables</h2>
 
-<Row className="gy-4 gx-4">
-    <Col sm={12}>dslfj</Col>
-    <Col sm={12}>dslfjl</Col>
-    <Col sm={12}>sdjfkl</Col>
-</Row>
+<Table />
 
 <CodePreview lang={"htmlbars"}>{tableCode}</CodePreview>
 
@@ -22,11 +21,3 @@ import { Col, Row } from "react-bootstrap";
 }
 <h1>asdf ads</h1>
 ```
-
-<style>
-    {`
-     .title {
-         color: red;
-     }
-     `}
-</style>
