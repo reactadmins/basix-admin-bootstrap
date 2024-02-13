@@ -14,29 +14,16 @@
         color: var(--hedging-text-color);
       }
     }
-    button {
-      border: 1px solid #666666;
-      border-left: 0px;
-      background-color: #666666;
-      border-radius: 0 4px 4px 0;
-      color: #fff;
-      &:active {
-        border-color: #666666;
-        background-color: #666666;
-        color: #fff;
-      }
-    }
-  }
-
-  .show_entries {
-    select {
-      option {
-        color: var(--hedging-text-color);
-        border-bottom: 1px solid var(--border-color);
-        background-color: var(--bg-content);
-      }
-      &:focus-visible {
-        box-shadow: none;
+    .show_entries {
+      select {
+        option {
+          color: var(--hedging-text-color);
+          border-bottom: 1px solid var(--border-color);
+          background-color: var(--bg-content);
+        }
+        &:focus-visible {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -79,17 +66,35 @@
       .thead {
         tr {
           td {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0.75rem;
+            border-bottom: 0px;
             color: var(--content-text-color);
             background-color: var(--bg-content);
+            &:last-child {
+              text-align: center;
+            }
           }
         }
       }
       .tbody {
         tr {
           td {
-            border-color: var(--border-color) !important;
             color: var(--hedging-text-color);
-            background-color: var(--bg-content) !important;
+            padding: 0.75rem;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 0px;
+            background-color: var(--bg-content);
+            &:last-child {
+              text-align: center;
+            }
+          }
+          &:nth-child(even) {
+            background-color: #fff;
+          }
+          &:nth-child(odd) {
+            background-color: #f2f2f2;
           }
         }
       }

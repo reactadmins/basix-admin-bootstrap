@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
-import StatsCard from "../components/Dashboard/StatsCard";
+import StatsCard from "../components/widgets/StatsCard";
 import SocialCounter from "../components/Dashboard/SocialCounter";
 import UserInfo from "../components/UserInfo/UserInfo";
 import NotificationStatsCart from "../components/Card/NotificationStatsCart";
@@ -8,15 +8,92 @@ import ProfileCard from "../components/Card/ProfileCard";
 import OverlayCard from "../components/Card/OverlayCard";
 
 const Widgets = () => {
+    const data1 = [
+        {
+            name: "Page A",
+            uv: 2000,
+            pv: 2400,
+            amt: 2400,
+        },
+        {
+            name: "Page B",
+            uv: 6000,
+            pv: 1398,
+            amt: 2210,
+        },
+        {
+            name: "Page C",
+            uv: 4000,
+            pv: 9800,
+            amt: 2290,
+        },
+        {
+            name: "Page D",
+            uv: 8000,
+            pv: 3908,
+            amt: 2000,
+        },
+        {
+            name: "Page E",
+            uv: 4000,
+            pv: 4800,
+            amt: 2181,
+        },
+        {
+            name: "Page F",
+            uv: 6000,
+            pv: 3800,
+            amt: 2500,
+        },
+        {
+            name: "Page G",
+            uv: 2000,
+            pv: 4300,
+            amt: 2100,
+        },
+        {
+            name: "Page G",
+            uv: 5000,
+            pv: 4300,
+            amt: 2100,
+        },
+    ];
+
+    const data2 = [
+        {
+            name: "Page A",
+            uv: 400,
+            pv: 400,
+            amt: 2400,
+        },
+        {
+            name: "Page B",
+            uv: 30,
+            pv: 25000,
+            amt: 2210,
+        },
+        {
+            name: "Page C",
+            uv: 10,
+            pv: 10500,
+            amt: 2290,
+        },
+        {
+            name: "Page D",
+            uv: 20,
+            pv: 50000,
+            amt: 2000,
+        },
+    ];
     return (
         <Container fluid className="p-0">
             {/* start revenue section */}
             <Row className="gy-4 gx-4 mb-4">
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#5c6bc0"
-                        iconDirection="right"
+                        symbolDirection="left"
                         symbol="$"
                         counter={23569}
                         isCounter={true}
@@ -26,79 +103,23 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#66bb6a"
-                        iconDirection="right"
-                        symbol="%"
-                        symbolDirection="right"
-                        counter={85}
+                        symbolDirection="left"
+                        symbol="$"
+                        counter={23569}
                         isCounter={true}
-                        title="Sales Increase"
+                        title="Revenue"
                         icon={
-                            <>
-                                <BarChart
-                                    width={100}
-                                    height={80}
-                                    data={[
-                                        {
-                                            name: "Page A",
-                                            uv: 2000,
-                                            pv: 2400,
-                                            amt: 2400,
-                                        },
-                                        {
-                                            name: "Page B",
-                                            uv: 6000,
-                                            pv: 1398,
-                                            amt: 2210,
-                                        },
-                                        {
-                                            name: "Page C",
-                                            uv: 4000,
-                                            pv: 9800,
-                                            amt: 2290,
-                                        },
-                                        {
-                                            name: "Page D",
-                                            uv: 8000,
-                                            pv: 3908,
-                                            amt: 2000,
-                                        },
-                                        {
-                                            name: "Page E",
-                                            uv: 4000,
-                                            pv: 4800,
-                                            amt: 2181,
-                                        },
-                                        {
-                                            name: "Page F",
-                                            uv: 6000,
-                                            pv: 3800,
-                                            amt: 2500,
-                                        },
-                                        {
-                                            name: "Page G",
-                                            uv: 2000,
-                                            pv: 4300,
-                                            amt: 2100,
-                                        },
-                                        {
-                                            name: "Page G",
-                                            uv: 5000,
-                                            pv: 4300,
-                                            amt: 2100,
-                                        },
-                                    ]}
-                                >
-                                    <Bar dataKey="uv" fill="#fff" />
-                                </BarChart>
-                            </>
+                            <BarChart width={100} height={80} data={data1}>
+                                <Bar dataKey="uv" fill="#fff" />
+                            </BarChart>
                         }
                     />
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#ffa726"
                         iconDirection="right"
                         counter={6596}
@@ -109,401 +130,22 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#42a5f5"
                         iconDirection="right"
                         counter={1490}
                         isCounter={true}
                         title="New Users"
                         icon={
-                            <>
-                                <>
-                                    <LineChart
-                                        width={100}
-                                        height={67}
-                                        data={[
-                                            {
-                                                name: "Page A",
-                                                uv: 400,
-                                                pv: 400,
-                                                amt: 2400,
-                                            },
-                                            {
-                                                name: "Page B",
-                                                uv: 30,
-                                                pv: 25000,
-                                                amt: 2210,
-                                            },
-                                            {
-                                                name: "Page C",
-                                                uv: 10,
-                                                pv: 10500,
-                                                amt: 2290,
-                                            },
-                                            {
-                                                name: "Page D",
-                                                uv: 20,
-                                                pv: 50000,
-                                                amt: 2000,
-                                            },
-                                        ]}
-                                    >
-                                        <Line
-                                            type="monotone"
-                                            dataKey="pv"
-                                            stroke="#fff"
-                                            strokeWidth={2}
-                                        />
-                                    </LineChart>
-                                </>
-                            </>
+                            <LineChart width={100} height={67} data={data2}>
+                                <Line
+                                    type="monotone"
+                                    dataKey="pv"
+                                    stroke="#fff"
+                                    strokeWidth={2}
+                                />
+                            </LineChart>
                         }
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        counter={1490}
-                        isCounter={true}
-                        title="Total Profit"
-                        icon="fa-sharp fa-solid fa-dollar-sign"
-                        iconCorverWidth="66px"
-                        iconCorverHeight="66px"
-                        isBorder={true}
-                        borderColor="#28a745"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        counter={961}
-                        isCounter={true}
-                        title="New Customer"
-                        icon="fa-sharp fa-solid fa-user"
-                        iconCorverWidth="66px"
-                        iconCorverHeight="66px"
-                        isBorder={true}
-                        borderColor="#007bff"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        counter={770}
-                        isCounter={true}
-                        title="Active Projects"
-                        icon="fa-solid fa-table-cells-large"
-                        iconCorverWidth="66px"
-                        iconCorverHeight="66px"
-                        isBorder={true}
-                        borderColor="#ffc107"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        counter={2781}
-                        isCounter={true}
-                        title="Referrals"
-                        icon="fa-sharp fa-solid fa-link"
-                        iconCorverWidth="66px"
-                        iconCorverHeight="66px"
-                        isBorder={true}
-                        borderColor="#dc3545"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        counter={765}
-                        isCounter={true}
-                        title="Database"
-                        icon="fa-solid fa-database"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        counter={24720}
-                        isCounter={true}
-                        title="Users"
-                        icon="fa-sharp fa-regular fa-user"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        symbol="$"
-                        counter={7658714}
-                        isCounter={true}
-                        title="Daily Sales"
-                        icon="fa-solid fa-chart-line"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="user_info"
-                        symbol="TB"
-                        symbolDirection="right"
-                        counter={4}
-                        title="Bandwidth"
-                        icon="fa-solid fa-wave-square"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue_card"
-                        cardBg="#5c6bc0"
-                        symbol="%"
-                        symbolDirection="right"
-                        counter={89}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        progressBarTitle="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue_card"
-                        cardBg="#ffa726"
-                        counter={12124}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        progressBarTitle="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue_card"
-                        cardBg="#ef5350"
-                        symbol="$"
-                        counter={9811100}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        progressBarTitle="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue_card"
-                        cardBg="#42a5f5"
-                        symbol="$"
-                        counter={9811100}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        progressBarTitle="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-solid fa-gears"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#4dbd74"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-solid fa-laptop"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#17a2b8"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-regular fa-moon"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#ffc107"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-solid fa-bell"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#dc3545"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-solid fa-gears"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#4dbd74"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                        ViewMore={true}
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-solid fa-laptop"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#17a2b8"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                        ViewMore={true}
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-regular fa-moon"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#ffc107"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                        ViewMore={true}
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        icon="fa-sharp fa-solid fa-bell"
-                        iconCorverWidth="45px"
-                        iconCorverHeight="45px"
-                        iconBg="#dc3545"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                        ViewMore={true}
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-solid fa-gears"
-                        iconCorverWidth="70px"
-                        iconCorverHeight="70px"
-                        iconBg="#4dbd74"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-solid fa-laptop"
-                        iconCorverWidth="70px"
-                        iconCorverHeight="70px"
-                        iconBg="#17a2b8"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-regular fa-moon"
-                        iconCorverWidth="70px"
-                        iconCorverHeight="70px"
-                        iconBg="#ffc107"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-solid fa-bell"
-                        iconCorverWidth="70px"
-                        iconCorverHeight="70px"
-                        iconBg="#dc3545"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-solid fa-gears"
-                        iconCorverWidth="100px"
-                        iconCorverHeight="70px"
-                        iconBg="#4dbd74"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-solid fa-laptop"
-                        iconCorverWidth="100px"
-                        iconCorverHeight="70px"
-                        iconBg="#17a2b8"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-regular fa-moon"
-                        iconCorverWidth="100px"
-                        iconCorverHeight="70px"
-                        iconBg="#ffc107"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="earning_card"
-                        padding="0px"
-                        icon="fa-sharp fa-solid fa-bell"
-                        iconCorverWidth="100px"
-                        iconCorverHeight="70px"
-                        iconBg="#dc3545"
-                        symbol="$"
-                        counter="4.999,50"
-                        title="Income"
                     />
                 </Col>
             </Row>

@@ -1,6 +1,7 @@
 @use "../scss/variable.scss" as *;
 
 .card {
+    border: 1px solid var(--border-color) !important;
     background-color: var(--bg-content) !important;
     .card_header {
         background-color: var(--bg-content);

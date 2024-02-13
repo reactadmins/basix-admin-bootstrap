@@ -1,29 +1,23 @@
 import { Fragment, useState } from "react";
 import { Card as BootstrapCard, CardHeader } from "react-bootstrap";
 import CardStyle from "../../assets/scss/Card.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const Card = ({ title = "", subscript = "", icons = [], children = "" }) => {
     const [isOpen, setIsOpen] = useState();
     const [hiddenContent, setHiddenContent] = useState();
-    const { isDark } = useDashboardDataContext();
 
     return (
         <Fragment>
             {!hiddenContent ? (
-                <BootstrapCard
-                    className={`${CardStyle.card} rounded-0`}
-                    style={{
-                        border: `${isDark ? "0" : ""}`,
-                        boxShadow: `${isDark ? "0 0 0 1px #ffffff25" : ""}`,
-                    }}
-                >
+                <BootstrapCard className={`${CardStyle.card} rounded-0`}>
                     <CardHeader
                         className={`${CardStyle.card_header} rounded-0`}
                     >
                         <div
                             className={`d-flex align-items-center ${
-                                icons > 0 ? "justify-content-between" : " "
+                                icons.length > 0
+                                    ? "justify-content-between"
+                                    : ""
                             }`}
                         >
                             <strong className={CardStyle.card_title}>
