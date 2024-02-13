@@ -107,9 +107,8 @@ const Dashboard = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#5c6bc0"
-                        symbolDirection="left"
+                        type="revenue-counter"
+                        bgColor="#5c6bc0"
                         symbol="$"
                         counter={23569}
                         isCounter={true}
@@ -119,10 +118,10 @@ const Dashboard = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#66bb6a"
-                        symbolDirection="left"
-                        symbol="$"
+                        type="revenue-counter"
+                        bgColor="#66bb6a"
+                        symbolPosition="right"
+                        symbol="%"
                         counter={23569}
                         isCounter={true}
                         title="Revenue"
@@ -135,9 +134,8 @@ const Dashboard = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#ffa726"
-                        iconDirection="right"
+                        type="revenue-counter"
+                        bgColor="#ffa726"
                         counter={6596}
                         isCounter={true}
                         title="Total Clients"
@@ -146,9 +144,8 @@ const Dashboard = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#42a5f5"
-                        iconDirection="right"
+                        type="revenue-counter"
+                        bgColor="#42a5f5"
                         counter={1490}
                         isCounter={true}
                         title="New Users"
