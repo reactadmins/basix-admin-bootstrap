@@ -6,16 +6,14 @@ import { useDashboardDataContext } from "../../context/dashboardDataContext";
 const Table = ({ isSearch = false, isVariants = false }) => {
     const [search, setSearch] = useState("");
     const [select, setSelect] = useState(10);
-    const { isDark } = useDashboardDataContext();
 
     return (
-        <div
-            data={isDark ? "true" : "false"}
-            className={`table-responsive  ${tablesStyle.table_wrapper}`}
-        >
+        <div className={`table-responsive  ${tablesStyle.table_wrapper}`}>
             {isSearch ? (
                 <div className="d-flex justify-content-between align-items-center mt-2 mb-4">
-                    <div className={`d-flex align-items-center ${tablesStyle.search_wrapper}`}>
+                    <div
+                        className={`d-flex align-items-center ${tablesStyle.search_wrapper}`}
+                    >
                         <input
                             className="form-control"
                             type="search"
@@ -58,14 +56,24 @@ const Table = ({ isSearch = false, isVariants = false }) => {
                         .filter((item) => {
                             return search.toLowerCase() === ""
                                 ? item
-                                : item.name.toLocaleLowerCase().includes(search) ||
-                                      item.email.toLocaleLowerCase().includes(search) ||
-                                      item.city.toLocaleLowerCase().includes(search);
+                                : item.name
+                                      .toLocaleLowerCase()
+                                      .includes(search) ||
+                                      item.email
+                                          .toLocaleLowerCase()
+                                          .includes(search) ||
+                                      item.city
+                                          .toLocaleLowerCase()
+                                          .includes(search);
                         })
                         .map((item, index) => (
                             <tr
                                 key={index}
-                                className={`${isVariants && item.tableBg ? item.tableBg : ""}`}
+                                className={`${
+                                    isVariants && item.tableBg
+                                        ? item.tableBg
+                                        : ""
+                                }`}
                             >
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>

@@ -27,7 +27,6 @@
             }
         }
     }
-
     .show_entries {
         select {
             option {
@@ -74,13 +73,15 @@
             }
         }
     }
-    &[data="true"] {
+}
+body[data-theme="dark"] {
+    .table_wrapper {
         .table {
             .thead {
                 tr {
                     td {
-                        color: var(--content-text-color);
-                        background-color: var(--bg-content);
+                        color: var(--content-text-color) !important;
+                        background-color: var(--bg-content) !important;
                     }
                 }
             }
@@ -88,7 +89,7 @@
                 tr {
                     td {
                         border-color: var(--border-color) !important;
-                        color: var(--hedging-text-color);
+                        color: var(--hedging-text-color) !important;
                         background-color: var(--bg-content) !important;
                     }
                 }

@@ -22,14 +22,23 @@ export const DashboardDataProvider = ({ children }) => {
         }
     }, [isThemeDirection]);
 
+    // useEffect(() => {
+    //     let element = document.body;
+    //     if (isDark) {
+
+    //         element.classList.add("light");
+    //         element.classList.remove("dark");
+    //     } else if (isDark) {
+    //         element.classList.add("dark");
+    //         element.classList.remove("light");
+    //     }
+    // }, [isDark]);
+
     useEffect(() => {
-        let element = document.body;
-        if (!isDark) {
-            element.classList.add("light");
-            element.classList.remove("dark");
-        } else if (isDark) {
-            element.classList.add("dark");
-            element.classList.remove("light");
+        if (isDark) {
+            document.querySelector("body").setAttribute("data-theme", "dark");
+        } else {
+            document.querySelector("body").setAttribute("data-theme", "light");
         }
     }, [isDark]);
 
