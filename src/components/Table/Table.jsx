@@ -1,7 +1,6 @@
 import { useState } from "react";
 import tableData from "../data/tableData";
 import tablesStyle from "../../assets/scss/Tables.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const Table = ({ isSearch = false, isVariants = false }) => {
     const [search, setSearch] = useState("");
