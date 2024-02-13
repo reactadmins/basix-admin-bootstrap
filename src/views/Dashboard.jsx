@@ -1,6 +1,6 @@
 import { Alert, Badge, Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
-import StatsCard from "../components/Dashboard/StatsCard";
+import StatsCard from "../components/widgets/StatsCard";
 import Traffic from "../components/Dashboard/Traffic";
 import Earning from "../components/Dashboard/Earning";
 import Download from "../components/Dashboard/Download";
@@ -16,7 +16,7 @@ import DeviceVisitorStats from "../components/Chart/DeviceVisitorStats";
 import RealTime from "../components/Dashboard/RealTime";
 
 const Dashboard = () => {
-    const barChartData = [
+    const data1 = [
         {
             name: "Page A",
             uv: 2000,
@@ -67,7 +67,7 @@ const Dashboard = () => {
         },
     ];
 
-    const lineChartData = [
+    const data2 = [
         {
             name: "Page A",
             uv: 400,
@@ -107,9 +107,9 @@ const Dashboard = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#5c6bc0"
-                        iconDirection="right"
+                        symbolDirection="left"
                         symbol="$"
                         counter={23569}
                         isCounter={true}
@@ -119,30 +119,23 @@ const Dashboard = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#66bb6a"
-                        iconDirection="right"
-                        symbol="%"
-                        symbolDirection="right"
-                        counter={85}
+                        symbolDirection="left"
+                        symbol="$"
+                        counter={23569}
                         isCounter={true}
-                        title="Sales Increase"
+                        title="Revenue"
                         icon={
-                            <>
-                                <BarChart
-                                    width={100}
-                                    height={80}
-                                    data={barChartData}
-                                >
-                                    <Bar dataKey="uv" fill="#fff" />
-                                </BarChart>
-                            </>
+                            <BarChart width={100} height={80} data={data1}>
+                                <Bar dataKey="uv" fill="#fff" />
+                            </BarChart>
                         }
                     />
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#ffa726"
                         iconDirection="right"
                         counter={6596}
@@ -153,27 +146,21 @@ const Dashboard = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        type="revenue_card"
+                        cardType="revenue-counter"
                         cardBg="#42a5f5"
                         iconDirection="right"
                         counter={1490}
                         isCounter={true}
                         title="New Users"
                         icon={
-                            <>
-                                <LineChart
-                                    width={100}
-                                    height={67}
-                                    data={lineChartData}
-                                >
-                                    <Line
-                                        type="monotone"
-                                        dataKey="pv"
-                                        stroke="#fff"
-                                        strokeWidth={2}
-                                    />
-                                </LineChart>
-                            </>
+                            <LineChart width={100} height={67} data={data2}>
+                                <Line
+                                    type="monotone"
+                                    dataKey="pv"
+                                    stroke="#fff"
+                                    strokeWidth={2}
+                                />
+                            </LineChart>
                         }
                     />
                 </Col>
