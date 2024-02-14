@@ -226,59 +226,6 @@ const Widgets = () => {
                         icon="fa-solid fa-wave-square"
                     />
                 </Col>
-
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue-progressBar"
-                        bgColor="#5c6bc0"
-                        symbol="%"
-                        symbolPosition="right"
-                        counter={89}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        description="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                {/* <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue-progressBar"
-                        bgColor="#ffa726"
-                        counter={12124}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        description="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue-progressBar"
-                        bgColor="#ef5350"
-                        symbol="$"
-                        counter={9811100}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        description="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col>
-                <Col sm={12} md={6} lg={3} xl={3}>
-                    <StatsCard
-                        type="revenue-progressBar"
-                        bgColor="#42a5f5"
-                        symbol="$"
-                        counter={9811100}
-                        isCounter={true}
-                        title="Lorem ipsum..."
-                        isProgress={true}
-                        progressPercent={25}
-                        description="Lorem ipsum dolor sit amet enim."
-                    />
-                </Col> */}
             </Row>
             {/* end revenue section */}
 

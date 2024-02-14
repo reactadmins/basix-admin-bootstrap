@@ -105,7 +105,7 @@ const StatsCard = ({
                             )}
                         </div>
                     ) : null}
-                    {isProgress ? (
+                    {type === "revenue-progressBar" ? (
                         <Progress
                             progressPercent={progressPercent}
                             description={description}
