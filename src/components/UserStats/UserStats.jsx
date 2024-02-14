@@ -1,23 +1,22 @@
 import { Card } from "react-bootstrap";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import style from "../../assets/scss/UserStats.module.scss";
 
-const UserInfo = ({
-    cardBg = "#fff",
+const UserStats = ({
+    bgColor = "#fff",
     icon = "",
     conunt = "",
     title = "",
-    iconfontSize = "sm",
-    ProgressBarBg = "#fff",
+    size = "sm",
+    progressBg = "#fff",
     progressPercent = "",
 }) => {
-    const { isDark } = useDashboardDataContext();
     return (
         <Card
-            className="rounded-0"
+            className={`rounded-0 ${style.card}`}
             style={{
-                borderColor: "var(--border-color)",
-                backgroundColor: `${isDark ? "var(--bg-content)" : cardBg}`,
+                backgroundColor: `${bgColor ? bgColor : "var(--bg-content)"}`,
             }}
         >
             <Card.Body>
@@ -26,11 +25,11 @@ const UserInfo = ({
                         className={`${icon}`}
                         style={{
                             fontSize: `${
-                                (iconfontSize == "sm" && "17px") ||
-                                (iconfontSize == "2xl" && "2rem")
+                                (size == "sm" && "17px") ||
+                                (size == "2xl" && "2rem")
                             }`,
                             color: `${
-                                cardBg == "#fff"
+                                bgColor == "#fff"
                                     ? "var(--content-text-color)"
                                     : "#fff"
                             }`,
@@ -42,7 +41,7 @@ const UserInfo = ({
                         style={{
                             fontSize: "1.5rem",
                             color: `${
-                                cardBg == "#fff"
+                                bgColor == "#fff"
                                     ? "var(--hedging-text-color)"
                                     : "#fff"
                             }`,
@@ -56,7 +55,7 @@ const UserInfo = ({
                         style={{
                             fontSize: "14px",
                             color: `${
-                                cardBg == "#fff"
+                                bgColor == "#fff"
                                     ? "var(--content-text-color)"
                                     : "#fff"
                             }`,
@@ -66,16 +65,12 @@ const UserInfo = ({
                         {title}
                     </span>
                 </div>
-                <div
-                    className={`mt-3 ${
-                        iconfontSize == "2xl" ? "mb-3" : "mb-2"
-                    }`}
-                >
+                <div className={`mt-3 ${size == "2xl" ? "mb-3" : "mb-2"}`}>
                     <ProgressBar
                         percent={progressPercent}
                         progressBg="transparent"
                         height={5}
-                        strokeColor={ProgressBarBg}
+                        strokeColor={progressBg}
                     />
                 </div>
             </Card.Body>
@@ -83,4 +78,4 @@ const UserInfo = ({
     );
 };
 
-export default UserInfo;
+export default UserStats;

@@ -10,7 +10,7 @@ import SocialCounter from "../components/SocialCounter/SocialCounter";
 import Timeline from "../components/Dashboard/Timeline";
 import AnalyticsStats from "../components/Dashboard/AnalyticsStats";
 import WeatherStats from "../components/Dashboard/WeatherStats";
-import UserStats from "../components/Dashboard/UserStats";
+import SocialStats from "../components/SocialStats/SocialStats";
 import MonthlyStats from "../components/Dashboard/MonthlyStats";
 import DeviceVisitorStats from "../components/Chart/DeviceVisitorStats";
 import RealTime from "../components/Dashboard/RealTime";
@@ -243,7 +243,7 @@ const Dashboard = () => {
                             <WeatherStats />
                         </Col>
                         <Col md={6}>
-                            <UserStats />
+                            <SocialStats />
                         </Col>
                     </Row>
                     <Col className="mt-4">
