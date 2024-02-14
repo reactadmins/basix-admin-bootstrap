@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
 import StatsCard from "../components/StatsCard/StatsCard";
 import SocialCounter from "../components/SocialCounter/SocialCounter";
-import UserInfo from "../components/UserInfo/UserInfo";
+import UserStats from "../components/UserStats/UserStats";
 import NotificationStatsCart from "../components/Card/NotificationStatsCart";
 import ProfileCard from "../components/Card/ProfileCard";
 import OverlayCard from "../components/Card/OverlayCard";
@@ -537,114 +537,114 @@ const Widgets = () => {
             {/* start user info section */}
             <Row className="mb-4" style={{ padding: "0 12px" }}>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
+                    <UserStats
                         icon="fa-solid fa-users"
                         conunt={87500}
                         title="Visitors"
-                        ProgressBarBg="#5c6bc0"
+                        progressBg="#5c6bc0"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
+                    <UserStats
                         icon="fa-solid fa-user-plus"
                         conunt={385}
                         title="New Clients"
-                        ProgressBarBg="#42a5f5"
+                        progressBg="#42a5f5"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
+                    <UserStats
                         icon="fa-solid fa-cart-plus"
                         conunt={1238}
                         title="Products sold"
-                        ProgressBarBg="#ffa726"
+                        progressBg="#ffa726"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
+                    <UserStats
                         icon="fa-solid fa-chart-pie"
                         conunt={28 + "%"}
                         title="Returning Visitors"
-                        ProgressBarBg="#ef5350"
+                        progressBg="#ef5350"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
+                    <UserStats
                         icon="fa-regular fa-clock"
                         conunt="5:34:11"
                         title="Avg. Time"
-                        ProgressBarBg="#4dbd74"
+                        progressBg="#4dbd74"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0 mb-4" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
+                    <UserStats
                         icon="fa-regular fa-comments"
                         conunt={972}
                         title="COMMENTS"
-                        ProgressBarBg="#5c6bc0"
+                        progressBg="#5c6bc0"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
-                        cardBg="#5c6bc0"
+                    <UserStats
+                        bgColor="#5c6bc0"
                         icon="fa-solid fa-users"
-                        iconfontSize="2xl"
+                        size="2xl"
                         conunt={87500}
                         title="Visitors"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
-                        cardBg="#42a5f5"
+                    <UserStats
+                        bgColor="#42a5f5"
                         icon="fa-solid fa-user-plus"
-                        iconfontSize="2xl"
+                        size="2xl"
                         conunt={385}
                         title="New Clients"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
-                        cardBg="#ffa726"
+                    <UserStats
+                        bgColor="#ffa726"
                         icon="fa-solid fa-cart-plus"
-                        iconfontSize="2xl"
+                        size="2xl"
                         conunt={1238}
                         title="Products sold"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
-                        cardBg="#ef5350"
+                    <UserStats
+                        bgColor="#ef5350"
                         icon="fa-solid fa-chart-pie"
-                        iconfontSize="2xl"
+                        size="2xl"
                         conunt={28 + "%"}
                         title="Returning Visitors"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
-                        cardBg="#4dbd74"
+                    <UserStats
+                        bgColor="#4dbd74"
                         icon="fa-regular fa-clock"
-                        iconfontSize="2xl"
+                        size="2xl"
                         conunt="5:34:11"
                         title="Avg. Time"
                         progressPercent={40}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
-                    <UserInfo
-                        cardBg="#5c6bc0"
+                    <UserStats
+                        bgColor="#5c6bc0"
                         icon="fa-regular fa-comments"
-                        iconfontSize="2xl"
+                        size="2xl"
                         conunt={972}
                         title="COMMENTS"
                         progressPercent={40}

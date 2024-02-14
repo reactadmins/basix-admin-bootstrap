@@ -1,34 +1,32 @@
 import { useState } from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
 import admin from "../../assets/image/admin.jpg";
-import userStatsStryle from "../../assets/scss/UserStats.module.scss";
+import style from "../../assets/scss/SocialStats.module.scss";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 export const Stats = ({ icon, counter }) => {
     return (
-        <div className={`${userStatsStryle.stats} text-center`}>
+        <div className={`${style.stats} text-center`}>
             <i className={icon}></i>
-            <span
-                className={`${userStatsStryle.stats_counter} d-block fw-semibold`}
-            >
+            <span className={`${style.stats_counter} d-block fw-semibold`}>
                 {counter}
             </span>
         </div>
     );
 };
 
-const UserStats = () => {
+const SocialStats = () => {
     const [isOpen, setIsOpen] = useState();
     const { isDark } = useDashboardDataContext();
     return (
         <Card
-            className={`${userStatsStryle.card} border-0 rounded-0`}
+            className={`${style.card} border-0 rounded-0`}
             style={{
                 boxShadow: `${isDark ? "0 0 0 1px var(--border-color)" : ""}`,
             }}
         >
             <CardHeader
-                className={`${userStatsStryle.card_header} border-0 rounded-0 d-flex justify-content-end align-items-center`}
+                className={`${style.card_header} border-0 rounded-0 d-flex justify-content-end align-items-center`}
             >
                 <button
                     type="button"
@@ -38,7 +36,7 @@ const UserStats = () => {
                     <i className="fa fa-ellipsis-v"></i>
                 </button>
                 {isOpen ? (
-                    <div className={userStatsStryle.card_setting}>
+                    <div className={style.card_setting}>
                         <button type="button">
                             <i className="fa-solid fa-gear"></i>
                             Edit
@@ -56,19 +54,19 @@ const UserStats = () => {
                     ""
                 )}
             </CardHeader>
-            <CardBody className={`${userStatsStryle.card_body} p-0`}>
-                <div className={userStatsStryle.user_info}>
+            <CardBody className={`${style.card_body} p-0`}>
+                <div className={style.user_info}>
                     <h5 className="fs-6 fw-medium text-white text-center">
                         Martin Luther
                     </h5>
                 </div>
                 <div
-                    className={`${userStatsStryle.image_continer} d-flex justify-content-center align-items-center`}
+                    className={`${style.image_continer} d-flex justify-content-center align-items-center`}
                 >
                     <img className="rounded-circle" src={admin} alt="user" />
                 </div>
             </CardBody>
-            <CardFooter className={`${userStatsStryle.card_footer} p-3 py-2`}>
+            <CardFooter className={`${style.card_footer} p-3 py-2`}>
                 <div className="d-flex justify-content-between align-items-center">
                     <Stats icon="fa-solid fa-thumbs-up" counter={3548} />
                     <hr className="mx-3" />
@@ -81,4 +79,4 @@ const UserStats = () => {
     );
 };
 
-export default UserStats;
+export default SocialStats;
