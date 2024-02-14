@@ -14,11 +14,7 @@ const AnalyticsInfo = ({ count = "", title = "" }) => {
                 {title}
             </span>
             <div className="d-flex gap-3 align-items-center">
-                <Line
-                    values={[5, 3, 9, 6, 5, 9, 7, 3, 5, 2]}
-                    width={60}
-                    height={20}
-                />
+                <Line values={[5, 3, 9, 6, 5, 9, 7, 3, 5, 2]} width={60} height={20} />
                 <div className="counter-up">
                     <div className="d-flex align-items-center gap-1">
                         <i

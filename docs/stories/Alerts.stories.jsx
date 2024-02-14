@@ -4,59 +4,77 @@ import Alert from "react-bootstrap/Alert";
 export default {
     title: "Components/Alerts",
     component: Alert,
-    // tags: ["autodocs"],
+    tags: ["autodocs"],
     args: {
         dismissible: false,
+        show: true,
     },
     argTypes: {
         dismissible: {
             control: "boolean",
+            description: "",
         },
-        // variant: {
-        //     type: "select",
-        //     options: [
-        //         "primary",
-        //         "secondary",
-        //         "success",
-        //         "danger",
-        //         "waring",
-        //         "info",
-        //         "light",
-        //         "dark",
-        //     ],
-        // },
+        variant: {
+            type: "select",
+            options: [
+                "primary",
+                "secondary",
+                "success",
+                "danger",
+                "waring",
+                "info",
+                "light",
+                "dark",
+            ],
+            description:
+                "The alert is availabel visual variant are `primary` | `secondary` | `success` | `danger` | `warning` | `info` | `light` | `dark`",
+        },
+        show: {
+            control: "boolean",
+            description: "This is visual state of the alert",
+        },
     },
-    // parameters: {
-    //     layout: "centered",
-    // },
-    tags: ["autodocs"],
 };
 
 export const All = {
-    args: {
-        dismissible: false,
-    },
+    args: {},
     render: (args) => {
-        console.log("Args", args);
-
         return (
             <div className="d-block">
-                <Alert variant="primary">This is a primary alert—check it out!</Alert>
-                <Alert variant="secondary">This is a secondary alert—check it out!</Alert>
-                <Alert variant="danger">This is a danger alert—check it out!</Alert>
-                <Alert variant="warning">This is a warning alert—check it out!</Alert>
-                <Alert variant="info">This is a info alert—check it out!</Alert>
-                <Alert variant="light">This is a light alert—check it out!</Alert>
-                <Alert variant="dark">This is a dark alert—check it out!</Alert>
+                <Alert variant="primary" dismissible={args?.dismissible}>
+                    This is a primary alert—check it out!
+                </Alert>
+                <Alert variant="secondary" dismissible={args?.dismissible}>
+                    This is a secondary alert—check it out!
+                </Alert>
+                <Alert variant="danger" dismissible={args?.dismissible}>
+                    This is a danger alert—check it out!
+                </Alert>
+                <Alert variant="warning" dismissible={args?.dismissible}>
+                    This is a warning alert—check it out!
+                </Alert>
+                <Alert variant="info" dismissible={args?.dismissible}>
+                    This is a info alert—check it out!
+                </Alert>
+                <Alert variant="light" dismissible={args?.dismissible}>
+                    This is a light alert—check it out!
+                </Alert>
+                <Alert variant="dark" dismissible={args?.dismissible}>
+                    This is a dark alert—check it out!
+                </Alert>
             </div>
         );
     },
 };
 
 export const WithHeading = {
-    render: () => (
+    args: {
+        dismissible: false,
+        variant: "primary",
+    },
+    render: (args) => (
         <div>
-            <Alert variant="primary">
+            <Alert {...args}>
                 <Alert.Heading>Well done!</Alert.Heading>
                 <p>
                     You successfully read this important alert message. This example text is going
@@ -70,32 +88,16 @@ export const WithHeading = {
 };
 
 export const WithLink = {
-    render: () => (
+    args: {
+        dismissible: false,
+        variant: "primary",
+    },
+    render: (args) => (
         <div>
-            <Alert variant="primary">
+            <Alert {...args}>
                 This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give
                 it a click if you like.
             </Alert>
         </div>
     ),
 };
-
-// export const Normal = {
-//     args: {
-//         children: "This is a primary alert—check it out!",
-//         variant: "primary",
-//         dismissible: false,
-//         show: true,
-//         onClose: () => {},
-//     },
-// };
-
-// export const WithHeading = {
-//     args: {
-//         children: AlertWithHeading,
-//         variant: "primary",
-//         dismissible: false,
-//         show: true,
-//         onClose: () => {},
-//     },
-// };
