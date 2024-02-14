@@ -1,22 +1,21 @@
 import { Card } from "react-bootstrap";
 import ProgressBar from "../ProgressBar/ProgressBar";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
-import style from "../../assets/scss/UserStats.module.scss";
 
 const UserStats = ({
-    bgColor = "#fff",
+    bgColor = "",
     icon = "",
     conunt = "",
     title = "",
-    size = "sm",
+    size = "17px",
     progressBg = "#fff",
     progressPercent = "",
 }) => {
     return (
         <Card
-            className={`rounded-0 ${style.card}`}
+            className="rounded-0"
             style={{
                 backgroundColor: `${bgColor ? bgColor : "var(--bg-content)"}`,
+                borderColor: "1px solid var(--border-color)",
             }}
         >
             <Card.Body>
@@ -24,14 +23,9 @@ const UserStats = ({
                     <i
                         className={`${icon}`}
                         style={{
-                            fontSize: `${
-                                (size == "sm" && "17px") ||
-                                (size == "2xl" && "2rem")
-                            }`,
+                            fontSize: size,
                             color: `${
-                                bgColor == "#fff"
-                                    ? "var(--content-text-color)"
-                                    : "#fff"
+                                bgColor ? "#fff" : "var(--content-text-color)"
                             }`,
                         }}
                     ></i>

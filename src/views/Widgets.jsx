@@ -594,7 +594,7 @@ const Widgets = () => {
                     <UserStats
                         bgColor="#5c6bc0"
                         icon="fa-solid fa-users"
-                        size="2xl"
+                        size="2rem"
                         conunt={87500}
                         title="Visitors"
                         progressPercent={40}
@@ -604,7 +604,7 @@ const Widgets = () => {
                     <UserStats
                         bgColor="#42a5f5"
                         icon="fa-solid fa-user-plus"
-                        size="2xl"
+                        size="2rem"
                         conunt={385}
                         title="New Clients"
                         progressPercent={40}
@@ -614,7 +614,7 @@ const Widgets = () => {
                     <UserStats
                         bgColor="#ffa726"
                         icon="fa-solid fa-cart-plus"
-                        size="2xl"
+                        size="2rem"
                         conunt={1238}
                         title="Products sold"
                         progressPercent={40}
@@ -624,7 +624,7 @@ const Widgets = () => {
                     <UserStats
                         bgColor="#ef5350"
                         icon="fa-solid fa-chart-pie"
-                        size="2xl"
+                        size="2rem"
                         conunt={28 + "%"}
                         title="Returning Visitors"
                         progressPercent={40}
@@ -634,7 +634,7 @@ const Widgets = () => {
                     <UserStats
                         bgColor="#4dbd74"
                         icon="fa-regular fa-clock"
-                        size="2xl"
+                        size="2rem"
                         conunt="5:34:11"
                         title="Avg. Time"
                         progressPercent={40}
@@ -644,7 +644,7 @@ const Widgets = () => {
                     <UserStats
                         bgColor="#5c6bc0"
                         icon="fa-regular fa-comments"
-                        size="2xl"
+                        size="2rem"
                         conunt={972}
                         title="COMMENTS"
                         progressPercent={40}

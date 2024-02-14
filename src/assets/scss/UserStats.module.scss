@@ -1,9 +1,0 @@
-.card {
-    border-color: var(--border-color);
-}
-
-body[data-theme="dark"] {
-    .card {
-        background-color: var(--bg-content);
-    }
-}
