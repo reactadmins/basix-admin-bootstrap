@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
 import StatsCard from "../components/StatsCard/StatsCard";
-import SocialCounter from "../components/Dashboard/SocialCounter";
+import SocialCounter from "../components/SocialCounter/SocialCounter";
 import UserInfo from "../components/UserInfo/UserInfo";
 import NotificationStatsCart from "../components/Card/NotificationStatsCart";
 import ProfileCard from "../components/Card/ProfileCard";
@@ -469,12 +469,12 @@ const Widgets = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col sm={12} md={6} lg={3}>
                     <SocialCounter
-                        background="#3B5998"
+                        bgColor="#3B5998"
                         padding="40px"
                         icon="fa-brands fa-facebook-f"
                         count="1875980"
-                        position="top"
-                        socialUser={{
+                        iconPosition="top"
+                        socialActivity={{
                             followers: 40,
                             countType: "K",
                             followersType: "Friends",
@@ -485,12 +485,12 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3}>
                     <SocialCounter
-                        background="#00ACED"
+                        bgColor="#00ACED"
                         padding="40px"
                         icon="fa-brands fa-twitter"
                         count="1875980"
-                        position="top"
-                        socialUser={{
+                        iconPosition="top"
+                        socialActivity={{
                             followers: 30,
                             countType: "K",
                             followersType: "Friends",
@@ -501,12 +501,12 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3}>
                     <SocialCounter
-                        background="#4875B4"
+                        bgColor="#4875B4"
                         padding="40px"
                         icon="fa-brands fa-linkedin-in"
                         count="1875980"
-                        position="top"
-                        socialUser={{
+                        iconPosition="top"
+                        socialActivity={{
                             followers: 40,
                             countType: "+",
                             followersType: "CONTACTS",
@@ -517,12 +517,12 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3}>
                     <SocialCounter
-                        background="#D34836"
+                        bgColor="#D34836"
                         padding="40px"
-                        icon="fa-brands fa-google-plus-g "
+                        icon="fa-brands fa-google-plus-g"
                         count="1875980"
-                        position="top"
-                        socialUser={{
+                        iconPosition="top"
+                        socialActivity={{
                             followers: 894,
                             countType: "K",
                             followersType: "FOLLOWERS",
