@@ -3,88 +3,118 @@ import CountUp from "react-countup";
 import { Fragment } from "react";
 import style from "../../assets/scss/StatsCard.module.scss";
 
+export const Count = ({
+    counter = "",
+    symbolPosition = "",
+    symbol = "",
+    isCounter = "",
+}) => {
+    return (
+        <h2 className="d-flex gap-1 align-items-center mb-0">
+            {symbolPosition === "left" && <span>{symbol}</span>}
+            {isCounter == true ? (
+                <CountUp end={counter} duration={3} />
+            ) : (
+                <Fragment>{counter}</Fragment>
+            )}
+            {symbolPosition === "right" && <span>{symbol}</span>}
+        </h2>
+    );
+};
+
+export const Progress = (progressPercent, description) => {
+    return (
+        <Fragment>
+            <div
+                className={`${style.progress} bg-white my-2`}
+                style={{ width: `${progressPercent}%` }}
+            ></div>
+            <p>{description}</p>
+        </Fragment>
+    );
+};
+
 const StatsCard = ({
-    cardType = "",
-    cardBg = "",
+    type = "",
+    bgColor = "white",
     icon = "",
     isCounter = false,
     counter = "",
-    symbolDirection = "",
+    symbolPosition = "left",
     symbol = "",
     title = "",
+    isProgress = false,
     progressPercent = "",
-    progressTitle = "",
+    description = "",
+    borderColor = "",
+    isIconBorder = false,
 }) => {
-    const count = (counter) => {
-        return (
-            <h2 className="d-flex gap-1 align-items-center mb-0">
-                {symbolDirection === "left" && <span>{symbol}</span>}
-                {isCounter == true ? (
-                    <CountUp end={counter} duration={3} />
-                ) : (
-                    <Fragment>{counter}</Fragment>
-                )}
-                {symbolDirection === "right" && <span>{symbol}</span>}
-            </h2>
-        );
-    };
-
-    switch (cardType) {
-        case "revenue-counter":
-            return (
-                <Card
-                    className={`${style.card} p-0 rounded-0 h-100`}
-                    style={{
-                        backgroundColor: cardBg,
-                        borderColor: cardBg,
-                    }}
+    return (
+        <Card
+            className={`${style.card} p-0 rounded-0 h-100`}
+            style={{
+                backgroundColor: bgColor,
+                borderColor: `${type === "revenue-counter" && bgColor}`,
+            }}
+        >
+            <CardBody>
+                <div
+                    className={`d-flex ${
+                        style[type.replace(/-/g, "_")]
+                    } w-100 h-100`}
                 >
-                    <CardBody>
-                        <div className="d-flex align-items-center justify-content-between w-100 h-100">
-                            <div className={style.title}>
-                                {count(counter)}
-                                <h4>{title}</h4>
-                            </div>
-                            {icon ? (
-                                <div className={style.icon}>
-                                    {typeof icon === "string" ? (
-                                        <i className={`${icon}`}></i>
-                                    ) : (
-                                        icon
-                                    )}
-                                </div>
+                    <div className={style.title}>
+                        <Count
+                            counter={counter}
+                            symbolPosition={symbolPosition}
+                            symbol={symbol}
+                            isCounter={isCounter}
+                        />
+                        <h4 className="mb-0">{title}</h4>
+                    </div>
+                    {icon ? (
+                        <div
+                            className={`${style.icon} ${
+                                isIconBorder
+                                    ? "d-flex align-items-center justify-content-center rounded-circle"
+                                    : ""
+                            }`}
+                            style={{
+                                width: `${isIconBorder ? "66px" : ""}`,
+                                height: `${isIconBorder ? "66px" : ""}`,
+                                border: `${
+                                    isIconBorder
+                                        ? `3px solid ${borderColor}`
+                                        : ""
+                                }`,
+                            }}
+                        >
+                            {typeof icon === "string" ? (
+                                <i
+                                    className={`${icon}`}
+                                    style={{
+                                        color: `${
+                                            isIconBorder
+                                                ? borderColor
+                                                : "#868e96"
+                                        }`,
+                                    }}
+                                ></i>
                             ) : (
-                                ""
+                                icon
                             )}
                         </div>
-                    </CardBody>
-                </Card>
-            );
-        case "revenue-progressBar":
-            return (
-                <Card
-                    className={`${style.card} rounded-0`}
-                    style={{
-                        backgroundColor: cardBg,
-                        borderColor: cardBg,
-                    }}
-                >
-                    <CardBody>
-                        <div className={style.title}>
-                            {count(counter)}
-                            <h4 className="mb-0">{title}</h4>
-                        </div>
-                        <div
-                            className={`${style.progress} bg-white my-2`}
-                            style={{ width: `${progressPercent}%` }}
-                        ></div>
-                        <p>{progressTitle}</p>
-                    </CardBody>
-                </Card>
-            );
-        default:
-            null;
-    }
+                    ) : null}
+                    {type === "revenue-progressBar" ? (
+                        <Progress
+                            progressPercent={progressPercent}
+                            description={description}
+                        />
+                    ) : null}
+                </div>
+            </CardBody>
+        </Card>
+    );
 };
 
 export default StatsCard;

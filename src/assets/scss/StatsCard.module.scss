@@ -1,34 +1,64 @@
 @import "../../assets/scss/variable.scss";
 .card {
     border: 1px solid transparent;
-    .title {
-        h2 {
-            font-size: 1.75rem;
+    .revenue_counter {
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            h2 {
+                font-size: 1.75rem;
+                color: $white;
+                line-height: 2.25rem;
+                font-weight: 400;
+            }
+            h4 {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                color: var(--stats-card-text);
+                font-weight: 400;
+            }
+        }
+        .icon {
+            i {
+                font-size: 3.68em;
+                color: $white !important;
+            }
+        }
+        .progress {
+            height: 5px;
+            border-radius: 1rem;
+        }
+        p {
+            font-size: 80%;
+            font-weight: 500;
             color: $white;
-            line-height: 2.25rem;
-            font-weight: 400;
-        }
-        h4 {
-            font-size: 1rem;
-            line-height: 1.5rem;
-            color: var(--stats-card-text);
-            font-weight: 400;
         }
     }
-    .icon {
-        i {
-            font-size: 3.68em;
-            color: $white;
+    .user_info {
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        gap: 1.875rem;
+        .title {
+            h2 {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: var(--hedging-text-color);
+            }
+            h4 {
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: var(--hedging-text-color);
+            }
         }
-    }
-    .progress {
-        height: 5px;
-        border-radius: 1rem;
-    }
-    p {
-        font-size: 80%;
-        font-weight: 500;
-        color: $white;
+        .icon {
+            i {
+                font-size: 1.875rem;
+                font-weight: 900;
+            }
+        }
     }
 }
 

@@ -91,9 +91,8 @@ const Widgets = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#5c6bc0"
-                        symbolDirection="left"
+                        type="revenue-counter"
+                        bgColor="#5c6bc0"
                         symbol="$"
                         counter={23569}
                         isCounter={true}
@@ -103,10 +102,10 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#66bb6a"
-                        symbolDirection="left"
-                        symbol="$"
+                        type="revenue-counter"
+                        bgColor="#66bb6a"
+                        symbolPosition="right"
+                        symbol="%"
                         counter={23569}
                         isCounter={true}
                         title="Revenue"
@@ -119,9 +118,8 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#ffa726"
-                        iconDirection="right"
+                        type="revenue-counter"
+                        bgColor="#ffa726"
                         counter={6596}
                         isCounter={true}
                         title="Total Clients"
@@ -130,9 +128,8 @@ const Widgets = () => {
                 </Col>
                 <Col sm={12} md={6} lg={3} xl={3}>
                     <StatsCard
-                        cardType="revenue-counter"
-                        cardBg="#42a5f5"
-                        iconDirection="right"
+                        type="revenue-counter"
+                        bgColor="#42a5f5"
                         counter={1490}
                         isCounter={true}
                         title="New Users"
@@ -146,6 +143,87 @@ const Widgets = () => {
                                 />
                             </LineChart>
                         }
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={1490}
+                        isCounter={true}
+                        title="Total Profit"
+                        icon="fa-sharp fa-solid fa-dollar-sign"
+                        isIconBorder={true}
+                        borderColor="#28a745"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={961}
+                        isCounter={true}
+                        title="New Customer"
+                        icon="fa-sharp fa-solid fa-user"
+                        isIconBorder={true}
+                        borderColor="#007bff"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={770}
+                        isCounter={true}
+                        title="Active Projects"
+                        icon="fa-solid fa-table-cells-large"
+                        isIconBorder={true}
+                        borderColor="#ffc107"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={2781}
+                        isCounter={true}
+                        title="Referrals"
+                        icon="fa-sharp fa-solid fa-link"
+                        isIconBorder={true}
+                        borderColor="#dc3545"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={765}
+                        isCounter={true}
+                        title="Database"
+                        icon="fa-solid fa-database"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={24720}
+                        isCounter={true}
+                        title="Users"
+                        icon="fa-sharp fa-regular fa-user"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter={7658714}
+                        isCounter={true}
+                        symbolPosition="left"
+                        symbol="$"
+                        title="Daily Sales"
+                        icon="fa-solid fa-chart-line"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="user-info"
+                        counter="4TB"
+                        title="Bandwidth"
+                        icon="fa-solid fa-wave-square"
                     />
                 </Col>
             </Row>

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Col, Row } from "react-bootstrap";
 import CardContent from "../components/Card/CardContent";
 import Table from "../components/Table/Table";
+import tableData from "../components/data/tableData";
 
 const Tables = () => {
     return (
@@ -13,7 +14,7 @@ const Tables = () => {
                         cardPadding="0 16px 16px 16px"
                         CardBody={
                             <>
-                                <Table />
+                                <Table data={tableData} />
                             </>
                         }
                     />
@@ -24,7 +25,7 @@ const Tables = () => {
                         cardPadding="0 16px 16px 16px"
                         CardBody={
                             <>
-                                <Table isVariants={true} />
+                                <Table isVariants={true} data={tableData} />
                             </>
                         }
                     />
@@ -35,7 +36,7 @@ const Tables = () => {
                         cardPadding="0 16px 16px 16px"
                         CardBody={
                             <>
-                                <Table isSearch={true} />
+                                <Table isSearch={true} data={tableData} />
                             </>
                         }
                     />
