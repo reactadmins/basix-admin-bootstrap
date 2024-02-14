@@ -88,46 +88,50 @@ const config = {
                 style: "dark",
                 links: [
                     {
-                        title: "Docs",
+                        title: "Templates",
                         items: [
                             {
-                                label: "Tutorial",
-                                to: "/docs/intro",
+                                label: "Bootstrap",
+                                to: "#",
+                            },
+                            {
+                                label: "Tailwind",
+                                to: "#",
                             },
                         ],
                     },
                     {
-                        title: "Community",
+                        title: "Resources",
                         items: [
                             {
-                                label: "Stack Overflow",
-                                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                                label: "Github",
+                                href: "#",
                             },
                             {
-                                label: "Discord",
-                                href: "https://discordapp.com/invite/docusaurus",
+                                label: "Support",
+                                href: "#",
                             },
                             {
-                                label: "Twitter",
-                                href: "https://twitter.com/docusaurus",
+                                label: "Buy Now",
+                                href: "#",
                             },
                         ],
                     },
-                    {
-                        title: "More",
-                        items: [
-                            {
-                                label: "Blog",
-                                to: "/blog",
-                            },
-                            {
-                                label: "GitHub",
-                                href: "https://github.com/facebook/docusaurus",
-                            },
-                        ],
-                    },
+                    // {
+                    //     title: "More",
+                    //     items: [
+                    //         {
+                    //             label: "Blog",
+                    //             to: "/blog",
+                    //         },
+                    //         {
+                    //             label: "GitHub",
+                    //             href: "https://github.com/facebook/docusaurus",
+                    //         },
+                    //     ],
+                    // },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} React Admin. Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.github,
