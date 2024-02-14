@@ -22,14 +22,14 @@ export const Count = ({
     );
 };
 
-export const Progress = (progressPercent, description) => {
+export const Progress = ({ progressPercent, description }) => {
     return (
         <Fragment>
             <div
                 className={`${style.progress} bg-white my-2`}
                 style={{ width: `${progressPercent}%` }}
             ></div>
-            <p>{description}</p>
+            <p className={style.description}>{description}</p>
         </Fragment>
     );
 };
@@ -43,7 +43,6 @@ const StatsCard = ({
     symbolPosition = "left",
     symbol = "",
     title = "",
-    isProgress = false,
     progressPercent = "",
     description = "",
     borderColor = "",
@@ -53,8 +52,14 @@ const StatsCard = ({
         <Card
             className={`${style.card} p-0 rounded-0 h-100`}
             style={{
-                backgroundColor: bgColor,
-                borderColor: `${type === "revenue-counter" && bgColor}`,
+                backgroundColor: `${
+                    type === "revenue-counter" ||
+                    (type === "revenue-progressBar" && bgColor)
+                }`,
+                borderColor: `${
+                    type === "revenue-counter" ||
+                    (type === "revenue-progressBar" && bgColor)
+                }`,
             }}
         >
             <CardBody>
