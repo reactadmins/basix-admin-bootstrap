@@ -6,7 +6,7 @@ import Earning from "../components/Dashboard/Earning";
 import Download from "../components/Dashboard/Download";
 import Revenue from "../components/Dashboard/Revenue";
 import Stats from "../components/Dashboard/Stats/Stats";
-import SocialCounter from "../components/Dashboard/SocialCounter";
+import SocialCounter from "../components/SocialCounter/SocialCounter";
 import Timeline from "../components/Dashboard/Timeline";
 import AnalyticsStats from "../components/Dashboard/AnalyticsStats";
 import WeatherStats from "../components/Dashboard/WeatherStats";
@@ -202,26 +202,26 @@ const Dashboard = () => {
                     <Row className="gy-4 gx-4">
                         <Col sm={12} md={4}>
                             <SocialCounter
-                                background="#1DA1F2"
+                                bgColor="#1DA1F2"
                                 icon="fa-brands fa-twitter"
                                 count="1875980"
-                                countType={true}
+                                isCounter={true}
                             />
                         </Col>
                         <Col sm={12} md={4}>
                             <SocialCounter
-                                background="#3B5998"
+                                bgColor="#3B5998"
                                 icon="fa-brands fa-facebook-f"
                                 count="1875980"
-                                countType={true}
+                                isCounter={true}
                             />
                         </Col>
                         <Col sm={12} md={4}>
                             <SocialCounter
-                                background="#833AB4"
+                                bgColor="#833AB4"
                                 icon="fa-brands fa-instagram"
                                 count="1875980"
-                                countType={true}
+                                isCounter={true}
                             />
                         </Col>
                     </Row>
