@@ -47,22 +47,29 @@ const StatsCard = ({
     description = "",
     borderColor = "",
     isIconBorder = false,
+    padding = "16px",
+    width = "45px",
+    height = "45px",
+    isViewMore = false,
+    link = "#",
 }) => {
     return (
         <Card
             className={`${style.card} p-0 rounded-0 h-100`}
             style={{
                 backgroundColor: `${
-                    type === "revenue-counter" ||
-                    (type === "revenue-progressBar" && bgColor)
+                    type === "revenue-counter"
+                        ? bgColor
+                        : "" || (type === "revenue-progressBar" ? bgColor : "")
                 }`,
                 borderColor: `${
-                    type === "revenue-counter" ||
-                    (type === "revenue-progressBar" && bgColor)
+                    type === "revenue-counter"
+                        ? bgColor
+                        : "" || (type === "revenue-progressBar" ? bgColor : "")
                 }`,
             }}
         >
-            <CardBody>
+            <CardBody style={{ padding: padding }}>
                 <div
                     className={`d-flex ${
                         style[type.replace(/-/g, "_")]
@@ -85,12 +92,27 @@ const StatsCard = ({
                                     : ""
                             }`}
                             style={{
-                                width: `${isIconBorder ? "66px" : ""}`,
-                                height: `${isIconBorder ? "66px" : ""}`,
+                                width: `${
+                                    isIconBorder
+                                        ? "66px"
+                                        : "" || type === "revenue-earning"
+                                        ? width
+                                        : ""
+                                }`,
+                                height: `${
+                                    isIconBorder
+                                        ? "66px"
+                                        : "" || type === "revenue-earning"
+                                        ? height
+                                        : ""
+                                }`,
                                 border: `${
                                     isIconBorder
                                         ? `3px solid ${borderColor}`
                                         : ""
+                                }`,
+                                backgroundColor: `${
+                                    type === "revenue-earning" ? bgColor : ""
                                 }`,
                             }}
                         >
@@ -117,6 +139,24 @@ const StatsCard = ({
                         />
                     ) : null}
                 </div>
+                {isViewMore ? (
+                    <div className={style.view_more}>
+                        <hr />
+                        <a
+                            href={link}
+                            target="_blank"
+                            className="d-flex justify-content-between"
+                            style={{
+                                fontSize: "15px",
+                                fontWeight: "700",
+                                color: "#868e96",
+                            }}
+                        >
+                            View More
+                            <i className="fa-sharp fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                ) : null}
             </CardBody>
         </Card>
     );
