@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import { Col, Row } from "react-bootstrap";
 import ProfileCard from "../components/Card/ProfileCard";
-import NotificationStatsCart from "../components/Card/NotificationStatsCart";
 import OverlayCard from "../components/Card/OverlayCard";
 import WidgetsCard from "../components/Card/WidgetsCard";
 import placeholder from "../assets/image/placeholder.png";
+import NotificationStatsCart from "../components/NotificationStatsCart/NotificationStatsCart";
 
 const Cards = () => {
     return (
@@ -12,10 +12,16 @@ const Cards = () => {
             <Row className="gy-4 gx-4">
                 {/* start profile card section */}
                 <Col md={6} lg={4}>
-                    <ProfileCard headerTitle="Profile Card" title="Steven Lee" />
+                    <ProfileCard
+                        headerTitle="Profile Card"
+                        title="Steven Lee"
+                    />
                 </Col>
                 <Col md={6} lg={4}>
-                    <ProfileCard footerTitle="Profile Card" title="Steven Lee" />
+                    <ProfileCard
+                        footerTitle="Profile Card"
+                        title="Steven Lee"
+                    />
                 </Col>
                 <Col md={6} lg={4}>
                     <ProfileCard
@@ -42,7 +48,8 @@ const Cards = () => {
                                 className="text-center fs-6 px-3 py-3"
                                 style={{ color: "var(--content-text-color)" }}
                             >
-                                Just got a pretty neat project via @ooomf - Give it a try
+                                Just got a pretty neat project via @ooomf - Give
+                                it a try
                                 <a
                                     href="#"
                                     className="text-decoration-none mx-1"

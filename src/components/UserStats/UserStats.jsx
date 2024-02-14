@@ -15,7 +15,7 @@ const UserStats = ({
             className="rounded-0"
             style={{
                 backgroundColor: `${bgColor ? bgColor : "var(--bg-content)"}`,
-                borderColor: "1px solid var(--border-color)",
+                border: "1px solid var(--border-color)",
             }}
         >
             <Card.Body>
@@ -35,9 +35,7 @@ const UserStats = ({
                         style={{
                             fontSize: "1.5rem",
                             color: `${
-                                bgColor == "#fff"
-                                    ? "var(--hedging-text-color)"
-                                    : "#fff"
+                                bgColor ? "#fff" : "var(--hedging-text-color)"
                             }`,
                             fontWeight: "500",
                         }}
@@ -49,9 +47,7 @@ const UserStats = ({
                         style={{
                             fontSize: "14px",
                             color: `${
-                                bgColor == "#fff"
-                                    ? "var(--content-text-color)"
-                                    : "#fff"
+                                bgColor ? "#fff" : "var(--content-text-color)"
                             }`,
                             fontWeight: "700",
                         }}

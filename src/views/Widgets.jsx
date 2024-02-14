@@ -3,7 +3,7 @@ import { BarChart, Bar, LineChart, Line } from "recharts";
 import StatsCard from "../components/StatsCard/StatsCard";
 import SocialCounter from "../components/SocialCounter/SocialCounter";
 import UserStats from "../components/UserStats/UserStats";
-import NotificationStatsCart from "../components/Card/NotificationStatsCart";
+import NotificationStatsCart from "../components/NotificationStatsCart/NotificationStatsCart";
 import ProfileCard from "../components/Card/ProfileCard";
 import OverlayCard from "../components/Card/OverlayCard";
 
