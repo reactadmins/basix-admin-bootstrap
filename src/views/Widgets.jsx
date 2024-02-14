@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
-import StatsCard from "../components/widgets/StatsCard";
+import StatsCard from "../components/StatsCard/StatsCard";
 import SocialCounter from "../components/Dashboard/SocialCounter";
 import UserInfo from "../components/UserInfo/UserInfo";
 import NotificationStatsCart from "../components/Card/NotificationStatsCart";
@@ -224,6 +224,242 @@ const Widgets = () => {
                         counter="4TB"
                         title="Bandwidth"
                         icon="fa-solid fa-wave-square"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-progressBar"
+                        bgColor="#5c6bc0"
+                        symbol="%"
+                        symbolPosition="right"
+                        counter={89}
+                        isCounter={true}
+                        title="Lorem ipsum..."
+                        progressPercent={25}
+                        description="Lorem ipsum dolor sit amet enim."
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-progressBar"
+                        bgColor="#ffa726"
+                        counter={12124}
+                        isCounter={true}
+                        title="Lorem ipsum..."
+                        progressPercent={25}
+                        description="Lorem ipsum dolor sit amet enim."
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-progressBar"
+                        bgColor="#ef5350"
+                        symbol="$"
+                        counter={9811100}
+                        isCounter={true}
+                        title="Lorem ipsum..."
+                        progressPercent={25}
+                        description="Lorem ipsum dolor sit amet enim."
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-progressBar"
+                        bgColor="#42a5f5"
+                        symbol="$"
+                        counter={9811100}
+                        isCounter={true}
+                        title="Lorem ipsum..."
+                        progressPercent={25}
+                        description="Lorem ipsum dolor sit amet enim."
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-gears"
+                        bgColor="#4dbd74"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-laptop"
+                        bgColor="#17a2b8"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-regular fa-moon"
+                        bgColor="#ffc107"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-bell"
+                        bgColor="#dc3545"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-gears"
+                        bgColor="#4dbd74"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        isViewMore={true}
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-laptop"
+                        bgColor="#17a2b8"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        isViewMore={true}
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-regular fa-moon"
+                        bgColor="#ffc107"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        isViewMore={true}
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-bell"
+                        bgColor="#dc3545"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        isViewMore={true}
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-gears"
+                        bgColor="#4dbd74"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="70px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-laptop"
+                        bgColor="#17a2b8"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="70px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-regular fa-moon"
+                        bgColor="#ffc107"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="70px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-bell"
+                        bgColor="#dc3545"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="70px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-gears"
+                        bgColor="#4dbd74"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="100px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-laptop"
+                        bgColor="#17a2b8"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="100px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-regular fa-moon"
+                        bgColor="#ffc107"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="100px"
+                        height="70px"
+                    />
+                </Col>
+                <Col sm={12} md={6} lg={3} xl={3}>
+                    <StatsCard
+                        type="revenue-earning"
+                        icon="fa-sharp fa-solid fa-bell"
+                        bgColor="#dc3545"
+                        symbol="$"
+                        counter="4.999,50"
+                        title="Income"
+                        padding="0"
+                        width="100px"
+                        height="70px"
                     />
                 </Col>
             </Row>

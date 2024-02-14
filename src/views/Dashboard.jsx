@@ -1,6 +1,6 @@
 import { Alert, Badge, Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
-import StatsCard from "../components/widgets/StatsCard";
+import StatsCard from "../components/StatsCard/StatsCard";
 import Traffic from "../components/Dashboard/Traffic";
 import Earning from "../components/Dashboard/Earning";
 import Download from "../components/Dashboard/Download";
