@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Col, Row } from "react-bootstrap";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
-import OverlayCard from "../components/Card/OverlayCard";
+import OverlayCard from "../components/OverlayCard/OverlayCard";
 import WidgetsCard from "../components/Card/WidgetsCard";
 import placeholder from "../assets/image/placeholder.png";
 import NotificationStatsCart from "../components/NotificationStatsCart/NotificationStatsCart";
