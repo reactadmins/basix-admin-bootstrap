@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 import { Col, Row } from "react-bootstrap";
-import ProfileCard from "../components/Card/ProfileCard";
+import ProfileCard from "../components/ProfileCard/ProfileCard";
 import OverlayCard from "../components/Card/OverlayCard";
 import WidgetsCard from "../components/Card/WidgetsCard";
 import placeholder from "../assets/image/placeholder.png";
 import NotificationStatsCart from "../components/NotificationStatsCart/NotificationStatsCart";
+import userImg from "../assets/image/admin.jpg";
 
 const Cards = () => {
     return (
@@ -13,21 +14,132 @@ const Cards = () => {
                 {/* start profile card section */}
                 <Col md={6} lg={4}>
                     <ProfileCard
-                        headerTitle="Profile Card"
-                        title="Steven Lee"
+                        title="Profile Card"
+                        userName="Steven Lee"
+                        isHeader={true}
+                        image={userImg}
+                        userInfo={
+                            <Fragment>
+                                <span>
+                                    <i className="fa-solid fa-location-dot"></i>{" "}
+                                    California, United States
+                                </span>
+                                <hr className="w-100 border-0" />
+                                <div className="d-flex gap-2">
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-pinterest"></i>
+                                    </a>
+                                </div>
+                            </Fragment>
+                        }
                     />
                 </Col>
                 <Col md={6} lg={4}>
                     <ProfileCard
-                        footerTitle="Profile Card"
-                        title="Steven Lee"
+                        title="Profile Card"
+                        userName="Steven Lee"
+                        isFooter={true}
+                        image={userImg}
+                        userInfo={
+                            <Fragment>
+                                <span>
+                                    <i className="fa-solid fa-location-dot"></i>{" "}
+                                    California, United States
+                                </span>
+                                <hr className="w-100 border-0" />
+                                <div className="d-flex gap-2">
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-pinterest"></i>
+                                    </a>
+                                </div>
+                            </Fragment>
+                        }
                     />
                 </Col>
                 <Col md={6} lg={4}>
                     <ProfileCard
-                        headerTitle="Profile Card"
-                        headerIcon="fa-solid fa-user"
-                        title="Steven Lee"
+                        title="Profile Card"
+                        userName="Steven Lee"
+                        icon="fa-solid fa-user"
+                        isHeader={true}
+                        image={userImg}
+                        userInfo={
+                            <Fragment>
+                                <span>
+                                    <i className="fa-solid fa-location-dot"></i>{" "}
+                                    California, United States
+                                </span>
+                                <hr className="w-100 border-0" />
+                                <div className="d-flex gap-2">
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="text-decoration-none text-secondary"
+                                    >
+                                        <i className="fa-brands fa-pinterest"></i>
+                                    </a>
+                                </div>
+                            </Fragment>
+                        }
                     />
                 </Col>
                 {/* end profile card section */}
@@ -41,12 +153,14 @@ const Cards = () => {
                 {/* start profile card section */}
                 <Col md={6} lg={4}>
                     <ProfileCard
-                        type="info"
-                        title="Kanye West"
+                        userName="Kanye West"
+                        image={userImg}
                         userInfo={
                             <p
                                 className="text-center fs-6 px-3 py-3"
-                                style={{ color: "var(--content-text-color)" }}
+                                style={{
+                                    color: "var(--content-text-color)",
+                                }}
                             >
                                 Just got a pretty neat project via @ooomf - Give
                                 it a try

@@ -16,6 +16,10 @@
         }
     }
     .card_body {
+        padding: 30px 16px;
+        img {
+            width: 156px;
+        }
         .title {
             font-size: 28px;
             color: var(--hedging-text-color);
