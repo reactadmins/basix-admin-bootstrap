@@ -37,18 +37,18 @@ const config = {
     plugins: [require.resolve("docusaurus-lunr-search")],
 
     // scripts: ["./src/css/custom.js"],
-    scripts: [
-        // "https://docusaurus.io/script.js",
-        "custom.js",
-        // {
-        //     src: "https://plausible.io/js/plausible.js",
-        //     async: true,
-        //     defer: true,
-        //     "data-domain": "docs.plausible.io",
-        // },
-    ],
+    // scripts: [
+    //     // "https://docusaurus.io/script.js",
+    //     "custom.js",
+    //     // {
+    //     //     src: "https://plausible.io/js/plausible.js",
+    //     //     async: true,
+    //     //     defer: true,
+    //     //     "data-domain": "docs.plausible.io",
+    //     // },
+    // ],
 
-    clientModules: ["/custom.js"],
+    clientModules: ["/notice.js"],
 
     presets: [
         [
@@ -111,6 +111,11 @@ const config = {
                             {
                                 label: "Tailwind",
                                 to: "#",
+                            },
+                            {
+                                html: `
+                                <div id="notice-root"></div>
+                              `,
                             },
                         ],
                     },
