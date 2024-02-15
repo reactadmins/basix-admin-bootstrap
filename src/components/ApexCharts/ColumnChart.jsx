@@ -1,6 +1,7 @@
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import CardContent from "../../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 
 const ColumnChart = () => {
     const [state, setState] = useState({
@@ -101,22 +102,19 @@ const ColumnChart = () => {
         },
     });
     return (
-        <Fragment>
-            <CardContent
-                title="Column Chart"
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <ReactApexChart
-                            options={state.options}
-                            series={state.series}
-                            type="bar"
-                            height={300}
-                            style={{ width: "100%" }}
-                        />
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card title="Column Chart">
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <ReactApexChart
+                        options={state.options}
+                        series={state.series}
+                        type="bar"
+                        height={300}
+                        style={{ width: "100%" }}
+                    />
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 

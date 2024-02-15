@@ -1,6 +1,7 @@
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import CardContent from "../../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 
 const PieChart = () => {
     const [state, setState] = useState({
@@ -26,22 +27,19 @@ const PieChart = () => {
         },
     });
     return (
-        <Fragment>
-            <CardContent
-                title="Pie Chart"
-                CardBody={
-                    <div>
-                        <ReactApexChart
-                            options={state.options}
-                            series={state.series}
-                            type="donut"
-                            height={300}
-                            style={{ width: "100%" }}
-                        />
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card title="Pie Chart">
+            <CardBody>
+                <div>
+                    <ReactApexChart
+                        options={state.options}
+                        series={state.series}
+                        type="donut"
+                        height={300}
+                        style={{ width: "100%" }}
+                    />
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 
