@@ -1,7 +1,6 @@
 {
-  "label": "Tutorial - Extras",
-  "position": 3,
-  "link": {
-    "type": "generated-index"
-  }
+    "label": "Tutorial - Extras",
+    "position": 3,
+    "collapsible": false,
+    "collapsed": false
 }

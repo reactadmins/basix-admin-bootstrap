@@ -1,3 +1,4 @@
+import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import { createRoot } from "react-dom/client";
 import App from "../src/components/Notice/App";
 
@@ -32,6 +33,13 @@ function waitForElm(selector) {
     });
 }
 
-waitForElm("#notice-root").then((elm) => {
-    createRoot(elm).render(<App />);
-});
+// waitForElm("#notice-root").then((elm) => {
+//     createRoot(elm).render(<App />);
+// });
+
+if (ExecutionEnvironment.canUseDOM) {
+    // As soon as the site loads in the browser, register a global event listener
+    waitForElm("#notice-root").then((elm) => {
+        createRoot(elm).render(<App />);
+    });
+}
