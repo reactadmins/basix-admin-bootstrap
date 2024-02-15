@@ -1,5 +1,12 @@
 import { Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
+import {
+    Badge,
+    CardBody,
+    CardFooter,
+    CardHeader,
+    Col,
+    Row,
+} from "react-bootstrap";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 import OverlayCard from "../components/OverlayCard/OverlayCard";
 import WidgetsCard from "../components/WidgetsCard/WidgetsCard";
@@ -185,113 +192,223 @@ const Cards = () => {
 
                 {/* start widgets card section */}
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card with switch"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <CardHeader>
+                            <h2>Card with switch</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card with Label"
-                        badge="Success"
-                        badgeBg="success"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <CardHeader>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <h2>Card with switch</h2>{" "}
+                                <Badge bg="success">Success</Badge>
+                            </div>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card with Label"
-                        badge="49"
-                        badgeBg="danger"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <CardHeader>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <h2>Card with switch</h2>{" "}
+                                <Badge bg="danger">49</Badge>
+                            </div>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card Outline"
-                        cardBorderColor="primary"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard borderColor="primary">
+                        <CardHeader>
+                            <h2>Card with switch</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card Outline"
-                        cardBorderColor="secondary"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard borderColor="secondary">
+                        <CardHeader>
+                            <h2>Card with switch</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card Outline"
-                        cardBorderColor="success"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard borderColor="success">
+                        <CardHeader>
+                            <h2>Card with switch</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        cardBg="danger"
-                        bodyContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                        footerContent="Someone famous in Source Title"
-                    />
+                    <WidgetsCard bgColor="danger">
+                        <CardBody>
+                            <p className="text-light">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                        <CardFooter>
+                            <p className="text-light">
+                                - Someone famous in Source Title
+                            </p>
+                        </CardFooter>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        cardBg="warning"
-                        bodyContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                        footerContent="Someone famous in Source Title"
-                    />
+                    <WidgetsCard bgColor="warning">
+                        <CardBody>
+                            <p className="text-light">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                        <CardFooter>
+                            <p className="text-light">
+                                - Someone famous in Source Title
+                            </p>
+                        </CardFooter>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        cardBg="primary"
-                        bodyContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                        footerContent="Someone famous in Source Title"
-                    />
+                    <WidgetsCard bgColor="primary">
+                        <CardBody>
+                            <p className="text-light">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                        <CardFooter>
+                            <p className="text-light">
+                                - Someone famous in Source Title
+                            </p>
+                        </CardFooter>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card Outline"
-                        headerBg="secondary"
-                        bodyBg="primary"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard bgColor="primary">
+                        <CardHeader className="bg-secondary rounded-0">
+                            <h2 className="text-light">Card Outline</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p className="text-light">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card Outline"
-                        headerBg="dark"
-                        bodyBg="danger"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard bgColor="danger">
+                        <CardHeader className="bg-dark rounded-0">
+                            <h2 className="text-light">Card Outline</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p className="text-light">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        headerTitle="Card Outline"
-                        headerBg="success"
-                        bodyBg="warning"
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <CardHeader className="bg-success rounded-0">
+                            <h2 className="text-light">Card Outline</h2>
+                        </CardHeader>
+                        <CardBody>
+                            <p>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        title="Card Image Title"
-                        cardImage={placeholder}
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <img src={placeholder} alt="" />
+                        <CardBody>
+                            <h2 className="card-title">Card Image Title</h2>
+                            <p className="card-text mt-2">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        title="Card Image Title"
-                        cardImage={placeholder}
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <img src={placeholder} alt="" />
+                        <CardBody>
+                            <h2 className="card-title">Card Image Title</h2>
+                            <p className="card-text mt-2">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard
-                        title="Card Image Title"
-                        cardImage={placeholder}
-                        bodyContent="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    />
+                    <WidgetsCard>
+                        <img src={placeholder} alt="" />
+                        <CardBody>
+                            <h2 className="card-title">Card Image Title</h2>
+                            <p className="card-text mt-2">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </WidgetsCard>
                 </Col>
                 {/* end widgets card section */}
             </Row>
