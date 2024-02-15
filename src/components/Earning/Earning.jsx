@@ -1,13 +1,11 @@
 import { Fragment, useState } from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
-import earningStyle from "../../assets/scss/Earning.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import style from "../../assets/scss/Earning.module.scss";
 
 const Earning = () => {
     const [isOpen, setIsOpen] = useState();
     const [hiddenContent, setHiddenContent] = useState();
-    const { isDark } = useDashboardDataContext();
 
     const earning = [
         {
@@ -63,45 +61,30 @@ const Earning = () => {
     return (
         <Fragment>
             {!hiddenContent ? (
-                <div
-                    className={earningStyle.earning_wrapper}
-                    data={isDark ? "true" : "false"}
-                >
-                    <Card
-                        className={`${earningStyle.card} rounded-0`}
-                        style={{
-                            backgroundColor: `${
-                                isDark ? "var(--bg-content)" : ""
-                            }`,
-                            border: `${
-                                isDark ? "1px solid var(--border-color)" : "0"
-                            }`,
-                        }}
-                    >
-                        <CardHeader
-                            className={`${earningStyle.header} border-0`}
-                        >
+                <div className={style.earning_wrapper}>
+                    <Card className={`${style.card} rounded-0 w-100 h-100`}>
+                        <CardHeader className={`${style.header} border-0`}>
                             <div className="d-flex justify-content-between align-items-center">
-                                <strong className={earningStyle.title}>
+                                <strong className={style.title}>
                                     Earning Stats
                                 </strong>
                                 <div className="d-flex align-items-center">
                                     <button
                                         type="button"
-                                        className={`${earningStyle.content_settings} border-0 bg-transparent`}
+                                        className={`${style.content_settings} border-0 bg-transparent`}
                                         onClick={() => setIsOpen(!isOpen)}
                                     >
                                         <i className="fa fa-cog"></i>
                                     </button>
                                     <button
                                         type="button"
-                                        className={`${earningStyle.content_settings} border-0 bg-transparent`}
+                                        className={`${style.content_settings} border-0 bg-transparent`}
                                     >
                                         <i className="fa fa-angle-down"></i>
                                     </button>
                                     <button
                                         type="button"
-                                        className={`${earningStyle.content_settings} border-0 bg-transparent`}
+                                        className={`${style.content_settings} border-0 bg-transparent`}
                                         onClick={() =>
                                             setHiddenContent(!hiddenContent)
                                         }
@@ -109,11 +92,7 @@ const Earning = () => {
                                         <i className="fa fa-times"></i>
                                     </button>
                                     {isOpen ? (
-                                        <div
-                                            className={
-                                                earningStyle.card_setting
-                                            }
-                                        >
+                                        <div className={style.card_setting}>
                                             <button type="button">
                                                 <i className="fa-solid fa-gear"></i>
                                                 Edit
@@ -127,9 +106,7 @@ const Earning = () => {
                                                 Update
                                             </button>
                                         </div>
-                                    ) : (
-                                        ""
-                                    )}
+                                    ) : null}
                                 </div>
                             </div>
                         </CardHeader>
@@ -146,13 +123,13 @@ const Earning = () => {
                             </ResponsiveContainer>
                         </CardBody>
                         <CardFooter
-                            className={`${earningStyle.footer} border-0 rounded-0`}
+                            className={`${style.footer} border-0 rounded-0`}
                         >
                             <div className="d-flex justify-content-between align-items-center">
-                                <strong className={earningStyle.footer_title}>
+                                <strong className={style.footer_title}>
                                     Total Earning
                                 </strong>
-                                <h4 className={earningStyle.earning_count}>
+                                <h4 className={style.earning_count}>
                                     <span className="currency float-left mr-1">
                                         $
                                     </span>

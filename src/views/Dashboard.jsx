@@ -1,11 +1,11 @@
 import { Alert, Badge, Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
 import StatsCard from "../components/StatsCard/StatsCard";
-import Traffic from "../components/Dashboard/Traffic";
-import Earning from "../components/Dashboard/Earning";
-import Download from "../components/Dashboard/Download";
-import Revenue from "../components/Dashboard/Revenue";
-import Stats from "../components/Dashboard/Stats/Stats";
+import Traffic from "../components/Traffic/Traffic";
+import Earning from "../components/Earning/Earning";
+import Download from "../components/Download/Download";
+import Revenue from "../components/Revenue/Revenue";
+import Stats, { StatsTab } from "../components/Stats/Stats";
 import SocialCounter from "../components/SocialCounter/SocialCounter";
 import Timeline from "../components/Dashboard/Timeline";
 import AnalyticsStats from "../components/Dashboard/AnalyticsStats";
@@ -13,7 +13,10 @@ import WeatherStats from "../components/Dashboard/WeatherStats";
 import SocialStats from "../components/SocialStats/SocialStats";
 import MonthlyStats from "../components/Dashboard/MonthlyStats";
 import DeviceVisitorStats from "../components/Chart/DeviceVisitorStats";
-import RealTime from "../components/Dashboard/RealTime";
+import RealTime from "../components/RealTime/RealTime";
+import Day from "../components/Stats/Day";
+import Month from "../components/Stats/Month";
+import Year from "../components/Stats/Year";
 
 const Dashboard = () => {
     const data1 = [
@@ -197,7 +200,17 @@ const Dashboard = () => {
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={12} lg={8} xl={8}>
                     <Col className="mb-4" sm={12}>
-                        <Stats />
+                        <Stats activeTab="day">
+                            <StatsTab eventKey="day" title="Day">
+                                <Day />
+                            </StatsTab>
+                            <StatsTab eventKey="Month" title="Month">
+                                <Month />
+                            </StatsTab>
+                            <StatsTab eventKey="year" title="Year">
+                                <Year />
+                            </StatsTab>
+                        </Stats>
                     </Col>
                     <Row className="gy-4 gx-4">
                         <Col sm={12} md={4}>

@@ -9,7 +9,9 @@ const Card = ({ title = "", subscript = "", icons = [], children = "" }) => {
     return (
         <Fragment>
             {!hiddenContent ? (
-                <BootstrapCard className={`${CardStyle.card} rounded-0`}>
+                <BootstrapCard
+                    className={`${CardStyle.card} rounded-0 w-100 h-100`}
+                >
                     <CardHeader
                         className={`${CardStyle.card_header} rounded-0`}
                     >

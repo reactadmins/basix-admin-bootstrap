@@ -1,13 +1,13 @@
-import { Table } from "react-bootstrap";
 import { BarChart, Bar } from "recharts";
-import user1 from "../../../assets/image/avatar/user-1.jpg";
-import user2 from "../../../assets/image/avatar/user-2.jpg";
-import user3 from "../../../assets/image/avatar/user-3.jpg";
-import user4 from "../../../assets/image/avatar/user-4.jpg";
-import user5 from "../../../assets/image/avatar/user-5.jpg";
-import statsStyle from "../../../assets/scss/Stats.module.scss";
+import user1 from "../../assets/image/avatar/user-1.jpg";
+import user2 from "../../assets/image/avatar/user-2.jpg";
+import user3 from "../../assets/image/avatar/user-3.jpg";
+import user4 from "../../assets/image/avatar/user-4.jpg";
+import user5 from "../../assets/image/avatar/user-5.jpg";
+import style from "../../assets/scss/Stats.module.scss";
+import { Table } from "react-bootstrap";
 
-const Day = () => {
+const Month = () => {
     const data = [
         {
             name: "Page A",
@@ -53,8 +53,8 @@ const Day = () => {
         },
     ];
     return (
-        <div className={`${statsStyle.table_stats} p-3`}>
-            <Table className="table">
+        <div className={style.table_wrapper}>
+            <Table className="w-100 h-100">
                 <thead>
                     <tr>
                         <th scope="col">User</th>
@@ -66,46 +66,7 @@ const Day = () => {
                 <tbody>
                     <tr>
                         <td className="align-middle">
-                            <div className={statsStyle.user_img}>
-                                <a href="#">
-                                    <img
-                                        src={user1}
-                                        alt="img"
-                                        className="rounded-circle"
-                                    />
-                                </a>
-                                <span>Louis Stanley</span>
-                            </div>
-                        </td>
-                        <td className="align-middle">
-                            <span className={statsStyle.user_count}>
-                                3765879
-                            </span>
-                        </td>
-                        <td className="align-middle">
-                            <BarChart width={60} height={50} data={data}>
-                                <Bar dataKey="uv" fill="#42A5F5" />
-                            </BarChart>
-                        </td>
-                        <td className="align-middle">
-                            <i
-                                className="fa fa-caret-up"
-                                style={{ color: "#4dbd74" }}
-                            ></i>
-                            <span
-                                className="mx-1"
-                                style={{
-                                    fontSize: "14px",
-                                    fontWeight: "600",
-                                }}
-                            >
-                                54%
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="align-middle">
-                            <div className={statsStyle.user_img}>
+                            <div className={style.user_img}>
                                 <a href="#">
                                     <img
                                         src={user2}
@@ -117,9 +78,7 @@ const Day = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={statsStyle.user_count}>
-                                3765879
-                            </span>
+                            <span className={style.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -144,7 +103,45 @@ const Day = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={statsStyle.user_img}>
+                            <div className={style.user_img}>
+                                <a href="#">
+                                    <img
+                                        src={user1}
+                                        alt="img"
+                                        className="rounded-circle"
+                                    />
+                                </a>
+                                <span>Louis Stanley</span>
+                            </div>
+                        </td>
+                        <td className="align-middle">
+                            <span className={style.user_count}>3765879</span>
+                        </td>
+                        <td className="align-middle">
+                            <BarChart width={60} height={50} data={data}>
+                                <Bar dataKey="uv" fill="#42A5F5" />
+                            </BarChart>
+                        </td>
+                        <td className="align-middle">
+                            <i
+                                className="fa fa-caret-up"
+                                style={{ color: "#4dbd74" }}
+                            ></i>
+                            <span
+                                className="mx-1"
+                                style={{
+                                    fontSize: "14px",
+                                    fontWeight: "600",
+                                }}
+                            >
+                                54%
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td className="align-middle">
+                            <div className={style.user_img}>
                                 <a href="#">
                                     <img
                                         src={user3}
@@ -156,9 +153,7 @@ const Day = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={statsStyle.user_count}>
-                                3765879
-                            </span>
+                            <span className={style.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -183,7 +178,7 @@ const Day = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={statsStyle.user_img}>
+                            <div className={style.user_img}>
                                 <a href="#">
                                     <img
                                         src={user4}
@@ -195,9 +190,7 @@ const Day = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={statsStyle.user_count}>
-                                3765879
-                            </span>
+                            <span className={style.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -222,7 +215,7 @@ const Day = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={statsStyle.user_img}>
+                            <div className={style.user_img}>
                                 <a href="#">
                                     <img
                                         src={user5}
@@ -234,9 +227,7 @@ const Day = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={statsStyle.user_count}>
-                                3765879
-                            </span>
+                            <span className={style.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -265,4 +256,4 @@ const Day = () => {
     );
 };
 
-export default Day;
+export default Month;

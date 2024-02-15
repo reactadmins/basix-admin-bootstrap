@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import { CardBody, CardFooter, Col, Row } from "react-bootstrap";
-
 import {
     AreaChart,
     Area,
@@ -11,7 +10,7 @@ import {
     ResponsiveContainer,
 } from "recharts";
 import Card from "../Card/Card";
-import TrafficVisitor from "./TrafficVisitor";
+import style from "../../assets/scss/Traffic.module.scss";
 
 const Traffic = () => {
     const data = [
@@ -159,3 +158,25 @@ const Traffic = () => {
 };
 
 export default Traffic;
+
+export const TrafficVisitor = () => {
+    return (
+        <div className={style.visitor_wrapper}>
+            <span className={`${style.title} text-center d-block`}>Visits</span>
+            <h4
+                className={`${style.counter} counter text-center m-0 text-uppercase`}
+            >
+                29.703 Users (40%)
+            </h4>
+            <div className={style.progress}>
+                <div
+                    className={style.progress_bar}
+                    role="progressbar"
+                    aria-valuenow=""
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                ></div>
+            </div>
+        </div>
+    );
+};
