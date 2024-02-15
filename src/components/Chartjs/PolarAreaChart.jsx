@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { PolarArea } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -7,7 +6,8 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import CardContent from "../../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
@@ -34,18 +34,15 @@ const PolarAreaChart = () => {
         ],
     };
     return (
-        <Fragment>
-            <CardContent
-                title="Polar Area Chart"
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <div style={{ width: "80%" }}>
-                            <PolarArea data={data} />
-                        </div>
+        <Card title="Polar Area Chart">
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <div style={{ width: "80%" }}>
+                        <PolarArea data={data} />
                     </div>
-                }
-            />
-        </Fragment>
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 

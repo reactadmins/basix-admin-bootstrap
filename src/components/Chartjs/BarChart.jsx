@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Bar } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -8,7 +7,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import CardContent from "../../Card/CardContent";
+import Card from "../Card/Card";
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -54,16 +53,11 @@ const BarChart = () => {
         ],
     };
     return (
-        <Fragment>
-            <CardContent
-                title="Bar Chart"
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <Bar options={options} data={data} />
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card title="Bar Chart">
+            <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                <Bar options={options} data={data} />
+            </div>
+        </Card>
     );
 };
 

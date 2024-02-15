@@ -1,11 +1,8 @@
-import { Fragment } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie } from "react-chartjs-2";
-import CardContent from "../../Card/CardContent";
-
+import { Doughnut } from "react-chartjs-2";
+import Card from "../Card/Card";
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-const PieChart = () => {
+const DoughnutChart = () => {
     const data = {
         labels: ["Vue Js", "Ember Js", "React Js", "Angular Js"],
         datasets: [
@@ -29,19 +26,14 @@ const PieChart = () => {
         ],
     };
     return (
-        <Fragment>
-            <CardContent
-                title="Pie Chart"
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <div style={{ width: "80%" }}>
-                            <Pie data={data} />
-                        </div>
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card title="Doughnut Chart">
+            <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                <div style={{ width: "80%" }}>
+                    <Doughnut data={data} />
+                </div>
+            </div>
+        </Card>
     );
 };
 
-export default PieChart;
+export default DoughnutChart;

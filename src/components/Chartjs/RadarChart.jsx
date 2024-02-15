@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Radar } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -9,7 +8,8 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import CardContent from "../../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 
 ChartJS.register(
     RadialLinearScale,
@@ -49,18 +49,15 @@ const RadarChart = () => {
         ],
     };
     return (
-        <Fragment>
-            <CardContent
-                title="Radar Chart"
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <div style={{ width: "80%" }}>
-                            <Radar data={data} />
-                        </div>
+        <Card title="Radar Chart">
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <div style={{ width: "80%" }}>
+                        <Radar data={data} />
                     </div>
-                }
-            />
-        </Fragment>
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 

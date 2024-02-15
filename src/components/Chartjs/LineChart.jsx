@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -10,7 +9,8 @@ import {
     Filler,
     Legend,
 } from "chart.js";
-import CardContent from "../../Card/CardContent";
+import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 
 ChartJS.register(
     CategoryScale,
@@ -60,16 +60,13 @@ const LineChart = () => {
         ],
     };
     return (
-        <Fragment>
-            <CardContent
-                title="Line Chart"
-                CardBody={
-                    <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                        <Line options={options} data={data} />
-                    </div>
-                }
-            />
-        </Fragment>
+        <Card title="Line Chart">
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <Line options={options} data={data} />
+                </div>
+            </CardBody>
+        </Card>
     );
 };
 
