@@ -114,6 +114,20 @@ function App() {
         }
     }, []);
 
+    // const [isClick, setIsClick] = useState(false);
+
+    // useEffect(() => {
+    //     const lightDarkBtn = document.querySelector(".clean-btn");
+    //     console.log('lightDarkBtn', lightDarkBtn);
+
+    //     addEventListener("click", (event) => {
+    //         setIsClick(!isClick)
+    //     });
+    //     const isDark = document.documentElement.getAttribute("data-theme");
+    //     console.log("isDrak", isDark)
+    //     document.documentElement.setAttribute('data-bs-theme', isDark);
+    //   },[]);
+
     return (
         <div>
             {offerStartDate < currentDate && currentDate < offerEndDate && isOpenOffer ? (

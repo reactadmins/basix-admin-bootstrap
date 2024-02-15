@@ -34,7 +34,7 @@ const config = {
         locales: ["en"],
     },
 
-    plugins: [require.resolve("docusaurus-lunr-search")],
+    plugins: [require.resolve("docusaurus-lunr-search"), "docusaurus-plugin-sass"],
 
     // scripts: ["./src/css/custom.js"],
 
@@ -66,7 +66,11 @@ const config = {
                 },
                 blog: false,
                 theme: {
-                    customCss: "./src/css/custom.css",
+                    // customCss: "./src/css/custom.css",
+                    customCss: [
+                        './node_modules/bootstrap/dist/css/bootstrap.min.css',
+                        "./src/css/custom.css",
+                      ],
                 },
             }),
         ],
@@ -80,8 +84,9 @@ const config = {
             navbar: {
                 // title: "React Admin",
                 logo: {
+                    srcDark: "img/white-logo.png",
                     alt: "React Admin Logo",
-                    src: "img/logo.svg",
+                    src: "img/black-logo.png",
                 },
                 items: [
                     // {
