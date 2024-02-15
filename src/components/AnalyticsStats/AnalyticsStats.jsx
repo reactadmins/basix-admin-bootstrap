@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import Card from "../Card/Card";
 import { Row, Col, CardBody, CardFooter } from "react-bootstrap";
-import AnalyticsInfo from "./AnalyticsInfo";
 import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -13,6 +12,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
+import { Line as PeityLine } from "peity-react";
 
 ChartJS.register(
     CategoryScale,
@@ -23,6 +23,47 @@ ChartJS.register(
     Tooltip,
     Legend
 );
+
+export const AnalyticsInfo = ({ count = "", title = "" }) => {
+    return (
+        <div className="analytics-wrapper">
+            <span
+                className="text-uppercase d-block"
+                style={{
+                    color: "var(--content-text-color)",
+                    fontSize: "14px",
+                    marginBottom: "6px",
+                }}
+            >
+                {title}
+            </span>
+            <div className="d-flex gap-3 align-items-center">
+                <PeityLine
+                    values={[5, 3, 9, 6, 5, 9, 7, 3, 5, 2]}
+                    width={60}
+                    height={20}
+                />
+                <div className="counter-up">
+                    <div className="d-flex align-items-center gap-1">
+                        <i
+                            className="fa fa-caret-up"
+                            style={{ color: "#4dbd74", fontSize: "14px" }}
+                        ></i>
+                        <span
+                            className="mx-1"
+                            style={{
+                                fontSize: "14px",
+                                color: "var(--hedging-text-color)",
+                            }}
+                        >
+                            {count}%
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const AnalyticsStats = () => {
     const options = {

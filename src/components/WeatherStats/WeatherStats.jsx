@@ -1,19 +1,14 @@
 import { useState } from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
-import weatherStyle from "../../assets/scss/WeatherStats.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import style from "../../assets/scss/WeatherStats.module.scss";
 
 export const Stats = ({ title, counter, Symbol }) => {
     return (
-        <div className={`${weatherStyle.stats} text-center`}>
-            <span
-                className={`${weatherStyle.stats_title} text-uppercase fw-normal`}
-            >
+        <div className={`${style.stats} text-center`}>
+            <span className={`${style.stats_title} text-uppercase fw-normal`}>
                 {title}
             </span>
-            <span
-                className={`${weatherStyle.stats_counter} d-block fw-semibold`}
-            >
+            <span className={`${style.stats_counter} d-block fw-semibold`}>
                 {counter}
                 {Symbol}
             </span>
@@ -22,19 +17,11 @@ export const Stats = ({ title, counter, Symbol }) => {
 };
 
 const WeatherStats = () => {
-    const { isDark } = useDashboardDataContext();
     const [isOpen, setIsOpen] = useState();
     return (
-        <Card
-            className={`${weatherStyle.card} rounded-0 border-0`}
-            style={{
-                boxShadow: `${
-                    isDark ? "0px 0px 0px 1px var(--border-color)" : ""
-                }`,
-            }}
-        >
+        <Card className={`${style.card} rounded-0 border-0`}>
             <CardHeader
-                className={`${weatherStyle.card_header} border-0 rounded-0 d-flex justify-content-between align-items-center`}
+                className={`${style.card_header} border-0 rounded-0 d-flex justify-content-between align-items-center`}
             >
                 <h2 className="text-white mb-0 fw-semibold">Weather</h2>
                 <button
@@ -45,7 +32,7 @@ const WeatherStats = () => {
                     <i className="fa fa-ellipsis-v"></i>
                 </button>
                 {isOpen ? (
-                    <div className={weatherStyle.card_setting}>
+                    <div className={style.card_setting}>
                         <button type="button">
                             <i className="fa-solid fa-gear"></i>
                             Edit
@@ -63,14 +50,14 @@ const WeatherStats = () => {
                     ""
                 )}
             </CardHeader>
-            <CardBody className={`${weatherStyle.card_body} p-0 border-0`}>
+            <CardBody className={`${style.card_body} p-0 border-0`}>
                 <div
-                    className={`${weatherStyle.weather_stats} p-4 pt-0 pb-2 d-flex justify-content-between align-items-center`}
+                    className={`${style.weather_stats} p-4 pt-0 pb-2 d-flex justify-content-between align-items-center`}
                 >
-                    <span className={weatherStyle.weather_icon}>
+                    <span className={style.weather_icon}>
                         <i className="fa fa-cloud text-white"></i>
                     </span>
-                    <div className={weatherStyle.media_body}>
+                    <div className={style.media_body}>
                         <h3 className="text-white mb-0">Partly Cloudy</h3>
                         <span className="text-white text-end d-block">
                             Sunday, April 2023
@@ -78,7 +65,7 @@ const WeatherStats = () => {
                     </div>
                 </div>
                 <div
-                    className={`${weatherStyle.media_content} p-4 d-flex justify-content-between align-items-center`}
+                    className={`${style.media_content} p-4 d-flex justify-content-between align-items-center`}
                 >
                     <div>
                         <h5 className="text-uppercase fs-6 fw-normal mb-0">
@@ -87,14 +74,14 @@ const WeatherStats = () => {
                         <span className="text-uppercase fw-normal">Usa</span>
                     </div>
                     <div
-                        className={`${weatherStyle.weather_counte} d-flex align-items-baseline`}
+                        className={`${style.weather_counte} d-flex align-items-baseline`}
                     >
                         <h2 className="mb-0 fw-normal">21</h2>
                         <span className="d-block">°C</span>
                     </div>
                 </div>
             </CardBody>
-            <CardFooter className={weatherStyle.card_footer}>
+            <CardFooter className={style.card_footer}>
                 <div className="d-flex justify-content-between align-items-center">
                     <Stats title="Feels" counter={23} Symbol="°" />
                     <hr className="mx-3" />
