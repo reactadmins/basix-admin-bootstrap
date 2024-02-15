@@ -37,6 +37,7 @@ const config = {
     plugins: [require.resolve("docusaurus-lunr-search")],
 
     // scripts: ["./src/css/custom.js"],
+
     // scripts: [
     //     // "https://docusaurus.io/script.js",
     //     "custom.js",

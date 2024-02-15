@@ -28,7 +28,6 @@ function App() {
         await fetch(url)
             .then((res) => res.text())
             .then((data) => {
-                console.log("Data", data);
                 const dataArr = data.split("\n");
                 const firstRow = dataArr?.[0]?.split(",");
 
@@ -53,8 +52,6 @@ function App() {
 
                 const mainObj = sheetData[product_slug];
                 const checkCounterTime = new Date(mainObj.counter_time).getTime();
-
-                console.log("mainObj", mainObj);
 
                 if (mainObj.counter_time && checkCounterTime < currentDate) {
                     mainObj.counter_time = checkCounterTime + day3;
@@ -117,17 +114,11 @@ function App() {
         }
     }, []);
 
-    console.log("offerStartDate", offerStartDate);
-    console.log("currentDate", currentDate);
-    console.log("offerEndDate", offerEndDate);
-    console.log("isOpenOffer", isOpenOffer);
-
     return (
         <div>
             {offerStartDate < currentDate && currentDate < offerEndDate && isOpenOffer ? (
                 <OfferNotice offerData={offerData} onCloseOffer={handleCloseOffer} />
             ) : null}
-            {/* <OfferNotice offerData={offerData} onCloseOffer={handleCloseOffer} /> */}
         </div>
     );
 }
