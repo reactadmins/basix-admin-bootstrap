@@ -1,6 +1,7 @@
 import Select from "react-select";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
 import "../../assets/scss/MultipleTagSelect.scss";
+import { CardBody } from "react-bootstrap";
 
 const options = [
     { value: "Afghanistan", label: "Afghanistan" },
@@ -37,9 +38,8 @@ const options = [
 
 const MultipleTagSelect = () => {
     return (
-        <CardContent
-            title="React-Select"
-            CardBody={
+        <Card title="React-Select">
+            <CardBody>
                 <div className="tag_select">
                     <h5 className="pb-2">Select Countries</h5>
                     <Select
@@ -53,8 +53,8 @@ const MultipleTagSelect = () => {
                         isRtl={false}
                     />
                 </div>
-            }
-        />
+            </CardBody>
+        </Card>
     );
 };
 

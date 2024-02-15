@@ -2,10 +2,11 @@ import { useState } from "react";
 import { EntypoIcon } from "@entypo-icons/react";
 import { Link } from "react-router-dom";
 import entypo from "../data/entypo.json";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
 import { Icon } from "@iconify/react";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
 import CopyButton from "./CopyButton";
+import { CardBody } from "react-bootstrap";
 
 const Entypo = () => {
     const [search, setSearch] = useState("");
@@ -46,9 +47,8 @@ const Entypo = () => {
                 </div>
             </div>
             <div className="mt-4">
-                <CardContent
-                    title={entypo?.lists?.mainicons?.name}
-                    CardBody={
+                <Card title={entypo?.lists?.mainicons?.name}>
+                    <CardBody>
                         <div className="row  m-0">
                             {entypo?.lists?.mainicons?.icons
                                 ?.filter((item) => {
@@ -82,13 +82,12 @@ const Entypo = () => {
                                     </div>
                                 ))}
                         </div>
-                    }
-                />
+                    </CardBody>
+                </Card>
             </div>
             <div className="mt-4">
-                <CardContent
-                    title={entypo?.lists?.socialicons?.name}
-                    CardBody={
+                <Card title={entypo?.lists?.socialicons?.name}>
+                    <CardBody>
                         <div className="row  m-0">
                             {entypo?.lists?.socialicons?.icons
                                 ?.filter((item) => {
@@ -120,8 +119,8 @@ const Entypo = () => {
                                     </div>
                                 ))}
                         </div>
-                    }
-                />
+                    </CardBody>
+                </Card>
             </div>
         </div>
     );

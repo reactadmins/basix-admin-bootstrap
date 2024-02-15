@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import fontAwesome from "../data/font-awesome.json";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
 import { Col, Row } from "react-bootstrap";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
 import CopyButton from "./CopyButton";
@@ -46,52 +46,47 @@ const FontAwesome = () => {
             </div>
             {fontAwesome?.lists?.map((items, index) => (
                 <div className="mt-4" key={index}>
-                    <CardContent
-                        title={items.name}
-                        CardBody={
-                            <Row>
-                                {items.icons
-                                    ?.filter((item) => {
-                                        return search.toLowerCase() === ""
-                                            ? item
-                                            : item
-                                                  .toLowerCase()
-                                                  .includes(search);
-                                    })
-                                    .map((item, index) => {
-                                        return (
-                                            <Col
-                                                key={index}
-                                                className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                    <Card title={items.name}>
+                        <Row>
+                            {items.icons
+                                ?.filter((item) => {
+                                    return search.toLowerCase() === ""
+                                        ? item
+                                        : item.toLowerCase().includes(search);
+                                })
+                                .map((item, index) => {
+                                    return (
+                                        <Col
+                                            key={index}
+                                            className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
+                                        >
+                                            <div
+                                                className={
+                                                    iconStyle.icon_wrapper
+                                                }
                                             >
-                                                <div
-                                                    className={
-                                                        iconStyle.icon_wrapper
-                                                    }
-                                                >
-                                                    <i
-                                                        style={{
-                                                            fontSize: "30px",
-                                                            cursor: "pointer",
-                                                        }}
-                                                        className={`fa fa-${item}`}
-                                                    ></i>
-                                                    <span className="mt-2 d-block">
-                                                        {item}
-                                                    </span>
-                                                    <CopyButton
-                                                        copy={copy}
-                                                        setCopy={setCopy}
-                                                        iconsName={item}
-                                                        copyId={index}
-                                                    />
-                                                </div>
-                                            </Col>
-                                        );
-                                    })}
-                            </Row>
-                        }
-                    />
+                                                <i
+                                                    style={{
+                                                        fontSize: "30px",
+                                                        cursor: "pointer",
+                                                    }}
+                                                    className={`fa fa-${item}`}
+                                                ></i>
+                                                <span className="mt-2 d-block">
+                                                    {item}
+                                                </span>
+                                                <CopyButton
+                                                    copy={copy}
+                                                    setCopy={setCopy}
+                                                    iconsName={item}
+                                                    copyId={index}
+                                                />
+                                            </div>
+                                        </Col>
+                                    );
+                                })}
+                        </Row>
+                    </Card>
                 </div>
             ))}
         </div>

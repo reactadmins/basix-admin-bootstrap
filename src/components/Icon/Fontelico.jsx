@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import fontelico from "../data/fontelico.json";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
 import CopyButton from "./CopyButton";
+import { CardBody } from "react-bootstrap";
 
 const Fontelico = () => {
     const [search, setSearch] = useState("");
@@ -45,9 +46,8 @@ const Fontelico = () => {
                 </div>
             </div>
             <div className="mt-4">
-                <CardContent
-                    title={fontelico?.lists?.name}
-                    CardBody={
+                <Card title={fontelico?.lists?.name}>
+                    <CardBody>
                         <div className="row  m-0">
                             {fontelico?.lists?.icons
                                 ?.filter((item) => {
@@ -81,8 +81,8 @@ const Fontelico = () => {
                                     </div>
                                 ))}
                         </div>
-                    }
-                />
+                    </CardBody>
+                </Card>
             </div>
         </div>
     );

@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import brandico from "../data/brandico.json";
-import CardContent from "../Card/CardContent";
+import Card from "../Card/Card";
 import iconStyle from "../../assets/scss/IconStyle.module.scss";
 import CopyButton from "./CopyButton";
+import { CardBody } from "react-bootstrap";
 
 const Brandico = () => {
     const [search, setSearch] = useState("");
@@ -45,9 +46,8 @@ const Brandico = () => {
                 </div>
             </div>
             <div className="mt-4">
-                <CardContent
-                    title={brandico?.lists?.name}
-                    CardBody={
+                <Card title={brandico?.lists?.name}>
+                    <CardBody>
                         <div className="row  m-0">
                             {brandico?.lists?.icons
                                 ?.filter((item) => {
@@ -81,8 +81,8 @@ const Brandico = () => {
                                     </div>
                                 ))}
                         </div>
-                    }
-                />
+                    </CardBody>
+                </Card>
             </div>
         </div>
     );
