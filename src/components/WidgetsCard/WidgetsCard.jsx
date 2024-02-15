@@ -1,7 +1,6 @@
 import { Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 import widgetsCardStyle from "../../assets/scss/WidgetsCard.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const WidgetsCard = ({
     cardBg = "",
@@ -16,10 +15,8 @@ const WidgetsCard = ({
     footerContent = "",
     cardBorderColor = "",
 }) => {
-    const { isDark } = useDashboardDataContext();
     return (
         <Card
-            data={isDark ? "true" : "false"}
             className={`rounded-0 ${widgetsCardStyle.card} ${
                 cardBorderColor ? `border border-${cardBorderColor}` : ""
             } ${cardBg ? `bg-${cardBg}` : ""}`}

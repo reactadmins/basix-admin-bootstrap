@@ -56,9 +56,6 @@ const OverlayCard = () => {
                         ></textarea>
                         <div className="mt-4 d-flex justify-content-between">
                             <div>
-                                <a href="#">
-                                    <i className="fa-solid fa-camera"></i>
-                                </a>
                                 <a href="#" className="mx-1">
                                     <i className="fa-solid fa-location-dot"></i>
                                 </a>

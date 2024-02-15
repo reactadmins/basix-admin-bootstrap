@@ -9,7 +9,10 @@
     .card_body {
         padding: 20px;
     }
-    &[data="true"] {
+}
+
+body[data-theme="dark"] {
+    .card {
         border: 0px !important;
         box-shadow: 0 0 0 1px var(--border-color);
         background-color: var(--bg-content) !important;
