@@ -40,6 +40,7 @@ function waitForElm(selector) {
 if (ExecutionEnvironment.canUseDOM) {
     // As soon as the site loads in the browser, register a global event listener
     waitForElm("#notice-root").then((elm) => {
-        createRoot(elm).render(<App />);
+        const root = createRoot(elm);
+        root.render(<App />);
     });
 }
