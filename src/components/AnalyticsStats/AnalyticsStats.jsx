@@ -114,7 +114,7 @@ const AnalyticsStats = () => {
                         <Line options={options} data={data} />
                     </div>
                 </CardBody>
-                <CardFooter>
+                <CardFooter style={{ borderColor: "var(--border-colo)" }}>
                     <Row className="gy-4 m-0" style={{ padding: "16px 20px" }}>
                         <Col sm={12} md={4} className="m-0">
                             <AnalyticsInfo count={65.79} title="Bounce Rate" />
