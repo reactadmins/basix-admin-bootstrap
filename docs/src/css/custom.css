@@ -124,7 +124,7 @@ body {
     top: 32px;
     right: 0;
     z-index: 9999;
-
+    visibility: hidden;
 }
 
 .light-dark-dropdown > button{
