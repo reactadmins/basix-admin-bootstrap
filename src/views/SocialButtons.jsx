@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import CardContent from "../components/Card/CardContent";
-import { Col, Row } from "react-bootstrap";
+import Card from "../components/Card/Card";
+import { CardBody, Col, Row } from "react-bootstrap";
 import socialButtonsStyle from "../assets/scss/SocialButtons.module.scss";
 
 const SocialButtons = () => {
@@ -9,11 +9,11 @@ const SocialButtons = () => {
             <Row className="gy-4 gx-4">
                 {/* start social button rounded section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Social Buttons"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.rounded_button}`}
                             >
@@ -48,18 +48,18 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-codepen"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end social button rounded section */}
 
                 {/* start social button social section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Social Buttons"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <ul
                                 className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.social_square_button}`}
                             >
@@ -144,18 +144,18 @@ const SocialButtons = () => {
                                     </a>
                                 </li>
                             </ul>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end social button social section */}
 
                 {/* start aeneas effect button section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Aeneas Effect"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.aeneas_effect_button}`}
                             >
@@ -208,18 +208,18 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end aeneas effect button section */}
 
                 {/* start jaques effect button section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Jaques Effect"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 w-100 py-2 ${socialButtonsStyle.jaques_effect_buttons}`}
                             >
@@ -272,18 +272,18 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end jaques effect button section */}
 
                 {/* start egeon effect button section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Egeon Effect"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 w-100 py-2  ${socialButtonsStyle.egeon_effect_buttons}`}
                             >
@@ -336,18 +336,18 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end egeon effect button section */}
 
                 {/* start claudio effect button section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Claudio Effect"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 py-2  ${socialButtonsStyle.claudio_effect_buttons}`}
                             >
@@ -400,18 +400,18 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end claudio effect button section */}
 
                 {/* start laertes effect button section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Laertes Effect"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 py-2  ${socialButtonsStyle.laertes_effect_buttons}`}
                             >
@@ -464,18 +464,18 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end laertes effect button section */}
 
                 {/* start jinae  effect button section */}
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Jinae Effect"
                         icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                        bodyBg="#ddd"
-                        CardBody={
+                    >
+                        <CardBody>
                             <div
                                 className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.jinae_effect_buttons}`}
                             >
@@ -528,8 +528,8 @@ const SocialButtons = () => {
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end jinae  effect button section */}
             </Row>

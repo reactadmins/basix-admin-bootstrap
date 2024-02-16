@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
-import CardContent from "../components/Card/CardContent";
+import { CardBody, CardFooter, Col, Row } from "react-bootstrap";
+import Card from "../components/Card/Card";
 import CreditCardForm from "../components/Form/CreditCardForm";
 import CompanyForm from "../components/Form/CompanyForm";
 import HorizontalForm from "../components/Form/HorizontalForm";
@@ -46,207 +46,197 @@ const BasicForm = () => {
 
                         {/* start input grid section */}
                         <Col sm={12}>
-                            <CardContent
-                                title="Input Grid"
-                                CardBody={
-                                    <>
-                                        <form className="form-horizontal">
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-3">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-3"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
+                            <Card title="Input Grid">
+                                <CardBody>
+                                    <form className="form-horizontal">
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-3">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-3"
+                                                        className="form-control"
+                                                    />
                                                 </div>
                                             </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-4">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-4"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-5">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-5"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-6">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-6"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-7">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-7"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-8">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-8"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-9">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-9"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-10">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-10"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-11">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-11"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-3">
-                                                <div className="row gy-5">
-                                                    <div className="col col-sm-12">
-                                                        <input
-                                                            type="text"
-                                                            placeholder=".col-sm-12"
-                                                            className="form-control"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </>
-                                }
-                                CardFooter={
-                                    <>
-                                        <div className="d-flex gap-3">
-                                            <button
-                                                type="submit"
-                                                className="btn btn-primary btn-sm"
-                                            >
-                                                <i className="fa fa-user"></i>{" "}
-                                                Submit
-                                            </button>
-                                            <button
-                                                type="submit"
-                                                className="btn btn-danger btn-sm"
-                                            >
-                                                <i className="fa-solid fa-ban"></i>{" "}
-                                                Submit
-                                            </button>
                                         </div>
-                                    </>
-                                }
-                            />
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-4">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-4"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-5">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-5"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-6">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-6"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-7">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-7"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-8">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-8"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-9">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-9"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-10">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-10"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-11">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-11"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="form-group mb-3">
+                                            <div className="row gy-5">
+                                                <div className="col col-sm-12">
+                                                    <input
+                                                        type="text"
+                                                        placeholder=".col-sm-12"
+                                                        className="form-control"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </CardBody>
+                                <CardFooter>
+                                    <div className="d-flex gap-3">
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fa fa-user"></i>{" "}
+                                            Submit
+                                        </button>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-danger btn-sm"
+                                        >
+                                            <i className="fa-solid fa-ban"></i>{" "}
+                                            Submit
+                                        </button>
+                                    </div>
+                                </CardFooter>
+                            </Card>
                         </Col>
                         {/* end input grid section */}
 
                         {/* start inline from section */}
                         <Col sm={12}>
-                            <CardContent
-                                title="Inline Form"
-                                CardBody={
-                                    <>
-                                        <form className="d-flex gap-3">
-                                            <div className="form-group d-flex gap-2 align-items-center">
-                                                <label
-                                                    className="form-control-label"
-                                                    htmlFor="exampleInputName"
-                                                >
-                                                    Name
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="exampleInputName"
-                                                    placeholder="Jane Doe"
-                                                />
-                                            </div>
-                                            <div className="form-group d-flex gap-2 align-items-center">
-                                                <label
-                                                    className="pr-1 form-control-label"
-                                                    htmlFor="exampleInputEmail"
-                                                >
-                                                    Email
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="exampleInputEmail"
-                                                    placeholder="Jane Doe"
-                                                />
-                                            </div>
-                                        </form>
-                                    </>
-                                }
-                                CardFooter={
-                                    <>
-                                        <div className="d-flex gap-3">
-                                            <button
-                                                type="submit"
-                                                className="btn btn-primary btn-sm"
+                            <Card title="Inline Form">
+                                <CardBody>
+                                    <form className="d-flex gap-3">
+                                        <div className="form-group d-flex gap-2 align-items-center">
+                                            <label
+                                                className="form-control-label"
+                                                htmlFor="exampleInputName"
                                             >
-                                                <i className="fa fa-user"></i>{" "}
-                                                Submit
-                                            </button>
-                                            <button
-                                                type="submit"
-                                                className="btn btn-danger btn-sm"
-                                            >
-                                                <i className="fa-solid fa-ban"></i>{" "}
-                                                Submit
-                                            </button>
+                                                Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="exampleInputName"
+                                                placeholder="Jane Doe"
+                                            />
                                         </div>
-                                    </>
-                                }
-                            />
+                                        <div className="form-group d-flex gap-2 align-items-center">
+                                            <label
+                                                className="pr-1 form-control-label"
+                                                htmlFor="exampleInputEmail"
+                                            >
+                                                Email
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="exampleInputEmail"
+                                                placeholder="Jane Doe"
+                                            />
+                                        </div>
+                                    </form>
+                                </CardBody>
+                                <CardFooter>
+                                    <div className="d-flex gap-3">
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fa fa-user"></i>{" "}
+                                            Submit
+                                        </button>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-danger btn-sm"
+                                        >
+                                            <i className="fa-solid fa-ban"></i>{" "}
+                                            Submit
+                                        </button>
+                                    </div>
+                                </CardFooter>
+                            </Card>
                         </Col>
                         {/* end inline from section */}
                     </Row>
@@ -254,717 +244,633 @@ const BasicForm = () => {
 
                 {/* start inline sizes section */}
                 <Col md={12} lg={6}>
-                    <CardContent
-                        title="Input Sizes"
-                        CardBody={
-                            <>
-                                <form className="form-horizontal">
-                                    <div className="row mb-3">
-                                        <div className="col col-sm-3">
-                                            <label
-                                                className="d-block mb-1 form-control-label"
-                                                htmlFor="input-small"
-                                            >
-                                                Small Input
-                                            </label>
-                                        </div>
-                                        <div className="col col-sm-6">
-                                            <div className="form-group">
-                                                <input
-                                                    type="text"
-                                                    className="input-sm form-control-sm form-control"
-                                                    id="input-small"
-                                                    placeholder=".form-control-sm"
-                                                    required
-                                                />
-                                            </div>
+                    <Card title="Input Sizes">
+                        <CardBody>
+                            <form className="form-horizontal">
+                                <div className="row mb-3">
+                                    <div className="col col-sm-3">
+                                        <label
+                                            className="d-block mb-1 form-control-label"
+                                            htmlFor="input-small"
+                                        >
+                                            Small Input
+                                        </label>
+                                    </div>
+                                    <div className="col col-sm-6">
+                                        <div className="form-group">
+                                            <input
+                                                type="text"
+                                                className="input-sm form-control-sm form-control"
+                                                id="input-small"
+                                                placeholder=".form-control-sm"
+                                                required
+                                            />
                                         </div>
                                     </div>
-                                    <div className="row mb-3">
-                                        <div className="col col-sm-3">
-                                            <label
-                                                className="d-block mb-1 form-control-label"
-                                                htmlFor="input-normal"
-                                            >
-                                                Normal Input
-                                            </label>
-                                        </div>
-                                        <div className="col col-sm-6">
-                                            <div className="form-group">
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="input-normal"
-                                                    placeholder="Normal"
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row mb-3">
-                                        <div className="col col-sm-3">
-                                            <label
-                                                className="d-block mb-1 form-control-label"
-                                                htmlFor="large-input"
-                                            >
-                                                Large Input
-                                            </label>
-                                        </div>
-                                        <div className="col col-sm-6">
-                                            <div className="form-group">
-                                                <input
-                                                    type="text"
-                                                    className="input-lg form-control-lg form-control"
-                                                    id="large-input"
-                                                    placeholder=".form-control-lg"
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        <i className="fa fa-user"></i> Submit
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-danger btn-sm"
-                                    >
-                                        <i className="fa-solid fa-ban"></i>{" "}
-                                        Submit
-                                    </button>
                                 </div>
-                            </>
-                        }
-                    />
+                                <div className="row mb-3">
+                                    <div className="col col-sm-3">
+                                        <label
+                                            className="d-block mb-1 form-control-label"
+                                            htmlFor="input-normal"
+                                        >
+                                            Normal Input
+                                        </label>
+                                    </div>
+                                    <div className="col col-sm-6">
+                                        <div className="form-group">
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="input-normal"
+                                                placeholder="Normal"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row mb-3">
+                                    <div className="col col-sm-3">
+                                        <label
+                                            className="d-block mb-1 form-control-label"
+                                            htmlFor="large-input"
+                                        >
+                                            Large Input
+                                        </label>
+                                    </div>
+                                    <div className="col col-sm-6">
+                                        <div className="form-group">
+                                            <input
+                                                type="text"
+                                                className="input-lg form-control-lg form-control"
+                                                id="large-input"
+                                                placeholder=".form-control-lg"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </CardBody>
+                        <CardFooter>
+                            <div className="d-flex gap-3">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
+                                    <i className="fa fa-user"></i> Submit
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger btn-sm"
+                                >
+                                    <i className="fa-solid fa-ban"></i> Submit
+                                </button>
+                            </div>
+                        </CardFooter>
+                    </Card>
                 </Col>
                 {/* end inline sizes section */}
 
                 {/* start validation states form section */}
                 <Col md={12} lg={6}>
-                    <CardContent
-                        title="Validation States Form"
-                        CardBody={
-                            <>
-                                <form>
-                                    <div className="form-group mb-3">
-                                        <label
-                                            htmlFor="inputIsValid"
-                                            className="form-control-label mb-1"
-                                        >
-                                            Input is valid
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="inputIsValid"
-                                            className="is-valid  form-control"
-                                        />
-                                    </div>
-                                    <div className="form-group  mb-4">
-                                        <label
-                                            htmlFor="inputIsInvalid"
-                                            className="form-control-label mb-1"
-                                        >
-                                            Input is invalid
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="inputIsInvalid"
-                                            className="is-invalid  form-control"
-                                        />
-                                    </div>
-                                    <div className="form-check py-2">
-                                        <input
-                                            className="form-check-input is-invalid"
-                                            type="checkbox"
-                                            value=""
-                                            id="invalidCheck3"
-                                            aria-describedby="invalidCheck3Feedback"
-                                            required
-                                        />
-                                        <label
-                                            className="form-check-label"
-                                            htmlFor="invalidCheck3"
-                                        >
-                                            Agree to terms and conditions
-                                        </label>
-                                    </div>
-                                </form>
-                            </>
-                        }
-                    />
+                    <Card title="Validation States Form">
+                        <CardBody>
+                            <form>
+                                <div className="form-group mb-3">
+                                    <label
+                                        htmlFor="inputIsValid"
+                                        className="form-control-label mb-1"
+                                    >
+                                        Input is valid
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="inputIsValid"
+                                        className="is-valid  form-control"
+                                    />
+                                </div>
+                                <div className="form-group  mb-4">
+                                    <label
+                                        htmlFor="inputIsInvalid"
+                                        className="form-control-label mb-1"
+                                    >
+                                        Input is invalid
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="inputIsInvalid"
+                                        className="is-invalid  form-control"
+                                    />
+                                </div>
+                                <div className="form-check py-2">
+                                    <input
+                                        className="form-check-input is-invalid"
+                                        type="checkbox"
+                                        value=""
+                                        id="invalidCheck3"
+                                        aria-describedby="invalidCheck3Feedback"
+                                        required
+                                    />
+                                    <label
+                                        className="form-check-label"
+                                        htmlFor="invalidCheck3"
+                                    >
+                                        Agree to terms and conditions
+                                    </label>
+                                </div>
+                            </form>
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end validation states form section */}
 
                 {/* start buttons groups section */}
                 <Col md={12} lg={6}>
-                    <CardContent
-                        title="Buttons Groups"
-                        CardBody={
-                            <>
-                                <div className="input-group mb-3">
-                                    <button
-                                        className="btn btn btn-primary"
-                                        type="button"
-                                        id="button-addon1"
-                                    >
-                                        <i className="fa fa-search"></i> Search
-                                    </button>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Username"
-                                        aria-label="Example text with button addon"
-                                        aria-describedby="button-addon1"
-                                    />
-                                </div>
-                                <div className="input-group mb-3">
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        placeholder="Email"
-                                        aria-label="Example text with button addon"
-                                        aria-describedby="button-addon1"
-                                    />
-                                    <button
-                                        className="btn btn btn-primary"
-                                        type="button"
-                                        id="button-addon1"
-                                    >
-                                        Submit
-                                    </button>
-                                </div>
-                                <div className="input-group mb-3">
-                                    <button
-                                        className="btn btn btn-primary"
-                                        type="button"
-                                        id="button-addon1"
-                                    >
-                                        <i className="fa-brands fa-facebook-f"></i>
-                                    </button>
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        placeholder="Email"
-                                        aria-label="Example text with button addon"
-                                        aria-describedby="button-addon1"
-                                    />
-                                    <button
-                                        className="btn btn btn-primary"
-                                        type="button"
-                                        id="button-addon1"
-                                    >
-                                        <i className="fa-brands fa-twitter"></i>
-                                    </button>
-                                </div>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        <i className="fa fa-user"></i> Submit
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-danger btn-sm"
-                                    >
-                                        <i className="fa-solid fa-ban"></i>{" "}
-                                        Submit
-                                    </button>
-                                </div>
-                            </>
-                        }
-                    />
+                    <Card title="Buttons Groups">
+                        <CardBody>
+                            <div className="input-group mb-3">
+                                <button
+                                    className="btn btn btn-primary"
+                                    type="button"
+                                    id="button-addon1"
+                                >
+                                    <i className="fa fa-search"></i> Search
+                                </button>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Username"
+                                    aria-label="Example text with button addon"
+                                    aria-describedby="button-addon1"
+                                />
+                            </div>
+                            <div className="input-group mb-3">
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="Email"
+                                    aria-label="Example text with button addon"
+                                    aria-describedby="button-addon1"
+                                />
+                                <button
+                                    className="btn btn btn-primary"
+                                    type="button"
+                                    id="button-addon1"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                            <div className="input-group mb-3">
+                                <button
+                                    className="btn btn btn-primary"
+                                    type="button"
+                                    id="button-addon1"
+                                >
+                                    <i className="fa-brands fa-facebook-f"></i>
+                                </button>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="Email"
+                                    aria-label="Example text with button addon"
+                                    aria-describedby="button-addon1"
+                                />
+                                <button
+                                    className="btn btn btn-primary"
+                                    type="button"
+                                    id="button-addon1"
+                                >
+                                    <i className="fa-brands fa-twitter"></i>
+                                </button>
+                            </div>
+                        </CardBody>
+                        <CardFooter>
+                            <div className="d-flex gap-3">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
+                                    <i className="fa fa-user"></i> Submit
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger btn-sm"
+                                >
+                                    <i className="fa-solid fa-ban"></i> Submit
+                                </button>
+                            </div>
+                        </CardFooter>
+                    </Card>
                 </Col>
                 {/* end buttons groups section */}
 
                 {/* start dropdowns groups section */}
                 <Col md={12} lg={6}>
-                    <CardContent
-                        title="Dropdowns Groups"
-                        CardBody={
-                            <>
-                                <div className="input-group mb-3">
-                                    <button
-                                        className="btn btn-primary dropdown-toggle"
-                                        type="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Dropdown
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Another action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Something else here
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Separated link
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        aria-label="Text input with dropdown button"
-                                        placeholder="Username"
-                                    />
-                                </div>
-                                <div className="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        aria-label="Text input with dropdown button"
-                                        placeholder="Email"
-                                    />
-                                    <button
-                                        className="btn btn-primary dropdown-toggle"
-                                        type="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Dropdown
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Another action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Something else here
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Separated link
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="input-group mb-3">
-                                    <button
-                                        className="btn btn-primary dropdown-toggle"
-                                        type="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Action
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Another action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Something else here
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Separated link
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        aria-label="Text input with dropdown button"
-                                        placeholder="..."
-                                    />
-                                    <button
-                                        className="btn btn-primary dropdown-toggle"
-                                        type="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Dropdown
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Another action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Something else here
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="dropdown-item"
-                                                href="#"
-                                            >
-                                                Separated link
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        <i className="fa fa-user"></i> Submit
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-danger btn-sm"
-                                    >
-                                        <i className="fa-solid fa-ban"></i>{" "}
-                                        Submit
-                                    </button>
-                                </div>
-                            </>
-                        }
-                    />
+                    <Card title="Dropdowns Groups">
+                        <CardBody>
+                            <div className="input-group mb-3">
+                                <button
+                                    className="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Dropdown
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Another action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Something else here
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Separated link
+                                        </a>
+                                    </li>
+                                </ul>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    aria-label="Text input with dropdown button"
+                                    placeholder="Username"
+                                />
+                            </div>
+                            <div className="input-group mb-3">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    aria-label="Text input with dropdown button"
+                                    placeholder="Email"
+                                />
+                                <button
+                                    className="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Dropdown
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Another action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Something else here
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Separated link
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="input-group mb-3">
+                                <button
+                                    className="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Action
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Another action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Something else here
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Separated link
+                                        </a>
+                                    </li>
+                                </ul>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    aria-label="Text input with dropdown button"
+                                    placeholder="..."
+                                />
+                                <button
+                                    className="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Dropdown
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Another action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Something else here
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            Separated link
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </CardBody>
+                        <CardFooter>
+                            <div className="d-flex gap-3">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
+                                    <i className="fa fa-user"></i> Submit
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger btn-sm"
+                                >
+                                    <i className="fa-solid fa-ban"></i> Submit
+                                </button>
+                            </div>
+                        </CardFooter>
+                    </Card>
                 </Col>
                 {/* end dropdowns groups section */}
 
                 {/* start grid for big devices section */}
                 <Col md={12} lg={6}>
-                    <CardContent
-                        title="Use the grid for big devices!
-                        "
-                        titleCode={
-                            <>
-                                <code>.col-lg-*.col-md-*.col-sm-*</code>
-                            </>
-                        }
-                        CardBody={
-                            <>
-                                <form className="form-horizontal">
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col col-md-8">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-8"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col col-md-4">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-4"
-                                                    className="form-control"
-                                                />
-                                            </div>
+                    <Card
+                        title="Use the grid for big devices!"
+                        subscript={<code>.col-lg-*.col-md-*.col-sm-*</code>}
+                    >
+                        <CardBody>
+                            <form className="form-horizontal">
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col col-md-8">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-8"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col col-md-4">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-4"
+                                                className="form-control"
+                                            />
                                         </div>
                                     </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col col-md-7">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-7"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col col-md-5">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-5"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col col-md-6">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-6"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col col-md-6">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-6"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col col-md-5">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-5"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col col-md-7">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-7"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col col-md-4">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-4"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col col-md-8">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-md-8"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
                                 </div>
-                            </>
-                        }
-                    />
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col col-md-7">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-7"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col col-md-5">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-5"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col col-md-6">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-6"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col col-md-6">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-6"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col col-md-5">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-5"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col col-md-7">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-7"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col col-md-4">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-4"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col col-md-8">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-md-8"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </CardBody>
+                        <CardFooter>
+                            <div className="d-flex gap-3">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
+                                    Action
+                                </button>
+                            </div>
+                        </CardFooter>
+                    </Card>
                 </Col>
                 {/* end grid for big devices section */}
 
                 {/* start grid for small devices section */}
                 <Col md={12} lg={6}>
-                    <CardContent
+                    <Card
                         title="Input Grid for small devices!"
-                        titleCode={
-                            <>
-                                <code>.col-*</code>
-                            </>
-                        }
-                        CardBody={
-                            <>
-                                <form className="form-horizontal">
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col-4">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-4"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col-8">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-8"
-                                                    className="form-control"
-                                                />
-                                            </div>
+                        subscript={<code>.col-*</code>}
+                    >
+                        <CardBody>
+                            <form className="form-horizontal">
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col-4">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-4"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col-8">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-8"
+                                                className="form-control"
+                                            />
                                         </div>
                                     </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col-5">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-5"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col-7">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-7"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col-6">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-6"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col-6">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-6"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col-7">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-7"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col-5">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-5"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group mb-3">
-                                        <div className="row gy-5">
-                                            <div className="col-8">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-8"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                            <div className="col-4">
-                                                <input
-                                                    type="text"
-                                                    placeholder=".col-4"
-                                                    className="form-control"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </>
-                        }
-                        CardFooter={
-                            <>
-                                <div className="d-flex gap-3">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-sm"
-                                    >
-                                        Action
-                                    </button>
                                 </div>
-                            </>
-                        }
-                    />
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col-5">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-5"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col-7">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-7"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col-6">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-6"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col-6">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-6"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col-7">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-7"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col-5">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-5"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="row gy-5">
+                                        <div className="col-8">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-8"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                        <div className="col-4">
+                                            <input
+                                                type="text"
+                                                placeholder=".col-4"
+                                                className="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </CardBody>
+                        <CardFooter>
+                            <div className="d-flex gap-3">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
+                                    Action
+                                </button>
+                            </div>
+                        </CardFooter>
+                    </Card>
                 </Col>
                 {/* end grid for small devices section */}
 

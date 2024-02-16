@@ -1,15 +1,15 @@
 import { Fragment } from "react";
-import CardContent from "../components/Card/CardContent";
+import Card from "../components/Card/Card";
 import typographyStyle from "../assets/scss/Typography.module.scss";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
+import { CardBody } from "react-bootstrap";
 
 const Typography = () => {
     const { isDark } = useDashboardDataContext();
     return (
         <Fragment>
-            <CardContent
-                title="Typography"
-                CardBody={
+            <Card title="Typography">
+                <CardBody>
                     <div className={typographyStyle.typography}>
                         <div className={typographyStyle.typo_headers}>
                             <h1 className="fw-bolder">
@@ -228,8 +228,8 @@ const Typography = () => {
                             </div>
                         </div>
                     </div>
-                }
-            />
+                </CardBody>
+            </Card>
         </Fragment>
     );
 };

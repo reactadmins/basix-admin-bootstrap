@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
-import CardContent from "../components/Card/CardContent";
+import { CardBody, Col, Row } from "react-bootstrap";
+import Card from "../components/Card/Card";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 const progressBars = () => {
@@ -8,9 +8,8 @@ const progressBars = () => {
         <Fragment>
             <Row className="gy-4 gx-4">
                 <Col md={6}>
-                    <CardContent
-                        title="Background"
-                        CardBody={
+                    <Card title="Background">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     strokeColor="#28a745"
@@ -29,13 +28,12 @@ const progressBars = () => {
                                     percent="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Animated Background"
-                        CardBody={
+                    <Card title="Animated Background">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isProgress={true}
@@ -58,13 +56,12 @@ const progressBars = () => {
                                     percent="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Labels"
-                        CardBody={
+                    <Card title="Labels">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     strokeColor="#28a745"
@@ -87,13 +84,12 @@ const progressBars = () => {
                                     labels="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Animated Labels"
-                        CardBody={
+                    <Card title="Animated Labels">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isProgress={true}
@@ -120,13 +116,12 @@ const progressBars = () => {
                                     labels="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Progress Striped"
-                        CardBody={
+                    <Card title="Progress Striped">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isStriped={true}
@@ -149,13 +144,12 @@ const progressBars = () => {
                                     percent="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Animated Progress Striped"
-                        CardBody={
+                    <Card title="Animated Progress Striped">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isProgress={true}
@@ -186,8 +180,8 @@ const progressBars = () => {
                                     labels="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
         </Fragment>

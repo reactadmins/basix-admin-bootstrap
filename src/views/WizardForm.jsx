@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
-import CardContent from "../components/Card/CardContent";
+import { CardBody, Col, Row } from "react-bootstrap";
+import Card from "../components/Card/Card";
 import StepCircleWizard from "../components/Form/StepWizards/StepCircleWizard";
 import StepSquarWizard from "../components/Form/StepWizards/StepSquarWizard";
 import StepTabWizard from "../components/Form/StepWizards/StepTabWizard";
@@ -10,22 +10,25 @@ const WizardForm = () => {
         <Fragment>
             <Row className="gy-4 gx-4">
                 <Col md={12}>
-                    <CardContent
-                        title="Basic Wizard - Circle"
-                        CardBody={<StepCircleWizard />}
-                    />
+                    <Card title="Basic Wizard - Circle">
+                        <CardBody>
+                            <StepCircleWizard />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={12}>
-                    <CardContent
-                        title="Square Wizard"
-                        CardBody={<StepSquarWizard />}
-                    />
+                    <Card title="Square Wizard">
+                        <CardBody>
+                            <StepSquarWizard />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={12}>
-                    <CardContent
-                        title="Tab Wizard: Custom button and title text"
-                        CardBody={<StepTabWizard />}
-                    />
+                    <Card title="Tab Wizard: Custom button and title text">
+                        <CardBody>
+                            <StepTabWizard />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
         </Fragment>

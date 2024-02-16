@@ -1,5 +1,6 @@
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import CardContent from "../components/Card/CardContent";
+import Card from "../components/Card/Card";
+import { CardBody } from "react-bootstrap";
 
 const GoogleMaps = () => {
     const mapStyles = {
@@ -12,20 +13,17 @@ const GoogleMaps = () => {
         lng: -79.383186,
     };
     return (
-        <CardContent
-            title="Google Maps"
-            CardBody={
-                <>
-                    <LoadScript>
-                        <GoogleMap
-                            mapContainerStyle={mapStyles}
-                            zoom={13}
-                            center={defaultCenter}
-                        ></GoogleMap>
-                    </LoadScript>
-                </>
-            }
-        />
+        <Card title="Google Maps">
+            <CardBody>
+                <LoadScript>
+                    <GoogleMap
+                        mapContainerStyle={mapStyles}
+                        zoom={13}
+                        center={defaultCenter}
+                    ></GoogleMap>
+                </LoadScript>
+            </CardBody>
+        </Card>
     );
 };
 

@@ -1,11 +1,10 @@
-import { Fragment } from "react";
 import Card from "../Card/Card";
+import { CardBody } from "react-bootstrap";
 
 const CreditCardForm = () => {
     return (
         <Card title="Credit Card form">
-            {" "}
-            <Fragment>
+            <CardBody>
                 <div className="card-title mt-4">
                     <h3
                         className="text-center"
@@ -167,7 +166,7 @@ const CreditCardForm = () => {
                         </button>
                     </div>
                 </form>
-            </Fragment>
+            </CardBody>
         </Card>
     );
 };
