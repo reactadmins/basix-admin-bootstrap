@@ -105,3 +105,33 @@ body {
 .menu__list-item a{
     text-decoration: none;
 }
+
+/* Light or Dark Mode css */
+.light-dark-wrapper{
+    position: relative;
+}
+
+.light-dark-dropdown{
+    background: var(--ifm-navbar-background-color);
+    width: 120px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 4px;
+    box-sizing: var(--ifm-navbar-shadow);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    z-index: 9999;
+
+}
+
+.light-dark-dropdown > button{
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: var(--ifm-menu-color);
+    padding: 4px 8px;
+}
