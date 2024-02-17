@@ -25,13 +25,13 @@ const Tabs = () => {
                             },
                         ]}
                     />
-                </Col>{" "}
+                </Col>
                 <Col md={6}>
                     <Tab
                         title="Bottom Horizontal"
                         tabActiveBg="#292b35"
                         tabActiveTextColor="#fff"
-                        tabDirection="bottom"
+                        tabPosition="bottom"
                         tabData={[
                             {
                                 id: 1,
@@ -56,7 +56,7 @@ const Tabs = () => {
                         title="Left Vertical"
                         tabActiveBg="#292b35"
                         tabActiveTextColor="#fff"
-                        tabDirection="left"
+                        tabPosition="left"
                         tabData={[
                             {
                                 id: 1,
@@ -78,7 +78,7 @@ const Tabs = () => {
                         title="Right Vertical"
                         tabActiveBg="#292b35"
                         tabActiveTextColor="#fff"
-                        tabDirection="right"
+                        tabPosition="right"
                         tabData={[
                             {
                                 id: 1,
