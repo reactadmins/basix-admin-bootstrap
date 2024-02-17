@@ -50,7 +50,7 @@ const config = {
     // ],
 
     // clientModules: ["/notice.js", "/theme-mode.js"],
-    clientModules: ["/notice.js"],
+    // clientModules: ["/notice.js"],
 
     presets: [
         [
