@@ -1,27 +1,25 @@
 import "../../assets/scss/ProgressBar.scss";
 
 const ProgressBar = ({
-    isProgress = false,
+    isAnimated = false,
     isStriped = false,
-    percent = "0",
-    height = "16",
-    progressBg = "#E9ECEF",
-    strokeColor = "#fff",
-    labels,
+    variant = "success",
+    value = "10",
+    label,
 }) => {
+    
     return (
         <div
             className={`progressbar_container progressbar-container rounded-1`}
-            style={{ height: `${height}px`, backgroundColor: `${progressBg}` }}
+            style={{ height: "16px", backgroundColor: "#E9ECEF" }}
         >
             <div
                 className={`rounded-1 progress ${
-                    isProgress ? "progress_bar" : ""
-                }  ${isStriped ? "progress-bar-striped" : ""}`}
+                    isAnimated ? "progress_bar" : ""
+                }  ${isStriped ? "progress-bar-striped" : ""} bg-${variant}`}
                 role="progressbar"
                 style={{
-                    backgroundColor: `${strokeColor}`,
-                    width: `${percent}%`,
+                    width: `${value}%`,
                     height: "100%",
                     alignItems: "center",
                 }}
@@ -29,12 +27,12 @@ const ProgressBar = ({
                 aria-valuemin="0"
                 aria-valuemax="100"
             >
-                {labels && (
+                {label && (
                     <span
                         className="labels text-white d-block text-center w-100"
                         style={{ fontSize: "13px" }}
                     >
-                        {labels}%
+                        {label}%
                     </span>
                 )}
             </div>

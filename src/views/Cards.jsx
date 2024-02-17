@@ -5,6 +5,7 @@ import {
     CardFooter,
     CardHeader,
     Col,
+    ProgressBar,
     Row,
 } from "react-bootstrap";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
@@ -15,6 +16,7 @@ import NotificationStatsCart from "../components/NotificationStatsCart/Notificat
 import userImg from "../assets/image/admin.jpg";
 
 const Cards = () => {
+let now = 10;
     return (
         <Fragment>
             <Row className="gy-4 gx-4">
