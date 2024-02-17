@@ -93,6 +93,10 @@ body {
     color: var(--ifm-heading-color);
 }
 
+aside.theme-doc-sidebar-container > div{
+    height: unset;
+}
+
 .menu[aria-label="Docs sidebar"] {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
