@@ -35,7 +35,7 @@ body {
 }
 
 [data-theme="dark"] body {
-    background: var(--docusaurus-highlighted-code-line-bg)
+    background: var(--docusaurus-highlighted-code-line-bg);
 }
 
 .navbar_github::before {
@@ -48,7 +48,7 @@ body {
     width: 24px;
 }
 
-[data-theme="dark"] .navbar_github::before{
+[data-theme="dark"] .navbar_github::before {
     filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(100%) contrast(0%);
 }
 
@@ -102,12 +102,12 @@ body {
     color: rgb(222, 222, 222);
 }
 
-.menu__list-item a{
+.menu__list-item a {
     text-decoration: none;
 }
 
 /* Light or Dark Mode css */
-.light-dark-wrapper{
+/* .light-dark-wrapper{
     position: relative;
 }
 
@@ -163,7 +163,7 @@ body {
 
 .light-dark-dropdown > button > svg.lightIcon, .light-dark-dropdown > button > svg.darkIcon, .light-dark-dropdown > button > svg.systemIcon {
     width: 18px;
-}
+} */
 /* svg.darkIcon {
     
 }
