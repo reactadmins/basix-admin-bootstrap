@@ -177,11 +177,11 @@ const config = {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,
             },
-            // colorMode: {
-            //     defaultMode: 'light',
-            //     disableSwitch: true,
-            //     respectPrefersColorScheme: true,
-            // },
+            colorMode: {
+                defaultMode: 'light',
+                disableSwitch: true,
+                // respectPrefersColorScheme: true,
+            },
         }),
 };
 

@@ -111,6 +111,31 @@ body {
     position: relative;
 }
 
+.light-dark-wrapper .mode-icon{
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.light-dark-wrapper .mode-icon:hover{
+    background: var(--ifm-color-emphasis-200);
+}
+
+.light-dark-wrapper .mode-icon .darkIcon, .light-dark-wrapper .mode-icon .lightIcon{
+    position: absolute;
+    
+}
+
+.light-dark-wrapper .mode-icon .darkIcon{
+    display: none;
+}
+
 .light-dark-dropdown{
     background: var(--ifm-navbar-background-color);
     width: 120px;
@@ -121,7 +146,7 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 32px;
+    top: 40px;
     right: 0;
     z-index: 9999;
     visibility: hidden;

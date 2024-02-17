@@ -13,7 +13,6 @@ if (ExecutionEnvironment.canUseDOM) {
 
         document.addEventListener('click', (event) => {  
             const isVisible  = getComputedStyle(dropdown).visibility === "visible";       
-            console.log("isVisible", isVisible);
 
             if (!dropdown.contains(event.target)) {
                 if(!!isVisible){
@@ -23,12 +22,10 @@ if (ExecutionEnvironment.canUseDOM) {
         });
 
         handleClick(modeIcon, () => {
-            dropdown.style.visibility = "visible";
+            setTimeout(() => {
+                dropdown.style.visibility = "visible";
+            }, 10)
         })
-
-        // console.log("dropdown", dropdown.style)
-        // console.log("style", getComputedStyle(dropdown).visibility);
-
 
         const mode = localStorage.getItem("theme");
 
@@ -72,6 +69,20 @@ function handleMode(mode){
     localStorage.setItem("theme", mode);
     document.documentElement.setAttribute('data-theme', mode);
     document.documentElement.setAttribute('data-bs-theme', mode);
+
+    const savedMode =  localStorage.getItem("theme");
+
+    if(mode === "light" || savedMode === "light"){
+        const lightIcon = document.querySelector(".lightIcon");
+        const darkIcon = document.querySelector(".darkIcon");
+        lightIcon.style.display = "block"
+        darkIcon.style.display = "none"
+    }else{
+        const lightIcon = document.querySelector(".lightIcon");
+        const darkIcon = document.querySelector(".darkIcon");
+        lightIcon.style.display = "none"
+        darkIcon.style.display = "block"
+    }
 
     const dropdown = document.querySelector(".light-dark-dropdown");
 
