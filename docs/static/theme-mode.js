@@ -1,6 +1,8 @@
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import { waitForElm } from "../utils/waitForElm";
 
+const LOCAL_STORAGE_KEY = "ra-theme";
+
 if (ExecutionEnvironment.canUseDOM) {
 
     waitForElm(".light-dark-wrapper").then((elm) => {
@@ -27,12 +29,18 @@ if (ExecutionEnvironment.canUseDOM) {
             }, 10)
         })
 
-        const mode = localStorage.getItem("theme");
+        const mode = localStorage.getItem(LOCAL_STORAGE_KEY);
 
         if(mode === "dark"){
             handleMode("dark")
+            setTimeout(() => {
+                localStorage.setItem("theme", "dark");
+            }, 10)
         }else{
             handleMode("light")
+            setTimeout(() => {
+                localStorage.setItem("theme", "light");
+            }, 10)
         }
 
         handleClick(lightBtn, () => {
@@ -66,11 +74,12 @@ function handleClick(el, callback ){
 }
 
 function handleMode(mode){
+    localStorage.setItem(LOCAL_STORAGE_KEY, mode);
     localStorage.setItem("theme", mode);
     document.documentElement.setAttribute('data-theme', mode);
     document.documentElement.setAttribute('data-bs-theme', mode);
 
-    const savedMode =  localStorage.getItem("theme");
+    const savedMode =  localStorage.getItem(LOCAL_STORAGE_KEY);
 
     if(mode === "light" || savedMode === "light"){
         const lightIcon = document.querySelector(".lightIcon");

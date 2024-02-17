@@ -44,39 +44,39 @@ if (ExecutionEnvironment.canUseDOM) {
         root.render(<App />);
 
 
-        // /**
-        //  * Light or Dark mode for Bootstrap.
-        //  */
-        // const lightDarkBtn = document.querySelector(".navbar__items--right > div > .clean-btn");
+        /**
+         * Light or Dark mode for Bootstrap.
+         */
+        const lightDarkBtn = document.querySelector(".navbar__items--right > div > .clean-btn");
 
 
-        // /**
-        //  * Check light or dark mode set on html tag then bootstrap attributes set html tag
-        //  */
-        // const lightOrDark = document.documentElement.getAttribute("data-theme");
+        /**
+         * Check light or dark mode set on html tag then bootstrap attributes set html tag
+         */
+        const lightOrDark = document.documentElement.getAttribute("data-theme");
         
-        // if(lightOrDark === "dark") {
-        //     document.documentElement.setAttribute('data-bs-theme', "dark");
-        // }
+        if(lightOrDark === "dark") {
+            document.documentElement.setAttribute('data-bs-theme', "dark");
+        }
         
-        // if(lightOrDark === "light") {
-        //     document.documentElement.setAttribute('data-bs-theme', "light");
-        // }
+        if(lightOrDark === "light") {
+            document.documentElement.setAttribute('data-bs-theme', "light");
+        }
 
-        // /**
-        //  * Toggle button click to set bootstrap attributes
-        //  */
-        // lightDarkBtn.addEventListener("click", (e) => {
-        //     const mode = document.documentElement.getAttribute("data-theme");
+        /**
+         * Toggle button click to set bootstrap attributes
+         */
+        lightDarkBtn.addEventListener("click", (e) => {
+            const mode = document.documentElement.getAttribute("data-theme");
 
-        //     if(mode === "light") {
-        //         document.documentElement.setAttribute('data-bs-theme', "dark");
-        //     }
+            if(mode === "light") {
+                document.documentElement.setAttribute('data-bs-theme', "dark");
+            }
 
-        //     if(mode === "dark") {
-        //         document.documentElement.setAttribute('data-bs-theme', "light");
-        //     }
-        // })
+            if(mode === "dark") {
+                document.documentElement.setAttribute('data-bs-theme', "light");
+            }
+        })
     });
 
    
