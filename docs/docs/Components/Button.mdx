@@ -1,0 +1,58 @@
+---
+sidebar_position: 7
+---
+
+This is short description
+
+import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import FeatureTable from "../../src/components/FeatureTable/FeatureTable";
+
+<Button variant="primary">Primary</Button>
+<Alert variant="danger" dismissible={true}>
+    This is a alert—check it out! This is a alert—check it out!This is a alert—check it out!This is
+    a alert—check it out! This is a alert—check it out! This is a alert—check it out!
+</Alert>
+
+### Button Code Example
+
+```jsx title="button"
+import Button from "react-bootstrap/Button";
+
+function TypesExample() {
+    return (
+        <>
+            <Button variant="primary">Primary</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="success">Success</Button> <Button variant="warning">Warning</Button>{" "}
+            <Button variant="danger">Danger</Button> <Button variant="info">Info</Button>{" "}
+            <Button variant="light">Light</Button> <Button variant="dark">Dark</Button>
+            <Button variant="link">Link</Button>
+        </>
+    );
+}
+
+export default TypesExample;
+```
+
+### Code Props Information
+
+<FeatureTable>
+    <tr>
+        <td>dismissible</td>
+        <td>Boolean</td>
+        <td>True</td>
+        <td>This is Description here</td>
+    </tr>
+    <tr>
+        <td>variant</td>
+        <td>
+            `primary` | `secondary` | `success` | `danger` | `warning` | `info` | `dark` | `light`
+        </td>
+        <td>success</td>
+        <td>
+            Change the underlying component CSS base class name and modifier class names prefix.
+            This is an escape hatch for working with heavily customized bootstrap css.
+        </td>
+    </tr>
+</FeatureTable>

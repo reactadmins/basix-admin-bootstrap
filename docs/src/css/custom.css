@@ -170,3 +170,11 @@ body {
 svg.systemIcon {
     
 } */
+
+/* Feature Table css */
+.featureTable {
+    border: 1px solid #ddd;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
