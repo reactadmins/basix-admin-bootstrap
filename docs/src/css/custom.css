@@ -160,3 +160,13 @@ body {
     color: var(--ifm-menu-color);
     padding: 4px 8px;
 }
+
+.light-dark-dropdown > button > svg.lightIcon, .light-dark-dropdown > button > svg.darkIcon, .light-dark-dropdown > button > svg.systemIcon {
+    width: 18px;
+}
+/* svg.darkIcon {
+    
+}
+svg.systemIcon {
+    
+} */
