@@ -1,0 +1,18 @@
+@import "./variable.scss";
+.nav_bar_bg {
+    &[data-bg-color="white"] {
+        background-color: #fff;
+    }
+    &[data-bg-color="black"] {
+        background-color: #292b35;
+    }
+    &[data-bg-color="red"] {
+        background-color: #f44336;
+    }
+}
+
+body[data-theme="dark"] {
+    .nav_bar_bg {
+        background-color: var(--bg-content);
+    }
+}

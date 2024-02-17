@@ -51,17 +51,17 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
 
     const sidebarBg = [
         {
-            name: "bg_white",
+            name: "white",
             activeColor: "#1B5DE0",
             bg: "#F4F4F4",
         },
         {
-            name: "bg_black",
+            name: "black",
             activeColor: "#fff",
             bg: "#292b35",
         },
         {
-            name: "bg_red",
+            name: "red",
             activeColor: "#fff",
             bg: "#f44336",
         },
@@ -69,17 +69,17 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
 
     const navbarBg = [
         {
-            name: "bg_white",
+            name: "white",
             activeColor: "#1B5DE0",
             bg: "#F4F4F4",
         },
         {
-            name: "bg_black",
+            name: "black",
             activeColor: "#fff",
             bg: "#263238",
         },
         {
-            name: "bg_red",
+            name: "red",
             activeColor: "#fff",
             bg: "#f44336",
         },

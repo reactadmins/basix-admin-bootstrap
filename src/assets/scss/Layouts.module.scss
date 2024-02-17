@@ -1,0 +1,15 @@
+.layout {
+    .content {
+        float: right;
+    }
+}
+body {
+    &[data-theme-direction="rtl"] {
+        direction: rtl;
+        .layout {
+            .content {
+                float: left !important;
+            }
+        }
+    }
+}

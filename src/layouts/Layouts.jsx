@@ -1,23 +1,66 @@
-import Combo from "../components/LayoutsType/Combo";
-import DualNav from "../components/LayoutsType/DualNav";
-import Horizontal from "../components/LayoutsType/Horizontal";
-import Vertical from "../components/LayoutsType/Vertical";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Sidebar/Sidebar";
+import SidebarBgWrapper from "../components/Sidebar/SidebarBgWrapper";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
+import NavBar from "../components/Navbars/NavBar";
+import style from "../assets/scss/Layouts.module.scss";
 
-const Layouts = ({ setSidebarMini, sidebarMini }) => {
-    const { activeVariation } = useDashboardDataContext();
-    switch (activeVariation ? activeVariation : "vertical") {
+const Layouts = () => {
+    const { activeVariation, sidebarMini, isThemeDirection } =
+        useDashboardDataContext();
+    switch (activeVariation) {
         case "vertical": {
-            return <Vertical sidebarMini={sidebarMini} setSidebarMini={setSidebarMini} />;
+            return (
+                <div className={style.layout}>
+                    <SidebarBgWrapper>
+                        <Sidebar />
+                    </SidebarBgWrapper>
+                    <div
+                        className={style.content}
+                        style={{
+                            width: `${
+                                sidebarMini
+                                    ? "calc(100% - 70px)"
+                                    : "calc(100% - 280px)"
+                            }`,
+                        }}
+                    >
+                        <NavBar />
+                        <div className="p-4">
+                            <Outlet />
+                        </div>
+                    </div>
+                </div>
+            );
         }
         case "horizontal": {
-            return <Horizontal sidebarMini={sidebarMini} setSidebarMini={setSidebarMini} />;
+            return "";
         }
         case "combo": {
-            return <Combo sidebarMini={sidebarMini} setSidebarMini={setSidebarMini} />;
+            return (
+                <div className={style.layout}>
+                    <SidebarBgWrapper>
+                        <Sidebar type="combo" />
+                    </SidebarBgWrapper>
+                    <div
+                        className={style.content}
+                        style={{
+                            width: `${
+                                sidebarMini
+                                    ? "calc(100% - 70px)"
+                                    : "calc(100% - 280px)"
+                            }`,
+                        }}
+                    >
+                        <div className="p-4">
+                            <Outlet />
+                        </div>
+                    </div>
+                </div>
+            );
         }
         case "dual_nav": {
-            return <DualNav sidebarMini={sidebarMini} setSidebarMini={setSidebarMini} />;
+            return "";
         }
         default:
             return null;
