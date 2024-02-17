@@ -170,3 +170,46 @@ body {
 svg.systemIcon {
     
 } */
+
+/* Feature Table css */
+.featureTable {
+    /* border: 1px solid #ddd; */
+    text-align: left;
+    /* width: 100%; */
+    border-collapse: collapse;
+}
+
+/* Code Preview CSS */
+.code-preview{
+    margin: 32px 0;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+    background: var(--ifm-color-emphasis-100);
+}
+
+.code-preview .preview{
+    padding: 16px;
+}
+
+.code-preview-title {
+    background: var(--ifm-color-emphasis-300);
+    padding: 6px 16px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    font-size: 18px;
+}
+
+/* Navbar css */
+#__docusaurus .navbar.navbar--fixed-top {
+    padding-left: 32px;
+    padding-right: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.theme-doc-markdown.markdown {
+    margin-top: 32px;
+}
+
