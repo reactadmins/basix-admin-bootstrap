@@ -13,19 +13,19 @@ const Alerts = () => {
                         </Alert>
 
                         <Alert variant="secondary">
-                            This is a primary alert—check it out!
+                            This is a Secondary alert—check it out!
                         </Alert>
                         <Alert variant="success">
-                            This is a primary alert—check it out!
+                            This is a Success alert—check it out!
                         </Alert>
                         <Alert variant="danger">
-                            This is a primary alert—check it out!
+                            This is a Danger alert—check it out!
                         </Alert>
                         <Alert variant="warning">
-                            This is a primary alert—check it out!
+                            This is a Warning alert—check it out!
                         </Alert>
                         <Alert variant="info">
-                            This is a primary alert—check it out!
+                            This is a Info alert—check it out!
                         </Alert>
                     </CardBody>
                 </Card>
@@ -77,49 +77,49 @@ const Alerts = () => {
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="secondary">
-                            This is a primary alert with
+                            This is a secondary alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="success">
-                            This is a primary alert with
+                            This is a success alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="danger">
-                            This is a primary alert with
+                            This is a danger alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="warning">
-                            This is a primary alert with
+                            This is a warning alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="info">
-                            This is a primary alert with
+                            This is a info alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="light">
-                            This is a primary alert with
+                            This is a light alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>
                             . Give it a click if you like.
                         </Alert>
                         <Alert variant="dark">
-                            This is a primary alert with
+                            This is a dark alert with
                             <Alert.Link href="#" className="mx-1">
                                 an example link
                             </Alert.Link>

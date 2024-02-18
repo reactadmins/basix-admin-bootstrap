@@ -2,31 +2,31 @@ import { useState } from "react";
 import TabOne from "./TabPage/TabOne";
 import TabTwo from "./TabPage/TabTwo";
 import TabThree from "./TabPage/TabThree";
-import tabsStyle from "../../assets/scss/Tabs.module.scss";
+import style from "../../assets/scss/Tabs.module.scss";
 
 const Tab = ({
     title = "",
     tabData = {},
-    tabDirection = "top",
+    tabPosition = "top",
     tabActiveBg,
     tabActiveTextColor,
 }) => {
     const [date, setDate] = useState(1);
     return (
-        <div className={tabsStyle.tablist_container}>
+        <div className={style.tablist_container}>
             {title ? <h5>{title}</h5> : null}
 
             <div
-                className={`${tabsStyle.tablist_wrapper} ${tabsStyle[tabDirection]}`}
+                className={`${style.tablist_wrapper} ${style[tabPosition]}`}
             >
-                <div className={tabsStyle.tab_title}>
-                    <ul className={tabsStyle.title_list}>
+                <div className={style.tab_title}>
+                    <ul className={style.title_list}>
                         {tabData?.map((tab, index) => (
                             <li
                                 className={`${
                                     date === tab.id
-                                        ? tabsStyle.active_tab
-                                        : tabsStyle.inactive_tab
+                                        ? style.active_tab
+                                        : style.inactive_tab
                                 }`}
                                 style={{
                                     color: `${

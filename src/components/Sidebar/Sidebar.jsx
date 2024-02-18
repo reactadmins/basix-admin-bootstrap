@@ -83,48 +83,13 @@ const Sidebar = ({ type = "vertical" }) => {
                                 className={item?.title ? style.nav_title : ""}
                             >
                                 {item?.path && (
-                                    <Fragment>
-                                        <SidebarMenu
-                                            item={item}
-                                            index={index}
-                                            navIsOpen={navIsOpen}
-                                            setNavIsOpen={setNavIsOpen}
-                                        />
-                                        <div
-                                            className={`${style.sub_menu} ${
-                                                navIsOpen === index
-                                                    ? style.active
-                                                    : ""
-                                            }`}
-                                        >
-                                            {item?.children ? (
-                                                <ul>
-                                                    {item?.children?.map(
-                                                        (item, index) => {
-                                                            return (
-                                                                <li key={index}>
-                                                                    <SidebarMenu
-                                                                        item={
-                                                                            item
-                                                                        }
-                                                                        index={
-                                                                            index
-                                                                        }
-                                                                        navIsOpen={
-                                                                            navIsOpen
-                                                                        }
-                                                                        setNavIsOpen={
-                                                                            setNavIsOpen
-                                                                        }
-                                                                    />
-                                                                </li>
-                                                            );
-                                                        }
-                                                    )}
-                                                </ul>
-                                            ) : null}
-                                        </div>
-                                    </Fragment>
+                                    <SidebarMenu
+                                        item={item}
+                                        index={index}
+                                        navIsOpen={navIsOpen}
+                                        setNavIsOpen={setNavIsOpen}
+                                    />
+
                                 )}
                                 {item?.title && !sidebarMini ? (
                                     <span>{item.name}</span>

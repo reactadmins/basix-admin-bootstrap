@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import { Badge, Button, CardBody, Col, Row } from "react-bootstrap";
 import Card from "../components/Card/Card";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
+
 
 const Badges = () => {
-    const { isDark } = useDashboardDataContext();
+  
     return (
         <Fragment>
             {/* start badges & badges buttons section*/}
@@ -12,36 +12,10 @@ const Badges = () => {
                 <Col md={6}>
                     <Card title="Labels">
                         <CardBody>
-                            <p
-                                className="mb-3"
-                                style={{
-                                    color: `${
-                                        isDark
-                                            ? "var(--content-text-color)"
-                                            : "var(--content-text-color)"
-                                    }`,
-                                }}
-                            >
-                                Use the <code>{`.label`}</code> class, followed
-                                by one of the six contextual classes{" "}
-                                <code>{`.label-default`}</code>,
-                                <code>{` .label-primary`}</code>,
-                                <code>{` .label-success`}</code>
-                                <code>{`.label-info`}</code>,
-                                <code>{`.label-warning`}</code>
-                                {" or "}
-                                <code>{` .label-danger`}</code>, within a
-                                <code>{`<span>`}</code>, elements to create
-                                badges:
-                            </p>
                             <div>
                                 <h1
                                     style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
+                                        color: "var( --hedging-text-color)"
                                     }}
                                 >
                                     Example heading
@@ -51,11 +25,7 @@ const Badges = () => {
                                 </h1>
                                 <h2
                                     style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
+                                        color: "var( --hedging-text-color)"
                                     }}
                                 >
                                     Example heading
@@ -65,11 +35,7 @@ const Badges = () => {
                                 </h2>
                                 <h3
                                     style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
+                                        color: "var( --hedging-text-color)"
                                     }}
                                 >
                                     Example heading
@@ -79,11 +45,7 @@ const Badges = () => {
                                 </h3>
                                 <h4
                                     style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
+                                        color: "var( --hedging-text-color)"
                                     }}
                                 >
                                     Example heading
@@ -92,13 +54,7 @@ const Badges = () => {
                                     </Badge>
                                 </h4>
                                 <h5
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
-                                    }}
+                                    style={{color: "var( --hedging-text-color)"}}
                                 >
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
@@ -107,11 +63,7 @@ const Badges = () => {
                                 </h5>
                                 <h6
                                     style={{
-                                        color: `${
-                                            isDark
-                                                ? "var( --hedging-text-color)"
-                                                : "var( --hedging-text-color)"
-                                        }`,
+                                        color: "var( --hedging-text-color)"
                                     }}
                                 >
                                     Example heading
@@ -127,19 +79,6 @@ const Badges = () => {
                     <div className="mb-4">
                         <Card
                             title="Badges"
-                            subscript={
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use <code>.badge</code> class within
-                                    <code>{`<span>`} </code>
-                                    elements to create badges:
-                                </small>
-                            }
                         >
                             <CardBody>
                                 <div className="d-flex gap-2">
@@ -147,11 +86,7 @@ const Badges = () => {
                                         href="#"
                                         className="p-0 bg-transparent border-0"
                                         style={{
-                                            color: `${
-                                                isDark
-                                                    ? "var(--content-text-color)"
-                                                    : "var(--content-text-color)"
-                                            }`,
+                                            color: "var(--content-text-color)"
                                         }}
                                     >
                                         News
@@ -163,11 +98,7 @@ const Badges = () => {
                                         href="#"
                                         className="p-0 bg-transparent border-0"
                                         style={{
-                                            color: `${
-                                                isDark
-                                                    ? "var(--content-text-color)"
-                                                    : "var(--content-text-color)"
-                                            }`,
+                                            color:"var(--content-text-color)"
                                         }}
                                     >
                                         Comments
@@ -179,12 +110,7 @@ const Badges = () => {
                                         href="#"
                                         className="p-0 bg-transparent border-0"
                                         style={{
-                                            color: `${
-                                                isDark
-                                                    ? "var(--content-text-color)"
-                                                    : "var(--content-text-color)"
-                                            }`,
-                                        }}
+                                            color: "var(--content-text-color)"}}
                                     >
                                         Updates
                                         <Badge bg="success" className="mx-1">
@@ -192,26 +118,12 @@ const Badges = () => {
                                         </Badge>
                                     </Button>
                                 </div>
-                            </CardBody>{" "}
+                            </CardBody>
                         </Card>
                     </div>
                     <div className="mb-4">
                         <Card title="Badges in Buttons">
                             <CardBody>
-                                <p
-                                    className="mb-1"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Use <code>{`.badge`}</code> class within
-                                    <code>{`<span>`}</code> elements to create
-                                    badges:
-                                </p>
                                 <div className="d-flex flex-wrap gap-2">
                                     <Button variant="primary">
                                         Primary
@@ -270,20 +182,6 @@ const Badges = () => {
                     <div className="mb-4">
                         <Card title="Labels">
                             <CardBody>
-                                <p
-                                    className="mb-1"
-                                    style={{
-                                        color: `${
-                                            isDark
-                                                ? "var(--content-text-color)"
-                                                : "var(--content-text-color)"
-                                        }`,
-                                    }}
-                                >
-                                    Use <code>{`.badge`}</code> class within
-                                    <code>{`<span>`}</code> elements to create
-                                    badges:
-                                </p>
                                 <div className="d-flex flex-wrap gap-2">
                                     <Badge bg="primary">Primary</Badge>
                                     <Badge bg="secondary">Secondary</Badge>

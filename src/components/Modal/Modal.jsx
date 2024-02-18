@@ -1,4 +1,4 @@
-const Modal = ({ label, modalId, title, modalBody, modalSize }) => {
+const Modal = ({ label, modalId, title, size, children }) => {
     return (
         <>
             <button
@@ -10,7 +10,6 @@ const Modal = ({ label, modalId, title, modalBody, modalSize }) => {
             >
                 {label}
             </button>
-
             <div
                 className="modal fade"
                 id={`${modalId}`}
@@ -18,7 +17,7 @@ const Modal = ({ label, modalId, title, modalBody, modalSize }) => {
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
             >
-                <div className={`modal-dialog ${modalSize}`}>
+                <div className={`modal-dialog ${size}`}>
                     <div
                         className="modal-content"
                         style={{
@@ -57,7 +56,7 @@ const Modal = ({ label, modalId, title, modalBody, modalSize }) => {
                                 color: "var(--hedging-text-color)",
                             }}
                         >
-                            {modalBody}
+                            {children}
                         </div>
                         <div
                             className="modal-footer"
