@@ -1,62 +1,106 @@
-import { useState } from "react";
-import TabOne from "./TabPage/TabOne";
-import TabTwo from "./TabPage/TabTwo";
-import TabThree from "./TabPage/TabThree";
+import { Fragment, createContext, useContext, useState } from "react";
 import style from "../../assets/scss/Tabs.module.scss";
 
-const Tab = ({
-    title = "",
-    tabData = {},
-    tabPosition = "top",
-    tabActiveBg,
-    tabActiveTextColor,
-}) => {
-    const [date, setDate] = useState(1);
-    return (
-        <div className={style.tablist_container}>
-            {title ? <h5>{title}</h5> : null}
+export const ActiveTabContext = createContext();
 
-            <div
-                className={`${style.tablist_wrapper} ${style[tabPosition]}`}
-            >
-                <div className={style.tab_title}>
-                    <ul className={style.title_list}>
-                        {tabData?.map((tab, index) => (
-                            <li
-                                className={`${
-                                    date === tab.id
-                                        ? style.active_tab
-                                        : style.inactive_tab
-                                }`}
-                                style={{
-                                    color: `${
-                                        date === tab.id
-                                            ? tabActiveTextColor
+export const Tab = ({
+    activeTab = "",
+    tabPosition = "top",
+    iconPosition = "left",
+    tabActiveBg = "",
+    tabActiveTextColor = "",
+    children = "",
+}) => {
+    const [active, setActive] = useState(activeTab);
+    return (
+        <div className={`${style.tablist_wrapper} ${style[tabPosition]}`}>
+            <div className={style.tab_title}>
+                <ul className={style.title_list}>
+                    {children.length >= 0 ? (
+                        children?.map((item) => {
+                            return (
+                                <li
+                                    key={item.props.eventKey}
+                                    onClick={() =>
+                                        setActive(item.props.eventKey)
+                                    }
+                                    className={`${style.inactive_tab} ${
+                                        item.props.eventKey === active
+                                            ? style.active_tab
                                             : ""
-                                    }`,
-                                    background: `${
-                                        date === tab.id ? tabActiveBg : ""
-                                    }`,
-                                }}
-                                onClick={() => setDate(tab.id)}
-                                key={index}
-                            >
-                                <div className="d-flex justify-content-center align-items-center gap-2">
-                                    {tab.icon && (
-                                        <i className={`${tab.icon}`}></i>
-                                    )}
-                                    {tab.title && <span>{tab.title}</span>}
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                {date === 1 && <TabOne />}
-                {date === 2 && <TabTwo />}
-                {date === 3 && <TabThree />}
+                                    } ${
+                                        item?.props?.icon
+                                            ? "d-flex align-items-center gap-2"
+                                            : ""
+                                    } ${
+                                        iconPosition === "right"
+                                            ? "flex-row-reverse"
+                                            : ""
+                                    }`}
+                                    style={{
+                                        color: `${
+                                            item.props.eventKey === active
+                                                ? tabActiveTextColor
+                                                : ""
+                                        }`,
+                                        background: `${
+                                            item.props.eventKey === active
+                                                ? tabActiveBg
+                                                : ""
+                                        }`,
+                                    }}
+                                >
+                                    {item?.props?.icon ? (
+                                        <i className={item?.props?.icon} />
+                                    ) : null}
+                                    {item?.props?.title}
+                                </li>
+                            );
+                        })
+                    ) : (
+                        <li
+                            className={`${style.inactive_tab} ${
+                                children.props.eventKey === active
+                                    ? style.active_tab
+                                    : ""
+                            } ${
+                                children?.props?.icon
+                                    ? "d-flex align-items-center gap-2"
+                                    : ""
+                            } ${
+                                iconPosition === "right"
+                                    ? "flex-row-reverse"
+                                    : ""
+                            }`}
+                            style={{
+                                color: `${
+                                    children.props.eventKey === active
+                                        ? tabActiveTextColor
+                                        : ""
+                                }`,
+                                background: `${
+                                    children.props.eventKey === active
+                                        ? tabActiveBg
+                                        : ""
+                                }`,
+                            }}
+                        >
+                            {children?.props?.icon ? (
+                                <i className={children?.props?.icon} />
+                            ) : null}
+                            {children?.props?.title}
+                        </li>
+                    )}
+                </ul>
             </div>
+            <ActiveTabContext.Provider value={{ active }}>
+                {children}
+            </ActiveTabContext.Provider>
         </div>
     );
 };
 
-export default Tab;
+export const TabPage = ({ children, eventKey }) => {
+    let { active } = useContext(ActiveTabContext);
+    return <Fragment>{eventKey === active && children}</Fragment>;
+};

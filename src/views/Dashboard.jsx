@@ -5,7 +5,7 @@ import Traffic from "../components/Traffic/Traffic";
 import Earning from "../components/Earning/Earning";
 import Download from "../components/Download/Download";
 import Revenue from "../components/Revenue/Revenue";
-import Stats, { StatsTab } from "../components/Stats/Stats";
+import { Stats, StatsTab } from "../components/Stats/Stats";
 import SocialCounter from "../components/SocialCounter/SocialCounter";
 import Timeline from "../components/Timeline/Timeline";
 import AnalyticsStats from "../components/AnalyticsStats/AnalyticsStats";

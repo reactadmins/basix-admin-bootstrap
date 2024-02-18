@@ -3,7 +3,7 @@ import style from "../../assets/scss/Stats.module.scss";
 
 export const ActiveTabContext = createContext();
 
-const Stats = ({ children, activeTab }) => {
+export const Stats = ({ children, activeTab }) => {
     const [active, setActive] = useState(activeTab);
 
     return (
@@ -31,8 +31,6 @@ const Stats = ({ children, activeTab }) => {
         </div>
     );
 };
-
-export default Stats;
 
 export const StatsTab = ({ children, eventKey }) => {
     let { active } = useContext(ActiveTabContext);
