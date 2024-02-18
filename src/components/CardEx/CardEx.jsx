@@ -18,18 +18,18 @@ const CardEx = ({
     onClose = () => {},
     children = "",
 }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [openIndex, setOpenIndex] = useState(null);
 
     const ref = useRef();
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (!ref?.current?.contains(event.target)) {
-                setIsOpen(false);
+                setOpenIndex(null);
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
-    }, [ref]);
+    }, []);
 
     return (
         <Fragment>
@@ -54,26 +54,24 @@ const CardEx = ({
                                 {subscript}
                             </div>
                             {icons.length > 0 && (
-                                <div className={`d-flex align-items-center ${CardStyle.card_icon}`}>
+                                <div
+                                    ref={ref}
+                                    className={`d-flex align-items-center ${CardStyle.card_icon}`}>
                                     {icons?.map((item, index) => (
                                         <Fragment key={index}>
                                             <button
                                                 type="button"
                                                 onClick={() => {
-                                                    setIsOpen(
-                                                        item.icon === "fa fa-cog"
-                                                            ? !isOpen
-                                                            : "" || item.icon === "fa fa-ellipsis-v"
-                                                            ? !isOpen
-                                                            : ""
+                                                    setOpenIndex(
+                                                        openIndex === index ? null : index
                                                     );
                                                 }}
                                                 className={`${CardStyle.content_settings} border-0 bg-transparent`}>
                                                 <i className={item.icon} />
                                             </button>
 
-                                            {isOpen && item?.dropdown?.length > 0 ? (
-                                                <div ref={ref} className={CardStyle.card_setting}>
+                                            {openIndex === index && item?.dropdown?.length > 0 ? (
+                                                <div className={CardStyle.card_setting}>
                                                     {item?.dropdown?.map((menu, i) => (
                                                         <button
                                                             key={i}
