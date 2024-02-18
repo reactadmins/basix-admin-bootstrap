@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
 import Card from "../components/Card/Card";
-import ProgressBar from "../components/ProgressBar/ProgressBar";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 const progressBars = () => {
     return (
@@ -11,7 +11,7 @@ const progressBars = () => {
                     <Card title="Background">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
-                            <ProgressBar
+                                <ProgressBar
                                     variant="success"
                                     value="25"
                                 />
