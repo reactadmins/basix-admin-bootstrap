@@ -9,27 +9,16 @@ const Card = ({ title = "", subscript = "", icons = [], children = "" }) => {
     return (
         <Fragment>
             {!hiddenContent ? (
-                <BootstrapCard
-                    className={`${CardStyle.card} rounded-0 w-100 h-100`}
-                >
-                    <CardHeader
-                        className={`${CardStyle.card_header} rounded-0`}
-                    >
+                <BootstrapCard className={`${CardStyle.card} rounded-0 w-100 h-100`}>
+                    <CardHeader className={`${CardStyle.card_header} rounded-0`}>
                         <div
                             className={`d-flex align-items-center ${
-                                icons.length > 0
-                                    ? "justify-content-between"
-                                    : ""
-                            }`}
-                        >
-                            <strong className={CardStyle.card_title}>
-                                {title}
-                            </strong>
+                                icons.length > 0 ? "justify-content-between" : ""
+                            }`}>
+                            <strong className={CardStyle.card_title}>{title}</strong>
                             {subscript}
                             {icons.length > 0 && (
-                                <div
-                                    className={`d-flex align-items-center ${CardStyle.card_icon}`}
-                                >
+                                <div className={`d-flex align-items-center ${CardStyle.card_icon}`}>
                                     {icons?.map((item, index) => (
                                         <button
                                             key={index}
@@ -38,20 +27,15 @@ const Card = ({ title = "", subscript = "", icons = [], children = "" }) => {
                                                 setIsOpen(
                                                     item === "fa fa-cog"
                                                         ? !isOpen
-                                                        : "" ||
-                                                          item ===
-                                                              "fa fa-ellipsis-v"
+                                                        : "" || item === "fa fa-ellipsis-v"
                                                         ? !isOpen
                                                         : ""
                                                 );
                                                 setHiddenContent(
-                                                    item === "fa fa-times"
-                                                        ? !hiddenContent
-                                                        : ""
+                                                    item === "fa fa-times" ? !hiddenContent : ""
                                                 );
                                             }}
-                                            className={`${CardStyle.content_settings} border-0 bg-transparent`}
-                                        >
+                                            className={`${CardStyle.content_settings} border-0 bg-transparent`}>
                                             <i className={item}></i>
                                         </button>
                                     ))}
