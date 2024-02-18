@@ -1,12 +1,47 @@
 import { Fragment } from "react";
 import { Badge, Button, CardBody, Col, Row } from "react-bootstrap";
 import Card from "../components/Card/Card";
-
+import CardEx from "@/components/CardEx/CardEx";
 
 const Badges = () => {
-  
     return (
         <Fragment>
+            <Col md={6}>
+                <CardEx
+                    title="Card Title"
+                    titleIcon="fa fa-cog"
+                    titleBg=""
+                    isHeader={true}
+                    headerPosition="top"
+                    padding="16px"
+                    bodyBg="blue"
+                    icons={[
+                        {
+                            icon: "fa fa-cog",
+                            dropdown: [
+                                { label: "Edit", icon: "fa fa-cog", method: () => alert("Cog") },
+                                {
+                                    label: "Delete",
+                                    icon: "fa-solid fa-trash",
+                                    method: () => alert("Delete"),
+                                },
+                                {
+                                    label: "Update",
+                                    icon: "fa-solid fa-recycle",
+                                    method: () => alert("Update"),
+                                },
+                            ],
+                        },
+                        { icon: "fa fa-angle-down" },
+                    ]}
+                    dismissible={true}
+                    onClose={() => alert("Close")}>
+                    safljklds
+                </CardEx>
+            </Col>
+
+            <br />
+
             {/* start badges & badges buttons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
@@ -15,9 +50,8 @@ const Badges = () => {
                             <div>
                                 <h1
                                     style={{
-                                        color: "var( --hedging-text-color)"
-                                    }}
-                                >
+                                        color: "var( --hedging-text-color)",
+                                    }}>
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
                                         New
@@ -25,9 +59,8 @@ const Badges = () => {
                                 </h1>
                                 <h2
                                     style={{
-                                        color: "var( --hedging-text-color)"
-                                    }}
-                                >
+                                        color: "var( --hedging-text-color)",
+                                    }}>
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
                                         New
@@ -35,9 +68,8 @@ const Badges = () => {
                                 </h2>
                                 <h3
                                     style={{
-                                        color: "var( --hedging-text-color)"
-                                    }}
-                                >
+                                        color: "var( --hedging-text-color)",
+                                    }}>
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
                                         New
@@ -45,17 +77,14 @@ const Badges = () => {
                                 </h3>
                                 <h4
                                     style={{
-                                        color: "var( --hedging-text-color)"
-                                    }}
-                                >
+                                        color: "var( --hedging-text-color)",
+                                    }}>
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
                                         New
                                     </Badge>
                                 </h4>
-                                <h5
-                                    style={{color: "var( --hedging-text-color)"}}
-                                >
+                                <h5 style={{ color: "var( --hedging-text-color)" }}>
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
                                         New
@@ -63,9 +92,8 @@ const Badges = () => {
                                 </h5>
                                 <h6
                                     style={{
-                                        color: "var( --hedging-text-color)"
-                                    }}
-                                >
+                                        color: "var( --hedging-text-color)",
+                                    }}>
                                     Example heading
                                     <Badge bg="secondary" className="mx-1">
                                         New
@@ -77,18 +105,15 @@ const Badges = () => {
                 </Col>
                 <Col md={6}>
                     <div className="mb-4">
-                        <Card
-                            title="Badges"
-                        >
+                        <Card title="Badges">
                             <CardBody>
                                 <div className="d-flex gap-2">
                                     <Button
                                         href="#"
                                         className="p-0 bg-transparent border-0"
                                         style={{
-                                            color: "var(--content-text-color)"
-                                        }}
-                                    >
+                                            color: "var(--content-text-color)",
+                                        }}>
                                         News
                                         <Badge bg="primary" className="mx-1">
                                             5
@@ -98,9 +123,8 @@ const Badges = () => {
                                         href="#"
                                         className="p-0 bg-transparent border-0"
                                         style={{
-                                            color:"var(--content-text-color)"
-                                        }}
-                                    >
+                                            color: "var(--content-text-color)",
+                                        }}>
                                         Comments
                                         <Badge bg="warning" className="mx-1">
                                             10
@@ -110,8 +134,8 @@ const Badges = () => {
                                         href="#"
                                         className="p-0 bg-transparent border-0"
                                         style={{
-                                            color: "var(--content-text-color)"}}
-                                    >
+                                            color: "var(--content-text-color)",
+                                        }}>
                                         Updates
                                         <Badge bg="success" className="mx-1">
                                             2
@@ -127,51 +151,31 @@ const Badges = () => {
                                 <div className="d-flex flex-wrap gap-2">
                                     <Button variant="primary">
                                         Primary
-                                        <Badge
-                                            bg="light"
-                                            text="dark"
-                                            className="mx-1"
-                                        >
+                                        <Badge bg="light" text="dark" className="mx-1">
                                             7
                                         </Badge>
                                     </Button>
                                     <Button variant="success">
                                         Success
-                                        <Badge
-                                            bg="light"
-                                            text="dark"
-                                            className="mx-1"
-                                        >
+                                        <Badge bg="light" text="dark" className="mx-1">
                                             7
                                         </Badge>
                                     </Button>
                                     <Button variant="info text-dark">
                                         Info
-                                        <Badge
-                                            bg="light"
-                                            text="dark"
-                                            className="mx-1"
-                                        >
+                                        <Badge bg="light" text="dark" className="mx-1">
                                             7
                                         </Badge>
                                     </Button>
                                     <Button variant="warning text-dark">
                                         Warning
-                                        <Badge
-                                            bg="light"
-                                            text="dark"
-                                            className="mx-1"
-                                        >
+                                        <Badge bg="light" text="dark" className="mx-1">
                                             7
                                         </Badge>
                                     </Button>
                                     <Button variant="danger">
                                         Danger
-                                        <Badge
-                                            bg="light"
-                                            text="dark"
-                                            className="mx-1"
-                                        >
+                                        <Badge bg="light" text="dark" className="mx-1">
                                             7
                                         </Badge>
                                     </Button>
