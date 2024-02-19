@@ -50,6 +50,7 @@ const Typography = () => {
                                 <mark className="mx-1">highlighted text</mark>
                                 zebra are endangered.
                             </p>
+                            <br/>
                             <blockquote className="text-end">
                                 <p>
                                     Blockquotes. However, various anthropogenic
@@ -61,6 +62,7 @@ const Typography = () => {
                                     Jefferey Lebowski
                                 </footer>
                             </blockquote>
+                            <br/>
                             <p>
                                 lthough zebra species may have overlapping
                                 ranges, they do not interbreed. In captivity,
