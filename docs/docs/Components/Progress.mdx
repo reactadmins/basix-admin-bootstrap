@@ -1,0 +1,191 @@
+---
+sidebar_position: 5
+---
+
+This is short description
+
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import ProgressBar from "../../../src/components/ProgressBar/ProgressBar";
+
+## Examples
+
+<CodePreview>
+    <div className="d-flex flex-column gap-2">
+        <ProgressBar
+            variant="success"
+            value="25"
+            label="25"
+             isStriped={true}
+        />
+        <ProgressBar
+            variant="info"
+            value="50"
+            label="50"
+             isStriped={true}
+        />
+        <ProgressBar
+            variant="warning"
+            value="75"
+            label="75"
+             isStriped={true}
+        />
+        <ProgressBar
+            variant="danger"
+            value="100"
+            label="100"
+             isStriped={true}
+        />
+    </div>
+</CodePreview>
+
+
+```jsx title="Card"
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
+
+function MyComponent() {
+    return (
+        <>
+            <ProgressBar
+                variant="success"
+                value="25"
+                label="25"
+                isStriped={true}
+            />
+            <ProgressBar
+                variant="info"
+                value="50"
+                label="50"
+                isStriped={true}
+            />
+            <ProgressBar
+                variant="warning"
+                value="75"
+                label="75"
+                isStriped={true}
+            />
+            <ProgressBar
+                variant="danger"
+                value="100"
+                label="100"
+                isStriped={true}
+            />
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+### Animated Progress
+
+<CodePreview>
+    <div className="d-flex flex-column gap-2">
+        <ProgressBar
+            variant="success"
+            value="25"
+            label="25"
+            isStriped={true}
+            isAnimated={true}
+        />
+        <ProgressBar
+            variant="info"
+            value="50"
+            label="50"
+            isStriped={true}
+            isAnimated={true}
+        />
+        <ProgressBar
+            variant="warning"
+            value="75"
+            label="75"
+            isStriped={true}
+            isAnimated={true}
+        />
+        <ProgressBar
+            variant="danger"
+            value="100"
+            label="100"
+            isStriped={true}
+            isAnimated={true}
+        />
+    </div>
+</CodePreview>
+
+
+```jsx title="Card"
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
+
+function MyComponent() {
+    return (
+        <>
+            <ProgressBar
+                variant="success"
+                value="25"
+                label="25"
+                isStriped={true}
+                isAnimated={true}
+            />
+            <ProgressBar
+                variant="info"
+                value="50"
+                label="50"
+                isStriped={true}
+                isAnimated={true}
+            />
+            <ProgressBar
+                variant="warning"
+                value="75"
+                label="75"
+                isStriped={true}
+                isAnimated={true}
+            />
+            <ProgressBar
+                variant="danger"
+                value="100"
+                label="100"
+                isStriped={true}
+                isAnimated={true}
+            />
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+## Props
+
+<FeatureTable>
+    <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td>`success`</td>
+        <td>All variant are `primary`, `secondary`, `success`, <br /> `danger`, `warning`, `info`, `dark`, `light`, `link` </td>
+    </tr>
+    <tr>
+        <td>value</td>
+        <td>number</td>
+        <td>`10`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isStriped</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isAnimated</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+
+</FeatureTable>
