@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
-import Table from "../components/Table/Table";
-import tableData from "../components/data/tableData";
+import Card from "@/components/Card/Card";
+import Table from "@/components/Table/Table";
+import tableData from "@/components/data/tableData";
 
 const Tables = () => {
     return (

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import Card from "../components/Card/Card";
-import typographyStyle from "../assets/scss/Typography.module.scss";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
+import Card from "@/components/Card/Card";
+import typographyStyle from "@/assets/scss/Typography.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 import { CardBody } from "react-bootstrap";
 
 const Typography = () => {

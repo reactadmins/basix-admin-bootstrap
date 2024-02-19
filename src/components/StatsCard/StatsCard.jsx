@@ -1,7 +1,7 @@
 import { Card, CardBody } from "react-bootstrap";
 import CountUp from "react-countup";
 import { Fragment } from "react";
-import style from "../../assets/scss/StatsCard.module.scss";
+import styles from "@/assets/scss/StatsCard.module.scss";
 
 export const Count = ({
     counter = "",
@@ -26,10 +26,10 @@ export const Progress = ({ progressPercent, description }) => {
     return (
         <Fragment>
             <div
-                className={`${style.progress} bg-white my-2`}
+                className={`${styles.progress} bg-white my-2`}
                 style={{ width: `${progressPercent}%` }}
             ></div>
-            <p className={style.description}>{description}</p>
+            <p className={styles.description}>{description}</p>
         </Fragment>
     );
 };
@@ -55,7 +55,7 @@ const StatsCard = ({
 }) => {
     return (
         <Card
-            className={`${style.card} p-0 rounded-0 h-100`}
+            className={`${styles.card} p-0 rounded-0 h-100`}
             style={{
                 backgroundColor: `${
                     type === "revenue-counter"
@@ -72,10 +72,10 @@ const StatsCard = ({
             <CardBody style={{ padding: padding }}>
                 <div
                     className={`d-flex ${
-                        style[type.replace(/-/g, "_")]
+                        styles[type.replace(/-/g, "_")]
                     } w-100 h-100`}
                 >
-                    <div className={style.title}>
+                    <div className={styles.title}>
                         <Count
                             counter={counter}
                             symbolPosition={symbolPosition}
@@ -86,7 +86,7 @@ const StatsCard = ({
                     </div>
                     {icon ? (
                         <div
-                            className={`${style.icon} ${
+                            className={`${styles.icon} ${
                                 isIconBorder
                                     ? "d-flex align-items-center justify-content-center rounded-circle"
                                     : ""
@@ -140,7 +140,7 @@ const StatsCard = ({
                     ) : null}
                 </div>
                 {isViewMore ? (
-                    <div className={style.view_more}>
+                    <div className={styles.view_more}>
                         <hr />
                         <a
                             href={link}

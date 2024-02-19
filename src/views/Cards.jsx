@@ -5,18 +5,17 @@ import {
     CardFooter,
     CardHeader,
     Col,
-    ProgressBar,
     Row,
 } from "react-bootstrap";
-import ProfileCard from "../components/ProfileCard/ProfileCard";
-import OverlayCard from "../components/OverlayCard/OverlayCard";
-import WidgetsCard from "../components/WidgetsCard/WidgetsCard";
-import placeholder from "../assets/image/placeholder.png";
-import NotificationStatsCart from "../components/NotificationStatsCart/NotificationStatsCart";
-import userImg from "../assets/image/admin.jpg";
+import ProfileCard from "@/components/ProfileCard/ProfileCard";
+import OverlayCard from "@/components/OverlayCard/OverlayCard";
+import WidgetsCard from "@/components/WidgetsCard/WidgetsCard";
+import placeholder from "@/assets/image/placeholder.png";
+import NotificationStatsCart from "@/components/NotificationStatsCart/NotificationStatsCart";
+import userImg from "@/assets/image/admin.jpg";
 
 const Cards = () => {
-let now = 10;
+    let now = 10;
     return (
         <Fragment>
             <Row className="gy-4 gx-4">

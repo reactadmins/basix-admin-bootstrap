@@ -1,7 +1,7 @@
 import Card from "../Card/Card";
 import { CardBody, CardFooter } from "react-bootstrap";
-import admin from "../../assets/image/admin.jpg";
-import styles from "../../assets/scss/SocialStats.module.scss";
+import admin from "@/assets/image/admin.jpg";
+import styles from "@/assets/scss/SocialStats.module.scss";
 
 export const Stats = ({ icon, counter }) => {
     return (

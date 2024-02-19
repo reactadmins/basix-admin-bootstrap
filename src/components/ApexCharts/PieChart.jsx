@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
 const PieChart = () => {
@@ -29,15 +29,13 @@ const PieChart = () => {
     return (
         <Card title="Pie Chart">
             <CardBody>
-                <div>
-                    <ReactApexChart
-                        options={state.options}
-                        series={state.series}
-                        type="donut"
-                        height={300}
-                        style={{ width: "100%" }}
-                    />
-                </div>
+                <ReactApexChart
+                    options={state.options}
+                    series={state.series}
+                    type="donut"
+                    height={300}
+                    style={{ width: "100%" }}
+                />
             </CardBody>
         </Card>
     );

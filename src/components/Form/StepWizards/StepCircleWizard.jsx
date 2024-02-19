@@ -1,7 +1,7 @@
 import { useState } from "react";
-import PersonalDetails from "./Page/PersonalDetails";
-import AdditionalInfo from "./Page/AdditionalInfo";
-import stepWizardStyle from "../../../assets/scss/StepCircleWizard.module.scss";
+import PersonalDetails from "@/components/Form/StepWizards/Page/PersonalDetails";
+import AdditionalInfo from "@/components/Form/StepWizards/Page/AdditionalInfo";
+import styles from "@/assets/scss/StepCircleWizard.module.scss";
 
 const StepCircleWizard = () => {
     const [stepCounter, setStepCounter] = useState(1);
@@ -28,12 +28,10 @@ const StepCircleWizard = () => {
     };
 
     return (
-        <div
-            className={`${stepWizardStyle.wizard_wrapper} position-relative mt-5 px-3`}
-        >
+        <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
             <div className="row">
                 <div
-                    className={`position-absolute ${stepWizardStyle.wizard_progress}`}
+                    className={`position-absolute ${styles.wizard_progress}`}
                     style={{
                         width: `${
                             stepCounter === 1
@@ -48,17 +46,15 @@ const StepCircleWizard = () => {
                 ></div>
                 {arrayList.map((items, index) => (
                     <div className="col-4 text-center p-0" key={items.id}>
-                        <div className={stepWizardStyle.step_block}>
+                        <div className={styles.step_block}>
                             <div
-                                className={stepWizardStyle.step_wrapper}
+                                className={styles.step_wrapper}
                                 onClick={() => updateStep(index + 1)}
                             >
                                 <div
-                                    className={`${
-                                        stepWizardStyle.wizard_icon
-                                    } ${
+                                    className={`${styles.wizard_icon} ${
                                         stepCounter >= index + 1
-                                            ? stepWizardStyle.active
+                                            ? styles.active
                                             : ""
                                     } mx-auto position-relative`}
                                 >
@@ -67,9 +63,9 @@ const StepCircleWizard = () => {
                             </div>
                         </div>
                         <span
-                            className={`${stepWizardStyle.step_title} ${
+                            className={`${styles.step_title} ${
                                 stepCounter >= index + 1
-                                    ? stepWizardStyle.step_title_active
+                                    ? styles.step_title_active
                                     : ""
                             }`}
                         >
@@ -78,19 +74,17 @@ const StepCircleWizard = () => {
                     </div>
                 ))}
             </div>
-            <div className={stepWizardStyle.step_content}>
+            <div className={styles.step_content}>
                 {stepCounter === 1 && <PersonalDetails />}
                 {stepCounter === 2 && <AdditionalInfo />}
                 {stepCounter === 3 && (
-                    <span
-                        className={`py-2 mb-3 ${stepWizardStyle.step_content_title}`}
-                    >
+                    <span className={`py-2 mb-3 ${styles.step_content_title}`}>
                         Congratulations This is the Final Step
                     </span>
                 )}
             </div>
             <div
-                className={`${stepWizardStyle.step_btn_wrapper} mb-4`}
+                className={`${styles.step_btn_wrapper} mb-4`}
                 style={{ padding: "0 20px" }}
             >
                 {stepCounter > 1 && (

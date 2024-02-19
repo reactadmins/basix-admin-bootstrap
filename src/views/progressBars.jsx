@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
+import Card from "@/components/Card/Card";
 import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 const progressBars = () => {
@@ -11,25 +11,11 @@ const progressBars = () => {
                     <Card title="Background">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    variant="success"
-                                    value="25"
-                                />
-                                <ProgressBar
-                                    variant="info"
-                                    value="50"
-                                />
-                                <ProgressBar
-                                    variant="warning"
-                                    value="75"
-                                />
-                                <ProgressBar
-                                    variant="danger"
-                                    value="100"
-                                />
-                                
+                                <ProgressBar variant="success" value="25" />
+                                <ProgressBar variant="info" value="50" />
+                                <ProgressBar variant="warning" value="75" />
+                                <ProgressBar variant="danger" value="100" />
                             </div>
-                            
                         </CardBody>
                     </Card>
                 </Col>

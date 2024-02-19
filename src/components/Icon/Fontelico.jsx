@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import fontelico from "../data/fontelico.json";
-import Card from "../Card/Card";
-import iconStyle from "../../assets/scss/IconStyle.module.scss";
-import CopyButton from "./CopyButton";
+import fontelico from "@/components/data/fontelico.json";
+import Card from "@/components/Card/Card";
+import styles from "@/assets/scss/iconStyle.module.scss";
+import CopyButton from "@/components/Icon/CopyButton";
 import { CardBody } from "react-bootstrap";
 
 const Fontelico = () => {
@@ -13,10 +13,10 @@ const Fontelico = () => {
 
     return (
         <div
-            className={`${iconStyle.icon_container} container-fluid overflow-hidden p-0`}
+            className={`${styles.icon_container} container-fluid overflow-hidden p-0`}
         >
             <div
-                className={`${iconStyle.icon_search} row px-3 py-4 align-items-center`}
+                className={`${styles.icon_search} row px-3 py-4 align-items-center`}
             >
                 <div className="col-4">
                     <h2 className="fs-3 m-0">{fontelico?.name}</h2>
@@ -27,9 +27,7 @@ const Fontelico = () => {
                             <i className="fa-regular fa-hand-point-left fs-4 text-secondary"></i>
                         </Link>
                         <div className="col-md-4">
-                            <div
-                                className={`d-flex ${iconStyle.search_wrapper}`}
-                            >
+                            <div className={`d-flex ${styles.search_wrapper}`}>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -60,7 +58,7 @@ const Fontelico = () => {
                                         className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
                                         key={index}
                                     >
-                                        <div className={iconStyle.icon_wrapper}>
+                                        <div className={styles.icon_wrapper}>
                                             <Icon
                                                 style={{
                                                     fontSize: "30px",

@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap";
-import ProgressBar from "../ProgressBar/ProgressBar";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 const UserStats = ({
     bgColor = "",

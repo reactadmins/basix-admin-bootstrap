@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect, useRef } from "react";
 import { Card as BootstrapCard, CardHeader } from "react-bootstrap";
-import styles from "../../assets/scss/Card.module.scss";
+import styles from "@/assets/scss/Card.module.scss";
 import classNames from "classnames";
 
 const Card = ({

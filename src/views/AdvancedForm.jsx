@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Col, Row } from "react-bootstrap";
-import MaskedInput from "../components/Form/MaskedInput";
-import MultipleTagSelect from "../components/Form/MultipleTagSelect";
+import MaskedInput from "@/components/Form/MaskedInput";
+import MultipleTagSelect from "@/components/Form/MultipleTagSelect";
 
 const AdvancedForm = () => {
     return (

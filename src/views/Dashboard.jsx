@@ -1,22 +1,22 @@
 import { Alert, Badge, Col, Container, Row } from "react-bootstrap";
 import { Bar, BarChart, Line, LineChart } from "recharts";
-import StatsCard from "../components/StatsCard/StatsCard";
-import Traffic from "../components/Traffic/Traffic";
-import Earning from "../components/Earning/Earning";
-import Download from "../components/Download/Download";
-import Revenue from "../components/Revenue/Revenue";
-import { Stats, StatsTab } from "../components/Stats/Stats";
-import SocialCounter from "../components/SocialCounter/SocialCounter";
-import Timeline from "../components/Timeline/Timeline";
-import AnalyticsStats from "../components/AnalyticsStats/AnalyticsStats";
-import WeatherStats from "../components/WeatherStats/WeatherStats";
-import SocialStats from "../components/SocialStats/SocialStats";
-import MonthlyStats from "../components/MonthlyStats/MonthlyStats";
-import DeviceVisitorStats from "../components/DeviceVisitorStats/DeviceVisitorStats";
-import RealTime from "../components/RealTime/RealTime";
-import Day from "../components/Stats/Day";
-import Month from "../components/Stats/Month";
-import Year from "../components/Stats/Year";
+import StatsCard from "@/components/StatsCard/StatsCard";
+import Traffic from "@/components/Traffic/Traffic";
+import Earning from "@/components/Earning/Earning";
+import Download from "@/components/Download/Download";
+import Revenue from "@/components/Revenue/Revenue";
+import { Stats, StatsTab } from "@/components/Stats/Stats";
+import SocialCounter from "@/components/SocialCounter/SocialCounter";
+import Timeline from "@/components/Timeline/Timeline";
+import AnalyticsStats from "@/components/AnalyticsStats/AnalyticsStats";
+import WeatherStats from "@/components/WeatherStats/WeatherStats";
+import SocialStats from "@/components/SocialStats/SocialStats";
+import MonthlyStats from "@/components/MonthlyStats/MonthlyStats";
+import DeviceVisitorStats from "@/components/DeviceVisitorStats/DeviceVisitorStats";
+import RealTime from "@/components/RealTime/RealTime";
+import Day from "@/components/Stats/Day";
+import Month from "@/components/Stats/Month";
+import Year from "@/components/Stats/Year";
 
 const Dashboard = () => {
     const data1 = [

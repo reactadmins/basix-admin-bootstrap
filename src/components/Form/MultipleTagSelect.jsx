@@ -1,6 +1,6 @@
 import Select from "react-select";
-import Card from "../Card/Card";
-import "../../assets/scss/MultipleTagSelect.scss";
+import Card from "@/components/Card/Card";
+import "@/assets/scss/MultipleTagSelect.scss";
 import { CardBody } from "react-bootstrap";
 
 const options = [

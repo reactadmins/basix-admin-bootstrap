@@ -1,7 +1,7 @@
-import logo from "../assets/image/logo.png";
+import logo from "@/assets/image/logo.png";
 import { Link } from "react-router-dom";
-import loginStyle from "../assets/scss/Authentication.module.scss";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
+import loginStyle from "@/assets/scss/Authentication.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 
 const Login = () => {
     const { isThemeDirection } = useDashboardDataContext();

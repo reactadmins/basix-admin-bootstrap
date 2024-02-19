@@ -1,8 +1,8 @@
 import { useState } from "react";
-import PersonalDetails from "./Page/PersonalDetails";
-import AdditionalInfo from "./Page/AdditionalInfo";
-import LoggedIn from "./Page/LoggedIn";
-import stepWizardStyle from "../../../assets/scss/StepTabWizard.module.scss";
+import PersonalDetails from "@/components/Form/StepWizards/Page/PersonalDetails";
+import AdditionalInfo from "@/components/Form/StepWizards/Page/AdditionalInfo";
+import LoggedIn from "@/components/Form/StepWizards/Page/LoggedIn";
+import styles from "@/assets/scss/StepTabWizard.module.scss";
 
 const StepTabWizard = () => {
     const [stepCounter, setStepCounter] = useState(1);
@@ -36,11 +36,9 @@ const StepTabWizard = () => {
         }
     };
     return (
-        <div
-            className={`${stepWizardStyle.wizard_wrapper} position-relative mt-5 px-3`}
-        >
+        <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
             <div className="row">
-                <div className={stepWizardStyle.wizard_header}>
+                <div className={styles.wizard_header}>
                     <h3 className="m-0 text-center">Awesome Wizard</h3>
                     <p className="text-center">
                         Split a complicated flow in multiple steps
@@ -49,10 +47,8 @@ const StepTabWizard = () => {
                 {arrayList.map((items, index) => (
                     <div className="col-3 text-center p-0" key={items.id}>
                         <div
-                            className={`${stepWizardStyle.step_block} ${
-                                stepCounter === index + 1
-                                    ? stepWizardStyle.active
-                                    : ""
+                            className={`${styles.step_block} ${
+                                stepCounter === index + 1 ? styles.active : ""
                             }`}
                         >
                             <div onClick={() => updateStep(index + 1)}>
@@ -62,9 +58,9 @@ const StepTabWizard = () => {
                             </div>
                         </div>
                         <span
-                            className={`${stepWizardStyle.step_title} ${
+                            className={`${styles.step_title} ${
                                 stepCounter >= index + 1
-                                    ? stepWizardStyle.step_title_active
+                                    ? styles.step_title_active
                                     : ""
                             }`}
                         >
@@ -73,17 +69,17 @@ const StepTabWizard = () => {
                     </div>
                 ))}
             </div>
-            <div className={stepWizardStyle.step_content}>
+            <div className={styles.step_content}>
                 {stepCounter === 1 && <PersonalDetails />}
                 {stepCounter === 2 && <LoggedIn />}
                 {stepCounter === 3 && <AdditionalInfo />}
                 {stepCounter === 4 && (
-                    <span className={stepWizardStyle.step_content_title}>
+                    <span className={styles.step_content_title}>
                         Congratulations This is the Final Step
                     </span>
                 )}
             </div>
-            <div className={`${stepWizardStyle.step_btn_wrapper} mb-4`}>
+            <div className={`${styles.step_btn_wrapper} mb-4`}>
                 {stepCounter > 1 && stepCounter < arrayList.length && (
                     <button onClick={() => updateStep(stepCounter - 1)}>
                         Back

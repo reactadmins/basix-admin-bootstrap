@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import { CardBody, CardFooter, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
-import CreditCardForm from "../components/Form/CreditCardForm";
-import CompanyForm from "../components/Form/CompanyForm";
-import HorizontalForm from "../components/Form/HorizontalForm";
-import StackedForm from "../components/Form/StackedForm";
-import WidgetsForm from "../components/Form/WidgetsForm";
-import BasicElementForm from "../components/Form/BasicElementForm";
+import Card from "@/components/Card/Card";
+import CreditCardForm from "@/components/Form/CreditCardForm";
+import CompanyForm from "@/components/Form/CompanyForm";
+import HorizontalForm from "@/components/Form/HorizontalForm";
+import StackedForm from "@/components/Form/StackedForm";
+import WidgetsForm from "@/components/Form/WidgetsForm";
+import BasicElementForm from "@/components/Form/BasicElementForm";
 
 const BasicForm = () => {
     return (

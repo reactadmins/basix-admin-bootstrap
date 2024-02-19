@@ -1,4 +1,4 @@
-import "../../assets/scss/ProgressBar.scss";
+import "@/assets/scss/ProgressBar.scss";
 
 const ProgressBar = ({
     isAnimated = false,
@@ -7,7 +7,6 @@ const ProgressBar = ({
     value = "10",
     label,
 }) => {
-    
     return (
         <div
             className={`progressbar_container progressbar-container rounded-1`}

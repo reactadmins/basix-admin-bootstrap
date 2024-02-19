@@ -1,10 +1,10 @@
 import { Col, Row } from "react-bootstrap";
-import LineChart from "../components/Chartjs/LineChart";
-import BarChart from "../components/Chartjs/BarChart";
-import DoughnutChart from "../components/Chartjs/DoughnutChart";
-import RadarChart from "../components/Chartjs/RadarChart";
-import PieChart from "../components/Chartjs/PieChart";
-import PolarAreaChart from "../components/Chartjs/PolarAreaChart";
+import LineChart from "@/components/Chartjs/LineChart";
+import BarChart from "@/components/Chartjs/BarChart";
+import DoughnutChart from "@/components/Chartjs/DoughnutChart";
+import RadarChart from "@/components/Chartjs/RadarChart";
+import PieChart from "@/components/Chartjs/PieChart";
+import PolarAreaChart from "@/components/Chartjs/PolarAreaChart";
 
 const Chartjs = () => {
     return (

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import styles from "@/assets/scss/SocialButtons.module.scss";
 
 function SocialButton({
-    href="#",
+    href = "#",
     icon = "fa-brands fa-facebook-f",
     bgColor = "#3b5998",
     hoverBgColor = "",
@@ -27,7 +27,8 @@ function SocialButton({
             className={`${styles.social_button} ${styles[type]} ${styles[effect]}`}
             $border={border}
             $effect={effect}
-            $hoverBorder={hoverBorder}>
+            $hoverBorder={hoverBorder}
+        >
             <i className={icon} />
         </Link>
     );
@@ -37,7 +38,7 @@ export default SocialButton;
 
 const Link = styled.a.attrs((props) => ({
     href: props.href,
-    target: "_blank"
+    target: "_blank",
 }))`
     background: ${(props) => props.$bgColor};
     transition: all ${(props) => `${props.$transition}ms`};
@@ -47,13 +48,20 @@ const Link = styled.a.attrs((props) => ({
         transition: all ${(props) => `${props.$transition}ms`};
     }
     &:hover {
-        ${(props) => (props.$effect != "bolb" ? `background: ${props.$hoverBgColor}` : "")};
-        ${(props) => `${props.$hoverBorder ? `border: ${props.$hoverBorder}` : ""}`};
+        ${(props) =>
+            props.$effect != "bolb"
+                ? `background: ${props.$hoverBgColor}`
+                : ""};
+        ${(props) =>
+            `${props.$hoverBorder ? `border: ${props.$hoverBorder}` : ""}`};
         > i {
             color: ${(props) => props.$hoverColor};
         }
     }
     &::after {
-        ${(props) => (props.$effect == "bolb" ? `background: ${props.$hoverBgColor}` : "")};
+        ${(props) =>
+            props.$effect == "bolb"
+                ? `background: ${props.$hoverBgColor}`
+                : ""};
     }
 `;

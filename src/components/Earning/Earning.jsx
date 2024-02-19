@@ -1,8 +1,8 @@
 import { Fragment, useState } from "react";
 import { CardBody, CardFooter } from "react-bootstrap";
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
-import styles from "../../assets/scss/Earning.module.scss";
-import Card from "../Card/Card";
+import styles from "@/assets/scss/Earning.module.scss";
+import Card from "@/components/Card/Card";
 
 const Earning = () => {
     const [close, setClose] = useState(false);

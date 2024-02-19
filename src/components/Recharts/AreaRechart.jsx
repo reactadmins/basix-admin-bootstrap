@@ -7,7 +7,7 @@ import {
     Tooltip,
     ResponsiveContainer,
 } from "recharts";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
 const data = [

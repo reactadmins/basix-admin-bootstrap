@@ -1,4 +1,4 @@
-import gridsStyle from "../assets/scss/Grids.module.scss";
+import gridsStyle from "@/assets/scss/Grids.module.scss";
 const Grids = () => {
     return (
         <div className={gridsStyle.grids_contener}>

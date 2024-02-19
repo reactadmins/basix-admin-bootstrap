@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import { Tab, TabPage } from "../components/Tab/Tab";
+import { Tab, TabPage } from "@/components/Tab/Tab";
 
 const Tabs = () => {
     let styles = {

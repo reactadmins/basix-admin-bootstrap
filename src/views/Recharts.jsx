@@ -1,10 +1,10 @@
 import { Col, Row } from "react-bootstrap";
-import AreaRechart from "../components/Recharts/AreaRechart";
-import LineRechart from "../components/Recharts/LineRechart";
-import PieRechart from "../components/Recharts/PieRechart";
-import BarRechart from "../components/Recharts/BarRechart";
-import RechartRadialBar from "../components/Recharts/RechartRadialBar";
-import RechartScatter from "../components/Recharts/RechartScatter";
+import AreaRechart from "@/components/Recharts/AreaRechart";
+import LineRechart from "@/components/Recharts/LineRechart";
+import PieRechart from "@/components/Recharts/PieRechart";
+import BarRechart from "@/components/Recharts/BarRechart";
+import RechartRadialBar from "@/components/Recharts/RechartRadialBar";
+import RechartScatter from "@/components/Recharts/RechartScatter";
 
 const Recharts = () => {
     return (

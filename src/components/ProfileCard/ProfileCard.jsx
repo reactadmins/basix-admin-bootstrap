@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap";
-import style from "../../assets/scss/ProfileCard.module.scss";
+import styles from "@/assets/scss/ProfileCard.module.scss";
 
 const ProfileCard = ({
     title = "",
@@ -11,15 +11,15 @@ const ProfileCard = ({
     userInfo = "",
 }) => {
     return (
-        <Card className={`${style.card} rounded-0 border-0 w-100 h-100`}>
+        <Card className={`${stylescard} rounded-0 border-0 w-100 h-100`}>
             {isHeader && (
-                <Card.Header className={style.card_header}>
+                <Card.Header className={stylescard_header}>
                     {icon && <i className={`${icon}`}></i>}
                     <strong>{title}</strong>
                 </Card.Header>
             )}
 
-            <Card.Body className={style.card_body}>
+            <Card.Body className={stylescard_body}>
                 <div className="d-flex flex-column align-items-center justify-content-center">
                     <img
                         src={image}
@@ -27,12 +27,12 @@ const ProfileCard = ({
                         className="rounded-circle inline-blocks"
                     />
 
-                    <h2 className={`${style.title} mt-2`}>{userName}</h2>
+                    <h2 className={`${stylestitle} mt-2`}>{userName}</h2>
                     {userInfo ? userInfo : null}
                 </div>
             </Card.Body>
             {isFooter && (
-                <Card.Footer className={style.card_footer}>
+                <Card.Footer className={stylescard_footer}>
                     <strong>{title}</strong>
                 </Card.Footer>
             )}

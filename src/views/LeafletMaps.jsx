@@ -1,10 +1,10 @@
 import "leaflet/dist/leaflet.css";
-import Card from "../components/Card/Card";
-import Voyager from "../components/Maps/LeafletMaps/Voyager";
+import Card from "@/components/Card/Card";
+import Voyager from "@/components/Maps/LeafletMaps/Voyager";
 import { CardBody, Col, Container, Row } from "react-bootstrap";
-import StreetMap from "../components/Maps/LeafletMaps/StreetMap";
-import WorldImagery from "../components/Maps/LeafletMaps/WorldImagery";
-import DarkMatter from "../components/Maps/LeafletMaps/DarkMatter";
+import StreetMap from "@/components/Maps/LeafletMaps/StreetMap";
+import WorldImagery from "@/components/Maps/LeafletMaps/WorldImagery";
+import DarkMatter from "@/components/Maps/LeafletMaps/DarkMatter";
 
 const LeafletMaps = () => {
     return (

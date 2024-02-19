@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Button, CardBody, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
+import Card from "@/components/Card/Card";
 
 const Buttons = () => {
     return (

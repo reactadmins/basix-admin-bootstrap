@@ -1,66 +1,10 @@
 import { Fragment } from "react";
 import { Badge, Button, CardBody, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
+import Card from "@/components/Card/Card";
 
 const Badges = () => {
     return (
         <Fragment>
-            <Col md={6}>
-                <Card
-                    title="Card Title"
-                    titleIcon="fa fa-cog"
-                    titleBg=""
-                    isHeader={true}
-                    headerPosition="top"
-                    padding="16px"
-                    bodyBg="blue"
-                    icons={[
-                        {
-                            icon: "fa fa-cog",
-                            dropdown: [
-                                {
-                                    label: "Edit",
-                                    icon: "fa fa-cog",
-                                    method: () => alert("Cog"),
-                                },
-                                {
-                                    label: "Delete",
-                                    icon: "fa-solid fa-trash",
-                                    method: () => alert("Delete"),
-                                },
-                                {
-                                    label: "Update",
-                                    icon: "fa-solid fa-recycle",
-                                    method: () => alert("Update"),
-                                },
-                            ],
-                        },
-                        {
-                            icon: "fa fa-angle-down",
-                            dropdown: [
-                                { label: "sdaf", icon: "fa fa-cog", method: () => alert("Cog") },
-                                {
-                                    label: "Deldasfete",
-                                    icon: "fa-solid fa-trash",
-                                    method: () => alert("Delete"),
-                                },
-                                {
-                                    label: "Updadasfte",
-                                    icon: "fa-solid fa-recycle",
-                                    method: () => alert("Update"),
-                                },
-                            ],
-                        },
-                    ]}
-                    dismissible={true}
-                    onClose={() => alert("Close")}
-                >
-                    safljklds
-                </Card>
-            </Col>
-
-            <br />
-
             {/* start badges & badges buttons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>

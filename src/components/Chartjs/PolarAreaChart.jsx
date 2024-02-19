@@ -6,7 +6,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);

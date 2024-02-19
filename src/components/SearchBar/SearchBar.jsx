@@ -1,5 +1,5 @@
-import searchBarStyle from "../../assets/scss/SearchBar.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import searchBarStyle from "@/assets/scss/SearchBar.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 
 const SearchBar = ({ isOpenSearch, setIsOpenSearch }) => {
     const { isDark } = useDashboardDataContext();

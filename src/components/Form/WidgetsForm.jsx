@@ -1,5 +1,5 @@
 import { CardBody } from "react-bootstrap";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 
 const WidgetsForm = ({
     isPrepend = false,

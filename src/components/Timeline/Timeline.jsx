@@ -1,10 +1,10 @@
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
-import user1 from "../../assets/image/avatar/user-1.jpg";
-import user2 from "../../assets/image/avatar/user-2.jpg";
-import user3 from "../../assets/image/avatar/user-3.jpg";
-import user4 from "../../assets/image/avatar/user-4.jpg";
-import styles from "../../assets/scss/Timeline.module.scss";
+import user1 from "@/assets/image/avatar/user-1.jpg";
+import user2 from "@/assets/image/avatar/user-2.jpg";
+import user3 from "@/assets/image/avatar/user-3.jpg";
+import user4 from "@/assets/image/avatar/user-4.jpg";
+import styles from "@/assets/scss/Timeline.module.scss";
 
 const Timeline = () => {
     return (

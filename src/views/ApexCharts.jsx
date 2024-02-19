@@ -1,10 +1,10 @@
 import { Col, Row } from "react-bootstrap";
-import LineChart from "../components/ApexCharts/LineChart";
-import AreaChart from "../components/ApexCharts/AreaChart";
-import ColumnChart from "../components/ApexCharts/ColumnChart";
-import CandlestickChart from "../components/ApexCharts/CandlestickChart";
-import PieChart from "../components/ApexCharts/PieChart";
-import BubbleChart from "../components/ApexCharts/BubbleChart";
+import LineChart from "@/components/ApexCharts/LineChart";
+import AreaChart from "@/components/ApexCharts/AreaChart";
+import ColumnChart from "@/components/ApexCharts/ColumnChart";
+import CandlestickChart from "@/components/ApexCharts/CandlestickChart";
+import PieChart from "@/components/ApexCharts/PieChart";
+import BubbleChart from "@/components/ApexCharts/BubbleChart";
 
 const ApexCharts = () => {
     return (
