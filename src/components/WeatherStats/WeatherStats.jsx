@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
-import style from "../../assets/scss/WeatherStats.module.scss";
+import { CardBody, CardFooter } from "react-bootstrap";
+import styles from "../../assets/scss/WeatherStats.module.scss";
+import Card from "../Card/Card";
 
 export const Stats = ({ title, counter, Symbol }) => {
     return (
-        <div className={`${style.stats} text-center`}>
-            <span className={`${style.stats_title} text-uppercase fw-normal`}>
+        <div className={`${styles.stats} text-center`}>
+            <span className={`${styles.stats_title} text-uppercase fw-normal`}>
                 {title}
             </span>
-            <span className={`${style.stats_counter} d-block fw-semibold`}>
+            <span className={`${styles.stats_counter} d-block fw-semibold`}>
                 {counter}
                 {Symbol}
             </span>
@@ -17,80 +18,81 @@ export const Stats = ({ title, counter, Symbol }) => {
 };
 
 const WeatherStats = () => {
-    const [isOpen, setIsOpen] = useState();
     return (
-        <Card className={`${style.card} rounded-0 border-0`}>
-            <CardHeader
-                className={`${style.card_header} border-0 rounded-0 d-flex justify-content-between align-items-center`}
+        <div className={styles.weather_wrapper}>
+            <Card
+                title="Weather"
+                titleBg="#ffa726"
+                cardHeaderBorderColor="#ffa726"
+                titleColor="#fff"
+                iconColor="#fff"
+                icons={[
+                    {
+                        icon: "fa fa-ellipsis-v",
+                        dropdown: [
+                            {
+                                label: "Edit",
+                                icon: "fa fa-cog",
+                                method: () => alert("Cog"),
+                            },
+                            {
+                                label: "Delete",
+                                icon: "fa-solid fa-trash",
+                                method: () => alert("Delete"),
+                            },
+                            {
+                                label: "Update",
+                                icon: "fa-solid fa-recycle",
+                                method: () => alert("Update"),
+                            },
+                        ],
+                    },
+                ]}
             >
-                <h2 className="text-white mb-0 fw-semibold">Weather</h2>
-                <button
-                    type="button"
-                    className="border-0 bg-transparent text-white"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    <i className="fa fa-ellipsis-v"></i>
-                </button>
-                {isOpen ? (
-                    <div className={style.card_setting}>
-                        <button type="button">
-                            <i className="fa-solid fa-gear"></i>
-                            Edit
-                        </button>
-                        <button type="button">
-                            <i className="fa-solid fa-trash"></i>
-                            Delete
-                        </button>
-                        <button type="button">
-                            <i className="fa-solid fa-recycle"></i>
-                            Update
-                        </button>
-                    </div>
-                ) : (
-                    ""
-                )}
-            </CardHeader>
-            <CardBody className={`${style.card_body} p-0 border-0`}>
-                <div
-                    className={`${style.weather_stats} p-4 pt-0 pb-2 d-flex justify-content-between align-items-center`}
-                >
-                    <span className={style.weather_icon}>
-                        <i className="fa fa-cloud text-white"></i>
-                    </span>
-                    <div className={style.media_body}>
-                        <h3 className="text-white mb-0">Partly Cloudy</h3>
-                        <span className="text-white text-end d-block">
-                            Sunday, April 2023
+                <CardBody className={`${styles.card_body} p-0 border-0`}>
+                    <div
+                        className={`${styles.weather_stats} p-4 pt-0 pb-2 d-flex justify-content-between align-items-center`}
+                    >
+                        <span className={styles.weather_icon}>
+                            <i className="fa fa-cloud text-white"></i>
                         </span>
-                    </div>
-                </div>
-                <div
-                    className={`${style.media_content} p-4 d-flex justify-content-between align-items-center`}
-                >
-                    <div>
-                        <h5 className="text-uppercase fs-6 fw-normal mb-0">
-                            New York
-                        </h5>
-                        <span className="text-uppercase fw-normal">Usa</span>
+                        <div className={styles.media_body}>
+                            <h3 className="text-white mb-0">Partly Cloudy</h3>
+                            <span className="text-white text-end d-block">
+                                Sunday, April 2023
+                            </span>
+                        </div>
                     </div>
                     <div
-                        className={`${style.weather_counte} d-flex align-items-baseline`}
+                        className={`${styles.media_content} p-4 d-flex justify-content-between align-items-center`}
                     >
-                        <h2 className="mb-0 fw-normal">21</h2>
-                        <span className="d-block">°C</span>
+                        <div>
+                            <h5 className="text-uppercase fs-6 fw-normal mb-0">
+                                New York
+                            </h5>
+                            <span className="text-uppercase fw-normal">
+                                Usa
+                            </span>
+                        </div>
+                        <div
+                            className={`${styles.weather_counte} d-flex align-items-baseline`}
+                        >
+                            <h2 className="mb-0 fw-normal">21</h2>
+                            <span className="d-block">°C</span>
+                        </div>
                     </div>
-                </div>
-            </CardBody>
-            <CardFooter className={style.card_footer}>
-                <div className="d-flex justify-content-between align-items-center">
-                    <Stats title="Feels" counter={23} Symbol="°" />
-                    <hr className="mx-3" />
-                    <Stats title="Humidity" counter={37} Symbol="%" />
-                    <hr className="mx-3" />
-                    <Stats title="Wind" counter={4} Symbol=" km/h" />
-                </div>
-            </CardFooter>
-        </Card>
+                </CardBody>
+                <CardFooter className={styles.card_footer}>
+                    <div className="d-flex justify-content-between align-items-center">
+                        <Stats title="Feels" counter={23} Symbol="°" />
+                        <hr className="mx-3" />
+                        <Stats title="Humidity" counter={37} Symbol="%" />
+                        <hr className="mx-3" />
+                        <Stats title="Wind" counter={4} Symbol=" km/h" />
+                    </div>
+                </CardFooter>
+            </Card>
+        </div>
     );
 };
 

@@ -34,6 +34,12 @@
             }
         }
     }
+    [class="card-body"] {
+        background-color: var(--bg-content) !important;
+    }
+    [class="card-footer"] {
+        background-color: var(--bg-content) !important;
+    }
 }
 .card_setting {
     position: absolute;
