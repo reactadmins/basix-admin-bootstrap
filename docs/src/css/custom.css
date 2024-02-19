@@ -40,6 +40,11 @@ a{
     text-decoration: none!important;
 }
 
+button[aria-label="Close"]{
+    background: none;
+    border: none;
+}
+
 [data-theme="dark"] body {
     background: var(--docusaurus-highlighted-code-line-bg);
 }
