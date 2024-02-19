@@ -13,8 +13,15 @@ const SidebarMenu = ({
         <Fragment>
             <Link
                 to={item.path}
+                aria-expanded={
+                    navIsOpen === index && item?.children ? true : false
+                }
                 onClick={() => setNavIsOpen(navIsOpen === index ? null : index)}
-                className="d-flex align-items-center justify-content-between"
+                className={`d-flex align-items-center justify-content-between ${
+                    item.path && navIsOpen === index && !item?.children
+                        ? style.active
+                        : ""
+                }`}
             >
                 <div className="d-flex align-items-center">
                     <i className={`${item?.icon} ${style.menu_iocn}`}></i>

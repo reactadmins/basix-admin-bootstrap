@@ -89,7 +89,6 @@ const Sidebar = ({ type = "vertical" }) => {
                                         navIsOpen={navIsOpen}
                                         setNavIsOpen={setNavIsOpen}
                                     />
-
                                 )}
                                 {item?.title && !sidebarMini ? (
                                     <span>{item.name}</span>

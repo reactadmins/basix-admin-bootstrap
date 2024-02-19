@@ -1,11 +1,11 @@
 import { Fragment, useState } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "react-bootstrap";
+import { CardBody, CardFooter } from "react-bootstrap";
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
-import style from "../../assets/scss/Earning.module.scss";
+import styles from "../../assets/scss/Earning.module.scss";
+import Card from "../Card/Card";
 
 const Earning = () => {
-    const [isOpen, setIsOpen] = useState();
-    const [hiddenContent, setHiddenContent] = useState();
+    const [close, setClose] = useState(false);
 
     const earning = [
         {
@@ -60,57 +60,42 @@ const Earning = () => {
 
     return (
         <Fragment>
-            {!hiddenContent ? (
-                <div className={style.earning_wrapper}>
-                    <Card className={`${style.card} rounded-0 w-100 h-100`}>
-                        <CardHeader className={`${style.header} border-0`}>
-                            <div className="d-flex justify-content-between align-items-center">
-                                <strong className={style.title}>
-                                    Earning Stats
-                                </strong>
-                                <div className="d-flex align-items-center">
-                                    <button
-                                        type="button"
-                                        className={`${style.content_settings} border-0 bg-transparent`}
-                                        onClick={() => setIsOpen(!isOpen)}
-                                    >
-                                        <i className="fa fa-cog"></i>
-                                    </button>
-                                    <button
-                                        type="button"
-                                        className={`${style.content_settings} border-0 bg-transparent`}
-                                    >
-                                        <i className="fa fa-angle-down"></i>
-                                    </button>
-                                    <button
-                                        type="button"
-                                        className={`${style.content_settings} border-0 bg-transparent`}
-                                        onClick={() =>
-                                            setHiddenContent(!hiddenContent)
-                                        }
-                                    >
-                                        <i className="fa fa-times"></i>
-                                    </button>
-                                    {isOpen ? (
-                                        <div className={style.card_setting}>
-                                            <button type="button">
-                                                <i className="fa-solid fa-gear"></i>
-                                                Edit
-                                            </button>
-                                            <button type="button">
-                                                <i className="fa-solid fa-trash"></i>
-                                                Delete
-                                            </button>
-                                            <button type="button">
-                                                <i className="fa-solid fa-recycle"></i>
-                                                Update
-                                            </button>
-                                        </div>
-                                    ) : null}
-                                </div>
-                            </div>
-                        </CardHeader>
-                        <CardBody className="bg-transparent pb-0">
+            {!close ? (
+                <div className={styles.earning_wrapper}>
+                    <Card
+                        title="Earning Stats"
+                        titleBg="#ef5350"
+                        cardBorderColor="#ef5350"
+                        cardHeaderBorderColor="#ef5350"
+                        titleColor="#fff"
+                        iconColor="#fff"
+                        icons={[
+                            {
+                                icon: "fa fa-cog",
+                                dropdown: [
+                                    {
+                                        label: "Edit",
+                                        icon: "fa fa-cog",
+                                        method: () => alert("Cog"),
+                                    },
+                                    {
+                                        label: "Delete",
+                                        icon: "fa-solid fa-trash",
+                                        method: () => alert("Delete"),
+                                    },
+                                    {
+                                        label: "Update",
+                                        icon: "fa-solid fa-recycle",
+                                        method: () => alert("Update"),
+                                    },
+                                ],
+                            },
+                            { icon: "fa fa-angle-down" },
+                        ]}
+                        dismissible={true}
+                        onClose={() => setClose(!close)}
+                    >
+                        <CardBody className={`${styles.card_body} p-0`}>
                             <ResponsiveContainer width="100%" height={210}>
                                 <BarChart
                                     width={580}
@@ -123,13 +108,13 @@ const Earning = () => {
                             </ResponsiveContainer>
                         </CardBody>
                         <CardFooter
-                            className={`${style.footer} border-0 rounded-0`}
+                            className={`${styles.footer} border-0 rounded-0`}
                         >
                             <div className="d-flex justify-content-between align-items-center">
-                                <strong className={style.footer_title}>
+                                <strong className={styles.footer_title}>
                                     Total Earning
                                 </strong>
-                                <h4 className={style.earning_count}>
+                                <h4 className={styles.earning_count}>
                                     <span className="currency float-left mr-1">
                                         $
                                     </span>

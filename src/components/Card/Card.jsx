@@ -1,71 +1,178 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 import { Card as BootstrapCard, CardHeader } from "react-bootstrap";
-import CardStyle from "../../assets/scss/Card.module.scss";
+import styles from "../../assets/scss/Card.module.scss";
+import classNames from "classnames";
 
-const Card = ({ title = "", subscript = "", icons = [], children = "" }) => {
-    const [isOpen, setIsOpen] = useState();
-    const [hiddenContent, setHiddenContent] = useState();
+const Card = ({
+    title = "",
+    titleIcon = null,
+    titleBg = "",
+    titleColor = "",
+    cardBorderColor = "",
+    cardHeaderBorderColor = "",
+    isHeader = true,
+    headerPosition = "top",
+    subscript = "",
+    icons = [],
+    iconColor = "",
+    dismissible = false,
+    onClose = () => {},
+    children = "",
+}) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const ref = useRef();
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (!ref?.current?.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+    }, [ref]);
 
     return (
         <Fragment>
-            {!hiddenContent ? (
-                <BootstrapCard className={`${CardStyle.card} rounded-0 w-100 h-100`}>
-                    <CardHeader className={`${CardStyle.card_header} rounded-0`}>
+            <BootstrapCard
+                className={`${styles.card} rounded-0 w-100 h-100`}
+                {...(cardBorderColor
+                    ? {
+                          style: {
+                              borderColor: cardBorderColor,
+                          },
+                      }
+                    : "")}
+            >
+                {headerPosition === "bottom" ? children : null}
+
+                {!!isHeader ? (
+                    <CardHeader
+                        className={`${styles.card_header} rounded-0`}
+                        {...(titleBg || cardHeaderBorderColor
+                            ? {
+                                  style: {
+                                      background: titleBg,
+                                      borderColor: cardHeaderBorderColor,
+                                  },
+                              }
+                            : "")}
+                    >
                         <div
                             className={`d-flex align-items-center ${
-                                icons.length > 0 ? "justify-content-between" : ""
-                            }`}>
-                            <strong className={CardStyle.card_title}>{title}</strong>
-                            {subscript}
+                                icons.length > 0
+                                    ? "justify-content-between"
+                                    : ""
+                            }`}
+                        >
+                            <div>
+                                {titleIcon ? (
+                                    <span
+                                        className={classNames(
+                                            styles.titleIcon,
+                                            titleIcon
+                                        )}
+                                    />
+                                ) : null}
+                                <strong
+                                    className={styles.card_title}
+                                    {...(titleColor
+                                        ? {
+                                              style: {
+                                                  color: titleColor,
+                                              },
+                                          }
+                                        : "")}
+                                >
+                                    {title}
+                                </strong>
+                                {subscript}
+                            </div>
                             {icons.length > 0 && (
-                                <div className={`d-flex align-items-center ${CardStyle.card_icon}`}>
+                                <div
+                                    className={`d-flex align-items-center ${styles.card_icon}`}
+                                >
                                     {icons?.map((item, index) => (
-                                        <button
-                                            key={index}
-                                            type="button"
-                                            onClick={() => {
-                                                setIsOpen(
-                                                    item === "fa fa-cog"
-                                                        ? !isOpen
-                                                        : "" || item === "fa fa-ellipsis-v"
-                                                        ? !isOpen
-                                                        : ""
-                                                );
-                                                setHiddenContent(
-                                                    item === "fa fa-times" ? !hiddenContent : ""
-                                                );
-                                            }}
-                                            className={`${CardStyle.content_settings} border-0 bg-transparent`}>
-                                            <i className={item}></i>
-                                        </button>
+                                        <Fragment key={index}>
+                                            <button
+                                                type="button"
+                                                onClick={() => {
+                                                    setIsOpen(
+                                                        item.icon ===
+                                                            "fa fa-cog"
+                                                            ? !isOpen
+                                                            : "" ||
+                                                              item.icon ===
+                                                                  "fa fa-ellipsis-v"
+                                                            ? !isOpen
+                                                            : ""
+                                                    );
+                                                }}
+                                                className={`${styles.content_settings} border-0 bg-transparent`}
+                                                {...(iconColor
+                                                    ? {
+                                                          style: {
+                                                              color: iconColor,
+                                                          },
+                                                      }
+                                                    : "")}
+                                            >
+                                                <i className={item.icon} />
+                                            </button>
+                                            {isOpen &&
+                                            item?.dropdown?.length > 0 ? (
+                                                <div
+                                                    ref={ref}
+                                                    className={
+                                                        styles.card_setting
+                                                    }
+                                                >
+                                                    {item?.dropdown?.map(
+                                                        (menu, i) => (
+                                                            <button
+                                                                key={i}
+                                                                type="button"
+                                                                onClick={
+                                                                    menu?.method
+                                                                }
+                                                            >
+                                                                <i
+                                                                    className={
+                                                                        menu?.icon
+                                                                    }
+                                                                />
+                                                                {menu.label}
+                                                            </button>
+                                                        )
+                                                    )}
+                                                </div>
+                                            ) : null}
+                                        </Fragment>
                                     ))}
-                                    {isOpen ? (
-                                        <div className={CardStyle.card_setting}>
-                                            <button type="button">
-                                                <i className="fa-solid fa-gear"></i>
-                                                Edit
-                                            </button>
-                                            <button type="button">
-                                                <i className="fa-solid fa-trash"></i>
-                                                Delete
-                                            </button>
-                                            <button type="button">
-                                                <i className="fa-solid fa-recycle"></i>
-                                                Update
-                                            </button>
-                                        </div>
-                                    ) : (
-                                        ""
-                                    )}
+                                    {!!dismissible ? (
+                                        <button
+                                            type="button"
+                                            onClick={onClose}
+                                            className={`${styles.content_settings} border-0 bg-transparent`}
+                                            {...(iconColor
+                                                ? {
+                                                      style: {
+                                                          color: iconColor,
+                                                      },
+                                                  }
+                                                : "")}
+                                        >
+                                            <i className={"fa fa-times"} />
+                                        </button>
+                                    ) : null}
                                 </div>
                             )}
                         </div>
                     </CardHeader>
-                    {children}
-                </BootstrapCard>
-            ) : (
-                ""
-            )}
+                ) : null}
+
+                {headerPosition !== "bottom" ? children : null}
+            </BootstrapCard>
         </Fragment>
     );
 };
