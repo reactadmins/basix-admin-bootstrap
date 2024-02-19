@@ -50,7 +50,31 @@ const Revenue = () => {
         },
     });
     return (
-        <Card title="Revenue" icons={["fa fa-ellipsis-v"]}>
+        <Card
+            title="Revenue"
+            icons={[
+                {
+                    icon: "fa fa-ellipsis-v",
+                    dropdown: [
+                        {
+                            label: "Edit",
+                            icon: "fa fa-cog",
+                            method: () => alert("Cog"),
+                        },
+                        {
+                            label: "Delete",
+                            icon: "fa-solid fa-trash",
+                            method: () => alert("Delete"),
+                        },
+                        {
+                            label: "Update",
+                            icon: "fa-solid fa-recycle",
+                            method: () => alert("Update"),
+                        },
+                    ],
+                },
+            ]}
+        >
             <CardBody>
                 <div
                     className="d-flex align-items-center"

@@ -95,7 +95,7 @@ const Earning = () => {
                         dismissible={true}
                         onClose={() => setClose(!close)}
                     >
-                        <CardBody className={`${styles.card_body} p-3`}>
+                        <CardBody className={`${styles.card_body} p-3 pb-0`}>
                             <ResponsiveContainer width="100%" height={210}>
                                 <BarChart
                                     width={580}
@@ -108,7 +108,7 @@ const Earning = () => {
                             </ResponsiveContainer>
                         </CardBody>
                         <CardFooter
-                            className={`${styles.card_footer} border-0 rounded-0 p-3`}
+                            className={`${styles.card_footer} border-0 rounded-0 px-3`}
                         >
                             <div className="d-flex justify-content-between align-items-center">
                                 <span className={styles.title}>

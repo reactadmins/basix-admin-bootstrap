@@ -23,11 +23,35 @@ const Download = () => {
         },
     });
     return (
-        <Card title="Download" icons={["fa fa-ellipsis-v"]}>
+        <Card
+            title="Download"
+            icons={[
+                {
+                    icon: "fa fa-ellipsis-v",
+                    dropdown: [
+                        {
+                            label: "Edit",
+                            icon: "fa fa-cog",
+                            method: () => alert("Cog"),
+                        },
+                        {
+                            label: "Delete",
+                            icon: "fa-solid fa-trash",
+                            method: () => alert("Delete"),
+                        },
+                        {
+                            label: "Update",
+                            icon: "fa-solid fa-recycle",
+                            method: () => alert("Update"),
+                        },
+                    ],
+                },
+            ]}
+        >
             <CardBody>
                 <div
                     className="d-flex align-items-center"
-                    style={{ height: "258px" }}
+                    style={{ height: "255px" }}
                 >
                     <ReactApexChart
                         options={state.options}
