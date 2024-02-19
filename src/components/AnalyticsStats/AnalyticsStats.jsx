@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Card from "../Card/Card";
 import { Row, Col, CardBody, CardFooter } from "react-bootstrap";
 import { Line } from "react-chartjs-2";
+import styles from "../../assets/scss/AnalyticsStats.module.scss";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -13,7 +14,6 @@ import {
     Legend,
 } from "chart.js";
 import { Line as PeityLine } from "peity-react";
-
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -26,8 +26,21 @@ ChartJS.register(
 
 export const AnalyticsInfo = ({ count = "", title = "" }) => {
     return (
-        <div className="analytics-wrapper">
-            <span
+        <div className={styles.analytics_wrapper}>
+            <div className="d-flex gap-3 align-items-center">
+                <PeityLine
+                    values={[5, 3, 9, 6, 5, 9, 7, 3, 5, 2]}
+                    width={60}
+                    height={20}
+                />
+                <div className={styles.counter_up}>
+                    <div className="d-flex align-items-center gap-1">
+                        <i className="fa fa-caret-up" />
+                        <span className={`${styles.count} mx-1`}>{count}%</span>
+                    </div>
+                </div>
+            </div>
+            <h4
                 className="text-uppercase d-block"
                 style={{
                     color: "var(--content-text-color)",
@@ -36,36 +49,13 @@ export const AnalyticsInfo = ({ count = "", title = "" }) => {
                 }}
             >
                 {title}
-            </span>
-            <div className="d-flex gap-3 align-items-center">
-                <PeityLine
-                    values={[5, 3, 9, 6, 5, 9, 7, 3, 5, 2]}
-                    width={60}
-                    height={20}
-                />
-                <div className="counter-up">
-                    <div className="d-flex align-items-center gap-1">
-                        <i
-                            className="fa fa-caret-up"
-                            style={{ color: "#4dbd74", fontSize: "14px" }}
-                        ></i>
-                        <span
-                            className="mx-1"
-                            style={{
-                                fontSize: "14px",
-                                color: "var(--hedging-text-color)",
-                            }}
-                        >
-                            {count}%
-                        </span>
-                    </div>
-                </div>
-            </div>
+            </h4>
         </div>
     );
 };
 
 const AnalyticsStats = () => {
+    const [close, setClose] = useState(false);
     const options = {
         responsive: true,
         plugins: {
@@ -102,32 +92,62 @@ const AnalyticsStats = () => {
     };
     return (
         <Fragment>
-            <Card
-                title="Analytics Stats"
-                icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-            >
-                <CardBody>
-                    <div
-                        className="d-flex justify-content-center"
-                        style={{ width: "100%", height: "310px" }}
-                    >
+            {!close ? (
+                <Card
+                    title="Analytics Stats"
+                    icons={[
+                        {
+                            icon: "fa fa-cog",
+                            dropdown: [
+                                {
+                                    label: "Edit",
+                                    icon: "fa fa-cog",
+                                    method: () => alert("Cog"),
+                                },
+                                {
+                                    label: "Delete",
+                                    icon: "fa-solid fa-trash",
+                                    method: () => alert("Delete"),
+                                },
+                                {
+                                    label: "Update",
+                                    icon: "fa-solid fa-recycle",
+                                    method: () => alert("Update"),
+                                },
+                            ],
+                        },
+                        { icon: "fa fa-angle-down" },
+                    ]}
+                    dismissible={true}
+                    onClose={() => setClose(!close)}
+                >
+                    <CardBody>
                         <Line options={options} data={data} />
-                    </div>
-                </CardBody>
-                <CardFooter style={{ borderColor: "var(--border-colo)" }}>
-                    <Row className="gy-4 m-0" style={{ padding: "16px 20px" }}>
-                        <Col sm={12} md={4} className="m-0">
-                            <AnalyticsInfo count={65.79} title="Bounce Rate" />
-                        </Col>
-                        <Col sm={12} md={4} className="m-0">
-                            <AnalyticsInfo count={65.79} title="Pageviews" />
-                        </Col>
-                        <Col sm={12} md={4} className="m-0">
-                            <AnalyticsInfo count={65.79} title="New Users" />
-                        </Col>
-                    </Row>
-                </CardFooter>
-            </Card>
+                    </CardBody>
+                    <CardFooter className={styles.card_footer}>
+                        <Row className="gy-4 m-0">
+                            <Col sm={12} md={4} className="m-0">
+                                <AnalyticsInfo
+                                    count={65.79}
+                                    title="Bounce Rate"
+                                />
+                            </Col>
+                            <Col sm={12} md={4} className="m-0">
+                                <AnalyticsInfo
+                                    count={65.79}
+                                    title="Pageviews"
+                                />
+                            </Col>
+                            <Col sm={12} md={4} className="m-0">
+                                <AnalyticsInfo
+                                    count={65.79}
+                                    title="New Users"
+                                />
+                            </Col>
+                        </Row>
+                    </CardFooter>
+                </Card>
+            ) : null}
         </Fragment>
     );
 };
