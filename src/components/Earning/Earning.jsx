@@ -95,7 +95,7 @@ const Earning = () => {
                         dismissible={true}
                         onClose={() => setClose(!close)}
                     >
-                        <CardBody className={`${styles.card_body} p-0`}>
+                        <CardBody className={`${styles.card_body} p-3`}>
                             <ResponsiveContainer width="100%" height={210}>
                                 <BarChart
                                     width={580}
@@ -108,18 +108,13 @@ const Earning = () => {
                             </ResponsiveContainer>
                         </CardBody>
                         <CardFooter
-                            className={`${styles.footer} border-0 rounded-0`}
+                            className={`${styles.card_footer} border-0 rounded-0 p-3`}
                         >
                             <div className="d-flex justify-content-between align-items-center">
-                                <strong className={styles.footer_title}>
+                                <span className={styles.title}>
                                     Total Earning
-                                </strong>
-                                <h4 className={styles.earning_count}>
-                                    <span className="currency float-left mr-1">
-                                        $
-                                    </span>
-                                    <span className="count">3265986</span>
-                                </h4>
+                                </span>
+                                <span className={styles.counter}>$3265986</span>
                             </div>
                         </CardFooter>
                     </Card>
