@@ -1,9 +1,8 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import styles from "../../assets/scss/DeviceVisitorStats.module.scss";
 
 const DeviceVisitorStats = () => {
-    const { isDark } = useDashboardDataContext();
     const [state, setState] = useState({
         series: [44, 55, 41],
         options: {
@@ -28,14 +27,7 @@ const DeviceVisitorStats = () => {
     });
     return (
         <div
-            className="d-flex justify-content-center align-items-center rounded-0"
-            style={{
-                height: "143px",
-                backgroundColor: `${
-                    isDark ? "var(--bg-content)" : "var(--bg-content)"
-                }`,
-                border: `${isDark ? "1px solid var(--border-color)" : "0"}`,
-            }}
+            className={`${styles.device_visitor_stats} d-flex justify-content-center align-items-center rounded-0`}
         >
             <ReactApexChart
                 options={state.options}

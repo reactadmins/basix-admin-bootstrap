@@ -1,4 +1,3 @@
-import { Fragment, useState } from "react";
 import Card from "../Card/Card";
 import { CardBody } from "react-bootstrap";
 import user1 from "../../assets/image/avatar/user-1.jpg";
