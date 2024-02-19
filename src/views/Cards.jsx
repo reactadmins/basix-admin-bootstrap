@@ -184,7 +184,7 @@ const Cards = () => {
                 <Col md={6} lg={4}>
                     <Card isHeader={false}>
                         <CardBody className="p-0">
-                            <ProfileCard userName=" Steven Lee" image={userImg}>
+                            <ProfileCard userName="Steven Lee" image={userImg}>
                                 <p className="text-center fs-6 px-3">
                                     Just got a pretty neat project via @ooomf -
                                     Give it a
@@ -200,7 +200,11 @@ const Cards = () => {
 
                 {/* start overlay card section */}
                 <Col md={6} lg={4}>
-                    <OverlayCard />
+                    <OverlayCard
+                        useName=""
+                        image={userImg}
+                        description="Project Manager"
+                    />
                 </Col>
                 {/* end overlay card section */}
 
