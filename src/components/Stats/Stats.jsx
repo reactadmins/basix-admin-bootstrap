@@ -1,5 +1,5 @@
 import { Fragment, createContext, useContext, useState } from "react";
-import style from "../../assets/scss/Stats.module.scss";
+import styles from "../../assets/scss/Stats.module.scss";
 
 export const ActiveTabContext = createContext();
 
@@ -7,7 +7,7 @@ export const Stats = ({ children, activeTab }) => {
     const [active, setActive] = useState(activeTab);
 
     return (
-        <div className={style.stats}>
+        <div className={styles.stats}>
             <ul className="d-flex">
                 {children?.map((item) => {
                     return (
@@ -16,7 +16,7 @@ export const Stats = ({ children, activeTab }) => {
                             onClick={() => setActive(item.props.eventKey)}
                             className={`${
                                 item.props.eventKey === active
-                                    ? style.active
+                                    ? styles.active
                                     : ""
                             }`}
                         >

@@ -1,6 +1,6 @@
 import { Card, CardBody } from "react-bootstrap";
 import CountUp from "react-countup";
-import style from "../../assets/scss/SocialCounter.module.scss";
+import styles from "../../assets/scss/SocialCounter.module.scss";
 
 const SocialCounter = ({
     bgColor = "transparent",
@@ -12,15 +12,15 @@ const SocialCounter = ({
     socialActivity = {},
 }) => {
     return (
-        <Card className={`rounded-0 ${style.card}`}>
+        <Card className={`rounded-0 ${styles.card}`}>
             <CardBody className="p-0">
                 <div
                     className={`d-flex align-items-center ${
                         iconPosition === "top" ? "flex-column gap-0" : "gap-3"
-                    } ${style.social_counter}`}
+                    } ${styles.social_counter}`}
                 >
                     <div
-                        className={style.icon}
+                        className={styles.icon}
                         style={{
                             width: `${
                                 (iconPosition === "left" && "90px") ||
@@ -35,13 +35,13 @@ const SocialCounter = ({
                         ></i>
                     </div>
                     {isCounter ? (
-                        <div className={style.counter}>
+                        <div className={styles.counter}>
                             <CountUp end={count} duration={3} />
                             <p className="d-block">Followers</p>
                         </div>
                     ) : (
                         <div
-                            className={`d-flex gap-3 justify-content-center align-items-center py-3 ${style.counter_group}`}
+                            className={`d-flex gap-3 justify-content-center align-items-center py-3 ${styles.counter_group}`}
                         >
                             <div
                                 style={{

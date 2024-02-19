@@ -4,7 +4,7 @@ import user2 from "../../assets/image/avatar/user-2.jpg";
 import user3 from "../../assets/image/avatar/user-3.jpg";
 import user4 from "../../assets/image/avatar/user-4.jpg";
 import user5 from "../../assets/image/avatar/user-5.jpg";
-import style from "../../assets/scss/Stats.module.scss";
+import styles from "../../assets/scss/Stats.module.scss";
 import { Table } from "react-bootstrap";
 
 const Month = () => {
@@ -53,7 +53,7 @@ const Month = () => {
         },
     ];
     return (
-        <div className={style.table_wrapper}>
+        <div className={styles.table_wrapper}>
             <Table className="w-100 h-100">
                 <thead>
                     <tr>
@@ -66,7 +66,7 @@ const Month = () => {
                 <tbody>
                     <tr>
                         <td className="align-middle">
-                            <div className={style.user_img}>
+                            <div className={styles.user_img}>
                                 <a href="#">
                                     <img
                                         src={user2}
@@ -78,7 +78,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={style.user_count}>3765879</span>
+                            <span className={styles.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -103,7 +103,7 @@ const Month = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={style.user_img}>
+                            <div className={styles.user_img}>
                                 <a href="#">
                                     <img
                                         src={user1}
@@ -115,7 +115,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={style.user_count}>3765879</span>
+                            <span className={styles.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -141,7 +141,7 @@ const Month = () => {
 
                     <tr>
                         <td className="align-middle">
-                            <div className={style.user_img}>
+                            <div className={styles.user_img}>
                                 <a href="#">
                                     <img
                                         src={user3}
@@ -153,7 +153,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={style.user_count}>3765879</span>
+                            <span className={styles.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -178,7 +178,7 @@ const Month = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={style.user_img}>
+                            <div className={styles.user_img}>
                                 <a href="#">
                                     <img
                                         src={user4}
@@ -190,7 +190,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={style.user_count}>3765879</span>
+                            <span className={styles.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
@@ -215,7 +215,7 @@ const Month = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={style.user_img}>
+                            <div className={styles.user_img}>
                                 <a href="#">
                                     <img
                                         src={user5}
@@ -227,7 +227,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={style.user_count}>3765879</span>
+                            <span className={styles.user_count}>3765879</span>
                         </td>
                         <td className="align-middle">
                             <BarChart width={60} height={50} data={data}>
