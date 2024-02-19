@@ -13,6 +13,7 @@ import WidgetsCard from "@/components/WidgetsCard/WidgetsCard";
 import placeholder from "@/assets/image/placeholder.png";
 import NotificationStatsCart from "@/components/NotificationStatsCart/NotificationStatsCart";
 import userImg from "@/assets/image/admin.jpg";
+import Card from "@/components/Card/Card";
 
 const Cards = () => {
     let now = 10;
@@ -21,19 +22,15 @@ const Cards = () => {
             <Row className="gy-4 gx-4">
                 {/* start profile card section */}
                 <Col md={6} lg={4}>
-                    <ProfileCard
-                        title="Profile Card"
-                        userName="Steven Lee"
-                        isHeader={true}
-                        image={userImg}
-                        userInfo={
-                            <Fragment>
+                    <Card title="Profile Card">
+                        <CardBody className="p-0">
+                            <ProfileCard userName=" Steven Lee" image={userImg}>
                                 <span>
-                                    <i className="fa-solid fa-location-dot"></i>{" "}
+                                    <i className="fa-solid fa-location-dot mx-1"></i>
                                     California, United States
                                 </span>
                                 <hr className="w-100 border-0" />
-                                <div className="d-flex gap-2">
+                                <div className="d-flex gap-2 align-items-center justify-content-center mt-4">
                                     <a
                                         href="#"
                                         className="text-decoration-none text-secondary"
@@ -59,24 +56,20 @@ const Cards = () => {
                                         <i className="fa-brands fa-pinterest"></i>
                                     </a>
                                 </div>
-                            </Fragment>
-                        }
-                    />
+                            </ProfileCard>
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <ProfileCard
-                        title="Profile Card"
-                        userName="Steven Lee"
-                        isFooter={true}
-                        image={userImg}
-                        userInfo={
-                            <Fragment>
+                    <Card title="Profile Card" headerPosition="bottom">
+                        <CardBody className="p-0">
+                            <ProfileCard userName=" Steven Lee" image={userImg}>
                                 <span>
-                                    <i className="fa-solid fa-location-dot"></i>{" "}
+                                    <i className="fa-solid fa-location-dot mx-1"></i>
                                     California, United States
                                 </span>
                                 <hr className="w-100 border-0" />
-                                <div className="d-flex gap-2">
+                                <div className="d-flex gap-2 align-items-center justify-content-center mt-4">
                                     <a
                                         href="#"
                                         className="text-decoration-none text-secondary"
@@ -102,25 +95,20 @@ const Cards = () => {
                                         <i className="fa-brands fa-pinterest"></i>
                                     </a>
                                 </div>
-                            </Fragment>
-                        }
-                    />
+                            </ProfileCard>
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <ProfileCard
-                        title="Profile Card"
-                        userName="Steven Lee"
-                        icon="fa-solid fa-user"
-                        isHeader={true}
-                        image={userImg}
-                        userInfo={
-                            <Fragment>
+                    <Card title="Profile Card" titleIcon="fa-solid fa-user">
+                        <CardBody className="p-0">
+                            <ProfileCard userName=" Steven Lee" image={userImg}>
                                 <span>
-                                    <i className="fa-solid fa-location-dot"></i>{" "}
+                                    <i className="fa-solid fa-location-dot mx-1"></i>
                                     California, United States
                                 </span>
                                 <hr className="w-100 border-0" />
-                                <div className="d-flex gap-2">
+                                <div className="d-flex gap-2 align-items-center justify-content-center mt-4">
                                     <a
                                         href="#"
                                         className="text-decoration-none text-secondary"
@@ -146,9 +134,9 @@ const Cards = () => {
                                         <i className="fa-brands fa-pinterest"></i>
                                     </a>
                                 </div>
-                            </Fragment>
-                        }
-                    />
+                            </ProfileCard>
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end profile card section */}
 
@@ -160,28 +148,19 @@ const Cards = () => {
 
                 {/* start profile card section */}
                 <Col md={6} lg={4}>
-                    <ProfileCard
-                        userName="Kanye West"
-                        image={userImg}
-                        userInfo={
-                            <p
-                                className="text-center fs-6 px-3 py-3"
-                                style={{
-                                    color: "var(--content-text-color)",
-                                }}
-                            >
-                                Just got a pretty neat project via @ooomf - Give
-                                it a try
-                                <a
-                                    href="#"
-                                    className="text-decoration-none mx-1"
-                                    style={{ color: "var(--link-color)" }}
-                                >
-                                    http://t.co/e02DwGEeOJ
-                                </a>
-                            </p>
-                        }
-                    />
+                    <Card isHeader={false}>
+                        <CardBody className="p-0">
+                            <ProfileCard userName=" Steven Lee" image={userImg}>
+                                <p className="text-center fs-6 px-3">
+                                    Just got a pretty neat project via @ooomf -
+                                    Give it a
+                                    <a href="#" className="mx-1">
+                                        tryhttp://t.co/e02DwGEeOJ
+                                    </a>
+                                </p>
+                            </ProfileCard>
+                        </CardBody>
+                    </Card>
                 </Col>
                 {/* end profile card section */}
 

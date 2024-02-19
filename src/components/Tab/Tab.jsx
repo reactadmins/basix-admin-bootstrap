@@ -13,7 +13,7 @@ export const Tab = ({
 }) => {
     const [active, setActive] = useState(activeTab);
     return (
-        <div className={`${styles.tablist_wrapper} ${style[tabPosition]}`}>
+        <div className={`${styles.tablist_wrapper} ${styles[tabPosition]}`}>
             <div className={styles.tab_title}>
                 <ul className={styles.title_list}>
                     {children.length >= 0 ? (

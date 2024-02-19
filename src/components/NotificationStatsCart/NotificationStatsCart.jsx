@@ -5,9 +5,9 @@ import styles from "@/assets/scss/NotificationStatsCart.module.scss";
 const NotificationStatsCart = () => {
     return (
         <Card
-            className={`${stylescard} rounded-top rounded-0 border-0 w-100 h-100`}
+            className={`${styles.card} rounded-top rounded-0 border-0 w-100 h-100`}
         >
-            <Card.Header className={`${stylescard_header} bg-dark border-0`}>
+            <Card.Header className={`${styles.card_header} bg-dark border-0`}>
                 <div className="d-flex align-items-center gap-3">
                     <a href="#">
                         <img
@@ -16,13 +16,13 @@ const NotificationStatsCart = () => {
                             className="rounded-circle border border-5 border-secondary"
                         />
                     </a>
-                    <div className={stylesmedia_body}>
+                    <div className={styles.media_body}>
                         <h3 className="mb-0">Jim Doe</h3>
                         <p>Project Manager</p>
                     </div>
                 </div>
             </Card.Header>
-            <Card.Body className={`${stylescard_body} p-0`}>
+            <Card.Body className={`${styles.card_body} p-0`}>
                 <ul>
                     <li>
                         <a
