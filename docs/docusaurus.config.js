@@ -50,7 +50,7 @@ const config = {
     // ],
 
     // clientModules: ["/notice.js", "/theme-mode.js"],
-    // clientModules: ["/notice.js"],
+    clientModules: ["/notice.js"],
 
     presets: [
         [
@@ -72,6 +72,7 @@ const config = {
                         './node_modules/bootstrap/dist/css/bootstrap.min.css',
                         "./src/css/custom.css",
                       ],
+                      
                 },
             }),
         ],

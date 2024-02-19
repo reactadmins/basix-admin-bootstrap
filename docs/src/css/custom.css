@@ -1,3 +1,5 @@
+@import "./variable.scss";
+
 /* @import "./lib//bootstrap.css"; */
 /**
  * Any CSS included here will be global. The classic template
@@ -32,6 +34,10 @@
 
 body {
     font-family: sans-serif;
+}
+
+a{
+    text-decoration: none!important;
 }
 
 [data-theme="dark"] body {

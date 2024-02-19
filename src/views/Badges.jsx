@@ -35,7 +35,22 @@ const Badges = () => {
                                 },
                             ],
                         },
-                        { icon: "fa fa-angle-down" },
+                        {
+                            icon: "fa fa-angle-down",
+                            dropdown: [
+                                { label: "sdaf", icon: "fa fa-cog", method: () => alert("Cog") },
+                                {
+                                    label: "Deldasfete",
+                                    icon: "fa-solid fa-trash",
+                                    method: () => alert("Delete"),
+                                },
+                                {
+                                    label: "Updadasfte",
+                                    icon: "fa-solid fa-recycle",
+                                    method: () => alert("Update"),
+                                },
+                            ],
+                        },
                     ]}
                     dismissible={true}
                     onClose={() => alert("Close")}
