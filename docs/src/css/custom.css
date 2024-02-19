@@ -36,6 +36,10 @@ body {
     font-family: sans-serif;
 }
 
+a{
+    text-decoration: none!important;
+}
+
 [data-theme="dark"] body {
     background: var(--docusaurus-highlighted-code-line-bg);
 }
