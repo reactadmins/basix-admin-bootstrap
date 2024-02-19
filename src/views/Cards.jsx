@@ -142,7 +142,41 @@ const Cards = () => {
 
                 {/* start notification stats card section */}
                 <Col md={6} lg={4}>
-                    <NotificationStatsCart />
+                    <NotificationStatsCart
+                        useName="Jim Doe"
+                        image={userImg}
+                        description="Project Manager"
+                        notifications={[
+                            {
+                                link: "#",
+                                label: "Mail Inbox",
+                                icon: "fa-regular fa-envelope",
+                                count: 10,
+                                badgeBg: "primary",
+                            },
+                            {
+                                link: "#",
+                                label: "Recent Activity",
+                                icon: "fa-solid fa-server",
+                                count: 15,
+                                badgeBg: "danger",
+                            },
+                            {
+                                link: "#",
+                                label: "Notification",
+                                icon: "fa-regular fa-bell",
+                                count: 11,
+                                badgeBg: "success",
+                            },
+                            {
+                                link: "#",
+                                label: "Message",
+                                icon: "fa-solid fa-message",
+                                count: 3,
+                                badgeBg: "warning",
+                            },
+                        ]}
+                    />
                 </Col>
                 {/* end notification stats card section */}
 
