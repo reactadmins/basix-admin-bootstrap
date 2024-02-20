@@ -85,7 +85,7 @@ export const navItems = [
     },
     {
         name: "Forms",
-        path: "/",
+        path: "#",
         icon: "fa fa-pencil-square",
         children: [
             {
