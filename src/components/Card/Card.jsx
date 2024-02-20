@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect, useRef } from "react";
-import { Card as BootstrapCard, CardHeader } from "react-bootstrap";
+import { Badge, Card as BootstrapCard, CardHeader } from "react-bootstrap";
 import styles from "@/assets/scss/Card.module.scss";
 import classNames from "classnames";
 
@@ -13,6 +13,8 @@ const Card = ({
     isHeader = true,
     headerPosition = "top",
     subscript = "",
+    badgeLabel = "",
+    badgeBg = "",
     icons = [],
     iconColor = "",
     dismissible = false,
@@ -65,7 +67,13 @@ const Card = ({
                             icons.length > 0 ? "justify-content-between" : ""
                         }`}
                     >
-                        <div>
+                        <div
+                            className={`${
+                                badgeLabel
+                                    ? "d-flex align-items-center justify-content-between w-100"
+                                    : ""
+                            }`}
+                        >
                             {titleIcon ? (
                                 <span
                                     className={classNames(
@@ -87,6 +95,9 @@ const Card = ({
                                 {title}
                             </strong>
                             {subscript}
+                            {badgeLabel ? (
+                                <Badge bg={badgeBg}>{badgeLabel}</Badge>
+                            ) : null}
                         </div>
                         {icons.length > 0 && (
                             <div

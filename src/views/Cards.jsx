@@ -1,15 +1,14 @@
 import { Fragment } from "react";
 import {
-    Badge,
     CardBody,
     CardFooter,
-    CardHeader,
+    CardText,
+    CardTitle,
     Col,
     Row,
 } from "react-bootstrap";
 import ProfileCard from "@/components/ProfileCard/ProfileCard";
 import OverlayCard from "@/components/OverlayCard/OverlayCard";
-import WidgetsCard from "@/components/WidgetsCard/WidgetsCard";
 import placeholder from "@/assets/image/placeholder.png";
 import NotificationStatsCart from "@/components/NotificationStatsCart/NotificationStatsCart";
 import userImg from "@/assets/image/admin.jpg";
@@ -223,10 +222,7 @@ const Cards = () => {
 
                 {/* start widgets card section */}
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
-                        <CardHeader>
-                            <h2>Card with switch</h2>
-                        </CardHeader>
+                    <Card title="Card with switch">
                         <CardBody>
                             <p>
                                 Some quick example text to build on the card
@@ -234,16 +230,14 @@ const Cards = () => {
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
-                        <CardHeader>
-                            <div className="d-flex align-items-center justify-content-between">
-                                <h2>Card with switch</h2>{" "}
-                                <Badge bg="success">Success</Badge>
-                            </div>
-                        </CardHeader>
+                    <Card
+                        title="Card with switch"
+                        badgeLabel="Success"
+                        badgeBg="success"
+                    >
                         <CardBody>
                             <p>
                                 Some quick example text to build on the card
@@ -251,16 +245,14 @@ const Cards = () => {
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
-                        <CardHeader>
-                            <div className="d-flex align-items-center justify-content-between">
-                                <h2>Card with switch</h2>{" "}
-                                <Badge bg="danger">49</Badge>
-                            </div>
-                        </CardHeader>
+                    <Card
+                        title="Card with switch"
+                        badgeLabel="49"
+                        badgeBg="danger"
+                    >
                         <CardBody>
                             <p>
                                 Some quick example text to build on the card
@@ -268,13 +260,10 @@ const Cards = () => {
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard borderColor="primary">
-                        <CardHeader>
-                            <h2>Card with switch</h2>
-                        </CardHeader>
+                    <Card title="Card with switch" cardBorderColor="#0D6EFD">
                         <CardBody>
                             <p>
                                 Some quick example text to build on the card
@@ -282,13 +271,10 @@ const Cards = () => {
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard borderColor="secondary">
-                        <CardHeader>
-                            <h2>Card with switch</h2>
-                        </CardHeader>
+                    <Card title="Card with switch" cardBorderColor="#6C757D">
                         <CardBody>
                             <p>
                                 Some quick example text to build on the card
@@ -296,13 +282,10 @@ const Cards = () => {
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard borderColor="success">
-                        <CardHeader>
-                            <h2>Card with switch</h2>
-                        </CardHeader>
+                    <Card title="Card with switch" cardBorderColor="#198754">
                         <CardBody>
                             <p>
                                 Some quick example text to build on the card
@@ -310,136 +293,173 @@ const Cards = () => {
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard bgColor="danger">
-                        <CardBody>
+                    <Card isHeader={false}>
+                        <CardBody
+                            style={{
+                                backgroundColor: "#DC3545",
+                            }}
+                        >
                             <p className="text-light">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
                             </p>
                         </CardBody>
-                        <CardFooter>
+                        <CardFooter
+                            className="rounded-0"
+                            style={{
+                                backgroundColor: "#DC3545",
+                            }}
+                        >
                             <p className="text-light">
                                 - Someone famous in Source Title
                             </p>
                         </CardFooter>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard bgColor="warning">
-                        <CardBody>
+                    <Card isHeader={false}>
+                        <CardBody
+                            style={{
+                                backgroundColor: "#FFC107",
+                            }}
+                        >
                             <p className="text-light">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
                             </p>
                         </CardBody>
-                        <CardFooter>
-                            <p className="text-light">
-                                - Someone famous in Source Title
-                            </p>
-                        </CardFooter>
-                    </WidgetsCard>
-                </Col>
-                <Col md={6} lg={4}>
-                    <WidgetsCard bgColor="primary">
-                        <CardBody>
-                            <p className="text-light">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                            </p>
-                        </CardBody>
-                        <CardFooter>
+                        <CardFooter
+                            className="rounded-0"
+                            style={{
+                                backgroundColor: "#FFC107",
+                            }}
+                        >
                             <p className="text-light">
                                 - Someone famous in Source Title
                             </p>
                         </CardFooter>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard bgColor="primary">
-                        <CardHeader className="bg-secondary rounded-0">
-                            <h2 className="text-light">Card Outline</h2>
-                        </CardHeader>
-                        <CardBody>
+                    <Card isHeader={false}>
+                        <CardBody
+                            style={{
+                                backgroundColor: "#0D6EFD",
+                            }}
+                        >
                             <p className="text-light">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                        <CardFooter
+                            className="rounded-0"
+                            style={{
+                                backgroundColor: "#0D6EFD",
+                            }}
+                        >
+                            <p className="text-light">
+                                - Someone famous in Source Title
+                            </p>
+                        </CardFooter>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard bgColor="danger">
-                        <CardHeader className="bg-dark rounded-0">
-                            <h2 className="text-light">Card Outline</h2>
-                        </CardHeader>
-                        <CardBody>
+                    <Card
+                        title="Card White Header Bg"
+                        titleBg="#6C757D"
+                        cardHeaderBorderColor="#6C757D"
+                        titleColor="#fff"
+                    >
+                        <CardBody style={{ backgroundColor: "#0D6EFD" }}>
                             <p className="text-light">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
-                        <CardHeader className="bg-success rounded-0">
-                            <h2 className="text-light">Card Outline</h2>
-                        </CardHeader>
-                        <CardBody>
-                            <p>
+                    <Card
+                        title="Card White Header Bg"
+                        titleBg="#212529"
+                        cardHeaderBorderColor="#212529"
+                        titleColor="#fff"
+                    >
+                        <CardBody style={{ backgroundColor: "#DC3545" }}>
+                            <p className="text-light">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
                             </p>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
+                    <Card
+                        title="Card White Header Bg"
+                        titleBg="#198754"
+                        cardHeaderBorderColor="#198754"
+                        titleColor="#fff"
+                    >
+                        <CardBody style={{ backgroundColor: "#FFC107" }}>
+                            <p className="text-light">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col md={6} lg={4}>
+                    <Card isHeader={false}>
                         <img src={placeholder} alt="" />
                         <CardBody>
-                            <h2 className="card-title">Card Image Title</h2>
-                            <p className="card-text mt-2">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                            </p>
+                            <CardBody>
+                                <CardTitle>Card Image Title</CardTitle>
+                                <CardText>
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </CardText>
+                            </CardBody>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
+                    <Card isHeader={false}>
                         <img src={placeholder} alt="" />
                         <CardBody>
-                            <h2 className="card-title">Card Image Title</h2>
-                            <p className="card-text mt-2">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                            </p>
+                            <CardBody>
+                                <CardTitle>Card Image Title</CardTitle>
+                                <CardText>
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </CardText>
+                            </CardBody>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 <Col md={6} lg={4}>
-                    <WidgetsCard>
+                    <Card isHeader={false}>
                         <img src={placeholder} alt="" />
                         <CardBody>
-                            <h2 className="card-title">Card Image Title</h2>
-                            <p className="card-text mt-2">
+                            <CardTitle>Card Image Title</CardTitle>
+                            <CardText>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
-                            </p>
+                            </CardText>
                         </CardBody>
-                    </WidgetsCard>
+                    </Card>
                 </Col>
                 {/* end widgets card section */}
             </Row>
