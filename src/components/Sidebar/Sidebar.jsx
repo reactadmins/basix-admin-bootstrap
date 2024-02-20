@@ -11,6 +11,7 @@ import black_mini_logo from "../../assets/image/black-mini-logo.png";
 
 const Sidebar = ({ type = "vertical" }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);
+    const [activeMenu, setActiveMenu] = useState("dashboard");
     const { sidebarMini, setSidebarMini, sidebarBgColor, isDark } =
         useDashboardDataContext();
 
@@ -88,6 +89,8 @@ const Sidebar = ({ type = "vertical" }) => {
                                         index={index}
                                         navIsOpen={navIsOpen}
                                         setNavIsOpen={setNavIsOpen}
+                                        activeMenu={activeMenu}
+                                        setActiveMenu={setActiveMenu}
                                     />
                                 )}
                                 {item?.title && !sidebarMini ? (
