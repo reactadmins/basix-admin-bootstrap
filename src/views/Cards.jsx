@@ -201,9 +201,22 @@ const Cards = () => {
                 {/* start overlay card section */}
                 <Col md={6} lg={4}>
                     <OverlayCard
-                        useName=""
+                        useName="Jim Doe"
                         image={userImg}
                         description="Project Manager"
+                        socialStatus={[
+                            { label: "Tweets", count: 750 },
+                            { label: "Following", count: 865 },
+                            { label: "Followers", count: 3645 },
+                        ]}
+                        comment={
+                            <textarea
+                                placeholder="Write your Tweet and Enter"
+                                rows="1"
+                                className="w-100 form-control"
+                            />
+                        }
+                        locationName="New Castle, UK"
                     />
                 </Col>
                 {/* end overlay card section */}

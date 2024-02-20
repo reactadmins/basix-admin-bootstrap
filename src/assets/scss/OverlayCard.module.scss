@@ -11,7 +11,7 @@
             .overlay {
                 &::before {
                     position: absolute;
-                    // content: [data];
+                    content: "\f099";
                     font: normal normal normal 130px/1 FontAwesome;
                     top: 0;
                     left: 25px;
@@ -37,7 +37,8 @@
             }
         }
         .media_body {
-            textarea {
+            textarea,
+            input {
                 border: 1px solid var(--border-color);
                 color: var(--hedging-text-color);
                 padding: 0.375rem 0.75rem;
@@ -50,9 +51,9 @@
                 i {
                     color: var(--content-text-color);
                 }
-            }
-            span {
-                color: var(--hedging-text-color);
+                span {
+                    color: var(--hedging-text-color);
+                }
             }
         }
         .weather_category {
