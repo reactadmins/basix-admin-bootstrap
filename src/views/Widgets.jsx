@@ -1,9 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
-import StatsCard from "../components/StatsCard/StatsCard";
-import SocialCounter from "../components/SocialCounter/SocialCounter";
-import UserStats from "../components/UserStats/UserStats";
-import NotificationStatsCart from "../components/NotificationStatsCart/NotificationStatsCart";
+import StatsCard from "@/components/StatsCard/StatsCard";
+import SocialCounter from "@/components/SocialCounter/SocialCounter";
+import UserStats from "@/components/UserStats/UserStats";
+import NotificationStatsCart from "@/components/NotificationStatsCart/NotificationStatsCart";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 import OverlayCard from "../components/OverlayCard/OverlayCard";
 import userImg from "../assets/image/admin.jpg";
