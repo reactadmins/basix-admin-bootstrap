@@ -11,10 +11,10 @@ const progressBars = () => {
                     <Card title="Background">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar variant="success" value="25" />
-                                <ProgressBar variant="info" value="50" />
-                                <ProgressBar variant="warning" value="75" />
-                                <ProgressBar variant="danger" value="100" />
+                                <ProgressBar progressBg="#28a745" value="25" />
+                                <ProgressBar progressBg="#17a2b8" value="50" />
+                                <ProgressBar progressBg="#ffc107" value="75" />
+                                <ProgressBar progressBg="#dc3545" value="100" />
                             </div>
                         </CardBody>
                     </Card>
@@ -25,22 +25,22 @@ const progressBars = () => {
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="success"
+                                    progressBg="#28a745"
                                     value="25"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="info"
+                                    progressBg="#17a2b8"
                                     value="50"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="warning"
+                                    progressBg="#ffc107"
                                     value="75"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="danger"
+                                    progressBg="#dc3545"
                                     value="100"
                                 />
                             </div>
@@ -52,22 +52,22 @@ const progressBars = () => {
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
-                                    variant="success"
+                                    progressBg="#28a745"
                                     value="25"
                                     label="25"
                                 />
                                 <ProgressBar
-                                    variant="info"
+                                    progressBg="#17a2b8"
                                     value="50"
                                     label="50"
                                 />
                                 <ProgressBar
-                                    variant="warning"
+                                    progressBg="#ffc107"
                                     value="75"
                                     label="75"
                                 />
                                 <ProgressBar
-                                    variant="danger"
+                                    progressBg="#dc3545"
                                     value="100"
                                     label="100"
                                 />
@@ -81,25 +81,25 @@ const progressBars = () => {
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="success"
+                                    progressBg="#28a745"
                                     value="25"
                                     label="25"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="info"
+                                    progressBg="#17a2b8"
                                     value="50"
                                     label="50"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="warning"
+                                    progressBg="#ffc107"
                                     value="75"
                                     label="75"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
-                                    variant="danger"
+                                    progressBg="#dc3545"
                                     value="100"
                                     label="100"
                                 />
@@ -113,22 +113,22 @@ const progressBars = () => {
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
                                     isStriped={true}
-                                    variant="success"
+                                    progressBg="#28a745"
                                     value="25"
                                 />
                                 <ProgressBar
                                     isStriped={true}
-                                    variant="info"
+                                    progressBg="#17a2b8"
                                     value="50"
                                 />
                                 <ProgressBar
                                     isStriped={true}
-                                    variant="warning"
+                                    progressBg="#ffc107"
                                     value="75"
                                 />
                                 <ProgressBar
                                     isStriped={true}
-                                    variant="danger"
+                                    progressBg="#dc3545"
                                     value="100"
                                 />
                             </div>
@@ -142,28 +142,28 @@ const progressBars = () => {
                                 <ProgressBar
                                     isAnimated={true}
                                     isStriped={true}
-                                    variant="success"
+                                    progressBg="#28a745"
                                     value="25"
                                     label="25"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
                                     isStriped={true}
-                                    variant="info"
+                                    progressBg="#17a2b8"
                                     value="50"
                                     label="50"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
                                     isStriped={true}
-                                    variant="warning"
+                                    progressBg="#ffc107"
                                     value="75"
                                     label="75"
                                 />
                                 <ProgressBar
                                     isAnimated={true}
                                     isStriped={true}
-                                    variant="danger"
+                                    progressBg="#dc3545"
                                     value="100"
                                     label="100"
                                 />
