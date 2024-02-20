@@ -1,22 +1,25 @@
 import { useState } from "react";
 import PersonalDetails from "./Page/PersonalDetails";
 import AdditionalInfo from "./Page/AdditionalInfo";
-import styles from "@/assets/scss/StepCircleWizard.module.scss";
+import styles from "./StepSquarWizard.module.scss";
 
-const StepCircleWizard = () => {
+const StepSquarWizard = () => {
     const [activeTab, setActiveTab] = useState(1);
 
     const tabs = [
         {
             id: 1,
+            icon: "fa-solid fa-user",
             name: "Personal details",
         },
         {
             id: 2,
+            icon: "fa-solid fa-gear",
             name: "Additional Info",
         },
         {
             id: 3,
+            icon: "fa-solid fa-check",
             name: "Last step",
         },
     ];
@@ -26,7 +29,6 @@ const StepCircleWizard = () => {
             setActiveTab(step);
         }
     };
-
     return (
         <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
             <div className="row">
@@ -53,7 +55,7 @@ const StepCircleWizard = () => {
                                     className={`${styles.wizard_icon} ${
                                         activeTab >= index + 1 ? styles.active : ""
                                     } mx-auto position-relative`}>
-                                    <span>{items.id}</span>
+                                    <i className={`${items.icon}`} style={{ fontSize: "24px" }}></i>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +72,7 @@ const StepCircleWizard = () => {
                 {activeTab === 1 && <PersonalDetails />}
                 {activeTab === 2 && <AdditionalInfo />}
                 {activeTab === 3 && (
-                    <span className={`py-2 mb-3 ${styles.step_content_title}`}>
+                    <span className={styles.step_content_title}>
                         Congratulations This is the Final Step
                     </span>
                 )}
@@ -78,13 +80,22 @@ const StepCircleWizard = () => {
             <div
                 className={`${styles.step_btn_wrapper} mb-4`}
                 style={{ padding: "0 20px" }}>
-                {activeTab > 1 && <button onClick={() => updateStep(activeTab - 1)}>Back</button>}
-                <button className="float-end" onClick={() => updateStep(activeTab + 1)}>
-                    Next
+                {activeTab > 1 && activeTab < tabs.length && (
+                    <button onClick={() => updateStep(activeTab - 1)}>Back</button>
+                )}
+                <button
+                    className="float-end"
+                    style={{
+                        backgroundColor: `${
+                            activeTab < tabs.length ? "rgb(52, 152, 219)" : "#43a047"
+                        }`,
+                    }}
+                    onClick={() => updateStep(activeTab + 1)}>
+                    {activeTab < tabs.length ? "Next" : "Done"}
                 </button>
             </div>
         </div>
     );
 };
 
-export default StepCircleWizard;
+export default StepSquarWizard;

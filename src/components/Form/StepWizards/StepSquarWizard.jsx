@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PersonalDetails from "./Page/PersonalDetails";
 import AdditionalInfo from "./Page/AdditionalInfo";
-import stepWizardStyle from "../../../assets/scss/StepSquarWizard.module.scss";
+import styles from "@/assets/scss/StepSquarWizard.module.scss";
 
 const StepSquarWizard = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -30,10 +30,10 @@ const StepSquarWizard = () => {
         }
     };
     return (
-        <div className={`${stepWizardStyle.wizard_wrapper} position-relative mt-5 px-3`}>
+        <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
             <div className="row">
                 <div
-                    className={`position-absolute ${stepWizardStyle.wizard_progress}`}
+                    className={`position-absolute ${styles.wizard_progress}`}
                     style={{
                         width: `${
                             activeTab === 1
@@ -47,38 +47,38 @@ const StepSquarWizard = () => {
                     }}></div>
                 {tabs.map((items, index) => (
                     <div className="col-4 text-center p-0" key={items.id}>
-                        <div className={stepWizardStyle.step_block}>
+                        <div className={styles.step_block}>
                             <div
-                                className={stepWizardStyle.step_wrapper}
+                                className={styles.step_wrapper}
                                 onClick={() => updateStep(index + 1)}>
                                 <div
-                                    className={`${stepWizardStyle.wizard_icon} ${
-                                        activeTab >= index + 1 ? stepWizardStyle.active : ""
+                                    className={`${styles.wizard_icon} ${
+                                        activeTab >= index + 1 ? styles.active : ""
                                     } mx-auto position-relative`}>
                                     <i className={`${items.icon}`} style={{ fontSize: "24px" }}></i>
                                 </div>
                             </div>
                         </div>
                         <span
-                            className={`${stepWizardStyle.step_title} ${
-                                activeTab >= index + 1 ? stepWizardStyle.step_title_active : ""
+                            className={`${styles.step_title} ${
+                                activeTab >= index + 1 ? styles.step_title_active : ""
                             }`}>
                             {items.name}
                         </span>
                     </div>
                 ))}
             </div>
-            <div className={stepWizardStyle.step_content}>
+            <div className={styles.step_content}>
                 {activeTab === 1 && <PersonalDetails />}
                 {activeTab === 2 && <AdditionalInfo />}
                 {activeTab === 3 && (
-                    <span className={stepWizardStyle.step_content_title}>
+                    <span className={styles.step_content_title}>
                         Congratulations This is the Final Step
                     </span>
                 )}
             </div>
             <div
-                className={`${stepWizardStyle.step_btn_wrapper} mb-4`}
+                className={`${styles.step_btn_wrapper} mb-4`}
                 style={{ padding: "0 20px" }}>
                 {activeTab > 1 && activeTab < tabs.length && (
                     <button onClick={() => updateStep(activeTab - 1)}>Back</button>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import PersonalDetails from "./Page/PersonalDetails";
 import AdditionalInfo from "./Page/AdditionalInfo";
 import LoggedIn from "./Page/LoggedIn";
-import styles from "@/assets/scss/StepTabWizard.module.scss";
+import styles from "./StepTabWizard.module.scss";
 
 const StepTabWizard = () => {
     const [activeTab, setActiveTab] = useState(1);

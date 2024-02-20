@@ -90,7 +90,7 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group d-flex gap-2  justify-content-between mt-3">
-                                    <dir>
+                                    <div>
                                         <label htmlFor="day" className="form-control-label mb-1">
                                             Expiration
                                         </label>
@@ -100,7 +100,7 @@ const BasicForm = () => {
                                             placeholder="MM/YY"
                                             className="form-control"
                                         />
-                                    </dir>
+                                    </div>
                                     <div className="form-group ">
                                         <label
                                             htmlFor="security"

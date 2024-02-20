@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PersonalDetails from "./Page/PersonalDetails";
 import AdditionalInfo from "./Page/AdditionalInfo";
-import styles from "@/assets/scss/StepCircleWizard.module.scss";
+import styles from "./StepCircleWizard.module.scss";
 
 const StepCircleWizard = () => {
     const [activeTab, setActiveTab] = useState(1);
