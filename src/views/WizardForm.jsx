@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
-import StepCircleWizard from "../components/Form/StepWizards/StepCircleWizard";
-import StepSquarWizard from "../components/Form/StepWizards/StepSquarWizard";
-import StepTabWizard from "../components/Form/StepWizards/StepTabWizard";
+import Card from "@/components/Card/Card";
+import StepCircleWizard from "@/components/Form/StepWizards/StepCircleWizard";
+import StepSquarWizard from "@/components/Form/StepWizards/StepSquarWizard";
+import StepTabWizard from "@/components/Form/StepWizards/StepTabWizard";
 
 const WizardForm = () => {
     return (

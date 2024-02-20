@@ -1,80 +1,56 @@
-import { Card } from "react-bootstrap";
-import admin from "../../assets/image/admin.jpg";
-import style from "../../assets/scss/NotificationStatsCart.module.scss";
+import styles from "@/assets/scss/NotificationStatsCart.module.scss";
+import { Badge } from "react-bootstrap";
 
-const NotificationStatsCart = () => {
+const NotificationStatsCart = ({
+    useName = "",
+    image = "",
+    description = "",
+    notifications = [],
+}) => {
     return (
-        <Card
-            className={`${style.card} rounded-top rounded-0 border-0 w-100 h-100`}
+        <div
+            className={`${styles.notification_wrapper} rounded-top rounded-0 border-0 w-100 h-100`}
         >
-            <Card.Header className={`${style.card_header} bg-dark border-0`}>
+            <div className={`${styles.header} bg-dark border-0`}>
                 <div className="d-flex align-items-center gap-3">
                     <a href="#">
                         <img
-                            src={admin}
+                            src={image}
                             alt="user"
                             className="rounded-circle border border-5 border-secondary"
                         />
                     </a>
-                    <div className={style.media_body}>
-                        <h3 className="mb-0">Jim Doe</h3>
-                        <p>Project Manager</p>
+                    <div className={styles.media_body}>
+                        <h3 className="mb-0">{useName}</h3>
+                        <p>{description}</p>
                     </div>
                 </div>
-            </Card.Header>
-            <Card.Body className={`${style.card_body} p-0`}>
+            </div>
+            <div className={`${styles.notifications} p-0`}>
                 <ul>
-                    <li>
-                        <a
-                            href="#"
-                            className="d-flex justify-content-between align-items-center p-3"
-                        >
-                            <span className="d-flex align-items-center gap-2">
-                                <i className="fa-regular fa-envelope"></i>
-                                Mail Inbox
-                            </span>
-                            <span className="badge bg-primary">10</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className="d-flex justify-content-between align-items-center p-3"
-                        >
-                            <span className="d-flex align-items-center gap-2">
-                                <i className="fa-solid fa-server"></i>
-                                Recent Activity
-                            </span>
-                            <span className="badge bg-danger">15</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className="d-flex justify-content-between align-items-center p-3"
-                        >
-                            <span className="d-flex align-items-center gap-2">
-                                <i className="fa-regular fa-bell"></i>
-                                Notification
-                            </span>
-                            <span className="badge bg-success">11</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className="d-flex justify-content-between align-items-center p-3"
-                        >
-                            <span className=" d-flex align-items-center gap-2">
-                                <i className="fa-solid fa-message"></i>
-                                Message
-                            </span>
-                            <span className="badge bg-warning">3</span>
-                        </a>
-                    </li>
+                    {notifications.length > 0
+                        ? notifications?.map((item, index) => {
+                              return (
+                                  <li key={index}>
+                                      <a
+                                          href="#"
+                                          className="d-flex justify-content-between align-items-center p-3"
+                                      >
+                                          <span className="d-flex align-items-center gap-2">
+                                              <i className={item.icon}></i>
+                                              {item.label}
+                                          </span>
+                                          <Badge bg={item.badgeBg}>
+                                              {item.count}
+                                          </Badge>
+                                      </a>
+                                  </li>
+                              );
+                          })
+                        : null}
                 </ul>
-            </Card.Body>
-        </Card>
+            </div>
+        </div>
     );
 };
 

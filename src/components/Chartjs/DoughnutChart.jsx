@@ -1,6 +1,7 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
 ChartJS.register(ArcElement, Tooltip, Legend);
 const DoughnutChart = () => {
     const data = {
@@ -27,11 +28,13 @@ const DoughnutChart = () => {
     };
     return (
         <Card title="Doughnut Chart">
-            <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                <div style={{ width: "80%" }}>
-                    <Doughnut data={data} />
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <div style={{ width: "80%" }}>
+                        <Doughnut data={data} />
+                    </div>
                 </div>
-            </div>
+            </CardBody>
         </Card>
     );
 };

@@ -1,45 +1,27 @@
-.card {
-    background-color: var(--bg-content) !important;
-    box-shadow: 0 0 0 1px var(--border-color) !important;
-    .card_header {
-        border-color: var(--border-color);
-        i {
-            margin-right: 6px;
-            font-size: 0.875em;
-            font-weight: 600;
-            color: var(--content-text-color);
-        }
-        strong {
-            font-size: 0.875em;
-            font-weight: 600;
-            color: var(--hedging-text-color);
-        }
+.profile_card {
+    padding: 30px 16px;
+    img {
+        width: 156px;
     }
-    .card_body {
-        padding: 30px 16px;
-        img {
-            width: 156px;
-        }
-        .title {
-            font-size: 28px;
-            color: var(--hedging-text-color);
-        }
-        span {
-            color: var(--content-text-color);
-        }
-        hr {
-            background-color: var(--border-color);
-            height: 1px;
-            opacity: 1;
-        }
+    .title {
+        font-size: 28px;
+        color: var(--hedging-text-color);
+    }
+    span {
+        color: var(--content-text-color);
+    }
+    hr {
+        background-color: var(--border-color);
+        height: 1px;
+        opacity: 1;
+        margin-bottom: 0;
+    }
+    p {
+        color: var(--content-text-color);
     }
     .card_footer {
-        padding: 8px 16px;
-        border-color: var(--border-color);
-        strong {
-            font-size: 0.875em;
-            font-weight: 600;
-            color: var(--hedging-text-color);
-        }
+        padding: 20px;
+        border: 0 !important;
+        background-color: var(--bg-content);
     }
 }

@@ -1,16 +1,16 @@
 import { useState } from "react";
-import tablesStyle from "../../assets/scss/Tables.module.scss";
+import styles from "@/assets/scss/Tables.module.scss";
 
 const Table = ({ isSearch = false, isVariants = false, data = [] }) => {
     const [search, setSearch] = useState("");
     const [select, setSelect] = useState(10);
 
     return (
-        <div className={`table-responsive  ${tablesStyle.table_wrapper}`}>
+        <div className={`table-responsive  ${styles.table_wrapper}`}>
             {isSearch ? (
                 <div className="d-flex justify-content-between align-items-center mt-2 mb-4">
                     <div
-                        className={`d-flex align-items-center ${tablesStyle.search_wrapper}`}
+                        className={`d-flex align-items-center ${styles.search_wrapper}`}
                     >
                         <input
                             className="form-control"
@@ -23,7 +23,7 @@ const Table = ({ isSearch = false, isVariants = false, data = [] }) => {
                             <i className="fa fa fa-search"></i>
                         </button>
                     </div>
-                    <div className={tablesStyle.show_entries}>
+                    <div className={styles.show_entries}>
                         <select
                             value={select}
                             className="btn btn-primary"
@@ -38,8 +38,8 @@ const Table = ({ isSearch = false, isVariants = false, data = [] }) => {
                 </div>
             ) : null}
 
-            <table className={`table ${tablesStyle.table}`}>
-                <thead className={`text-primary thead ${tablesStyle.thead}`}>
+            <table className={`table ${styles.table}`}>
+                <thead className={`text-primary thead ${styles.thead}`}>
                     <tr>
                         <td>Name</td>
                         <td>Email</td>
@@ -48,7 +48,7 @@ const Table = ({ isSearch = false, isVariants = false, data = [] }) => {
                         {isVariants ? <td>Status</td> : null}
                     </tr>
                 </thead>
-                <tbody className={`tbody ${tablesStyle.tbody}`}>
+                <tbody className={`tbody ${styles.tbody}`}>
                     {data
                         ?.slice(0, select)
                         .filter((item) => {

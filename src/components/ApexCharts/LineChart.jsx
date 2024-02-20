@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
 
 const LineChart = () => {
     const [state, setState] = useState({
@@ -75,15 +76,17 @@ const LineChart = () => {
     });
     return (
         <Card title="Stacked Columns">
-            <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                <ReactApexChart
-                    options={state.options}
-                    series={state.series}
-                    type="bar"
-                    height={300}
-                    style={{ width: "100%" }}
-                />
-            </div>
+            <CardBody>
+                <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                    <ReactApexChart
+                        options={state.options}
+                        series={state.series}
+                        type="bar"
+                        height={300}
+                        style={{ width: "100%" }}
+                    />
+                </div>
+            </CardBody>
         </Card>
     );
 };

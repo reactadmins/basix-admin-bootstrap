@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
 const Revenue = () => {

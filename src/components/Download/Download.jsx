@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import ReactApexChart from "react-apexcharts";
 import { CardBody } from "react-bootstrap";
 

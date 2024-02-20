@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { CardBody, Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
 import StatsCard from "@/components/StatsCard/StatsCard";
 import SocialCounter from "@/components/SocialCounter/SocialCounter";
@@ -136,12 +136,7 @@ const Widgets = () => {
                         title="New Users"
                         icon={
                             <LineChart width={100} height={67} data={data2}>
-                                <Line
-                                    type="monotone"
-                                    dataKey="pv"
-                                    stroke="#fff"
-                                    strokeWidth={2}
-                                />
+                                <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} />
                             </LineChart>
                         }
                     />
@@ -579,7 +574,7 @@ const Widgets = () => {
                         conunt="5:34:11"
                         title="Avg. Time"
                         progressBg="#4dbd74"
-                        progressPercent={40}
+                        progressPercent={50}
                     />
                 </Col>
                 <Col className="p-0 mb-4" sm={12} md={6} lg={2} xl={2}>
@@ -657,34 +652,75 @@ const Widgets = () => {
             {/* start notification card, profile card & overlay card section */}
             <Row className="gy-4 gx-4">
                 <Col sm={12} md={6} lg={4}>
-                    <NotificationStatsCart />
-                </Col>
-                <Col sm={12} md={6} lg={4}>
-                    <ProfileCard
-                        userName="Steven Lee"
+                    <NotificationStatsCart
+                        useName="Jim Doe"
                         image={userImg}
-                        userInfo={
-                            <p
-                                className="text-center fs-6 px-3 py-3"
-                                style={{
-                                    color: "var(--content-text-color)",
-                                }}
-                            >
-                                Just got a pretty neat project via @ooomf - Give
-                                it a try
-                                <a
-                                    href="#"
-                                    className="text-decoration-none mx-1"
-                                    style={{ color: "var(--link-color)" }}
-                                >
-                                    http://t.co/e02DwGEeOJ
-                                </a>
-                            </p>
-                        }
+                        description="Project Manager"
+                        notifications={[
+                            {
+                                link: "#",
+                                label: "Mail Inbox",
+                                icon: "fa-regular fa-envelope",
+                                count: 10,
+                                badgeBg: "primary",
+                            },
+                            {
+                                link: "#",
+                                label: "Recent Activity",
+                                icon: "fa-solid fa-server",
+                                count: 15,
+                                badgeBg: "danger",
+                            },
+                            {
+                                link: "#",
+                                label: "Notification",
+                                icon: "fa-regular fa-bell",
+                                count: 11,
+                                badgeBg: "success",
+                            },
+                            {
+                                link: "#",
+                                label: "Message",
+                                icon: "fa-solid fa-message",
+                                count: 3,
+                                badgeBg: "warning",
+                            },
+                        ]}
                     />
                 </Col>
                 <Col sm={12} md={6} lg={4}>
-                    <OverlayCard />
+                    <Card isHeader={false}>
+                        <CardBody className="p-0">
+                            <ProfileCard userName="Steven Lee" image={userImg}>
+                                <p className="text-center fs-6 px-3">
+                                    Just got a pretty neat project via @ooomf - Give it a
+                                    <a href="#" className="mx-1">
+                                        tryhttp://t.co/e02DwGEeOJ
+                                    </a>
+                                </p>
+                            </ProfileCard>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col sm={12} md={6} lg={4}>
+                    <OverlayCard
+                        useName="Jim Doe"
+                        image={userImg}
+                        description="Project Manager"
+                        socialStatus={[
+                            { label: "Tweets", count: 750 },
+                            { label: "Following", count: 865 },
+                            { label: "Followers", count: 3645 },
+                        ]}
+                        comment={
+                            <textarea
+                                placeholder="Write your Tweet and Enter"
+                                rows="1"
+                                className="w-100 form-control"
+                            />
+                        }
+                        locationName="New Castle, UK"
+                    />
                 </Col>
             </Row>
             {/* emd notification card, profile card & overlay card section */}

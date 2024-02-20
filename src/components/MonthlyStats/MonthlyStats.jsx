@@ -1,7 +1,7 @@
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 import { Line, LineChart, ResponsiveContainer } from "recharts";
-import styles from "../../assets/scss/MonthlyStats.module.scss";
+import styles from "@/assets/scss/MonthlyStats.module.scss";
 
 const MonthlyStats = () => {
     const data = [

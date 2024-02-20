@@ -1,5 +1,5 @@
 import { Card } from "react-bootstrap";
-import ProgressBar from "../ProgressBar/ProgressBar";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 const UserStats = ({
     bgColor = "",
@@ -57,10 +57,11 @@ const UserStats = ({
                 </div>
                 <div className={`mt-3 ${size == "2xl" ? "mb-3" : "mb-2"}`}>
                     <ProgressBar
-                        percent={progressPercent}
-                        progressBg="transparent"
-                        height={5}
-                        strokeColor={progressBg}
+                        isAnimated={false}
+                        value={progressPercent}
+                        ProgressBarBg="transparent"
+                        height="5px"
+                        progressBg={progressBg}
                     />
                 </div>
             </Card.Body>

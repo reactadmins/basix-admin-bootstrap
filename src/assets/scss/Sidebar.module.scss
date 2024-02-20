@@ -39,6 +39,7 @@
                     text-decoration: none;
                     padding: 0 15px;
                     border-radius: 8px;
+                    user-select: none;
                     .menu_iocn {
                         width: 30px;
                         display: block;
@@ -54,16 +55,22 @@
                         background-color: hsla(0, 0%, 78.4%, 0.3);
                     }
                     &.active {
-                        background-color: red;
+                        background-color: #9c27b0;
                     }
                 }
                 .sub_menu {
                     display: none;
+                    transition-property: height;
+                    transition-duration: 2s;
+                    transform: scaleY(0);
+                    height: max-content;
                     &.active {
                         display: block;
                         position: relative;
-                        margin: 15px 0;
+                        transform: scaleY(1);
+                        transition-duration: 2s;
                         ul {
+                            margin: 10px 0;
                             li {
                                 a {
                                     padding: 0 30px;

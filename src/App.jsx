@@ -1,10 +1,10 @@
 import { Fragment, useState } from "react";
 import { EntypoSprite } from "@entypo-icons/react";
 import { Routes, Route } from "react-router-dom";
-import routes from "./routes.jsx";
-import Layouts from "./layouts/Layouts.jsx";
-import { DashboardDataProvider } from "./context/dashboardDataContext.jsx";
-import Switcher from "./components/Switcher/Switcher.jsx";
+import routes from "@/routes.jsx";
+import Layouts from "@/layouts/Layouts.jsx";
+import { DashboardDataProvider } from "@/context/dashboardDataContext.jsx";
+import Switcher from "@/components/Switcher/Switcher.jsx";
 
 function App() {
     const [sidebarMini, setSidebarMini] = useState(false);

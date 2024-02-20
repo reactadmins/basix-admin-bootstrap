@@ -1,5 +1,5 @@
 import { Fragment, createContext, useContext, useState } from "react";
-import styles from "../../assets/scss/Stats.module.scss";
+import styles from "@/assets/scss/Stats.module.scss";
 
 export const ActiveTabContext = createContext();
 

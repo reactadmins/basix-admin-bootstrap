@@ -1,6 +1,6 @@
 import { Card, CardBody } from "react-bootstrap";
 import CountUp from "react-countup";
-import styles from "../../assets/scss/SocialCounter.module.scss";
+import styles from "@/assets/scss/SocialCounter.module.scss";
 
 const SocialCounter = ({
     bgColor = "transparent",

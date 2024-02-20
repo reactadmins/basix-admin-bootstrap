@@ -1,8 +1,8 @@
 import { Fragment, useState } from "react";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { Row, Col, CardBody, CardFooter } from "react-bootstrap";
 import { Line } from "react-chartjs-2";
-import styles from "../../assets/scss/AnalyticsStats.module.scss";
+import styles from "@/assets/scss/AnalyticsStats.module.scss";
 import {
     Chart as ChartJS,
     CategoryScale,

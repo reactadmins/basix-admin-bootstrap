@@ -9,8 +9,8 @@ import {
     Tooltip,
     ResponsiveContainer,
 } from "recharts";
-import Card from "../Card/Card";
-import styles from "../../assets/scss/Traffic.module.scss";
+import Card from "@/components/Card/Card";
+import styles from "@/assets/scss/Traffic.module.scss";
 
 const Traffic = () => {
     const [close, setClose] = useState(false);

@@ -1,7 +1,7 @@
-import logo from "../assets/image/logo.png";
+import logo from "@/assets/image/logo.png";
 import { Link } from "react-router-dom";
-import errorPageStyle from "../assets/scss/Authentication.module.scss";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
+import errorPageStyle from "@/assets/scss/Authentication.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 
 const Page500 = () => {
     const { isThemeDirection } = useDashboardDataContext();

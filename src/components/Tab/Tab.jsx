@@ -1,5 +1,5 @@
 import { Fragment, createContext, useContext, useState } from "react";
-import style from "../../assets/scss/Tabs.module.scss";
+import styles from "@/assets/scss/Tabs.module.scss";
 
 export const ActiveTabContext = createContext();
 
@@ -13,9 +13,9 @@ export const Tab = ({
 }) => {
     const [active, setActive] = useState(activeTab);
     return (
-        <div className={`${style.tablist_wrapper} ${style[tabPosition]}`}>
-            <div className={style.tab_title}>
-                <ul className={style.title_list}>
+        <div className={`${styles.tablist_wrapper} ${styles[tabPosition]}`}>
+            <div className={styles.tab_title}>
+                <ul className={styles.title_list}>
                     {children.length >= 0 ? (
                         children?.map((item) => {
                             return (
@@ -24,9 +24,9 @@ export const Tab = ({
                                     onClick={() =>
                                         setActive(item.props.eventKey)
                                     }
-                                    className={`${style.inactive_tab} ${
+                                    className={`${styles.inactive_tab} ${
                                         item.props.eventKey === active
-                                            ? style.active_tab
+                                            ? styles.active_tab
                                             : ""
                                     } ${
                                         item?.props?.icon
@@ -59,9 +59,9 @@ export const Tab = ({
                         })
                     ) : (
                         <li
-                            className={`${style.inactive_tab} ${
+                            className={`${styles.inactive_tab} ${
                                 children.props.eventKey === active
-                                    ? style.active_tab
+                                    ? styles.active_tab
                                     : ""
                             } ${
                                 children?.props?.icon

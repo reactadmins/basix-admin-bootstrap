@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import styles from "../../assets/scss/DeviceVisitorStats.module.scss";
+import styles from "@/assets/scss/DeviceVisitorStats.module.scss";
 
 const DeviceVisitorStats = () => {
     const [state, setState] = useState({

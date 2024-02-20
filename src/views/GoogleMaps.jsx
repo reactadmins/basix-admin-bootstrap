@@ -1,5 +1,5 @@
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import Card from "../components/Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
 const GoogleMaps = () => {

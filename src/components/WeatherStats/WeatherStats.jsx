@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { CardBody, CardFooter } from "react-bootstrap";
-import styles from "../../assets/scss/WeatherStats.module.scss";
-import Card from "../Card/Card";
+import styles from "@/assets/scss/WeatherStats.module.scss";
+import Card from "@/components/Card/Card";
 
 export const Stats = ({ title, counter, Symbol }) => {
     return (

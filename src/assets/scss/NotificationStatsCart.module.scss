@@ -1,6 +1,6 @@
-.card {
+.notification_wrapper {
     box-shadow: 0 0 0 1px var(--border-color);
-    .card_header {
+    .header {
         padding: 17px 20px;
         a {
             img {
@@ -21,7 +21,7 @@
             }
         }
     }
-    .card_body {
+    .notifications {
         padding-top: 0;
         background-color: var(--bg-content);
         ul {

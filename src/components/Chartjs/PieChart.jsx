@@ -1,6 +1,6 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import Card from "../Card/Card";
+import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
 ChartJS.register(ArcElement, Tooltip, Legend);

@@ -77,9 +77,7 @@ const StepSquarWizard = () => {
                     </span>
                 )}
             </div>
-            <div
-                className={`${styles.step_btn_wrapper} mb-4`}
-                style={{ padding: "0 20px" }}>
+            <div className={`${styles.step_btn_wrapper} mb-4`} style={{ padding: "0 20px" }}>
                 {activeTab > 1 && activeTab < tabs.length && (
                     <button onClick={() => updateStep(activeTab - 1)}>Back</button>
                 )}

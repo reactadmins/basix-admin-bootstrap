@@ -1,10 +1,10 @@
 import { BarChart, Bar } from "recharts";
-import user1 from "../../assets/image/avatar/user-1.jpg";
-import user2 from "../../assets/image/avatar/user-2.jpg";
-import user3 from "../../assets/image/avatar/user-3.jpg";
-import user4 from "../../assets/image/avatar/user-4.jpg";
-import user5 from "../../assets/image/avatar/user-5.jpg";
-import styles from "../../assets/scss/Stats.module.scss";
+import user1 from "@/assets/image/avatar/user-1.jpg";
+import user2 from "@/assets/image/avatar/user-2.jpg";
+import user3 from "@/assets/image/avatar/user-3.jpg";
+import user4 from "@/assets/image/avatar/user-4.jpg";
+import user5 from "@/assets/image/avatar/user-5.jpg";
+import styles from "@/assets/scss/Stats.module.scss";
 import { Table } from "react-bootstrap";
 
 const Month = () => {

@@ -75,9 +75,7 @@ const StepCircleWizard = () => {
                     </span>
                 )}
             </div>
-            <div
-                className={`${styles.step_btn_wrapper} mb-4`}
-                style={{ padding: "0 20px" }}>
+            <div className={`${styles.step_btn_wrapper} mb-4`} style={{ padding: "0 20px" }}>
                 {activeTab > 1 && <button onClick={() => updateStep(activeTab - 1)}>Back</button>}
                 <button className="float-end" onClick={() => updateStep(activeTab + 1)}>
                     Next
