@@ -16,13 +16,8 @@ const VerticalNav = () => {
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
     const [isOpenSearch, setIsOpenSearch] = useState(true);
-    const {
-        topNavbarBgColor,
-        navbarFixed,
-        setSidebarMini,
-        sidebarMini,
-        isThemeDirection,
-    } = useDashboardDataContext();
+    const { topNavbarBgColor, setSidebarMini, sidebarMini, isThemeDirection } =
+        useDashboardDataContext();
 
     let dropRef = useRef();
     useEffect(() => {
@@ -39,9 +34,7 @@ const VerticalNav = () => {
         <NavBarBgWrapper>
             <Navbar
                 data-color={topNavbarBgColor}
-                className={`p-4 ${styles.vertical_nav} ${
-                    navbarFixed ? styles.fixed_top : "position-relative"
-                }`}
+                className={`p-4 ${styles.vertical_nav}`}
             >
                 <Container fluid className="p-0">
                     <Navbar.Collapse className="justify-content-between">

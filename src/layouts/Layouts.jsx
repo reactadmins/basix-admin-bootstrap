@@ -3,15 +3,16 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
 import NavBar from "../components/Navbars/NavBar";
 import style from "../assets/scss/Layouts.module.scss";
+import { Fragment } from "react";
 
 const Layouts = () => {
-    const { activeVariation, sidebarMini } = useDashboardDataContext();
+    const { activeVariation, sidebarMini, navbarFixed } =
+        useDashboardDataContext();
     switch (activeVariation) {
         case "vertical": {
             return (
                 <div className={style.layout}>
                     <Sidebar />
-
                     <div
                         className={style.content}
                         style={{
@@ -23,7 +24,12 @@ const Layouts = () => {
                         }}
                     >
                         <NavBar />
-                        <div className="p-4">
+                        <div
+                            className="p-4"
+                            style={{
+                                marginTop: `${navbarFixed ? "80px" : "0"}`,
+                            }}
+                        >
                             <Outlet />
                         </div>
                     </div>
@@ -31,7 +37,19 @@ const Layouts = () => {
             );
         }
         case "horizontal": {
-            return "";
+            return (
+                <Fragment>
+                    <NavBar />
+                    <div
+                        className="p-4"
+                        style={{
+                            marginTop: `${navbarFixed ? "80px" : "0"}`,
+                        }}
+                    >
+                        <Outlet />
+                    </div>
+                </Fragment>
+            );
         }
         case "combo": {
             return (

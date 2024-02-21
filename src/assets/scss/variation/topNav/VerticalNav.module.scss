@@ -73,12 +73,6 @@
             gap: 20px;
         }
     }
-    &.fixed_top {
-        position: fixed;
-        top: 0;
-        width: -webkit-fill-available;
-        z-index: 999;
-    }
     &[data-color="white"] {
         .navbar_nav {
             .header_left {

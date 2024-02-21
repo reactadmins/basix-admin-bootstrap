@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { miniNav } from "../../../nav";
+import { miniNav } from "@/nav";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
@@ -9,13 +9,14 @@ import Message from "../Message/Message";
 import UserProfile from "../UserProfile/UserProfile";
 import SearchBar from "../../SearchBar/SearchBar";
 import { useDashboardDataContext } from "../../../context/dashboardDataContext";
-import navbarStyle from "../../../assets/scss/variation/topNav/HorizontalNav.module.scss";
 import logo from "../../../assets/image/logo.png";
 import mini_logo from "../../../assets/image/mini-logo.png";
 import black_logo from "../../../assets/image/black-logo.png";
 import black_mini_logo from "../../../assets/image/black-mini-logo.png";
 import profile from "../../../assets/image/admin.jpg";
 import DarkModeSwitch from "../../DarkModeSwitch/DarkModeSwitch";
+import NavBarBgWrapper from "../NavBarBgWrapper";
+import styles from "../../../assets/scss/variation/topNav/HorizontalNav.module.scss";
 
 const HorizontalNav = ({ setSidebarMini, sidebarMini, navType = "" }) => {
     const [openNotification, setOpenNotification] = useState(true);
@@ -38,283 +39,55 @@ const HorizontalNav = ({ setSidebarMini, sidebarMini, navType = "" }) => {
     }, []);
 
     return (
-        <div
-            className={`p-0 ${navbarStyle[topNavbarBgColor]} ${
-                navbarStyle.top_navbar
-            } ${navType ? navbarStyle[navType] : ""} ${
-                navbarFixed || activeVariation === "combo"
-                    ? navbarStyle.top_fixed
-                    : ""
-            }`}
-            dark-mode={isDark ? "true" : "false"}
-        >
-            <Navbar className={navbarStyle.navbar}>
-                <Container fluid className="px-4">
-                    <Navbar.Collapse className="justify-content-between">
-                        <Nav className={navbarStyle.navbar_nav}>
-                            <div className={navbarStyle.logo_container}>
-                                {navType === "combo_top_nav" ? (
-                                    <button
-                                        type="button"
-                                        onClick={() =>
-                                            setSidebarMini(!sidebarMini)
+        <NavBarBgWrapper>
+            <div className={styles.horizontal_nav}>
+                <div className="d-flex align-item-center justify-content-between p-4 w-full">
+                    <div className="">
+                        <Link to="/">
+                            {isDark ? (
+                                <Fragment>
+                                    <img
+                                        className={styles.logo}
+                                        src={logo}
+                                        alt="logo"
+                                    />
+                                    <img
+                                        className={styles.mini_logo}
+                                        src={mini_logo}
+                                        alt="logo"
+                                    />
+                                </Fragment>
+                            ) : (
+                                <Fragment>
+                                    <img
+                                        className={styles.logo}
+                                        src={
+                                            topNavbarBgColor === "white"
+                                                ? black_logo
+                                                : logo
                                         }
-                                    >
-                                        {!sidebarMini ? (
-                                            <i className="fa-solid fa-xmark"></i>
-                                        ) : (
-                                            <i className="fa-solid fa-bars"></i>
-                                        )}
-                                    </button>
-                                ) : (
-                                    <button
-                                        type="button"
-                                        onClick={() =>
-                                            setSidebarMini(!sidebarMini)
+                                        alt="logo"
+                                    />
+                                    <img
+                                        className={styles.mini_logo}
+                                        src={
+                                            topNavbarBgColor === "white"
+                                                ? black_mini_logo
+                                                : mini_logo
                                         }
-                                    >
-                                        {!sidebarMini ? (
-                                            <i className="fa-solid fa-bars"></i>
-                                        ) : (
-                                            <i className="fa-solid fa-xmark"></i>
-                                        )}
-                                    </button>
-                                )}
-
-                                <Link to="/" className={navbarStyle.logo}>
-                                    {!isDark ? (
-                                        <Fragment>
-                                            <img
-                                                className={
-                                                    navbarStyle.mini_logo
-                                                }
-                                                src={
-                                                    topNavbarBgColor ===
-                                                    "bg_white"
-                                                        ? black_mini_logo
-                                                        : mini_logo
-                                                }
-                                                alt="basix-admin"
-                                            />
-                                            <img
-                                                src={
-                                                    topNavbarBgColor ===
-                                                    "bg_white"
-                                                        ? black_logo
-                                                        : logo
-                                                }
-                                                alt="basix-admin"
-                                            />
-                                        </Fragment>
-                                    ) : (
-                                        <Fragment>
-                                            <img src={logo} alt="basix-admin" />
-                                            <img
-                                                className={
-                                                    navbarStyle.mini_logo
-                                                }
-                                                src={mini_logo}
-                                                alt="basix-admin"
-                                            />
-                                        </Fragment>
-                                    )}
-                                </Link>
-                            </div>
-                        </Nav>
-                        <Nav
-                            className={`${navbarStyle.combo_nav} ${
-                                sidebarMini ? navbarStyle.toggle_menu : ""
-                            }`}
-                        >
-                            <ul className={`${navbarStyle.nav}`}>
-                                {miniNav?.map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className={`${navbarStyle.nav_item} ${
-                                            item.title ? "d-none" : ""
-                                        }`}
-                                    >
-                                        {(item?.path && (
-                                            <Fragment>
-                                                {isEmpty(item?.children) ? (
-                                                    <Link
-                                                        to={item?.path}
-                                                        className="d-flex justify-content-between align-items-center"
-                                                    >
-                                                        <div className="d-flex align-items-center">
-                                                            <i
-                                                                className={`${item.icon} ${navbarStyle.menu_icon}`}
-                                                            ></i>
-                                                            <span>
-                                                                {item.name}
-                                                            </span>
-                                                        </div>
-                                                    </Link>
-                                                ) : (
-                                                    <a className="d-flex justify-content-between align-items-center user-select-none">
-                                                        <div className="d-flex align-items-center">
-                                                            <i
-                                                                className={`${item.icon} menu-icon`}
-                                                            ></i>
-                                                            <span>
-                                                                {item.name}
-                                                            </span>
-                                                        </div>
-                                                    </a>
-                                                )}
-                                            </Fragment>
-                                        )) ||
-                                            (item.url && (
-                                                <a
-                                                    href={item.url}
-                                                    target="_blank"
-                                                    className="d-flex align-items-center"
-                                                >
-                                                    <div className="d-flex align-items-center">
-                                                        <i
-                                                            className={`${item.icon} menu-icon`}
-                                                        ></i>
-                                                        <span>
-                                                            {item?.name}
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            ))}
-                                        {item.children ? (
-                                            <ul
-                                                className={navbarStyle.sub_menu}
-                                            >
-                                                {item?.children?.map(
-                                                    (childItem, index) => (
-                                                        <li
-                                                            key={index}
-                                                            className={
-                                                                navbarStyle.sub_nav_item
-                                                            }
-                                                        >
-                                                            <Link
-                                                                to={
-                                                                    childItem?.path
-                                                                }
-                                                                className="d-flex justify-content-between align-items-center"
-                                                            >
-                                                                <div className="d-flex align-items-center">
-                                                                    <i
-                                                                        className={`${childItem.icon} menu-icon`}
-                                                                    ></i>
-                                                                    <span>
-                                                                        {
-                                                                            childItem.name
-                                                                        }
-                                                                    </span>
-                                                                </div>
-                                                            </Link>
-                                                        </li>
-                                                    )
-                                                )}
-                                            </ul>
-                                        ) : null}
-                                    </li>
-                                ))}
-                            </ul>
-                        </Nav>
-                        <Nav className={navbarStyle.navbar_nav}>
-                            <ul
-                                className={navbarStyle.social_item}
-                                ref={dropRef}
-                            >
-                                <li>
-                                    <DarkModeSwitch />
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            setIsOpenSearch(!isOpenSearch);
-                                        }}
-                                    >
-                                        <i className="fa fa-search"></i>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            setOpenNotification(
-                                                !openNotification
-                                            );
-                                            setOpenMessage(true);
-                                            setOpenUser(true);
-                                        }}
-                                        className={navbarStyle.for_notification}
-                                    >
-                                        <i className="fa fa-bell"></i>
-                                        <span
-                                            className={`${navbarStyle.count} bg-danger`}
-                                        >
-                                            5
-                                        </span>
-                                    </button>
-                                    {!openNotification ? (
-                                        <DropdownMenu left="24px" right="24px">
-                                            <Notification />
-                                        </DropdownMenu>
-                                    ) : null}
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            setOpenMessage(!openMessage);
-                                            setOpenNotification(true);
-                                            setOpenUser(true);
-                                        }}
-                                        className={navbarStyle.for_message}
-                                    >
-                                        <i className="fa-solid fa-envelope"></i>
-                                        <span
-                                            className={`${navbarStyle.count} bg-primary`}
-                                        >
-                                            5
-                                        </span>
-                                    </button>
-                                    {!openMessage ? (
-                                        <DropdownMenu left="24px" right="24px">
-                                            <Message />
-                                        </DropdownMenu>
-                                    ) : null}
-                                </li>
-                                <li>
-                                    <div className={navbarStyle.user_area}>
-                                        <a
-                                            href="#"
-                                            onClick={() => {
-                                                setOpenUser(!openUser);
-                                                setOpenMessage(true);
-                                                setOpenNotification(true);
-                                            }}
-                                        >
-                                            <img src={profile} alt="uesr" />
-                                        </a>
-                                    </div>
-                                    {!openUser ? (
-                                        <DropdownMenu left="168px" right="62px">
-                                            <UserProfile />
-                                        </DropdownMenu>
-                                    ) : null}
-                                </li>
-                            </ul>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-            {!isOpenSearch ? (
-                <SearchBar
-                    isOpenSearch={isOpenSearch}
-                    setIsOpenSearch={setIsOpenSearch}
-                />
-            ) : null}
-        </div>
+                                        alt="logo"
+                                    />
+                                </Fragment>
+                            )}
+                        </Link>
+                    </div>
+                    <div>2</div>
+                    <ul>
+                        <li>3</li>
+                    </ul>
+                </div>
+            </div>
+        </NavBarBgWrapper>
     );
 };
 

@@ -1,5 +1,12 @@
 @import "./variable.scss";
-.nav_bar_bg {
+.navbar_bg {
+    height: 80px;
+    &.fixed_top {
+        position: fixed;
+        top: 0;
+        width: -webkit-fill-available;
+        z-index: 999999;
+    }
     &[data-bg-color="white"] {
         background-color: #fff;
     }
@@ -12,7 +19,7 @@
 }
 
 body[data-theme="dark"] {
-    .nav_bar_bg {
-        background-color: var(--bg-content);
+    .navbar_bg {
+        background-color: var(--bg-content) !important;
     }
 }
