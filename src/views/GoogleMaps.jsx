@@ -12,6 +12,7 @@ const GoogleMaps = () => {
         lat: 43.653225,
         lng: -79.383186,
     };
+
     return (
         <Card title="Google Maps">
             <CardBody>
