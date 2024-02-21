@@ -1,5 +1,6 @@
 import { useState } from "react";
-import ReactApexChart from "react-apexcharts";
+import BrowserOnly from '@docusaurus/BrowserOnly';
+// import ReactApexChart from "react-apexcharts";
 import Card from "@site/src/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
@@ -154,20 +155,29 @@ const AreaChart = () => {
             },
         },
     });
+
     return (
-        <Card title="Area Chart">
-            <CardBody>
-                <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                    <ReactApexChart
-                        options={state.options}
-                        series={state.series}
-                        type="area"
-                        height={300}
-                        style={{ width: "100%" }}
-                    />
-                </div>
-            </CardBody>
-        </Card>
+        <BrowserOnly>
+            {() => {
+                const ReactApexChart = require("react-apexcharts").default;
+                
+                return (
+                    <Card title="Area Chart">
+                        <CardBody>
+                            <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                                <ReactApexChart
+                                    options={state.options}
+                                    series={state.series}
+                                    type="area"
+                                    height={300}
+                                    style={{ width: "100%" }}
+                                />
+                            </div>
+                        </CardBody>
+                    </Card>
+                )
+            }}
+        </BrowserOnly>
     );
 };
 

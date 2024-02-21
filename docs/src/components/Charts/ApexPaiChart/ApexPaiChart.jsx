@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ReactApexChart from "react-apexcharts";
 import Card from "@site/src/components/Card/Card";
 import { CardBody } from "react-bootstrap";
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const ApexPieChart = () => {
     const [state, setState] = useState({
@@ -27,17 +27,25 @@ const ApexPieChart = () => {
         },
     });
     return (
-        <Card title="Pie Chart">
-            <CardBody>
-                <ReactApexChart
-                    options={state.options}
-                    series={state.series}
-                    type="donut"
-                    height={300}
-                    style={{ width: "100%" }}
-                />
-            </CardBody>
-        </Card>
+        <BrowserOnly>
+            {() => {
+                const ReactApexChart = require("react-apexcharts").default;
+
+                return (
+                    <Card title="Pie Chart">
+                        <CardBody>
+                            <ReactApexChart
+                                options={state.options}
+                                series={state.series}
+                                type="donut"
+                                height={300}
+                                style={{ width: "100%" }}
+                            />
+                        </CardBody>
+                    </Card>
+                )
+            }}
+        </BrowserOnly>
     );
 };
 
