@@ -85,6 +85,7 @@ button[aria-label="Close"] {
 #__docusaurus > .main-wrapper {
     padding-left: 32px;
     padding-right: 32px;
+    margin-top: 60px;
 }
 
 .theme-doc-sidebar-item-category {

@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import Card from "@/components/Card/Card";
 import { CardBody } from "react-bootstrap";
 
-const LineChart = () => {
+const BarChart = () => {
     const [state, setState] = useState({
         series: [
             {
@@ -91,4 +91,4 @@ const LineChart = () => {
     );
 };
 
-export default LineChart;
+export default BarChart;
