@@ -25,14 +25,15 @@
     }
     .nav {
         position: relative;
-        overflow-y: auto;
+        overflow-y: scroll;
         min-height: 100%;
         height: calc(100vh - 85px);
         padding: 0 20px;
         ul {
             li {
+                margin: 8px 0;
                 a {
-                    height: 48px;
+                    height: 40px;
                     font-size: 14px;
                     font-family: Open Sans;
                     line-height: 30px;
@@ -60,15 +61,10 @@
                 }
                 .sub_menu {
                     display: none;
-                    transition-property: height;
-                    transition-duration: 2s;
-                    transform: scaleY(0);
-                    height: max-content;
                     &.active {
                         display: block;
                         position: relative;
-                        transform: scaleY(1);
-                        transition-duration: 2s;
+
                         ul {
                             margin: 10px 0;
                             li {
@@ -80,8 +76,9 @@
                     }
                 }
                 &.nav_title {
-                    height: 48px;
+                    height: 40px;
                     padding: 0 15px;
+
                     span {
                         font-family: Open Sans;
                         font-size: 14px;
@@ -89,6 +86,9 @@
                         line-height: 50px;
                         text-transform: uppercase;
                     }
+                }
+                &:first-child {
+                    margin-top: 0;
                 }
             }
         }
@@ -112,12 +112,16 @@
             }
         }
         .nav {
-            padding: 0 20px;
+            padding: 0 12px !important;
+            overflow-y: visible;
             ul {
+                padding: 0 !important;
                 li {
                     position: relative;
                     a {
                         flex-direction: column;
+                        justify-content: center !important;
+                        padding: 0 12px !important;
                         > div {
                             flex-direction: column;
                         }
@@ -138,9 +142,9 @@
                         &.active {
                             position: absolute;
                             top: 0;
-                            left: 50px;
+                            left: 58px;
                             ul {
-                                padding: 20px;
+                                padding: 10px !important;
                                 li {
                                     a {
                                         height: 35px !important;
@@ -264,6 +268,21 @@ body {
                 border-radius: 40px 0 0 40px !important;
                 padding-left: 4px !important;
                 padding: 0;
+            }
+            &.sidebar_mini {
+                .nav {
+                    ul {
+                        li {
+                            .sub_menu {
+                                border-radius: 4px 0 0 4px !important;
+                                &.active {
+                                    left: auto;
+                                    right: 55px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

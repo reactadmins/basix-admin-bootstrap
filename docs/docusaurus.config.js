@@ -34,7 +34,10 @@ const config = {
         locales: ["en"],
     },
 
-    plugins: [require.resolve("docusaurus-lunr-search"), "docusaurus-plugin-sass"],
+    plugins: [
+        require.resolve("docusaurus-lunr-search"),
+        "docusaurus-plugin-sass",
+    ],
 
     // scripts: ["./src/css/custom.js"],
 
@@ -50,7 +53,7 @@ const config = {
     // ],
 
     // clientModules: ["/notice.js", "/theme-mode.js"],
-    clientModules: ["/notice.js"],
+    // clientModules: ["/notice.js"],
 
     presets: [
         [
@@ -69,10 +72,9 @@ const config = {
                 theme: {
                     // customCss: "./src/css/custom.css",
                     customCss: [
-                        './node_modules/bootstrap/dist/css/bootstrap.min.css',
+                        "./node_modules/bootstrap/dist/css/bootstrap.min.css",
                         "./src/css/custom.css",
-                      ],
-                      
+                    ],
                 },
             }),
         ],

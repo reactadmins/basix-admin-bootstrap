@@ -1,20 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
-import SidebarBgWrapper from "../components/Sidebar/SidebarBgWrapper";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
 import NavBar from "../components/Navbars/NavBar";
 import style from "../assets/scss/Layouts.module.scss";
 
 const Layouts = () => {
-    const { activeVariation, sidebarMini, isThemeDirection } =
-        useDashboardDataContext();
+    const { activeVariation, sidebarMini } = useDashboardDataContext();
     switch (activeVariation) {
         case "vertical": {
             return (
                 <div className={style.layout}>
-                    <SidebarBgWrapper>
-                        <Sidebar />
-                    </SidebarBgWrapper>
+                    <Sidebar />
+
                     <div
                         className={style.content}
                         style={{
@@ -39,9 +36,7 @@ const Layouts = () => {
         case "combo": {
             return (
                 <div className={style.layout}>
-                    <SidebarBgWrapper>
-                        <Sidebar type="combo" />
-                    </SidebarBgWrapper>
+                    <Sidebar type="combo" />
                     <div
                         className={style.content}
                         style={{

@@ -1,22 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import DropdownMenu from "../../DropdownMenu/DropdownMenu";
-import Notification from "../Notification/Notification";
-import Message from "../Message/Message";
-import UserProfile from "../UserProfile/UserProfile";
-import SearchBar from "../../SearchBar/SearchBar";
-import profile from "../../../assets/image/admin.jpg";
-import { useDashboardDataContext } from "../../../context/dashboardDataContext";
-import navbarStyle from "../../../assets/scss/variation/topNav/VerticalNav.module.scss";
-import DarkModeSwitch from "../../DarkModeSwitch/DarkModeSwitch";
+import NavBarBgWrapper from "@/components/Navbars/NavBarBgWrapper";
+import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
+import Notification from "@/components/Navbars/Notification/Notification";
+import Message from "@/components/Navbars/Message/Message";
+import UserProfile from "@/components/Navbars/UserProfile/UserProfile";
+import SearchBar from "@/components/SearchBar/SearchBar";
+import profile from "@/assets/image/admin.jpg";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import styles from "@/assets/scss/variation/topNav/VerticalNav.module.scss";
+import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
 
 const VerticalNav = () => {
     const [openNotification, setOpenNotification] = useState(true);
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
     const [isOpenSearch, setIsOpenSearch] = useState(true);
-    const { topNavbarBgColor, navbarFixed, setSidebarMini, sidebarMini } =
-        useDashboardDataContext();
+    const {
+        topNavbarBgColor,
+        navbarFixed,
+        setSidebarMini,
+        sidebarMini,
+        isThemeDirection,
+    } = useDashboardDataContext();
 
     let dropRef = useRef();
     useEffect(() => {
@@ -30,135 +36,147 @@ const VerticalNav = () => {
     }, []);
 
     return (
-        <Navbar
-            className={`p-0 ${navbarStyle.navbar} ${
-                navbarFixed ? navbarStyle.fixed_top : "position-relative"
-            }`}
-        >
-            <Container
-                fluid
-                className={`${navbarStyle[topNavbarBgColor]} ${navbarStyle.container_fluid}`}
+        <NavBarBgWrapper>
+            <Navbar
+                data-color={topNavbarBgColor}
+                className={`p-4 ${styles.vertical_nav} ${
+                    navbarFixed ? styles.fixed_top : "position-relative"
+                }`}
             >
-                <Navbar.Collapse
-                    className={`justify-content-between ${navbarStyle.navbar_collapse}`}
-                >
-                    <Nav className={navbarStyle.navbar_nav}>
-                        <ul
-                            className={navbarStyle.header_left}
-                            ref={dropRef}
-                            style={{
-                                paddingLeft: `${!sidebarMini ? "5px" : ""}`,
-                            }}
-                        >
-                            <li
-                                className={`${navbarStyle.sidebar_menu} ${
-                                    sidebarMini ? navbarStyle.active : ""
-                                }`}
+                <Container fluid className="p-0">
+                    <Navbar.Collapse className="justify-content-between">
+                        <Nav className={styles.navbar_nav}>
+                            <ul
+                                className={styles.header_left}
+                                ref={dropRef}
+                                style={{
+                                    paddingLeft: `${!sidebarMini ? "5px" : ""}`,
+                                }}
                             >
-                                <button
-                                    type="button"
-                                    onClick={() => setSidebarMini(!sidebarMini)}
+                                <li
+                                    className={`${styles.sidebar_menu} ${
+                                        sidebarMini ? styles.active : ""
+                                    }`}
                                 >
-                                    <span
-                                        className={
-                                            navbarStyle.sidebar_menu_icon
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setSidebarMini(!sidebarMini)
                                         }
-                                    ></span>
-                                </button>
-                            </li>
-                            <li>
-                                <button
-                                    type="button"
-                                    onClick={() =>
-                                        setIsOpenSearch(!isOpenSearch)
-                                    }
-                                >
-                                    <i className="fa fa-search"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        setOpenNotification(!openNotification);
-                                        setOpenMessage(true);
-                                    }}
-                                    className={navbarStyle.for_notification}
-                                >
-                                    <i className="fa fa-bell"></i>
-                                    <span
-                                        className={`${navbarStyle.count} ${
-                                            topNavbarBgColor === "red"
-                                                ? "bg-info"
-                                                : "bg-danger"
-                                        }`}
                                     >
-                                        5
-                                    </span>
-                                </button>
-                                {!openNotification ? (
-                                    <DropdownMenu top="66px" right="auto">
-                                        <Notification />
-                                    </DropdownMenu>
-                                ) : null}
-                            </li>
-                            <li>
-                                <button
-                                    type="button"
+                                        <span
+                                            className={styles.sidebar_menu_icon}
+                                        ></span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setIsOpenSearch(!isOpenSearch)
+                                        }
+                                    >
+                                        <i className="fa fa-search"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            setOpenNotification(
+                                                !openNotification
+                                            );
+                                            setOpenMessage(true);
+                                        }}
+                                        className={styles.for_notification}
+                                    >
+                                        <i className="fa fa-bell"></i>
+                                        <span
+                                            className={`${styles.count} ${
+                                                topNavbarBgColor === "red"
+                                                    ? "bg-info"
+                                                    : "bg-danger"
+                                            }`}
+                                        >
+                                            5
+                                        </span>
+                                    </button>
+                                    {!openNotification ? (
+                                        <DropdownMenu
+                                            top="66px"
+                                            right="auto"
+                                            left="auto"
+                                        >
+                                            <Notification />
+                                        </DropdownMenu>
+                                    ) : null}
+                                </li>
+                                <li>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            setOpenMessage(!openMessage);
+                                            setOpenNotification(true);
+                                        }}
+                                        className={styles.for_message}
+                                    >
+                                        <i className="fa-solid fa-envelope"></i>
+                                        <span
+                                            className={`${styles.count} bg-primary`}
+                                        >
+                                            5
+                                        </span>
+                                    </button>
+                                    {!openMessage ? (
+                                        <DropdownMenu
+                                            top="66px"
+                                            right="auto"
+                                            left="auto"
+                                        >
+                                            <Message />
+                                        </DropdownMenu>
+                                    ) : null}
+                                </li>
+                            </ul>
+                        </Nav>
+                        <Nav
+                            className={`${styles.navbar_nav} ${styles.navbar_nav_right}`}
+                            ref={dropRef}
+                        >
+                            <DarkModeSwitch />
+                            <div className={styles.user_area}>
+                                <a
+                                    href="#"
                                     onClick={() => {
-                                        setOpenMessage(!openMessage);
+                                        setOpenUser(!openUser);
+                                        setOpenMessage(true);
                                         setOpenNotification(true);
                                     }}
-                                    className={navbarStyle.for_message}
+                                    className={styles.user_dropdown}
                                 >
-                                    <i className="fa-solid fa-envelope"></i>
-                                    <span
-                                        className={`${navbarStyle.count} bg-primary`}
-                                    >
-                                        5
-                                    </span>
-                                </button>
-                                {!openMessage ? (
-                                    <DropdownMenu top="66px" right="auto">
-                                        <Message />
-                                    </DropdownMenu>
-                                ) : null}
-                            </li>
-                        </ul>
-                    </Nav>
-                    <Nav
-                        className={`${navbarStyle.navbar_nav} ${navbarStyle.navbar_nav_right}`}
-                        ref={dropRef}
-                    >
-                        <DarkModeSwitch />
-                        <div className={navbarStyle.user_area}>
-                            <a
-                                href="#"
-                                onClick={() => {
-                                    setOpenUser(!openUser);
-                                    setOpenMessage(true);
-                                    setOpenNotification(true);
-                                }}
-                                className={navbarStyle.user_dropdown}
-                            >
-                                <img src={profile} alt="uesr" />
-                            </a>
-                        </div>
-                        {!openUser ? (
-                            <DropdownMenu top="50px" right="26px">
-                                <UserProfile />
-                            </DropdownMenu>
-                        ) : null}
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-            {!isOpenSearch ? (
-                <SearchBar
-                    isOpenSearch={isOpenSearch}
-                    setIsOpenSearch={setIsOpenSearch}
-                />
-            ) : null}
-        </Navbar>
+                                    <img src={profile} alt="uesr" />
+                                </a>
+                            </div>
+                            {!openUser ? (
+                                <DropdownMenu
+                                    top="50px"
+                                    right={isThemeDirection ? "auto" : "24px"}
+                                    left={isThemeDirection ? "24px" : "auto"}
+                                >
+                                    <UserProfile />
+                                </DropdownMenu>
+                            ) : null}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                {!isOpenSearch ? (
+                    <SearchBar
+                        isOpenSearch={isOpenSearch}
+                        setIsOpenSearch={setIsOpenSearch}
+                    />
+                ) : null}
+            </Navbar>
+        </NavBarBgWrapper>
     );
 };
 

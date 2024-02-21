@@ -9,6 +9,7 @@ const UserStats = ({
     size = "17px",
     progressBg = "#fff",
     progressPercent = "",
+    isAnimated = "",
 }) => {
     return (
         <Card
@@ -57,7 +58,7 @@ const UserStats = ({
                 </div>
                 <div className={`mt-3 ${size == "2xl" ? "mb-3" : "mb-2"}`}>
                     <ProgressBar
-                        isAnimated={false}
+                        isAnimated={isAnimated}
                         value={progressPercent}
                         ProgressBarBg="transparent"
                         height="5px"

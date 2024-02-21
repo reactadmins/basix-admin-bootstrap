@@ -1,94 +1,76 @@
 @import "../../variable.scss";
 
-.navbar {
-    .container_fluid {
-        height: 80px;
-        border-bottom: 1px solid var(--border-color);
-        padding: 0px 30px;
-        .navbar_collapse {
-            position: relative;
-            .navbar_nav {
-                .header_left {
-                    display: flex;
-                    .sidebar_menu {
-                        display: none;
-                    }
-                    .active {
-                        display: block;
-                    }
-                    li {
-                        padding: 0 18px;
-                        button {
-                            position: relative;
-                            border: none;
-                            background-color: transparent;
-                            color: var(--hedging-text-color) !important;
-                            i {
-                                font-size: 16px;
-                            }
-                            .count {
-                                display: block;
-                                width: 15px;
-                                height: 15px;
-                                font-size: 11px;
-                                color: $white;
-                                line-height: 15px;
-                                border-radius: 50%;
-                            }
-                            .sidebar_menu_icon {
-                                &::before {
-                                    position: absolute;
-                                    content: "\f0a4";
-                                    font-family: Fontawesome;
-                                    top: -23px;
-                                    right: -15px;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    width: 35px;
-                                    height: 35px;
-                                    border-radius: 50%;
-                                    z-index: 999;
-                                    color: #fff;
-                                    background-color: #dc3545;
-                                }
-                            }
-                        }
-                        .sidebar_menu_toggle {
-                            display: none;
-                        }
-                        .for_notification {
-                            .count {
-                                position: absolute;
-                                top: -4px;
-                                right: -14px;
-                            }
-                        }
-                        .for_message {
-                            .count {
-                                position: absolute;
-                                top: -4px;
-                                right: -18px;
-                            }
-                        }
-                    }
-                }
-                .user_area {
+.vertical_nav {
+    .navbar_nav {
+        .header_left {
+            display: flex;
+            li {
+                padding: 0 18px;
+                button {
                     position: relative;
-                    .user_dropdown {
-                        img {
-                            width: 32px;
-                            height: 32px;
+                    border: none;
+                    background-color: transparent;
+                    i {
+                        font-size: 16px;
+                    }
+                    .count {
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        font-size: 11px;
+                        color: $white;
+                        line-height: 15px;
+                        border-radius: 50%;
+                    }
+                    .sidebar_menu_icon {
+                        &::before {
+                            position: absolute;
+                            content: "\f0a4";
+                            font-family: Fontawesome;
+                            top: -23px;
+                            right: -15px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 35px;
+                            height: 35px;
                             border-radius: 50%;
+                            z-index: 999;
+                            color: #fff;
+                            background-color: #dc3545;
                         }
                     }
                 }
-                &.navbar_nav_right {
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
+                .for_notification {
+                    .count {
+                        position: absolute;
+                        top: -4px;
+                        right: -14px;
+                    }
+                }
+                .for_message {
+                    .count {
+                        position: absolute;
+                        top: -4px;
+                        right: -18px;
+                    }
                 }
             }
+        }
+        .user_area {
+            position: relative;
+            .user_dropdown {
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &.navbar_nav_right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
     }
     &.fixed_top {
@@ -97,22 +79,62 @@
         width: -webkit-fill-available;
         z-index: 999;
     }
+    &[data-color="white"] {
+        .navbar_nav {
+            .header_left {
+                li {
+                    button {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    &[data-color="black"] {
+        .navbar_nav {
+            .header_left {
+                li {
+                    button {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &[data-color="red"] {
+        .navbar_nav {
+            .header_left {
+                li {
+                    button {
+                        color: #fff;
+                    }
+                    .sidebar_menu_icon {
+                        &::before {
+                            background-color: #1d1d1d !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-// @media only screen and (max-width: 768px) {
-//     .top_navbar {
-//         .navbar {
-//             .container_fluid {
-//                 .navbar_collapse {
-//                     .navbar_nav {
-//                         .header_left {
-//                             .sidebar_menu {
-//                                 display: block;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+body[data-theme="dark"] {
+    .vertical_nav {
+        border-bottom: 1px solid var(--border-color);
+        .navbar_nav {
+            .header_left {
+                li {
+                    button {
+                        color: var(--hedging-text-color);
+                    }
+                    .sidebar_menu_icon {
+                        &::before {
+                            background-color: #dc3545 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

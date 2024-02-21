@@ -1,6 +1,7 @@
 import { CardBody, Col, Container, Row } from "react-bootstrap";
 import { BarChart, Bar, LineChart, Line } from "recharts";
 import StatsCard from "@/components/StatsCard/StatsCard";
+import Card from "@/components/Card/Card";
 import SocialCounter from "@/components/SocialCounter/SocialCounter";
 import UserStats from "@/components/UserStats/UserStats";
 import NotificationStatsCart from "@/components/NotificationStatsCart/NotificationStatsCart";
@@ -136,7 +137,12 @@ const Widgets = () => {
                         title="New Users"
                         icon={
                             <LineChart width={100} height={67} data={data2}>
-                                <Line type="monotone" dataKey="pv" stroke="#fff" strokeWidth={2} />
+                                <Line
+                                    type="monotone"
+                                    dataKey="pv"
+                                    stroke="#fff"
+                                    strokeWidth={2}
+                                />
                             </LineChart>
                         }
                     />
@@ -593,7 +599,7 @@ const Widgets = () => {
                         size="2rem"
                         conunt={87500}
                         title="Visitors"
-                        progressPercent={40}
+                        progressPercent={100}
                     />
                 </Col>
                 <Col className="p-0" sm={12} md={6} lg={2} xl={2}>
@@ -693,7 +699,8 @@ const Widgets = () => {
                         <CardBody className="p-0">
                             <ProfileCard userName="Steven Lee" image={userImg}>
                                 <p className="text-center fs-6 px-3">
-                                    Just got a pretty neat project via @ooomf - Give it a
+                                    Just got a pretty neat project via @ooomf -
+                                    Give it a
                                     <a href="#" className="mx-1">
                                         tryhttp://t.co/e02DwGEeOJ
                                     </a>
