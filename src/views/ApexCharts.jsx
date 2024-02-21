@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import LineChart from "@/components/ApexCharts/LineChart";
+import BarChart from "@/components/ApexCharts/BarChart";
 import AreaChart from "@/components/ApexCharts/AreaChart";
 import ColumnChart from "@/components/ApexCharts/ColumnChart";
 import CandlestickChart from "@/components/ApexCharts/CandlestickChart";
@@ -10,7 +10,7 @@ const ApexCharts = () => {
     return (
         <Row className="gy-4 gx-4">
             <Col md={12} lg={6}>
-                <LineChart />
+                <BarChart />
             </Col>
             <Col md={12} lg={6}>
                 <AreaChart />
