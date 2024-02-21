@@ -36,11 +36,11 @@ body {
     font-family: sans-serif;
 }
 
-a{
-    text-decoration: none!important;
+a {
+    text-decoration: none !important;
 }
 
-button[aria-label="Close"]{
+button[aria-label="Close"] {
     background: none;
     border: none;
 }
@@ -104,8 +104,8 @@ button[aria-label="Close"]{
     color: var(--ifm-heading-color);
 }
 
-aside.theme-doc-sidebar-container > div{
-    height: unset;
+aside.theme-doc-sidebar-container > div {
+    /* height: unset; */
 }
 
 .menu[aria-label="Docs sidebar"] {
@@ -195,14 +195,14 @@ svg.systemIcon {
 }
 
 /* Code Preview CSS */
-.code-preview{
+.code-preview {
     margin: 32px 0;
     border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: 8px;
     background: var(--ifm-color-emphasis-100);
 }
 
-.code-preview .preview{
+.code-preview .preview {
     padding: 16px;
 }
 
@@ -227,4 +227,3 @@ svg.systemIcon {
 .theme-doc-markdown.markdown {
     margin-top: 32px;
 }
-
