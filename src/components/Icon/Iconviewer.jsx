@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import styles from "@/assets/scss/iconStyle.module.scss";
+import styles from "../../assets/scss/IconStyle.module.scss";
 
 const Iconviewer = ({ iconList, pathName, prefix }) => {
     return (
@@ -16,12 +16,8 @@ const Iconviewer = ({ iconList, pathName, prefix }) => {
             </div>
             <div
                 className="w-100 position-absolute d-flex justify-content-center align-items-center"
-                style={{ top: "0", left: "0", bottom: "0" }}
-            >
-                <Link
-                    to={`/components/icons/${pathName}`}
-                    className="btn btn-primary px-5"
-                >
+                style={{ top: "0", left: "0", bottom: "0" }}>
+                <Link to={`/components/icons/${pathName}`} className="btn btn-primary px-5">
                     {pathName}
                 </Link>
             </div>

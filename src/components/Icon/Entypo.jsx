@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import entypo from "@/components/data/entypo.json";
 import Card from "@/components/Card/Card";
 import { Icon } from "@iconify/react";
-import styles from "@/assets/scss/iconStyle.module.scss";
+import styles from "../../assets/scss/IconStyle.module.scss";
 import CopyButton from "@/components/Icon/CopyButton";
 import { CardBody } from "react-bootstrap";
 
@@ -13,12 +13,8 @@ const Entypo = () => {
     const [copy, setCopy] = useState();
 
     return (
-        <div
-            className={`${styles.icon_container} container-fluid overflow-hidden p-0`}
-        >
-            <div
-                className={`${styles.icon_search} row px-3 py-4 align-items-center`}
-            >
+        <div className={`${styles.icon_container} container-fluid overflow-hidden p-0`}>
+            <div className={`${styles.icon_search} row px-3 py-4 align-items-center`}>
                 <div className="col-4">
                     <h2 className="fs-3 m-0">{entypo?.name}</h2>
                 </div>
@@ -57,8 +53,7 @@ const Entypo = () => {
                                 .map((icons, index) => (
                                     <div
                                         className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
-                                        key={index}
-                                    >
+                                        key={index}>
                                         <div className={styles.icon_wrapper}>
                                             <Icon
                                                 style={{
@@ -67,9 +62,7 @@ const Entypo = () => {
                                                 }}
                                                 icon={`${entypo?.prefix}-${icons}`}
                                             />
-                                            <span className="mt-2 d-block">
-                                                {icons}
-                                            </span>
+                                            <span className="mt-2 d-block">{icons}</span>
                                             <CopyButton
                                                 copy={copy}
                                                 setCopy={setCopy}
@@ -96,17 +89,10 @@ const Entypo = () => {
                                 .map((icons, index) => (
                                     <div
                                         className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
-                                        key={index}
-                                    >
+                                        key={index}>
                                         <div className={styles.icon_wrapper}>
-                                            <EntypoIcon
-                                                size={30}
-                                                color="black"
-                                                icon={`${icons}`}
-                                            />
-                                            <span className="mt-2 d-block">
-                                                {icons}
-                                            </span>
+                                            <EntypoIcon size={30} color="black" icon={`${icons}`} />
+                                            <span className="mt-2 d-block">{icons}</span>
                                             <CopyButton
                                                 copy={copy}
                                                 setCopy={setCopy}
