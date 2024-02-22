@@ -1,4 +1,4 @@
-// {
-//     "diffEditor.wordWrap": "off",
-//     "editor.formatOnSave": false
-// }
+{
+    "diffEditor.wordWrap": "off",
+    "editor.formatOnSave": false
+}
