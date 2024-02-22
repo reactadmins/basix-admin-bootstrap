@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import styles from "@/assets/scss/SocialButtons.module.scss";
 
-function SocialButton({
+function Social({
     href = "#",
     icon = "fa-brands fa-facebook-f",
     bgColor = "#3b5998",
@@ -34,7 +34,7 @@ function SocialButton({
     );
 }
 
-export default SocialButton;
+export default Social;
 
 const Link = styled.a.attrs((props) => ({
     href: props.href,
