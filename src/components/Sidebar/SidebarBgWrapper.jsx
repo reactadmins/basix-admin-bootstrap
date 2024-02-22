@@ -4,8 +4,7 @@ import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const SidebarBgWrapper = ({ type, children }) => {
     const [selectSize, setSelectSize] = useState(null);
-    const { sidebarMini, setSidebarMini, sidebarBgColor, sidebarBgImg } =
-        useDashboardDataContext();
+    const { sidebarMini, setSidebarMini, sidebarBgColor, sidebarBgImg } = useDashboardDataContext();
 
     const ref = useRef();
 
@@ -27,16 +26,14 @@ const SidebarBgWrapper = ({ type, children }) => {
         <div
             ref={ref}
             data-background-color={sidebarBgColor}
-            theme-type={type === "combo" && "combo"}
-            className={`${style.sidebar_bg} ${sidebarMini ? style.active : ""}`}
-        >
+            theme-type={type === "combo" ? "combo" : ""}
+            className={`${style.sidebar_bg} ${sidebarMini ? style.active : ""}`}>
             {children}
             <div
                 style={{
                     backgroundImage: `url(${sidebarBgImg ? sidebarBgImg : ""})`,
                 }}
-                className={style.overlay_bg}
-            ></div>
+                className={style.overlay_bg}></div>
         </div>
     );
 };
