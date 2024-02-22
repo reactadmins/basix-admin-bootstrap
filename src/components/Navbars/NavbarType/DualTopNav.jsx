@@ -16,12 +16,18 @@ import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
 import DarkModeSwitch from "../../DarkModeSwitch/DarkModeSwitch";
 
-const DualTopNav = ({ sidebarMini, setSidebarMini }) => {
+const DualTopNav = () => {
     const [openNotification, setOpenNotification] = useState(true);
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
     const [navIsOpen, setNavIsOpen] = useState(null);
-    const { topNavbarBgColor, navbarFixed, isDark } = useDashboardDataContext();
+    const {
+        sidebarMini,
+        setSidebarMini,
+        topNavbarBgColor,
+        navbarFixed,
+        isDark,
+    } = useDashboardDataContext();
 
     let dropRef = useRef();
     useEffect(() => {

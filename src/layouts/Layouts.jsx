@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
-import NavBar from "../components/Navbars/NavBar";
+import Navbar from "../components/Navbars/Navbar";
 import style from "../assets/scss/Layouts.module.scss";
 import { Fragment } from "react";
 
@@ -23,7 +23,7 @@ const Layouts = () => {
                             }`,
                         }}
                     >
-                        <NavBar />
+                        <Navbar />
                         <div
                             className="p-4"
                             style={{
@@ -39,7 +39,7 @@ const Layouts = () => {
         case "horizontal": {
             return (
                 <Fragment>
-                    <NavBar />
+                    <Navbar />
                     <div
                         className="p-4"
                         style={{
@@ -54,18 +54,25 @@ const Layouts = () => {
         case "combo": {
             return (
                 <div className={style.layout}>
-                    <Sidebar type="combo" />
+                    <Navbar />
                     <div
-                        className={style.content}
                         style={{
-                            width: `${
-                                sidebarMini
-                                    ? "calc(100% - 70px)"
-                                    : "calc(100% - 280px)"
+                            marginTop: `${
+                                activeVariation === "combo" ? "80px" : "0"
                             }`,
                         }}
                     >
-                        <div className="p-4">
+                        <Sidebar type="combo" />
+                        <div
+                            className={`${style.content} p-4`}
+                            style={{
+                                width: `${
+                                    sidebarMini
+                                        ? "calc(100% - 70px)"
+                                        : "calc(100% - 280px)"
+                                }`,
+                            }}
+                        >
                             <Outlet />
                         </div>
                     </div>
@@ -73,7 +80,21 @@ const Layouts = () => {
             );
         }
         case "dual_nav": {
-            return "";
+            return (
+                <div className={style.layout}>
+                    <Navbar />
+                    <div
+                        className={`${style.content} p-4 w-100`}
+                        style={{
+                            marginTop: `${
+                                navbarFixed === "combo" ? "80px" : "0"
+                            }`,
+                        }}
+                    >
+                        <Outlet />
+                    </div>
+                </div>
+            );
         }
         default:
             return null;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import style from "../../assets/scss/SidebarBgWrapper.module.scss";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
-const SidebarBgWrapper = ({ children }) => {
+const SidebarBgWrapper = ({ type, children }) => {
     const [selectSize, setSelectSize] = useState(null);
     const { sidebarMini, setSidebarMini, sidebarBgColor, sidebarBgImg } =
         useDashboardDataContext();
@@ -27,6 +27,7 @@ const SidebarBgWrapper = ({ children }) => {
         <div
             ref={ref}
             data-background-color={sidebarBgColor}
+            theme-type={type === "combo" && "combo"}
             className={`${style.sidebar_bg} ${sidebarMini ? style.active : ""}`}
         >
             {children}

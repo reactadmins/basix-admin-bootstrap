@@ -29,7 +29,7 @@ const Sidebar = ({ type = "vertical" }) => {
     }, [selectSize, setSidebarMini]);
 
     return (
-        <SidebarBgWrapper>
+        <SidebarBgWrapper type={type}>
             <div
                 data-color={sidebarBgColor}
                 className={`${style.sidebar} ${
