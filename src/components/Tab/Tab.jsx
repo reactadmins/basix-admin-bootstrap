@@ -30,7 +30,7 @@ export const Tab = ({
                                             : ""
                                     } ${
                                         item?.props?.icon
-                                            ? "d-flex align-items-center gap-2"
+                                            ? "d-flex align-items-center justify-content-center gap-2"
                                             : ""
                                     } ${
                                         iconPosition === "right"

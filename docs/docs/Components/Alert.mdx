@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-This is short description
+Provides feedback messages relevant to common user actions, including warning messages to the user.
 
 import { Alert, Badge } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
@@ -12,15 +12,9 @@ import CodePreview from "@site/src/components/CodePreview/CodePreview";
 ## Examples
 
 <CodePreview>
-    <Alert variant="primary">This is a primary alert—check it out!</Alert>
-    <Alert variant="secondary">This is a secondary alert—check it out!</Alert>
-    <Alert variant="success">This is a success alert—check it out!</Alert>
-    <Alert variant="warning">This is a warning alert—check it out!</Alert>
-    <Alert variant="danger">This is a danger alert—check it out!</Alert>
-    <Alert variant="info">This is a info alert—check it out!</Alert>
-    <Alert variant="light">This is a light alert—check it out!</Alert>
-    <Alert variant="dark">This is a dark alert—check it out!</Alert>
-    <Alert variant="link">This is a link alert—check it out!</Alert>
+    <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
+    <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
+    <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
 </CodePreview>
 
 ```jsx title="Alerts"
@@ -29,15 +23,9 @@ import Alert from "react-bootstrap/Alert";
 function MyComponent() {
     return (
         <>
-            <Alert variant="primary">This is a primary alert—check it out!</Alert>
-            <Alert variant="secondary">This is a secondary alert—check it out!</Alert>
-            <Alert variant="success">This is a success alert—check it out!</Alert>
-            <Alert variant="warning">This is a warning alert—check it out!</Alert>
-            <Alert variant="danger">This is a danger alert—check it out!</Alert>
-            <Alert variant="info">This is a info alert—check it out!</Alert>
-            <Alert variant="light">This is a light alert—check it out!</Alert>
-            <Alert variant="dark">This is a dark alert—check it out!</Alert>
-            <Alert variant="link">This is a link alert—check it out!</Alert>
+            <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
+            <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
+            <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
         </>
     );
 }
@@ -51,12 +39,6 @@ export default MyComponent;
     <Alert variant="primary">This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
     <Alert variant="secondary">This is a secondary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
     <Alert variant="success">This is a success alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="warning">This is a warning alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="danger">This is a danger alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="info">This is a info alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="light">This is a light alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="dark">This is a dark alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="link">This is a link alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
 </CodePreview>
 
 ```jsx title="Alerts"
@@ -65,15 +47,21 @@ import Alert from "react-bootstrap/Alert";
 function MyComponent() {
     return (
         <>
-            <Alert variant="primary">This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="secondary">This is a secondary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="success">This is a success alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="warning">This is a warning alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="danger">This is a danger alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="info">This is a info alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="light">This is a light alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="dark">This is a dark alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="link">This is a link alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+            <Alert variant="primary">
+                This is a primary alert with 
+                <Alert.Link href="#">an example link</Alert.Link>. 
+                Give it a click if you like.
+            </Alert>
+            <Alert variant="secondary">
+                This is a secondary alert with
+                <Alert.Link href="#">an example link</Alert.Link>.
+                Give it a click if you like.
+            </Alert>
+            <Alert variant="success">
+                This is a success alert with 
+                <Alert.Link href="#">an example link</Alert.Link>.
+                Give it a click if you like.
+            </Alert>
         </>
     );
 }
@@ -87,9 +75,6 @@ export default MyComponent;
     <Alert variant="success"><Badge bg="success">Success</Badge> You successfully read this important alert.</Alert>
     <Alert variant="primary"> <Badge bg="primary">Primary</Badge> You successfully read this important alert.</Alert>
     <Alert variant="secondary"><Badge bg="secondary">Secondary</Badge> You successfully read this important alert.</Alert>
-    <Alert variant="warning"><Badge bg="warning">Warning</Badge> You successfully read this important alert.</Alert>
-    <Alert variant="danger"><Badge bg="danger">Danger</Badge> You successfully read this important alert.</Alert>
-    <Alert variant="info"><Badge bg="info">Info</Badge> You successfully read this important alert.</Alert>
 </CodePreview>
 
 ```jsx title="Alerts"
@@ -98,12 +83,18 @@ import { Alert, Badge } from "react-bootstrap";
 function MyComponent() {
     return (
         <>
-            <Alert variant="success"><Badge bg="success">Success</Badge> You successfully read this important alert.</Alert>
-            <Alert variant="primary"> <Badge bg="primary">Primary</Badge> You successfully read this important alert.</Alert>
-            <Alert variant="secondary"><Badge bg="secondary">Secondary</Badge> You successfully read this important alert.</Alert>
-            <Alert variant="warning"><Badge bg="warning">Warning</Badge> You successfully read this important alert.</Alert>
-            <Alert variant="danger"><Badge bg="danger">Danger</Badge> You successfully read this important alert.</Alert>
-            <Alert variant="info"><Badge bg="info">Info</Badge> You successfully read this important alert.</Alert>
+            <Alert variant="success">
+                <Badge bg="success">Success</Badge> 
+                You successfully read this important alert.
+            </Alert>
+            <Alert variant="primary">
+                <Badge bg="primary">Primary</Badge>
+                You successfully read this important alert.
+            </Alert>
+            <Alert variant="secondary">
+                <Badge bg="secondary">Secondary</Badge>
+                You successfully read this important alert.
+            </Alert>
         </>
     );
 }
@@ -147,7 +138,31 @@ export default MyComponent;
 
 <FeatureTable>
     <tr>
+        <td>variant</td>
+        <td>`primary` | `secondary` | `success` | 
+        <br />`danger` | `warning` | `info` | <br/> 
+        `dark` | `light`</td>
         <td></td>
+        <td>The Alert visual variant</td>
     </tr>
-
+    <tr>
+        <td>dismissible</td>
+        <td>boolean</td>
+        <td></td>
+        <td>produces an appropriately positioned dismissal button and increases the Alert's horizontal padding.</td>
+    </tr>
+    <tr>
+        <td>show</td>
+        <td>boolean</td>
+        <td></td>
+        <td>Controls the visual state of the Alert.</td>
+    </tr>
+    <tr>
+        <td>onClose</td>
+        <td>func</td>
+        <td></td>
+        <td>Callback fired when alert is closed.</td>
+    </tr>
 </FeatureTable>
+
+For more props please visit to <a href="https://react-bootstrap.netlify.app/docs/components/alerts" target="_blank">react-bootstrap</a>

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
 import Card from "@/components/Card/Card";
-import ProgressBar from "@/components/ProgressBar/ProgressBar";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 const progressBars = () => {
     return (
@@ -11,64 +11,68 @@ const progressBars = () => {
                     <Card title="Background">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar progressBg="#28a745" value="25" />
-                                <ProgressBar progressBg="#17a2b8" value="50" />
-                                <ProgressBar progressBg="#ffc107" value="75" />
-                                <ProgressBar progressBg="#dc3545" value="100" />
+                                <ProgressBar variant="success" now={25} />
+                                <ProgressBar variant="primary" now={50} />
+                                <ProgressBar variant="warning" now={75} />
+                                <ProgressBar variant="danger" now={100} />
                             </div>
                         </CardBody>
                     </Card>
                 </Col>
                 <Col md={6}>
-                    <Card title="Animated Background">
+                    <Card title="With Labels">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar isAnimated={true} progressBg="#28a745" value="25" />
-                                <ProgressBar isAnimated={true} progressBg="#17a2b8" value="50" />
-                                <ProgressBar isAnimated={true} progressBg="#ffc107" value="75" />
-                                <ProgressBar isAnimated={true} progressBg="#dc3545" value="100" />
+                                <ProgressBar variant="success" now={25} label="25" />
+                                <ProgressBar variant="primary" now={50} label="50" />
+                                <ProgressBar variant="warning" now={75} label="75" />
+                                <ProgressBar variant="danger" now={100} label="100" />
                             </div>
                         </CardBody>
                     </Card>
                 </Col>
                 <Col md={6}>
-                    <Card title="labels">
+                    <Card title="Striped">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar progressBg="#28a745" value="25" label="25" />
-                                <ProgressBar progressBg="#17a2b8" value="50" label="50" />
-                                <ProgressBar progressBg="#ffc107" value="75" label="75" />
-                                <ProgressBar progressBg="#dc3545" value="100" label="100" />
+                                <ProgressBar striped variant="success" now={25} />
+                                <ProgressBar striped variant="primary" now={50} />
+                                <ProgressBar striped variant="warning" now={75} />
+                                <ProgressBar striped variant="danger" now={100} />
                             </div>
                         </CardBody>
                     </Card>
                 </Col>
                 <Col md={6}>
-                    <Card title="Animated labels">
+                    <Card title="Animated">
                         <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
-                                    isAnimated={true}
-                                    progressBg="#28a745"
-                                    value="25"
+                                    animated
+                                    striped
+                                    variant="success"
+                                    now={25}
                                     label="25"
                                 />
                                 <ProgressBar
-                                    isAnimated={true}
-                                    progressBg="#17a2b8"
-                                    value="50"
+                                    animated
+                                    striped
+                                    variant="primary"
+                                    now={50}
                                     label="50"
                                 />
                                 <ProgressBar
-                                    isAnimated={true}
-                                    progressBg="#ffc107"
-                                    value="75"
+                                    animated
+                                    striped
+                                    variant="warning"
+                                    now={75}
                                     label="75"
                                 />
                                 <ProgressBar
-                                    isAnimated={true}
-                                    progressBg="#dc3545"
-                                    value="100"
+                                    animated
+                                    striped
+                                    variant="danger"
+                                    now={100}
                                     label="100"
                                 />
                             </div>
@@ -76,50 +80,13 @@ const progressBars = () => {
                     </Card>
                 </Col>
                 <Col md={6}>
-                    <Card title="Progress Striped">
+                    <Card title="Stacked">
                         <CardBody>
-                            <div className="d-flex flex-column gap-2">
-                                <ProgressBar isStriped={true} progressBg="#28a745" value="25" />
-                                <ProgressBar isStriped={true} progressBg="#17a2b8" value="50" />
-                                <ProgressBar isStriped={true} progressBg="#ffc107" value="75" />
-                                <ProgressBar isStriped={true} progressBg="#dc3545" value="100" />
-                            </div>
-                        </CardBody>
-                    </Card>
-                </Col>
-                <Col md={6}>
-                    <Card title="Animated Progress Striped">
-                        <CardBody>
-                            <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    isAnimated={true}
-                                    isStriped={true}
-                                    progressBg="#28a745"
-                                    value="25"
-                                    label="25"
-                                />
-                                <ProgressBar
-                                    isAnimated={true}
-                                    isStriped={true}
-                                    progressBg="#17a2b8"
-                                    value="50"
-                                    label="50"
-                                />
-                                <ProgressBar
-                                    isAnimated={true}
-                                    isStriped={true}
-                                    progressBg="#ffc107"
-                                    value="75"
-                                    label="75"
-                                />
-                                <ProgressBar
-                                    isAnimated={true}
-                                    isStriped={true}
-                                    progressBg="#dc3545"
-                                    value="100"
-                                    label="100"
-                                />
-                            </div>
+                            <ProgressBar>
+                                <ProgressBar striped variant="success" now={30} key={1} />
+                                <ProgressBar variant="warning" now={16} key={2} />
+                                <ProgressBar striped variant="danger" now={22} key={3} />
+                            </ProgressBar>
                         </CardBody>
                     </Card>
                 </Col>

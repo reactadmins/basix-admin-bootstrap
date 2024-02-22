@@ -50,11 +50,17 @@
         .tab_title {
             border-right: 1px solid var(--border-color);
         }
+        li {
+            padding: 16px 20px!important;
+        }
     }
     &.right {
         flex-direction: row-reverse;
         .tab_title {
             border-left: 1px solid var(--border-color);
+        }
+        li {
+            padding: 16px 20px!important;
         }
     }
 }

@@ -229,3 +229,13 @@ svg.systemIcon {
 .theme-doc-markdown.markdown {
     margin-top: 32px;
 }
+
+/* breadcrumbs */
+.breadcrumbs__item.breadcrumbs__item--active .breadcrumbs__link{
+    background: none;
+    color: var(--ifm-font-color-base);
+}
+
+.breadcrumbs__item::after{
+    margin: 0!important;
+}

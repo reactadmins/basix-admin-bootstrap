@@ -38,7 +38,7 @@ export const navItems = [
                 icon: "menu-icon fa fa-bars",
             },
             {
-                name: "Social Buttons",
+                name: "Socials",
                 path: "/components/socials",
                 icon: "fa fa-share-square",
                 badge: {
