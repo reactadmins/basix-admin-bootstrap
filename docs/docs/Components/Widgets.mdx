@@ -6,12 +6,12 @@ This is short description
 
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
-import StatsCard from "@site/src/components/Widgets/StatsCard/StasCard"
-import SocialCounter from "@site/src/components/Widgets/SocialCounter/SocialCounter"
-import UserStats from "@site/src/components/Widgets/UserStats/UserStats"
-import { BarChart, Bar} from "recharts";
+import StatsCard from "@site/src/components/Widgets/StatsCard/StasCard";
+import SocialCounter from "@site/src/components/Widgets/SocialCounter/SocialCounter";
+import UserStats from "@site/src/components/Widgets/UserStats/UserStats";
+import { BarChart, Bar } from "recharts";
 
-import {statsCardWithChart} from "../../data/data";
+import { statsCardWithChart } from "../../data/data";
 
 ## Examples
 
@@ -62,13 +62,13 @@ import {statsCardWithChart} from "../../data/data";
             />
         </div>
     </div>
-   
+
 </CodePreview>
 
 ```jsx title="Widgets"
 import React from "react";
 import StatsCard from "@/components/StatsCard/StatsCard";
-import { BarChart, Bar} from "recharts";
+import { BarChart, Bar } from "recharts";
 
 const data = [
     {
@@ -157,22 +157,30 @@ const MyComponent = () => {
                 title="Lorem ipsum..."
                 progressPercent={25}
                 description="Lorem ipsum dolor sit amet enim."
-            />  
-        </> 
-    )
-}
+            />
+        </>
+    );
+};
 
 export default MyComponent;
 ```
 
 ## Props
 
-<FeatureTable >
+<FeatureTable>
     <tr>
         <td>type</td>
-        <td>string</td>
-        <td></td>
-        <td></td>
+        <td>
+            `revenue-counter` | `user-info` | `revenue-progressBar` |
+            `revenue-earning`
+        </td>
+        <td>`revenue-counter`</td>
+        <td>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            dolore perferendis voluptatum natus provident libero quas at, rem
+            modi impedit autem, magni ex porro temporibus cupiditate expedita
+            aliquid tempore fugiat?
+        </td>
     </tr>
     <tr>
         <td>bgColor</td>
@@ -297,7 +305,6 @@ export default MyComponent;
             }}
         />
     </div>
-   
 </CodePreview>
 
 ```jsx title="Widgets"
@@ -319,16 +326,16 @@ const MyComponent = () => {
                 usre: 40,
                 feeds: "feeds",
             }}
-        />   
-    )
-}
+        />
+    );
+};
 
 export default MyComponent;
 ```
 
 ## Props
 
-<FeatureTable >
+<FeatureTable>
     <tr>
         <td>bgColor</td>
         <td>string</td>
@@ -385,7 +392,6 @@ export default MyComponent;
             progressPercent={80}
         />
     </div>
-   
 </CodePreview>
 
 ```jsx title="Widgets"
@@ -400,16 +406,16 @@ const MyComponent = () => {
             title="Visitors"
             progressBg="#5c6bc0"
             progressPercent={80}
-        />  
-    )
-}
+        />
+    );
+};
 
 export default MyComponent;
 ```
 
-## Props 
+## Props
 
-<FeatureTable >
+<FeatureTable>
     <tr>
         <td>bgColor</td>
         <td>string</td>

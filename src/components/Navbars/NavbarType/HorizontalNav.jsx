@@ -102,7 +102,7 @@ const HorizontalNav = ({ type = "" }) => {
                                 <li key={index} className={styles.nav_item}>
                                     {item.children ? (
                                         <a>
-                                            <i className={item.icon} />{" "}
+                                            <i className={item.icon} />
                                             {item.name}
                                         </a>
                                     ) : null}
@@ -110,13 +110,13 @@ const HorizontalNav = ({ type = "" }) => {
                                     !item.url &&
                                     !item.children ? (
                                         <Link to={item.path}>
-                                            <i className={item.icon} />{" "}
+                                            <i className={item.icon} />
                                             {item.name}
                                         </Link>
                                     ) : null}
                                     {item.url ? (
                                         <a href={item.url} target="_blank">
-                                            <i className={item.icon} />{" "}
+                                            <i className={item.icon} />
                                             {item.name}
                                         </a>
                                     ) : null}
