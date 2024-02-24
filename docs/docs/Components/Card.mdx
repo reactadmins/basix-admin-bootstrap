@@ -10,118 +10,138 @@ import CodePreview from "@site/src/components/CodePreview/CodePreview";
 import Card from "@site/src/components/Card/Card"
 import image from "@site/src/assets/images/admin.jpg"
 import placeholderImage from "@site/src/assets/images/placeholder.png"
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Examples
 
 ### With Header
 
-<CodePreview>
-    <Col md={6}>
-        <Card 
-            title="Card" 
-            titleIcon="fa-solid fa-user" 
-            icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
-            dismissible={true}
-        >
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </Card>
-    </Col>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Col md={6}>
+                <Card 
+                    title="Card" 
+                    titleIcon="fa-solid fa-user" 
+                    icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
+                    dismissible={true}
+                >
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </Card>
+            </Col>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
+        ```jsx title="Card"
+        import Card from "@/components/Card/Card"
 
-```jsx title="Card"
-import Card from "@/components/Card/Card"
+        function MyComponent() {
+            return (
+                <Card 
+                    title="Card" 
+                    titleIcon="fa-solid fa-user" 
+                    icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
+                    dismissible={true}
+                >
+                    Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy 
+                    text ever since the 1500s, when an unknown printer took a galley 
+                    of type and scrambled it to make a type specimen book.
+                </Card>
+            );
+        }
 
-function MyComponent() {
-    return (
-        <Card 
-            title="Card" 
-            titleIcon="fa-solid fa-user" 
-            icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
-            dismissible={true}
-        >
-            Lorem Ipsum is simply dummy text of the printing and typesetting 
-            industry. Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer took a galley 
-            of type and scrambled it to make a type specimen book.
-        </Card>
-    );
-}
-
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Without Header
 
-<CodePreview>
-    <Col md={6}>
-        <Card isHeader={false}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting 
-            industry. Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer took a galley 
-            of type and scrambled it to make a type specimen book.
-        </Card>
-    </Col>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Col md={6}>
+                <Card isHeader={false}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy 
+                    text ever since the 1500s, when an unknown printer took a galley 
+                    of type and scrambled it to make a type specimen book.
+                </Card>
+            </Col>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
+        ```jsx title="Card"
+        import Card from "@/components/Card/Card"
 
-```jsx title="Card"
-import Card from "@/components/Card/Card"
+        function MyComponent() {
+            return (
+                <Card isHeader={false}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting 
+                    industry. Lorem Ipsum has been the industry's standard dummy 
+                    text ever since the 1500s, when an unknown printer took a galley 
+                    of type and scrambled it to make a type specimen book.
+                </Card>
+            );
+        }
 
-function MyComponent() {
-    return (
-        <Card isHeader={false}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting 
-            industry. Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer took a galley 
-            of type and scrambled it to make a type specimen book.
-        </Card>
-    );
-}
-
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Card With Image
 
-<CodePreview>
-    <Col md={6}>
-        <Card
-            isHeader={false}
-        >
-            <img src={placeholderImage} alt="" style={{width: "100%"}}  />
-            <h2 className="fs-5 mt-3">Card Wtih Image Title</h2>
-            <p className="fs-6 mt-2">
-                Some quick example text to build on the card
-                title and make up the bulk of the card's
-                content.
-            </p>
-        </Card>
-    </Col>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Col md={6}>
+                <Card
+                    isHeader={false}
+                >
+                    <img src={placeholderImage} alt="" style={{width: "100%"}}  />
+                    <h2 className="fs-5 mt-3">Card Wtih Image Title</h2>
+                    <p className="fs-6 mt-2">
+                        Some quick example text to build on the card
+                        title and make up the bulk of the card's
+                        content.
+                    </p>
+                </Card>
+            </Col>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
+        ```jsx title="Card"
+        import Card from "@/components/Card/Card"
 
-```jsx title="Card"
-import Card from "@/components/Card/Card"
+        function MyComponent() {
+            return (
+                <Card
+                    isHeader={false}
+                >
+                    <img src={...img} alt="" style={{width: "100%"}}  />
+                    <h2 className="fs-5 mt-3">Card Wtih Image Title</h2>
+                    <p className="fs-6 mt-2">
+                        Some quick example text to build on the card
+                        title and make up the bulk of the card's
+                        content.
+                    </p>
+                </Card>
+            );
+        }
 
-function MyComponent() {
-    return (
-        <Card
-            isHeader={false}
-        >
-            <img src={...img} alt="" style={{width: "100%"}}  />
-            <h2 className="fs-5 mt-3">Card Wtih Image Title</h2>
-            <p className="fs-6 mt-2">
-                Some quick example text to build on the card
-                title and make up the bulk of the card's
-                content.
-            </p>
-        </Card>
-    );
-}
-
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ## Props
 
