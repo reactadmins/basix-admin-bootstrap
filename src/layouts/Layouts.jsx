@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
-import Navbar from "../components/Navbars/Navbar";
+// import Navbar from "../components/Navbars/Navbar";
 import style from "../assets/scss/Layouts.module.scss";
 import { Fragment } from "react";
 import NavBarBgWrapper from "../components/Navbars/NavBarBgWrapper";
