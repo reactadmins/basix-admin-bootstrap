@@ -11,212 +11,240 @@ import CodePreview from "@site/src/components/CodePreview/CodePreview";
 import LineChart from "@site/src/components/Charts/LineChart/LineChart";
 import BarChart from "@site/src/components/Charts/BarChart/BarChart";
 import PaiChart from "@site/src/components/Charts/PaiChart/PaiChart";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Examples
 
 ### Line Chart
 
-<CodePreview>
-    <LineChart />
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <LineChart />
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
+        ```jsx title="Line Chart"
+        import { Line } from "react-chartjs-2";
+        import {
+            Chart as ChartJS,
+            CategoryScale,
+            LinearScale,
+            PointElement,
+            LineElement,
+            Tooltip,
+            Filler,
+            Legend,
+        } from "chart.js";
+        import Card from "@/components/Card/Card";
+        import { CardBody } from "react-bootstrap";
 
-```jsx title="Line Chart"
-import { Line } from "react-chartjs-2";
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Tooltip,
-    Filler,
-    Legend,
-} from "chart.js";
-import Card from "@/components/Card/Card";
-import { CardBody } from "react-bootstrap";
+        ChartJS.register(
+            CategoryScale,
+            LinearScale,
+            PointElement,
+            LineElement,
+            Tooltip,
+            Filler,
+            Legend
+        );
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Tooltip,
-    Filler,
-    Legend
-);
+        const LineChart = () => {
+            const options = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            };
+            const labels = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+            ];
+            const data = {
+                labels,
+                datasets: [
+                    {
+                        fill: true,
+                        label: "vue js",
+                        data: [40, 39, 10, 40, 39, 80, 40],
+                        borderColor: "rgb(129, 224, 169)",
+                        backgroundColor: "rgba(129,224,169,0.5)",
+                    },
+                    {
+                        fill: true,
+                        label: "React js",
+                        data: [50, 20, 70, 30, 10, 5, 70],
+                        borderColor: "rgb(133,193,233)",
+                        backgroundColor: "rgba(133,193,233, 0.5)",
+                    },
+                ],
+            };
+            return (
+                <Card title="Line Chart">
+                    <CardBody>
+                        <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                            <Line options={options} data={data} />
+                        </div>
+                    </CardBody>
+                </Card>
+            );
+        };
 
-const LineChart = () => {
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: "top",
-            },
-        },
-    };
-    const labels = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-    ];
-    const data = {
-        labels,
-        datasets: [
-            {
-                fill: true,
-                label: "vue js",
-                data: [40, 39, 10, 40, 39, 80, 40],
-                borderColor: "rgb(129, 224, 169)",
-                backgroundColor: "rgba(129,224,169,0.5)",
-            },
-            {
-                fill: true,
-                label: "React js",
-                data: [50, 20, 70, 30, 10, 5, 70],
-                borderColor: "rgb(133,193,233)",
-                backgroundColor: "rgba(133,193,233, 0.5)",
-            },
-        ],
-    };
-    return (
-        <Card title="Line Chart">
-            <CardBody>
-                <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                    <Line options={options} data={data} />
-                </div>
-            </CardBody>
-        </Card>
-    );
-};
-
-export default LineChart;
-```
+        export default LineChart;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Bar Chart
 
-<CodePreview>{/* <BarChart /> */}</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <BarChart />
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
+        ```jsx title="Bar Chart"
+        import { Bar } from "react-chartjs-2";
+        import {
+            Chart as ChartJS,
+            CategoryScale,
+            LinearScale,
+            BarElement,
+            Tooltip,
+            Legend,
+        } from "chart.js";
+        import Card from "@/components/Card/Card";
+        import { CardBody } from "react-bootstrap";
+        ChartJS.register(
+            CategoryScale,
+            LinearScale,
+            BarElement,
 
-```jsx title="Bar Chart"
-import { Bar } from "react-chartjs-2";
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Tooltip,
-    Legend,
-} from "chart.js";
-import Card from "@/components/Card/Card";
-import { CardBody } from "react-bootstrap";
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
+            Tooltip,
+            Legend
+        );
 
-    Tooltip,
-    Legend
-);
+        const BarChart = () => {
+            const options = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            };
 
-const BarChart = () => {
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: "top",
-            },
-        },
-    };
+            const labels = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+            ];
 
-    const labels = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-    ];
+            const data = {
+                labels,
+                datasets: [
+                    {
+                        label: "Vue Js",
+                        data: [65, 59, 80, 81, 56, 55, 40],
+                        backgroundColor: "rgba(33, 192, 120, 1)",
+                    },
+                    {
+                        label: "React Js",
+                        data: [28, 48, 40, 19, 86, 27, 90],
+                        backgroundColor: "rgba(56, 212, 255, 1)",
+                    },
+                ],
+            };
+            return (
+                <Card title="Bar Chart">
+                    <CardBody>
+                        <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                            <Bar options={options} data={data} />
+                        </div>
+                    </CardBody>
+                </Card>
+            );
+        };
 
-    const data = {
-        labels,
-        datasets: [
-            {
-                label: "Vue Js",
-                data: [65, 59, 80, 81, 56, 55, 40],
-                backgroundColor: "rgba(33, 192, 120, 1)",
-            },
-            {
-                label: "React Js",
-                data: [28, 48, 40, 19, 86, 27, 90],
-                backgroundColor: "rgba(56, 212, 255, 1)",
-            },
-        ],
-    };
-    return (
-        <Card title="Bar Chart">
-            <CardBody>
-                <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                    <Bar options={options} data={data} />
-                </div>
-            </CardBody>
-        </Card>
-    );
-};
-
-export default BarChart;
-```
+        export default BarChart;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Pai Chart
 
-<CodePreview>{/* <PaiChart /> */}</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <PaiChart />
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
+        ```jsx title="Pai Chart"
+        import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+        import { Pie } from "react-chartjs-2";
+        import Card from "@/components/Card/Card";
+        import { CardBody } from "react-bootstrap";
 
-```jsx title="Pai Chart"
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie } from "react-chartjs-2";
-import Card from "@/components/Card/Card";
-import { CardBody } from "react-bootstrap";
+        ChartJS.register(ArcElement, Tooltip, Legend);
 
-ChartJS.register(ArcElement, Tooltip, Legend);
-
-const PieChart = () => {
-    const data = {
-        labels: ["Vue Js", "Ember Js", "React Js", "Angular Js"],
-        datasets: [
-            {
-                label: "# of Votes",
-                data: [40, 20, 80, 10],
-                backgroundColor: [
-                    "rgba(31,193,120, 1)",
-                    "rgba(228, 102, 80,1)",
-                    "rgba(0,195,230,1)",
-                    "rgba(219,7,0,1)",
+        const PieChart = () => {
+            const data = {
+                labels: ["Vue Js", "Ember Js", "React Js", "Angular Js"],
+                datasets: [
+                    {
+                        label: "# of Votes",
+                        data: [40, 20, 80, 10],
+                        backgroundColor: [
+                            "rgba(31,193,120, 1)",
+                            "rgba(228, 102, 80,1)",
+                            "rgba(0,195,230,1)",
+                            "rgba(219,7,0,1)",
+                        ],
+                        borderColor: [
+                            "rgba(31,193,120, 1)",
+                            "rgba(228, 102, 80,1)",
+                            "rgba(0,195,230,1)",
+                            "rgba(7219,7,0,1)",
+                        ],
+                        borderWidth: 1,
+                    },
                 ],
-                borderColor: [
-                    "rgba(31,193,120, 1)",
-                    "rgba(228, 102, 80,1)",
-                    "rgba(0,195,230,1)",
-                    "rgba(7219,7,0,1)",
-                ],
-                borderWidth: 1,
-            },
-        ],
-    };
-    return (
-        <Card title="Pie Chart">
-            <CardBody>
-                <div className="d-flex justify-content-center align-items-center overflow-hidden">
-                    <div style={{ width: "80%" }}>
-                        <Pie data={data} />
-                    </div>
-                </div>
-            </CardBody>
-        </Card>
-    );
-};
+            };
+            return (
+                <Card title="Pie Chart">
+                    <CardBody>
+                        <div className="d-flex justify-content-center align-items-center overflow-hidden">
+                            <div style={{ width: "80%" }}>
+                                <Pie data={data} />
+                            </div>
+                        </div>
+                    </CardBody>
+                </Card>
+            );
+        };
 
-export default PieChart;
-```
+        export default PieChart;
+        ```
+    </TabItem>
+</Tabs>
+
+
+
+
