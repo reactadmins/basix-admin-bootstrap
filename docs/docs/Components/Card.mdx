@@ -13,55 +13,17 @@ import placeholderImage from "@site/src/assets/images/placeholder.png"
 
 ## Examples
 
+### With Header
+
 <CodePreview>
     <Col md={6}>
         <Card 
-            title="Profile Card" 
+            title="Card" 
             titleIcon="fa-solid fa-user" 
             icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
             dismissible={true}
         >
-            <div className="d-flex flex-column align-items-center justify-content-center">
-                <img
-                    src={image}
-                    alt="Card image"
-                    className="rounded-circle inline-blocks"
-                />
-                <h2 className={`mt-2`}>Steven Lee</h2>            
-            </div>
-            <span className="text-center">
-                <i className="fa-solid fa-location-dot"></i>{" "}
-                California, United States
-            </span>
-            
-            <hr className="w-100 border-0" />
-            
-            <div className="d-flex gap-2">
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-facebook-f"></i>
-                </a>
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-twitter"></i>
-                </a>
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-pinterest"></i>
-                </a>
-            </div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </Card>
     </Col>
 </CodePreview>
@@ -73,52 +35,46 @@ import Card from "@/components/Card/Card"
 function MyComponent() {
     return (
         <Card 
-            title="Profile Card" 
+            title="Card" 
             titleIcon="fa-solid fa-user" 
             icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
             dismissible={true}
         >
-            <div className="d-flex flex-column align-items-center justify-content-center">
-                <img
-                    src={...img}
-                    alt="Card image"
-                    className="rounded-circle inline-blocks"
-                />
-                <h2 className={`mt-2`}>Steven Lee</h2>            
-            </div>
-            <span className="text-center">
-                <i className="fa-solid fa-location-dot"></i>{" "}
-                California, United States
-            </span>
-            
-            <hr className="w-100 border-0" />
-            
-            <div className="d-flex gap-2">
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-facebook-f"></i>
-                </a>
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-twitter"></i>
-                </a>
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a
-                    href="#"
-                    className="text-decoration-none text-secondary"
-                >
-                    <i className="fa-brands fa-pinterest"></i>
-                </a>
-            </div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy 
+            text ever since the 1500s, when an unknown printer took a galley 
+            of type and scrambled it to make a type specimen book.
+        </Card>
+    );
+}
+
+export default MyComponent;
+```
+
+### Without Header
+
+<CodePreview>
+    <Col md={6}>
+        <Card isHeader={false}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy 
+            text ever since the 1500s, when an unknown printer took a galley 
+            of type and scrambled it to make a type specimen book.
+        </Card>
+    </Col>
+</CodePreview>
+
+
+```jsx title="Card"
+import Card from "@/components/Card/Card"
+
+function MyComponent() {
+    return (
+        <Card isHeader={false}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy 
+            text ever since the 1500s, when an unknown printer took a galley 
+            of type and scrambled it to make a type specimen book.
         </Card>
     );
 }
@@ -174,61 +130,62 @@ export default MyComponent;
         <td>title</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>Show this title card Header.</td>
     </tr>
     <tr>
         <td>titleIcon</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>Set title icon as you like. We recommend class base icons.</td>
     </tr>
     <tr>
         <td>titleBg</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>Set your custom title background with `hex` code</td>
     </tr>
     <tr>
         <td>isHeader</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td></td>
+        <td>If show header then set `true`. By default `false`.</td>
     </tr>
     <tr>
         <td>headerPosition</td>
-        <td>string</td>
+        <td>`top` | `bottom`</td>
         <td>`top`</td>
-        <td></td>
+        <td>Card header positioned at both the top and bottom of the card</td>
     </tr>
     <tr>
         <td>padding</td>
         <td>string</td>
         <td>`16px`</td>
-        <td></td>
+        <td>Card padding adds spacing between the content and the card edges for better visual appeal and readability.</td>
     </tr>
     <tr>
         <td>bodyBg</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>Card body background defines the color displayed behind the content area of a card, enhancing its visual presentation.</td>
     </tr>
     <tr>
         <td>icons</td>
         <td>array</td>
         <td>`[]`</td>
-        <td></td>
+        <td>icons accept an array of object. ex: <br/> 
+        `[ {icon: "fa fa-cog", dropdown: [ { label: "Edit", icon: "fa fa-cog", method: () => alert("Cog"), }, { label: "Delete", icon: "fa-solid fa-trash", method: () => alert("Delete"), }, { label: "Update", icon: "fa-solid fa-recycle", method: () => alert("Update"), }, ], }, { icon: "fa fa-angle-down" }, ]` </td>
     </tr>
     <tr>
         <td>dismissible</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td></td>
+        <td>Card dismissible allows users to easily close or dismiss a card with a click, improving user interaction and flexibility.</td>
     </tr>
     <tr>
         <td>onClose</td>
         <td>func</td>
         <td></td>
-        <td></td>
+        <td>Using onClose with dismissible enables custom actions or functions when a dismissible card is closed, enhancing user experience and functionality.</td>
     </tr>
 
 </FeatureTable>

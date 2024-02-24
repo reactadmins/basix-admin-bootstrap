@@ -13,8 +13,9 @@ npm install
 
 then run
 ```
-npm run dev
+npm start
 ```
+Navigate to http://localhost:3000
 
 to build
 
@@ -26,5 +27,5 @@ and run
 npm run serve
 ```
 
-Navigate to http://localhost:5173
+
 
