@@ -7,6 +7,12 @@ Provides feedback messages relevant to common user actions, including warning me
 import { Alert, Badge } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import Collapse from "@site/src/components/Collapse/Collapse";
+
+
+// import Playground from '@site/src/components/Playground/Playground';
+
+{/* <Playground /> */}
 
 
 ## Examples
@@ -15,23 +21,29 @@ import CodePreview from "@site/src/components/CodePreview/CodePreview";
     <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
     <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
     <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
+
+    <Collapse title="Source Code">
+        ```jsx title="Alerts"
+        import Alert from "react-bootstrap/Alert";
+
+        function MyComponent() {
+            return (
+                <>
+                    <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
+                    <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
+                    <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
+                </>
+            );
+        }
+
+        export default MyComponent;
+        ```
+    </Collapse>
 </CodePreview>
 
-```jsx title="Alerts"
-import Alert from "react-bootstrap/Alert";
 
-function MyComponent() {
-    return (
-        <>
-            <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
-            <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
-            <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
-        </>
-    );
-}
 
-export default MyComponent;
-```
+
 
 ### Link
 
