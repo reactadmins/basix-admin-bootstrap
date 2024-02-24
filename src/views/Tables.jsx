@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
-import Card from "../components/Card/Card";
-import tableData from "../components/data/tableData";
+import Card from "@/components/Card/Card";
+import tableData from "@/components/data/tableData";
 import styles from "@/assets/scss/Tables.module.scss";
 
 const Tables = () => {
