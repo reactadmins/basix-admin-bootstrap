@@ -1,8 +1,9 @@
 ---
 sidebar_position: 2
 ---
+The Badge component shows a small label or indicator that is attached to another element, such as a button, an icon, or a menu item. The Badge component can be used to display counts, statuses, or other short information. The Badge component can have different variants, such as filled or outlined, and different colors.
 
-Snazzy little labels that pack a punch. Compact and vibrant, they're ideal for signaling status, displaying counts, or categorizing content. With their eye-catching design, they ensure important information stands out on your webpage.
+You can find the Badges component in the `src/views/Badges` folder
 
 import { Badge, Button } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
@@ -189,13 +190,13 @@ import TabItem from '@theme/TabItem';
         <td>bg</td>
         <td>`primary` | `secondary` | `success` | <br /> `danger` | `warning` | `info` | <br /> `light` | `dark`</td>
         <td>`primary`</td>
-        <td>The visual style of the badge</td>
+        <td>A string that specifies the background color of the badge. You can choose from eight options: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, or `light`. The default value is `primary`.</td>
     </tr>
     <tr>
         <td>pill</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td>Add the pill modifier to make badges more rounded.</td>
+        <td>A boolean that indicates whether the badge has a rounded shape or not. If pill is true, the badge will have a pill-like shape with rounded corners. If pill is false, the badge will have a square shape with sharp corners. The default value is false.</td>
     </tr>
 </FeatureTable>
 

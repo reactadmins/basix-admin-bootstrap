@@ -2,7 +2,9 @@
 sidebar_position: 10
 ---
 
-We've created a collection of widget card designs tailored to your dashboard needs, facilitating seamless data visualization of user data counts along with interactive progress bar functionality. Seen in the code below.
+Widgets are small and interactive components that display useful information or perform specific actions on your dashboard. You can customize the appearance and behavior of each widget by changing the color, counter, symbol, title, description, border, width, height, padding, and link. You can also create your own widgets by following the same structure and style of the existing widgets.
+
+You can find the widgets component in the `src/views/widgets` folder.
 
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
@@ -185,112 +187,106 @@ import TabItem from '@theme/TabItem';
         </td>
         <td>`revenue-counter`</td>
         <td>
-            Widgets type categorizes various user interface elements, such as buttons, sliders, or input fields, used to enhance interactivity and functionality in software applications.
+           A string that specifies the type of the widget. You can choose from four options: `info`, `stats`, `chart`, or `list`. The type determines the layout and the content of the widget. For example, `type="user-info"` will show an `icon`, a `title`, and a `description`, while `type="revenue-counter"` will show a `counter`, a `symbol`, and a `title`.
         </td>
     </tr>
     <tr>
         <td>bgColor</td>
         <td>string</td>
         <td>`#fff`</td>
-        <td>Background color determines the color displayed behind an element, influencing its visual appearance and design.</td>
+        <td>A string that specifies the background color of the widget. You can use any valid CSS color value as the value of `bgColor`. The default value is `#fff`.</td>
     </tr>
     <tr>
         <td>icon</td>
         <td>string</td>
         <td></td>
         <td>
-        Experience unparalleled design freedom with our platform, where icons and charts are presented exactly to your liking. With intuitive customization options, icons are available in string format, while charts are conveniently organized within a child object structure.
+        A string that specifies the `icon` of the widget. You can use any `icon` from the `Font Awesome` icons library. The `icon` will be displayed in the top left corner of the widget. For example, `icon="fa-user"`.
         </td>
     </tr>
     <tr>
         <td>isCounter</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td></td>
+        <td>A boolean that indicates whether the widget has a counter or not. If `isCounter` is `true`, the widget will show a numeric value that represents a count or a percentage. If `isCounter` is `fals`e, the widget will not show a counter. The default value is `false`.</td>
     </tr>
     <tr>
         <td>counter</td>
         <td>number</td>
         <td></td>
-        <td></td>
+        <td>A number that specifies the value of the `counter`. You can use any positive number as the value of `counter`. The `counter` will be displayed in the top right corner of the widget. For example, `counter={50}`.</td>
     </tr>
     <tr>
         <td>symbolPosition</td>
         <td>string</td>
         <td>`left`</td>
-        <td></td>
+        <td>A string that specifies the position of the symbol relative to the counter. You can choose from two options: `left` or `right`. The default value is `left`.</td>
     </tr>
     <tr>
         <td>symbol</td>
         <td>string</td>
         <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>symbolPosition</td>
-        <td>string</td>
-        <td>`left`</td>
-        <td></td>
+        <td>A string that specifies the `symbol` that is displayed next to the counter. You can use any valid character or string as the value of `symbol`. The `symbol` can be used to indicate the unit or the change of the counter. For example, `symbol="$" `or `symbol="%"`.</td>
     </tr>
     <tr>
         <td>title</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the `title` of the widget. You can use any valid text as the value of `title`. The `title` will be displayed below the icon and the counter. The `title` can be used to give a brief and descriptive name to the widget. For example, `title="Total Revenue"`.</td>
     </tr>
     <tr>
         <td>description</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the `description` of the widget. You can use any valid text as the value of `description`. The `description` will be displayed below the title. The `description` can be used to give more details or information about the widget. For example, `description="This month's revenue from all sources"`.</td>
     </tr>
     <tr>
         <td>progressPercent</td>
         <td>number</td>
         <td></td>
-        <td></td>
+        <td>A number that specifies the percentage of the progress bar. You can use any positive number between 0 and 100 as the value of `progressPercent`. The progress bar will be displayed below the description. The progress bar can be used to show the completion or the progress of a task or a process. For example, `progressPercent={75}`.</td>
     </tr>
     <tr>
         <td>isIconBorder</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td></td>
+        <td>A boolean that indicates whether the icon has a border or not. If `isIconBorder` is `true`, the icon will have a circular border with the same color as the borderColor prop. If `isIconBorder` is `false`, the icon will not have a border. The default value is `false`.</td>
     </tr>
     <tr>
         <td>borderColor</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the color of the border of the icon. You can use any valid CSS color value as the value of `borderColor`. The border color will also be used as the color of the progress bar. For example, `borderColor="#3b5998"`.</td>
     </tr>
     <tr>
         <td>padding</td>
         <td>string</td>
         <td>`16px`</td>
-        <td></td>
+        <td>A string that specifies the `padding` of the widget. You can use any valid CSS value for the `padding` property. The `padding` will affect the spacing of the widget elements. The default value is `16px`.</td>
     </tr>
     <tr>
         <td>width</td>
         <td>string</td>
         <td>`45px`</td>
-        <td></td>
+        <td>A string that specifies the `width` of the icon. You can use any valid CSS value for the `width` property. The `width` will affect the size of the icon. The default value is `45px`.</td>
     </tr>
     <tr>
         <td>hight</td>
         <td>string</td>
         <td>`45px`</td>
-        <td></td>
+        <td> A string that specifies the `height` of the icon. You can use any valid CSS value for the `height` property. The `height` will affect the size of the icon. The default value is `45px`.</td>
     </tr>
     <tr>
         <td>isViewMore</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td></td>
+        <td>A boolean that indicates whether the widget has a view more link or not. If `isViewMore` is `true`, the widget will show a link that says “View More” at the bottom of the widget. If `isViewMore` is `false`, the widget will not show a view more link. The default value is `false`.</td>
     </tr>
     <tr>
         <td>link</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the URL of the view more l`ink`. You can use any valid URL as the value of `link`. The `link` will be opened in a new tab when the user clicks on the view more `link`. For example, `link="https://www.example.com"`.</td>
     </tr>
 </FeatureTable>
 

@@ -2,11 +2,19 @@
 sidebar_position: 1
 ---
 
-Provides feedback messages relevant to common user actions, including warning messages to the user.
+The Alert component displays a message or feedback to the user, usually in response to an action or an event. The Alert component can have different severity levels, such as success, info, warning, or error, and can be styled accordingly. The Alert component can also be dismissed by the user or automatically after a certain time.
+
+You can find the Alerts component in the `src/views/Alerts` folder
 
 import { Alert, Badge } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import Collapse from "@site/src/components/Collapse/Collapse";
+
+
+
+
+{/* <Playground /> */}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -173,25 +181,25 @@ import TabItem from '@theme/TabItem';
         <br />`danger` | `warning` | `info` | <br/> 
         `dark` | `light`</td>
         <td></td>
-        <td>The Alert visual variant</td>
+        <td>A string that specifies the color scheme of the alert. You can choose from eight options: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, or “light”. The default value is “primary”.</td>
     </tr>
     <tr>
         <td>dismissible</td>
         <td>boolean</td>
         <td></td>
-        <td>produces an appropriately positioned dismissal button and increases the Alert's horizontal padding.</td>
+        <td>A boolean that indicates whether the alert can be closed by the user. If dismissible is true, a close button will appear on the right side of the alert. If dismissible is false, the alert will not have a close button. The default value is false.</td>
     </tr>
     <tr>
         <td>show</td>
         <td>boolean</td>
         <td></td>
-        <td>Controls the visual state of the Alert.</td>
+        <td>A boolean that indicates whether the alert is visible or not. If show is true, the alert will be rendered on the screen. If show is false, the alert will be hidden. The default value is true.</td>
     </tr>
     <tr>
         <td>onClose</td>
         <td>func</td>
         <td></td>
-        <td>Callback fired when alert is closed.</td>
+        <td> A function that is called when the alert is closed by the user or by the timeout. The function receives the event object as the argument. You can use this prop to perform any action or logic when the alert is closed. For example, you can use onClose to update the state of the parent component or to trigger another alert. The default value is null.</td>
     </tr>
 </FeatureTable>
 

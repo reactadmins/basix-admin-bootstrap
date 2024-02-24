@@ -2,7 +2,9 @@
 sidebar_position: 3
 ---
 
-We worked over the Bootstrap custom button styles, for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+The Button component is a clickable element that triggers an action or a navigation. The Button component can have different types and different variants. The Button component can also have icons, labels, or both.
+
+You can find the Buttons component in the `src/views/Buttons` folder
 
 import Button from "react-bootstrap/Button";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
@@ -148,33 +150,32 @@ import TabItem from '@theme/TabItem';
         <td>variant</td>
         <td>string</td>
         <td>`primary`</td>
-        <td>One or more button variant combinations buttons may be one of a variety of visual variants such as: <br />
-        `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, `light`, `link` 
-        as well as "outline" versions (prefixed by `outline-*`) <br /> `outline-primary`, `outline-secondary`, `outline-success`, `outline-danger`, `outline-warning`, `outline-info`, `outline-dark`, `outline-light`</td>
+        <td>A string that specifies the type and the variant of the button. You can choose variety of visual variants such as: <br />
+        `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, `light`, `link` as well as `outline` versions (prefixed by outline-*) `outline-primary`, `outline-secondary`, `outline-success`, `outline-danger`, `outline-warning`, `outline-info`, `outline-dark`, `outline-light`. The default value is `primary`</td>
     </tr>
     <tr>
         <td>size</td>
         <td>`sm` | `lg`</td>
         <td></td>
-        <td>Specifies a large or small button.</td>
+        <td>A string that specifies the size of the button. You can choose from two options: `sm` or `lg`. </td>
     </tr> 
     <tr>
         <td>onClick</td>
         <td>func</td>
         <td></td>
-        <td>Callback fired when the button is clicked.</td>
+        <td>A function that is called when the button is clicked. The function receives the event object as the argument. You can use this prop to perform any action or logic when the button is clicked. For example, you can use onClick to navigate to another page, submit a form, or open a modal.</td>
     </tr>
     <tr>
         <td>active</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td>Manually set the visual state of the button to `active`</td>
+        <td>A boolean that indicates whether the button is `active` or not. If `active` is `true`, the button will have a darker background color and a shadow effect. If `active` is `false`, the button will have a normal appearance. The default value is `false`</td>
     </tr>
     <tr>
         <td>disabled</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td>Disables the Button, preventing mouse events, even if the underlying component is an `<a>` element</td>
+        <td>A boolean that indicates whether the button is `disabled` or not. If `disabled` is `true`, the button will have a lighter background color and a `disabled` cursor. If `disabled` is `false`, the button will be enabled and clickable. The default value is `false`.</td>
     </tr>
 </FeatureTable>
 

@@ -9,7 +9,7 @@ export const DashboardDataProvider = ({ children }) => {
     const [isThemeDirection, setIsThemeDirection] = useState(false);
     const [topNavbarBgColor, setTopNavbarBgColor] = useState("white");
     const [sidebarBgColor, setSidebarBgColor] = useState("black");
-    const [sidebarBgImg, setSidebarBgImg] = useState();
+    const [sidebarBgImg, setSidebarBgImg] = useState(null);
     const [activeVariation, setActiveVariation] = useState("vertical");
 
     useEffect(() => {

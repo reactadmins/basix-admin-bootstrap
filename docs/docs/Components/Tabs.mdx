@@ -2,7 +2,9 @@
 sidebar_position: 7
 ---
 
-Our custom tabs are designed to create a dynamic tab interface for your app. By default, the first tab is displayed as the active tab. You can change this by setting the active tab value in the code. You can also customize the appearance of the active tab by choosing the background color, text color, and icon. The icon can be placed on the left or right side of the tab title. To change the orientation of the tabs, you can set the tab position to top, bottom, left, or right. This way, you can create a beautiful interface that suits your needs.
+The Tabs component organizes content into multiple sections and allows the user to switch between them. The Tabs component can have different orientations, such as horizontal or vertical, and different alignments, such as left, center, or right. The Tabs component can also have indicators, icons, or labels for each tab.
+
+You can find the Tabs component in the `src/views/Tabs` folder
 
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
@@ -390,31 +392,31 @@ import TabItem from '@theme/TabItem';
         <td>activeTab</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the key of the active tab. You can use this prop to control which tab is selected by default or by the user. For example, `activeTab="home"`.</td>
     </tr>
     <tr>
         <td>tabPosition</td>
         <td>`top`, `bottom`, `left`, `right`</td>
         <td>`top`</td>
-        <td></td>
+        <td>A string that specifies the position of the tabs relative to the content. You can choose from four options: `top`, `bottom`, `left`, or `right`. The default value is `top`.</td>
     </tr>
     <tr>
         <td>iconPosition</td>
         <td>`left` | `right`</td>
         <td>`left`</td>
-        <td></td>
+        <td>A string that specifies the position of the icons relative to the labels. You can choose from two options: `left` or `right`. The default value is `left`.</td>
     </tr>
     <tr>
         <td>tabActiveBg</td>
         <td>string</td>
         <td>`#292b35`</td>
-        <td></td>
+        <td>A string that specifies the background color of the active tab. You can use any valid CSS color value as the value of `tabActiveBg`. The default value is `tabActiveBg="#292b35"`.</td>
     </tr>
     <tr>
         <td>tabActiveTextColor</td>
         <td>string</td>
         <td>`#fff`</td>
-        <td></td>
+        <td>A string that specifies the text color of the active tab. You can use any valid CSS color value as the value of `tabActiveTextColor`. The default value is `tabActiveTextColor="#fff"`.</td>
     </tr>
 
 </FeatureTable>
@@ -426,19 +428,19 @@ import TabItem from '@theme/TabItem';
         <td>eventKey</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the key of the tab page. You can use this prop to identify and control which tab page is active or selected. The value of `eventKey` should be unique among the tab pages. For example, `eventKey="home"`.</td>
     </tr>
     <tr>
         <td>title</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the `title `of the tab page. You can use this prop to give a brief and descriptive name to the tab page. The `title` will be displayed in the tab header. For example, `title="Home"`.</td>
     </tr>
     <tr>
         <td>icon</td>
         <td>string</td>
         <td></td>
-        <td></td>
+        <td>A string that specifies the `icon` of the tab page. You can use this prop to add a visual cue to the tab page. You can use any `icon` from the Font `Awesome icons` library. The `icon` will be displayed in the tab header. For example, `icon="fa-user"`.</td>
     </tr>
 
 </FeatureTable>
