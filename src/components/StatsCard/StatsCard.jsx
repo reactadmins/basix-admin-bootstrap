@@ -36,7 +36,7 @@ export const Progress = ({ progressPercent, description }) => {
 
 const StatsCard = ({
     type = "revenue-counter",
-    bgColor = "white",
+    bgColor = "#fff",
     icon = "",
     isCounter = false,
     counter = "",
