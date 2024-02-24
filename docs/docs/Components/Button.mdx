@@ -9,117 +9,139 @@ You can find the Buttons component in the `src/views/Buttons` folder
 import Button from "react-bootstrap/Button";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 ## Examples
 ### Normal
 
-<CodePreview>
-    <div className="d-flex gap-2">
-        <Button variant="primary">Primary</Button>
-        <Button variant="secondary">Secondary</Button>
-        <Button variant="success">Success</Button>
-        <Button variant="warning">Warning</Button>
-        <Button variant="danger">Danger</Button>
-        <Button variant="info">Info</Button>
-        <Button variant="light">Light</Button>
-        <Button variant="dark">Dark</Button>
-        <Button variant="link">Link</Button>
-    </div>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="d-flex gap-2">
+                <Button variant="primary">Primary</Button>
+                <Button variant="secondary">Secondary</Button>
+                <Button variant="success">Success</Button>
+                <Button variant="warning">Warning</Button>
+                <Button variant="danger">Danger</Button>
+                <Button variant="info">Info</Button>
+                <Button variant="light">Light</Button>
+                <Button variant="dark">Dark</Button>
+                <Button variant="link">Link</Button>
+            </div>
+            
+        </CodePreview>
+    </TabItem>
     
-</CodePreview>
+    <TabItem value="code" label="Code">
 
-```jsx title="Buttons"
-import Button from "react-bootstrap/Button";
+        ```jsx title="Buttons"
+        import Button from "react-bootstrap/Button";
 
-function MyComponent() {
-    return (
-        <>
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="success">Success</Button>
-            <Button variant="warning">Warning</Button>
-            <Button variant="danger">Danger</Button>
-            <Button variant="info">Info</Button>
-            <Button variant="light">Light</Button>
-            <Button variant="dark">Dark</Button>
-            <Button variant="link">Link</Button>
-        </>
-    );
-}
+        function MyComponent() {
+            return (
+                <>
+                    <Button variant="primary">Primary</Button>
+                    <Button variant="secondary">Secondary</Button>
+                    <Button variant="success">Success</Button>
+                    <Button variant="warning">Warning</Button>
+                    <Button variant="danger">Danger</Button>
+                    <Button variant="info">Info</Button>
+                    <Button variant="light">Light</Button>
+                    <Button variant="dark">Dark</Button>
+                    <Button variant="link">Link</Button>
+                </>
+            );
+        }
 
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Outline
 
-<CodePreview>
-    <div className="d-flex gap-2">
-        <Button variant="outline-primary">Primary</Button>
-        <Button variant="outline-secondary">Secondary</Button>
-        <Button variant="outline-success">Success</Button>
-        <Button variant="outline-warning">Warning</Button>
-        <Button variant="outline-danger">Danger</Button>
-        <Button variant="outline-info">Info</Button>
-        <Button variant="outline-light">Light</Button>
-        <Button variant="outline-dark">Dark</Button>
-        <Button variant="outline-link">Link</Button>
-    </div>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="d-flex gap-2">
+                <Button variant="outline-primary">Primary</Button>
+                <Button variant="outline-secondary">Secondary</Button>
+                <Button variant="outline-success">Success</Button>
+                <Button variant="outline-warning">Warning</Button>
+                <Button variant="outline-danger">Danger</Button>
+                <Button variant="outline-info">Info</Button>
+                <Button variant="outline-light">Light</Button>
+                <Button variant="outline-dark">Dark</Button>
+                <Button variant="outline-link">Link</Button>
+            </div>
+            
+        </CodePreview>
+    </TabItem>
     
-</CodePreview>
+    <TabItem value="code" label="Code">
 
-```jsx title="Buttons"
-import Button from "react-bootstrap/Button";
+        ```jsx title="Buttons"
+        import Button from "react-bootstrap/Button";
 
-function MyComponent() {
-    return (
-        <>
-            <Button variant="outline-primary">Primary</Button>
-            <Button variant="outline-secondary">Secondary</Button>
-            <Button variant="outline-success">Success</Button>
-            <Button variant="outline-warning">Warning</Button>
-            <Button variant="outline-danger">Danger</Button>
-            <Button variant="outline-info">Info</Button>
-            <Button variant="outline-light">Light</Button>
-            <Button variant="outline-dark">Dark</Button>
-            <Button variant="outline-link">Link</Button>
-        </>
-    );
-}
+        function MyComponent() {
+            return (
+                <>
+                    <Button variant="outline-primary">Primary</Button>
+                    <Button variant="outline-secondary">Secondary</Button>
+                    <Button variant="outline-success">Success</Button>
+                    <Button variant="outline-warning">Warning</Button>
+                    <Button variant="outline-danger">Danger</Button>
+                    <Button variant="outline-info">Info</Button>
+                    <Button variant="outline-light">Light</Button>
+                    <Button variant="outline-dark">Dark</Button>
+                    <Button variant="outline-link">Link</Button>
+                </>
+            );
+        }
 
-export default TypesExample;
-```
+        export default TypesExample;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Sizes
 
-<CodePreview>
-    <div className="mb-2">
-        <Button variant="primary" size="lg">Large Button</Button>
-    </div>
-    <div className="mb-2">
-        <Button variant="primary">Normal Button</Button>
-    </div>
-    <div className="mb-2">
-        <Button variant="primary" size="sm">Small Button</Button>
-    </div>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="mb-2">
+                <Button variant="primary" size="lg">Large Button</Button>
+            </div>
+            <div className="mb-2">
+                <Button variant="primary">Normal Button</Button>
+            </div>
+            <div className="mb-2">
+                <Button variant="primary" size="sm">Small Button</Button>
+            </div>
+        </CodePreview>
+    </TabItem>
     
-</CodePreview>
+    <TabItem value="code" label="Code">
 
-```jsx title="Buttons"
-import Button from "react-bootstrap/Button";
+        ```jsx title="Buttons"
+        import Button from "react-bootstrap/Button";
 
-function MyComponent() {
-    return (
-        <>
-            <Button variant="primary" size="lg">Large Button</Button>
-            <Button variant="primary">Normal Button</Button>
-            <Button variant="primary" size="sm">Small Button</Button>
-        </>
-    );
-}
+        function MyComponent() {
+            return (
+                <>
+                    <Button variant="primary" size="lg">Large Button</Button>
+                    <Button variant="primary">Normal Button</Button>
+                    <Button variant="primary" size="sm">Small Button</Button>
+                </>
+            );
+        }
 
-export default TypesExample;
-```
+        export default TypesExample;
+        ```
+    </TabItem>
+</Tabs>
 
 ## Props
 
