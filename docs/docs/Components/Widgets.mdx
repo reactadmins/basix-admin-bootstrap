@@ -12,160 +12,167 @@ import StatsCard from "@site/src/components/Widgets/StatsCard/StasCard";
 import SocialCounter from "@site/src/components/Widgets/SocialCounter/SocialCounter";
 import UserStats from "@site/src/components/Widgets/UserStats/UserStats";
 import { BarChart, Bar } from "recharts";
-
 import { statsCardWithChart } from "../../data/data";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Examples
 
 ### Stats Card
 
-<CodePreview>
-    <div className="d-flex gap-2">
-        <div className="col-4">
-            <StatsCard
-                type="revenue-counter"
-                bgColor="#5c6bc0"
-                symbol="$"
-                counter={23569}
-                isCounter={true}
-                title="Revenue"
-                icon="fa-solid fa-cart-shopping"
-            />
-        </div>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="d-flex gap-2">
+                <div className="col-4">
+                    <StatsCard
+                        type="revenue-counter"
+                        bgColor="#5c6bc0"
+                        symbol="$"
+                        counter={23569}
+                        isCounter={true}
+                        title="Revenue"
+                        icon="fa-solid fa-cart-shopping"
+                    />
+                </div>
 
-        <div className="col-4">
-            <StatsCard
-                type="revenue-counter"
-                bgColor="#66bb6a"
-                symbolPosition="right"
-                symbol="%"
-                counter={23569}
-                isCounter={true}
-                title="Revenue"
-                icon={
-                    <BarChart width={100} height={80} data={statsCardWithChart}>
-                        <Bar dataKey="uv" fill="#fff" />
-                    </BarChart>
-                }
-            />
-        </div>
+                <div className="col-4">
+                    <StatsCard
+                        type="revenue-counter"
+                        bgColor="#66bb6a"
+                        symbolPosition="right"
+                        symbol="%"
+                        counter={23569}
+                        isCounter={true}
+                        title="Revenue"
+                        icon={
+                            <BarChart width={100} height={80} data={statsCardWithChart}>
+                                <Bar dataKey="uv" fill="#fff" />
+                            </BarChart>
+                        }
+                    />
+                </div>
 
-        <div className="col-4">
-            <StatsCard
-                type="revenue-progressBar"
-                bgColor="#5c6bc0"
-                symbol="%"
-                symbolPosition="right"
-                counter={89}
-                isCounter={true}
-                title="Lorem ipsum..."
-                progressPercent={25}
-                description="Lorem ipsum dolor sit amet enim."
-            />
-        </div>
-    </div>
+                <div className="col-4">
+                    <StatsCard
+                        type="revenue-progressBar"
+                        bgColor="#5c6bc0"
+                        symbol="%"
+                        symbolPosition="right"
+                        counter={89}
+                        isCounter={true}
+                        title="Lorem ipsum..."
+                        progressPercent={25}
+                        description="Lorem ipsum dolor sit amet enim."
+                    />
+                </div>
+            </div>
 
-</CodePreview>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
+        ```jsx title="Widgets"
+        import React from "react";
+        import StatsCard from "@/components/StatsCard/StatsCard";
+        import { BarChart, Bar } from "recharts";
 
-```jsx title="Widgets"
-import React from "react";
-import StatsCard from "@/components/StatsCard/StatsCard";
-import { BarChart, Bar } from "recharts";
+        const data = [
+            {
+                name: "Page A",
+                uv: 2000,
+                pv: 2400,
+                amt: 2400,
+            },
+            {
+                name: "Page B",
+                uv: 6000,
+                pv: 1398,
+                amt: 2210,
+            },
+            {
+                name: "Page C",
+                uv: 4000,
+                pv: 9800,
+                amt: 2290,
+            },
+            {
+                name: "Page D",
+                uv: 8000,
+                pv: 3908,
+                amt: 2000,
+            },
+            {
+                name: "Page E",
+                uv: 4000,
+                pv: 4800,
+                amt: 2181,
+            },
+            {
+                name: "Page F",
+                uv: 6000,
+                pv: 3800,
+                amt: 2500,
+            },
+            {
+                name: "Page G",
+                uv: 2000,
+                pv: 4300,
+                amt: 2100,
+            },
+            {
+                name: "Page G",
+                uv: 5000,
+                pv: 4300,
+                amt: 2100,
+            },
+        ];
 
-const data = [
-    {
-        name: "Page A",
-        uv: 2000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: "Page B",
-        uv: 6000,
-        pv: 1398,
-        amt: 2210,
-    },
-    {
-        name: "Page C",
-        uv: 4000,
-        pv: 9800,
-        amt: 2290,
-    },
-    {
-        name: "Page D",
-        uv: 8000,
-        pv: 3908,
-        amt: 2000,
-    },
-    {
-        name: "Page E",
-        uv: 4000,
-        pv: 4800,
-        amt: 2181,
-    },
-    {
-        name: "Page F",
-        uv: 6000,
-        pv: 3800,
-        amt: 2500,
-    },
-    {
-        name: "Page G",
-        uv: 2000,
-        pv: 4300,
-        amt: 2100,
-    },
-    {
-        name: "Page G",
-        uv: 5000,
-        pv: 4300,
-        amt: 2100,
-    },
-];
+        const MyComponent = () => {
+            return (
+                <>
+                    <StatsCard
+                        type="revenue-counter"
+                        bgColor="#5c6bc0"
+                        symbol="$"
+                        counter={23569}
+                        isCounter={true}
+                        title="Revenue"
+                        icon="fa-solid fa-cart-shopping"
+                    />
+                    <StatsCard
+                        type="revenue-counter"
+                        bgColor="#66bb6a"
+                        symbolPosition="right"
+                        symbol="%"
+                        counter={23569}
+                        isCounter={true}
+                        title="Revenue"
+                        icon={
+                            <BarChart width={100} height={80} data={statsCardWithChart}>
+                                <Bar dataKey="uv" fill="#fff" />
+                            </BarChart>
+                        }
+                    />
+                    <StatsCard
+                        type="revenue-progressBar"
+                        bgColor="#5c6bc0"
+                        symbol="%"
+                        symbolPosition="right"
+                        counter={89}
+                        isCounter={true}
+                        title="Lorem ipsum..."
+                        progressPercent={25}
+                        description="Lorem ipsum dolor sit amet enim."
+                    />
+                </>
+            );
+        };
 
-const MyComponent = () => {
-    return (
-        <>
-            <StatsCard
-                type="revenue-counter"
-                bgColor="#5c6bc0"
-                symbol="$"
-                counter={23569}
-                isCounter={true}
-                title="Revenue"
-                icon="fa-solid fa-cart-shopping"
-            />
-            <StatsCard
-                type="revenue-counter"
-                bgColor="#66bb6a"
-                symbolPosition="right"
-                symbol="%"
-                counter={23569}
-                isCounter={true}
-                title="Revenue"
-                icon={
-                    <BarChart width={100} height={80} data={statsCardWithChart}>
-                        <Bar dataKey="uv" fill="#fff" />
-                    </BarChart>
-                }
-            />
-            <StatsCard
-                type="revenue-progressBar"
-                bgColor="#5c6bc0"
-                symbol="%"
-                symbolPosition="right"
-                counter={89}
-                isCounter={true}
-                title="Lorem ipsum..."
-                progressPercent={25}
-                description="Lorem ipsum dolor sit amet enim."
-            />
-        </>
-    );
-};
-
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ## Props
 
@@ -285,50 +292,56 @@ export default MyComponent;
 
 ### Social Counter
 
-<CodePreview>
-    <div className="col-4">
-        <SocialCounter
-            bgColor="#3B5998"
-            padding="40px"
-            icon="fa-brands fa-facebook-f"
-            count="1875980"
-            iconPosition="top"
-            socialActivity={{
-                followers: 40,
-                countType: "K",
-                followersType: "Friends",
-                usre: 40,
-                feeds: "feeds",
-            }}
-        />
-    </div>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="col-4">
+                <SocialCounter
+                    bgColor="#3B5998"
+                    padding="40px"
+                    icon="fa-brands fa-facebook-f"
+                    count="1875980"
+                    iconPosition="top"
+                    socialActivity={{
+                        followers: 40,
+                        countType: "K",
+                        followersType: "Friends",
+                        usre: 40,
+                        feeds: "feeds",
+                    }}
+                />
+            </div>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
+        ```jsx title="Widgets"
+        import React from "react";
+        import SocialCounter from "@/components/SocialCounter/SocialCounter";
 
-```jsx title="Widgets"
-import React from "react";
-import SocialCounter from "@/components/SocialCounter/SocialCounter";
+        const MyComponent = () => {
+            return (
+                <SocialCounter
+                    bgColor="#3B5998"
+                    padding="40px"
+                    icon="fa-brands fa-facebook-f"
+                    count="1875980"
+                    iconPosition="top"
+                    socialActivity={{
+                        followers: 40,
+                        countType: "K",
+                        followersType: "Friends",
+                        usre: 40,
+                        feeds: "feeds",
+                    }}
+                />
+            );
+        };
 
-const MyComponent = () => {
-    return (
-        <SocialCounter
-            bgColor="#3B5998"
-            padding="40px"
-            icon="fa-brands fa-facebook-f"
-            count="1875980"
-            iconPosition="top"
-            socialActivity={{
-                followers: 40,
-                countType: "K",
-                followersType: "Friends",
-                usre: 40,
-                feeds: "feeds",
-            }}
-        />
-    );
-};
-
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ## Props
 
@@ -379,36 +392,42 @@ export default MyComponent;
 
 ### User Stats
 
-<CodePreview>
-    <div className="col-4">
-        <UserStats
-            icon="fa-solid fa-users"
-            conunt={87500}
-            title="Visitors"
-            progressBg="#5c6bc0"
-            progressPercent={80}
-        />
-    </div>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="col-4">
+                <UserStats
+                    icon="fa-solid fa-users"
+                    conunt={87500}
+                    title="Visitors"
+                    progressBg="#5c6bc0"
+                    progressPercent={80}
+                />
+            </div>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
+        ```jsx title="Widgets"
+        import React from "react";
+        import UserStats from "@/components/UserStats/UserStats";
 
-```jsx title="Widgets"
-import React from "react";
-import UserStats from "@/components/UserStats/UserStats";
+        const MyComponent = () => {
+            return (
+                <UserStats
+                    icon="fa-solid fa-users"
+                    conunt={87500}
+                    title="Visitors"
+                    progressBg="#5c6bc0"
+                    progressPercent={80}
+                />
+            );
+        };
 
-const MyComponent = () => {
-    return (
-        <UserStats
-            icon="fa-solid fa-users"
-            conunt={87500}
-            title="Visitors"
-            progressBg="#5c6bc0"
-            progressPercent={80}
-        />
-    );
-};
-
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ## Props
 
