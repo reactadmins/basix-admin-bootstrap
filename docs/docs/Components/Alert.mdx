@@ -7,23 +7,23 @@ Provides feedback messages relevant to common user actions, including warning me
 import { Alert, Badge } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
-import Collapse from "@site/src/components/Collapse/Collapse";
 
-
-// import Playground from '@site/src/components/Playground/Playground';
-
-{/* <Playground /> */}
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Examples
 
-<CodePreview>
-    <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
-    <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
-    <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
+            <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
+            <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
+        </CodePreview>  
+    </TabItem>
 
-    <Collapse title="Source Code">
-        ```jsx title="Alerts"
+    <TabItem value="code" label="Code">
+        ```jsx
         import Alert from "react-bootstrap/Alert";
 
         function MyComponent() {
@@ -38,113 +38,131 @@ import Collapse from "@site/src/components/Collapse/Collapse";
 
         export default MyComponent;
         ```
-    </Collapse>
-</CodePreview>
-
-
-
-
+    </TabItem>
+</Tabs>
 
 ### Link
 
-<CodePreview>
-    <Alert variant="primary">This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="secondary">This is a secondary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-    <Alert variant="success">This is a success alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Alert variant="primary">This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+            <Alert variant="secondary">This is a secondary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+            <Alert variant="success">This is a success alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
-```jsx title="Alerts"
-import Alert from "react-bootstrap/Alert";
+        ```jsx title="Alerts"
+        import Alert from "react-bootstrap/Alert";
 
-function MyComponent() {
-    return (
-        <>
-            <Alert variant="primary">
-                This is a primary alert with 
-                <Alert.Link href="#">an example link</Alert.Link>. 
-                Give it a click if you like.
-            </Alert>
-            <Alert variant="secondary">
-                This is a secondary alert with
-                <Alert.Link href="#">an example link</Alert.Link>.
-                Give it a click if you like.
-            </Alert>
-            <Alert variant="success">
-                This is a success alert with 
-                <Alert.Link href="#">an example link</Alert.Link>.
-                Give it a click if you like.
-            </Alert>
-        </>
-    );
-}
+        function MyComponent() {
+            return (
+                <>
+                    <Alert variant="primary">
+                        This is a primary alert with 
+                        <Alert.Link href="#">an example link</Alert.Link>. 
+                        Give it a click if you like.
+                    </Alert>
+                    <Alert variant="secondary">
+                        This is a secondary alert with
+                        <Alert.Link href="#">an example link</Alert.Link>.
+                        Give it a click if you like.
+                    </Alert>
+                    <Alert variant="success">
+                        This is a success alert with 
+                        <Alert.Link href="#">an example link</Alert.Link>.
+                        Give it a click if you like.
+                    </Alert>
+                </>
+            );
+        }
 
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
+
 
 ### With Badge
 
-<CodePreview>
-    <Alert variant="success"><Badge bg="success">Success</Badge> You successfully read this important alert.</Alert>
-    <Alert variant="primary"> <Badge bg="primary">Primary</Badge> You successfully read this important alert.</Alert>
-    <Alert variant="secondary"><Badge bg="secondary">Secondary</Badge> You successfully read this important alert.</Alert>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Alert variant="success"><Badge bg="success">Success</Badge> You successfully read this important alert.</Alert>
+            <Alert variant="primary"> <Badge bg="primary">Primary</Badge> You successfully read this important alert.</Alert>
+            <Alert variant="secondary"><Badge bg="secondary">Secondary</Badge> You successfully read this important alert.</Alert>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
-```jsx title="Alerts"
-import { Alert, Badge } from "react-bootstrap";
+        ```jsx title="Alerts"
+        import { Alert, Badge } from "react-bootstrap";
 
-function MyComponent() {
-    return (
-        <>
-            <Alert variant="success">
-                <Badge bg="success">Success</Badge> 
-                You successfully read this important alert.
-            </Alert>
-            <Alert variant="primary">
-                <Badge bg="primary">Primary</Badge>
-                You successfully read this important alert.
-            </Alert>
-            <Alert variant="secondary">
-                <Badge bg="secondary">Secondary</Badge>
-                You successfully read this important alert.
-            </Alert>
-        </>
-    );
-}
+        function MyComponent() {
+            return (
+                <>
+                    <Alert variant="success">
+                        <Badge bg="success">Success</Badge> 
+                        You successfully read this important alert.
+                    </Alert>
+                    <Alert variant="primary">
+                        <Badge bg="primary">Primary</Badge>
+                        You successfully read this important alert.
+                    </Alert>
+                    <Alert variant="secondary">
+                        <Badge bg="secondary">Secondary</Badge>
+                        You successfully read this important alert.
+                    </Alert>
+                </>
+            );
+        }
 
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Additional content
 
-<CodePreview>
-    <Alert variant="success" dismissible>
-        <Alert.Heading>Well done!</Alert.Heading>
-        <p>
-          You successfully read this important alert message. This example text is going to run a bit longer so that you can see alert content.
-        </p>
-        <hr />
-       <p>Whenever you need to, be sure to use margin utilities nice and tidy.</p>
-    </Alert>
-</CodePreview>
-
-```jsx title="Alerts"
-import Alert from "react-bootstrap/Alert";
-
-function MyComponent() {
-    return (
-        <Alert variant="success" dismissible>
-            <Alert.Heading>Well done!</Alert.Heading>
-            <p>
-            You successfully read this important alert message. This example text is going to run a bit longer so that you can see alert content.
-            </p>
-            <hr />
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <Alert variant="success" dismissible>
+                <Alert.Heading>Well done!</Alert.Heading>
+                <p>
+                You successfully read this important alert message. This example text is going to run a bit longer so that you can see alert content.
+                </p>
+                <hr />
             <p>Whenever you need to, be sure to use margin utilities nice and tidy.</p>
-        </Alert>
-    );
-}
+            </Alert>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
-export default MyComponent;
-```
+        ```jsx title="Alerts"
+        import Alert from "react-bootstrap/Alert";
+
+        function MyComponent() {
+            return (
+                <Alert variant="success" dismissible>
+                    <Alert.Heading>Well done!</Alert.Heading>
+                    <p>
+                    You successfully read this important alert message. This example text is going to run a bit longer so that you can see alert content.
+                    </p>
+                    <hr />
+                    <p>Whenever you need to, be sure to use margin utilities nice and tidy.</p>
+                </Alert>
+            );
+        }
+
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ## Props
 
