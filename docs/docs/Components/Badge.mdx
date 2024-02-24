@@ -8,153 +8,181 @@ import { Badge, Button } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Examples
 
-<CodePreview>
-    <div>
-        <h1 style={{marginBottom: "8px"}}>Example heading <Badge bg="secondary">New</Badge></h1>
-        <h2>Example heading <Badge bg="secondary">New</Badge></h2>
-        <h3>Example heading <Badge bg="secondary">New</Badge></h3>
-        <h4>Example heading <Badge bg="secondary">New</Badge></h4>
-        <h5>Example heading <Badge bg="secondary">New</Badge></h5>
-        <h6>Example heading <Badge bg="secondary">New</Badge></h6>
-    </div>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div>
+                <h1 style={{marginBottom: "8px"}}>Example heading <Badge bg="secondary">New</Badge></h1>
+                <h2>Example heading <Badge bg="secondary">New</Badge></h2>
+                <h3>Example heading <Badge bg="secondary">New</Badge></h3>
+                <h4>Example heading <Badge bg="secondary">New</Badge></h4>
+                <h5>Example heading <Badge bg="secondary">New</Badge></h5>
+                <h6>Example heading <Badge bg="secondary">New</Badge></h6>
+            </div>
+        </CodePreview>
+    </TabItem>
     
-</CodePreview>
+    <TabItem value="code" label="Code">
 
-```jsx title="Badges"
-import Badge from "react-bootstrap/Badge";
+        ```jsx title="Badges"
+        import Badge from "react-bootstrap/Badge";
 
-function MyComponent() {
-    return (
-        <div>
-            <h1>Example heading <Badge bg="secondary">New</Badge></h1>
-            <h2>Example heading <Badge bg="secondary">New</Badge></h2>
-            <h3>Example heading <Badge bg="secondary">New</Badge></h3>
-            <h4>Example heading <Badge bg="secondary">New</Badge></h4>
-            <h5>Example heading <Badge bg="secondary">New</Badge></h5>
-            <h6>Example heading <Badge bg="secondary">New</Badge></h6>
-        </div>
-    );
-}
+        function MyComponent() {
+            return (
+                <div>
+                    <h1>Example heading <Badge bg="secondary">New</Badge></h1>
+                    <h2>Example heading <Badge bg="secondary">New</Badge></h2>
+                    <h3>Example heading <Badge bg="secondary">New</Badge></h3>
+                    <h4>Example heading <Badge bg="secondary">New</Badge></h4>
+                    <h5>Example heading <Badge bg="secondary">New</Badge></h5>
+                    <h6>Example heading <Badge bg="secondary">New</Badge></h6>
+                </div>
+            );
+        }
 
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### With Button Counter
 
-<CodePreview>
-    <div className="d-flex gap-2">
-        <Button variant="primary">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
-        <Button variant="success">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
-        <Button variant="info">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
-        <Button variant="warning">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
-        <Button variant="danger">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
-    </div>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="d-flex gap-2">
+                <Button variant="primary">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+                <Button variant="success">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+                <Button variant="info">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+                <Button variant="warning">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+                <Button variant="danger">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+            </div>
+        </CodePreview>
+    </TabItem>
     
-</CodePreview>
+    <TabItem value="code" label="Code">
 
-```jsx title="Badges"
-import Badge from "react-bootstrap/Badge";
+        ```jsx title="Badges"
+        import Badge from "react-bootstrap/Badge";
 
-function MyComponent() {
-    return (
-        <div>
-            <Button variant="primary">
-                Profile <Badge bg="light" text="dark">9</Badge>
-            </Button>
-            <Button variant="success">
-                Profile <Badge bg="light" text="dark">9</Badge>    
-            </Button>
-            <Button variant="info">
-                Profile <Badge bg="light" text="dark">9</Badge>
-            </Button>
-            <Button variant="warning">
-                Profile <Badge bg="light" text="dark">9</Badge>
-            </Button>
-            <Button variant="danger">
-                Profile <Badge bg="light" text="dark">9</Badge>
-            </Button>
-        </div>
-    );
-}
+        function MyComponent() {
+            return (
+                <div>
+                    <Button variant="primary">
+                        Profile <Badge bg="light" text="dark">9</Badge>
+                    </Button>
+                    <Button variant="success">
+                        Profile <Badge bg="light" text="dark">9</Badge>    
+                    </Button>
+                    <Button variant="info">
+                        Profile <Badge bg="light" text="dark">9</Badge>
+                    </Button>
+                    <Button variant="warning">
+                        Profile <Badge bg="light" text="dark">9</Badge>
+                    </Button>
+                    <Button variant="danger">
+                        Profile <Badge bg="light" text="dark">9</Badge>
+                    </Button>
+                </div>
+            );
+        }
 
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Contextual Variations
 
-<CodePreview>
-    <div className="d-flex flex-wrap gap-2">
-        <Badge bg="primary">Primary</Badge>
-        <Badge bg="secondary">Secondary</Badge>
-        <Badge bg="success">Success</Badge>
-        <Badge bg="danger">Danger</Badge>
-        <Badge bg="warning" text="dark">Warning</Badge>
-        <Badge bg="info" text="dark">Info</Badge>
-        <Badge bg="light" text="dark">Light</Badge>
-        <Badge bg="dark">Dark</Badge>
-    </div>
-</CodePreview>
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="d-flex flex-wrap gap-2">
+                <Badge bg="primary">Primary</Badge>
+                <Badge bg="secondary">Secondary</Badge>
+                <Badge bg="success">Success</Badge>
+                <Badge bg="danger">Danger</Badge>
+                <Badge bg="warning" text="dark">Warning</Badge>
+                <Badge bg="info" text="dark">Info</Badge>
+                <Badge bg="light" text="dark">Light</Badge>
+                <Badge bg="dark">Dark</Badge>
+            </div>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
-```jsx title="Badges"
-import Badge from "react-bootstrap/Badge";
+        ```jsx title="Badges"
+        import Badge from "react-bootstrap/Badge";
 
-function MyComponent() {
-    return (
-        <div className="d-flex flex-wrap gap-2">
-            <Badge bg="primary">Primary</Badge>
-            <Badge bg="secondary">Secondary</Badge>
-            <Badge bg="success">Success</Badge>
-            <Badge bg="danger">Danger</Badge>
-            <Badge bg="warning" text="dark">Warning</Badge>
-            <Badge bg="info" text="dark">Info</Badge>
-            <Badge bg="light" text="dark">Light</Badge>
-            <Badge bg="dark">Dark</Badge>
-        </div>
-    );
-}
+        function MyComponent() {
+            return (
+                <div className="d-flex flex-wrap gap-2">
+                    <Badge bg="primary">Primary</Badge>
+                    <Badge bg="secondary">Secondary</Badge>
+                    <Badge bg="success">Success</Badge>
+                    <Badge bg="danger">Danger</Badge>
+                    <Badge bg="warning" text="dark">Warning</Badge>
+                    <Badge bg="info" text="dark">Info</Badge>
+                    <Badge bg="light" text="dark">Light</Badge>
+                    <Badge bg="dark">Dark</Badge>
+                </div>
+            );
+        }
 
-export default MyComponent;
-```
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
 ### Pill badges
+<Tabs>
+    <TabItem value="preview" label="Preview">
+        <CodePreview>
+            <div className="d-flex flex-wrap gap-2">
+                <Badge pill bg="primary">Primary</Badge>
+                <Badge pill bg="secondary">Secondary</Badge>
+                <Badge pill bg="success">Success</Badge>
+                <Badge pill bg="danger">Danger</Badge>
+                <Badge pill bg="warning" text="dark">Warning</Badge>
+                <Badge pill bg="info" text="dark">Info</Badge>
+                <Badge pill bg="light" text="dark">Light</Badge>
+                <Badge pill bg="dark">Dark</Badge>
+            </div>
+        </CodePreview>
+    </TabItem>
+    
+    <TabItem value="code" label="Code">
 
-<CodePreview>
-    <div className="d-flex flex-wrap gap-2">
-        <Badge pill bg="primary">Primary</Badge>
-        <Badge pill bg="secondary">Secondary</Badge>
-        <Badge pill bg="success">Success</Badge>
-        <Badge pill bg="danger">Danger</Badge>
-        <Badge pill bg="warning" text="dark">Warning</Badge>
-        <Badge pill bg="info" text="dark">Info</Badge>
-        <Badge pill bg="light" text="dark">Light</Badge>
-        <Badge pill bg="dark">Dark</Badge>
-    </div>
-</CodePreview>
+        ```jsx title="Badges"
+        import Badge from "react-bootstrap/Badge";
 
-```jsx title="Badges"
-import Badge from "react-bootstrap/Badge";
+        function MyComponent() {
+            return (
+                <div className="d-flex flex-wrap gap-2">
+                    <Badge pill bg="primary">Primary</Badge>
+                    <Badge pill bg="secondary">Secondary</Badge>
+                    <Badge pill bg="success">Success</Badge>
+                    <Badge pill bg="danger">Danger</Badge>
+                    <Badge pill bg="warning" text="dark">Warning</Badge>
+                    <Badge pill bg="info" text="dark">Info</Badge>
+                    <Badge pill bg="light" text="dark">Light</Badge>
+                    <Badge pill bg="dark">Dark</Badge>
+                </div>
+            );
+        }
 
-function MyComponent() {
-    return (
-        <div className="d-flex flex-wrap gap-2">
-            <Badge pill bg="primary">Primary</Badge>
-            <Badge pill bg="secondary">Secondary</Badge>
-            <Badge pill bg="success">Success</Badge>
-            <Badge pill bg="danger">Danger</Badge>
-            <Badge pill bg="warning" text="dark">Warning</Badge>
-            <Badge pill bg="info" text="dark">Info</Badge>
-            <Badge pill bg="light" text="dark">Light</Badge>
-            <Badge pill bg="dark">Dark</Badge>
-        </div>
-    );
-}
+        export default MyComponent;
+        ```
+    </TabItem>
+</Tabs>
 
-export default MyComponent;
-```
-
+## Props
 
 <FeatureTable>
     <tr>
