@@ -122,6 +122,10 @@ aside.theme-doc-sidebar-container > div {
     text-decoration: none;
 }
 
+.tabs-container ul li{
+    padding: 8px 16px;
+}
+
 /* Light or Dark Mode css */
 /* .light-dark-wrapper{
     position: relative;
