@@ -7,7 +7,7 @@ sidebar_label: Tabs
 
 The Tabs component organizes content into multiple sections and allows the user to switch between them. The Tabs component can have different orientations, such as horizontal or vertical, and different alignments, such as left, center, or right. The Tabs component can also have indicators, icons, or labels for each tab.
 
-You can find the Tabs component in the `src/views/Tabs` folder
+You can find the Tabs component in the `src/views/Tabs.jsx` file.
 
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 import CodePreview from "@site/src/components/CodePreview/CodePreview";
@@ -19,6 +19,7 @@ import TabItem from '@theme/TabItem';
 ## Examples
 
 ### Top Horizontal
+A top-positioned horizontal tab menu component for intuitive navigation user experience. Tabs [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/tabs)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -106,7 +107,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br />
 ### Bottom Horizontal
+A tab component with customizable bottom positioning for user-friendly tab menu placement and navigation. Tabs [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/tabs)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -199,7 +202,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Left Vertical
+A tab component with customizable left vertical positioning for user-friendly tab menu placement and navigation. Tabs [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/tabs)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -290,7 +295,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Right Vertical
+A tab component with customizable right vertical positioning for user-friendly tab menu placement and navigation. Tabs [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/tabs)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -395,7 +402,7 @@ import TabItem from '@theme/TabItem';
         <td>activeTab</td>
         <td>string</td>
         <td></td>
-        <td>A string that specifies the key of the active tab. You can use this prop to control which tab is selected by default or by the user. For example, `activeTab="home"`.</td>
+        <td>A string that specifies the key of the `activeTab`. You can use this prop to control which tab is selected by default or by the user. For example, `activeTab="home"`.</td>
     </tr>
     <tr>
         <td>tabPosition</td>
@@ -405,7 +412,7 @@ import TabItem from '@theme/TabItem';
     </tr>
     <tr>
         <td>iconPosition</td>
-        <td>`left` | `right`</td>
+        <td>`left`, `right`</td>
         <td>`left`</td>
         <td>A string that specifies the position of the icons relative to the labels. You can choose from two options: `left` or `right`. The default value is `left`.</td>
     </tr>
@@ -447,3 +454,5 @@ import TabItem from '@theme/TabItem';
     </tr>
 
 </FeatureTable>
+
+If you like use to bootsrtap tab please visit [Tabs](https://react-bootstrap.netlify.app/docs/components/tabs)
