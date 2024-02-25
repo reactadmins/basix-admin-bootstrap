@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import styles from "@/assets/scss/SocialButtons.module.scss";
+import styles from "@/assets/scss/SocialButton.module.scss";
 
 function Social({
     href = "#",
@@ -41,11 +41,9 @@ const Link = styled.a.attrs((props) => ({
     target: "_blank",
 }))`
     background: ${(props) => props.$bgColor};
-    transition: all ${(props) => `${props.$transition}ms`};
     ${(props) => `${props.$border ? `border: ${props.$border}` : ""}`};
     > i {
         color: ${(props) => props.$color};
-        transition: all ${(props) => `${props.$transition}ms`};
     }
     &:hover {
         ${(props) =>

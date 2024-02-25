@@ -1,15 +1,13 @@
 import "leaflet/dist/leaflet.css";
 import Card from "@/components/Card/Card";
-import Voyager from "@/components/Maps/LeafletMaps/Voyager";
+import Voyager from "@/components/LeafletMaps/Voyager";
 import { CardBody, Col, Container, Row } from "react-bootstrap";
-import StreetMap from "@/components/Maps/LeafletMaps/StreetMap";
-import WorldImagery from "@/components/Maps/LeafletMaps/WorldImagery";
-import DarkMatter from "@/components/Maps/LeafletMaps/DarkMatter";
+import StreetMap from "@/components/LeafletMaps/StreetMap";
+import WorldImagery from "@/components/LeafletMaps/WorldImagery";
+import DarkMatter from "@/components/LeafletMaps/DarkMatter";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-
 const LeafletMaps = () => {
-
     const position = [51.505, -0.09];
 
     return (
@@ -28,9 +26,10 @@ const LeafletMaps = () => {
                                     attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
                                     url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
                                 />
-                                <Marker position={position} >
+                                <Marker position={position}>
                                     <Popup>
-                                        A pretty CSS3 popup. <br /> Easily customizable.
+                                        A pretty CSS3 popup. <br /> Easily
+                                        customizable.
                                     </Popup>
                                 </Marker>
                             </MapContainer>
@@ -52,7 +51,8 @@ const LeafletMaps = () => {
                                 />
                                 <Marker position={position}>
                                     <Popup>
-                                        A pretty CSS3 popup. <br /> Easily customizable.
+                                        A pretty CSS3 popup. <br /> Easily
+                                        customizable.
                                     </Popup>
                                 </Marker>
                             </MapContainer>
@@ -74,7 +74,8 @@ const LeafletMaps = () => {
                                 />
                                 <Marker position={position}>
                                     <Popup>
-                                        A pretty CSS3 popup. <br /> Easily customizable.
+                                        A pretty CSS3 popup. <br /> Easily
+                                        customizable.
                                     </Popup>
                                 </Marker>
                             </MapContainer>
@@ -96,7 +97,8 @@ const LeafletMaps = () => {
                                 />
                                 <Marker position={position}>
                                     <Popup>
-                                        A pretty CSS3 popup. <br /> Easily customizable.
+                                        A pretty CSS3 popup. <br /> Easily
+                                        customizable.
                                     </Popup>
                                 </Marker>
                             </MapContainer>
