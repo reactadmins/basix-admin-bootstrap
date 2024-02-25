@@ -10,7 +10,6 @@ function Social({
     color = "#fff",
     hoverColor = "",
     effect = "",
-    transition = "200",
     type = "square-rounded",
     border = "",
     hoverBorder = "",
@@ -23,7 +22,6 @@ function Social({
             $color={color}
             $hoverColor={hoverColor}
             $type={type}
-            $transition={transition}
             className={`${styles.social_button} ${styles[type]} ${styles[effect]}`}
             $border={border}
             $effect={effect}
