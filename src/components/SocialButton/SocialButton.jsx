@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import styles from "@/assets/scss/SocialButtons.module.scss";
+import styles from "@/assets/scss/SocialButton.module.scss";
 
 function Social({
     href = "#",
@@ -10,7 +10,6 @@ function Social({
     color = "#fff",
     hoverColor = "",
     effect = "",
-    transition = "200",
     type = "square-rounded",
     border = "",
     hoverBorder = "",
@@ -23,7 +22,6 @@ function Social({
             $color={color}
             $hoverColor={hoverColor}
             $type={type}
-            $transition={transition}
             className={`${styles.social_button} ${styles[type]} ${styles[effect]}`}
             $border={border}
             $effect={effect}
@@ -41,11 +39,9 @@ const Link = styled.a.attrs((props) => ({
     target: "_blank",
 }))`
     background: ${(props) => props.$bgColor};
-    transition: all ${(props) => `${props.$transition}ms`};
     ${(props) => `${props.$border ? `border: ${props.$border}` : ""}`};
     > i {
         color: ${(props) => props.$color};
-        transition: all ${(props) => `${props.$transition}ms`};
     }
     &:hover {
         ${(props) =>

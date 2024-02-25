@@ -114,9 +114,159 @@ Within the download you'll find the following directories and files:
 ├── public
 ├── src
 │   ├── assets
+│   │   ├── fonts
+│   │   │   └── Nunito-Bold.otf
 │   │   ├── image
-│   │   └── scss
+│   │   ├── scss
+│   │   │   ├── navbars
+│   │   │   │   ├── DualTopNav.module.scss
+│   │   │   │   ├── HorizontalNav.module.scss
+│   │   │   │   └── VerticalNav.module.scss
+│   │   │   ├── AnalyticsStats.module.scss
+│   │   │   ├── Authentication.module.scss
+│   │   │   ├── Card.module.scss
+│   │   │   ├── CardContent.module.scss
+│   │   │   ├── DarkModeSwitch.module.scss
+│   │   │   ├── Grids.module.scsss
+│   │   │   ├── IconStyle.module.scsss
+│   │   │   ├── Layouts.module.scsss
+│   │   │   ├── Message.module.scsss
+│   │   │   ├── MonthlyStats.module.scsss
+│   │   │   ├── NavBarBgWrapper.module.scsss
+│   │   │   ├── Notification.module.scsss
+│   │   │   ├── NotificationStatsCart.module.scsss
+│   │   │   ├── OverlayCard.module.scsss
+│   │   │   ├── ProfileCard.module.scsss
+│   │   │   ├── SearchBar.module.scsss
+│   │   │   ├── Sidebar.module.scsss
+│   │   │   ├── SidebarBgWrapper.module.scsss
+│   │   │   ├── SocialButton.module.scsss
+│   │   │   ├── SocialCounter.module.scss.scsss
+│   │   │   ├── SocialStats.module.scsss
+│   │   │   ├── Stats.module.scsss
+│   │   │   ├── StatsCard.module.scsss
+│   │   │   ├── StepCircleWizard.module.scsss
+│   │   │   ├── StepSquarWizard.module.scsss
+│   │   │   ├── StepTabWizard.module.scsss
+│   │   │   ├── Tables.module.scsss
+│   │   │   ├── Tabs.module.scsss
+│   │   │   ├── Timeline.module.scsss
+│   │   │   ├── Traffic.module.scsss
+│   │   │   ├── Typography.module.scsss
+│   │   │   ├── UesrProfile.module.scsss
+│   │   │   ├── variable.scsss
+│   │   │   ├── WeatherStats.module.scsss
+│   │   │   └── WidgetsCard.module.scsss
 │   ├── components
+│   │   ├── AnalyticsStats
+│   │   │   └── AnalyticsStats.jsx
+│   │   ├── ApexCharts
+│   │   │   ├── AreaChart.jsx
+│   │   │   ├── BarChart.jsx
+│   │   │   ├── BubbleChart.jsx
+│   │   │   ├── CandlestickChart.jsx
+│   │   │   ├── ColumnChart.jsx
+│   │   │   └── PieChart.jsx
+│   │   ├── Card
+│   │   │   └── Card.jsx
+│   │   ├── Chartjs
+│   │   │   ├── BarChart.jsx
+│   │   │   ├── DoughnutChart.jsx
+│   │   │   ├── LineChart.jsx
+│   │   │   ├── PieChart.jsx
+│   │   │   ├── PolarAreaChart.jsx
+│   │   │   └── RadarChart.jsx
+│   │   ├── DarkModeSwitch
+│   │   │   └── DarkModeSwitch.jsx
+│   │   ├── DeviceVisitorStats
+│   │   │   └── DeviceVisitorStats.jsx
+│   │   ├── Download
+│   │   │   └── Download.jsx
+│   │   ├── DropdownMenu
+│   │   │   └── DropdownMenu.jsx
+│   │   ├── Earning
+│   │   │   └── Earning.jsx
+│   │   ├── Icon
+│   │   │   ├── Brandico.jsx
+│   │   │   ├── CopyButton.jsx
+│   │   │   ├── Entypo.jsx
+│   │   │   ├── FontAwesome.jsx
+│   │   │   ├── Fontelico.jsx
+│   │   │   └── Iconviewer.jsx
+│   │   ├── LeafletMaps
+│   │   │   ├── DarkMatter.jsx
+│   │   │   ├── StreetMap.jsx
+│   │   │   ├── Voyager.jsx
+│   │   │   └── WorldImagery.jsx
+│   │   ├── MonthlyStats
+│   │   │   └── MonthlyStats.jsx
+│   │   ├── Navbars
+│   │   │   ├── Message
+│   │   │   │   └── Message.jsx
+│   │   │   ├── NavbarType
+│   │   │   │   ├── DualTopNav.jsx
+│   │   │   │   ├── HorizontalNav.jsx
+│   │   │   │   └── VerticalNav.jsx
+│   │   │   ├── Notification
+│   │   │   │   └── Notification.jsx
+│   │   │   ├── UserProfile
+│   │   │   │   └── UserProfile.jsx
+│   │   │   ├── NavBarBgWrapper.jsx
+│   │   │   └── Navrars.jsx
+│   │   ├── NotificationStatsCart
+│   │   │   └── NotificationStatsCart.jsx
+│   │   ├── OverlayCard
+│   │   │   └── OverlayCard.jsx
+│   │   ├── ProfileCard
+│   │   │   └── ProfileCard.jsx
+│   │   ├── RealTime
+│   │   │   └── RealTime.jsx
+│   │   ├── Recharts
+│   │   │   ├── AreaRechart.jsx
+│   │   │   ├── BarRechart.jsx
+│   │   │   ├── LineRechart.jsx
+│   │   │   ├── PieRechart.jsx
+│   │   │   ├── RechartRadialBar.jsx
+│   │   │   └── RechartScatter.jsx
+│   │   ├── Revenue
+│   │   │   └── Revenue.jsx
+│   │   ├── SearchBar
+│   │   │   └── SearchBar.jsx
+│   │   ├── Sidebar
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── SidebarBgWrapper.jsx
+│   │   │   └── SidebarMenu.jsx
+│   │   ├── SocialButton
+│   │   │   └── SocialButton.jsx
+│   │   ├── SocialCounter
+│   │   │   └── SocialCounter.jsx
+│   │   ├── SocialStats
+│   │   │   └── SocialStats.jsx
+│   │   ├── Stats
+│   │   │   ├── Day.jsx
+│   │   │   ├── Month.jsx
+│   │   │   ├── Stats.jsx
+│   │   │   └── Year.jsx
+│   │   ├── StatsCard
+│   │   │   └── StatsCard.jsx
+│   │   ├── StepWizards
+│   │   │   ├── Page
+│   │   │   │   ├── AdditionalInfo.jsx
+│   │   │   │   ├── LoggedIn.jsx
+│   │   │   │   └── PersonalDetails.jsx
+│   │   │   ├── StepCircleWizard.jsx
+│   │   │   ├── StepSquarWizard.jsx
+│   │   │   └── StepTabWizard.jsx
+│   │   ├── Tab
+│   │   │   └── Tab.jsx
+│   │   ├── Timeline
+│   │   │   └── Timeline.jsx
+│   │   ├── Traffic
+│   │   │   └── Traffic.jsx
+│   │   ├── UserStats
+│   │   │   └── UserStats.jsx
+│   │   ├── WeatherStats
+│   │   │   └── WeatherStats.jsx
 │   ├── context
 │   ├── layouts
 │   │   └── Layouts.jsx
