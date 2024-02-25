@@ -1,11 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/Sidebar/Sidebar";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
-// import Navbar from "../components/Navbars/Navbar";
-import style from "../assets/scss/Layouts.module.scss";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import styles from "@/assets/scss/Layouts.module.scss";
 import { Fragment } from "react";
-import NavBarBgWrapper from "../components/Navbars/NavBarBgWrapper";
-import NavbarType from "../components/Navbars/NavbarType/NavbarType";
+import Navbars from "@/components/Navbars/Navrars";
 
 const Layouts = () => {
     const { activeVariation, sidebarMini, navbarFixed } =
@@ -13,10 +11,10 @@ const Layouts = () => {
     switch (activeVariation) {
         case "vertical": {
             return (
-                <div className={style.layout}>
+                <div className={styles.layout}>
                     <Sidebar />
                     <div
-                        className={style.content}
+                        className={styles.content}
                         style={{
                             width: `${
                                 sidebarMini
@@ -25,9 +23,7 @@ const Layouts = () => {
                             }`,
                         }}
                     >
-                        <NavBarBgWrapper>
-                            <NavbarType type="vertical" />
-                        </NavBarBgWrapper>
+                        <Navbars />
                         <div
                             className="p-4"
                             style={{
@@ -43,9 +39,7 @@ const Layouts = () => {
         case "horizontal": {
             return (
                 <Fragment>
-                    <NavBarBgWrapper>
-                        <NavbarType type="horizontal" />
-                    </NavBarBgWrapper>
+                    <Navbars />
                     <div
                         className="p-4"
                         style={{
@@ -59,10 +53,8 @@ const Layouts = () => {
         }
         case "combo": {
             return (
-                <div className={style.layout}>
-                    <NavBarBgWrapper type="combo">
-                        <NavbarType type="horizontal" />
-                    </NavBarBgWrapper>
+                <div className={styles.layout}>
+                    <Navbars />
                     <div
                         style={{
                             marginTop: `${
@@ -72,7 +64,7 @@ const Layouts = () => {
                     >
                         <Sidebar type="combo" />
                         <div
-                            className={`${style.content} p-4`}
+                            className={`${styles.content} p-4`}
                             style={{
                                 width: `${
                                     sidebarMini
@@ -89,14 +81,12 @@ const Layouts = () => {
         }
         case "dual_nav": {
             return (
-                <div className={style.layout}>
-                    <NavbarType type="dual_nav" />
+                <div className={styles.layout}>
+                    <Navbars />
                     <div
-                        className={`${style.content} p-4 w-100`}
+                        className={`${styles.content} p-4 w-100`}
                         style={{
-                            marginTop: `${
-                                navbarFixed === "combo" ? "80px" : "0"
-                            }`,
+                            marginTop: `${navbarFixed ? "150px" : "0"}`,
                         }}
                     >
                         <Outlet />

@@ -7,17 +7,11 @@
         width: -webkit-fill-available;
         z-index: 999999;
     }
-    &[theme-type="combo"] {
+    &[nav-type="combo"] {
         position: fixed !important;
         top: 0;
-        width: 100%;
-        z-index: 99999;
-    }
-    &[theme-type="dual_nav"] {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: -webkit-fill-available;
+        z-index: 999999;
     }
     &[data-bg-color="white"] {
         background-color: #fff;

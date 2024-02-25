@@ -1,4 +1,4 @@
-@import "../../variable.scss";
+@import "../variable.scss";
 .top_navbar {
     width: 100%;
     background-color: var(--body-bg);
@@ -114,22 +114,31 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            a {
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+            }
             .nav_item {
                 position: relative;
                 padding: 8px 10px;
                 border-radius: 8px;
-                a {
-                    cursor: pointer;
-                    font-size: 14px;
-                    font-weight: 500;
-                    div {
-                        gap: 8px;
-                    }
-                }
                 .sub_menu {
                     display: none;
+                    li {
+                        background-color: transparent;
+                        position: relative;
+                        padding: 8px 10px;
+                        border-radius: 8px;
+                        > a {
+                            color: #3c4858;
+                        }
+                    }
                 }
                 &:hover {
+                    > a {
+                        color: #3c4858 !important;
+                    }
                     background-color: #f1f2f7;
                     .sub_menu {
                         display: block;
@@ -147,9 +156,7 @@
                         box-shadow: -8px 0px 16px -4px rgba(0, 0, 0, 0.1);
                         z-index: 9999;
                         transition: all 0.9s;
-                        .nav_item {
-                            background-color: transparent;
-                        }
+
                         &::before {
                             position: absolute;
                             content: "";
@@ -175,118 +182,47 @@
                         }
                     }
                 }
-            }
-
-            .nav_item {
                 &:last-child {
-                    background-color: $primary;
-                    a {
-                        color: $white;
-                    }
-                }
-                .sub_menu {
-                    .nav_item {
-                        &:last-child {
-                            a {
-                                color: var(--hedging-text-color);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        &[data="true"] {
-            background-color: var(--bg-content);
-            border: 1px solid var(--border-color);
-            .nav {
-                .nav_item {
-                    a {
-                        color: var(--hedging-text-color);
-                    }
-                    &:hover {
-                        background-color: var(--dark-hover-color);
-                    }
-                }
-            }
-        }
-    }
-
-    .bg_white {
-        background-color: $white;
-        .nav {
-            .nav_item {
-                a {
-                    color: #3c4858;
-                }
-                .sub_menu {
-                    .nav_item {
-                        a {
-                            color: #3c4858 !important;
-                        }
-                    }
-                }
-                &:hover {
-                    a {
-                        color: #3c4858 !important;
-                    }
-                }
-                &:last-child {
-                    a {
+                    > a {
                         color: #fff !important;
                     }
+                    background-color: #0d6efd;
                 }
             }
         }
-    }
-    .bg_black {
-        background-color: #263238;
-        .nav {
-            .nav_item {
-                a {
-                    color: $white;
-                }
-                .sub_menu {
-                    .nav_item {
-                        a {
-                            color: #3c4858;
-                        }
-                    }
-                }
-                &:hover {
-                    a {
+        &[data-color="white"] {
+            background-color: $white;
+            .nav {
+                .nav_item {
+                    > a {
                         color: #3c4858;
                     }
                 }
-                &:last-child {
-                    a {
-                        color: #fff !important;
+            }
+        }
+        &[data-color="black"] {
+            background-color: #263238;
+            .nav {
+                .nav_item {
+                    > a {
+                        color: #fff;
                     }
                 }
             }
         }
-    }
-    .bg_red {
-        background-color: #f44336;
-        .nav {
-            .nav_item {
-                a {
-                    color: $white;
-                }
-                .sub_menu {
-                    .nav_item {
-                        a {
-                            color: #3c4858;
+        &[data-color="red"] {
+            background-color: #f44336;
+            .nav {
+                .nav_item {
+                    > a {
+                        color: #fff;
+                    }
+                    .sub_menu {
+                        li {
+                            > a {
+                                color: #fff !important;
+                            }
                         }
-                    }
-                }
-                &:hover {
-                    a {
-                        color: #3c4858 !important;
-                    }
-                }
-                &:last-child {
-                    a {
-                        color: #fff !important;
                     }
                 }
             }
@@ -297,6 +233,26 @@
     position: fixed !important;
     top: 0;
     z-index: 99999;
+}
+
+body[data-theme="dark"] {
+    .top_navbar {
+        .duall_navbar {
+            &[data-color="red"] {
+                background-color: var(--bg-content);
+                border: 1px solid var(--border-color);
+                border-left: 0;
+                border-right: 0;
+                .nav {
+                    .nav_item {
+                        > a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -322,13 +278,6 @@
             .mini_logo {
                 display: block;
             }
-            // .nav {
-            //     .nav_item {
-            //         a {
-            //             color: red !important;
-            //         }
-            //     }
-            // }
         }
         .duall_navbar {
             display: none;

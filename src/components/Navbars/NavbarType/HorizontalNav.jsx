@@ -1,19 +1,19 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { miniNav } from "@/nav";
 import { Link } from "react-router-dom";
-import DropdownMenu from "../../DropdownMenu/DropdownMenu";
-import Notification from "../Notification/Notification";
-import Message from "../Message/Message";
-import UserProfile from "../UserProfile/UserProfile";
-import { useDashboardDataContext } from "../../../context/dashboardDataContext";
-import logo from "../../../assets/image/logo.png";
-import mini_logo from "../../../assets/image/mini-logo.png";
-import black_logo from "../../../assets/image/black-logo.png";
-import black_mini_logo from "../../../assets/image/black-mini-logo.png";
-import profile from "../../../assets/image/admin.jpg";
-import DarkModeSwitch from "../../DarkModeSwitch/DarkModeSwitch";
-import NavBarBgWrapper from "../NavBarBgWrapper";
-import styles from "../../../assets/scss/variation/topNav/HorizontalNav.module.scss";
+import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
+import Notification from "@/components/Navbars/Notification/Notification";
+import Message from "@/components/Navbars/Message/Message";
+import UserProfile from "@/components/Navbars/UserProfile/UserProfile";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import logo from "@/assets/image/logo.png";
+import mini_logo from "@/assets/image/mini-logo.png";
+import black_logo from "@/assets/image/black-logo.png";
+import black_mini_logo from "@/assets/image/black-mini-logo.png";
+import profile from "@/assets/image/admin.jpg";
+import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
+import NavBarBgWrapper from "@/components/Navbars/NavBarBgWrapper";
+import styles from "@/assets/scss/navbars/HorizontalNav.module.scss";
 
 const HorizontalNav = ({ type = "" }) => {
     const [openNotification, setOpenNotification] = useState(true);
@@ -46,7 +46,7 @@ const HorizontalNav = ({ type = "" }) => {
                     <div className="d-flex align-item-center gap-3">
                         <button
                             type="button"
-                            class={`${styles.toggle_btn} ${
+                            className={`${styles.toggle_btn} ${
                                 toggle ? styles.active : ""
                             }`}
                             onClick={() => setToggle(!toggle)}
@@ -97,7 +97,6 @@ const HorizontalNav = ({ type = "" }) => {
                         } ${toggle ? styles.nav_active : ""}`}
                     >
                         {miniNav.map((item, index) => {
-                            console.log(item);
                             return (
                                 <li key={index} className={styles.nav_item}>
                                     {item.children ? (

@@ -1,4 +1,4 @@
-@import "../../variable.scss";
+@import "../variable.scss";
 .horizontal_nav {
     .mini_logo {
         display: none;
@@ -212,17 +212,19 @@ body[data-theme="dark"] {
     .horizontal_nav {
         .nav {
             .nav_item {
-                a {
-                    color: var(--hedging-text-color);
-                    &:hover {
-                        color: #3c4858 !important;
-                    }
-                    ul {
-                        li {
-                            a {
-                                color: var(--hedging-text-color) !important;
-                            }
+                > a {
+                    color: #fff !important;
+                }
+                ul {
+                    li {
+                        a {
+                            color: var(--hedging-text-color) !important;
                         }
+                    }
+                }
+                &:hover {
+                    > a {
+                        color: #3c4858 !important;
                     }
                 }
             }
@@ -256,7 +258,8 @@ body[data-theme="dark"] {
                 right: 0;
                 background: var(--bg-content);
                 border: 1px solid var(--border-color);
-                padding: 10px;
+                padding: 20px;
+                z-index: 99999;
             }
         }
     }

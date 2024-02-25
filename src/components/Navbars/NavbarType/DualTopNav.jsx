@@ -1,20 +1,20 @@
 import { useState, useEffect, useRef, Fragment } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import profile from "../../../assets/image/admin.jpg";
-import light_logo from "../../../assets/image/logo.png";
-import mini_light_logo from "../../../assets/image/mini-logo.png";
-import black_logo from "../../../assets/image/black-logo.png";
-import black_mini_logo from "../../../assets/image/black-mini-logo.png";
-import DropdownMenu from "../../DropdownMenu/DropdownMenu";
-import Notification from "../Notification/Notification";
-import Message from "../Message/Message";
-import UserProfile from "../UserProfile/UserProfile";
-import { useDashboardDataContext } from "../../../context/dashboardDataContext";
-import navbarStyle from "../../../assets/scss/variation/topNav/DualTopNav.module.scss";
-import { navItems } from "../../../nav";
+import profile from "@/assets/image/admin.jpg";
+import light_logo from "@/assets/image/logo.png";
+import mini_light_logo from "@/assets/image/mini-logo.png";
+import black_logo from "@/assets/image/black-logo.png";
+import black_mini_logo from "@/assets/image/black-mini-logo.png";
+import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
+import Notification from "@/components/Navbars/Notification/Notification";
+import Message from "@/components/Navbars/Message/Message";
+import UserProfile from "@/components/Navbars/UserProfile/UserProfile";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import styles from "@/assets/scss/navbars/DualTopNav.module.scss";
+import { navItems } from "@/nav";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
-import DarkModeSwitch from "../../DarkModeSwitch/DarkModeSwitch";
+import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
 
 const DualTopNav = () => {
     const [openNotification, setOpenNotification] = useState(true);
@@ -43,16 +43,16 @@ const DualTopNav = () => {
     return (
         <Fragment>
             <Navbar
-                className={`${navbarStyle.top_navbar} ${
-                    navbarFixed ? navbarStyle.fixed_top : ""
+                className={`${styles.top_navbar} ${
+                    navbarFixed ? styles.fixed_top : ""
                 } p-0 flex-column`}
             >
                 <Container fluid className="px-4">
                     <Navbar.Collapse
-                        className={`${navbarStyle.collapse} justify-content-between`}
+                        className={`${styles.collapse} justify-content-between`}
                     >
-                        <Nav className={navbarStyle.navbar_nav}>
-                            <div className={navbarStyle.logo_container}>
+                        <Nav className={styles.navbar_nav}>
+                            <div className={styles.logo_container}>
                                 <button
                                     type="button"
                                     onClick={() => setSidebarMini(!sidebarMini)}
@@ -65,12 +65,12 @@ const DualTopNav = () => {
                                 </button>
                                 <Link to="/">
                                     <img
-                                        className={navbarStyle.logo}
+                                        className={styles.logo}
                                         src={isDark ? light_logo : black_logo}
                                         alt="basix-admin"
                                     />
                                     <img
-                                        className={navbarStyle.mini_logo}
+                                        className={styles.mini_logo}
                                         src={
                                             isDark
                                                 ? mini_light_logo
@@ -81,11 +81,8 @@ const DualTopNav = () => {
                                 </Link>
                             </div>
                         </Nav>
-                        <div className={navbarStyle.search_container}>
-                            <button
-                                type="button"
-                                className={navbarStyle.search_btn}
-                            >
+                        <div className={styles.search_container}>
+                            <button type="button" className={styles.search_btn}>
                                 <i className="fa fa-search"></i>
                             </button>
                             <input
@@ -93,14 +90,11 @@ const DualTopNav = () => {
                                 name=""
                                 id=""
                                 placeholder="search..."
-                                className={navbarStyle.search_field}
+                                className={styles.search_field}
                             />
                         </div>
                         <Nav>
-                            <ul
-                                className={navbarStyle.social_item}
-                                ref={dropRef}
-                            >
+                            <ul className={styles.social_item} ref={dropRef}>
                                 <li>
                                     <DarkModeSwitch />
                                 </li>
@@ -114,11 +108,11 @@ const DualTopNav = () => {
                                             setOpenMessage(true);
                                             setOpenUser(true);
                                         }}
-                                        className={navbarStyle.for_notification}
+                                        className={styles.for_notification}
                                     >
                                         <i className="fa fa-bell"></i>
                                         <span
-                                            className={`${navbarStyle.count}  bg-danger`}
+                                            className={`${styles.count}  bg-danger`}
                                         >
                                             5
                                         </span>
@@ -137,11 +131,11 @@ const DualTopNav = () => {
                                             setOpenNotification(true);
                                             setOpenUser(true);
                                         }}
-                                        className={navbarStyle.for_message}
+                                        className={styles.for_message}
                                     >
                                         <i className="fa-solid fa-envelope"></i>
                                         <span
-                                            className={`${navbarStyle.count} bg-primary`}
+                                            className={`${styles.count} bg-primary`}
                                         >
                                             5
                                         </span>
@@ -153,7 +147,7 @@ const DualTopNav = () => {
                                     ) : null}
                                 </li>
                                 <li>
-                                    <div className={navbarStyle.user_area}>
+                                    <div className={styles.user_area}>
                                         <a
                                             href="#"
                                             onClick={() => {
@@ -161,9 +155,7 @@ const DualTopNav = () => {
                                                 setOpenMessage(true);
                                                 setOpenNotification(true);
                                             }}
-                                            className={
-                                                navbarStyle.user_dropdown
-                                            }
+                                            className={styles.user_dropdown}
                                         >
                                             <img src={profile} alt="uesr" />
                                         </a>
@@ -179,16 +171,16 @@ const DualTopNav = () => {
                     </Navbar.Collapse>
                 </Container>
                 <div
-                    data={isDark ? "true" : "false"}
-                    className={`${navbarStyle.duall_navbar} ${
-                        navbarStyle[topNavbarBgColor]
-                    } ${sidebarMini ? navbarStyle.toggle_menu : ""}`}
+                    data-color={topNavbarBgColor}
+                    className={`${styles.duall_navbar} ${
+                        sidebarMini ? styles.toggle_menu : ""
+                    }`}
                 >
-                    <ul className={`${navbarStyle.nav} nav navbar-nav`}>
+                    <ul className={`${styles.nav}`}>
                         {navItems?.map((item, index) => (
                             <li
                                 key={index}
-                                className={`${navbarStyle.nav_item} ${
+                                className={`${styles.nav_item} ${
                                     item.title ? "d-none" : ""
                                 }`}
                             >
@@ -209,7 +201,7 @@ const DualTopNav = () => {
                                                 }
                                                 className="d-flex justify-content-between align-items-center"
                                             >
-                                                <div className="d-flex align-items-center">
+                                                <div className="d-flex align-items-center gap-2">
                                                     <i
                                                         className={`${item.icon} menu-icon`}
                                                     ></i>
@@ -227,7 +219,7 @@ const DualTopNav = () => {
                                                 }
                                                 className="d-flex justify-content-between align-items-center user-select-none"
                                             >
-                                                <div className="d-flex align-items-center">
+                                                <div className="d-flex align-items-center gap-2">
                                                     <i
                                                         className={`${item.icon} menu-icon`}
                                                     ></i>
@@ -243,7 +235,7 @@ const DualTopNav = () => {
                                             target="_blank"
                                             className="d-flex align-items-center"
                                         >
-                                            <div className="d-flex align-items-center">
+                                            <div className="d-flex align-items-center gap-2">
                                                 <i
                                                     className={`${item.icon} menu-icon`}
                                                 ></i>
@@ -252,20 +244,15 @@ const DualTopNav = () => {
                                         </a>
                                     ))}
                                 {item.children ? (
-                                    <ul className={navbarStyle.sub_menu}>
+                                    <ul className={styles.sub_menu}>
                                         {item?.children?.map(
                                             (childItem, index) => (
-                                                <li
-                                                    key={index}
-                                                    className={
-                                                        navbarStyle.nav_item
-                                                    }
-                                                >
+                                                <li key={index}>
                                                     <Link
                                                         to={childItem?.path}
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
-                                                        <div className="d-flex align-items-center">
+                                                        <div className="d-flex align-items-center gap-2">
                                                             <i
                                                                 className={`${childItem.icon} menu-icon`}
                                                             ></i>

@@ -8,7 +8,7 @@ import UserProfile from "@/components/Navbars/UserProfile/UserProfile";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import profile from "@/assets/image/admin.jpg";
 import { useDashboardDataContext } from "@/context/dashboardDataContext";
-import styles from "@/assets/scss/variation/topNav/VerticalNav.module.scss";
+import styles from "@/assets/scss/navbars/VerticalNav.module.scss";
 import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
 
 const VerticalNav = () => {
