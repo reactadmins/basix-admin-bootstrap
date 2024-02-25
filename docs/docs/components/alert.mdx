@@ -5,9 +5,9 @@ sidebar_label: Alert
 
 # Alert
 
-The Alert component displays a message or feedback to the user, usually in response to an action or an event. The Alert component can have different severity levels, such as success, info, warning, or error, and can be styled accordingly. The Alert component can also be dismissed by the user or automatically after a certain time.
+The Alert component displays a message or feedback to the user, usually in response to an action or an event. The Alert component can have different severity levels, such as `success`, `info`, `warning`, or `error`, and can be styled accordingly. The Alert component can also be dismissed by the user or automatically after a certain time.
 
-You can find the Alerts component in the `src/views/Alerts` folder
+You can find the Alerts component in the `src/views/Alerts.jsx` file.
 
 import { Alert, Badge } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
@@ -23,6 +23,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Examples
+
+Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight variants. Alert [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -52,14 +54,17 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Link
+
+For links, use the `<Alert.Link>` component to provide matching colored links within any alert. Alert Link [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
         <CodePreview>
-            <Alert variant="primary">This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="secondary">This is a secondary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
-            <Alert variant="success">This is a success alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+            <Alert variant="primary">This is a primary alert with <Alert.Link target="_blank" href="https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts">an example link</Alert.Link>. Give it a click if you like.</Alert>
+            <Alert variant="secondary">This is a secondary alert with <Alert.Link target="_blank" href="https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts">an example link</Alert.Link>. Give it a click if you like.</Alert>
+            <Alert variant="success">This is a success alert with <Alert.Link target="_blank" href="https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts">an example link</Alert.Link>. Give it a click if you like.</Alert>
         </CodePreview>
     </TabItem>
     
@@ -73,17 +78,17 @@ import TabItem from '@theme/TabItem';
                 <>
                     <Alert variant="primary">
                         This is a primary alert with 
-                        <Alert.Link href="#">an example link</Alert.Link>. 
+                        <Alert.Link target="_blank" href="https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts">an example link</Alert.Link>. 
                         Give it a click if you like.
                     </Alert>
                     <Alert variant="secondary">
                         This is a secondary alert with
-                        <Alert.Link href="#">an example link</Alert.Link>.
+                        <Alert.Link target="_blank" href="https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts">an example link</Alert.Link>.
                         Give it a click if you like.
                     </Alert>
                     <Alert variant="success">
                         This is a success alert with 
-                        <Alert.Link href="#">an example link</Alert.Link>.
+                        <Alert.Link target="_blank" href="https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts">an example link</Alert.Link>.
                         Give it a click if you like.
                     </Alert>
                 </>
@@ -95,8 +100,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
-
+<br/>
 ### With Badge
+Alerts can contain another component also like `<Badge>`. Alert [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -136,7 +142,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Additional content
+Alerts can contain whatever content you like. Headers, paragraphs, dividers, go crazy. Alert [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/alerts)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -180,23 +188,23 @@ import TabItem from '@theme/TabItem';
 <FeatureTable>
     <tr>
         <td>variant</td>
-        <td>`primary` | `secondary` | `success` | 
-        <br />`danger` | `warning` | `info` | <br/> 
-        `dark` | `light`</td>
+        <td>`primary`, `secondary`, `success`, 
+       `danger`, `warning`, `info`,
+        `dark`, `light`</td>
         <td></td>
-        <td>A string that specifies the color scheme of the alert. You can choose from eight options: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, or “light”. The default value is “primary”.</td>
+        <td>A string that specifies the color scheme of the alert. You can choose from eight options: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, or `light`. The default value is `primary`.</td>
     </tr>
     <tr>
         <td>dismissible</td>
         <td>boolean</td>
         <td></td>
-        <td>A boolean that indicates whether the alert can be closed by the user. If dismissible is true, a close button will appear on the right side of the alert. If dismissible is false, the alert will not have a close button. The default value is false.</td>
+        <td>A boolean that indicates whether the alert can be closed by the user. If `dismissible` is `true`, a close button will appear on the right side of the alert. If `dismissible` is `false`, the alert will not have a close button. The default value is `false`.</td>
     </tr>
     <tr>
         <td>show</td>
         <td>boolean</td>
         <td></td>
-        <td>A boolean that indicates whether the alert is visible or not. If show is true, the alert will be rendered on the screen. If show is false, the alert will be hidden. The default value is true.</td>
+        <td>A boolean that indicates whether the alert is visible or not. If `show` is `true`, the alert will be rendered on the screen. If `show` is `false`, the alert will be hidden. The default value is `true`.</td>
     </tr>
     <tr>
         <td>onClose</td>
