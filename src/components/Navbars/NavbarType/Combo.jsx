@@ -15,7 +15,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
 import NavBarBgWrapper from "@/components/Navbars/NavBarBgWrapper";
 import styles from "@/assets/scss/navbars/HorizontalNav.module.scss";
 
-const HorizontalNav = ({ type = "" }) => {
+const Combo = ({ type = "" }) => {
     const [openNotification, setOpenNotification] = useState(true);
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
@@ -231,4 +231,4 @@ const HorizontalNav = ({ type = "" }) => {
     );
 };
 
-export default HorizontalNav;
+export default Combo;

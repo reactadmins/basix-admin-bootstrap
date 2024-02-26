@@ -1,5 +1,5 @@
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
-import NavBarBgWrapper from "./NavBarBgWrapper";
+import Combo from "./NavbarType/Combo";
 import DualTopNav from "./NavbarType/DualTopNav";
 import HorizontalNav from "./NavbarType/HorizontalNav";
 import VerticalNav from "./NavbarType/VerticalNav";
@@ -8,19 +8,11 @@ const Navbars = () => {
     const { activeVariation } = useDashboardDataContext();
     switch (activeVariation) {
         case "vertical":
-            return (
-                <NavBarBgWrapper>
-                    <VerticalNav />
-                </NavBarBgWrapper>
-            );
+            return <VerticalNav />;
         case "horizontal":
-            return (
-                <NavBarBgWrapper>
-                    <HorizontalNav />
-                </NavBarBgWrapper>
-            );
+            return <HorizontalNav />;
         case "combo":
-            return <HorizontalNav type="combo" />;
+            return <Combo />;
         case "dual_nav":
             return <DualTopNav type={activeVariation} />;
         default:
