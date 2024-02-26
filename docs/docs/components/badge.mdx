@@ -7,7 +7,7 @@ sidebar_label: Badge
 
 The Badge component shows a small label or indicator that is attached to another element, such as a button, an icon, or a menu item. The Badge component can be used to display counts, statuses, or other short information. The Badge component can have different variants, such as filled or outlined, and different colors.
 
-You can find the Badges component in the `src/views/Badges` folder
+You can find the Badges component in the `src/views/Badges.jsx` file
 
 import { Badge, Button } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
@@ -17,6 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Examples
+Badges scale to match the size of the immediate parent element by using size and em units. Badge [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/badges)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -55,7 +56,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### With Button Counter
+Badge use also counter with append `<Button>` or any other component. Badge [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/badges)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -102,7 +105,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Contextual Variations
+Add any of the below mentioned modifier classes to change the appearance of a badge. Badge [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/badges)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -145,7 +150,10 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Pill badges
+Use the pill modifier props to make badges more rounded. Badge [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/badges)
+
 <Tabs>
     <TabItem value="preview" label="Preview">
         <CodePreview>
@@ -187,12 +195,13 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ## Props
 
 <FeatureTable>
     <tr>
         <td>bg</td>
-        <td>`primary` | `secondary` | `success` | <br /> `danger` | `warning` | `info` | <br /> `light` | `dark`</td>
+        <td>`primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`</td>
         <td>`primary`</td>
         <td>A string that specifies the background color of the badge. You can choose from eight options: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, or `light`. The default value is `primary`.</td>
     </tr>
@@ -200,7 +209,7 @@ import TabItem from '@theme/TabItem';
         <td>pill</td>
         <td>boolean</td>
         <td>`false`</td>
-        <td>A boolean that indicates whether the badge has a rounded shape or not. If pill is true, the badge will have a pill-like shape with rounded corners. If pill is false, the badge will have a square shape with sharp corners. The default value is false.</td>
+        <td>A boolean that indicates whether the badge has a rounded shape or not. If `pill` is `true`, the badge will have a pill-like shape with rounded corners. If pill is false, the badge will have a square shape with sharp corners. The default value is `false`.</td>
     </tr>
 </FeatureTable>
 

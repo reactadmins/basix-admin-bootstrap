@@ -5,13 +5,13 @@ sidebar_label: Configuration
 
 # Configuration
 
-Context is a React feature that allows us to share data across our components without passing props manually. Context is useful when we have some global state or configuration that affects our entire application. In this template, you can use context to manage the appearance and behavior of Basix Admin Dashboard.
+Context is a React feature that allows us to share data across our components without passing props manually. Context is useful when we have some global state or configuration that affects our entire application. In this template, we've used Context to manage the appearance and behavior of Basix Admin Dashboard.
 
-You can find the context file in the `src/context/dashboardDataContext.jsx` folder
+You can find the context file on this location `src/context/dashboardDataContext.jsx`
 
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
 
-#### Syntax to declare dashboardDataContext.jsx 
+### Syntax to declare dashboardDataContext.jsx 
 
 ```jsx title="Configuration"
 
@@ -21,7 +21,7 @@ export const DashboardDataCreateContext = createContext();
 
 
 export const DashboardDataProvider = ({ children }) => {
-     const [isThemeDirection, setIsThemeDirection] = useState(false);
+    const [isThemeDirection, setIsThemeDirection] = useState(false);
     const [sidebarMini, setSidebarMini] = useState(false);
     const [navbarFixed, setNavbarFixed] = useState(false);
     const [isDark, setIsDark] = useState(false);
@@ -59,49 +59,54 @@ export const DashboardDataProvider = ({ children }) => {
 export const useDashboardDataContext = () => {
     return useContext(DashboardDataCreateContext);
 };
-
 ```
-#### Theme Direction (LTR-RTL)
+
+<br/>
+### Theme Direction (LTR - RTL)
 <FeatureTable>
     <tr>
         <td>isThemeDirection</td>
         <td>`boolean`</td>
         <td>`false`</td>
-        <td>A boolean value that indicates the direction (LTR/RTL) of the theme. If isThemeDirection is false, the theme will be left-to-right (LTR). If isThemeDirection is true, the theme will be right-to-left (RTL).</td>
+        <td>A boolean value that indicates the direction (LTR/RTL) of the theme. If `isThemeDirection` is `false`, the theme will be left-to-right (LTR). If `isThemeDirection` is `true`, the theme will be right-to-left (RTL).</td>
     </tr>
 </FeatureTable>
 
-#### Sidebar expanded and collapsed 
+<br/>
+### Sidebar expanded and collapsed 
 <FeatureTable>
     <tr>
         <td>sidebarMini</td>
         <td>`boolean`</td>
         <td>`false`</td>
-        <td>A boolean value that indicates the size of the sidebar. If sidebarMini is false, the sidebar will be expanded. If sidebarMini is true, the sidebar will be collapsed.</td>
+        <td>A boolean value that indicates the size of the sidebar. If `sidebarMini` is `false`, the sidebar will be expanded. If `sidebarMini` is `true`, the sidebar will be collapsed.</td>
     </tr>
 </FeatureTable>
 
-#### Navbar Fixed
+<br/>
+### Navbar Fixed
 <FeatureTable>
     <tr>
         <td>navbarFixed</td>
         <td>`boolean`</td>
         <td>`false`</td>
-        <td>A boolean value that indicates the position of the navbar. If navbarFixed is false, the navbar will be normal. If navbarFixed is true, the navbar will be fixed at the top of the page.</td>
+        <td>A boolean value that indicates the position of the navbar. If `navbarFixed` is `false`, the navbar will be normal. If `navbarFixed` is `true`, the navbar will be fixed at the top of the page.</td>
     </tr>
 </FeatureTable>
 
-#### Dark/Light Mode
+<br/>
+### Dark/Light Mode
 <FeatureTable>
     <tr>
         <td>isDark</td>
         <td>`boolean`</td>
         <td>`false`</td>
-        <td>A boolean value that indicates the mode of the theme. If isDark is false, the theme will be light mode. If isDark is true, the theme will be dark mode.</td>
+        <td>A boolean value that indicates the mode of the theme. If `isDark` is `false`, the theme will be light mode. If `isDark` is `true`, the theme will be dark mode.</td>
     </tr>
 </FeatureTable>
 
-#### Navbar Top Background
+<br />
+### Navbar Top Background
 <FeatureTable>
     <tr>
         <td>topNavbarBgColor</td>
@@ -111,7 +116,8 @@ export const useDashboardDataContext = () => {
     </tr>
 </FeatureTable>
 
-#### Sidebar Background
+<br/>
+### Sidebar Background
 <FeatureTable>
     <tr>
         <td>sidebarBgColor</td>
@@ -121,17 +127,19 @@ export const useDashboardDataContext = () => {
     </tr>
 </FeatureTable>
 
-#### Sidebar Background Image
+<br/>
+### Sidebar Background Image
 <FeatureTable>
     <tr>
         <td>sidebarBgImg</td>
         <td>string</td>
         <td></td>
-        <td>A string value that indicates the background image of the sidebar. You can use any valid image link as the value of sidebarBgImg. The background image of the sidebar will be changed accordingly.For example, setSidebarBgImg(`https://example.com/image.jpg`) will make the sidebar use the image from the link.</td>
+        <td>A string value that indicates the background image of the sidebar. You can use any valid image link as the value of `sidebarBgImg`. The background image of the sidebar will be changed accordingly.For example, `setSidebarBgImg: https://example.com/image.jpg` will make the sidebar use the image from the link.</td>
     </tr>
 </FeatureTable>
 
-#### Navigation Variation
+<br/>
+### Navigation Variation
 <FeatureTable>
     <tr>
         <td>activeVariation</td>

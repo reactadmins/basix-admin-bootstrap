@@ -34,10 +34,7 @@ const config = {
         locales: ["en"],
     },
 
-    plugins: [
-        require.resolve("docusaurus-lunr-search"),
-        "docusaurus-plugin-sass",
-    ],
+    plugins: [require.resolve("docusaurus-lunr-search"), "docusaurus-plugin-sass"],
 
     // scripts: ["./src/css/custom.js"],
 
@@ -105,6 +102,13 @@ const config = {
                         // label: "Git",
                         position: "right",
                         value: `<a href="#" target="_blank" class="navbar_github"></a>`,
+                    },
+                    {
+                        type: "html",
+                        // href: "https://github.com/facebook/docusaurus",
+                        // label: "Git",
+                        position: "right",
+                        value: `<a href="#" target="_blank" class="buy_now">Buy Now</a>`,
                     },
                     // {
                     //     type: "html",

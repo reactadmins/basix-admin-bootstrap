@@ -7,7 +7,7 @@ sidebar_label: Card
 
 The Card component is a container that groups related content and actions on a single topic. The Card component can have different parts, such as a header, a media, a content, and an actions area. The Card component can also have different variants. The Card component can be used to display information, images, links, or buttons
 
-You can find the Cards component in the `src/views/Cards` folder
+You can find the Cards component in the `src/views/Cards.jsx` file
 
 import { Col } from "react-bootstrap";
 import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
 ## Examples
 
 ### With Header
+A card component with a header section provides structured content presentation and visual hierarchy for streamlined information display. Card [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/cards)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -64,7 +65,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br/>
 ### Without Header
+Card can also contain jsx or another component without header. Card [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/cards) 
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -101,7 +104,9 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
+<br />
 ### Card With Image
+A versatile card component featuring an image and additional elements for visually appealing and informative content presentation. Card [Preview](https://demo.reactadmin.com/bootstrap/basix-admin/components/cards)
 
 <Tabs>
     <TabItem value="preview" label="Preview">
@@ -155,7 +160,7 @@ import TabItem from '@theme/TabItem';
         <td>title</td>
         <td>string</td>
         <td></td>
-        <td>A string that specifies the title of the card. The title will be displayed in the header area of the card. You can use this prop to give a brief and descriptive name to the card. For example, `title="User Profile"`.</td>
+        <td>A string that specifies the `title` of the card. The `title` will be displayed in the header area of the card. You can use this prop to give a brief and descriptive name to the card. For example `title="User Profile"`.</td>
     </tr>
     <tr>
         <td>titleIcon</td>
@@ -167,17 +172,17 @@ import TabItem from '@theme/TabItem';
         <td>titleBg</td>
         <td>string</td>
         <td></td>
-        <td>A string that specifies the background color of the title area of the card. You can use this `prop` to change the appearance of the title area. </td>
+        <td>A string that specifies the background color of the title area of the card. You can use this `prop` to change the appearance of the `title` area. </td>
     </tr>
     <tr>
         <td>isHeader</td>
         <td>boolean</td>
         <td>`true`</td>
-        <td>A boolean that indicates whether the card has a header area or not. If `isHeader` is `true`, the card will have a header area that contains the title, the icon, and the icons array. If `isHeader` is `false`, the card will not have a header area. The default value is `true`.</td>
+        <td>A boolean that indicates whether the card has a header area or not. If `isHeader` is `true`, the card will have a header area that contains the `title`, the `icon`, and the `icons` array. If `isHeader` is `false`, the card will not have a header area. The default value is `true`.</td>
     </tr>
     <tr>
         <td>headerPosition</td>
-        <td>`top` | `bottom`</td>
+        <td>`top`, `bottom`</td>
         <td>`top`</td>
         <td>A string that specifies the position of the header area of the card. You can use this prop to change the layout of the card. You can choose from two options: `top` or `bottom`. The default value is `top`.</td>
     </tr>
@@ -185,13 +190,13 @@ import TabItem from '@theme/TabItem';
         <td>padding</td>
         <td>string</td>
         <td>`16px`</td>
-        <td>A string that specifies the padding of the card. You can use this prop to change the spacing of the card. You can use any valid CSS value for the padding property. The default value is `16px`</td>
+        <td>A string that specifies the padding of the card. You can use this prop to change the spacing of the card. You can use any valid CSS value for the `padding` property. The default value is `16px`</td>
     </tr>
     <tr>
         <td>bodyBg</td>
         <td>string</td>
         <td></td>
-        <td>A string that specifies the background color of the body area of the card. You can use this `prop` to change the appearance of the body area.</td>
+        <td>A string that specifies the background color of the body area of the card. You can use `bodyBg` to change the appearance of the body area.</td>
     </tr>
     <tr>
         <td>icons</td>
@@ -209,7 +214,7 @@ import TabItem from '@theme/TabItem';
         <td>onClose</td>
         <td>func</td>
         <td></td>
-        <td>A function that is called when the card is `dismissed` by the user. The function receives the event object as the argument. You can use this prop to perform any action or logic when the card is `dismissed`. For example, you can use onClose to remove the card from the parent component or to trigger another alert.</td>
+        <td>A function that is called when the card is `dismissed` by the user. The function receives the event object as the argument. You can use this prop to perform any action or logic when the card is `dismissed`. For example, you can use `onClose` to remove the card from the parent component or to trigger another alert.</td>
     </tr>
 
 </FeatureTable>
