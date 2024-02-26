@@ -1,9 +1,11 @@
 @import "../variable.scss";
-.top_navbar {
+.dual_nav {
     width: 100%;
     background-color: var(--body-bg);
-    .collapse {
+    border-bottom: 1px solid var(--border-color);
+    .header_action {
         height: 80px;
+        padding: 24px;
         .mini_logo {
             display: none;
         }
@@ -15,7 +17,12 @@
         .social_item {
             display: flex;
             align-items: center;
-            gap: 28px;
+            li {
+                padding: 0 12px;
+                button {
+                    padding: 0;
+                }
+            }
             .user_area {
                 img {
                     width: 32px;
@@ -43,7 +50,7 @@
                 .count {
                     position: absolute;
                     top: -4px;
-                    right: -14px;
+                    right: -6px;
                 }
             }
             .for_message {
@@ -66,7 +73,7 @@
                 .count {
                     position: absolute;
                     top: -4px;
-                    right: -18px;
+                    right: -10px;
                 }
             }
         }
@@ -131,7 +138,7 @@
                         padding: 8px 10px;
                         border-radius: 8px;
                         > a {
-                            color: #3c4858;
+                            color: #3c4858 !important;
                         }
                     }
                 }
@@ -217,13 +224,6 @@
                     > a {
                         color: #fff;
                     }
-                    .sub_menu {
-                        li {
-                            > a {
-                                color: #fff !important;
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -236,17 +236,20 @@
 }
 
 body[data-theme="dark"] {
-    .top_navbar {
+    .dual_nav {
         .duall_navbar {
-            &[data-color="red"] {
-                background-color: var(--bg-content);
-                border: 1px solid var(--border-color);
-                border-left: 0;
-                border-right: 0;
-                .nav {
-                    .nav_item {
-                        > a {
-                            color: #fff;
+            background-color: var(--bg-content);
+            border-top: 1px solid var(--border-color);
+            .nav {
+                .nav_item {
+                    > a {
+                        color: #fff;
+                    }
+                    .sub_menu {
+                        li {
+                            > a {
+                                color: #fff !important;
+                            }
                         }
                     }
                 }
@@ -256,8 +259,9 @@ body[data-theme="dark"] {
 }
 
 @media only screen and (max-width: 1024px) {
-    .top_navbar {
-        .collapse {
+    .dual_nav {
+        .header_action {
+            border-bottom: 1px solid var(--border-color);
             .search_container {
                 display: none;
             }
@@ -281,6 +285,7 @@ body[data-theme="dark"] {
         }
         .duall_navbar {
             display: none;
+            width: 100% !important;
         }
         .toggle_menu {
             position: absolute;

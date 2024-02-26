@@ -1,12 +1,14 @@
 @import "../variable.scss";
 
 .vertical_nav {
+    padding: 24px;
     .navbar_nav {
         .header_left {
             display: flex;
             li {
-                padding: 0 18px;
+                padding: 0 16px;
                 button {
+                    padding: 0;
                     position: relative;
                     border: none;
                     background-color: transparent;
@@ -45,7 +47,7 @@
                     .count {
                         position: absolute;
                         top: -4px;
-                        right: -14px;
+                        right: -12px;
                     }
                 }
                 .for_message {
@@ -54,6 +56,12 @@
                         top: -4px;
                         right: -18px;
                     }
+                }
+                &.sidebar_mini {
+                    display: none;
+                }
+                &.active_sidebar_mini {
+                    display: block !important;
                 }
             }
         }
@@ -130,5 +138,11 @@ body[data-theme="dark"] {
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .vertical_nav {
+        padding: 16px;
     }
 }
