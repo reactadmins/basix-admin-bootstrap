@@ -259,7 +259,7 @@ const Switcher = ({ setSidebarMini, sidebarMini }) => {
     return (
         <div
             className={switcherStyle.switch_wrapper}
-            data={!isThemeDirection ? "false" : "true"}
+            data-theme-direction={!isThemeDirection ? "false" : "true"}
         >
             <button
                 type="button"

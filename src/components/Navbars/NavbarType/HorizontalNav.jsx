@@ -22,7 +22,7 @@ const HorizontalNav = ({ type = "" }) => {
     const [isOpenSearch, setIsOpenSearch] = useState(true);
     const [toggle, setToggle] = useState(false);
 
-    const { topNavbarBgColor, navbarFixed, isDark, activeVariation } =
+    const { topNavbarBgColor, isDark, sidebarMini, setSidebarMini } =
         useDashboardDataContext();
 
     let dropRef = useRef();
@@ -47,9 +47,12 @@ const HorizontalNav = ({ type = "" }) => {
                         <button
                             type="button"
                             className={`${styles.toggle_btn} ${
-                                toggle ? styles.active : ""
+                                toggle || !sidebarMini ? styles.active : ""
                             }`}
-                            onClick={() => setToggle(!toggle)}
+                            onClick={() => {
+                                setToggle(!toggle);
+                                setSidebarMini(!sidebarMini);
+                            }}
                         >
                             <span></span>
                         </button>
@@ -92,6 +95,7 @@ const HorizontalNav = ({ type = "" }) => {
                         </Link>
                     </div>
                     <ul
+                        data-type={type === "combo" ? type : null}
                         className={`d-flex align-items-center gap-2 ${
                             styles.nav
                         } ${toggle ? styles.nav_active : ""}`}

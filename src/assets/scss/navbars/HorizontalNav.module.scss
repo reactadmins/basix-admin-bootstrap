@@ -261,6 +261,9 @@ body[data-theme="dark"] {
                 padding: 20px;
                 z-index: 99999;
             }
+            &[data-type="combo"] {
+                display: none !important;
+            }
         }
     }
 }

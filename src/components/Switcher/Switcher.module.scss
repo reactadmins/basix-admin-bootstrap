@@ -211,7 +211,7 @@
                     padding: 6px 8px;
                     border-radius: 20px;
                 }
-                &[data="true"] {
+                &[data-active="true"] {
                     & button:last-child {
                         color: rgb(255, 255, 255);
                         background-color: rgb(122, 90, 248);
@@ -219,7 +219,7 @@
                         border-radius: 0 20px 20px 0;
                     }
                 }
-                &[data="false"] {
+                &[data-active="false"] {
                     & button:first-child {
                         color: rgb(255, 255, 255);
                         background-color: rgb(122, 90, 248);
@@ -241,7 +241,7 @@
         z-index: 999999;
         background-color: #242222;
     }
-    &[data="true"] {
+    &[data-theme-direction="true"] {
         .switch_btn {
             left: 0;
             right: auto;
@@ -254,18 +254,24 @@
         .switch_contorl {
             .toggle_button {
                 .group_swatch {
-                    & button:first-child {
-                        border-radius: 20px 0 0 20px !important;
+                    button:first-child {
+                        &[data-active="true"] {
+                            border-radius: 20px 0 0 20px !important;
+                        }
                     }
-                    & button:last-child {
-                        border-radius: 0 20px 20px 0 !important;
+                    button:first-child {
+                        &[data-active="false"] {
+                            border-radius: 0 20px 20px 0 !important;
+                        }
                     }
                 }
-                .active {
-                    background-color: #7a5af8;
-                    .slider {
-                        top: -24px;
-                        left: 18px;
+                .switch {
+                    &.active {
+                        background-color: #7a5af8;
+                        .slider {
+                            top: -24px;
+                            left: -18px;
+                        }
                     }
                 }
             }

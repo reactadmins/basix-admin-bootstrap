@@ -15,7 +15,8 @@ const SwitchControl = ({
                 className={switcherStyle.toggle_button}
                 style={{
                     gap: `${directionType === "vertical" ? "10px" : ""}`,
-                }}>
+                }}
+            >
                 <span>{title}</span>
                 {switchType === "checkbox" ? (
                     <button
@@ -23,14 +24,16 @@ const SwitchControl = ({
                         className={`${switcherStyle.switch} ${
                             activeSwitch ? switcherStyle.active : ""
                         }`}
-                        onClick={() => isActiveSwitch(!activeSwitch)}>
+                        onClick={() => isActiveSwitch(!activeSwitch)}
+                    >
                         <input type="checkbox" />
                         <span className={switcherStyle.slider}></span>
                     </button>
                 ) : (
                     <div
-                        data={activeSwitch ? "true" : "false"}
-                        className={switcherStyle.group_swatch}>
+                        data-active={activeSwitch ? "true" : "false"}
+                        className={switcherStyle.group_swatch}
+                    >
                         {buttonList.map((item, index) => {
                             return (
                                 <Fragment key={index}>
@@ -38,7 +41,8 @@ const SwitchControl = ({
                                         type="button"
                                         onClick={() => {
                                             isActiveSwitch(!activeSwitch);
-                                        }}>
+                                        }}
+                                    >
                                         {item.name}
                                     </button>
                                 </Fragment>
