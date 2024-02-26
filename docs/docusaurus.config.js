@@ -101,15 +101,16 @@ const config = {
                         // href: "https://github.com/facebook/docusaurus",
                         // label: "Git",
                         position: "right",
-                        value: `<a href="#" target="_blank" class="navbar_github"></a>`,
+                        value: `<a href="#" target="_blank" class="buy_now">Buy Now</a>`,
                     },
                     {
                         type: "html",
                         // href: "https://github.com/facebook/docusaurus",
                         // label: "Git",
                         position: "right",
-                        value: `<a href="#" target="_blank" class="buy_now">Buy Now</a>`,
+                        value: `<a href="#" target="_blank" class="navbar_github"></a>`,
                     },
+                    
                     // {
                     //     type: "html",
                     //     position: 'right',

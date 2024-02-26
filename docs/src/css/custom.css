@@ -126,6 +126,25 @@ aside.theme-doc-sidebar-container > div {
     padding: 8px 16px;
 }
 
+.navbar__items--right{
+    flex-direction: row-reverse;
+}
+/* Buy now button */
+.buy_now{
+    background: #0d6efd;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s
+}
+.buy_now:hover{
+    background: #0559d8;
+    color: white
+}
+
+
 /* Light or Dark Mode css */
 /* .light-dark-wrapper{
     position: relative;
