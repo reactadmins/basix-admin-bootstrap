@@ -2,12 +2,20 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { useDashboardDataContext } from "@/context/dashboardDataContext";
 import styles from "@/assets/scss/Layouts.module.scss";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Navbars from "@/components/Navbars/Navrars";
 
 const Layouts = () => {
+    const [selectSize, setSelectSize] = useState(null);
     const { activeVariation, sidebarMini, navbarFixed } =
         useDashboardDataContext();
+
+    useEffect(() => {
+        window.onresize = function () {
+            setSelectSize(window.screen.width);
+        };
+    }, [selectSize]);
+
     switch (activeVariation) {
         case "vertical": {
             return (
@@ -86,7 +94,11 @@ const Layouts = () => {
                     <div
                         className={`${styles.content} p-4 w-100`}
                         style={{
-                            marginTop: `${navbarFixed ? "150px" : "0"}`,
+                            marginTop: `${
+                                navbarFixed
+                                    ? `${selectSize > 1024 ? "150px" : "80px"} `
+                                    : "0"
+                            }`,
                         }}
                     >
                         <Outlet />

@@ -1,6 +1,7 @@
 @import "./variable.scss";
 .navbar_bg {
     height: 80px;
+    border-bottom: 1px solid var(--border-color);
     &.fixed_top {
         position: fixed;
         top: 0;

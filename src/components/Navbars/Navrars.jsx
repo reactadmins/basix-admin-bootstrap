@@ -12,7 +12,7 @@ const Navbars = () => {
         case "horizontal":
             return <HorizontalNav />;
         case "combo":
-            return <Combo />;
+            return <Combo type="combo" />;
         case "dual_nav":
             return <DualTopNav type={activeVariation} />;
         default:

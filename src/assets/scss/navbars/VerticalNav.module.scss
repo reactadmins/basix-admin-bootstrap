@@ -6,8 +6,9 @@
         .header_left {
             display: flex;
             li {
-                padding: 0 18px;
+                padding: 0 16px;
                 button {
+                    padding: 0;
                     position: relative;
                     border: none;
                     background-color: transparent;
@@ -46,7 +47,7 @@
                     .count {
                         position: absolute;
                         top: -4px;
-                        right: -14px;
+                        right: -12px;
                     }
                 }
                 .for_message {
@@ -143,12 +144,5 @@ body[data-theme="dark"] {
 @media only screen and (max-width: 425px) {
     .vertical_nav {
         padding: 16px;
-        .navbar_nav {
-            .header_left {
-                li {
-                    padding: 0 10px;
-                }
-            }
-        }
     }
 }

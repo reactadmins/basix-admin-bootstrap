@@ -15,7 +15,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
 import NavBarBgWrapper from "@/components/Navbars/NavBarBgWrapper";
 import styles from "@/assets/scss/navbars/HorizontalNav.module.scss";
 
-const HorizontalNav = ({ type = "" }) => {
+const HorizontalNav = () => {
     const [openNotification, setOpenNotification] = useState(true);
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
@@ -37,12 +37,12 @@ const HorizontalNav = ({ type = "" }) => {
     }, []);
 
     return (
-        <NavBarBgWrapper type={type}>
+        <NavBarBgWrapper>
             <div
                 data-color={topNavbarBgColor}
                 className={styles.horizontal_nav}
             >
-                <div className="d-flex align-item-center justify-content-between p-4">
+                <div className="d-flex align-item-center justify-content-between">
                     <div className="d-flex align-item-center gap-3">
                         <button
                             type="button"
@@ -92,7 +92,6 @@ const HorizontalNav = ({ type = "" }) => {
                         </Link>
                     </div>
                     <ul
-                        data-type={type === "combo" ? type : null}
                         className={`d-flex align-items-center gap-2 ${
                             styles.nav
                         } ${toggle ? styles.nav_active : ""}`}

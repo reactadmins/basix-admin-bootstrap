@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, Fragment } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
 import profile from "@/assets/image/admin.jpg";
 import light_logo from "@/assets/image/logo.png";
 import mini_light_logo from "@/assets/image/mini-logo.png";
@@ -42,134 +41,124 @@ const DualTopNav = () => {
 
     return (
         <Fragment>
-            <Navbar
-                className={`${styles.top_navbar} ${
+            <div
+                className={`${styles.dual_nav} ${
                     navbarFixed ? styles.fixed_top : ""
                 } p-0 flex-column`}
             >
-                <Container fluid className="px-4">
-                    <Navbar.Collapse
-                        className={`${styles.collapse} justify-content-between`}
-                    >
-                        <Nav className={styles.navbar_nav}>
-                            <div className={styles.logo_container}>
-                                <button
-                                    type="button"
-                                    onClick={() => setSidebarMini(!sidebarMini)}
-                                >
-                                    {sidebarMini ? (
-                                        <i className="fa-solid fa-xmark"></i>
-                                    ) : (
-                                        <i className="fa-solid fa-bars"></i>
-                                    )}
-                                </button>
-                                <Link to="/">
-                                    <img
-                                        className={styles.logo}
-                                        src={isDark ? light_logo : black_logo}
-                                        alt="basix-admin"
-                                    />
-                                    <img
-                                        className={styles.mini_logo}
-                                        src={
-                                            isDark
-                                                ? mini_light_logo
-                                                : black_mini_logo
-                                        }
-                                        alt="basix-admin"
-                                    />
-                                </Link>
-                            </div>
-                        </Nav>
-                        <div className={styles.search_container}>
-                            <button type="button" className={styles.search_btn}>
-                                <i className="fa fa-search"></i>
+                <div
+                    className={`${styles.header_action} d-flex align-items-center justify-content-between`}
+                >
+                    <div className={styles.navbar_nav}>
+                        <div className={styles.logo_container}>
+                            <button
+                                type="button"
+                                onClick={() => setSidebarMini(!sidebarMini)}
+                            >
+                                {sidebarMini ? (
+                                    <i className="fa-solid fa-xmark"></i>
+                                ) : (
+                                    <i className="fa-solid fa-bars"></i>
+                                )}
                             </button>
-                            <input
-                                type="text"
-                                name=""
-                                id=""
-                                placeholder="search..."
-                                className={styles.search_field}
-                            />
+                            <Link to="/">
+                                <img
+                                    className={styles.logo}
+                                    src={isDark ? light_logo : black_logo}
+                                    alt="basix-admin"
+                                />
+                                <img
+                                    className={styles.mini_logo}
+                                    src={
+                                        isDark
+                                            ? mini_light_logo
+                                            : black_mini_logo
+                                    }
+                                    alt="basix-admin"
+                                />
+                            </Link>
                         </div>
-                        <Nav>
-                            <ul className={styles.social_item} ref={dropRef}>
-                                <li>
-                                    <DarkModeSwitch />
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            setOpenNotification(
-                                                !openNotification
-                                            );
-                                            setOpenMessage(true);
-                                            setOpenUser(true);
-                                        }}
-                                        className={styles.for_notification}
-                                    >
-                                        <i className="fa fa-bell"></i>
-                                        <span
-                                            className={`${styles.count}  bg-danger`}
-                                        >
-                                            5
-                                        </span>
-                                    </button>
-                                    {!openNotification ? (
-                                        <DropdownMenu left="24px" right="24px">
-                                            <Notification />
-                                        </DropdownMenu>
-                                    ) : null}
-                                </li>
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            setOpenMessage(!openMessage);
-                                            setOpenNotification(true);
-                                            setOpenUser(true);
-                                        }}
-                                        className={styles.for_message}
-                                    >
-                                        <i className="fa-solid fa-envelope"></i>
-                                        <span
-                                            className={`${styles.count} bg-primary`}
-                                        >
-                                            5
-                                        </span>
-                                    </button>
-                                    {!openMessage ? (
-                                        <DropdownMenu left="24px" right="24px">
-                                            <Message />
-                                        </DropdownMenu>
-                                    ) : null}
-                                </li>
-                                <li>
-                                    <div className={styles.user_area}>
-                                        <a
-                                            href="#"
-                                            onClick={() => {
-                                                setOpenUser(!openUser);
-                                                setOpenMessage(true);
-                                                setOpenNotification(true);
-                                            }}
-                                            className={styles.user_dropdown}
-                                        >
-                                            <img src={profile} alt="uesr" />
-                                        </a>
-                                    </div>
-                                    {!openUser ? (
-                                        <DropdownMenu left="168px" right="62px">
-                                            <UserProfile />
-                                        </DropdownMenu>
-                                    ) : null}
-                                </li>
-                            </ul>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
+                    </div>
+                    <div className={styles.search_container}>
+                        <button type="button" className={styles.search_btn}>
+                            <i className="fa fa-search"></i>
+                        </button>
+                        <input
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="search..."
+                            className={styles.search_field}
+                        />
+                    </div>
+                    <ul className={styles.social_item} ref={dropRef}>
+                        <li>
+                            <DarkModeSwitch />
+                        </li>
+                        <li>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setOpenNotification(!openNotification);
+                                    setOpenMessage(true);
+                                    setOpenUser(true);
+                                }}
+                                className={styles.for_notification}
+                            >
+                                <i className="fa fa-bell"></i>
+                                <span className={`${styles.count}  bg-danger`}>
+                                    5
+                                </span>
+                            </button>
+                            {!openNotification ? (
+                                <DropdownMenu left="24px" right="24px">
+                                    <Notification />
+                                </DropdownMenu>
+                            ) : null}
+                        </li>
+                        <li>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setOpenMessage(!openMessage);
+                                    setOpenNotification(true);
+                                    setOpenUser(true);
+                                }}
+                                className={styles.for_message}
+                            >
+                                <i className="fa-solid fa-envelope"></i>
+                                <span className={`${styles.count} bg-primary`}>
+                                    5
+                                </span>
+                            </button>
+                            {!openMessage ? (
+                                <DropdownMenu left="24px" right="24px">
+                                    <Message />
+                                </DropdownMenu>
+                            ) : null}
+                        </li>
+                        <li>
+                            <div className={styles.user_area}>
+                                <a
+                                    href="#"
+                                    onClick={() => {
+                                        setOpenUser(!openUser);
+                                        setOpenMessage(true);
+                                        setOpenNotification(true);
+                                    }}
+                                    className={styles.user_dropdown}
+                                >
+                                    <img src={profile} alt="uesr" />
+                                </a>
+                            </div>
+                            {!openUser ? (
+                                <DropdownMenu left="168px" right="62px">
+                                    <UserProfile />
+                                </DropdownMenu>
+                            ) : null}
+                        </li>
+                    </ul>
+                </div>
                 <div
                     data-color={topNavbarBgColor}
                     className={`${styles.duall_navbar} ${
@@ -270,7 +259,7 @@ const DualTopNav = () => {
                         ))}
                     </ul>
                 </div>
-            </Navbar>
+            </div>
         </Fragment>
     );
 };

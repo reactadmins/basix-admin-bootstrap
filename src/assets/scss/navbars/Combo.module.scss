@@ -1,5 +1,5 @@
 @import "../variable.scss";
-.horizontal_nav {
+.combo_nav {
     padding: 24px;
     .mini_logo {
         display: none;
@@ -242,7 +242,7 @@
 }
 
 body[data-theme="dark"] {
-    .horizontal_nav {
+    .combo_nav {
         .nav {
             .nav_item {
                 > a {
@@ -287,7 +287,7 @@ body[data-theme="dark"] {
 }
 
 @media only screen and (max-width: 1024px) {
-    .horizontal_nav {
+    .combo_nav {
         .mini_logo {
             display: block !important;
         }
@@ -299,27 +299,16 @@ body[data-theme="dark"] {
         }
         .nav {
             display: none !important;
-            &.nav_active {
-                display: block !important;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: var(--bg-content);
-                border: 1px solid var(--border-color);
-                padding: 20px;
-                z-index: 99999;
-            }
         }
     }
 }
 
 @media only screen and (max-width: 425px) {
-    .horizontal_nav {
+    .combo_nav {
         padding: 16px;
         .social_item {
             li {
-                padding: 0 6px;
+                padding: 0 12px;
             }
         }
     }

@@ -13,14 +13,13 @@ import black_mini_logo from "@/assets/image/black-mini-logo.png";
 import profile from "@/assets/image/admin.jpg";
 import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch";
 import NavBarBgWrapper from "@/components/Navbars/NavBarBgWrapper";
-import styles from "@/assets/scss/navbars/HorizontalNav.module.scss";
+import styles from "@/assets/scss/navbars/Combo.module.scss";
 
 const Combo = ({ type = "" }) => {
     const [openNotification, setOpenNotification] = useState(true);
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
     const [isOpenSearch, setIsOpenSearch] = useState(true);
-    const [toggle, setToggle] = useState(false);
 
     const { topNavbarBgColor, isDark, sidebarMini, setSidebarMini } =
         useDashboardDataContext();
@@ -38,18 +37,15 @@ const Combo = ({ type = "" }) => {
 
     return (
         <NavBarBgWrapper type={type}>
-            <div
-                data-color={topNavbarBgColor}
-                className={styles.horizontal_nav}
-            >
-                <div className="d-flex align-item-center justify-content-between p-4">
+            <div data-color={topNavbarBgColor} className={styles.combo_nav}>
+                <div className="d-flex align-item-center justify-content-between">
                     <div className="d-flex align-item-center gap-3">
                         <button
                             type="button"
                             className={`${styles.toggle_btn} ${
-                                toggle ? styles.active : ""
+                                !sidebarMini ? styles.active : ""
                             }`}
-                            onClick={() => setToggle(!toggle)}
+                            onClick={() => setSidebarMini(!sidebarMini)}
                         >
                             <span></span>
                         </button>
@@ -93,9 +89,7 @@ const Combo = ({ type = "" }) => {
                     </div>
                     <ul
                         data-type={type === "combo" ? type : null}
-                        className={`d-flex align-items-center gap-2 ${
-                            styles.nav
-                        } ${toggle ? styles.nav_active : ""}`}
+                        className={`d-flex align-items-center gap-2 ${styles.nav}`}
                     >
                         {miniNav.map((item, index) => {
                             return (
