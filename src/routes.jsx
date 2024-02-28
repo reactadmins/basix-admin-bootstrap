@@ -5,7 +5,7 @@ import Tables from "@/views/Tables";
 import SocialButtons from "@/views/SocialButtons";
 import Cards from "@/views/Cards";
 import Alerts from "@/views/Alerts";
-import progressBars from "@/views/progressBars";
+import progressBars from "@/views/ProgressBars";
 import Modals from "@/views/Modals";
 import Grids from "@/views/Grids";
 import Typography from "@/views/Typography";
