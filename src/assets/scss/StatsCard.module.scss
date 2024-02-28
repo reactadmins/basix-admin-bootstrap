@@ -1,5 +1,5 @@
 @import "../../assets/scss/variable.scss";
-.card {
+.stats_card_wrapper {
     border: 1px solid transparent;
     .title {
         h2 {
@@ -118,7 +118,7 @@
 }
 
 body[data-theme="dark"] {
-    .card {
+    .stats_card_wrapper {
         border-color: var(--border-color) !important;
         background-color: var(--body-content) !important;
     }

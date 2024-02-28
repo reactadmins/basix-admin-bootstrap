@@ -1,7 +1,4 @@
-.card_footer {
-    padding: 30px 20px !important;
-    border-color: var(--border-color) !important;
-    background-color: var(--bg-content) !important;
+
     .analytics_wrapper {
         .counter_up {
             i {
@@ -19,4 +16,8 @@
             margin-top: 8px;
         }
     }
-}
+    .card_footer {
+        padding: 30px 20px !important;
+        border-color: var(--border-color) !important;
+        background-color: var(--bg-content) !important;
+    }

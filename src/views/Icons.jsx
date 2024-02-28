@@ -2,10 +2,10 @@ import { Fragment } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
 import Card from "@/components/Card/Card";
 import Iconviewer from "@/components/Icon/Iconviewer";
-import brandico from "@/components/data/brandico.json";
-import entypo from "@/components/data/entypo.json";
-import fontAwesome from "@/components/data/font-awesome.json";
-import fontelico from "@/components/data/fontelico.json";
+import brandico from "@/data/brandico.json";
+import entypo from "@/data/entypo.json";
+import fontAwesome from "@/data/font-awesome.json";
+import fontelico from "@/data/fontelico.json";
 
 const Icons = () => {
     return (

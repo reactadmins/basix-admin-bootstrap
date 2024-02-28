@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { CardBody, Col, Row } from "react-bootstrap";
 import Card from "@/components/Card/Card";
-import tableData from "@/components/data/tableData";
+import tableData from "@/data/tableData";
 import styles from "@/assets/scss/Tables.module.scss";
 
 const Tables = () => {
@@ -15,7 +15,9 @@ const Tables = () => {
                     <Card title="Basic Table">
                         <CardBody>
                             <table className={`table ${styles.table}`}>
-                                <thead className={`text-primary thead ${styles.thead}`}>
+                                <thead
+                                    className={`text-primary thead ${styles.thead}`}
+                                >
                                     <tr>
                                         <td>Name</td>
                                         <td>Email</td>
@@ -24,14 +26,16 @@ const Tables = () => {
                                     </tr>
                                 </thead>
                                 <tbody className={`tbody ${styles.tbody}`}>
-                                    {tableData.slice(0, 10).map((item, index) => (
-                                            <tr
-                                                key={index}
-                                            >
+                                    {tableData
+                                        .slice(0, 10)
+                                        .map((item, index) => (
+                                            <tr key={index}>
                                                 <td>{item.name}</td>
                                                 <td>{item.email}</td>
                                                 <td>{item.city}</td>
-                                                <td className="text-center">{item.score}</td>
+                                                <td className="text-center">
+                                                    {item.score}
+                                                </td>
                                             </tr>
                                         ))}
                                 </tbody>
@@ -43,7 +47,9 @@ const Tables = () => {
                     <Card title="Colors, Icons, Labels">
                         <CardBody>
                             <table className={`table ${styles.table}`}>
-                                <thead className={`text-primary thead ${styles.thead}`}>
+                                <thead
+                                    className={`text-primary thead ${styles.thead}`}
+                                >
                                     <tr>
                                         <td>Name</td>
                                         <td>Email</td>
@@ -63,9 +69,13 @@ const Tables = () => {
                                                 <td>{item.name}</td>
                                                 <td>{item.email}</td>
                                                 <td>{item.city}</td>
-                                                <td className="text-center">{item.score}</td>
+                                                <td className="text-center">
+                                                    {item.score}
+                                                </td>
                                                 <td>
-                                                    <i className={`${item?.statusIcon} text-${item?.badge?.status}`}/>
+                                                    <i
+                                                        className={`${item?.statusIcon} text-${item?.badge?.status}`}
+                                                    />
                                                 </td>
                                             </tr>
                                         ))}
@@ -77,7 +87,9 @@ const Tables = () => {
                 <Col sm={12}>
                     <Card title="Search & Pagination">
                         <CardBody>
-                            <div className={`table-responsive  ${styles.table_wrapper}`}>
+                            <div
+                                className={`table-responsive  ${styles.table_wrapper}`}
+                            >
                                 <div className="d-flex justify-content-between align-items-center mt-2 mb-4">
                                     <div
                                         className={`d-flex align-items-center ${styles.search_wrapper}`}
@@ -87,7 +99,9 @@ const Tables = () => {
                                             type="search"
                                             placeholder="Search"
                                             aria-label="Search"
-                                            onChange={(e) => setSearch(e.target.value)}
+                                            onChange={(e) =>
+                                                setSearch(e.target.value)
+                                            }
                                         />
                                         <button className="btn" type="submit">
                                             <i className="fa fa fa-search"></i>
@@ -97,23 +111,41 @@ const Tables = () => {
                                         <select
                                             value={select}
                                             className="btn btn-primary"
-                                            onChange={(e) => setSelect(e.target.value)}
+                                            onChange={(e) =>
+                                                setSelect(e.target.value)
+                                            }
                                         >
-                                            <option value={10}> Show 10 entries</option>
-                                            <option value={25}> Show 25 entries</option>
-                                            <option value={50}> Show 50 entries</option>
-                                            <option value={100}> Show 100 entries</option>
+                                            <option value={10}>
+                                                {" "}
+                                                Show 10 entries
+                                            </option>
+                                            <option value={25}>
+                                                {" "}
+                                                Show 25 entries
+                                            </option>
+                                            <option value={50}>
+                                                {" "}
+                                                Show 50 entries
+                                            </option>
+                                            <option value={100}>
+                                                {" "}
+                                                Show 100 entries
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <table className={`table ${styles.table}`}>
-                                    <thead className={`text-primary thead ${styles.thead}`}>
+                                    <thead
+                                        className={`text-primary thead ${styles.thead}`}
+                                    >
                                         <tr>
                                             <td>Name</td>
                                             <td>Email</td>
                                             <td>City</td>
-                                            <td className="text-center">Score</td>
+                                            <td className="text-center">
+                                                Score
+                                            </td>
                                         </tr>
                                     </thead>
                                     <tbody className={`tbody ${styles.tbody}`}>
@@ -122,18 +154,24 @@ const Tables = () => {
                                             .filter((item) => {
                                                 return search === ""
                                                     ? item
-                                                    : item.name.includes(search) ||
-                                                        item.email.includes(search) ||
-                                                        item.city.includes(search);
+                                                    : item.name.includes(
+                                                          search
+                                                      ) ||
+                                                          item.email.includes(
+                                                              search
+                                                          ) ||
+                                                          item.city.includes(
+                                                              search
+                                                          );
                                             })
                                             .map((item, index) => (
-                                                <tr
-                                                    key={index}
-                                                >
+                                                <tr key={index}>
                                                     <td>{item.name}</td>
                                                     <td>{item.email}</td>
                                                     <td>{item.city}</td>
-                                                    <td className="text-center">{item.score}</td>
+                                                    <td className="text-center">
+                                                        {item.score}
+                                                    </td>
                                                 </tr>
                                             ))}
                                     </tbody>

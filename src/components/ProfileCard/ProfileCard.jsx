@@ -1,4 +1,3 @@
-import Card from "@/components/Card/Card";
 import styles from "@/assets/scss/ProfileCard.module.scss";
 
 const ProfileCard = ({ userName = "", image = "", children }) => {
