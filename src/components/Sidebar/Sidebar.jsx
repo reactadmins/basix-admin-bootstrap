@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SidebarBgWrapper from "@/components/sidebar/SidebarBgWrapper";
+import SidebarBgWrapper from "@/components/Sidebar/SidebarBgWrapper";
 import { useDashboardDataContext } from "@/context/dashboardDataContext";
 import { navItems } from "@/nav";
 import SidebarMenu from "@/components/Sidebar/SidebarMenu";
