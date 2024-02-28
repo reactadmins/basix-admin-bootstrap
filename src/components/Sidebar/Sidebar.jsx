@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SidebarBgWrapper from "@/components/sidebar/SidebarBgWrapper";
 import { useDashboardDataContext } from "@/context/dashboardDataContext";
 import { navItems } from "@/nav";
-import SidebarMenu from "@/components/sidebar/SidebarMenu";
+import SidebarMenu from "@/components/Sidebar/SidebarMenu";
 import style from "@/assets/scss/Sidebar.module.scss";
 import logo from "@/assets/image/logo.png";
 import mini_logo from "@/assets/image/mini-logo.png";
@@ -14,8 +14,7 @@ const Sidebar = ({ type = "vertical" }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);
     const [activeMenu, setActiveMenu] = useState("dashboard");
     const [selectSize, setSelectSize] = useState(null);
-    const { sidebarMini, setSidebarMini, sidebarBgColor, isDark } =
-        useDashboardDataContext();
+    const { sidebarMini, setSidebarMini, sidebarBgColor, isDark } = useDashboardDataContext();
 
     useEffect(() => {
         window.onresize = function () {
@@ -32,29 +31,18 @@ const Sidebar = ({ type = "vertical" }) => {
         <SidebarBgWrapper type={type}>
             <div
                 data-color={sidebarBgColor}
-                className={`${style.sidebar} ${
-                    sidebarMini ? style.sidebar_mini : ""
-                }`}
-            >
+                className={`${style.sidebar} ${sidebarMini ? style.sidebar_mini : ""}`}>
                 {type === "vertical" ? (
                     <div
-                        className={`d-flex align-items-center justify-content-between ${style.logo}`}
-                    >
+                        className={`d-flex align-items-center justify-content-between ${style.logo}`}>
                         <Link to="/">
                             {isDark ? (
-                                <img
-                                    src={sidebarMini ? mini_logo : logo}
-                                    alt="basix-admin"
-                                />
+                                <img src={sidebarMini ? mini_logo : logo} alt="basix-admin" />
                             ) : (
                                 <Fragment>
                                     {sidebarBgColor === "white" ? (
                                         <img
-                                            src={
-                                                sidebarMini
-                                                    ? black_mini_logo
-                                                    : black_logo
-                                            }
+                                            src={sidebarMini ? black_mini_logo : black_logo}
                                             alt="basix-admin"
                                         />
                                     ) : (
@@ -66,10 +54,7 @@ const Sidebar = ({ type = "vertical" }) => {
                                 </Fragment>
                             )}
                         </Link>
-                        <button
-                            type="button"
-                            onClick={() => setSidebarMini(!sidebarMini)}
-                        >
+                        <button type="button" onClick={() => setSidebarMini(!sidebarMini)}>
                             <i className="fa-solid fa-bars-progress"></i>
                         </button>
                     </div>
@@ -77,15 +62,13 @@ const Sidebar = ({ type = "vertical" }) => {
                     <button
                         type="button"
                         onClick={() => setSidebarMini(!sidebarMini)}
-                        className={style.toggle_arrow_btn}
-                    >
+                        className={style.toggle_arrow_btn}>
                         <i
                             className={`${
                                 sidebarMini
                                     ? "fa-solid fa-chevron-left"
                                     : "fa-solid fa-chevron-right"
-                            } `}
-                        ></i>
+                            } `}></i>
                     </button>
                 )}
 
@@ -93,12 +76,7 @@ const Sidebar = ({ type = "vertical" }) => {
                     <ul>
                         {navItems.map((item, index) => {
                             return (
-                                <li
-                                    key={index}
-                                    className={
-                                        item?.title ? style.nav_title : ""
-                                    }
-                                >
+                                <li key={index} className={item?.title ? style.nav_title : ""}>
                                     {item?.path && (
                                         <SidebarMenu
                                             item={item}
@@ -109,18 +87,13 @@ const Sidebar = ({ type = "vertical" }) => {
                                             setActiveMenu={setActiveMenu}
                                         />
                                     )}
-                                    {item?.title && !sidebarMini ? (
-                                        <span>{item.name}</span>
-                                    ) : null}
+                                    {item?.title && !sidebarMini ? <span>{item.name}</span> : null}
                                     {item?.url ? (
                                         <a
                                             href={item?.url}
                                             target="_blank"
-                                            className="d-flex align-items-center"
-                                        >
-                                            <i
-                                                className={`${item?.icon} ${style.menu_iocn}`}
-                                            ></i>
+                                            className="d-flex align-items-center">
+                                            <i className={`${item?.icon} ${style.menu_iocn}`}></i>
                                             <span>{item?.name}</span>
                                         </a>
                                     ) : null}
