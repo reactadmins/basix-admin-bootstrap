@@ -55,7 +55,7 @@ const StatsCard = ({
 }) => {
     return (
         <Card
-            className={`${styles.card} p-0 rounded-0 h-100`}
+            className={`${styles.stats_card_wrapper} p-0 rounded-0 h-100`}
             style={{
                 backgroundColor: `${
                     type === "revenue-counter"

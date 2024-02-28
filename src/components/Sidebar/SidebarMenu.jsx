@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Badge } from "react-bootstrap";
-import style from "../../assets/scss/Sidebar.module.scss";
-import { Fragment, useState } from "react";
+import style from "@/assets/scss/Sidebar.module.scss";
+import { Fragment } from "react";
 
 const SidebarMenu = ({
     item,

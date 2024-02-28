@@ -5,9 +5,9 @@ import Card from "@/components/Card/Card";
 import SocialCounter from "@/components/SocialCounter/SocialCounter";
 import UserStats from "@/components/UserStats/UserStats";
 import NotificationStatsCart from "@/components/NotificationStatsCart/NotificationStatsCart";
-import ProfileCard from "../components/ProfileCard/ProfileCard";
-import OverlayCard from "../components/OverlayCard/OverlayCard";
-import userImg from "../assets/image/admin.jpg";
+import ProfileCard from "@/components/ProfileCard/ProfileCard";
+import OverlayCard from "@/components/OverlayCard/OverlayCard";
+import userImg from "@/assets/image/admin.jpg";
 
 const Widgets = () => {
     const data1 = [

@@ -1,5 +1,5 @@
-import styles from "../../assets/scss/NavBarBgWrapper.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import styles from "@/assets/scss/NavBarBgWrapper.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 const NavBarBgWrapper = ({ type = "", children }) => {
     const { topNavbarBgColor, navbarFixed } = useDashboardDataContext();
     return (

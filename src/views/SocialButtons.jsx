@@ -12,9 +12,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 py-2">
                             <SocialButton
                                 icon="fa fa-envelope"
                                 effect="bolb"
@@ -68,9 +66,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#837e78"
@@ -154,9 +150,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#fff"
@@ -226,9 +220,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 w-100 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 w-100 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#fff"
@@ -298,9 +290,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 w-100 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 w-100 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#fff"
@@ -370,9 +360,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#fff"
@@ -442,9 +430,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#fff"
@@ -514,9 +500,7 @@ const SocialButtons = () => {
                     icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
                 >
                     <CardBody>
-                        <div
-                            className={`d-flex justify-content-center gap-3 py-2`}
-                        >
+                        <div className="d-flex justify-content-center gap-3 py-2">
                             <SocialButton
                                 icon="fa-brands fa-facebook-f"
                                 color="#fff"

@@ -1,14 +1,14 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SidebarBgWrapper from "./SidebarBgWrapper";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
-import { navItems } from "../../nav";
-import SidebarMenu from "./SidebarMenu";
-import style from "../../assets/scss/Sidebar.module.scss";
-import logo from "../../assets/image/logo.png";
-import mini_logo from "../../assets/image/mini-logo.png";
-import black_logo from "../../assets/image/black-logo.png";
-import black_mini_logo from "../../assets/image/black-mini-logo.png";
+import SidebarBgWrapper from "@/components/sidebar/SidebarBgWrapper";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import { navItems } from "@/nav";
+import SidebarMenu from "@/components/sidebar/SidebarMenu";
+import style from "@/assets/scss/Sidebar.module.scss";
+import logo from "@/assets/image/logo.png";
+import mini_logo from "@/assets/image/mini-logo.png";
+import black_logo from "@/assets/image/black-logo.png";
+import black_mini_logo from "@/assets/image/black-mini-logo.png";
 
 const Sidebar = ({ type = "vertical" }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);

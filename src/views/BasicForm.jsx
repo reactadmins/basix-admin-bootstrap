@@ -15,7 +15,8 @@ const BasicForm = () => {
                                     className="text-center"
                                     style={{
                                         color: "var(--hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     Pay Invoice
                                 </h3>
                             </div>
@@ -27,37 +28,60 @@ const BasicForm = () => {
                             />
                             <form action="#">
                                 <div className="form-group d-flex justify-content-center gap-2 p-3">
-                                    <a href="#" type="button" className="text-decoration-none">
+                                    <a
+                                        href="#"
+                                        type="button"
+                                        className="text-decoration-none"
+                                    >
                                         <i
                                             className="fa-brands fa-cc-visa fs-3"
                                             style={{
                                                 color: "var(--content-text-color)",
-                                            }}></i>
+                                            }}
+                                        ></i>
                                     </a>
-                                    <a href="#" type="button" className="text-decoration-none">
+                                    <a
+                                        href="#"
+                                        type="button"
+                                        className="text-decoration-none"
+                                    >
                                         <i
                                             className="fa-brands fa-cc-mastercard fs-3"
                                             style={{
                                                 color: "var(--content-text-color)",
-                                            }}></i>
+                                            }}
+                                        ></i>
                                     </a>
-                                    <a href="#" type="button" className="text-decoration-none">
+                                    <a
+                                        href="#"
+                                        type="button"
+                                        className="text-decoration-none"
+                                    >
                                         <i
                                             className="fa-brands fa-cc-amex fs-3"
                                             style={{
                                                 color: "var(--content-text-color)",
-                                            }}></i>
+                                            }}
+                                        ></i>
                                     </a>
-                                    <a href="#" type="button" className="text-decoration-none">
+                                    <a
+                                        href="#"
+                                        type="button"
+                                        className="text-decoration-none"
+                                    >
                                         <i
                                             className="fa-brands fa-cc-discover fs-3"
                                             style={{
                                                 color: "var(--content-text-color)",
-                                            }}></i>
+                                            }}
+                                        ></i>
                                     </a>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="payment" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="payment"
+                                        className="form-control-label mb-1"
+                                    >
                                         Payment amount
                                     </label>
                                     <input
@@ -68,7 +92,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group mt-3">
-                                    <label htmlFor="name" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="name"
+                                        className="form-control-label mb-1"
+                                    >
                                         Name on card
                                     </label>
                                     <input
@@ -79,7 +106,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group mt-3">
-                                    <label htmlFor="cardNumber" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="cardNumber"
+                                        className="form-control-label mb-1"
+                                    >
                                         Card number
                                     </label>
                                     <input
@@ -91,7 +121,10 @@ const BasicForm = () => {
                                 </div>
                                 <div className="form-group d-flex gap-2  justify-content-between mt-3">
                                     <div>
-                                        <label htmlFor="day" className="form-control-label mb-1">
+                                        <label
+                                            htmlFor="day"
+                                            className="form-control-label mb-1"
+                                        >
                                             Expiration
                                         </label>
                                         <input
@@ -104,7 +137,8 @@ const BasicForm = () => {
                                     <div className="form-group ">
                                         <label
                                             htmlFor="security"
-                                            className="form-control-label mb-1">
+                                            className="form-control-label mb-1"
+                                        >
                                             Security code
                                         </label>
                                         <div className="d-flex">
@@ -117,10 +151,13 @@ const BasicForm = () => {
                                             <span
                                                 className="input-group-text fw-bold rounded-0 rounded-end"
                                                 style={{
-                                                    backgroundColor: "var(--bg-content)",
-                                                    borderColor: "var(--border-color)",
+                                                    backgroundColor:
+                                                        "var(--bg-content)",
+                                                    borderColor:
+                                                        "var(--border-color)",
                                                     color: "var(  --hedging-text-color)",
-                                                }}>
+                                                }}
+                                            >
                                                 <i className="fa fa-question-circle"></i>
                                             </span>
                                         </div>
@@ -129,9 +166,12 @@ const BasicForm = () => {
                                 <div className="mt-3 mb-3">
                                     <button
                                         type="submit"
-                                        className="btn btn-lg btn-block btn-info w-100 text-white">
+                                        className="btn btn-lg btn-block btn-info w-100 text-white"
+                                    >
                                         <i className="fa fa-lock fa-md"></i>
-                                        <span className="fs-5 mx-1">Pay $100.00</span>
+                                        <span className="fs-5 mx-1">
+                                            Pay $100.00
+                                        </span>
                                     </button>
                                 </div>
                             </form>
@@ -146,7 +186,10 @@ const BasicForm = () => {
                         <CardBody>
                             <form action="#">
                                 <div className="form-group">
-                                    <label htmlFor="company" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="company"
+                                        className="form-control-label mb-1"
+                                    >
                                         Company
                                     </label>
                                     <input
@@ -157,7 +200,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group mt-3">
-                                    <label htmlFor="vat" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="vat"
+                                        className="form-control-label mb-1"
+                                    >
                                         VAT
                                     </label>
                                     <input
@@ -168,7 +214,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group mt-3">
-                                    <label htmlFor="street" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="street"
+                                        className="form-control-label mb-1"
+                                    >
                                         Street
                                     </label>
                                     <input
@@ -179,7 +228,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group mt-3">
-                                    <label htmlFor="city" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="city"
+                                        className="form-control-label mb-1"
+                                    >
                                         City
                                     </label>
                                     <input
@@ -190,7 +242,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="form-group mt-3">
-                                    <label htmlFor="postalCode" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="postalCode"
+                                        className="form-control-label mb-1"
+                                    >
                                         Postal Code
                                     </label>
                                     <input
@@ -203,7 +258,10 @@ const BasicForm = () => {
                                 </div>
 
                                 <div className="form-group mt-3 mb-3">
-                                    <label htmlFor="country" className="form-control-label mb-1">
+                                    <label
+                                        htmlFor="country"
+                                        className="form-control-label mb-1"
+                                    >
                                         Company
                                     </label>
                                     <input
@@ -214,7 +272,10 @@ const BasicForm = () => {
                                     />
                                 </div>
                                 <div className="mt-3 mb-3">
-                                    <button type="submit" className="btn btn-primary">
+                                    <button
+                                        type="submit"
+                                        className="btn btn-primary"
+                                    >
                                         submit
                                     </button>
                                 </div>
@@ -249,7 +310,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="text"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Text Input
                                                 </label>
                                             </Col>
@@ -261,7 +323,9 @@ const BasicForm = () => {
                                                     placeholder="Text"
                                                     required
                                                 />
-                                                <small>This is a help text</small>
+                                                <small>
+                                                    This is a help text
+                                                </small>
                                             </Col>
                                         </Row>
                                     </div>
@@ -270,7 +334,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="email"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Email Input
                                                 </label>
                                             </Col>
@@ -282,7 +347,9 @@ const BasicForm = () => {
                                                     placeholder="Enter Email"
                                                     required
                                                 />
-                                                <small>Please enter your email</small>
+                                                <small>
+                                                    Please enter your email
+                                                </small>
                                             </Col>
                                         </Row>
                                     </div>
@@ -291,7 +358,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="password"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Password
                                                 </label>
                                             </Col>
@@ -303,7 +371,10 @@ const BasicForm = () => {
                                                     placeholder="Password"
                                                     required
                                                 />
-                                                <small>Please enter a complex password</small>
+                                                <small>
+                                                    Please enter a complex
+                                                    password
+                                                </small>
                                             </Col>
                                         </Row>
                                     </div>
@@ -329,7 +400,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="text-area"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Textarea
                                                 </label>
                                             </Col>
@@ -340,7 +412,8 @@ const BasicForm = () => {
                                                     className="form-control"
                                                     cols="30"
                                                     rows="10"
-                                                    placeholder="Content..."></textarea>
+                                                    placeholder="Content..."
+                                                ></textarea>
                                             </Col>
                                         </Row>
                                     </div>
@@ -349,7 +422,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="select"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Select
                                                 </label>
                                             </Col>
@@ -357,11 +431,20 @@ const BasicForm = () => {
                                                 <select
                                                     id="select"
                                                     className="form-select"
-                                                    aria-label="Default select example">
-                                                    <option>Please select</option>
-                                                    <option defaultValue="1">Option #1</option>
-                                                    <option defaultValue="2">Option #2</option>
-                                                    <option defaultValue="3">Option #3</option>
+                                                    aria-label="Default select example"
+                                                >
+                                                    <option>
+                                                        Please select
+                                                    </option>
+                                                    <option defaultValue="1">
+                                                        Option #1
+                                                    </option>
+                                                    <option defaultValue="2">
+                                                        Option #2
+                                                    </option>
+                                                    <option defaultValue="3">
+                                                        Option #3
+                                                    </option>
                                                 </select>
                                             </Col>
                                         </Row>
@@ -371,7 +454,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="large"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Select Large
                                                 </label>
                                             </Col>
@@ -379,11 +463,20 @@ const BasicForm = () => {
                                                 <select
                                                     id="large"
                                                     className="form-select form-select-lg"
-                                                    aria-label=".form-select-lg example">
-                                                    <option>Please select</option>
-                                                    <option defaultValue="1">Option #1</option>
-                                                    <option defaultValue="2">Option #2</option>
-                                                    <option defaultValue="3">Option #3</option>
+                                                    aria-label=".form-select-lg example"
+                                                >
+                                                    <option>
+                                                        Please select
+                                                    </option>
+                                                    <option defaultValue="1">
+                                                        Option #1
+                                                    </option>
+                                                    <option defaultValue="2">
+                                                        Option #2
+                                                    </option>
+                                                    <option defaultValue="3">
+                                                        Option #3
+                                                    </option>
                                                 </select>
                                             </Col>
                                         </Row>
@@ -393,7 +486,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="small"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Select Small
                                                 </label>
                                             </Col>
@@ -401,11 +495,20 @@ const BasicForm = () => {
                                                 <select
                                                     id="small"
                                                     className="form-select form-select-sm"
-                                                    aria-label=".form-select-sm example">
-                                                    <option>Please select</option>
-                                                    <option defaultValue="1">Option #1</option>
-                                                    <option defaultValue="2">Option #2</option>
-                                                    <option defaultValue="3">Option #3</option>
+                                                    aria-label=".form-select-sm example"
+                                                >
+                                                    <option>
+                                                        Please select
+                                                    </option>
+                                                    <option defaultValue="1">
+                                                        Option #1
+                                                    </option>
+                                                    <option defaultValue="2">
+                                                        Option #2
+                                                    </option>
+                                                    <option defaultValue="3">
+                                                        Option #3
+                                                    </option>
                                                 </select>
                                             </Col>
                                         </Row>
@@ -421,8 +524,11 @@ const BasicForm = () => {
                                                 <select
                                                     className="form-select"
                                                     aria-label="Disabled select example"
-                                                    disabled>
-                                                    <option>Please select</option>
+                                                    disabled
+                                                >
+                                                    <option>
+                                                        Please select
+                                                    </option>
                                                 </select>
                                             </Col>
                                         </Row>
@@ -432,7 +538,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     htmlFor="multiple"
-                                                    className="form-control-label mb-1">
+                                                    className="form-control-label mb-1"
+                                                >
                                                     Multiple select
                                                 </label>
                                             </Col>
@@ -441,17 +548,38 @@ const BasicForm = () => {
                                                     id="multiple"
                                                     className="form-select"
                                                     size="3"
-                                                    aria-label="size 3 select example">
-                                                    <option defaultValue="1">Option #1</option>
-                                                    <option defaultValue="2">Option #2</option>
-                                                    <option defaultValue="3">Option #3</option>
-                                                    <option defaultValue="4">Option #4</option>
-                                                    <option defaultValue="5">Option #5</option>
-                                                    <option defaultValue="6">Option #6</option>
-                                                    <option defaultValue="7">Option #7</option>
-                                                    <option defaultValue="8">Option #8</option>
-                                                    <option defaultValue="9">Option #9</option>
-                                                    <option defaultValue="10">Option #10</option>
+                                                    aria-label="size 3 select example"
+                                                >
+                                                    <option defaultValue="1">
+                                                        Option #1
+                                                    </option>
+                                                    <option defaultValue="2">
+                                                        Option #2
+                                                    </option>
+                                                    <option defaultValue="3">
+                                                        Option #3
+                                                    </option>
+                                                    <option defaultValue="4">
+                                                        Option #4
+                                                    </option>
+                                                    <option defaultValue="5">
+                                                        Option #5
+                                                    </option>
+                                                    <option defaultValue="6">
+                                                        Option #6
+                                                    </option>
+                                                    <option defaultValue="7">
+                                                        Option #7
+                                                    </option>
+                                                    <option defaultValue="8">
+                                                        Option #8
+                                                    </option>
+                                                    <option defaultValue="9">
+                                                        Option #9
+                                                    </option>
+                                                    <option defaultValue="10">
+                                                        Option #10
+                                                    </option>
                                                 </select>
                                             </Col>
                                         </Row>
@@ -473,7 +601,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexRadioDefault1">
+                                                        htmlFor="flexRadioDefault1"
+                                                    >
                                                         Option 1
                                                     </label>
                                                 </div>
@@ -486,7 +615,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexRadioDefault2">
+                                                        htmlFor="flexRadioDefault2"
+                                                    >
                                                         Option 2
                                                     </label>
                                                 </div>
@@ -499,7 +629,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexRadioDefault3">
+                                                        htmlFor="flexRadioDefault3"
+                                                    >
                                                         Option 3
                                                     </label>
                                                 </div>
@@ -523,7 +654,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexRadioInline1">
+                                                        htmlFor="flexRadioInline1"
+                                                    >
                                                         One
                                                     </label>
                                                 </div>
@@ -536,7 +668,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexRadioInline2">
+                                                        htmlFor="flexRadioInline2"
+                                                    >
                                                         Tow
                                                     </label>
                                                 </div>
@@ -549,7 +682,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexRadioInline3">
+                                                        htmlFor="flexRadioInline3"
+                                                    >
                                                         Three
                                                     </label>
                                                 </div>
@@ -573,7 +707,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexCheckDefault1">
+                                                        htmlFor="flexCheckDefault1"
+                                                    >
                                                         Option 1
                                                     </label>
                                                 </div>
@@ -586,7 +721,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexCheckDefault2">
+                                                        htmlFor="flexCheckDefault2"
+                                                    >
                                                         Option 2
                                                     </label>
                                                 </div>
@@ -599,7 +735,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexCheckDefault3">
+                                                        htmlFor="flexCheckDefault3"
+                                                    >
                                                         Option 3
                                                     </label>
                                                 </div>
@@ -623,7 +760,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexCheckDefaultInline1">
+                                                        htmlFor="flexCheckDefaultInline1"
+                                                    >
                                                         One
                                                     </label>
                                                 </div>
@@ -636,7 +774,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexCheckDefaultInline2">
+                                                        htmlFor="flexCheckDefaultInline2"
+                                                    >
                                                         Tow
                                                     </label>
                                                 </div>
@@ -649,7 +788,8 @@ const BasicForm = () => {
                                                     />
                                                     <label
                                                         className="form-check-label"
-                                                        htmlFor="flexCheckDefaultInline3">
+                                                        htmlFor="flexCheckDefaultInline3"
+                                                    >
                                                         Three
                                                     </label>
                                                 </div>
@@ -661,7 +801,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     className="d-block mb-1 form-control-label"
-                                                    htmlFor="fileInput">
+                                                    htmlFor="fileInput"
+                                                >
                                                     File input
                                                 </label>
                                             </Col>
@@ -681,7 +822,8 @@ const BasicForm = () => {
                                             <Col md={3}>
                                                 <label
                                                     className="d-block mb-1 form-control-label"
-                                                    htmlFor="multipleFleInput">
+                                                    htmlFor="multipleFleInput"
+                                                >
                                                     Multiple File input
                                                 </label>
                                             </Col>
@@ -727,7 +869,8 @@ const BasicForm = () => {
                                                             required
                                                         />
                                                         <small className="help-block form-text">
-                                                            Please enter your email
+                                                            Please enter your
+                                                            email
                                                         </small>
                                                     </div>
                                                 </div>
@@ -749,7 +892,8 @@ const BasicForm = () => {
                                                             required
                                                         />
                                                         <small className="help-block">
-                                                            Please enter your password
+                                                            Please enter your
+                                                            password
                                                         </small>
                                                     </div>
                                                 </div>
@@ -759,11 +903,19 @@ const BasicForm = () => {
                                 </CardBody>
                                 <CardFooter>
                                     <div className="d-flex gap-3">
-                                        <button type="submit" className="btn btn-primary btn-sm">
-                                            <i className="fa-regular fa-circle-check"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fa-regular fa-circle-check"></i>{" "}
+                                            Submit
                                         </button>
-                                        <button type="submit" className="btn btn-danger btn-sm">
-                                            <i className="fa-solid fa-ban"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-danger btn-sm"
+                                        >
+                                            <i className="fa-solid fa-ban"></i>{" "}
+                                            Submit
                                         </button>
                                     </div>
                                 </CardFooter>
@@ -799,11 +951,19 @@ const BasicForm = () => {
                                 <CardFooter>
                                     {" "}
                                     <div className="d-flex gap-3 py-1">
-                                        <button type="submit" className="btn btn-primary btn-sm">
-                                            <i className="fa-regular fa-circle-check"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fa-regular fa-circle-check"></i>{" "}
+                                            Submit
                                         </button>
-                                        <button type="submit" className="btn btn-danger btn-sm">
-                                            <i className="fa-solid fa-ban"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-danger btn-sm"
+                                        >
+                                            <i className="fa-solid fa-ban"></i>{" "}
+                                            Submit
                                         </button>
                                     </div>
                                 </CardFooter>
@@ -930,11 +1090,19 @@ const BasicForm = () => {
                                 </CardBody>
                                 <CardFooter>
                                     <div className="d-flex gap-3">
-                                        <button type="submit" className="btn btn-primary btn-sm">
-                                            <i className="fa fa-user"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fa fa-user"></i>{" "}
+                                            Submit
                                         </button>
-                                        <button type="submit" className="btn btn-danger btn-sm">
-                                            <i className="fa-solid fa-ban"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-danger btn-sm"
+                                        >
+                                            <i className="fa-solid fa-ban"></i>{" "}
+                                            Submit
                                         </button>
                                     </div>
                                 </CardFooter>
@@ -950,7 +1118,8 @@ const BasicForm = () => {
                                         <div className="form-group d-flex gap-2 align-items-center">
                                             <label
                                                 className="form-control-label"
-                                                htmlFor="exampleInputName">
+                                                htmlFor="exampleInputName"
+                                            >
                                                 Name
                                             </label>
                                             <input
@@ -963,7 +1132,8 @@ const BasicForm = () => {
                                         <div className="form-group d-flex gap-2 align-items-center">
                                             <label
                                                 className="pr-1 form-control-label"
-                                                htmlFor="exampleInputEmail">
+                                                htmlFor="exampleInputEmail"
+                                            >
                                                 Email
                                             </label>
                                             <input
@@ -977,11 +1147,19 @@ const BasicForm = () => {
                                 </CardBody>
                                 <CardFooter>
                                     <div className="d-flex gap-3">
-                                        <button type="submit" className="btn btn-primary btn-sm">
-                                            <i className="fa fa-user"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fa fa-user"></i>{" "}
+                                            Submit
                                         </button>
-                                        <button type="submit" className="btn btn-danger btn-sm">
-                                            <i className="fa-solid fa-ban"></i> Submit
+                                        <button
+                                            type="submit"
+                                            className="btn btn-danger btn-sm"
+                                        >
+                                            <i className="fa-solid fa-ban"></i>{" "}
+                                            Submit
                                         </button>
                                     </div>
                                 </CardFooter>
@@ -1000,7 +1178,8 @@ const BasicForm = () => {
                                     <div className="col col-sm-3">
                                         <label
                                             className="d-block mb-1 form-control-label"
-                                            htmlFor="input-small">
+                                            htmlFor="input-small"
+                                        >
                                             Small Input
                                         </label>
                                     </div>
@@ -1020,7 +1199,8 @@ const BasicForm = () => {
                                     <div className="col col-sm-3">
                                         <label
                                             className="d-block mb-1 form-control-label"
-                                            htmlFor="input-normal">
+                                            htmlFor="input-normal"
+                                        >
                                             Normal Input
                                         </label>
                                     </div>
@@ -1040,7 +1220,8 @@ const BasicForm = () => {
                                     <div className="col col-sm-3">
                                         <label
                                             className="d-block mb-1 form-control-label"
-                                            htmlFor="large-input">
+                                            htmlFor="large-input"
+                                        >
                                             Large Input
                                         </label>
                                     </div>
@@ -1060,10 +1241,16 @@ const BasicForm = () => {
                         </CardBody>
                         <CardFooter>
                             <div className="d-flex gap-3">
-                                <button type="submit" className="btn btn-primary btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
                                     <i className="fa fa-user"></i> Submit
                                 </button>
-                                <button type="submit" className="btn btn-danger btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger btn-sm"
+                                >
                                     <i className="fa-solid fa-ban"></i> Submit
                                 </button>
                             </div>
@@ -1080,7 +1267,8 @@ const BasicForm = () => {
                                 <div className="form-group mb-3">
                                     <label
                                         htmlFor="inputIsValid"
-                                        className="form-control-label mb-1">
+                                        className="form-control-label mb-1"
+                                    >
                                         Input is valid
                                     </label>
                                     <input
@@ -1092,7 +1280,8 @@ const BasicForm = () => {
                                 <div className="form-group  mb-4">
                                     <label
                                         htmlFor="inputIsInvalid"
-                                        className="form-control-label mb-1">
+                                        className="form-control-label mb-1"
+                                    >
                                         Input is invalid
                                     </label>
                                     <input
@@ -1110,7 +1299,10 @@ const BasicForm = () => {
                                         aria-describedby="invalidCheck3Feedback"
                                         required
                                     />
-                                    <label className="form-check-label" htmlFor="invalidCheck3">
+                                    <label
+                                        className="form-check-label"
+                                        htmlFor="invalidCheck3"
+                                    >
                                         Agree to terms and conditions
                                     </label>
                                 </div>
@@ -1128,7 +1320,8 @@ const BasicForm = () => {
                                 <button
                                     className="btn btn btn-primary"
                                     type="button"
-                                    id="button-addon1">
+                                    id="button-addon1"
+                                >
                                     <i className="fa fa-search"></i> Search
                                 </button>
                                 <input
@@ -1150,7 +1343,8 @@ const BasicForm = () => {
                                 <button
                                     className="btn btn btn-primary"
                                     type="button"
-                                    id="button-addon1">
+                                    id="button-addon1"
+                                >
                                     Submit
                                 </button>
                             </div>
@@ -1158,7 +1352,8 @@ const BasicForm = () => {
                                 <button
                                     className="btn btn btn-primary"
                                     type="button"
-                                    id="button-addon1">
+                                    id="button-addon1"
+                                >
                                     <i className="fa-brands fa-facebook-f"></i>
                                 </button>
                                 <input
@@ -1171,17 +1366,24 @@ const BasicForm = () => {
                                 <button
                                     className="btn btn btn-primary"
                                     type="button"
-                                    id="button-addon1">
+                                    id="button-addon1"
+                                >
                                     <i className="fa-brands fa-twitter"></i>
                                 </button>
                             </div>
                         </CardBody>
                         <CardFooter>
                             <div className="d-flex gap-3">
-                                <button type="submit" className="btn btn-primary btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
                                     <i className="fa fa-user"></i> Submit
                                 </button>
-                                <button type="submit" className="btn btn-danger btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger btn-sm"
+                                >
                                     <i className="fa-solid fa-ban"></i> Submit
                                 </button>
                             </div>
@@ -1199,7 +1401,8 @@ const BasicForm = () => {
                                     className="btn btn-primary dropdown-toggle"
                                     type="button"
                                     data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                    aria-expanded="false"
+                                >
                                     Dropdown
                                 </button>
                                 <ul className="dropdown-menu">
@@ -1245,7 +1448,8 @@ const BasicForm = () => {
                                     className="btn btn-primary dropdown-toggle"
                                     type="button"
                                     data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                    aria-expanded="false"
+                                >
                                     Dropdown
                                 </button>
                                 <ul className="dropdown-menu">
@@ -1279,7 +1483,8 @@ const BasicForm = () => {
                                     className="btn btn-primary dropdown-toggle"
                                     type="button"
                                     data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                    aria-expanded="false"
+                                >
                                     Action
                                 </button>
                                 <ul className="dropdown-menu">
@@ -1317,7 +1522,8 @@ const BasicForm = () => {
                                     className="btn btn-primary dropdown-toggle"
                                     type="button"
                                     data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                    aria-expanded="false"
+                                >
                                     Dropdown
                                 </button>
                                 <ul className="dropdown-menu">
@@ -1349,10 +1555,16 @@ const BasicForm = () => {
                         </CardBody>
                         <CardFooter>
                             <div className="d-flex gap-3">
-                                <button type="submit" className="btn btn-primary btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
                                     <i className="fa fa-user"></i> Submit
                                 </button>
-                                <button type="submit" className="btn btn-danger btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-danger btn-sm"
+                                >
                                     <i className="fa-solid fa-ban"></i> Submit
                                 </button>
                             </div>
@@ -1365,7 +1577,8 @@ const BasicForm = () => {
                 <Col md={12} lg={6}>
                     <Card
                         title="Use the grid for big devices!"
-                        subscript={<code>.col-lg-*.col-md-*.col-sm-*</code>}>
+                        subscript={<code>.col-lg-*.col-md-*.col-sm-*</code>}
+                    >
                         <CardBody>
                             <form className="form-horizontal">
                                 <div className="form-group mb-3">
@@ -1462,7 +1675,10 @@ const BasicForm = () => {
                         </CardBody>
                         <CardFooter>
                             <div className="d-flex gap-3">
-                                <button type="submit" className="btn btn-primary btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
                                     Action
                                 </button>
                             </div>
@@ -1473,7 +1689,10 @@ const BasicForm = () => {
 
                 {/* start grid for small devices section */}
                 <Col md={12} lg={6}>
-                    <Card title="Input Grid for small devices!" subscript={<code>.col-*</code>}>
+                    <Card
+                        title="Input Grid for small devices!"
+                        subscript={<code>.col-*</code>}
+                    >
                         <CardBody>
                             <form className="form-horizontal">
                                 <div className="form-group mb-3">
@@ -1570,7 +1789,10 @@ const BasicForm = () => {
                         </CardBody>
                         <CardFooter>
                             <div className="d-flex gap-3">
-                                <button type="submit" className="btn btn-primary btn-sm">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
                                     Action
                                 </button>
                             </div>
@@ -1584,95 +1806,104 @@ const BasicForm = () => {
                     {/* <WidgetsForm cardTitle="Example Form" isPrepend={true} buttonBg="primary" /> */}
                     <Card title="Example Form">
                         <CardBody>
-                            <div className={`input-group mb-3`}>
+                            <div className="input-group mb-3">
                                 <span
                                     className="input-group-text"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     Username
                                 </span>
 
                                 <input
                                     type="text"
-                                    className={`form-control rounded-0`}
+                                    className="form-control rounded-0"
                                     id="validationDefaultUsername"
                                     aria-describedby="inputGroupPrepend2"
                                     required
                                 />
                                 <span
-                                    className={`input-group-text rounded-end`}
+                                    className="input-group-text rounded-end"
                                     id="inputGroupPrepend2"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     <i className="fa fa-user"></i>
                                 </span>
                             </div>
-                            <div className={`input-group mb-3`}>
+                            <div className="input-group mb-3">
                                 <span
                                     className="input-group-text"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     Email
                                 </span>
 
                                 <input
                                     type="email"
-                                    className={`form-control`}
+                                    className="form-control"
                                     id="validationDefaultEmail"
                                     aria-describedby="inputGroupPrepend2"
                                     required
                                 />
                                 <span
-                                    className={`input-group-text rounded-end`}
+                                    className="input-group-text rounded-end"
                                     id="inputGroupPrepend2"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     <i className="fa-solid fa-envelope"></i>
                                 </span>
                             </div>
-                            <div className={`input-group mb-3`}>
+                            <div className="input-group mb-3">
                                 <span
                                     className="input-group-text"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     Password
                                 </span>
 
                                 <input
                                     type="password"
-                                    className={`form-control`}
+                                    className="form-control"
                                     id="validationDefaultEuro"
                                     aria-describedby="inputGroupPrepend2"
                                     required
                                 />
                                 <span
-                                    className={`input-group-text rounded-end`}
+                                    className="input-group-text rounded-end"
                                     id="inputGroupPrepend2"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     <i className="fa fa-asterisk"></i>
                                 </span>
                             </div>
                             <div className="form-actions form-group mb-3">
-                                <button type="submit" className={`btn btn-primary btn-sm`}>
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-sm"
+                                >
                                     Submit
                                 </button>
                             </div>
@@ -1683,68 +1914,74 @@ const BasicForm = () => {
                     {/* <WidgetsForm cardTitle="Example Form" rowDirection="left" buttonBg="success" /> */}
                     <Card title="Example Form">
                         <CardBody>
-                            <div className={`input-group mb-3 flex-row-reverse`}>
+                            <div className="input-group mb-3 flex-row-reverse">
                                 <input
                                     type="text"
-                                    className={`form-control rounded-0 rounded-end`}
+                                    className="form-control rounded-0 rounded-end"
                                     id="validationDefaultUsername"
                                     aria-describedby="inputGroupPrepend2"
                                     placeholder={"Username"}
                                     required
                                 />
                                 <span
-                                    className={`input-group-text rounded-0 rounded-start border-end-0`}
+                                    className="input-group-text rounded-0 rounded-start border-end-0"
                                     id="inputGroupPrepend2"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     <i className="fa fa-user"></i>
                                 </span>
                             </div>
-                            <div className={`input-group mb-3 flex-row-reverse`}>
+                            <div className="input-group mb-3 flex-row-reverse">
                                 <input
                                     type="email"
-                                    className={`form-control rounded-0 rounded-end`}
+                                    className="form-control rounded-0 rounded-end"
                                     id="validationDefaultEmail"
                                     aria-describedby="inputGroupPrepend2"
                                     placeholder={"Email"}
                                     required
                                 />
                                 <span
-                                    className={`input-group-text rounded-0 rounded-start border-end-0`}
+                                    className="input-group-text rounded-0 rounded-start border-end-0"
                                     id="inputGroupPrepend2"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     <i className="fa-solid fa-envelope"></i>
                                 </span>
                             </div>
-                            <div className={`input-group mb-3 flex-row-reverse`}>
+                            <div className="input-group mb-3 flex-row-reverse">
                                 <input
                                     type="password"
-                                    className={`form-control rounded-0 rounded-end`}
+                                    className="form-control rounded-0 rounded-end"
                                     id="validationDefaultEuro"
                                     aria-describedby="inputGroupPrepend2"
                                     placeholder={"Password"}
                                     required
                                 />
                                 <span
-                                    className={`input-group-text rounded-0 rounded-start border-end-0`}
+                                    className="input-group-text rounded-0 rounded-start border-end-0"
                                     id="inputGroupPrepend2"
                                     style={{
                                         backgroundColor: "var(--bg-content)",
                                         borderColor: "var(--border-color)",
                                         color: "var(  --hedging-text-color)",
-                                    }}>
+                                    }}
+                                >
                                     <i className="fa fa-asterisk"></i>
                                 </span>
                             </div>
                             <div className="form-actions form-group mb-3">
-                                <button type="submit" className={`btn btn-success btn-sm`}>
+                                <button
+                                    type="submit"
+                                    className="btn btn-success btn-sm"
+                                >
                                     Submit
                                 </button>
                             </div>

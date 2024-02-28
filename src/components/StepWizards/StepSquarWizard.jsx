@@ -44,25 +44,36 @@ const StepSquarWizard = () => {
                                 ? "85%"
                                 : ""
                         }`,
-                    }}></div>
+                    }}
+                ></div>
                 {tabs.map((items, index) => (
                     <div className="col-4 text-center p-0" key={items.id}>
                         <div className={styles.step_block}>
                             <div
                                 className={styles.step_wrapper}
-                                onClick={() => updateStep(index + 1)}>
+                                onClick={() => updateStep(index + 1)}
+                            >
                                 <div
                                     className={`${styles.wizard_icon} ${
-                                        activeTab >= index + 1 ? styles.active : ""
-                                    } mx-auto position-relative`}>
-                                    <i className={`${items.icon}`} style={{ fontSize: "24px" }}></i>
+                                        activeTab >= index + 1
+                                            ? styles.active
+                                            : ""
+                                    } mx-auto position-relative`}
+                                >
+                                    <i
+                                        className={`${items.icon}`}
+                                        style={{ fontSize: "24px" }}
+                                    ></i>
                                 </div>
                             </div>
                         </div>
                         <span
                             className={`${styles.step_title} ${
-                                activeTab >= index + 1 ? styles.step_title_active : ""
-                            }`}>
+                                activeTab >= index + 1
+                                    ? styles.step_title_active
+                                    : ""
+                            }`}
+                        >
                             {items.name}
                         </span>
                     </div>
@@ -77,18 +88,26 @@ const StepSquarWizard = () => {
                     </span>
                 )}
             </div>
-            <div className={`${styles.step_btn_wrapper} mb-4`} style={{ padding: "0 20px" }}>
+            <div
+                className={`${styles.step_btn_wrapper} mb-4`}
+                style={{ padding: "0 20px" }}
+            >
                 {activeTab > 1 && activeTab < tabs.length && (
-                    <button onClick={() => updateStep(activeTab - 1)}>Back</button>
+                    <button onClick={() => updateStep(activeTab - 1)}>
+                        Back
+                    </button>
                 )}
                 <button
                     className="float-end"
                     style={{
                         backgroundColor: `${
-                            activeTab < tabs.length ? "rgb(52, 152, 219)" : "#43a047"
+                            activeTab < tabs.length
+                                ? "rgb(52, 152, 219)"
+                                : "#43a047"
                         }`,
                     }}
-                    onClick={() => updateStep(activeTab + 1)}>
+                    onClick={() => updateStep(activeTab + 1)}
+                >
                     {activeTab < tabs.length ? "Next" : "Done"}
                 </button>
             </div>
