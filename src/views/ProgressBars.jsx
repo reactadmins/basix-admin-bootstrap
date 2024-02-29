@@ -3,7 +3,7 @@ import { CardBody, Col, Row } from "react-bootstrap";
 import Card from "@/components/Card/Card";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-const progressBars = () => {
+const ProgressBars = () => {
     return (
         <Fragment>
             <Row className="gy-4 gx-4">
@@ -95,4 +95,4 @@ const progressBars = () => {
     );
 };
 
-export default progressBars;
+export default ProgressBars;
