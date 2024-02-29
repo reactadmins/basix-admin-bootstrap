@@ -50,7 +50,7 @@ function App() {
 
                 //counter_time
 
-                const mainObj = sheetData[product_slug];
+                const mainObj = sheetData[product_slug] || {};
                 const checkCounterTime = new Date(mainObj.counter_time).getTime();
 
                 if (mainObj.counter_time && checkCounterTime < currentDate) {
