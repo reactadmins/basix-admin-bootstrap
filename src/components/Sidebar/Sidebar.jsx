@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SidebarBgWrapper from "@/components/sidebar/SidebarBgWrapper";
+import SidebarBgWrapper from "@/components/Sidebar/SidebarBgWrapper";
 import { useDashboardDataContext } from "@/context/dashboardDataContext";
 import { navItems } from "@/nav";
-import SidebarMenu from "@/components/sidebar/SidebarMenu";
+import SidebarMenu from "@/components/Sidebar/SidebarMenu";
 import style from "@/assets/scss/Sidebar.module.scss";
 import logo from "@/assets/image/logo.png";
 import mini_logo from "@/assets/image/mini-logo.png";

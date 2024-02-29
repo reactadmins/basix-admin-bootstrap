@@ -4,6 +4,7 @@
     height: 100%;
     .content {
         float: right;
+        transition: width 0.3s ease;
     }
 }
 body {

@@ -79,3 +79,20 @@
         }
     }
 }
+
+body {
+    &[data-theme-direction="rtl"] {
+        .icon_container {
+            .icon_search {
+                .search_wrapper {
+                    input {
+                        border-radius: 0 4px 4px 0 !important;
+                    }
+                    button {
+                        border-radius: 4px 0 0 4px !important;
+                    }
+                }
+            }
+        }
+    }
+}
