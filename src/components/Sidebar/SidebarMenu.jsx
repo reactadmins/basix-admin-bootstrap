@@ -1,7 +1,7 @@
+import { Fragment, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import style from "@/assets/scss/Sidebar.module.scss";
-import { Fragment } from "react";
 
 const SidebarMenu = ({
     item,
@@ -9,7 +9,7 @@ const SidebarMenu = ({
     navIsOpen = "",
     setNavIsOpen = "",
 }) => {
-    const activeRoute = useLocation();
+    const routerLink = useLocation();
 
     return (
         <Fragment>
@@ -48,13 +48,15 @@ const SidebarMenu = ({
                     aria-expanded={
                         navIsOpen === index && item?.children ? true : false
                     }
-                    onClick={() => {
-                        setNavIsOpen(null);
-                    }}
+                    onClick={() => setNavIsOpen(null)}
+                    data-active-router={
+                        routerLink.pathname === "/" && index === 0
+                            ? true
+                            : false
+                    }
                     className={`d-flex align-items-center justify-content-between ${
-                        activeRoute.pathname === item?.path ||
-                        activeRoute.pathname === "/"
-                            ? style.active_route
+                        routerLink.pathname === item.path
+                            ? style.active_router
                             : ""
                     }`}
                 >
@@ -81,8 +83,8 @@ const SidebarMenu = ({
                                 <Link
                                     to={item?.path}
                                     className={`d-flex align-items-center justify-content-between ${
-                                        activeRoute.pathname === item?.path
-                                            ? style.active_route
+                                        routerLink.pathname === item?.path
+                                            ? style.active_router
                                             : ""
                                     }`}
                                 >

@@ -55,7 +55,11 @@
                     &[aria-expanded="true"] {
                         background-color: hsla(0, 0%, 78.4%, 0.3);
                     }
-                    &.active_route {
+                    &.active_router {
+                        color: #fff;
+                        background-color: #00bcd4;
+                    }
+                    &[data-active-router="true"] {
                         color: #fff;
                         background-color: #00bcd4;
                     }

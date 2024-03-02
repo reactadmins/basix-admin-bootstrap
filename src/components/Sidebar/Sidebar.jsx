@@ -91,7 +91,6 @@ const Sidebar = ({ type = "vertical" }) => {
                 <nav className={style.nav}>
                     <ul>
                         {navItems.map((item, index) => {
-                            console.log(item?.path);
                             return (
                                 <li
                                     key={index}
