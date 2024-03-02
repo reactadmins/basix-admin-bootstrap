@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { CardBody, Col, Pagination, Row } from "react-bootstrap";
+import { CardBody, Col, Row } from "react-bootstrap";
 import Card from "@/components/Card/Card";
 import tableData from "@/data/tableData";
 import styles from "@/assets/scss/Tables.module.scss";
@@ -128,25 +128,20 @@ const Tables = () => {
                                             }
                                         >
                                             <option value={10}>
-                                                {" "}
                                                 Show 10 entries
                                             </option>
                                             <option value={25}>
-                                                {" "}
                                                 Show 25 entries
                                             </option>
                                             <option value={50}>
-                                                {" "}
                                                 Show 50 entries
                                             </option>
                                             <option value={100}>
-                                                {" "}
                                                 Show 100 entries
                                             </option>
                                         </select>
                                     </div>
                                 </div>
-
                                 <table className={`table ${styles.table}`}>
                                     <thead
                                         className={`text-primary thead ${styles.thead}`}
@@ -192,25 +187,72 @@ const Tables = () => {
                                     <span className={styles.showing}>
                                         Showing 1 to 10 entries
                                     </span>
-                                    <Pagination>
-                                        <Pagination.First />
-                                        <Pagination.Prev />
-                                        <Pagination.Item>{1}</Pagination.Item>
-                                        <Pagination.Ellipsis />
-
-                                        <Pagination.Item active>
-                                            {10}
-                                        </Pagination.Item>
-                                        <Pagination.Item>{11}</Pagination.Item>
-                                        <Pagination.Item>{12}</Pagination.Item>
-                                        <Pagination.Item>{13}</Pagination.Item>
-                                        <Pagination.Item>{14}</Pagination.Item>
-
-                                        <Pagination.Ellipsis />
-                                        <Pagination.Item>{20}</Pagination.Item>
-                                        <Pagination.Next />
-                                        <Pagination.Last />
-                                    </Pagination>
+                                    <nav aria-label="...">
+                                        <ul className="pagination">
+                                            <li className="page-item">
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                    tabindex="-1"
+                                                >
+                                                    Previous
+                                                </a>
+                                            </li>
+                                            <li className="page-item">
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                >
+                                                    1
+                                                </a>
+                                            </li>
+                                            <li
+                                                className={`page-item ${styles.active}`}
+                                            >
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                >
+                                                    2
+                                                    <span className="sr-only">
+                                                        (current)
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li className="page-item">
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                >
+                                                    3
+                                                </a>
+                                            </li>
+                                            <li className="page-item">
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                >
+                                                    4
+                                                </a>
+                                            </li>
+                                            <li className="page-item">
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                >
+                                                    5
+                                                </a>
+                                            </li>
+                                            <li className="page-item">
+                                                <a
+                                                    className="page-link"
+                                                    href="#"
+                                                >
+                                                    Next
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </CardBody>

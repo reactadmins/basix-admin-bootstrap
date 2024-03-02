@@ -1,5 +1,5 @@
 import styles from "./Table.module.scss";
-import {tableData} from "@site/data/tableData";
+import { tableData } from "@site/data/tableData";
 import { useState } from "react";
 
 const SearchTable = () => {
@@ -29,10 +29,10 @@ const SearchTable = () => {
                         className="btn btn-primary"
                         onChange={(e) => setSelect(e.target.value)}
                     >
-                        <option value={10}> Show 10 entries</option>
-                        <option value={25}> Show 25 entries</option>
-                        <option value={50}> Show 50 entries</option>
-                        <option value={100}> Show 100 entries</option>
+                        <option value={10}>Show 10 entries</option>
+                        <option value={25}>Show 25 entries</option>
+                        <option value={50}>Show 50 entries</option>
+                        <option value={100}>Show 100 entries</option>
                     </select>
                 </div>
             </div>
@@ -53,13 +53,11 @@ const SearchTable = () => {
                             return search === ""
                                 ? item
                                 : item.name.includes(search) ||
-                                    item.email.includes(search) ||
-                                    item.city.includes(search);
+                                      item.email.includes(search) ||
+                                      item.city.includes(search);
                         })
                         .map((item, index) => (
-                            <tr
-                                key={index}
-                            >
+                            <tr key={index}>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
                                 <td>{item.city}</td>
@@ -68,6 +66,48 @@ const SearchTable = () => {
                         ))}
                 </tbody>
             </table>
+            <div className={styles.pagination}>
+                <span className={styles.showing}>Showing 1 to 10 entries</span>
+                <nav aria-label="...">
+                    <ul className="pagination">
+                        <li className="page-item">
+                            <a className="page-link" href="#" tabindex="-1">
+                                Previous
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                1
+                            </a>
+                        </li>
+                        <li className={`page-item ${styles.active}`}>
+                            <a className="page-link" href="#">
+                                2<span className="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                3
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                4
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                5
+                            </a>
+                        </li>
+                        <li className="page-item">
+                            <a className="page-link" href="#">
+                                Next
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import style from "@/assets/scss/Sidebar.module.scss";
 import { Fragment } from "react";
@@ -8,9 +8,9 @@ const SidebarMenu = ({
     index = "",
     navIsOpen = "",
     setNavIsOpen = "",
-    activeMenu = "",
-    setActiveMenu = "",
 }) => {
+    const activeRoute = useLocation();
+
     return (
         <Fragment>
             {item?.children && item?.path ? (
@@ -21,11 +21,7 @@ const SidebarMenu = ({
                     onClick={() =>
                         setNavIsOpen(navIsOpen === index ? null : index)
                     }
-                    className={`d-flex align-items-center justify-content-between ${
-                        activeMenu === item?.name.toLowerCase()
-                            ? style.active
-                            : ""
-                    }`}
+                    className="d-flex align-items-center justify-content-between"
                 >
                     <div className="d-flex align-items-center">
                         <i className={`${item?.icon} ${style.menu_iocn}`}></i>
@@ -53,14 +49,12 @@ const SidebarMenu = ({
                         navIsOpen === index && item?.children ? true : false
                     }
                     onClick={() => {
-                        setActiveMenu(
-                            !item.children && item?.name.toLowerCase()
-                        );
                         setNavIsOpen(null);
                     }}
                     className={`d-flex align-items-center justify-content-between ${
-                        activeMenu === item?.name.toLowerCase()
-                            ? style.active
+                        activeRoute.pathname === item?.path ||
+                        activeRoute.pathname === "/"
+                            ? style.active_route
                             : ""
                     }`}
                 >
@@ -77,7 +71,7 @@ const SidebarMenu = ({
             )}
             <div
                 className={`${style.sub_menu} ${
-                    navIsOpen === index ? style.active : ""
+                    navIsOpen === index ? style.active_sub_menu : ""
                 }`}
             >
                 <ul>
@@ -87,13 +81,10 @@ const SidebarMenu = ({
                                 <Link
                                     to={item?.path}
                                     className={`d-flex align-items-center justify-content-between ${
-                                        activeMenu === item?.name.toLowerCase()
-                                            ? style.active
+                                        activeRoute.pathname === item?.path
+                                            ? style.active_route
                                             : ""
                                     }`}
-                                    onClick={() => {
-                                        setActiveMenu(item?.name.toLowerCase());
-                                    }}
                                 >
                                     <div className="d-flex align-items-center">
                                         <i

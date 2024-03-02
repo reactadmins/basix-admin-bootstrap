@@ -55,14 +55,14 @@
                     &[aria-expanded="true"] {
                         background-color: hsla(0, 0%, 78.4%, 0.3);
                     }
-                    &.active {
+                    &.active_route {
                         color: #fff;
                         background-color: #00bcd4;
                     }
                 }
                 .sub_menu {
                     display: none;
-                    &.active {
+                    &.active_sub_menu {
                         display: block;
                         position: relative;
 
@@ -140,7 +140,7 @@
                     }
                     .sub_menu {
                         border-radius: 0 4px 4px 0;
-                        &.active {
+                        &.active_sub_menu {
                             position: absolute;
                             top: 0;
                             left: 58px;
@@ -276,7 +276,7 @@ body {
                         li {
                             .sub_menu {
                                 border-radius: 4px 0 0 4px !important;
-                                &.active {
+                                &.active_sub_menu {
                                     left: auto;
                                     right: 55px;
                                 }

@@ -30,8 +30,6 @@
                     border-bottom: 1px solid var(--border-color);
                     background-color: var(--bg-content);
                 }
-                &:focus-visible {
-                }
             }
         }
     }
@@ -77,21 +75,31 @@
         justify-content: space-between;
         width: 100%;
         border-top: 1px solid var(--border-color);
-        padding-top: 16px;
+        padding: 25px 0 9px 0;
         .showing {
             font-size: 14px;
             line-height: 1.42857143;
             color: var(--hedging-text-color);
         }
-        ul {
-            li {
-                padding: 0;
-                margin-top: 0;
-                a {
-                    border-color: transparent !important;
-                    background: var(--bg-content);
-                    color: var(--hedging-text-color);
-                    box-shadow: none;
+        nav {
+            ul {
+                li {
+                    padding: 0;
+                    margin-top: 0;
+                    a {
+                        border-color: var(--border-color) !important;
+                        background: var(--bg-content);
+                        color: var(--hedging-text-color);
+                        box-shadow: none;
+                    }
+                    &.active {
+                        a {
+                            z-index: 1;
+                            color: #fff;
+                            background-color: #007bff;
+                            border-color: #007bff;
+                        }
+                    }
                 }
             }
         }
