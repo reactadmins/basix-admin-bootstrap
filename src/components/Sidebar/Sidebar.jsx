@@ -83,7 +83,7 @@ const Sidebar = ({ type = "vertical" }) => {
                                 sidebarMini
                                     ? "fa-solid fa-chevron-left"
                                     : "fa-solid fa-chevron-right"
-                            } `}
+                            }`}
                         ></i>
                     </button>
                 )}
