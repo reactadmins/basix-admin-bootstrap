@@ -15,7 +15,6 @@ import userImg from "@/assets/image/admin.jpg";
 import Card from "@/components/Card/Card";
 
 const Cards = () => {
-    let now = 10;
     return (
         <Fragment>
             <Row className="gy-4 gx-4">
@@ -224,7 +223,7 @@ const Cards = () => {
                 <Col md={6} lg={4}>
                     <Card title="Card with switch">
                         <CardBody>
-                            <p>
+                            <p style={{ color: "var(--hedging-text-color)" }}>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -239,7 +238,7 @@ const Cards = () => {
                         badgeBg="success"
                     >
                         <CardBody>
-                            <p>
+                            <p style={{ color: "var(--hedging-text-color)" }}>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -254,7 +253,7 @@ const Cards = () => {
                         badgeBg="danger"
                     >
                         <CardBody>
-                            <p>
+                            <p style={{ color: "var(--hedging-text-color)" }}>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -265,7 +264,7 @@ const Cards = () => {
                 <Col md={6} lg={4}>
                     <Card title="Card with switch" cardBorderColor="#0D6EFD">
                         <CardBody>
-                            <p>
+                            <p style={{ color: "var(--hedging-text-color)" }}>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -276,7 +275,7 @@ const Cards = () => {
                 <Col md={6} lg={4}>
                     <Card title="Card with switch" cardBorderColor="#6C757D">
                         <CardBody>
-                            <p>
+                            <p style={{ color: "var(--hedging-text-color)" }}>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -287,7 +286,7 @@ const Cards = () => {
                 <Col md={6} lg={4}>
                     <Card title="Card with switch" cardBorderColor="#198754">
                         <CardBody>
-                            <p>
+                            <p style={{ color: "var(--hedging-text-color)" }}>
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -422,14 +421,18 @@ const Cards = () => {
                     <Card isHeader={false}>
                         <img src={placeholder} alt="" />
                         <CardBody>
-                            <CardBody>
-                                <CardTitle>Card Image Title</CardTitle>
-                                <CardText>
-                                    Some quick example text to build on the card
-                                    title and make up the bulk of the card's
-                                    content.
-                                </CardText>
-                            </CardBody>
+                            <CardTitle
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
+                                Card Image Title
+                            </CardTitle>
+                            <CardText
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </CardText>
                         </CardBody>
                     </Card>
                 </Col>
@@ -437,14 +440,18 @@ const Cards = () => {
                     <Card isHeader={false}>
                         <img src={placeholder} alt="" />
                         <CardBody>
-                            <CardBody>
-                                <CardTitle>Card Image Title</CardTitle>
-                                <CardText>
-                                    Some quick example text to build on the card
-                                    title and make up the bulk of the card's
-                                    content.
-                                </CardText>
-                            </CardBody>
+                            <CardTitle
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
+                                Card Image Title
+                            </CardTitle>
+                            <CardText
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </CardText>
                         </CardBody>
                     </Card>
                 </Col>
@@ -452,8 +459,14 @@ const Cards = () => {
                     <Card isHeader={false}>
                         <img src={placeholder} alt="" />
                         <CardBody>
-                            <CardTitle>Card Image Title</CardTitle>
-                            <CardText>
+                            <CardTitle
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
+                                Card Image Title
+                            </CardTitle>
+                            <CardText
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.

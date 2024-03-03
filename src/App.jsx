@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { EntypoSprite } from "@entypo-icons/react";
 import { Routes, Route } from "react-router-dom";
 import routes from "@/routes.jsx";
@@ -7,7 +7,6 @@ import { DashboardDataProvider } from "@/context/dashboardDataContext.jsx";
 import Switcher from "@/components/Switcher/Switcher.jsx";
 
 function App() {
-    const [sidebarMini, setSidebarMini] = useState(false);
     return (
         <div className="admin-container position-relative overflow-hidden">
             <DashboardDataProvider>
@@ -17,15 +16,7 @@ function App() {
                         return (
                             <Fragment key={index}>
                                 {(item?.path && (
-                                    <Route
-                                        path="/"
-                                        element={
-                                            <Layouts
-                                                sidebarMini={sidebarMini}
-                                                setSidebarMini={setSidebarMini}
-                                            />
-                                        }
-                                    >
+                                    <Route path="/" element={<Layouts />}>
                                         <Route
                                             path={item?.path}
                                             element={<item.component />}
@@ -42,10 +33,7 @@ function App() {
                         );
                     })}
                 </Routes>
-                <Switcher
-                    sidebarMini={sidebarMini}
-                    setSidebarMini={setSidebarMini}
-                />
+                <Switcher />
             </DashboardDataProvider>
         </div>
     );

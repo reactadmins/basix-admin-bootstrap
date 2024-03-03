@@ -12,7 +12,7 @@ const SocialCounter = ({
     socialActivity = {},
 }) => {
     return (
-        <Card className={`rounded-0 ${styles.card}`}>
+        <Card className={`rounded-0 ${styles.social_counter_wrapper}`}>
             <CardBody className="p-0">
                 <div
                     className={`d-flex align-items-center ${

@@ -215,6 +215,7 @@ const Dashboard = () => {
                     <Row className="gy-4 gx-4">
                         <Col sm={12} md={4}>
                             <SocialCounter
+                                padding="28px"
                                 bgColor="#1DA1F2"
                                 icon="fa-brands fa-twitter"
                                 count="1875980"
@@ -223,6 +224,7 @@ const Dashboard = () => {
                         </Col>
                         <Col sm={12} md={4}>
                             <SocialCounter
+                                padding="28px"
                                 bgColor="#3B5998"
                                 icon="fa-brands fa-facebook-f"
                                 count="1875980"
@@ -231,6 +233,7 @@ const Dashboard = () => {
                         </Col>
                         <Col sm={12} md={4}>
                             <SocialCounter
+                                padding="28px"
                                 bgColor="#833AB4"
                                 icon="fa-brands fa-instagram"
                                 count="1875980"
