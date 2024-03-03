@@ -23,7 +23,7 @@ is an admin dashboard template designed to be beautiful and simple it's fully re
 The product presents a large suite of front-end developer tools that can help you start your project. We built it by thinking about what you actually need in a dashboard.
 Admin Bootstrap Dashboard React has multiple handpicked and optimized components . Everything is designed to fit together. As you will be able to see, the React Admin dashboard you can access is a customization of this product.
 
-It comes with 3 filter colors for the top navbar abd sidebar (`white`, `black`, `red`) and an option to have a background image. 4 layout variations (`vertical`, `horizontal`, `combo`, `dual nav`) to change the layout design: https://www.google.com/
+It comes with 3 filter colors for the top navbar abd sidebar (`white`, `black`, `red`) and an option to have a background image. 4 layout variations (`vertical`, `horizontal`, `combo`, `dual nav`) to change the layout design.
 
 ### Table of Contents
 
