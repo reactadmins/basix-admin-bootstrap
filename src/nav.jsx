@@ -3,10 +3,6 @@ export const navItems = [
         name: "Dashboard",
         path: "/dashboard",
         icon: "fa fa-dashboard",
-        badge: {
-            variant: "success",
-            text: "NEW",
-        },
     },
     {
         title: true,
@@ -22,10 +18,6 @@ export const navItems = [
                 name: "Buttons",
                 path: "/components/buttons",
                 icon: "fa fa-puzzle-piece",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
             {
                 name: "Badges",
@@ -41,10 +33,6 @@ export const navItems = [
                 name: "Socials",
                 path: "/components/socials",
                 icon: "fa fa-share-square",
-                badge: {
-                    variant: "success",
-                    text: "NEW",
-                },
             },
             {
                 name: "Cards",
@@ -92,10 +80,6 @@ export const navItems = [
                 name: "Basic Form",
                 path: "/components/basic-form",
                 icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "warning",
-                    text: "NEW",
-                },
             },
             {
                 name: "Advanced Form",
@@ -106,10 +90,6 @@ export const navItems = [
                 name: "Form Wizard",
                 path: "/components/wizard-form",
                 icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
         ],
     },
@@ -122,10 +102,6 @@ export const navItems = [
         name: "Widgets",
         path: "/components/widgets",
         icon: "fa fa-calculator",
-        badge: {
-            variant: "info",
-            text: "60+",
-        },
     },
     {
         name: "Charts",
@@ -216,10 +192,6 @@ export const miniNav = [
         name: "Dashboard",
         path: "/dashboard",
         icon: "fa fa-dashboard",
-        badge: {
-            variant: "success",
-            text: "NEW",
-        },
     },
     {
         name: "Components",
@@ -230,10 +202,6 @@ export const miniNav = [
                 name: "Buttons",
                 path: "/components/buttons",
                 icon: "fa fa-puzzle-piece",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
             {
                 name: "Badges",
@@ -249,10 +217,6 @@ export const miniNav = [
                 name: "Social Buttons",
                 path: "/components/socials",
                 icon: "fa fa-share-square",
-                badge: {
-                    variant: "success",
-                    text: "NEW",
-                },
             },
             {
                 name: "Cards",
@@ -295,10 +259,6 @@ export const miniNav = [
                 name: "Basic Form",
                 path: "/components/basic-form",
                 icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "warning",
-                    text: "NEW",
-                },
             },
             {
                 name: "Advanced Form",
@@ -309,10 +269,6 @@ export const miniNav = [
                 name: "Form Wizard",
                 path: "/components/wizard-form",
                 icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
         ],
     },
@@ -320,10 +276,6 @@ export const miniNav = [
         name: "Widgets",
         path: "/components/widgets",
         icon: "fa fa-calculator",
-        badge: {
-            variant: "info",
-            text: "60+",
-        },
     },
     {
         name: "Charts",

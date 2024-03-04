@@ -20,8 +20,13 @@ const DualTopNav = () => {
     const [openMessage, setOpenMessage] = useState(true);
     const [openUser, setOpenUser] = useState(true);
     const [navIsOpen, setNavIsOpen] = useState(null);
-    const { sidebarMini, setSidebarMini, topNavbarBgColor, navbarFixed, isDark } =
-        useDashboardDataContext();
+    const {
+        sidebarMini,
+        setSidebarMini,
+        topNavbarBgColor,
+        navbarFixed,
+        isDark,
+    } = useDashboardDataContext();
 
     let dropRef = useRef();
     useEffect(() => {
@@ -39,12 +44,17 @@ const DualTopNav = () => {
             <div
                 className={`${styles.dual_nav} ${
                     navbarFixed ? styles.fixed_top : ""
-                } p-0 flex-column`}>
+                } p-0 flex-column`}
+            >
                 <div
-                    className={`${styles.header_action} d-flex align-items-center justify-content-between`}>
+                    className={`${styles.header_action} d-flex align-items-center justify-content-between`}
+                >
                     <div className={styles.navbar_nav}>
                         <div className={styles.logo_container}>
-                            <button type="button" onClick={() => setSidebarMini(!sidebarMini)}>
+                            <button
+                                type="button"
+                                onClick={() => setSidebarMini(!sidebarMini)}
+                            >
                                 {sidebarMini ? (
                                     <i className="fa-solid fa-xmark"></i>
                                 ) : (
@@ -59,7 +69,11 @@ const DualTopNav = () => {
                                 />
                                 <img
                                     className={styles.mini_logo}
-                                    src={isDark ? mini_light_logo : black_mini_logo}
+                                    src={
+                                        isDark
+                                            ? mini_light_logo
+                                            : black_mini_logo
+                                    }
                                     alt="basix-admin"
                                 />
                             </Link>
@@ -89,9 +103,12 @@ const DualTopNav = () => {
                                     setOpenMessage(true);
                                     setOpenUser(true);
                                 }}
-                                className={styles.for_notification}>
+                                className={styles.for_notification}
+                            >
                                 <i className="fa fa-bell"></i>
-                                <span className={`${styles.count}  bg-danger`}>5</span>
+                                <span className={`${styles.count}  bg-danger`}>
+                                    5
+                                </span>
                             </button>
                             {!openNotification ? (
                                 <DropdownMenu left="24px" right="24px">
@@ -107,9 +124,12 @@ const DualTopNav = () => {
                                     setOpenNotification(true);
                                     setOpenUser(true);
                                 }}
-                                className={styles.for_message}>
+                                className={styles.for_message}
+                            >
                                 <i className="fa-solid fa-envelope"></i>
-                                <span className={`${styles.count} bg-primary`}>5</span>
+                                <span className={`${styles.count} bg-primary`}>
+                                    5
+                                </span>
                             </button>
                             {!openMessage ? (
                                 <DropdownMenu left="24px" right="24px">
@@ -126,7 +146,8 @@ const DualTopNav = () => {
                                         setOpenMessage(true);
                                         setOpenNotification(true);
                                     }}
-                                    className={styles.user_dropdown}>
+                                    className={styles.user_dropdown}
+                                >
                                     <img src={profile} alt="uesr" />
                                 </a>
                             </div>
@@ -140,12 +161,18 @@ const DualTopNav = () => {
                 </div>
                 <div
                     data-color={topNavbarBgColor}
-                    className={`${styles.duall_navbar} ${sidebarMini ? styles.toggle_menu : ""}`}>
+                    className={`${styles.duall_navbar} ${
+                        sidebarMini ? styles.toggle_menu : ""
+                    }`}
+                >
                     <ul className={`${styles.nav}`}>
                         {navItems?.map((item, index) => (
                             <li
                                 key={index}
-                                className={`${styles.nav_item} ${item.title ? "d-none" : ""}`}>
+                                className={`${styles.nav_item} ${
+                                    item.title ? "d-none" : ""
+                                }`}
+                            >
                                 {(item?.path && (
                                     <Fragment>
                                         {isEmpty(item?.children) ? (
@@ -155,22 +182,36 @@ const DualTopNav = () => {
                                                     target: "_blank",
                                                 })}
                                                 onClick={() =>
-                                                    setNavIsOpen(navIsOpen === index ? null : index)
+                                                    setNavIsOpen(
+                                                        navIsOpen === index
+                                                            ? null
+                                                            : index
+                                                    )
                                                 }
-                                                className="d-flex justify-content-between align-items-center">
+                                                className="d-flex justify-content-between align-items-center"
+                                            >
                                                 <div className="d-flex align-items-center gap-2">
-                                                    <i className={`${item.icon} menu-icon`}></i>
+                                                    <i
+                                                        className={`${item.icon} menu-icon`}
+                                                    ></i>
                                                     <span>{item.name}</span>
                                                 </div>
                                             </Link>
                                         ) : (
                                             <a
                                                 onClick={() =>
-                                                    setNavIsOpen(navIsOpen === index ? null : index)
+                                                    setNavIsOpen(
+                                                        navIsOpen === index
+                                                            ? null
+                                                            : index
+                                                    )
                                                 }
-                                                className="d-flex justify-content-between align-items-center user-select-none">
+                                                className="d-flex justify-content-between align-items-center user-select-none"
+                                            >
                                                 <div className="d-flex align-items-center gap-2">
-                                                    <i className={`${item.icon} menu-icon`}></i>
+                                                    <i
+                                                        className={`${item.icon} menu-icon`}
+                                                    ></i>
                                                     <span>{item.name}</span>
                                                 </div>
                                             </a>
@@ -181,28 +222,37 @@ const DualTopNav = () => {
                                         <a
                                             href={item?.url}
                                             target="_blank"
-                                            className="d-flex align-items-center">
+                                            className="d-flex align-items-center"
+                                        >
                                             <div className="d-flex align-items-center gap-2">
-                                                <i className={`${item.icon} menu-icon`}></i>
+                                                <i
+                                                    className={`${item.icon} menu-icon`}
+                                                ></i>
                                                 <span>{item.name}</span>
                                             </div>
                                         </a>
                                     ))}
                                 {item.children ? (
                                     <ul className={styles.sub_menu}>
-                                        {item?.children?.map((childItem, index) => (
-                                            <li key={index}>
-                                                <Link
-                                                    to={childItem?.path}
-                                                    className="d-flex justify-content-between align-items-center">
-                                                    <div className="d-flex align-items-center gap-2">
-                                                        <i
-                                                            className={`${childItem.icon} menu-icon`}></i>
-                                                        <span>{childItem.name}</span>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                        ))}
+                                        {item?.children?.map(
+                                            (childItem, index) => (
+                                                <li key={index}>
+                                                    <Link
+                                                        to={childItem?.path}
+                                                        className="d-flex justify-content-between align-items-center"
+                                                    >
+                                                        <div className="d-flex align-items-center gap-2">
+                                                            <i
+                                                                className={`${childItem.icon} menu-icon`}
+                                                            ></i>
+                                                            <span>
+                                                                {childItem.name}
+                                                            </span>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+                                            )
+                                        )}
                                     </ul>
                                 ) : null}
                             </li>

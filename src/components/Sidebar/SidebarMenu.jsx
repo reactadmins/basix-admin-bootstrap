@@ -27,11 +27,6 @@ const SidebarMenu = ({
                         <i className={`${item?.icon} ${style.menu_iocn}`}></i>
                         <span className="">{item?.name}</span>
                     </div>
-                    {item?.badge ? (
-                        <Badge bg={item?.badge?.variant}>
-                            {item?.badge?.text}
-                        </Badge>
-                    ) : null}
                     {item.children ? (
                         <i
                             className={`${
@@ -64,11 +59,6 @@ const SidebarMenu = ({
                         <i className={`${item?.icon} ${style.menu_iocn}`}></i>
                         <span className="">{item?.name}</span>
                     </div>
-                    {item?.badge ? (
-                        <Badge bg={item?.badge?.variant}>
-                            {item?.badge?.text}
-                        </Badge>
-                    ) : null}
                 </Link>
             )}
             <div
@@ -94,11 +84,6 @@ const SidebarMenu = ({
                                         ></i>
                                         <span className="">{item?.name}</span>
                                     </div>
-                                    {item?.badge ? (
-                                        <Badge bg={item?.badge?.variant}>
-                                            {item?.badge?.text}
-                                        </Badge>
-                                    ) : null}
                                 </Link>
                             </li>
                         );
