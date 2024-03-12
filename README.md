@@ -2,31 +2,6 @@
   <a href="https://www.google.com/" title="Quill">React Admin Dashboard Bootstrap version</a>
 </h1>
 
-<p align="center">
-  <a href="https://github.com/quilljs/quill/actions" title="Build Status">
-    <img src="https://github.com/quilljs/quill/actions/workflows/main.yml/badge.svg" alt="Build Status">
-  </a>
-  <a href="https://npmjs.com/package/quill" title="Version">
-    <img src="https://img.shields.io/npm/v/quill.svg" alt="Version">
-  </a>
-  <a href="https://npmjs.com/package/quill" title="Downloads">
-    <img src="https://img.shields.io/npm/dm/quill.svg" alt="Downloads">
-  </a>
-</p>
-
-### Preview
-
-![Sufee admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/sufee-free-modern-admin-dashboard-template.jpg)
-
-is an admin dashboard template designed to be beautiful and simple it's fully responsive. It comes with a large collection of components that will offer you multiple possibilities to create the app that best suits your needs. It can be used to create admin panels, project management systems, web application backends, CMS or CRM.
-
-The product presents a large suite of front-end developer tools that can help you start your project. We built it by thinking about what you actually need in a dashboard.
-Admin Bootstrap Dashboard React has multiple handpicked and optimized components . Everything is designed to fit together. As you will be able to see, the React Admin dashboard you can access is a customization of this product.
-
-It comes with 3 filter colors for the top navbar abd sidebar (`white`, `black`, `red`) and an option to have a background image. 4 layout variations (`vertical`, `horizontal`, `combo`, `dual nav`) to change the layout design.
-
-### Table of Contents
-
 -   <a title="demo-site"  href="https://www.google.com/"><strong>Demo</strong></a>
     &#x2022;
     <a title="quick-start" href="#quick-start"><strong>Quick Start</strong></a>
@@ -40,6 +15,29 @@ It comes with 3 filter colors for the top navbar abd sidebar (`white`, `black`, 
     <a title="built-with" href="#file-structure"><strong>File Structure</strong></a>
     &#x2022;
     <a title="license" href="#license"><strong>License</strong></a>
+
+### Preview
+
+![Sufee admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/sufee-free-modern-admin-dashboard-template.jpg)
+
+is an admin dashboard template designed to be beautiful and simple it's fully responsive. It comes with a large collection of components that will offer you multiple possibilities to create the app that best suits your needs. It can be used to create admin panels, project management systems, web application backends, CMS or CRM.
+
+The product presents a large suite of front-end developer tools that can help you start your project. We built it by thinking about what you actually need in a dashboard.
+Admin Bootstrap Dashboard React has multiple handpicked and optimized components . Everything is designed to fit together. As you will be able to see, the React Admin dashboard you can access is a customization of this product.
+
+It comes with 3 filter colors for the top navbar abd sidebar (`white`, `black`, `red`) and an option to have a background image. 4 layout variations (`vertical`, `horizontal`, `combo`, `dual nav`) to change the layout design.
+
+<p align="center">
+  <a href="https://github.com/quilljs/quill/actions" title="Build Status">
+    <img src="https://github.com/quilljs/quill/actions/workflows/main.yml/badge.svg" alt="Build Status">
+  </a>
+  <a href="https://npmjs.com/package/quill" title="Version">
+    <img src="https://img.shields.io/npm/v/quill.svg" alt="Version">
+  </a>
+  <a href="https://npmjs.com/package/quill" title="Downloads">
+    <img src="https://img.shields.io/npm/dm/quill.svg" alt="Downloads">
+  </a>
+</p>
 
 ### Quick Start
 
