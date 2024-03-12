@@ -53,13 +53,13 @@ git clone https://github.com/creativetimofficial/light-bootstrap-dashboard-react
 
 ### Installation
 
-##npm
+#npm
 
 ```
   npm install
 ```
 
-##run development server
+#run development server
 
 ```
   npm run dev
@@ -67,30 +67,30 @@ git clone https://github.com/creativetimofficial/light-bootstrap-dashboard-react
 
 or
 
-##yarn
+#yarn
 
 ```
-    yarn install
+  yarn install
 ```
 
-##run development server
+#run development server
 
 ```
-    yarn run dev
+  yarn run dev
 ```
 
 and
 
-##pnpm
+#pnpm
 
 ```
-    pnpm install
+  pnpm install
 ```
 
-##run development server
+#run development server
 
 ```
-   pnpm run dev
+  pnpm run dev
 ```
 
 ### Built With
