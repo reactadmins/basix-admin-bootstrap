@@ -53,30 +53,44 @@ git clone https://github.com/creativetimofficial/light-bootstrap-dashboard-react
 
 ### Installation
 
-#npm
+##npm
 
 ```
   npm install
 ```
 
-#run development server
+##run development server
 
 ```
   npm run dev
 ```
 
-    or
+or
 
-#yarn
+##yarn
 
 ```
     yarn install
 ```
 
-#run development server
+##run development server
 
 ```
     yarn run dev
+```
+
+and
+
+##pnpm
+
+```
+    pnpm install
+```
+
+##run development server
+
+```
+   pnpm run dev
 ```
 
 ### Built With
