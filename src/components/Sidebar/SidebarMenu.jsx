@@ -1,6 +1,5 @@
 import { Fragment, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Badge } from "react-bootstrap";
 import style from "@/assets/scss/Sidebar.module.scss";
 
 const SidebarMenu = ({
